@@ -1,73 +1,27 @@
-"""
-Prototype for converting the book JSONs into a web readable format
-
-Planned features:
-- Formatted text parsing
-- Handle image pages
-- Icons?
-- Relative Links
-
-Stretch Goals:
-- Any kind of recipe visualization? Perhaps by an in-game tool to export required pages / images.
-- Any kind of multiblock, block, or item spotlights
-
-"""
-
 import os
-import re
 import json
-from sre_parse import parse_template
 import warnings
 
-from typing import Tuple, List, Dict, Any
+from typing import List, Dict, Any
 
-from PIL import Image
-
-JsonObject = Dict[str, Any]
-
-
-class Category:
-    buffer: List[str]
-    entries: List[str]
-    sort: int
-    name: str
-
-    def __init__(self):
-        self.buffer = []
-        self.entries = []
-        self.sort = -1
-        self.name = ''
-
-    def __repr__(self) -> str: return str(self)
-    def __str__(self) -> str: return self.name
+from context import Context
+from category import Category
+from entry import Entry
 
 
-class Entry:
-    buffer: List[str]
-    sort: int
-    name: str
-
-    def __init__(self):
-        self.buffer = []
-        self.sort = -1
-        self.name = ''
-
-    def __repr__(self) -> str: return str(self)
-    def __str__(self) -> str: return self.name
+Keyable = Dict[str, Any]
 
 
-class Context:
-    book_dir: str
-    image_dir: str
-    output_dir: str
+KEYS = {
+    'key.inventory': 'E',
+    'key.attack': 'Left Click',
+    'key.use': 'Right Click',
+    'key.drop': 'Q',
+    'key.sneak': 'Shift',
 
-    categories: Dict[str, Category]
-
-    def __init__(self, book_dir: str,image_dir: str, output_dir: str):
-        self.book_dir = book_dir
-        self.image_dir = image_dir
-        self.output_dir = output_dir
-        self.categories = {}
+    'tfc.key.cycle_chisel_mode': 'M',
+    'tfc.key.place_block': 'V'
+}
 
 
 def main():
@@ -82,7 +36,7 @@ def main():
 
     category_dir = os.path.join(book_dir, 'categories')
 
-    context = Context(book_dir, image_dir, output_dir)
+    context = Context(book_dir, image_dir, output_dir, KEYS)
     categories = context.categories
 
     os.makedirs(os.path.join(output_dir, '_images'), exist_ok=True)
@@ -90,7 +44,7 @@ def main():
     for category_file in walk(category_dir):
         if category_file.endswith('.json'):
             with open(category_file, 'r', encoding='utf-8') as f:
-                data: JsonObject = json.load(f)
+                data: Keyable = json.load(f)
 
             category: Category = Category()
             category_id: str = os.path.relpath(category_file, category_dir)
@@ -103,12 +57,12 @@ def main():
             warnings.warn('Unknown category file: %s' % category_file)
 
     entry_dir = os.path.join(book_dir, 'entries')
-    entries: Dict[str, Entry] = {}
+    entries: Dict[str, Entry] = context.entries
 
     for entry_file in walk(entry_dir):
         if entry_file.endswith('.json'):
             with open(entry_file, 'r', encoding='utf-8') as f:
-                data: JsonObject = json.load(f)
+                data: Keyable = json.load(f)
 
             entry: Entry = Entry()
             entry_id: str = os.path.relpath(entry_file, entry_dir)
@@ -123,37 +77,94 @@ def main():
         else:
             warnings.warn('Unknown entry file: %s' % entry_file)
 
-    sorted_categories: List[Tuple[str, Category]] = sorted([(c, c_id) for c, c_id in categories.items()], key=lambda c: (c[1].sort, c[0]))
+    context.sort()
 
+    # Main Page
     with open(prepare(output_dir, 'index.html'), 'w', encoding='utf-8') as f:
-        f.write(PREFIX.format(title='Book'))
-        f.write('<h1>Book</h1><hr>\n')
-        f.write('<h3>Categories</h3>')
-        for cat_id, cat in sorted_categories:
-            for line in cat.buffer:
-                f.write(line)
-            f.write('\n')
+        f.write(PREFIX.format(
+            title=TITLE,
+            location='<a href="#">Index</a>',
+            contents='\n'.join([
+                '<li><a href="./%s/index.html">%s</a></li>' % (cat_id, cat.name)
+                for cat_id, cat in context.sorted_categories
+            ])
+        ))
+        f.write('<h4>Entries</h4>')
+
+        for cat_id, cat in context.sorted_categories:
+            f.write("""
+            <div class="card">
+                <div class="card-header">
+                    <a href="%s/index.html">%s</a>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">%s</p>
+                </div>
+            </div>
+            """ % (cat_id, cat.name, cat.description))
+
         f.write(SUFFIX)
 
-    for category_id, cat in sorted_categories:
+    # Category Pages
+    for category_id, cat in context.sorted_categories:
         with open(prepare(output_dir, category_id + '/index.html'), 'w', encoding='utf-8') as f:
-            f.write(PREFIX.format(title=cat.name))
-            f.write('<h1>%s</h1><hr>\n' % cat.name)
-            f.write('<h3>Entries</h3>')
+            f.write(PREFIX.format(
+                title=TITLE,
+                location='<a href="../index.html">Index</a> / <a href="#">%s</a>' % cat.name,
+                contents='\n'.join([
+                    '<li><a href="../%s/index.html">%s</a></li>' % (cat_id, cat.name) + (
+                        ''
+                        if cat_id != category_id else
+                        '<ul class="list-unstyled push-right">%s</ul>' % '\n'.join([
+                            '<li><a href="./%s.html">%s</a></li>' % (os.path.relpath(ent_id, cat_id), ent.name)
+                            for ent_id, ent in cat.sorted_entries 
+                        ])
+                    )
+                    for cat_id, cat in context.sorted_categories
+                ])
+            ))
+            f.write('<h4>%s</h4><p>%s</p><hr>' % (cat.name, cat.description))
+            f.write('<div class="card-columns">')
 
-            sorted_entries = sorted(cat.entries, key=lambda e: (entries[e].sort, e))
-
-            for entry_id in sorted_entries:
-                entry = entries[entry_id]
-                f.write('<p><a href="%s.html">%s</a></p>\n' % (os.path.relpath(entry_id, category_id), entry.name))
+            for entry_id, entry in cat.sorted_entries:
+                f.write("""
+                <div class="card">
+                    <div class="card-header">
+                        <a href="%s.html">%s</a>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Some info about this entry...</p>
+                    </div>
+                </div>
+                """ % (os.path.relpath(entry_id, category_id), entry.name))
+            
+            f.write('</div>')
             f.write(SUFFIX)
 
-    for entry_id, entry in entries.items():
-        with open(prepare(output_dir, entry_id + '.html'), 'w', encoding='utf-8') as f:
-            f.write(PREFIX.format(title=entry.name))
-            for line in entry.buffer:
-                f.write(line)
-            f.write(SUFFIX)
+        # Entry Pages
+        for entry_id, entry in cat.sorted_entries:
+            with open(prepare(output_dir, entry_id + '.html'), 'w', encoding='utf-8') as f:
+                f.write(PREFIX.format(
+                    title=TITLE,
+                    location='<a href="../index.html">Index</a> / <a href="./index.html">%s</a> / <a href="#">%s</a>' % (cat.name, entry.name),
+                    contents='\n'.join([
+                        '<li><a href="../%s/index.html">%s</a>' % (cat_id, cat.name) + (
+                            '</li>'
+                            if cat_id != category_id else
+                            '<ul class="list-unstyled push-right">%s</ul>' % '\n'.join([
+                                '<li><a href="./%s.html">%s</a></li>' % (os.path.relpath(ent_id, cat_id), ent.name)
+                                for ent_id, ent in cat.sorted_entries 
+                            ]) + '</li>'
+                        )
+                        for cat_id, cat in context.sorted_categories
+                    ])
+                ))
+                f.write('<h4>%s</h4><hr>' % (entry.name))
+
+                for line in entry.buffer:
+                    f.write(line)
+
+                f.write(SUFFIX)
 
 
 def walk(path: str):
@@ -170,93 +181,93 @@ def prepare(root: str, path: str) -> str:
     return full
 
 
-def convert_category(cat: Category, category_id: str, data: JsonObject):
+def convert_category(category: Category, category_id: str, data: Keyable):
     category_name: str = data['name']
     category_desc: str = data['description']
 
-    cat.buffer.append('<p><a href="./%s/index.html">%s</a>: %s</p>\n' % (category_id, category_name, category_desc))
-    cat.name = category_name
-    cat.sort = data['sortnum']
+    category.push('<p><a href="./%s/index.html">%s</a>: %s</p>\n' % (category_id, category_name, category_desc))
+    category.name = category_name
+    category.description = category_desc
+    category.sort = data['sortnum']
 
 
-def convert_entry(ctx: Context, cat: Category, entry: Entry, data: JsonObject):
+def convert_entry(context: Context, category: Category, entry: Entry, data: Keyable):
     entry.sort = data['sortnum'] if 'sortnum' in data else -1
     entry.name = data['name']
 
-    entry.buffer.append("""
-    <div class="row">
-    <div class="col-12">
-    <h2>TerraFirmaCraft Guide Book</h2>
-    <p><em><a href="../index.html">Index</a> / <a href="./index.html">%s</a> / <a href="#">%s</a><p></em>
-    <hr>
-    </div>
-    </div>
-    <div class="row">
-    <div class="col-2"></div>
-    <div class="col-8">
-    """ % (
-        cat.name,
-        entry.name
-    ))
-
     for page in data['pages']:
-        convert_page(ctx, entry.buffer, page)
-
-    entry.buffer.append("""
-    </div>
-    <div class="col-2"></div>
-    """)
+        convert_page(context, entry.buffer, page)
 
 
-def convert_page(ctx: Context, buffer: List[str], data: JsonObject):
+def convert_page(context: Context, buffer: List[str], data: Keyable):
     page_type = data['type']
 
     if 'anchor' in data:
         buffer.append('<div id="anchor-%s">' % data['anchor'])
 
     if page_type == 'patchouli:text':
-        if 'title' in data:
-            title = data['title']
-            buffer.append('<h4>%s</h4>\n' % title)
-        convert_formatted_text(buffer, data['text'])
+        context.format_title(buffer, data)
+        context.format_text(buffer, data)
     elif page_type == 'patchouli:image':
-        if 'title' in data:
-            title = data['title']
-            buffer.append('<h4>%s</h4>\n' % title)
+        context.format_title(buffer, data)
         
         images = data['images']
         if len(images) == 1:
             image = images[0]
+            uid = context.next_id()
             buffer.append(IMAGE_SINGLE.format(
-                id='fixme-1',
-                src=convert_image(ctx, image),
+                id=uid,
+                src=context.convert_image(image),
                 text=image
             ))
         else:
+            uid = context.next_id()
             parts = [IMAGE_MULTIPLE_PART.format(
-                src=convert_image(ctx, image),
+                src=context.convert_image(image),
                 text=image,
                 active='active' if i == 0 else ''
             ) for i, image in enumerate(images)]
 
             seq = [IMAGE_MULTIPLE_SEQ.format(
-                id='fixme-2',
+                id=uid,
                 count=i
             ) for i, _ in enumerate(images) if i > 0]
 
             buffer.append(IMAGE_MULTIPLE.format(
-                id='fixme-2',
+                id=uid,
                 seq=''.join(seq),
                 parts=''.join(parts)
             ))
         
-        if 'text' in data:
-            buffer.append('<div style="text-align: center;">')
-            convert_formatted_text(buffer, data['text'])
-            buffer.append('</div>')
+        context.format_centered_text(buffer, data)
 
+    elif page_type == 'patchouli:crafting':
+        context.format_title(buffer, data)
+        context.format_recipe(buffer, data)
+        context.format_recipe(buffer, data, 'recipe2')
+        context.format_text(buffer, data)
+    elif page_type == 'patchouli:spotlight':
+        context.format_title(buffer, data)
+        context.format_text(buffer, data)
+    elif page_type == 'patchouli:entity':
+        context.format_title(buffer, data, 'name')
+        context.format_text(buffer, data)
     elif page_type == 'patchouli:empty':
-        buffer.append('<hr>\n')
+        buffer.append('<hr>')
+    elif page_type == 'patchouli:multiblock' or page_type == 'tfc:multimultiblock':
+        pass
+    elif page_type in (
+        'tfc:welding_recipe',
+        'tfc:anvil_recipe',
+        'tfc:heat_recipe',
+        'tfc:rock_knapping_recipe',
+        'tfc:clay_knapping_recipe',
+        'tfc:fire_clay_knapping_recipe',
+        'tfc:leather_knapping_recipe',
+        'tfc:quern_recipe'
+    ):
+        context.format_recipe(buffer, data)
+        context.format_text(buffer, data)
     else:
         buffer.append('<p>Missing Page: %s</p>' % page_type)
         warnings.warn('Unrecognized page type: "type": "%s"' % page_type)
@@ -265,131 +276,6 @@ def convert_page(ctx: Context, buffer: List[str], data: JsonObject):
         buffer.append('</div>')
 
 
-def convert_image(ctx: Context, image: str) -> str:
-    namespace, path = image.split(':')
-    
-    assert namespace == 'tfc'
-    assert path.endswith('.png')
-
-    src = os.path.join(ctx.image_dir, path)
-    rel = os.path.join('_images', path.replace('/', '_').replace('textures_gui_book_', ''))
-    dest = os.path.join(ctx.output_dir, rel)
-    
-    img = Image.open(src).convert('RGBA')
-    width, height = img.size
-
-    assert width == height and width % 256 == 0
-
-    size = width * 200 // 256
-    img = img.crop((0, 0, size, size))
-    img.save(dest)
-
-    return '../' + rel
-
-
-
-def convert_formatted_text(buffer: List[str], text: str, link_root: str = '../'):
-    cursor = 0
-    root = ['p']
-    buffer.append('<p>')
-    stack = []
-
-    def matching_tags(_start: str, _end: str):
-        buffer.append(_start)
-        stack.append(_end)
-
-    def color_tags(_color: str):
-        matching_tags('<span style="color:%s;">' % _color, '</span>')
-
-    def flush_stack():
-        for _end in stack[::-1]:
-            buffer.append(_end)
-        return []
-
-    def update_root(_new_root: str = None):
-        _old_root = root[0]
-        if _new_root is None:
-            if _old_root == 'p':
-                buffer.append('</p>\n')
-            elif _old_root == 'li':
-                buffer.append('</li>\n</ul>\n')
-        elif _old_root == 'p' and _new_root == 'p':
-            buffer.append('</p>\n<p>')
-        elif _old_root == 'p' and _new_root == 'li':
-            buffer.append('</p>\n<ul>\n\t<li>')
-        elif _old_root == 'li' and _new_root == 'li':
-            buffer.append('</li>\n\t<li>')
-        elif _old_root == 'li' and _new_root == 'p':
-            buffer.append('</li>\n</ul>\n')
-        root[0] = _new_root
-
-    for match in re.finditer(r'\$\(([^)]*)\)', text):
-        start, end = match.span()
-        key = match.group(1)
-        if start > cursor:
-            buffer.append(text[cursor:start])
-        if key == '':
-            stack = flush_stack()
-        elif key == 'bold':
-            matching_tags('<strong>', '</strong>')
-        elif key == 'italic':
-            matching_tags('<em>', '</em>')
-        elif key == 'br':
-            update_root('p')
-        elif key == 'br2' or key == '2br':
-            update_root('p')
-            update_root('p')
-        elif key == 'li':
-            update_root('li')
-        elif key.startswith('l:http'):
-            matching_tags('<a href="%s">' % key[2:], '</a>')
-        elif key.startswith('l:'):
-            link = key[2:]
-            link = link.replace('#', '.html#anchor-') if '#' in link else link + '.html'
-            matching_tags('<a href="%s%s">' % (link_root, link), '</a>')
-        elif key == 'thing':
-            color_tags('#490')
-        elif key == 'item':
-            color_tags('#b0b')
-        elif key.startswith('#'):
-            color_tags(key)
-        elif key in VANILLA_COLORS:
-            color_tags(VANILLA_COLORS[key])
-        elif key.startswith('k:') and key[2:] in VANILLA_KEYS:
-            buffer.append(VANILLA_KEYS[key[2:]])
-        else:
-            warnings.warn('Unrecognized Formatting Code $(%s)' % key)
-
-        cursor = end
-
-    buffer.append(text[cursor:])
-    flush_stack()
-    update_root()
-
-
-VANILLA_COLORS = {
-    '0': '#000000',
-    '1': '#0000AA',
-    '2': '#00AA00',
-    '3': '#00AAAA',
-    '4': '#AA0000',
-    '5': '#AA00AA',
-    '6': '#FFAA00',
-    '7': '#AAAAAA',
-    '8': '#555555',
-    '9': '#5555FF',
-    'a': '#55FF55',
-    'b': '#55FFFF',
-    'c': '#FF5555',
-    'd': '#FF55FF',
-    'e': '#FFFF55',
-    'f': '#FFFFFF',
-}
-
-VANILLA_KEYS = {
-    'key.inventory': 'E',
-    'key.use': 'Right Click'
-}
 
 PREFIX = """
 <!DOCTYPE html>
@@ -410,17 +296,53 @@ PREFIX = """
     .carousel-inner img {{
         margin: auto;
     }}
+
     .carousel-control-next,
-    .carousel-control-prev /*, .carousel-indicators */ {{
+    .carousel-control-prev {{
         filter: invert(100%);
     }}
+
+    .tooltip {{
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+    }}
+
+    .push-right {{
+        padding-left: 30px
+    }}
+
     </style>
+
+    <script type="text/javascript">
+        $(function () {{
+            $('[data-toggle="tooltip"]').tooltip()
+        }})
+    </script>
 </head>
 <body>
-<div class="container">
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h2>{title}</h2>
+            <p><em>{location}</em></p>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2">
+            <p><strong>Contents</strong></p>
+            <ul class="list-unstyled">
+                {contents}
+            </ul>
+        </div>
+        <div class="col-8">
 """
 
 SUFFIX = """
+        </div>
+    </div>
 </div>
 </body>
 </html>
@@ -465,6 +387,8 @@ IMAGE_MULTIPLE = """
     </a>
 </div>
 """
+
+TITLE = 'TerraFirmaCraft Field Guide'
 
 
 

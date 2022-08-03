@@ -2,4 +2,4 @@
 !*/
 !/.gitignore
 
-!/src/main.py
+!/src/**/*.py
