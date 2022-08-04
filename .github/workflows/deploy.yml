@@ -36,7 +36,10 @@ jobs:
         path: 'tfc'
     - name: Build
       run: |
-        find .
+        echo first
+        ls ./tfc/src/main/resources/data/tfc
+        echo second
+        ls ./tfc/resources/
         python src/main.py --tfc-dir tfc --out-dir build
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4

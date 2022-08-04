@@ -45,6 +45,8 @@ def main():
 
     context = Context(book_dir, image_dir, output_dir, KEYS)
 
+    print('Generating docs...')
+
     os.makedirs(os.path.join(output_dir, '_images'), exist_ok=True)
 
     for category_file in walk(category_dir):
