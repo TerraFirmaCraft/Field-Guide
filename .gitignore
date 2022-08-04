@@ -2,6 +2,8 @@
 !*/
 !/.gitignore
 
+!/.github/workflows/*.yml
+
 !/LICENSE
 !/README.md
 
