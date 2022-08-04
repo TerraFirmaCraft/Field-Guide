@@ -3,6 +3,7 @@ import json
 import warnings
 
 from typing import List, Dict, Any
+from argparse import ArgumentParser
 
 from context import Context
 from category import Category
@@ -26,18 +27,23 @@ KEYS = {
 
 def main():
     # Arguments
-    tfc_dir = 'D:/Minecraft/Mods/TerraFirmaCraft-1.18'
+    parser = ArgumentParser('TFC Field Guide')
+    parser.add_argument('tfc-dir', type=str, default='../TerraFirmaCraft')
+    parser.add_argument('out-dir', type=str, default='out')
+
+    args = parser.parse_args()
+
+    tfc_dir = args.tfc_dir
+    output_dir = args.out_dir
+
     book_rel_dir = 'src/main/resources/data/tfc/patchouli_books/field_guide/en_us'
     image_rel_dir = 'src/main/resources/assets/tfc'
 
     book_dir = os.path.join(tfc_dir, book_rel_dir)
     image_dir = os.path.join(tfc_dir, image_rel_dir)
-    output_dir = 'out'
-
     category_dir = os.path.join(book_dir, 'categories')
 
     context = Context(book_dir, image_dir, output_dir, KEYS)
-    categories = context.categories
 
     os.makedirs(os.path.join(output_dir, '_images'), exist_ok=True)
 
@@ -52,12 +58,11 @@ def main():
 
             convert_category(category, category_id, data)
 
-            categories[category_id] = category
+            context.categories[category_id] = category
         else:
             warnings.warn('Unknown category file: %s' % category_file)
 
     entry_dir = os.path.join(book_dir, 'entries')
-    entries: Dict[str, Entry] = context.entries
 
     for entry_file in walk(entry_dir):
         if entry_file.endswith('.json'):
@@ -70,10 +75,9 @@ def main():
             category_id: str = data['category']
             category_id = category_id[category_id.index(':') + 1:]
 
-            convert_entry(context, categories[category_id], entry, data)
+            convert_entry(context, entry, data)
 
-            entries[entry_id] = entry
-            categories[category_id].entries.append(entry_id)
+            context.add_entry(category_id, entry_id, entry)
         else:
             warnings.warn('Unknown entry file: %s' % entry_file)
 
@@ -195,7 +199,7 @@ def convert_category(category: Category, category_id: str, data: Keyable):
     category.sort = data['sortnum']
 
 
-def convert_entry(context: Context, category: Category, entry: Entry, data: Keyable):
+def convert_entry(context: Context, entry: Entry, data: Keyable):
     entry.sort = data['sortnum'] if 'sortnum' in data else -1
     entry.name = data['name']
 

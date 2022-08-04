@@ -2,4 +2,8 @@
 !*/
 !/.gitignore
 
+!/LICENSE
+!/README.md
+
+!/requirements.txt
 !/src/**/*.py

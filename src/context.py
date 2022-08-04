@@ -78,6 +78,10 @@ class Context:
         self.last_uid += 1
         return 'content-element-%d' % self.last_uid
     
+    def add_entry(self, category_id: str, entry_id: str, entry: Entry):
+        self.entries[entry_id] = entry
+        self.categories[category_id].entries.append(entry_id)
+    
     def sort(self):
         """ Initializes sorted lists for all categories and entries. """
         self.sorted_categories = sorted([
