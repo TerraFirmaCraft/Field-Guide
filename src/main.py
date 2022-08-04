@@ -83,13 +83,18 @@ def main():
     with open(prepare(output_dir, 'index.html'), 'w', encoding='utf-8') as f:
         f.write(PREFIX.format(
             title=TITLE,
-            location='<a href="#">Index</a>',
+            index='#',
+            location='<a class="text-muted" href="#">Index</a>',
             contents='\n'.join([
-                '<li><a href="./%s/index.html">%s</a></li>' % (cat_id, cat.name)
+                '<li><a class="text-muted" href="./%s/index.html">%s</a></li>' % (cat_id, cat.name)
                 for cat_id, cat in context.sorted_categories
             ])
         ))
-        f.write('<h4>Entries</h4>')
+        f.write("""
+        <h3>TerraFirmaCraft Online Field Guide</h3>
+        <p>This is a translation of the TerraFirmaCraft Field Guide, which is viewable in game. Some parts of this field guide are only visible in-game, such as multiblock visualizations or recipes.</p>
+        <h4>Entries</h4>
+        """)
 
         for cat_id, cat in context.sorted_categories:
             f.write("""
@@ -110,13 +115,14 @@ def main():
         with open(prepare(output_dir, category_id + '/index.html'), 'w', encoding='utf-8') as f:
             f.write(PREFIX.format(
                 title=TITLE,
-                location='<a href="../index.html">Index</a> / <a href="#">%s</a>' % cat.name,
+                index='../index.html',
+                location='<a class="text-muted" href="../index.html">Index</a> / <a class="text-muted" href="#">%s</a>' % cat.name,
                 contents='\n'.join([
-                    '<li><a href="../%s/index.html">%s</a></li>' % (cat_id, cat.name) + (
+                    '<li><a class="text-muted" href="../%s/index.html">%s</a></li>' % (cat_id, cat.name) + (
                         ''
                         if cat_id != category_id else
                         '<ul class="list-unstyled push-right">%s</ul>' % '\n'.join([
-                            '<li><a href="./%s.html">%s</a></li>' % (os.path.relpath(ent_id, cat_id), ent.name)
+                            '<li><a class="text-muted" href="./%s.html">%s</a></li>' % (os.path.relpath(ent_id, cat_id), ent.name)
                             for ent_id, ent in cat.sorted_entries 
                         ])
                     )
@@ -132,9 +138,6 @@ def main():
                     <div class="card-header">
                         <a href="%s.html">%s</a>
                     </div>
-                    <div class="card-body">
-                        <p class="card-text">Some info about this entry...</p>
-                    </div>
                 </div>
                 """ % (os.path.relpath(entry_id, category_id), entry.name))
             
@@ -146,13 +149,14 @@ def main():
             with open(prepare(output_dir, entry_id + '.html'), 'w', encoding='utf-8') as f:
                 f.write(PREFIX.format(
                     title=TITLE,
-                    location='<a href="../index.html">Index</a> / <a href="./index.html">%s</a> / <a href="#">%s</a>' % (cat.name, entry.name),
+                    index='../index.html',
+                    location='<a class="text-muted" href="../index.html">Index</a> / <a class="text-muted" href="./index.html">%s</a> / <a class="text-muted" href="#">%s</a>' % (cat.name, entry.name),
                     contents='\n'.join([
-                        '<li><a href="../%s/index.html">%s</a>' % (cat_id, cat.name) + (
+                        '<li><a class="text-muted" href="../%s/index.html">%s</a>' % (cat_id, cat.name) + (
                             '</li>'
                             if cat_id != category_id else
                             '<ul class="list-unstyled push-right">%s</ul>' % '\n'.join([
-                                '<li><a href="./%s.html">%s</a></li>' % (os.path.relpath(ent_id, cat_id), ent.name)
+                                '<li><a class="text-muted" href="./%s.html">%s</a></li>' % (os.path.relpath(ent_id, cat_id), ent.name)
                                 for ent_id, ent in cat.sorted_entries 
                             ]) + '</li>'
                         )
@@ -288,6 +292,8 @@ PREFIX = """
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -322,22 +328,31 @@ PREFIX = """
 </head>
 <body>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-12">
-            <h2>{title}</h2>
-            <p><em>{location}</em></p>
-            <hr>
+<nav class="navbar navbar-expand-sm fixed-top bg-dark">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand text-light" href="#">{title}</a>
         </div>
+        <ul class="navbar-nav">
+            <li class="nav-item active"><a class="nav-link text-light" href="{index}">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/TerraFirmaCraft"><i class="fa fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY">Discord</a></li>
+        </ul>
     </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
     <div class="row">
-        <div class="col-2">
-            <p><strong>Contents</strong></p>
-            <ul class="list-unstyled">
-                {contents}
-            </ul>
+        <div class="col-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    {contents}
+                </ul>
+            </div>
         </div>
-        <div class="col-8">
+        <div class="col-9 py-3">
+            <p><em>{location}</em></p>
 """
 
 SUFFIX = """

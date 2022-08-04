@@ -90,7 +90,7 @@ class Context:
     
     def format_text(self, buffer: List[str], data: Keyable, key: str = 'text'):
         if key in data:
-            TextFormatter(buffer, data[key])
+            TextFormatter(self, buffer, data[key])
     
     def format_title(self, buffer: List[str], data: Keyable, key: str = 'title'):
         if key in data:
@@ -104,7 +104,7 @@ class Context:
     def format_with_tooltip(self, buffer: List[str], text: str, tooltip: str):
         buffer.append("""
         <div style="text-align: center;">
-            <p><em><a href="#" data-toggle="tooltip" title="%s">%s</a></em></p>
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="%s">%s</span></p>
         </div>
         """ % (tooltip, text))
     
