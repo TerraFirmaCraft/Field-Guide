@@ -38,7 +38,7 @@ jobs:
         path: 'tfc'
     - name: Build
       run: |
-        python field-guide/src/main.py tfc out
+        python field-guide/src/main.py --tfc-dir tfc --out-dir out
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4
       with:

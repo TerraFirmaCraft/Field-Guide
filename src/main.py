@@ -28,8 +28,8 @@ KEYS = {
 def main():
     # Arguments
     parser = ArgumentParser('TFC Field Guide')
-    parser.add_argument('tfc-dir', type=str, default='../TerraFirmaCraft')
-    parser.add_argument('out-dir', type=str, default='out')
+    parser.add_argument('--tfc-dir', type=str, dest='tfc_dir', default='../TerraFirmaCraft')
+    parser.add_argument('--out-dir', type=str, dest='out_dir', default='out')
 
     args = parser.parse_args()
 
