@@ -59,6 +59,7 @@ def main():
             convert_category(category, category_id, data)
 
             context.categories[category_id] = category
+            print('Read category: %s at %s' % (category_id, category_file))
         else:
             warnings.warn('Unknown category file: %s' % category_file)
 
@@ -78,6 +79,7 @@ def main():
             convert_entry(context, entry, data)
 
             context.add_entry(category_id, entry_id, entry)
+            print('Read entry: %s at %s' % (entry_id, entry_file))
         else:
             warnings.warn('Unknown entry file: %s' % entry_file)
 
