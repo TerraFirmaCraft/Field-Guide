@@ -37,6 +37,7 @@ jobs:
     - name: Build
       run: |
         python src/main.py --tfc-dir tfc --out-dir build
+        touch build/.nojekyll
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4
       with:
