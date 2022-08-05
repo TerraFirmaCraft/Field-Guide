@@ -124,7 +124,7 @@ class Context:
 
         src = os.path.join(self.image_dir, path)
         rel = os.path.join('_images', path.replace('/', '_').replace('textures_gui_book_', ''))
-        dest = os.path.join(self.output_dir, '../', rel)  # Images are saved one level up, in lang-independent location
+        dest = os.path.normpath(os.path.join(self.output_dir, '../', rel))  # Images are saved one level up, in lang-independent location
 
         img = Image.open(src).convert('RGBA')
         width, height = img.size
