@@ -1,6 +1,8 @@
 import os
 import json
-import warnings
+import logging
+
+import versions
 
 from typing import List, Dict, Any
 from argparse import ArgumentParser
@@ -24,30 +26,52 @@ KEYS = {
     'tfc.key.place_block': 'V'
 }
 
+BOOK_DIR = 'src/main/resources/data/tfc/patchouli_books/field_guide/'
+IMAGE_DIR = 'src/main/resources/assets/tfc'
+
+LOG = logging.getLogger('main')
+LOG.addHandler((
+    h := logging.StreamHandler(),
+    h.setFormatter(logging.Formatter('%(levelname)s: %(message)s')),
+    h
+)[-1])
+
 
 def main():
     # Arguments
     parser = ArgumentParser('TFC Field Guide')
     parser.add_argument('--tfc-dir', type=str, dest='tfc_dir', default='../TerraFirmaCraft')
     parser.add_argument('--out-dir', type=str, dest='out_dir', default='out')
+    parser.add_argument('--debug', action='store_true', dest='log_debug')
 
     args = parser.parse_args()
 
+    LOG.setLevel(level=logging.DEBUG if args.log_debug else logging.INFO)
+
     tfc_dir = args.tfc_dir
-    output_dir = args.out_dir
+    out_dir = args.out_dir
 
-    book_rel_dir = 'src/main/resources/data/tfc/patchouli_books/field_guide/en_us'
-    image_rel_dir = 'src/main/resources/assets/tfc'
+    LOG.info('Generating docs...')
+    LOG.debug('Running with:\n  tfc_dir = %s\n  out_dir = %s\n  langs = %s\n  version = %s' % (
+        tfc_dir, out_dir, versions.LANGUAGES, versions.VERSION
+    ))
 
-    book_dir = os.path.join(tfc_dir, book_rel_dir)
-    image_dir = os.path.join(tfc_dir, image_rel_dir)
+    os.makedirs(os.path.join(out_dir, '_images'), exist_ok=True)
+
+    for lang in versions.LANGUAGES:
+        LOG.debug('Generating language: %s' % lang)
+        parse_book(tfc_dir, out_dir, lang)
+    
+    LOG.info('Done')
+
+def parse_book(tfc_dir: str, out_dir: str, lang: str):
+
+    book_dir = os.path.join(tfc_dir, BOOK_DIR, lang)
+    image_dir = os.path.join(tfc_dir, IMAGE_DIR)
+    output_dir = os.path.join(out_dir, lang)
     category_dir = os.path.join(book_dir, 'categories')
 
     context = Context(book_dir, image_dir, output_dir, KEYS)
-
-    print('Generating docs...')
-
-    os.makedirs(os.path.join(output_dir, '_images'), exist_ok=True)
 
     for category_file in walk(category_dir):
         if category_file.endswith('.json'):
@@ -58,12 +82,12 @@ def main():
             category_id: str = os.path.relpath(category_file, category_dir)
             category_id = category_id[:category_id.index('.')]
 
-            convert_category(category, category_id, data)
+            convert_category(context, category, data)
 
             context.categories[category_id] = category
-            print('Read category: %s at %s' % (category_id, category_file))
+            LOG.debug('Read category: %s at %s' % (category_id, category_file))
         else:
-            warnings.warn('Unknown category file: %s' % category_file)
+            LOG.warn('Unknown category file: %s' % category_file)
 
     entry_dir = os.path.join(book_dir, 'entries')
 
@@ -81,9 +105,9 @@ def main():
             convert_entry(context, entry, data)
 
             context.add_entry(category_id, entry_id, entry)
-            print('Read entry: %s at %s' % (entry_id, entry_file))
+            LOG.debug('Read entry: %s at %s' % (entry_id, entry_file))
         else:
-            warnings.warn('Unknown entry file: %s' % entry_file)
+            LOG.warn('Unknown entry file: %s' % entry_file)
 
     context.sort()
 
@@ -91,6 +115,10 @@ def main():
     with open(prepare(output_dir, 'index.html'), 'w', encoding='utf-8') as f:
         f.write(PREFIX.format(
             title=TITLE,
+            current_lang=lang,
+            langs='\n'.join([
+                '<a href="../%s/index.html" class="dropdown-item">%s</a>' % (l, l) for l in versions.LANGUAGES
+            ]),
             index='#',
             location='<a class="text-muted" href="#">Index</a>',
             contents='\n'.join([
@@ -111,10 +139,14 @@ def main():
                     <a href="%s/index.html">%s</a>
                 </div>
                 <div class="card-body">
-                    <p class="card-text">%s</p>
+                    %s
                 </div>
             </div>
-            """ % (cat_id, cat.name, cat.description))
+            """ % (
+                cat_id,
+                cat.name,
+                cat.description
+            ))
 
         f.write(SUFFIX)
 
@@ -123,6 +155,10 @@ def main():
         with open(prepare(output_dir, category_id + '/index.html'), 'w', encoding='utf-8') as f:
             f.write(PREFIX.format(
                 title=TITLE,
+                current_lang=lang,
+                langs='\n'.join([
+                    '<a href="../../%s/index.html" class="dropdown-item">%s</a>' % (l, l) for l in versions.LANGUAGES
+                ]),
                 index='../index.html',
                 location='<a class="text-muted" href="../index.html">Index</a> / <a class="text-muted" href="#">%s</a>' % cat.name,
                 contents='\n'.join([
@@ -157,6 +193,10 @@ def main():
             with open(prepare(output_dir, entry_id + '.html'), 'w', encoding='utf-8') as f:
                 f.write(PREFIX.format(
                     title=TITLE,
+                    current_lang=lang,
+                    langs='\n'.join([
+                        '<a href="../../%s/index.html" class="dropdown-item">%s</a>' % (l, l) for l in versions.LANGUAGES
+                    ]),
                     index='../index.html',
                     location='<a class="text-muted" href="../index.html">Index</a> / <a class="text-muted" href="./index.html">%s</a> / <a class="text-muted" href="#">%s</a>' % (cat.name, entry.name),
                     contents='\n'.join([
@@ -193,13 +233,11 @@ def prepare(root: str, path: str) -> str:
     return full
 
 
-def convert_category(category: Category, category_id: str, data: Keyable):
-    category_name: str = data['name']
-    category_desc: str = data['description']
+def convert_category(context: Context, category: Category, data: Keyable):
+    context.format_text(desc := [], data, 'description')
 
-    category.push('<p><a href="./%s/index.html">%s</a>: %s</p>\n' % (category_id, category_name, category_desc))
-    category.name = category_name
-    category.description = category_desc
+    category.name = data['name']
+    category.description = ''.join(desc)
     category.sort = data['sortnum']
 
 
@@ -281,8 +319,7 @@ def convert_page(context: Context, buffer: List[str], data: Keyable):
         context.format_recipe(buffer, data)
         context.format_text(buffer, data)
     else:
-        buffer.append('<p>Missing Page: %s</p>' % page_type)
-        warnings.warn('Unrecognized page type: "type": "%s"' % page_type)
+        LOG.warn('Unrecognized page type: %s' % page_type)
 
     if 'anchor' in data:
         buffer.append('</div>')
@@ -342,9 +379,15 @@ PREFIX = """
             <a class="navbar-brand text-light" href="#">{title}</a>
         </div>
         <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language: {current_lang}</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    {langs}
+                </div>
+            </li>
             <li class="nav-item active"><a class="nav-link text-light" href="{index}">Index</a></li>
             <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
-            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/TerraFirmaCraft"><i class="fa fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fa fa-github"></i> GitHub</a></li>
             <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY">Discord</a></li>
         </ul>
     </div>

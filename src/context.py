@@ -37,12 +37,12 @@ ROOT_TAGS = {
     'li': {
         None: '</li>\n</ul>\n',
         'li': '</li>\n\t<li>',
-        'p': '</li>\n<p>'
+        'p': '</li>\n</ul><p>'
     },
     'ol': {
         None: '</li>\n</ol>\n',
         'ol': '</li>\n\t<li>',
-        'p': '</li>\n<p>'
+        'p': '</li>\n</ol><p>'
     }
 }
 
@@ -124,7 +124,7 @@ class Context:
 
         src = os.path.join(self.image_dir, path)
         rel = os.path.join('_images', path.replace('/', '_').replace('textures_gui_book_', ''))
-        dest = os.path.join(self.output_dir, rel)
+        dest = os.path.join(self.output_dir, '../', rel)  # Images are saved one level up, in lang-independent location
 
         img = Image.open(src).convert('RGBA')
         width, height = img.size
@@ -138,7 +138,7 @@ class Context:
             img = img.resize((400, 400), Image.Resampling.NEAREST)
         img.save(dest)
 
-        return '../' + rel
+        return '../../' + rel
 
 
 class TextFormatter:
