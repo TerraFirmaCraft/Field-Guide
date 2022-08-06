@@ -111,6 +111,7 @@ def parse_book(tfc_dir: str, out_dir: str, lang: str):
                 '<a href="../%s/index.html" class="dropdown-item">%s</a>' % (l, l) for l in versions.LANGUAGES
             ]),
             index='#',
+            tfc_version=versions.VERSION,
             location='<a class="text-muted" href="#">Index</a>',
             contents='\n'.join([
                 '<li><a class="text-muted" href="./%s/index.html">%s</a></li>' % (cat_id, cat.name)
@@ -151,6 +152,7 @@ def parse_book(tfc_dir: str, out_dir: str, lang: str):
                     '<a href="../../%s/index.html" class="dropdown-item">%s</a>' % (l, l) for l in versions.LANGUAGES
                 ]),
                 index='../index.html',
+                tfc_version=versions.VERSION,
                 location='<a class="text-muted" href="../index.html">Index</a> / <a class="text-muted" href="#">%s</a>' % cat.name,
                 contents='\n'.join([
                     '<li><a class="text-muted" href="../%s/index.html">%s</a></li>' % (cat_id, cat.name) + (
@@ -189,6 +191,7 @@ def parse_book(tfc_dir: str, out_dir: str, lang: str):
                         '<a href="../../%s/index.html" class="dropdown-item">%s</a>' % (l, l) for l in versions.LANGUAGES
                     ]),
                     index='../index.html',
+                    tfc_version=versions.VERSION,
                     location='<a class="text-muted" href="../index.html">Index</a> / <a class="text-muted" href="./index.html">%s</a> / <a class="text-muted" href="#">%s</a>' % (cat.name, entry.name),
                     contents='\n'.join([
                         '<li><a class="text-muted" href="../%s/index.html">%s</a>' % (cat_id, cat.name) + (
@@ -301,7 +304,6 @@ def convert_page(context: Context, buffer: List[str], data: Keyable):
         if 'multiblock' in data:
             mb = data['multiblock']['pattern']
             if mb == [['X'], ['0']] or mb == [['X'], ['Y'], ['0']]:
-                print(data['multiblock']['mapping']['X'])
                 context.format_with_tooltip(buffer, 'Block: <code>%s</code>' % data['multiblock']['mapping']['X'], 'View the field guide in Minecraft to see blocks.')
         elif 'multiblock_id' in data:
             context.format_with_tooltip(buffer, 'Multiblock: <code>%s</code>' % data['multiblock_id'], 'View the field guide in Minecraft to see multiblocks.')
@@ -346,10 +348,13 @@ PREFIX = """
     
     <title>{title}</title>
     
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/6fa482c6e2.js" crossorigin="anonymous"></script>
 
+    <!-- JQuery, Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -399,7 +404,8 @@ PREFIX = """
             <li class="nav-item active"><a class="nav-link text-light" href="{index}">Index</a></li>
             <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
             <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fa fa-github"></i> GitHub</a></li>
-            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY">Discord</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item"><span class="nav-link text-light" href="#">Version: {tfc_version}</span></li>
         </ul>
     </div>
 </nav>
