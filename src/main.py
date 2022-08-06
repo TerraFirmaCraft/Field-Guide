@@ -1,18 +1,16 @@
 import os
 import json
 import logging
-
 import versions
 
-from typing import List, Dict, Any
+from typing import List
 from argparse import ArgumentParser
 
+from util import LOG, Keyable
 from context import Context
 from category import Category
 from entry import Entry
-
-
-Keyable = Dict[str, Any]
+from components import knapping_recipe
 
 
 KEYS = {
@@ -28,13 +26,6 @@ KEYS = {
 
 BOOK_DIR = 'src/main/resources/data/tfc/patchouli_books/field_guide/'
 IMAGE_DIR = 'src/main/resources/assets/tfc'
-
-LOG = logging.getLogger('main')
-LOG.addHandler((
-    h := logging.StreamHandler(),
-    h.setFormatter(logging.Formatter('%(levelname)s: %(message)s')),
-    h
-)[-1])
 
 
 def main():
@@ -71,7 +62,7 @@ def parse_book(tfc_dir: str, out_dir: str, lang: str):
     output_dir = os.path.join(out_dir, lang)
     category_dir = os.path.join(book_dir, 'categories')
 
-    context = Context(book_dir, image_dir, output_dir, KEYS)
+    context = Context(tfc_dir, book_dir, image_dir, output_dir, KEYS)
 
     for category_file in walk(category_dir):
         if category_file.endswith('.json'):
@@ -87,7 +78,7 @@ def parse_book(tfc_dir: str, out_dir: str, lang: str):
             context.categories[category_id] = category
             LOG.debug('Read category: %s at %s' % (category_id, category_file))
         else:
-            LOG.warn('Unknown category file: %s' % category_file)
+            LOG.warning('Unknown category file: %s' % category_file)
 
     entry_dir = os.path.join(book_dir, 'entries')
 
@@ -107,7 +98,7 @@ def parse_book(tfc_dir: str, out_dir: str, lang: str):
             context.add_entry(category_id, entry_id, entry)
             LOG.debug('Read entry: %s at %s' % (entry_id, entry_file))
         else:
-            LOG.warn('Unknown entry file: %s' % entry_file)
+            LOG.warning('Unknown entry file: %s' % entry_file)
 
     context.sort()
 
@@ -298,6 +289,7 @@ def convert_page(context: Context, buffer: List[str], data: Keyable):
         context.format_text(buffer, data)
     elif page_type == 'patchouli:spotlight':
         context.format_title(buffer, data)
+        context.format_with_tooltip(buffer, 'Item: <code>%s</code>' % data['item'], 'View the field guide in Minecraft to see items.')
         context.format_text(buffer, data)
     elif page_type == 'patchouli:entity':
         context.format_title(buffer, data, 'name')
@@ -305,21 +297,40 @@ def convert_page(context: Context, buffer: List[str], data: Keyable):
     elif page_type == 'patchouli:empty':
         buffer.append('<hr>')
     elif page_type == 'patchouli:multiblock' or page_type == 'tfc:multimultiblock':
-        pass
+        context.format_title(buffer, data, 'name')
+        if 'multiblock' in data:
+            mb = data['multiblock']['pattern']
+            if mb == [['X'], ['0']] or mb == [['X'], ['Y'], ['0']]:
+                print(data['multiblock']['mapping']['X'])
+                context.format_with_tooltip(buffer, 'Block: <code>%s</code>' % data['multiblock']['mapping']['X'], 'View the field guide in Minecraft to see blocks.')
+        elif 'multiblock_id' in data:
+            context.format_with_tooltip(buffer, 'Multiblock: <code>%s</code>' % data['multiblock_id'], 'View the field guide in Minecraft to see multiblocks.')
+        context.format_text(buffer, data)
     elif page_type in (
         'tfc:welding_recipe',
         'tfc:anvil_recipe',
         'tfc:heat_recipe',
-        'tfc:rock_knapping_recipe',
-        'tfc:clay_knapping_recipe',
-        'tfc:fire_clay_knapping_recipe',
-        'tfc:leather_knapping_recipe',
         'tfc:quern_recipe'
     ):
         context.format_recipe(buffer, data)
         context.format_text(buffer, data)
+    elif page_type in (
+        'tfc:clay_knapping_recipe',
+        'tfc:fire_clay_knapping_recipe',
+        'tfc:leather_knapping_recipe',
+        'tfc:rock_knapping_recipe',
+    ):
+        recipe_id, image = knapping_recipe.format_knapping_recipe(context, data)
+        uid = context.next_id()
+        buffer.append(IMAGE_SINGLE.format(
+            id=uid,
+            src=image,
+            text='Recipe: %s' % recipe_id
+        ))
+        context.format_recipe(buffer, data)
+        context.format_text(buffer, data)
     else:
-        LOG.warn('Unrecognized page type: %s' % page_type)
+        LOG.warning('Unrecognized page type: %s' % page_type)
 
     if 'anchor' in data:
         buffer.append('</div>')

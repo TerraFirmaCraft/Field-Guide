@@ -1,11 +1,13 @@
 import re
 import os
-import warnings
+import json
+import util
 
-from typing import Dict, List, Tuple, Any
+from typing import Dict, List, Tuple
 from PIL import Image
 from category import Category
 from entry import Entry
+from util import LOG, Keyable
 
 
 VANILLA_COLORS = {
@@ -46,7 +48,7 @@ ROOT_TAGS = {
     }
 }
 
-Keyable = Dict[str, Any]
+RECIPE_DIR = 'src/main/resources/data/tfc/recipes'
 
 
 class Context:
@@ -63,7 +65,8 @@ class Context:
 
     last_uid: int
 
-    def __init__(self, book_dir: str, image_dir: str, output_dir: str, keys: Dict[str, str]):
+    def __init__(self, tfc_dir: str, book_dir: str, image_dir: str, output_dir: str, keys: Dict[str, str]):
+        self.tfc_dir = tfc_dir
         self.book_dir = book_dir
         self.image_dir = image_dir
         self.output_dir = output_dir
@@ -117,14 +120,11 @@ class Context:
             self.format_with_tooltip(buffer, 'Recipe: <code>%s</code>' % data[key], 'View the field guide in Minecraft to see recipes')
     
     def convert_image(self, image: str) -> str:
-        namespace, path = image.split(':')
+        path = self.convert_identifier(image)
 
-        assert namespace == 'tfc'
-        assert path.endswith('.png')
-
-        src = os.path.join(self.image_dir, path)
-        rel = os.path.join('_images', path.replace('/', '_').replace('textures_gui_book_', ''))
-        dest = os.path.normpath(os.path.join(self.output_dir, '../', rel))  # Images are saved one level up, in lang-independent location
+        src = util.path_join(self.image_dir, path)
+        rel = util.path_join('_images', path.replace('/', '_').replace('textures_gui_book_', ''))
+        dest = util.path_join(self.output_dir, '../', rel)  # Images are saved one level up, in lang-independent location
 
         img = Image.open(src).convert('RGBA')
         width, height = img.size
@@ -139,6 +139,23 @@ class Context:
         img.save(dest)
 
         return '../../' + rel
+    
+    def find_recipe(self, recipe: str) -> Keyable:
+        path = self.convert_identifier(recipe)
+
+        src = os.path.join(self.tfc_dir, RECIPE_DIR, path + '.json')
+        src = os.path.normpath(src)
+
+        with open(src, 'r', encoding='utf-8') as f:
+            data: Keyable = json.load(f)
+        
+        return data
+    
+    def convert_identifier(self, res: str) -> str:
+        namespace, path = res.split(':')
+        assert namespace == 'tfc'
+        return path
+        
 
 
 class TextFormatter:
@@ -193,7 +210,7 @@ class TextFormatter:
             elif key.startswith('t'):
                 pass  # Discard tooltips
             else:
-                warnings.warn('Unrecognized Formatting Code $(%s)' % key)
+                LOG.warning('Unrecognized Formatting Code $(%s)' % key)
 
             cursor = end
 
