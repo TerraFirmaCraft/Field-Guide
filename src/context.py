@@ -126,7 +126,11 @@ class Context:
         rel = util.path_join('_images', path.replace('/', '_').replace('textures_gui_book_', ''))
         dest = util.path_join(self.output_dir, '../', rel)  # Images are saved one level up, in lang-independent location
 
-        img = Image.open(src).convert('RGBA')
+        try:
+            img = Image.open(src).convert('RGBA')
+        except OSError:
+            LOG.warning('Image file not found: %s' % image)
+            return 'missing'
         width, height = img.size
 
         assert width == height and width % 256 == 0
