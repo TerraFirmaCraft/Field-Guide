@@ -389,12 +389,15 @@ PREFIX = """
 </head>
 <body>
 
-<nav class="navbar navbar-expand-sm fixed-top bg-dark">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand text-light" href="#">{title}</a>
-        </div>
-        <ul class="navbar-nav">
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="#">{title}</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language: {current_lang}</a>
                 <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
@@ -411,7 +414,7 @@ PREFIX = """
 </nav>
 <div class="container-fluid" style="margin-top:50px">
     <div class="row">
-        <div class="col-2 py-1">
+        <div class="col-md-2 py-1">
             <div class="sticky-top" style="top: 70px">
                 <h4>Contents</h4>
                 <ul class="list-unstyled">
@@ -419,7 +422,7 @@ PREFIX = """
                 </ul>
             </div>
         </div>
-        <div class="col-9 py-3">
+        <div class="col-md-9 py-3">
             <p><em>{location}</em></p>
 """
 
