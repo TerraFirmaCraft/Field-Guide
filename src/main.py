@@ -258,9 +258,7 @@ def convert_page(context: Context, buffer: List[str], data: Keyable):
         images = data['images']
         if len(images) == 1:
             image = images[0]
-            uid = context.next_id()
             buffer.append(IMAGE_SINGLE.format(
-                id=uid,
                 src=context.convert_image(image),
                 text=image
             ))
@@ -291,8 +289,12 @@ def convert_page(context: Context, buffer: List[str], data: Keyable):
         context.format_recipe(buffer, data, 'recipe2')
         context.format_text(buffer, data)
     elif page_type == 'patchouli:spotlight':
+        items = 'Item%s: <code>%s</code>' % (
+            's' if ',' in data['item'] else '',
+            '</code>, <code>'.join(data['item'].split(','))
+        )
         context.format_title(buffer, data)
-        context.format_with_tooltip(buffer, 'Item: <code>%s</code>' % data['item'], 'View the field guide in Minecraft to see items.')
+        context.format_with_tooltip(buffer, items, 'View the field guide in Minecraft to see items.')
         context.format_text(buffer, data)
     elif page_type == 'patchouli:entity':
         context.format_title(buffer, data, 'name')
@@ -312,7 +314,9 @@ def convert_page(context: Context, buffer: List[str], data: Keyable):
         'tfc:welding_recipe',
         'tfc:anvil_recipe',
         'tfc:heat_recipe',
-        'tfc:quern_recipe'
+        'tfc:quern_recipe',
+        'tfc:instant_barrel_recipe',
+        'tfc:sealed_barrel_recipe'
     ):
         context.format_recipe(buffer, data)
         context.format_text(buffer, data)
@@ -323,9 +327,7 @@ def convert_page(context: Context, buffer: List[str], data: Keyable):
         'tfc:rock_knapping_recipe',
     ):
         recipe_id, image = knapping_recipe.format_knapping_recipe(context, data)
-        uid = context.next_id()
         buffer.append(IMAGE_SINGLE.format(
-            id=uid,
             src=image,
             text='Recipe: %s' % recipe_id
         ))
@@ -364,9 +366,11 @@ PREFIX = """
         margin: auto;
     }}
 
-    .carousel-control-next,
-    .carousel-control-prev {{
-        filter: invert(100%);
+    @media only screen and (min-width: 500px) {{
+        .carousel-control-next,
+        .carousel-control-prev {{
+            filter: invert(100%);
+        }}
     }}
 
     .tooltip {{
@@ -435,18 +439,12 @@ SUFFIX = """
 """
 
 IMAGE_SINGLE = """
-<div id="{id}" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img class="d-block w-200" src="{src}" alt="{text}">
-        </div>
-    </div>
-</div>
+<img class="d-block w-200 mx-auto img-fluid" src="{src}" alt="{text}">
 """
 
 IMAGE_MULTIPLE_PART = """
 <div class="carousel-item {active}">
-    <img class="d-block w-200" src="{src}" alt="{text}">
+    <img class="d-block w-200 mx-auto img-fluid" src="{src}" alt="{text}">
 </div>
 """
 
