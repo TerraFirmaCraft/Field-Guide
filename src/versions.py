@@ -1,5 +1,5 @@
 
-VERSION = 'v2.1.0-beta'
+VERSION = 'v2.1.1-beta'
 LANGUAGES = ['en_us']
 
 
