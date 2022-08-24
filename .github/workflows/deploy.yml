@@ -38,6 +38,7 @@ jobs:
       run: |
         python src/main.py --tfc-dir tfc --out-dir build --debug
         touch build/.nojekyll
+        cp redirect.html build/index.html
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4
       with:
