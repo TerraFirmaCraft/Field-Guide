@@ -1,13 +1,11 @@
 import re
-import os
-import json
-import util
 
-from typing import Dict, List, Tuple
+from typing import Dict, List, Tuple, Any
 from PIL import Image
 from category import Category
 from entry import Entry
-from util import LOG, Keyable
+from util import LOG, InternalError
+from components.loader import Loader
 
 
 VANILLA_COLORS = {
@@ -53,7 +51,6 @@ RECIPE_DIR = 'src/main/resources/data/tfc/recipes'
 
 class Context:
     book_dir: str
-    image_dir: str
     output_dir: str
 
     keys: Dict[str, str]
@@ -65,16 +62,24 @@ class Context:
 
     last_uid: int
 
-    def __init__(self, tfc_dir: str, book_dir: str, image_dir: str, output_dir: str, keys: Dict[str, str]):
+    loader: Loader
+
+    def __init__(self, tfc_dir: str, book_dir: str, output_dir: str, lang: str, keys: Dict[str, str]):
         self.tfc_dir = tfc_dir
         self.book_dir = book_dir
-        self.image_dir = image_dir
         self.output_dir = output_dir
+        self.lang = lang
         self.keys = keys
         self.categories = {}
         self.entries = {}
         self.sorted_categories = []
         self.last_uid = 0
+        self.loader = Loader(tfc_dir, output_dir)
+        try:
+            self.lang_json = self.loader.load_json(lang, 'lang', 'assets')
+        except InternalError as e:
+            e.warning()
+            self.lang_json = {}
     
     def next_id(self) -> str:
         """ Returns a unique ID to be used in a id="" field. Successive calls will return a new ID. """
@@ -95,15 +100,30 @@ class Context:
             sorted_entry_names = sorted(cat.entries, key=lambda e: (self.entries[e].sort, e))
             cat.sorted_entries = [(e, self.entries[e]) for e in sorted_entry_names]
     
-    def format_text(self, buffer: List[str], data: Keyable, key: str = 'text'):
+    def format_text(self, buffer: List[str], data: Any, key: str = 'text'):
         if key in data:
             TextFormatter(self, buffer, data[key])
     
-    def format_title(self, buffer: List[str], data: Keyable, key: str = 'title'):
+    def format_title(self, buffer: List[str], data: Any, key: str = 'title'):
         if key in data:
             buffer.append('<h5>%s</h5>\n' % data[key])
-    
-    def format_centered_text(self, buffer: List[str], data: Keyable, key: str = 'text'):
+
+    def format_title_with_icon(self, buffer: List[str], icon_src: str, icon_name: str | None, data: Any, key: str = 'title'):
+        title = icon_name
+        if key in data:
+            title = data[key]
+            if not icon_name:  # For multi-items, no name, but title is present
+                icon_name = title
+        buffer.append("""
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="%s">
+                <img src="%s" alt="%s" />
+            </span>
+            <h5>%s</h5>
+        </div>
+        """ % (icon_name, icon_src, title, title))
+
+    def format_centered_text(self, buffer: List[str], data: Any, key: str = 'text'):
         buffer.append('<div style="text-align: center;">')
         self.format_text(buffer, data, key)
         buffer.append('</div>')
@@ -115,51 +135,22 @@ class Context:
         </div>
         """ % (tooltip, text))
     
-    def format_recipe(self, buffer: List[str], data: Keyable, key: str = 'recipe'):
+    def format_recipe(self, buffer: List[str], data: Any, key: str = 'recipe'):
         if key in data:
             self.format_with_tooltip(buffer, 'Recipe: <code>%s</code>' % data[key], 'View the field guide in Minecraft to see recipes')
-    
+
     def convert_image(self, image: str) -> str:
-        path = self.convert_identifier(image)
-
-        src = util.path_join(self.image_dir, path)
-        rel = util.path_join('_images', path.replace('/', '_').replace('textures_gui_book_', ''))
-        dest = util.path_join(self.output_dir, '../', rel)  # Images are saved one level up, in lang-independent location
-
-        try:
-            img = Image.open(src).convert('RGBA')
-        except OSError:
-            LOG.warning('Image file not found: %s' % image)
-            return 'missing'
+        _, img = self.loader.load_image(image)
+        
         width, height = img.size
-
         assert width == height and width % 256 == 0
-
         size = width * 200 // 256
         img = img.crop((0, 0, size, size))
         if size != 400:
             # Resize to 400 x 400, for consistent size images
             img = img.resize((400, 400), Image.Resampling.NEAREST)
-        img.save(dest)
 
-        return '../../' + rel
-    
-    def find_recipe(self, recipe: str) -> Keyable:
-        path = self.convert_identifier(recipe)
-
-        src = os.path.join(self.tfc_dir, RECIPE_DIR, path + '.json')
-        src = os.path.normpath(src)
-
-        with open(src, 'r', encoding='utf-8') as f:
-            data: Keyable = json.load(f)
-        
-        return data
-    
-    def convert_identifier(self, res: str) -> str:
-        namespace, path = res.split(':')
-        assert namespace == 'tfc'
-        return path
-        
+        return self.loader.save_image(image, img)
 
 
 class TextFormatter:
@@ -182,9 +173,9 @@ class TextFormatter:
                 self.buffer.append(text[cursor:start])
             if key == '':
                 self.flush_stack()
-            elif key == 'bold':
+            elif key == 'bold' or key == 'l':
                 self.matching_tags('<strong>', '</strong>')
-            elif key == 'italic':
+            elif key == 'italic' or key == 'italics' or key == 'o':
                 self.matching_tags('<em>', '</em>')
             elif key == 'br':
                 self.update_root('p')

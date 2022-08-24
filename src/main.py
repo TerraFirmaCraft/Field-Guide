@@ -1,16 +1,17 @@
 import os
 import json
+import util
 import logging
 import versions
 
-from typing import List
+from typing import List, Any
 from argparse import ArgumentParser
 
-from util import LOG, Keyable
+from util import LOG, InternalError
 from context import Context
 from category import Category
 from entry import Entry
-from components import knapping_recipe
+from components import knapping_recipe, item_loader
 
 
 KEYS = {
@@ -25,7 +26,6 @@ KEYS = {
 }
 
 BOOK_DIR = 'src/main/resources/data/tfc/patchouli_books/field_guide/'
-IMAGE_DIR = 'src/main/resources/assets/tfc'
 
 
 def main():
@@ -55,50 +55,22 @@ def main():
     
     LOG.info('Done')
 
+
 def parse_book(tfc_dir: str, out_dir: str, lang: str):
 
-    book_dir = os.path.join(tfc_dir, BOOK_DIR, lang)
-    image_dir = os.path.join(tfc_dir, IMAGE_DIR)
-    output_dir = os.path.join(out_dir, lang)
-    category_dir = os.path.join(book_dir, 'categories')
+    book_dir = util.path_join(tfc_dir, BOOK_DIR, lang)
+    output_dir = util.path_join(out_dir, lang)
+    category_dir = util.path_join(book_dir, 'categories')
 
-    context = Context(tfc_dir, book_dir, image_dir, output_dir, KEYS)
+    context = Context(tfc_dir, book_dir, output_dir, lang, KEYS)
 
     for category_file in walk(category_dir):
-        if category_file.endswith('.json'):
-            with open(category_file, 'r', encoding='utf-8') as f:
-                data: Keyable = json.load(f)
+        parse_category(context, category_dir, category_file)
 
-            category: Category = Category()
-            category_id: str = os.path.relpath(category_file, category_dir)
-            category_id = category_id[:category_id.index('.')]
-
-            convert_category(context, category, data)
-
-            context.categories[category_id] = category
-            LOG.debug('Read category: %s at %s' % (category_id, category_file))
-        else:
-            LOG.warning('Unknown category file: %s' % category_file)
-
-    entry_dir = os.path.join(book_dir, 'entries')
+    entry_dir = util.path_join(book_dir, 'entries')
 
     for entry_file in walk(entry_dir):
-        if entry_file.endswith('.json'):
-            with open(entry_file, 'r', encoding='utf-8') as f:
-                data: Keyable = json.load(f)
-
-            entry: Entry = Entry()
-            entry_id: str = os.path.relpath(entry_file, entry_dir)
-            entry_id = entry_id[:entry_id.index('.')]
-            category_id: str = data['category']
-            category_id = category_id[category_id.index(':') + 1:]
-
-            convert_entry(context, entry, data)
-
-            context.add_entry(category_id, entry_id, entry)
-            LOG.debug('Read entry: %s at %s' % (entry_id, entry_file))
-        else:
-            LOG.warning('Unknown entry file: %s' % entry_file)
+        parse_entry(context, entry_dir, entry_file)
 
     context.sort()
 
@@ -213,6 +185,52 @@ def parse_book(tfc_dir: str, out_dir: str, lang: str):
                 f.write(SUFFIX)
 
 
+def parse_category(context: Context, category_dir: str, category_file: str):
+    category: Category = Category()
+    category_id: str = os.path.relpath(category_file, category_dir)
+    category_id = category_id[:category_id.index('.')]
+    
+    with open(category_file, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+
+    context.format_text(desc := [], data, 'description')
+
+    category.name = data['name']
+    category.description = ''.join(desc)
+    category.sort = data['sortnum']
+
+    context.categories[category_id] = category
+
+
+def parse_entry(context: Context, entry_dir: str, entry_file: str):
+    entry: Entry = Entry()
+    entry_id: str = os.path.relpath(entry_file, entry_dir)
+    entry_id = entry_id[:entry_id.index('.')]
+
+    with open(entry_file, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+
+    category_id: str = data['category']
+    category_id = category_id[category_id.index(':') + 1:]
+
+    entry: Entry = Entry()
+    entry_id: str = os.path.relpath(entry_file, entry_dir)
+    entry_id = entry_id[:entry_id.index('.')]
+    category_id: str = data['category']
+    category_id = category_id[category_id.index(':') + 1:]
+
+    entry.sort = data['sortnum'] if 'sortnum' in data else -1
+    entry.name = data['name']
+
+    for page in data['pages']:
+        try:
+            parse_page(context, category_id, entry_id, entry.buffer, page)
+        except InternalError as e:
+            e.warning(category_id, entry_id)
+
+    context.add_entry(category_id, entry_id, entry)
+
+
 def walk(path: str):
     if os.path.isfile(path):
         yield path
@@ -227,23 +245,7 @@ def prepare(root: str, path: str) -> str:
     return full
 
 
-def convert_category(context: Context, category: Category, data: Keyable):
-    context.format_text(desc := [], data, 'description')
-
-    category.name = data['name']
-    category.description = ''.join(desc)
-    category.sort = data['sortnum']
-
-
-def convert_entry(context: Context, entry: Entry, data: Keyable):
-    entry.sort = data['sortnum'] if 'sortnum' in data else -1
-    entry.name = data['name']
-
-    for page in data['pages']:
-        convert_page(context, entry.buffer, page)
-
-
-def convert_page(context: Context, buffer: List[str], data: Keyable):
+def parse_page(context: Context, category_id: str, entry_id: str, buffer: List[str], data: Any):
     page_type = data['type']
 
     if 'anchor' in data:
@@ -289,13 +291,22 @@ def convert_page(context: Context, buffer: List[str], data: Keyable):
         context.format_recipe(buffer, data, 'recipe2')
         context.format_text(buffer, data)
     elif page_type == 'patchouli:spotlight':
-        items = 'Item%s: <code>%s</code>' % (
-            's' if ',' in data['item'] else '',
-            '</code>, <code>'.join(data['item'].split(','))
-        )
-        context.format_title(buffer, data)
-        context.format_with_tooltip(buffer, items, 'View the field guide in Minecraft to see items.')
+        # Item Images
+        try:
+            item_src, item_name = item_loader.format_items(context, data['item'])
+            context.format_title_with_icon(buffer, item_src, item_name, data)
+        except InternalError as e:
+            e.warning(category_id, entry_id)
+            # Fallback
+            context.format_title(buffer, data)
+            items = 'Item%s: <code>%s</code>' % (
+                's' if ',' in data['item'] else '',
+                '</code>, <code>'.join(data['item'].split(','))
+            )
+            context.format_with_tooltip(buffer, items, 'View the field guide in Minecraft to see items.')
+        
         context.format_text(buffer, data)
+
     elif page_type == 'patchouli:entity':
         context.format_title(buffer, data, 'name')
         context.format_text(buffer, data)
@@ -316,7 +327,8 @@ def convert_page(context: Context, buffer: List[str], data: Keyable):
         'tfc:heat_recipe',
         'tfc:quern_recipe',
         'tfc:instant_barrel_recipe',
-        'tfc:sealed_barrel_recipe'
+        'tfc:sealed_barrel_recipe',
+        'tfc:loom_recipe'
     ):
         context.format_recipe(buffer, data)
         context.format_text(buffer, data)
@@ -381,6 +393,24 @@ PREFIX = """
 
     .push-right {{
         padding-left: 30px
+    }}
+
+    .item-header img {{
+        float: left;
+        width: 32px;
+        height: 32px;
+    }}
+
+    .item-header h5 {{
+        position: relative;
+        top: 2px;
+        left: 42px;
+    }}
+
+    .item-header span {{
+        position: absolute;
+        width: 32px;
+        height: 32px;
     }}
 
     </style>
