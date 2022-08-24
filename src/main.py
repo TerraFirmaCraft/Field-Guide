@@ -11,7 +11,7 @@ from util import LOG, InternalError
 from context import Context
 from category import Category
 from entry import Entry
-from components import knapping_recipe, item_loader
+from components import item_loader, block_loader, crafting_recipe, knapping_recipe, misc_recipe
 
 
 KEYS = {
@@ -64,18 +64,18 @@ def parse_book(tfc_dir: str, out_dir: str, lang: str):
 
     context = Context(tfc_dir, book_dir, output_dir, lang, KEYS)
 
-    for category_file in walk(category_dir):
+    for category_file in util.walk(category_dir):
         parse_category(context, category_dir, category_file)
 
     entry_dir = util.path_join(book_dir, 'entries')
 
-    for entry_file in walk(entry_dir):
+    for entry_file in util.walk(entry_dir):
         parse_entry(context, entry_dir, entry_file)
 
     context.sort()
 
     # Main Page
-    with open(prepare(output_dir, 'index.html'), 'w', encoding='utf-8') as f:
+    with open(util.prepare(output_dir, 'index.html'), 'w', encoding='utf-8') as f:
         f.write(PREFIX.format(
             title=TITLE,
             current_lang=lang,
@@ -83,6 +83,7 @@ def parse_book(tfc_dir: str, out_dir: str, lang: str):
                 '<a href="../%s/index.html" class="dropdown-item">%s</a>' % (l, l) for l in versions.LANGUAGES
             ]),
             index='#',
+            style='../style.css',
             tfc_version=versions.VERSION,
             location='<a class="text-muted" href="#">Index</a>',
             contents='\n'.join([
@@ -116,7 +117,7 @@ def parse_book(tfc_dir: str, out_dir: str, lang: str):
 
     # Category Pages
     for category_id, cat in context.sorted_categories:
-        with open(prepare(output_dir, category_id + '/index.html'), 'w', encoding='utf-8') as f:
+        with open(util.prepare(output_dir, category_id + '/index.html'), 'w', encoding='utf-8') as f:
             f.write(PREFIX.format(
                 title=TITLE,
                 current_lang=lang,
@@ -124,6 +125,7 @@ def parse_book(tfc_dir: str, out_dir: str, lang: str):
                     '<a href="../../%s/index.html" class="dropdown-item">%s</a>' % (l, l) for l in versions.LANGUAGES
                 ]),
                 index='../index.html',
+                style='../../style.css',
                 tfc_version=versions.VERSION,
                 location='<a class="text-muted" href="../index.html">Index</a> / <a class="text-muted" href="#">%s</a>' % cat.name,
                 contents='\n'.join([
@@ -155,7 +157,7 @@ def parse_book(tfc_dir: str, out_dir: str, lang: str):
 
         # Entry Pages
         for entry_id, entry in cat.sorted_entries:
-            with open(prepare(output_dir, entry_id + '.html'), 'w', encoding='utf-8') as f:
+            with open(util.prepare(output_dir, entry_id + '.html'), 'w', encoding='utf-8') as f:
                 f.write(PREFIX.format(
                     title=TITLE,
                     current_lang=lang,
@@ -163,6 +165,7 @@ def parse_book(tfc_dir: str, out_dir: str, lang: str):
                         '<a href="../../%s/index.html" class="dropdown-item">%s</a>' % (l, l) for l in versions.LANGUAGES
                     ]),
                     index='../index.html',
+                    style='../../style.css',
                     tfc_version=versions.VERSION,
                     location='<a class="text-muted" href="../index.html">Index</a> / <a class="text-muted" href="./index.html">%s</a> / <a class="text-muted" href="#">%s</a>' % (cat.name, entry.name),
                     contents='\n'.join([
@@ -231,20 +234,6 @@ def parse_entry(context: Context, entry_dir: str, entry_file: str):
     context.add_entry(category_id, entry_id, entry)
 
 
-def walk(path: str):
-    if os.path.isfile(path):
-        yield path
-    elif os.path.isdir(path):
-        for sub in os.listdir(path):
-            yield from walk(os.path.join(path, sub))
-
-
-def prepare(root: str, path: str) -> str:
-    full = os.path.join(root, path)
-    os.makedirs(os.path.dirname(full), exist_ok=True)
-    return full
-
-
 def parse_page(context: Context, category_id: str, entry_id: str, buffer: List[str], data: Any):
     page_type = data['type']
 
@@ -287,16 +276,33 @@ def parse_page(context: Context, category_id: str, entry_id: str, buffer: List[s
 
     elif page_type == 'patchouli:crafting':
         context.format_title(buffer, data)
-        context.format_recipe(buffer, data)
-        context.format_recipe(buffer, data, 'recipe2')
+        try:
+            if 'recipe' in data:
+                crafting_recipe.format_crafting_recipe(context, buffer, data['recipe'])
+        except InternalError as e:
+            e.warning(category_id, entry_id)
+
+            # Fallback
+            context.format_recipe(buffer, data)
+        
+        try:
+            if 'recipe2' in data:
+                crafting_recipe.format_crafting_recipe(context, buffer, data['recipe2'])
+        except InternalError as e:
+            e.warning(category_id, entry_id)
+
+            # Fallback
+            context.format_recipe(buffer, data, 'recipe2')
+        
         context.format_text(buffer, data)
     elif page_type == 'patchouli:spotlight':
         # Item Images
         try:
-            item_src, item_name = item_loader.format_items(context, data['item'])
+            item_src, item_name = item_loader.get_item_image(context, data['item'])
             context.format_title_with_icon(buffer, item_src, item_name, data)
         except InternalError as e:
             e.warning(category_id, entry_id)
+            
             # Fallback
             context.format_title(buffer, data)
             items = 'Item%s: <code>%s</code>' % (
@@ -314,21 +320,42 @@ def parse_page(context: Context, category_id: str, entry_id: str, buffer: List[s
         buffer.append('<hr>')
     elif page_type == 'patchouli:multiblock' or page_type == 'tfc:multimultiblock':
         context.format_title(buffer, data, 'name')
-        if 'multiblock' in data:
-            mb = data['multiblock']['pattern']
-            if mb == [['X'], ['0']] or mb == [['X'], ['Y'], ['0']]:
-                context.format_with_tooltip(buffer, 'Block: <code>%s</code>' % data['multiblock']['mapping']['X'], 'View the field guide in Minecraft to see blocks.')
-        elif 'multiblock_id' in data:
-            context.format_with_tooltip(buffer, 'Multiblock: <code>%s</code>' % data['multiblock_id'], 'View the field guide in Minecraft to see multiblocks.')
+        
+        try:
+            src = block_loader.get_multi_block_image(context, data)
+            buffer.append(IMAGE_SINGLE.format(
+                src=src,
+                text='Block Visualization'
+            ))
+            context.format_centered_text(buffer, data)
+        except InternalError as e:
+            e.warning(category_id, entry_id)
+
+            # Fallback
+            if 'multiblock_id' in data:
+                context.format_with_tooltip(buffer, 'Multiblock: <code>%s</code>' % data['multiblock_id'], 'View the field guide in Minecraft to see multiblocks.')
+            else:
+                context.format_with_tooltip(buffer, 'Multiblock Visualization', 'View the field guide in Minecraft to see multiblocks.')
+            context.format_text(buffer, data)
+    elif page_type in (
+        'tfc:heat_recipe',
+        'tfc:quern_recipe',
+        'tfc:loom_recipe',
+        'tfc:anvil_recipe',
+    ):
+        try:
+            misc_recipe.format_misc_recipe(context, buffer, data['recipe'])
+        except InternalError as e:
+            e.warning(category_id, entry_id)
+
+            # Fallback
+            context.format_recipe(buffer, data)
+        
         context.format_text(buffer, data)
     elif page_type in (
         'tfc:welding_recipe',
-        'tfc:anvil_recipe',
-        'tfc:heat_recipe',
-        'tfc:quern_recipe',
         'tfc:instant_barrel_recipe',
         'tfc:sealed_barrel_recipe',
-        'tfc:loom_recipe'
     ):
         context.format_recipe(buffer, data)
         context.format_text(buffer, data)
@@ -343,7 +370,6 @@ def parse_page(context: Context, category_id: str, entry_id: str, buffer: List[s
             src=image,
             text='Recipe: %s' % recipe_id
         ))
-        context.format_recipe(buffer, data)
         context.format_text(buffer, data)
     else:
         LOG.warning('Unrecognized page type: %s' % page_type)
@@ -373,47 +399,7 @@ PREFIX = """
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <style>
-    .carousel-inner img {{
-        margin: auto;
-    }}
-
-    @media only screen and (min-width: 500px) {{
-        .carousel-control-next,
-        .carousel-control-prev {{
-            filter: invert(100%);
-        }}
-    }}
-
-    .tooltip {{
-        position: relative;
-        display: inline-block;
-        border-bottom: 1px dotted black;
-    }}
-
-    .push-right {{
-        padding-left: 30px
-    }}
-
-    .item-header img {{
-        float: left;
-        width: 32px;
-        height: 32px;
-    }}
-
-    .item-header h5 {{
-        position: relative;
-        top: 2px;
-        left: 42px;
-    }}
-
-    .item-header span {{
-        position: absolute;
-        width: 32px;
-        height: 32px;
-    }}
-
-    </style>
+    <link rel="stylesheet" href="{style}">
 
     <script type="text/javascript">
         $(function () {{

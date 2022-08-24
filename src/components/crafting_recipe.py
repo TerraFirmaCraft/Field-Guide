@@ -1,0 +1,108 @@
+from typing import List, Tuple, Any
+
+from context import Context
+from components import item_loader
+
+import util
+
+
+def format_crafting_recipe(context: Context, buffer: List[str], identifier: str):
+    recipe = context.loader.load_recipe(identifier)
+    format_crafting_recipe_from_data(context, buffer, identifier, recipe)
+
+
+def format_crafting_recipe_from_data(context: Context, buffer: List[str], identifier: str, data: Any):
+    recipe_type = data['type']
+
+    if recipe_type == 'minecraft:crafting_shaped':
+        recipe = CraftingRecipe()
+        for y, row in enumerate(data['pattern']):
+            for x, key in enumerate(row):
+                if key != ' ':
+                    recipe.grid[x + 3 * y] = data['key'][key]
+        recipe.output = format_item_stack(context, data['result'])
+    elif recipe_type == 'minecraft:crafting_shapeless':
+        recipe = CraftingRecipe()
+        for i, key in enumerate(data['ingredients']):
+            recipe.grid[i] = key
+        recipe.output = format_item_stack(context, data['result'])
+    elif recipe_type in (
+        'tfc:damage_inputs_shaped_crafting',
+        'tfc:damage_inputs_shapeless_crafting',
+        'tfc:extra_products_shapeless_crafting'
+    ):
+        return format_crafting_recipe_from_data(context, buffer, identifier, data['recipe'])
+    elif recipe_type == 'tfc:advanced_shaped_crafting':
+        data['type'] = 'minecraft:crafting_shaped'
+        util.require('stack' in data['result'], 'Advanced shaped crafting with complex modifiers: \'%s\'' % data['result'])
+        data['result'] = data['result']['stack']  # Discard modifiers
+        return format_crafting_recipe_from_data(context, buffer, identifier, data)
+    else:
+        util.error('Unknown crafting recipe type: %s for recipe %s' % (recipe_type, identifier))
+    
+    if recipe:
+        recipe.grid = [
+            format_ingredient(context, key) if key else None
+            for key in recipe.grid
+        ]
+
+        buffer.append("""
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        """)
+        
+        for i, key in enumerate(recipe.grid):
+            if key:
+                path, name = key
+                x, y = i % 3, i // 3
+                buffer.append("""
+                <div class="crafting-recipe-item crafting-recipe-pos-%d-%d">
+                    <span href="#" data-toggle="tooltip" title="%s" class="crafting-recipe-item-tooltip"></span>
+                    <img src="%s" />
+                </div>
+                """ % (x, y, name, path))
+        
+        out_path, out_name, out_count = recipe.output
+        buffer.append("""
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="%s" class="crafting-recipe-item-tooltip"></span>
+                    %s
+                    <img src="%s" />
+                </div>
+            </div>
+        </div>
+        """ % (
+            out_name,
+            format_count(out_count),
+             out_path
+        ))
+
+
+
+def format_ingredient(context: Context, data: Any) -> Tuple[str, str]:
+    if 'item' in data:
+        return item_loader.get_item_image(context, data['item'])
+    elif 'tag' in data:
+        return item_loader.get_item_image(context, '#' + data['tag'])
+    elif 'type' in data and data['type'] in (
+        'tfc:not_rotten',
+    ):
+        return format_ingredient(context, data['ingredient'])
+    else:
+        util.error('Unsupported ingredient: %s' % data)
+
+def format_item_stack(context: Context, data: Any) -> Tuple[str, str, int]:
+    path, name = item_loader.get_item_image(context, data['item'])
+    count = 1 if 'count' not in data else data['count']
+    return path, name, count
+
+def format_count(count: int) -> str:
+    return '<p class="crafting-recipe-item-count">%d</p>' % count if count > 1 else ''
+
+class CraftingRecipe:
+
+    def __init__(self):
+        self.grid = [None] * 9  # grid[x + 3 * y]
+        self.output = None
+        self.shapeless = False

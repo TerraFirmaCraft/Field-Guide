@@ -9,4 +9,8 @@
 
 !/requirements.txt
 !/src/**/*.py
+!/assets/*.png
+
+!/style.css
 !/redirect.html
+!/font.otf

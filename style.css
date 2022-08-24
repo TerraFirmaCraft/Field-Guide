@@ -1,0 +1,97 @@
+.carousel-inner img {
+    margin: auto;
+}
+
+@media only screen and (min-width: 500px) {
+    .carousel-control-next,
+    .carousel-control-prev {
+        filter: invert(100%);
+    }
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.push-right {
+    padding-left: 30px
+}
+
+/* Item Tooltips - used for patchouli:item_spotlight pages */
+
+.item-header img {
+    float: left;
+    width: 32px;
+    height: 32px;
+}
+
+.item-header h5 {
+    position: relative;
+    top: 2px;
+    left: 42px;
+}
+
+.item-header span {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+}
+
+/* Crafting / Other Recipes */
+
+.crafting-recipe {
+    position: relative;
+}
+
+.crafting-recipe-item-tooltip {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+}
+
+.crafting-recipe-item-count {
+    position: absolute;
+    left: 52px;
+    top: 48px;
+    font-family: Minecraft;
+    font-size: 30px;
+    color: #444;
+    pointer-events: none;
+}
+
+.crafting-recipe-pos-0-0 { position: absolute; left: 20px;  top: 20px;  }
+.crafting-recipe-pos-0-1 { position: absolute; left: 20px;  top: 96px;  }
+.crafting-recipe-pos-0-2 { position: absolute; left: 20px;  top: 172px; }
+.crafting-recipe-pos-1-0 { position: absolute; left: 96px;  top: 20px;  }
+.crafting-recipe-pos-1-1 { position: absolute; left: 96px;  top: 96px;  }
+.crafting-recipe-pos-1-2 { position: absolute; left: 96px;  top: 172px; }
+.crafting-recipe-pos-2-0 { position: absolute; left: 172px; top: 20px;  }
+.crafting-recipe-pos-2-1 { position: absolute; left: 172px; top: 96px;  }
+.crafting-recipe-pos-2-2 { position: absolute; left: 172px; top: 172px; }
+.crafting-recipe-pos-out { position: absolute; left: 324px; top: 96px;  }
+
+.misc-recipe-pos-in  { position: absolute; left: 20px;  top: 24px; }
+.misc-recipe-pos-out { position: absolute; left: 308px; top: 24px; }
+
+/* Text formatting for temperatures in heat recipes and other tooltips */
+
+.minecraft-text {
+    font-family: Minecraft;
+    font-size: 30px;
+}
+
+.minecraft-gray     { color: #AAAAAA; }
+.minecraft-dark-red { color: #AA0000; }
+.minecraft-red      { color: #FF5555; }
+.minecraft-gold     { color: #FFAA00; }
+.minecraft-yellow   { color: #FFFF55; text-shadow: 0px 0px 4px #444; }
+.minecraft-white    { color: #FFFFFF; text-shadow: 0px 0px 4px #444; }
+
+/* Minecraft Font, for count/amount labels on items */
+
+@font-face {
+    font-family: Minecraft;
+    src: url("font.otf") format("opentype");
+}

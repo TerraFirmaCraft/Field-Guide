@@ -5,7 +5,7 @@ from PIL import Image
 from category import Category
 from entry import Entry
 from util import LOG, InternalError
-from components.loader import Loader
+from loader import Loader
 
 
 VANILLA_COLORS = {
@@ -81,10 +81,10 @@ class Context:
             e.warning()
             self.lang_json = {}
     
-    def next_id(self) -> str:
+    def next_id(self, prefix: str = 'content-element-') -> str:
         """ Returns a unique ID to be used in a id="" field. Successive calls will return a new ID. """
         self.last_uid += 1
-        return 'content-element-%d' % self.last_uid
+        return '%s%d' % (prefix, self.last_uid)
     
     def add_entry(self, category_id: str, entry_id: str, entry: Entry):
         self.entries[entry_id] = entry
@@ -198,6 +198,8 @@ class TextFormatter:
                 self.color_tags('#b0b')
             elif key.startswith('#'):
                 self.color_tags(key)
+            elif key == 'd':  # We use this color instead of white for temperature tooltips. Use custom CSS for white.
+                self.matching_tags('<span class="temperature-white">', '</span>')
             elif key in VANILLA_COLORS:
                 self.color_tags(VANILLA_COLORS[key])
             elif key.startswith('k:') and key[2:] in context.keys:
