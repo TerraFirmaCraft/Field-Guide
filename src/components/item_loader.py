@@ -9,9 +9,17 @@ import util
 CACHE = {}
 
 
-@util.context(lambda _, i: 'item(s) = \'%s\'' % i)
 def get_item_image(context: Context, item: str) -> Tuple[str, str]:
-    util.require('{' not in item, 'No support for items with NBT yet', muted=True)
+    """
+    Loads an item image, based on a specific keyed representation of an item.
+    The key may be an item ID ('foo:bar'), a tag ('#foo:bar'), or a csv list of item IDs ('foo:bar,foo:baz')
+    Using a global cache, the image will be generated, and saved to the _images/ directory.
+    Returns:
+        src : str = The path to the item image (for use in href="", or src="")
+        name : str = The translated name of the item (if a single item), or a best guess (if a tag), or None (if csv)
+    """
+
+    util.require('{' not in item, 'Item : Item with NBT : \'%s\'' % item)
 
     if item in CACHE:
         return CACHE[item]
@@ -20,79 +28,64 @@ def get_item_image(context: Context, item: str) -> Tuple[str, str]:
 
     if item.startswith('#'):
         # Guess the name based on the tag
-        name = item.split(':')[1].replace('_', ' ').replace('/', ',').title()
+        name = item.split(':')[1].replace('_', ' ').replace('/', ', ').title()
         items = tag_loader.load_item_tag(context, item[1:])
     elif ',' in item:
         items = item.split(',')
     else:
         items = [item]
     
-    # Create images for each item. Discard items we can't create images for
-    images = []
-    errors = []
-    for i in items:
-        try:
-            images.append(create_item_image(context, i))
-        except util.InternalError as e:
-            errors.append(e)
+    # Create images for each item.
+    images = [create_item_image(context, i) for i in items]
     
-    util.require(images, 'Error(s) building item images:\n%s' % '\n'.join(map(str, errors)), muted=any(e.muted for e in errors))
-
     if len(images) == 1:
-        path = context.loader.save_image(context.next_id('item_'), images[0])
-
-        # Inspect the lang.json for a single item's name
-        key = 'item.' + item.replace('/', '.').replace(':', '.')
-        if key in context.lang_json:
-            name = context.lang_json[key]
-        else:
-            key = 'block' + key[4:]
-            if key in context.lang_json:
-                name = context.lang_json[key]
-
+        path = context.loader.save_image(context.next_id('item'), images[0])
+        name = items[0].replace('/', '.').replace(':', '.')
+        name = context.translate(
+            'item.' + name,
+            'block.' + name
+        )
     else:
-        path = context.loader.save_gif(context.next_id('item_'), images)
+        path = context.loader.save_gif(context.next_id('item'), images)
 
     CACHE[item] = path, name
-
     return path, name
 
 
-@util.context(lambda _, i: 'item = \'%s\'' % i)
 def create_item_image(context: Context, item: str) -> Image.Image:
 
     model = context.loader.load_item_model(item)
-    util.require('parent' in model, 'Unsupported model without parent')
+    util.require('parent' in model, 'Item Model : No Parent : \'%s\'' % item)
     
     if 'loader' in model:
         loader = model['loader']
         if loader == 'tfc:contained_fluid':
             # Assume it's empty, and use a single layer item
             layer = model['textures']['base']
-            _, img = context.loader.load_image(layer)
+            img = context.loader.load_texture(layer)
             img = img.resize((64, 64), resample=Image.Resampling.NEAREST)
             return img
         else:
-            util.error('Unsupported loader: %s' % loader)
+            util.error('Item Model : Unknown Loader : \'%s\' at \'%s\'' % (loader, item))
 
-    parent = model['parent']
+    parent = util.resource_location(model['parent'])
     if parent in (
-        'item/generated',
-        'item/handheld',
+        'minecraft:item/generated',
+        'minecraft:item/handheld',
         'minecraft:item/handheld_rod',
         'tfc:item/handheld_flipped',
     ):
         # Simple single-layer item model
         layer0 = model['textures']['layer0']
-        _, img = context.loader.load_image(layer0)
+        img = context.loader.load_texture(layer0)
         img = img.resize((64, 64), resample=Image.Resampling.NEAREST)
         return img
-    elif parent.startswith('tfc:block/'):
+    elif parent.startswith('tfc:block/') or parent.startswith('minecraft:block/'):
         # Block model
         block_model = context.loader.load_model(parent)
-        img = block_loader.create_block_model_image(context, block_model)
+        img = block_loader.create_block_model_image(context, item, block_model)
         img = img.resize((64, 64), resample=Image.Resampling.NEAREST)
         return img
     else:
-        util.error('Unsupported parent: %s' % parent, muted=True)
+        util.error('Item Model : Unknown Parent \'%s\' : at \'%s\'' % (parent, item))
 

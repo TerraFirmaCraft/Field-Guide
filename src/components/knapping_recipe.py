@@ -10,35 +10,39 @@ Keyable = Dict[str, Any]
 
 KNAPPING_RECIPE_TYPES = {
     'tfc:rock_knapping': (
-        'textures/gui/knapping/rock/loose/granite.png',
+        'tfc:textures/gui/knapping/rock/loose/granite.png',
         None,
     ),
     'tfc:clay_knapping': (
-        'textures/gui/knapping/clay_ball.png',
-        'textures/gui/knapping/clay_ball_disabled.png',
+        'tfc:textures/gui/knapping/clay_ball.png',
+        'tfc:textures/gui/knapping/clay_ball_disabled.png',
     ),
     'tfc:fire_clay_knapping': (
-        'textures/gui/knapping/fire_clay.png',
-        'textures/gui/knapping/fire_clay_disabled.png',
+        'tfc:textures/gui/knapping/fire_clay.png',
+        'tfc:textures/gui/knapping/fire_clay_disabled.png',
     ),
     'tfc:leather_knapping': (
-        'textures/gui/knapping/leather.png',
+        'tfc:textures/gui/knapping/leather.png',
         None,
     ),
 }
 
-KNAPPING_RECIPE_OUTLINE = 'textures/gui/book/icons.png'
+KNAPPING_RECIPE_OUTLINE = 'tfc:textures/gui/book/icons.png'
+CACHE = {}
 
 
-@util.context(lambda _, d: 'knapping_recipe = \'%s\'' % d)
 def format_knapping_recipe(context: Context, data: Keyable):
     recipe_id = data['recipe'] if 'recipe' in data else data['recipes'][0]
+
+    if recipe_id in CACHE:
+        return CACHE[recipe_id]
+
     recipe_data = context.loader.load_recipe(recipe_id)
 
     img = Image.new('RGBA', (90, 90), (0, 0, 0, 0))
 
     # Background
-    _, bg = context.loader.load_image(KNAPPING_RECIPE_OUTLINE)
+    bg = context.loader.load_explicit_texture(KNAPPING_RECIPE_OUTLINE)
     bg = bg.crop((0, 0, 90, 90))
     img.paste(bg)
 
@@ -46,9 +50,9 @@ def format_knapping_recipe(context: Context, data: Keyable):
     low = hi = None
 
     if low_texture:
-        _, low = context.loader.load_image(low_texture)
+        low = context.loader.load_explicit_texture(low_texture)
     if hi_texture:
-        _, hi = context.loader.load_image(hi_texture)
+        hi = context.loader.load_explicit_texture(hi_texture)
 
     # Pattern
     pattern = recipe_data['pattern']
@@ -68,5 +72,7 @@ def format_knapping_recipe(context: Context, data: Keyable):
                     img.paste(tile, (5 + 16 * x, 5 + 16 * y))
     
     img = img.resize((3 * 90, 3 * 90), Image.Resampling.NEAREST)
+    path = context.loader.save_image(context.next_id('image'), img)
 
-    return recipe_id, context.loader.save_image(recipe_id, img)
+    CACHE[recipe_id] = recipe_id, path
+    return recipe_id, path

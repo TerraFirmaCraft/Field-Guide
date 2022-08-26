@@ -11,19 +11,8 @@ from util import LOG, InternalError
 from context import Context
 from category import Category
 from entry import Entry
-from components import item_loader, block_loader, crafting_recipe, knapping_recipe, misc_recipe
+from components import item_loader, block_loader, crafting_recipe, knapping_recipe, misc_recipe, mcmeta
 
-
-KEYS = {
-    'key.inventory': 'E',
-    'key.attack': 'Left Click',
-    'key.use': 'Right Click',
-    'key.drop': 'Q',
-    'key.sneak': 'Shift',
-
-    'tfc.key.cycle_chisel_mode': 'M',
-    'tfc.key.place_block': 'V'
-}
 
 BOOK_DIR = 'src/main/resources/data/tfc/patchouli_books/field_guide/'
 
@@ -34,6 +23,7 @@ def main():
     parser.add_argument('--tfc-dir', type=str, dest='tfc_dir', default='../TerraFirmaCraft')
     parser.add_argument('--out-dir', type=str, dest='out_dir', default='out')
     parser.add_argument('--debug', action='store_true', dest='log_debug')
+    parser.add_argument('--use-mcmeta', action='store_true', dest='use_mcmeta')
 
     args = parser.parse_args()
 
@@ -41,6 +31,12 @@ def main():
 
     tfc_dir = args.tfc_dir
     out_dir = args.out_dir
+    use_mcmeta = args.use_mcmeta
+
+    context = Context(tfc_dir, out_dir, use_mcmeta)
+
+    if use_mcmeta:
+        mcmeta.load_cache()
 
     LOG.info('Generating docs...')
     LOG.debug('Running with:\n  tfc_dir = %s\n  out_dir = %s\n  langs = %s\n  version = %s' % (
@@ -50,19 +46,20 @@ def main():
     os.makedirs(os.path.join(out_dir, '_images'), exist_ok=True)
 
     for lang in versions.LANGUAGES:
-        LOG.debug('Generating language: %s' % lang)
-        parse_book(tfc_dir, out_dir, lang)
+        LOG.debug('Language: %s' % lang)
+        parse_book(context.with_lang(lang))
     
     LOG.info('Done')
+    LOG.info('  Recipes : %d passed / %d failed / %d skipped' % (context.recipes_passed, context.recipes_failed, context.recipes_skipped))
+    LOG.info('  Items   : %d passed / %d failed' % (context.items_passed, context.items_failed))
+    LOG.info('  Block   : %d passed / %d failed' % (context.blocks_passed, context.blocks_failed))
+    LOG.info('  Total   : %d blocks / %d items / %d images' % (context.last_uid['block'], context.last_uid['item'], context.last_uid['image']))
 
 
-def parse_book(tfc_dir: str, out_dir: str, lang: str):
+def parse_book(context: Context):
 
-    book_dir = util.path_join(tfc_dir, BOOK_DIR, lang)
-    output_dir = util.path_join(out_dir, lang)
+    book_dir = util.path_join(context.tfc_dir, BOOK_DIR, context.lang)
     category_dir = util.path_join(book_dir, 'categories')
-
-    context = Context(tfc_dir, book_dir, output_dir, lang, KEYS)
 
     for category_file in util.walk(category_dir):
         parse_category(context, category_dir, category_file)
@@ -75,10 +72,10 @@ def parse_book(tfc_dir: str, out_dir: str, lang: str):
     context.sort()
 
     # Main Page
-    with open(util.prepare(output_dir, 'index.html'), 'w', encoding='utf-8') as f:
+    with open(util.prepare(context.output_dir, 'index.html'), 'w', encoding='utf-8') as f:
         f.write(PREFIX.format(
             title=TITLE,
-            current_lang=lang,
+            current_lang=context.lang,
             langs='\n'.join([
                 '<a href="../%s/index.html" class="dropdown-item">%s</a>' % (l, l) for l in versions.LANGUAGES
             ]),
@@ -117,10 +114,10 @@ def parse_book(tfc_dir: str, out_dir: str, lang: str):
 
     # Category Pages
     for category_id, cat in context.sorted_categories:
-        with open(util.prepare(output_dir, category_id + '/index.html'), 'w', encoding='utf-8') as f:
+        with open(util.prepare(context.output_dir, category_id + '/index.html'), 'w', encoding='utf-8') as f:
             f.write(PREFIX.format(
                 title=TITLE,
-                current_lang=lang,
+                current_lang=context.lang,
                 langs='\n'.join([
                     '<a href="../../%s/index.html" class="dropdown-item">%s</a>' % (l, l) for l in versions.LANGUAGES
                 ]),
@@ -157,10 +154,10 @@ def parse_book(tfc_dir: str, out_dir: str, lang: str):
 
         # Entry Pages
         for entry_id, entry in cat.sorted_entries:
-            with open(util.prepare(output_dir, entry_id + '.html'), 'w', encoding='utf-8') as f:
+            with open(util.prepare(context.output_dir, entry_id + '.html'), 'w', encoding='utf-8') as f:
                 f.write(PREFIX.format(
                     title=TITLE,
-                    current_lang=lang,
+                    current_lang=context.lang,
                     langs='\n'.join([
                         '<a href="../../%s/index.html" class="dropdown-item">%s</a>' % (l, l) for l in versions.LANGUAGES
                     ]),
@@ -192,7 +189,8 @@ def parse_category(context: Context, category_dir: str, category_file: str):
     category: Category = Category()
     category_id: str = os.path.relpath(category_file, category_dir)
     category_id = category_id[:category_id.index('.')]
-    
+
+    LOG.debug('Category: %s' % category_id)
     with open(category_file, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
@@ -210,6 +208,7 @@ def parse_entry(context: Context, entry_dir: str, entry_file: str):
     entry_id: str = os.path.relpath(entry_file, entry_dir)
     entry_id = entry_id[:entry_id.index('.')]
 
+    LOG.debug('Entry: %s' % entry_id)
     with open(entry_file, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
@@ -227,14 +226,14 @@ def parse_entry(context: Context, entry_dir: str, entry_file: str):
 
     for page in data['pages']:
         try:
-            parse_page(context, category_id, entry_id, entry.buffer, page)
+            parse_page(context, entry.buffer, page)
         except InternalError as e:
-            e.warning(category_id, entry_id)
+            e.warning()
 
     context.add_entry(category_id, entry_id, entry)
 
 
-def parse_page(context: Context, category_id: str, entry_id: str, buffer: List[str], data: Any):
+def parse_page(context: Context, buffer: List[str], data: Any):
     page_type = data['type']
 
     if 'anchor' in data:
@@ -277,22 +276,25 @@ def parse_page(context: Context, category_id: str, entry_id: str, buffer: List[s
     elif page_type == 'patchouli:crafting':
         context.format_title(buffer, data)
         try:
-            if 'recipe' in data:
-                crafting_recipe.format_crafting_recipe(context, buffer, data['recipe'])
+            crafting_recipe.format_crafting_recipe(context, buffer, data['recipe'])
+            context.recipes_passed += 1
         except InternalError as e:
-            e.warning(category_id, entry_id)
+            LOG.warning('Recipe: \'%s\' : %s' % (data['recipe'], e))
 
             # Fallback
             context.format_recipe(buffer, data)
+            context.recipes_failed += 1
         
         try:
             if 'recipe2' in data:
                 crafting_recipe.format_crafting_recipe(context, buffer, data['recipe2'])
+                context.recipes_passed += 1
         except InternalError as e:
-            e.warning(category_id, entry_id)
+            LOG.warning('Recipe: \'%s\' : %s' % (data['recipe2'], e))
 
             # Fallback
             context.format_recipe(buffer, data, 'recipe2')
+            context.recipes_failed += 1
         
         context.format_text(buffer, data)
     elif page_type == 'patchouli:spotlight':
@@ -300,8 +302,9 @@ def parse_page(context: Context, category_id: str, entry_id: str, buffer: List[s
         try:
             item_src, item_name = item_loader.get_item_image(context, data['item'])
             context.format_title_with_icon(buffer, item_src, item_name, data)
+            context.items_passed += 1
         except InternalError as e:
-            e.warning(category_id, entry_id)
+            e.warning()
             
             # Fallback
             context.format_title(buffer, data)
@@ -309,7 +312,8 @@ def parse_page(context: Context, category_id: str, entry_id: str, buffer: List[s
                 's' if ',' in data['item'] else '',
                 '</code>, <code>'.join(data['item'].split(','))
             )
-            context.format_with_tooltip(buffer, items, 'View the field guide in Minecraft to see items.')
+            context.format_with_tooltip(buffer, items, 'View the field guide in Minecraft to see this item.')
+            context.items_failed += 1
         
         context.format_text(buffer, data)
 
@@ -328,15 +332,17 @@ def parse_page(context: Context, category_id: str, entry_id: str, buffer: List[s
                 text='Block Visualization'
             ))
             context.format_centered_text(buffer, data)
+            context.blocks_passed += 1
         except InternalError as e:
-            e.warning(category_id, entry_id)
+            e.warning()
 
             # Fallback
             if 'multiblock_id' in data:
-                context.format_with_tooltip(buffer, 'Multiblock: <code>%s</code>' % data['multiblock_id'], 'View the field guide in Minecraft to see multiblocks.')
+                context.format_with_tooltip(buffer, 'Multiblock: <code>%s</code>' % data['multiblock_id'], 'View the field guide in Minecraft to see this multiblock.')
             else:
-                context.format_with_tooltip(buffer, 'Multiblock Visualization', 'View the field guide in Minecraft to see multiblocks.')
+                context.format_with_tooltip(buffer, 'Multiblock', 'View the field guide in Minecraft to see this multiblock.')
             context.format_text(buffer, data)
+            context.blocks_failed += 1
     elif page_type in (
         'tfc:heat_recipe',
         'tfc:quern_recipe',
@@ -345,11 +351,13 @@ def parse_page(context: Context, category_id: str, entry_id: str, buffer: List[s
     ):
         try:
             misc_recipe.format_misc_recipe(context, buffer, data['recipe'])
+            context.recipes_passed += 1
         except InternalError as e:
-            e.warning(category_id, entry_id)
+            e.warning()
 
             # Fallback
             context.format_recipe(buffer, data)
+            context.recipes_failed += 1
         
         context.format_text(buffer, data)
     elif page_type in (
@@ -359,17 +367,24 @@ def parse_page(context: Context, category_id: str, entry_id: str, buffer: List[s
     ):
         context.format_recipe(buffer, data)
         context.format_text(buffer, data)
+        context.recipes_skipped += 1
     elif page_type in (
         'tfc:clay_knapping_recipe',
         'tfc:fire_clay_knapping_recipe',
         'tfc:leather_knapping_recipe',
         'tfc:rock_knapping_recipe',
     ):
-        recipe_id, image = knapping_recipe.format_knapping_recipe(context, data)
-        buffer.append(IMAGE_SINGLE.format(
-            src=image,
-            text='Recipe: %s' % recipe_id
-        ))
+        try:
+            recipe_id, image = knapping_recipe.format_knapping_recipe(context, data)
+            buffer.append(IMAGE_SINGLE.format(
+                src=image,
+                text='Recipe: %s' % recipe_id
+            ))
+            context.recipes_passed += 1
+        except InternalError as e:
+            e.warning()
+            context.format_recipe(buffer, data)
+            context.recipes_failed += 1
         context.format_text(buffer, data)
     else:
         LOG.warning('Unrecognized page type: %s' % page_type)

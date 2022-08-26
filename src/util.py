@@ -9,6 +9,10 @@ LOG.addHandler((
     h
 )[-1])
 
+def resource_location(path: str) -> str:
+    if ':' not in path:
+        return 'minecraft:%s' % path
+    return path
 
 def walk(path: str):
     if os.path.isfile(path):
@@ -30,44 +34,25 @@ def path_join(*parts):
 
 class InternalError(Exception):
 
-    def __init__(self, reason: str, muted):
+    def __init__(self, reason: str):
         self.reason = reason
-        self.muted = muted
     
     def at(self, site: str):
         self.reason += '\n  at: ' + site
         return self
     
-    def warning(self, category_id: str = None, entry_id: str = None):
-        if category_id:
-            self.at('entry = \'%s\'' % entry_id)
-        if entry_id:
-            self.at('category = \'%s\'' % category_id)
-        if self.muted:
-            LOG.debug(self)
-        else:
-            LOG.warning(self)
+    def warning(self):
+        LOG.warning(self)
     
     def __repr__(self) -> str: return self.reason
     def __str__(self) -> str: return self.reason
 
 
-def require(condition: bool, reason: str, muted: bool = False):
+def require(condition: bool, reason: str):
     if not condition:
-        error(reason, muted)
+        error(reason)
 
 
-def error(reason: str, muted: bool = False):
-    raise InternalError(reason, muted)
+def error(reason: str):
+    raise InternalError(reason)
 
-
-def context(formatter):
-    def decorate(f):
-        l_formatter = formatter
-        def apply(*args):
-            try:
-                return f(*args)
-            except InternalError as e:
-                raise e.at(l_formatter(*args))
-        return apply
-    return decorate

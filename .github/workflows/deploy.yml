@@ -36,7 +36,7 @@ jobs:
         path: 'tfc'
     - name: Build
       run: |
-        python src/main.py --tfc-dir tfc --out-dir build --debug
+        python src/main.py --tfc-dir tfc --out-dir build --use-mcmeta
         touch build/.nojekyll
         cp redirect.html build/index.html
         cp style.css build/style.css

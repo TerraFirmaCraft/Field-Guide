@@ -1,4 +1,6 @@
-from typing import Tuple, List, Any
+from typing import List, Any
+from components import mcmeta
+from util import InternalError
 from PIL import Image
 
 import os
@@ -8,88 +10,92 @@ import util
 
 class Loader:
 
-    def __init__(self, tfc_dir: str, output_dir: str):
+    def __init__(self, tfc_dir: str, output_dir: str, use_mcmeta: bool):
         self.tfc_dir = tfc_dir
         self.output_dir = output_dir
 
-    @util.context(lambda _, i: 'identifier = %s' % i)
-    def load_image(self, identifier: str) -> Tuple[str, Image.Image]:
-        """ Loads an image file. Returns the PIL Image and the resource path to the image """
-
-        _, src = split_identifier(identifier)
-        path = src
-        path = prefix(path, 'textures/')
-        path = util.path_join(self.tfc_dir, 'src/main/resources/assets/tfc', path)
-        path = suffix(path, '.png')
-
-        try:
-            img = Image.open(path).convert('RGBA')
-            return src, img
-        except OSError:
-            util.error('Image file not found at: \'%s\'' % path)
+        self.loaders = [('tfc', ('tfc', 'forge', 'minecraft'), self.load_from_tfc)]
+        self.domains = ['tfc']
+        if use_mcmeta:
+            self.loaders += [
+                ('forge', ('forge', 'minecraft'), mcmeta.load_from_forge),
+                ('minecraft', ('minecraft',), mcmeta.load_from_mc)
+            ]
+            self.domains += ['forge', 'minecraft']
     
-    @util.context(lambda _, i, _1: 'identifier = \'%s\'' % i)
-    def save_image(self, identifier: str, img: Image.Image) -> str:
+    def save_image(self, path: str, img: Image.Image) -> str:
         """ Saves an image to a location based on an identifier. Returns the relative path to that location. """
 
-        _, path = split_identifier(identifier)
+        _, path = util.resource_location(path).split(':')
+        path = util.path_join('_images', path.replace('/', '_'))
         path = suffix(path, '.png')
-        rel = util.path_join('_images', path.replace('/', '_').replace('textures_', ''))
-        dest = util.path_join(self.output_dir, '../', rel)  # Images are saved one level up, in lang-independent location
 
-        os.makedirs(os.path.dirname(dest), exist_ok=True)
-        img.save(dest)
-        return '../../' + rel
+        img.save(util.path_join(self.output_dir, path))
+        return util.path_join('../../', path)
     
-    @util.context(lambda _, i, _1: 'identifier = \'%s\'' % i)
-    def save_gif(self, identifier: str, images: List[Image.Image]) -> str:
+    def save_gif(self, path: str, images: List[Image.Image]) -> str:
         """ Saves multiple images to a .gif based on an identifier. Returns the relative path to that location. """
 
         first, *others = images
 
-        _, path = split_identifier(identifier)
-        path = path.replace('.png', '')
-        path = suffix(path, '.gif')
-        rel = util.path_join('_images', path.replace('/', '_').replace('textures_', ''))
-        dest = util.path_join(self.output_dir, '../', rel)  # Images are saved one level up, in lang-independent location
+        _, path = util.resource_location(path).split(':')
+        path = suffix(path.replace('.png', ''), '.gif')
+        path = util.path_join('_images', path.replace('/', '_'))
 
-        os.makedirs(os.path.dirname(dest), exist_ok=True)
-        first.save(dest, save_all=True, append_images=others, duration=1000, loop=0, disposal=2)
-        return '../../' + rel
+        first.save(util.path_join(self.output_dir, path), save_all=True, append_images=others, duration=1000, loop=0, disposal=2)
+        return util.path_join('../../', path)
 
-    def load_block_state(self, identifier: str) -> Any: return self.load_json(identifier, 'blockstates', 'assets')
-    def load_block_model(self, identifier: str) -> Any: return self.load_json(identifier, 'models/block', 'assets')
-    def load_item_model(self, identifier: str) -> Any: return self.load_json(identifier, 'models/item', 'assets')
-    def load_model(self, identifier: str) -> Any: return self.load_json(identifier, 'models', 'assets')
-    def load_recipe(self, identifier: str) -> Any: return self.load_json(identifier, 'recipes', 'data')
-    def load_block_tag(self, identifier: str) -> Any: return self.load_json(identifier, 'tags/blocks', 'data')
-    def load_item_tag(self, identifier: str) -> Any: return self.load_json(identifier, 'tags/items', 'data')
+    def load_block_state(self, path: str) -> Any: return self.load_resource(path, 'blockstates', 'assets', '.json', json_reader)
+    def load_block_model(self, path: str) -> Any: return self.load_resource(path, 'models/block', 'assets', '.json', json_reader)
+    def load_item_model(self, path: str) -> Any: return self.load_resource(path, 'models/item', 'assets', '.json', json_reader)
+    def load_model(self, path: str) -> Any: return self.load_resource(path, 'models', 'assets', '.json', json_reader)
+    def load_recipe(self, path: str) -> Any: return self.load_resource(path, 'recipes', 'data', '.json', json_reader)
 
-    @util.context(lambda _, i, rt, rr: 'identifier = %s, resource_type = %s, resource_root = %s' % (i, rt, rr))
-    def load_json(self, identifier: str, resource_type: str, resource_root: str) -> Any:
-        """ Loads a json file of a specific resource type (tags, models, etc.) and resource root (assets, data)."""
+    def load_block_tag(self, path: str) -> Any: return self.load_resource(path, 'tags/blocks', 'data', '.json', json_reader)
+    def load_item_tag(self, path: str) -> Any: return self.load_resource(path, 'tags/items', 'data', '.json', json_reader)
 
-        domain, path = split_identifier(identifier)
-        path = util.path_join(self.tfc_dir, 'src/main/resources', resource_root, domain, resource_type, path)
-        path = suffix(path, '.json')
+    def load_lang(self, path: str, source: str) -> Any: return self.load_resource(source + ':' + path, 'lang', 'assets', '.json', json_reader, source)
 
+    def load_explicit_texture(self, path: str) -> Image.Image: return self.load_resource(path, '', 'assets', '.png', image_reader, 'tfc')
+    def load_texture(self, path: str) -> Image.Image: return self.load_resource(path, 'textures', 'assets', '.png', image_reader)
+    
+    def load_resource(self, path: str, resource_type: str, resource_root: str, resource_suffix: str, reader, source: str = None) -> Any:
+        path = util.resource_location(path)
+        domain, path = path.split(':')
+        path = util.path_join(resource_root, domain, resource_type, path)
+        path = suffix(path, resource_suffix)
+
+        for key, serves, loader in self.loaders:
+            if (source is None or key == source) and domain in serves:  # source only loads from a specific loader domain
+                try:
+                    return loader(path, reader)
+                except InternalError as e:
+                    if source is not None:  # Directly error if using a single source  
+                        util.error(str(e))
+        
+        util.error('Missing Resource \'%s\'' % path)  # Aggregate errors
+    
+    def load_from_tfc(self, path: str, reader):
         try:
-            with open(path, 'r', encoding='utf-8') as f:
-                data = json.load(f)
-            return data
+            path = util.path_join(self.tfc_dir, 'src/main/resources', path)
+            if path.endswith('.png'):
+                with open(path, 'rb') as f:
+                    return reader(f)
+            else:
+                with open(path, 'r', encoding='utf-8') as f:
+                    return reader(f)
         except OSError:
-            util.error('Resource file not found', muted=domain != 'tfc')
+            util.error('Reading \'%s\' from \'tfc\'' % path)
 
-
-def split_identifier(identifier: str) -> str:
-    util.require('{' not in identifier and '[' not in identifier, 'Invalid identifier: \'%s\'' % identifier)
-    if ':' in identifier:
-        domain, path = identifier.split(':')
-        return domain, path
-    return 'tfc', identifier
 
 def suffix(path: str, suffix_with: str) -> str:
     return path if path.endswith(suffix_with) else path + suffix_with
 
 def prefix(path: str, prefix_with: str) -> str:
     return path if path.startswith(prefix_with) else prefix_with + path
+
+def image_reader(f):
+    return Image.open(f).convert('RGBA')
+
+def json_reader(f):
+    return json.load(f)

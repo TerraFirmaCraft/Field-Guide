@@ -79,7 +79,6 @@ def format_crafting_recipe_from_data(context: Context, buffer: List[str], identi
         ))
 
 
-
 def format_ingredient(context: Context, data: Any) -> Tuple[str, str]:
     if 'item' in data:
         return item_loader.get_item_image(context, data['item'])

@@ -1,5 +1,5 @@
 from PIL import Image, ImageEnhance
-from typing import Tuple, Any
+from typing import Tuple, List, Any
 
 from context import Context
 from components import tag_loader
@@ -7,71 +7,82 @@ from components import tag_loader
 import util
 import numpy
 
+CACHE = {}
+
 
 def get_multi_block_image(context: Context, data: Any) -> str:
     if 'multiblocks' in data:
         images = []
+        key = 'multiblocks-'
         for b in data['multiblocks']:
-            images += get_multi_block_images(context, b)
+            name, values = get_multi_block_images(context, b)
+            key += name
+            images += values
     elif 'multiblock' in data:
-        images = get_multi_block_images(context, data['multiblock'])
+        key, images = get_multi_block_images(context, data['multiblock'])
     else:
-        util.error('Multiblock defined in code', muted=True)
+        util.error('Multiblock : Custom Multiblock \'%s\'' % data['multiblock_id'])
     
+    if key in CACHE:
+        return CACHE[key]
+
     if len(images) == 1:
-        return context.loader.save_image(context.next_id('block_'), images[0])
+        path = context.loader.save_image(context.next_id('block'), images[0])
     else:
-        return context.loader.save_gif(context.next_id('block_'), images)
+        path = context.loader.save_gif(context.next_id('block'), images)
+    
+    CACHE[key] = path
+    return path
 
 
-def get_multi_block_images(context: Context, data: Any):
+def get_multi_block_images(context: Context, data: Any) -> Tuple[str, List[Image.Image]]:
     pattern = data['pattern']
-    util.require(pattern == [['X'], ['0']] or pattern == [['X'], ['Y'], ['0']], 'Only simple patterns are supported', muted=True)
+    util.require(pattern == [['X'], ['0']] or pattern == [['X'], ['Y'], ['0']], 'Multiblock : Complex Pattern \'%s\'' % repr(pattern))
 
     block = data['mapping']['X']
 
     if block.startswith('#'):
         blocks = tag_loader.load_block_tag(context, block[1:])
     else:
-        util.require('[' not in block, 'No support for blocks with properties yet: \'%s\'' % block, muted=True)
+        util.require('[' not in block, 'Multiblock : Block with Properties \'%s\'' % block)
         blocks = [block]
 
-    return [
-        get_block_image(context, block)
-        for block in blocks
+    return block, [
+        get_block_image(context, b)
+        for b in blocks
     ]
 
 
-@util.context(lambda _, b: 'block = \'%s\'' % b)
 def get_block_image(context: Context, block: str) -> Image.Image:
 
     state = context.loader.load_block_state(block)
-    util.require('variants' in state, 'No support for multipart states yet', muted=True)
-    util.require('' in state['variants'], 'No support for states with properties yet', muted=True)
-    util.require('model' in state['variants'][''], 'Missing model')
+    util.require('variants' in state, 'BlockState : Multipart \'%s\'' % block)
+    util.require('' in state['variants'], 'BlockState : Block with Properties \'%s\'' % block)
+    util.require('model' in state['variants'][''], 'BlockState : No Model \'%s\'' % block)
 
     model = context.loader.load_model(state['variants']['']['model'])
     
-    return create_block_model_image(context, model)
+    return create_block_model_image(context, block, model)
 
 
-def create_block_model_image(context: Context, model: Any) -> Image.Image:
-    util.require('parent' in model, 'Missing parent')
-    parent = model['parent']
-    if parent == 'block/cube_all':
-        _, texture = context.loader.load_image(model['textures']['all'])
+def create_block_model_image(context: Context, block: str, model: Any) -> Image.Image:
+    util.require('parent' in model, 'Block Model : No Parent : \'%s\'' % block)
+    
+    parent = util.resource_location(model['parent'])
+    if parent == 'minecraft:block/cube_all':
+        texture = context.loader.load_texture(model['textures']['all'])
         return create_block_model_projection(texture, texture, texture)
-    elif parent == 'block/cube_column':
-        _, side = context.loader.load_image(model['textures']['side'])
-        _, end = context.loader.load_image(model['textures']['end'])
+    elif parent == 'minecraft:block/cube_column':
+        side = context.loader.load_texture(model['textures']['side'])
+        end = context.loader.load_texture(model['textures']['end'])
         return create_block_model_projection(side, side, end)
     elif parent == 'tfc:block/ore':
-        _, texture = context.loader.load_image(model['textures']['all'])
-        _, overlay = context.loader.load_image(model['textures']['overlay'])
+        texture = context.loader.load_texture(model['textures']['all'])
+        overlay = context.loader.load_texture(model['textures']['overlay'])
         texture.paste(overlay, (0, 0), overlay)
         return create_block_model_projection(texture, texture, texture)
     else:
-        util.error('Unsupported parent: %s' % parent, muted=True)
+        util.error('Block Model : Unknown Parent \'%s\' : at \'%s\'' % (parent, block))
 
 
 def create_block_model_projection(left: Image.Image, right: Image.Image, top: Image.Image) -> Image.Image:

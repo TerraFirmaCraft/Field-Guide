@@ -69,22 +69,16 @@ def get_temperature(context: Context, temperature: int) -> str:
     for i, (key, css, value) in enumerate(HEAT[:-1]):
         if temperature <= value:
             _, _, next_value = HEAT[i + 1]
-            lang_key = 'tfc.enum.heat.%s' % key
-            util.require(lang_key in context.lang_json, 'Missing translation key for %s' % lang_key)
-            tooltip = context.lang_json[lang_key]
+            tooltip = context.translate('tfc.enum.heat.%s' % key)
             for t in (0.2, 0.4, 0.6, 0.8):
                 if temperature < value + (next_value - value) * t:
                     tooltip += '*'
             return css, tooltip
-    
-    lang_key = 'tfc.enum.heat.brilliant_white'
-    util.require(lang_key in context.lang_json, 'Missing translation key for %s' % lang_key)
-    return 'brilliant-white', context.lang_json[lang_key]
+    return 'brilliant-white', context.translate('tfc.enum.heat.brilliant_white')
 
 def get_tier(context: Context, tier: int) -> str:
-    lang_key = 'tfc.enum.tier.tier_%s' % ['0', 'i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii'][tier]
-    util.require(lang_key in context.lang_json, 'Missing translation key for %s' % lang_key)
-    return context.lang_json[lang_key]
+    return context.translate('tfc.enum.tier.tier_%s' % ['0', 'i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii'][tier])
+
 
 HEAT = (
     ('warming', 'gray', 80),
