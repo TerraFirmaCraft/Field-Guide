@@ -1,11 +1,6 @@
-from typing import Dict, Any
+from typing import Any
 from context import Context
 from PIL import Image
-
-import util
-
-
-Keyable = Dict[str, Any]
 
 
 KNAPPING_RECIPE_TYPES = {
@@ -31,7 +26,7 @@ KNAPPING_RECIPE_OUTLINE = 'tfc:textures/gui/book/icons.png'
 CACHE = {}
 
 
-def format_knapping_recipe(context: Context, data: Keyable):
+def format_knapping_recipe(context: Context, data: Any):
     recipe_id = data['recipe'] if 'recipe' in data else data['recipes'][0]
 
     if recipe_id in CACHE:

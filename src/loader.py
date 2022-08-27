@@ -3,7 +3,6 @@ from components import mcmeta
 from util import InternalError
 from PIL import Image
 
-import os
 import json
 import util
 

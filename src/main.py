@@ -89,8 +89,8 @@ def parse_book(context: Context):
             ])
         ))
         f.write("""
-        <h3>TerraFirmaCraft Online Field Guide</h3>
-        <p>This is a translation of the TerraFirmaCraft Field Guide, which is viewable in game. Some parts of this field guide are only visible in-game, such as multiblock visualizations or recipes.</p>
+        <img class="d-block w-200 mx-auto img-fluid" src="../_images/splash.png" alt="TerraFirmaCraft Field Guide Splash Image">
+        <p>This is a translation of the TerraFirmaCraft Field Guide, which is viewable in game. Some parts of this field guide are only visible in-game, such as multiblock visualizations or some recipes.</p>
         <h4>Entries</h4>
         """)
 
@@ -426,7 +426,7 @@ PREFIX = """
 
 <nav class="navbar navbar-expand-md fixed-top bg-dark">
     <div class="navbar-header">
-        <a class="navbar-brand text-light" href="#">{title}</a>
+        <a class="navbar-brand text-light" href="{index}">{title}</a>
     </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
