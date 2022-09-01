@@ -21,11 +21,13 @@ def format_crafting_recipe_from_data(context: Context, buffer: List[str], identi
                 if key != ' ':
                     recipe.grid[x + 3 * y] = data['key'][key]
         recipe.output = format_item_stack(context, data['result'])
+        recipe.shapeless = False
     elif recipe_type == 'minecraft:crafting_shapeless':
         recipe = CraftingRecipe()
         for i, key in enumerate(data['ingredients']):
             recipe.grid[i] = key
         recipe.output = format_item_stack(context, data['result'])
+        recipe.shapeless = True
     elif recipe_type in (
         'tfc:damage_inputs_shaped_crafting',
         'tfc:damage_inputs_shapeless_crafting',
@@ -92,6 +94,8 @@ def format_ingredient(context: Context, data: Any) -> Tuple[str, str]:
         util.error('Unsupported ingredient: %s' % data)
 
 def format_item_stack(context: Context, data: Any) -> Tuple[str, str, int]:
+    if 'modifiers' in data and 'stack' in data:
+        return format_item_stack(context, data['stack'])  # Discard modifiers
     path, name = item_loader.get_item_image(context, data['item'])
     count = 1 if 'count' not in data else data['count']
     return path, name, count
