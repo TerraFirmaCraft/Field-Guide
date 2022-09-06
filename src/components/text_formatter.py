@@ -21,9 +21,12 @@ class TextFormatter:
         # Patchy doesn't have an ordered list function / macro. So we have to recognize a specific pattern outside of a macro to properly HTML-ify them
         text = re.sub(r'\$\(br\)  [0-9+]. ', '$(ol)', text)
 
-        for match in re.finditer(r'\$\(([^)]*)\)', text):
+        for match in re.finditer(r'(\$\(([^)]*)\)|§(.))', text):
             start, end = match.span()
-            key = match.group(1)
+            key = match.group(2)
+            if key == None:
+                key = match.group(3)
+
             if start > cursor:
                 self.buffer.append(text[cursor:start])
             if key == '':
@@ -120,7 +123,7 @@ KEYS = {
 ROOT_TAGS = {
     'p': {
         None: '</p>\n',
-        'p': '</p>\n<p>',
+        'p': '<br>\n',
         'li': '</p>\n<ul>\n\t<li>',
         'ol': '</p>\n<ol>\n\t<li>'
     },

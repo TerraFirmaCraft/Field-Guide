@@ -196,7 +196,7 @@ def parse_category(context: Context, category_dir: str, category_file: str):
 
     context.format_text(desc := [], data, 'description')
 
-    category.name = data['name']
+    category.name = util.rm_format(data['name'])
     category.description = ''.join(desc)
     category.sort = data['sortnum']
 
@@ -222,7 +222,7 @@ def parse_entry(context: Context, entry_dir: str, entry_file: str):
     category_id = category_id[category_id.index(':') + 1:]
 
     entry.sort = data['sortnum'] if 'sortnum' in data else -1
-    entry.name = data['name']
+    entry.name = util.rm_format(data['name'])
 
     for page in data['pages']:
         try:

@@ -1,6 +1,7 @@
 from logging import getLogger, StreamHandler, Formatter
 
 import os
+import re
 
 LOG = getLogger('main')
 LOG.addHandler((
@@ -56,3 +57,5 @@ def require(condition: bool, reason: str):
 def error(reason: str):
     raise InternalError(reason)
 
+def rm_format(text: str):
+    return re.sub(r'§.', '', text)

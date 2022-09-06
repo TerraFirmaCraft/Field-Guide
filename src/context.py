@@ -82,12 +82,12 @@ class Context:
     
     def format_title(self, buffer: List[str], data: Any, key: str = 'title'):
         if key in data:
-            buffer.append('<h5>%s</h5>\n' % data[key])
+            buffer.append('<h5>%s</h5>\n' % util.rm_format(data[key]))
 
     def format_title_with_icon(self, buffer: List[str], icon_src: str, icon_name: str | None, data: Any, key: str = 'title'):
         title = icon_name
         if key in data:
-            title = data[key]
+            title = util.rm_format(data[key])
             if not icon_name:  # For multi-items, no name, but title is present
                 icon_name = title
         buffer.append("""
