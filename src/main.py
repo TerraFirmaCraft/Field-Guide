@@ -11,6 +11,7 @@ from util import LOG, InternalError
 from context import Context
 from category import Category
 from entry import Entry
+from i18n import I18n
 from components import item_loader, block_loader, crafting_recipe, knapping_recipe, misc_recipe, mcmeta, text_formatter
 
 
@@ -24,6 +25,7 @@ def main():
     parser.add_argument('--out-dir', type=str, dest='out_dir', default='out')
     parser.add_argument('--debug', action='store_true', dest='log_debug')
     parser.add_argument('--use-mcmeta', action='store_true', dest='use_mcmeta')
+    parser.add_argument('--debug-i18n', action='store_true', dest='debug_i18n')
 
     args = parser.parse_args()
 
@@ -32,8 +34,9 @@ def main():
     tfc_dir = args.tfc_dir
     out_dir = args.out_dir
     use_mcmeta = args.use_mcmeta
+    debug_i18n = args.debug_i18n
 
-    context = Context(tfc_dir, out_dir, use_mcmeta)
+    context = Context(tfc_dir, out_dir, use_mcmeta, debug_i18n)
 
     if use_mcmeta:
         mcmeta.load_cache()
@@ -74,18 +77,21 @@ def parse_book(context: Context):
     # Main Page
     with open(util.prepare(context.output_dir, 'index.html'), 'w', encoding='utf-8') as f:
         f.write(PREFIX.format(
-            title=context.translate(TITLE),
-            text_index=context.translate(INDEX),
-            text_contents=context.translate(CONTENTS),
-            text_version=context.translate(VERSION),
-            current_lang=context.translate(LANGUAGE_NAME % context.lang),
+            title=context.translate(I18n.TITLE),
+            text_index=context.translate(I18n.INDEX),
+            text_contents=context.translate(I18n.CONTENTS),
+            text_version=context.translate(I18n.VERSION),
+            text_api_docs=context.translate(I18n.API_DOCS),
+            text_github=context.translate(I18n.GITHUB),
+            text_discord=context.translate(I18n.DISCORD),
+            current_lang=context.translate(I18n.LANGUAGE_NAME % context.lang),
             langs='\n'.join([
-                '<a href="../%s/index.html" class="dropdown-item">%s</a>' % (l, context.translate(LANGUAGE_NAME % l)) for l in versions.LANGUAGES
+                '<a href="../%s/index.html" class="dropdown-item">%s</a>' % (l, context.translate(I18n.LANGUAGE_NAME % l)) for l in versions.LANGUAGES
             ]),
             index='#',
             style='../style.css',
             tfc_version=versions.VERSION,
-            location='<a class="text-muted" href="#">%s</a>' % context.translate(INDEX),
+            location='<a class="text-muted" href="#">%s</a>' % context.translate(I18n.INDEX),
             contents='\n'.join([
                 '<li><a class="text-muted" href="./%s/index.html">%s</a></li>' % (cat_id, cat.name)
                 for cat_id, cat in context.sorted_categories
@@ -96,8 +102,8 @@ def parse_book(context: Context):
         <p>{text_home}</p>
         <h4>{text_entries}</h4>
         """.format(
-            text_home=context.translate(HOME),
-            text_entries=context.translate(CATEGORIES)
+            text_home=context.translate(I18n.HOME),
+            text_entries=context.translate(I18n.CATEGORIES)
         ))
 
         for cat_id, cat in context.sorted_categories:
@@ -122,19 +128,22 @@ def parse_book(context: Context):
     for category_id, cat in context.sorted_categories:
         with open(util.prepare(context.output_dir, category_id + '/index.html'), 'w', encoding='utf-8') as f:
             f.write(PREFIX.format(
-                title=context.translate(TITLE),
-                text_index=context.translate(INDEX),
-                text_contents=context.translate(CONTENTS),
-                text_version=context.translate(VERSION),
-                current_lang=context.translate(LANGUAGE_NAME % context.lang),
+                title=context.translate(I18n.TITLE),
+                text_index=context.translate(I18n.INDEX),
+                text_contents=context.translate(I18n.CONTENTS),
+                text_version=context.translate(I18n.VERSION),
+                text_api_docs=context.translate(I18n.API_DOCS),
+                text_github=context.translate(I18n.GITHUB),
+                text_discord=context.translate(I18n.DISCORD),
+                current_lang=context.translate(I18n.LANGUAGE_NAME % context.lang),
                 langs='\n'.join([
-                    '<a href="../../%s/%s/index.html" class="dropdown-item">%s</a>' % (l, category_id, context.translate(LANGUAGE_NAME % l)) for l in versions.LANGUAGES
+                    '<a href="../../%s/%s/index.html" class="dropdown-item">%s</a>' % (l, category_id, context.translate(I18n.LANGUAGE_NAME % l)) for l in versions.LANGUAGES
                 ]),
                 index='../index.html',
                 style='../../style.css',
                 tfc_version=versions.VERSION,
                 location='<a class="text-muted" href="../index.html">%s</a> / <a class="text-muted" href="#">%s</a>' % (
-                    context.translate(INDEX),
+                    context.translate(I18n.INDEX),
                     cat.name
                 ),
                 contents='\n'.join([
@@ -168,19 +177,22 @@ def parse_book(context: Context):
         for entry_id, entry in cat.sorted_entries:
             with open(util.prepare(context.output_dir, entry_id + '.html'), 'w', encoding='utf-8') as f:
                 f.write(PREFIX.format(
-                    title=context.translate(TITLE),
-                    text_index=context.translate(INDEX),
-                    text_contents=context.translate(CONTENTS),
-                    text_version=context.translate(VERSION),
-                    current_lang=context.translate(LANGUAGE_NAME % context.lang),
+                    title=context.translate(I18n.TITLE),
+                    text_index=context.translate(I18n.INDEX),
+                    text_contents=context.translate(I18n.CONTENTS),
+                    text_version=context.translate(I18n.VERSION),
+                    text_api_docs=context.translate(I18n.API_DOCS),
+                    text_github=context.translate(I18n.GITHUB),
+                    text_discord=context.translate(I18n.DISCORD),
+                    current_lang=context.translate(I18n.LANGUAGE_NAME % context.lang),
                     langs='\n'.join([
-                        '<a href="../../%s/%s.html" class="dropdown-item">%s</a>' % (l, entry_id, context.translate(LANGUAGE_NAME % l)) for l in versions.LANGUAGES
+                        '<a href="../../%s/%s.html" class="dropdown-item">%s</a>' % (l, entry_id, context.translate(I18n.LANGUAGE_NAME % l)) for l in versions.LANGUAGES
                     ]),
                     index='../index.html',
                     style='../../style.css',
                     tfc_version=versions.VERSION,
                     location='<a class="text-muted" href="../index.html">%s</a> / <a class="text-muted" href="./index.html">%s</a> / <a class="text-muted" href="#">%s</a>' % (
-                        context.translate(INDEX),
+                        context.translate(I18n.INDEX),
                         cat.name, 
                         entry.name
                     ),
@@ -334,11 +346,11 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
             
             # Fallback
             context.format_title(buffer, data)
-            items = 'Item%s: <code>%s</code>' % (
-                's' if ',' in data['item'] else '',
+            items = '%s: <code>%s</code>' % (
+                context.translate(I18n.ITEMS) if ',' in data['item'] else context.translate(I18n.ITEM),
                 '</code>, <code>'.join(data['item'].split(','))
             )
-            context.format_with_tooltip(buffer, items, 'View the field guide in Minecraft to see this item.')
+            context.format_with_tooltip(buffer, items, context.translate(I18n.ITEM_ONLY_IN_GAME))
             context.items_failed += 1
         
         context.format_text(buffer, data)
@@ -364,9 +376,12 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
 
             # Fallback
             if 'multiblock_id' in data:
-                context.format_with_tooltip(buffer, 'Multiblock: <code>%s</code>' % data['multiblock_id'], 'View the field guide in Minecraft to see this multiblock.')
+                context.format_with_tooltip(buffer, '%s: <code>%s</code>' % (
+                    context.translate(I18n.MULTIBLOCK),
+                    data['multiblock_id']
+                ), context.translate(I18n.MULTIBLOCK_ONLY_IN_GAME))
             else:
-                context.format_with_tooltip(buffer, 'Multiblock', 'View the field guide in Minecraft to see this multiblock.')
+                context.format_with_tooltip(buffer, context.translate(I18n.MULTIBLOCK), context.translate(I18n.MULTIBLOCK_ONLY_IN_GAME))
             context.format_text(buffer, data)
             context.blocks_failed += 1
     elif page_type in (
@@ -466,9 +481,9 @@ PREFIX = """
                 </div>
             </li>
             <li class="nav-item active"><a class="nav-link text-light" href="{index}">{text_index}</a></li>
-            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
-            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fa fa-github"></i> GitHub</a></li>
-            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> {text_api_docs}</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fa fa-github"></i> {text_github}</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> {text_discord}</a></li>
             <li class="nav-item"><span class="nav-link text-light" href="#">{text_version} {tfc_version}</span></li>
         </ul>
     </div>
@@ -528,16 +543,6 @@ IMAGE_MULTIPLE = """
     </a>
 </div>
 """
-
-# Translation Keys
-
-TITLE = 'field_guide.title'
-INDEX = 'field_guide.index'
-CONTENTS = 'field_guide.contents'
-VERSION = 'field_guide.version'
-CATEGORIES = 'field_guide.categories'
-HOME = 'field_guide.home'
-LANGUAGE_NAME = 'field_guide.language.%s'
 
 
 if __name__ == '__main__':

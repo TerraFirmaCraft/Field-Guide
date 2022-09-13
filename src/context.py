@@ -3,6 +3,7 @@ from PIL import Image
 from category import Category
 from entry import Entry
 from util import LOG, InternalError
+from i18n import I18n
 from components import text_formatter
 from loader import Loader
 
@@ -12,16 +13,19 @@ import json
 
 class Context:
 
-    def __init__(self, tfc_dir: str, output_dir: str, use_mcmeta: bool):
+    def __init__(self, tfc_dir: str, output_dir: str, use_mcmeta: bool, debug_i18n: bool):
         self.tfc_dir = tfc_dir
         self.output_root_dir = output_dir
         self.output_dir = output_dir
         self.loader: Loader = Loader(tfc_dir, output_dir, use_mcmeta)
         self.last_context = None
+        self.debug_i18n = debug_i18n
 
         self.categories: Dict[str, Category] = {}
         self.entries: Dict[str, Entry] = {}
         self.sorted_categories: List[Tuple[str, Category]] = []
+
+        self.keybindings: Dict[str, str] = {}
 
         self.lang = None
         self.lang_keys = {}
@@ -58,6 +62,10 @@ class Context:
         
         self.with_local_lang('en_us')  # First load en_us
         self.with_local_lang(lang)  # Then load the current language
+
+        # Load keybindings
+        self.keybindings = {k[len('field_guide.'):]: self.translate(k) for k in I18n.KEYS}
+
         return self
     
     def with_local_lang(self, lang: str):
@@ -90,7 +98,7 @@ class Context:
     
     def format_text(self, buffer: List[str], data: Any, key: str = 'text'):
         if key in data:
-            text_formatter.format_text(buffer, data[key])
+            text_formatter.format_text(buffer, data[key], self.keybindings)
     
     def format_title(self, buffer: List[str], data: Any, key: str = 'title'):
         if key in data:
@@ -126,9 +134,14 @@ class Context:
     def format_recipe(self, buffer: List[str], data: Any, key: str = 'recipe'):
         if key in data:
             self.recipes_failed += 1
-            self.format_with_tooltip(buffer, 'Recipe: <code>%s</code>' % data[key], 'View the field guide in Minecraft to see recipes')
+            self.format_with_tooltip(buffer, '%s: <code>%s</code>' % (
+                self.translate(I18n.RECIPE),
+                data[key]
+            ), self.translate(I18n.RECIPE_ONLY_IN_GAME))
 
     def translate(self, *keys: str) -> str:
+        if self.debug_i18n:
+            return '{%s}' % keys[0]
         for key in keys:
             if key in self.lang_keys:
                 return self.lang_keys[key]

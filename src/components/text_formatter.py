@@ -1,11 +1,11 @@
-from typing import List
+from typing import List, Dict
 from util import LOG
 
 import re
 
 
-def format_text(buffer: List[str], text: str):
-    TextFormatter(buffer, text)
+def format_text(buffer: List[str], text: str, keybindings: Dict[str, str]):
+    TextFormatter(buffer, text, keybindings)
 
 def strip_vanilla_formatting(text: str) -> str:
     return re.sub(r'§.', '', text)
@@ -13,11 +13,12 @@ def strip_vanilla_formatting(text: str) -> str:
 
 class TextFormatter:
     
-    def __init__(self, buffer: List[str], text: str):
+    def __init__(self, buffer: List[str], text: str, keybindings: Dict[str, str]):
         self.root = 'p'
         self.stack = []
         self.buffer = buffer
         self.buffer.append('<p>')
+        self.keybindings = keybindings
 
         cursor = 0
 
@@ -64,8 +65,8 @@ class TextFormatter:
                 self.matching_tags('<span class="minecraft-white">', '</span>')
             elif key in VANILLA_COLORS:
                 self.color_tags(VANILLA_COLORS[key])
-            elif key.startswith('k:') and key[2:] in KEYS:
-                self.buffer.append(KEYS[key[2:]])
+            elif key.startswith('k:') and key[2:] in self.keybindings:
+                self.buffer.append(self.keybindings[key[2:]])
             elif key.startswith('t'):
                 pass  # Discard tooltips
             else:
@@ -111,17 +112,6 @@ VANILLA_COLORS = {
     'd': '#FF55FF',
     'e': '#FFFF55',
     'f': '#FFFFFF',
-}
-
-KEYS = {
-    'key.inventory': 'E',
-    'key.attack': 'Left Click',
-    'key.use': 'Right Click',
-    'key.drop': 'Q',
-    'key.sneak': 'Shift',
-
-    'tfc.key.cycle_chisel_mode': 'M',
-    'tfc.key.place_block': 'V'
 }
 
 ROOT_TAGS = {
