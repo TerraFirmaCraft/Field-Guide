@@ -3,6 +3,7 @@ from PIL import Image
 
 from context import Context
 from components import tag_loader, block_loader
+from util import InternalError
 
 import util
 
@@ -19,12 +20,22 @@ def get_item_image(context: Context, item: str) -> Tuple[str, str]:
         name : str = The translated name of the item (if a single item), or a best guess (if a tag), or None (if csv)
     """
 
-    util.require('{' not in item, 'Item : Item with NBT : \'%s\'' % item)
+    util.require('{' not in item, 'Item : Item with NBT : \'%s\'' % item, True)
 
     if item in CACHE:
-        return CACHE[item]
+        path, name, key = CACHE[item]
+        if key is not None:
+            try:
+                name = context.translate(
+                    'item.' + key,
+                    'block.' + key
+                )
+            except InternalError as e:
+                e.warning()
+        return path, name
     
     name = None
+    key = None  # A translation key, if this needs to be re-translated
 
     if item.startswith('#'):
         # Guess the name based on the tag
@@ -40,22 +51,22 @@ def get_item_image(context: Context, item: str) -> Tuple[str, str]:
     
     if len(images) == 1:
         path = context.loader.save_image(context.next_id('item'), images[0])
-        name = items[0].replace('/', '.').replace(':', '.')
+        key = items[0].replace('/', '.').replace(':', '.')
         name = context.translate(
-            'item.' + name,
-            'block.' + name
+            'item.' + key,
+            'block.' + key
         )
     else:
         path = context.loader.save_gif(context.next_id('item'), images)
 
-    CACHE[item] = path, name
+    CACHE[item] = path, name, key
     return path, name
 
 
 def create_item_image(context: Context, item: str) -> Image.Image:
 
     model = context.loader.load_item_model(item)
-    util.require('parent' in model, 'Item Model : No Parent : \'%s\'' % item)
+    util.require('parent' in model, 'Item Model : No Parent : \'%s\'' % item, True)
     
     if 'loader' in model:
         loader = model['loader']
@@ -66,7 +77,7 @@ def create_item_image(context: Context, item: str) -> Image.Image:
             img = img.resize((64, 64), resample=Image.Resampling.NEAREST)
             return img
         else:
-            util.error('Item Model : Unknown Loader : \'%s\' at \'%s\'' % (loader, item))
+            util.error('Item Model : Unknown Loader : \'%s\' at \'%s\'' % (loader, item), True)
 
     parent = util.resource_location(model['parent'])
     if parent in (
@@ -87,5 +98,5 @@ def create_item_image(context: Context, item: str) -> Image.Image:
         img = img.resize((64, 64), resample=Image.Resampling.NEAREST)
         return img
     else:
-        util.error('Item Model : Unknown Parent \'%s\' : at \'%s\'' % (parent, item))
+        util.error('Item Model : Unknown Parent \'%s\' : at \'%s\'' % (parent, item), True)
 

@@ -11,7 +11,7 @@ from util import LOG, InternalError
 from context import Context
 from category import Category
 from entry import Entry
-from components import item_loader, block_loader, crafting_recipe, knapping_recipe, misc_recipe, mcmeta
+from components import item_loader, block_loader, crafting_recipe, knapping_recipe, misc_recipe, mcmeta, text_formatter
 
 
 BOOK_DIR = 'src/main/resources/data/tfc/patchouli_books/field_guide/'
@@ -46,7 +46,7 @@ def main():
     os.makedirs(os.path.join(out_dir, '_images'), exist_ok=True)
 
     for lang in versions.LANGUAGES:
-        LOG.debug('Language: %s' % lang)
+        LOG.info('Language: %s' % lang)
         parse_book(context.with_lang(lang))
     
     LOG.info('Done')
@@ -74,15 +74,18 @@ def parse_book(context: Context):
     # Main Page
     with open(util.prepare(context.output_dir, 'index.html'), 'w', encoding='utf-8') as f:
         f.write(PREFIX.format(
-            title=TITLE,
-            current_lang=context.lang,
+            title=context.translate(TITLE),
+            text_index=context.translate(INDEX),
+            text_contents=context.translate(CONTENTS),
+            text_version=context.translate(VERSION),
+            current_lang=context.translate(LANGUAGE_NAME % context.lang),
             langs='\n'.join([
-                '<a href="../%s/index.html" class="dropdown-item">%s</a>' % (l, l) for l in versions.LANGUAGES
+                '<a href="../%s/index.html" class="dropdown-item">%s</a>' % (l, context.translate(LANGUAGE_NAME % l)) for l in versions.LANGUAGES
             ]),
             index='#',
             style='../style.css',
             tfc_version=versions.VERSION,
-            location='<a class="text-muted" href="#">Index</a>',
+            location='<a class="text-muted" href="#">%s</a>' % context.translate(INDEX),
             contents='\n'.join([
                 '<li><a class="text-muted" href="./%s/index.html">%s</a></li>' % (cat_id, cat.name)
                 for cat_id, cat in context.sorted_categories
@@ -90,9 +93,12 @@ def parse_book(context: Context):
         ))
         f.write("""
         <img class="d-block w-200 mx-auto img-fluid" src="../_images/splash.png" alt="TerraFirmaCraft Field Guide Splash Image">
-        <p>This is a translation of the TerraFirmaCraft Field Guide, which is viewable in game. Some parts of this field guide are only visible in-game, such as multiblock visualizations or some recipes.</p>
-        <h4>Entries</h4>
-        """)
+        <p>{text_home}</p>
+        <h4>{text_entries}</h4>
+        """.format(
+            text_home=context.translate(HOME),
+            text_entries=context.translate(CATEGORIES)
+        ))
 
         for cat_id, cat in context.sorted_categories:
             f.write("""
@@ -116,15 +122,21 @@ def parse_book(context: Context):
     for category_id, cat in context.sorted_categories:
         with open(util.prepare(context.output_dir, category_id + '/index.html'), 'w', encoding='utf-8') as f:
             f.write(PREFIX.format(
-                title=TITLE,
-                current_lang=context.lang,
+                title=context.translate(TITLE),
+                text_index=context.translate(INDEX),
+                text_contents=context.translate(CONTENTS),
+                text_version=context.translate(VERSION),
+                current_lang=context.translate(LANGUAGE_NAME % context.lang),
                 langs='\n'.join([
-                    '<a href="../../%s/index.html" class="dropdown-item">%s</a>' % (l, l) for l in versions.LANGUAGES
+                    '<a href="../../%s/%s/index.html" class="dropdown-item">%s</a>' % (l, category_id, context.translate(LANGUAGE_NAME % l)) for l in versions.LANGUAGES
                 ]),
                 index='../index.html',
                 style='../../style.css',
                 tfc_version=versions.VERSION,
-                location='<a class="text-muted" href="../index.html">Index</a> / <a class="text-muted" href="#">%s</a>' % cat.name,
+                location='<a class="text-muted" href="../index.html">%s</a> / <a class="text-muted" href="#">%s</a>' % (
+                    context.translate(INDEX),
+                    cat.name
+                ),
                 contents='\n'.join([
                     '<li><a class="text-muted" href="../%s/index.html">%s</a></li>' % (cat_id, cat.name) + (
                         ''
@@ -156,15 +168,22 @@ def parse_book(context: Context):
         for entry_id, entry in cat.sorted_entries:
             with open(util.prepare(context.output_dir, entry_id + '.html'), 'w', encoding='utf-8') as f:
                 f.write(PREFIX.format(
-                    title=TITLE,
-                    current_lang=context.lang,
+                    title=context.translate(TITLE),
+                    text_index=context.translate(INDEX),
+                    text_contents=context.translate(CONTENTS),
+                    text_version=context.translate(VERSION),
+                    current_lang=context.translate(LANGUAGE_NAME % context.lang),
                     langs='\n'.join([
-                        '<a href="../../%s/index.html" class="dropdown-item">%s</a>' % (l, l) for l in versions.LANGUAGES
+                        '<a href="../../%s/%s.html" class="dropdown-item">%s</a>' % (l, entry_id, context.translate(LANGUAGE_NAME % l)) for l in versions.LANGUAGES
                     ]),
                     index='../index.html',
                     style='../../style.css',
                     tfc_version=versions.VERSION,
-                    location='<a class="text-muted" href="../index.html">Index</a> / <a class="text-muted" href="./index.html">%s</a> / <a class="text-muted" href="#">%s</a>' % (cat.name, entry.name),
+                    location='<a class="text-muted" href="../index.html">%s</a> / <a class="text-muted" href="./index.html">%s</a> / <a class="text-muted" href="#">%s</a>' % (
+                        context.translate(INDEX),
+                        cat.name, 
+                        entry.name
+                    ),
                     contents='\n'.join([
                         '<li><a class="text-muted" href="../%s/index.html">%s</a>' % (cat_id, cat.name) + (
                             '</li>'
@@ -196,7 +215,7 @@ def parse_category(context: Context, category_dir: str, category_file: str):
 
     context.format_text(desc := [], data, 'description')
 
-    category.name = data['name']
+    category.name = text_formatter.strip_vanilla_formatting(data['name'])
     category.description = ''.join(desc)
     category.sort = data['sortnum']
 
@@ -222,18 +241,18 @@ def parse_entry(context: Context, entry_dir: str, entry_file: str):
     category_id = category_id[category_id.index(':') + 1:]
 
     entry.sort = data['sortnum'] if 'sortnum' in data else -1
-    entry.name = data['name']
+    entry.name = text_formatter.strip_vanilla_formatting(data['name'])
 
     for page in data['pages']:
         try:
-            parse_page(context, entry.buffer, page)
+            parse_page(context, entry_id, entry.buffer, page)
         except InternalError as e:
             e.warning()
 
     context.add_entry(category_id, entry_id, entry)
 
 
-def parse_page(context: Context, buffer: List[str], data: Any):
+def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
     page_type = data['type']
 
     if 'anchor' in data:
@@ -244,21 +263,28 @@ def parse_page(context: Context, buffer: List[str], data: Any):
         context.format_text(buffer, data)
     elif page_type == 'patchouli:image':
         context.format_title(buffer, data)
-        
+
         images = data['images']
+
+        try:
+            images = [(i, context.convert_image(i)) for i in images]
+        except InternalError as e:
+            e.prefix('Entry: \'%s\'' % entry_id).warning()
+            images = []
+
         if len(images) == 1:
-            image = images[0]
+            image_text, image_src = images[0]
             buffer.append(IMAGE_SINGLE.format(
-                src=context.convert_image(image),
-                text=image
+                src=image_src,
+                text=image_text
             ))
-        else:
+        elif len(images) > 0:
             uid = context.next_id()
             parts = [IMAGE_MULTIPLE_PART.format(
-                src=context.convert_image(image),
-                text=image,
+                src=image_src,
+                text=image_text,
                 active='active' if i == 0 else ''
-            ) for i, image in enumerate(images)]
+            ) for i, (image_text, image_src) in enumerate(images)]
 
             seq = [IMAGE_MULTIPLE_SEQ.format(
                 id=uid,
@@ -279,7 +305,7 @@ def parse_page(context: Context, buffer: List[str], data: Any):
             crafting_recipe.format_crafting_recipe(context, buffer, data['recipe'])
             context.recipes_passed += 1
         except InternalError as e:
-            LOG.warning('Recipe: \'%s\' : %s' % (data['recipe'], e))
+            e.prefix('Recipe: \'%s\'' % data['recipe']).warning()
 
             # Fallback
             context.format_recipe(buffer, data)
@@ -290,7 +316,7 @@ def parse_page(context: Context, buffer: List[str], data: Any):
                 crafting_recipe.format_crafting_recipe(context, buffer, data['recipe2'])
                 context.recipes_passed += 1
         except InternalError as e:
-            LOG.warning('Recipe: \'%s\' : %s' % (data['recipe2'], e))
+            e.prefix('Recipe: \'%s\'' % data['recipe2']).warning()
 
             # Fallback
             context.format_recipe(buffer, data, 'recipe2')
@@ -434,16 +460,16 @@ PREFIX = """
     <div class="collapse navbar-collapse" id="navbar-content">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language: {current_lang}</a>
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{current_lang}</a>
                 <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
                     {langs}
                 </div>
             </li>
-            <li class="nav-item active"><a class="nav-link text-light" href="{index}">Index</a></li>
+            <li class="nav-item active"><a class="nav-link text-light" href="{index}">{text_index}</a></li>
             <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
             <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fa fa-github"></i> GitHub</a></li>
             <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
-            <li class="nav-item"><span class="nav-link text-light" href="#">Version: {tfc_version}</span></li>
+            <li class="nav-item"><span class="nav-link text-light" href="#">{text_version} {tfc_version}</span></li>
         </ul>
     </div>
 </nav>
@@ -451,7 +477,7 @@ PREFIX = """
     <div class="row">
         <div class="col-md-2 py-1">
             <div class="sticky-top" style="top: 70px">
-                <h4>Contents</h4>
+                <h4>{text_contents}</h4>
                 <ul class="list-unstyled">
                     {contents}
                 </ul>
@@ -503,8 +529,15 @@ IMAGE_MULTIPLE = """
 </div>
 """
 
-TITLE = 'TerraFirmaCraft Field Guide'
+# Translation Keys
 
+TITLE = 'field_guide.title'
+INDEX = 'field_guide.index'
+CONTENTS = 'field_guide.contents'
+VERSION = 'field_guide.version'
+CATEGORIES = 'field_guide.categories'
+HOME = 'field_guide.home'
+LANGUAGE_NAME = 'field_guide.language.%s'
 
 
 if __name__ == '__main__':

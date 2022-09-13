@@ -7,6 +7,9 @@ import re
 def format_text(buffer: List[str], text: str):
     TextFormatter(buffer, text)
 
+def strip_vanilla_formatting(text: str) -> str:
+    return re.sub(r'§.', '', text)
+
 
 class TextFormatter:
     
@@ -21,9 +24,11 @@ class TextFormatter:
         # Patchy doesn't have an ordered list function / macro. So we have to recognize a specific pattern outside of a macro to properly HTML-ify them
         text = re.sub(r'\$\(br\)  [0-9+]. ', '$(ol)', text)
 
-        for match in re.finditer(r'\$\(([^)]*)\)', text):
+        for match in re.finditer(r'(\$\(([^)]*)\))|§(.)', text):
             start, end = match.span()
-            key = match.group(1)
+            key = match.group(2)
+            if key is None:
+                key = match.group(3)
             if start > cursor:
                 self.buffer.append(text[cursor:start])
             if key == '':
@@ -32,6 +37,8 @@ class TextFormatter:
                 self.matching_tags('<strong>', '</strong>')
             elif key == 'italic' or key == 'italics' or key == 'o':
                 self.matching_tags('<em>', '</em>')
+            elif key == 'underline':
+                self.matching_tags('<u>', '</u>')
             elif key == 'br':
                 self.update_root('p')
             elif key == 'br2' or key == '2br':
@@ -120,7 +127,7 @@ KEYS = {
 ROOT_TAGS = {
     'p': {
         None: '</p>\n',
-        'p': '</p>\n<p>',
+        'p': '<br/>\n',
         'li': '</p>\n<ul>\n\t<li>',
         'ol': '</p>\n<ol>\n\t<li>'
     },

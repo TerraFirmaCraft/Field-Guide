@@ -34,25 +34,28 @@ def path_join(*parts):
 
 class InternalError(Exception):
 
-    def __init__(self, reason: str):
+    def __init__(self, reason: str, quiet: bool = False):
         self.reason = reason
-    
-    def at(self, site: str):
-        self.reason += '\n  at: ' + site
-        return self
+        self.quiet = quiet
     
     def warning(self):
-        LOG.warning(self)
+        if self.quiet:
+            LOG.debug(self.reason)
+        else:
+            LOG.warning(self.reason)
+    
+    def prefix(self, other_reason: str) -> 'InternalError':
+        return error('%s : %s' % (other_reason, self), self.quiet)
     
     def __repr__(self) -> str: return self.reason
     def __str__(self) -> str: return self.reason
 
 
-def require(condition: bool, reason: str):
+def require(condition: bool, reason: str, quiet: bool = False):
     if not condition:
-        error(reason)
+        error(reason, quiet)
 
 
-def error(reason: str):
-    raise InternalError(reason)
+def error(reason: str, quiet: bool = False):
+    raise InternalError(reason, quiet)
 

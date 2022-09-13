@@ -21,7 +21,7 @@ def get_multi_block_image(context: Context, data: Any) -> str:
     elif 'multiblock' in data:
         key, images = get_multi_block_images(context, data['multiblock'])
     else:
-        util.error('Multiblock : Custom Multiblock \'%s\'' % data['multiblock_id'])
+        util.error('Multiblock : Custom Multiblock \'%s\'' % data['multiblock_id'], True)
     
     if key in CACHE:
         return CACHE[key]
@@ -37,14 +37,14 @@ def get_multi_block_image(context: Context, data: Any) -> str:
 
 def get_multi_block_images(context: Context, data: Any) -> Tuple[str, List[Image.Image]]:
     pattern = data['pattern']
-    util.require(pattern == [['X'], ['0']] or pattern == [['X'], ['Y'], ['0']], 'Multiblock : Complex Pattern \'%s\'' % repr(pattern))
+    util.require(pattern == [['X'], ['0']] or pattern == [['X'], ['Y'], ['0']], 'Multiblock : Complex Pattern \'%s\'' % repr(pattern), True)
 
     block = data['mapping']['X']
 
     if block.startswith('#'):
         blocks = tag_loader.load_block_tag(context, block[1:])
     else:
-        util.require('[' not in block, 'Multiblock : Block with Properties \'%s\'' % block)
+        util.require('[' not in block, 'Multiblock : Block with Properties \'%s\'' % block, True)
         blocks = [block]
 
     return block, [
@@ -56,9 +56,9 @@ def get_multi_block_images(context: Context, data: Any) -> Tuple[str, List[Image
 def get_block_image(context: Context, block: str) -> Image.Image:
 
     state = context.loader.load_block_state(block)
-    util.require('variants' in state, 'BlockState : Multipart \'%s\'' % block)
-    util.require('' in state['variants'], 'BlockState : Block with Properties \'%s\'' % block)
-    util.require('model' in state['variants'][''], 'BlockState : No Model \'%s\'' % block)
+    util.require('variants' in state, 'BlockState : Multipart \'%s\'' % block, True)
+    util.require('' in state['variants'], 'BlockState : Block with Properties \'%s\'' % block, True)
+    util.require('model' in state['variants'][''], 'BlockState : No Model \'%s\'' % block, True)
 
     model = context.loader.load_model(state['variants']['']['model'])
     
@@ -66,7 +66,7 @@ def get_block_image(context: Context, block: str) -> Image.Image:
 
 
 def create_block_model_image(context: Context, block: str, model: Any) -> Image.Image:
-    util.require('parent' in model, 'Block Model : No Parent : \'%s\'' % block)
+    util.require('parent' in model, 'Block Model : No Parent : \'%s\'' % block, True)
     
     parent = util.resource_location(model['parent'])
     if parent == 'minecraft:block/cube_all':
@@ -82,7 +82,7 @@ def create_block_model_image(context: Context, block: str, model: Any) -> Image.
         texture.paste(overlay, (0, 0), overlay)
         return create_block_model_projection(texture, texture, texture)
     else:
-        util.error('Block Model : Unknown Parent \'%s\' : at \'%s\'' % (parent, block))
+        util.error('Block Model : Unknown Parent \'%s\' : at \'%s\'' % (parent, block), True)
 
 
 def create_block_model_projection(left: Image.Image, right: Image.Image, top: Image.Image) -> Image.Image:

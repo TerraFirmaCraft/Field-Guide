@@ -7,6 +7,7 @@ from components import text_formatter
 from loader import Loader
 
 import util
+import json
 
 
 class Context:
@@ -55,8 +56,19 @@ class Context:
             except InternalError as e:
                 LOG.warning('Translation : %s' % e)
         
+        self.with_local_lang('en_us')  # First load en_us
+        self.with_local_lang(lang)  # Then load the current language
         return self
     
+    def with_local_lang(self, lang: str):
+        try:
+            with open(util.path_join('./assets/lang/%s.json' % lang), 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            for k, v in data.items():
+                self.lang_keys['field_guide.%s' % k] = v
+        except OSError as e:
+            LOG.warning('Local Translation : %s : %s' % (lang, e))
+
     def next_id(self, prefix: str = 'content') -> str:
         """ Returns a unique ID to be used in a id="" field. Successive calls will return a new ID. """
         self.last_uid[prefix] += 1
@@ -82,12 +94,12 @@ class Context:
     
     def format_title(self, buffer: List[str], data: Any, key: str = 'title'):
         if key in data:
-            buffer.append('<h5>%s</h5>\n' % data[key])
+            buffer.append('<h5>%s</h5>\n' % text_formatter.strip_vanilla_formatting(data[key]))
 
     def format_title_with_icon(self, buffer: List[str], icon_src: str, icon_name: str | None, data: Any, key: str = 'title'):
         title = icon_name
         if key in data:
-            title = data[key]
+            title = text_formatter.strip_vanilla_formatting(data[key])
             if not icon_name:  # For multi-items, no name, but title is present
                 icon_name = title
         buffer.append("""
