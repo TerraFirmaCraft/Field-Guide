@@ -26,6 +26,7 @@ def main():
     parser.add_argument('--debug', action='store_true', dest='log_debug')
     parser.add_argument('--use-mcmeta', action='store_true', dest='use_mcmeta')
     parser.add_argument('--debug-i18n', action='store_true', dest='debug_i18n')
+    parser.add_argument('--debug-only-en-us', action='store_true', dest='debug_only_en_us')
 
     args = parser.parse_args()
 
@@ -34,9 +35,8 @@ def main():
     tfc_dir = args.tfc_dir
     out_dir = args.out_dir
     use_mcmeta = args.use_mcmeta
-    debug_i18n = args.debug_i18n
 
-    context = Context(tfc_dir, out_dir, use_mcmeta, debug_i18n)
+    context = Context(tfc_dir, out_dir, use_mcmeta, args.debug_i18n)
 
     if use_mcmeta:
         mcmeta.load_cache()
@@ -49,6 +49,9 @@ def main():
     os.makedirs(os.path.join(out_dir, '_images'), exist_ok=True)
 
     for lang in versions.LANGUAGES:
+        if args.debug_only_en_us and lang != 'en_us':
+            LOG.debug('Skipping lang %s because --debug-only-en-us was present')
+            continue
         LOG.info('Language: %s' % lang)
         parse_book(context.with_lang(lang))
     

@@ -51,8 +51,8 @@ def format_crafting_recipe_from_data(context: Context, buffer: List[str], identi
         buffer.append("""
         <div class="d-flex align-items-center justify-content-center">
             <div class="crafting-recipe">
-                <img src="../../_images/crafting_shapeless.png" />
-        """)
+                <img src="../../_images/crafting_%s.png" />
+        """ % ('shapeless' if recipe.shapeless else 'shaped'))
         
         for i, key in enumerate(recipe.grid):
             if key:

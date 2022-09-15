@@ -10,6 +10,8 @@ from loader import Loader
 import util
 import json
 
+IMAGE_CACHE: Dict[str, str] = {}
+
 
 class Context:
 
@@ -148,6 +150,9 @@ class Context:
         util.error('Missing Translation Keys %s' % repr(keys))
 
     def convert_image(self, image: str) -> str:
+        if image in IMAGE_CACHE:
+            return IMAGE_CACHE[image]
+
         img = self.loader.load_explicit_texture(image)
         
         width, height = img.size
@@ -158,4 +163,6 @@ class Context:
             # Resize to 400 x 400, for consistent size images
             img = img.resize((400, 400), Image.Resampling.NEAREST)
 
-        return self.loader.save_image(self.next_id('image'), img)
+        ref = self.loader.save_image(self.next_id('image'), img)
+        IMAGE_CACHE[image] = ref
+        return ref
