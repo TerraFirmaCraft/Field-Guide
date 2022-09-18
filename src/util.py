@@ -21,11 +21,15 @@ def walk(path: str):
         for sub in os.listdir(path):
             yield from walk(os.path.join(path, sub))
 
+def load_html(template_name: str) -> str:
+    with open(path_join('assets/templates', template_name + '.html'), 'r', encoding='utf-8') as f:
+        return f.read()
 
-def prepare(root: str, path: str) -> str:
-    full = os.path.join(root, path)
-    os.makedirs(os.path.dirname(full), exist_ok=True)
-    return full
+def write_html(*path_parts: str, html: str):
+    path = path_join(*path_parts)
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, 'w', encoding='utf-8') as f:
+        f.write(html)
 
 
 def path_join(*parts):

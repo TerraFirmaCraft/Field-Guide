@@ -38,10 +38,10 @@ jobs:
       run: |
         python src/main.py --tfc-dir tfc --out-dir build --use-mcmeta
         touch build/.nojekyll
-        cp redirect.html build/index.html
+        cp assets/templates/redirect.html build/index.html
+        cp -r assets/textures/. build/_images/
         cp style.css build/style.css
         cp font.otf build/font.otf
-        cp -r assets/. build/_images/
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4
       with:

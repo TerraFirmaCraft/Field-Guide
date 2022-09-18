@@ -9,8 +9,9 @@
 
 !/requirements.txt
 !/src/**/*.py
-!/assets/*.png
 !/assets/lang/*.json
+!/assets/templates/*.html
+!/assets/textures/*.png
 
 !/style.css
 !/redirect.html

@@ -53,7 +53,7 @@ class TextFormatter:
                 self.matching_tags('<a href="%s">' % key[2:], '</a>')
             elif key.startswith('l:'):
                 link = key[2:]
-                link = link.replace('#', '.html#anchor-') if '#' in link else link + '.html'
+                link = link.replace('#', '.html#') if '#' in link else link + '.html'
                 self.matching_tags('<a href="../%s">' % link, '</a>')
             elif key == 'thing':
                 self.color_tags('#490')
@@ -61,7 +61,8 @@ class TextFormatter:
                 self.color_tags('#b0b')
             elif key.startswith('#'):
                 self.color_tags(key)
-            elif key == 'd':  # We use this color instead of white for temperature tooltips. Use custom CSS for white.
+            elif key == 'd' and 'white' in text[end:end + 20].lower() or 'brilliant' in text[end:end + 20].lower():
+                # We use this color instead of white for temperature tooltips. Use custom CSS for white.
                 self.matching_tags('<span class="minecraft-white">', '</span>')
             elif key in VANILLA_COLORS:
                 self.color_tags(VANILLA_COLORS[key])

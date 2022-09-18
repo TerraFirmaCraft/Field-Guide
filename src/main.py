@@ -16,6 +16,7 @@ from components import item_loader, block_loader, crafting_recipe, knapping_reci
 
 
 BOOK_DIR = 'src/main/resources/data/tfc/patchouli_books/field_guide/'
+TEMPLATE = util.load_html('default')
 
 
 def main():
@@ -55,6 +56,9 @@ def main():
         LOG.info('Language: %s' % lang)
         parse_book(context.with_lang(lang))
     
+        context.sort()
+        build_book_html(context)
+    
     LOG.info('Done')
     LOG.info('  Recipes : %d passed / %d failed / %d skipped' % (context.recipes_passed, context.recipes_failed, context.recipes_skipped))
     LOG.info('  Items   : %d passed / %d failed' % (context.items_passed, context.items_failed))
@@ -74,149 +78,6 @@ def parse_book(context: Context):
 
     for entry_file in util.walk(entry_dir):
         parse_entry(context, entry_dir, entry_file)
-
-    context.sort()
-
-    # Main Page
-    with open(util.prepare(context.output_dir, 'index.html'), 'w', encoding='utf-8') as f:
-        f.write(PREFIX.format(
-            title=context.translate(I18n.TITLE),
-            text_index=context.translate(I18n.INDEX),
-            text_contents=context.translate(I18n.CONTENTS),
-            text_version=context.translate(I18n.VERSION),
-            text_api_docs=context.translate(I18n.API_DOCS),
-            text_github=context.translate(I18n.GITHUB),
-            text_discord=context.translate(I18n.DISCORD),
-            current_lang=context.translate(I18n.LANGUAGE_NAME % context.lang),
-            langs='\n'.join([
-                '<a href="../%s/index.html" class="dropdown-item">%s</a>' % (l, context.translate(I18n.LANGUAGE_NAME % l)) for l in versions.LANGUAGES
-            ]),
-            index='#',
-            style='../style.css',
-            tfc_version=versions.VERSION,
-            location='<a class="text-muted" href="#">%s</a>' % context.translate(I18n.INDEX),
-            contents='\n'.join([
-                '<li><a class="text-muted" href="./%s/index.html">%s</a></li>' % (cat_id, cat.name)
-                for cat_id, cat in context.sorted_categories
-            ])
-        ))
-        f.write("""
-        <img class="d-block w-200 mx-auto img-fluid" src="../_images/splash.png" alt="TerraFirmaCraft Field Guide Splash Image">
-        <p>{text_home}</p>
-        <h4>{text_entries}</h4>
-        """.format(
-            text_home=context.translate(I18n.HOME),
-            text_entries=context.translate(I18n.CATEGORIES)
-        ))
-
-        for cat_id, cat in context.sorted_categories:
-            f.write("""
-            <div class="card">
-                <div class="card-header">
-                    <a href="%s/index.html">%s</a>
-                </div>
-                <div class="card-body">
-                    %s
-                </div>
-            </div>
-            """ % (
-                cat_id,
-                cat.name,
-                cat.description
-            ))
-
-        f.write(SUFFIX)
-
-    # Category Pages
-    for category_id, cat in context.sorted_categories:
-        with open(util.prepare(context.output_dir, category_id + '/index.html'), 'w', encoding='utf-8') as f:
-            f.write(PREFIX.format(
-                title=context.translate(I18n.TITLE),
-                text_index=context.translate(I18n.INDEX),
-                text_contents=context.translate(I18n.CONTENTS),
-                text_version=context.translate(I18n.VERSION),
-                text_api_docs=context.translate(I18n.API_DOCS),
-                text_github=context.translate(I18n.GITHUB),
-                text_discord=context.translate(I18n.DISCORD),
-                current_lang=context.translate(I18n.LANGUAGE_NAME % context.lang),
-                langs='\n'.join([
-                    '<a href="../../%s/%s/index.html" class="dropdown-item">%s</a>' % (l, category_id, context.translate(I18n.LANGUAGE_NAME % l)) for l in versions.LANGUAGES
-                ]),
-                index='../index.html',
-                style='../../style.css',
-                tfc_version=versions.VERSION,
-                location='<a class="text-muted" href="../index.html">%s</a> / <a class="text-muted" href="#">%s</a>' % (
-                    context.translate(I18n.INDEX),
-                    cat.name
-                ),
-                contents='\n'.join([
-                    '<li><a class="text-muted" href="../%s/index.html">%s</a></li>' % (cat_id, cat.name) + (
-                        ''
-                        if cat_id != category_id else
-                        '<ul class="list-unstyled push-right">%s</ul>' % '\n'.join([
-                            '<li><a class="text-muted" href="./%s.html">%s</a></li>' % (os.path.relpath(ent_id, cat_id), ent.name)
-                            for ent_id, ent in cat.sorted_entries 
-                        ])
-                    )
-                    for cat_id, cat in context.sorted_categories
-                ])
-            ))
-            f.write('<h4>%s</h4><p>%s</p><hr>' % (cat.name, cat.description))
-            f.write('<div class="card-columns">')
-
-            for entry_id, entry in cat.sorted_entries:
-                f.write("""
-                <div class="card">
-                    <div class="card-header">
-                        <a href="%s.html">%s</a>
-                    </div>
-                </div>
-                """ % (os.path.relpath(entry_id, category_id), entry.name))
-            
-            f.write('</div>')
-            f.write(SUFFIX)
-
-        # Entry Pages
-        for entry_id, entry in cat.sorted_entries:
-            with open(util.prepare(context.output_dir, entry_id + '.html'), 'w', encoding='utf-8') as f:
-                f.write(PREFIX.format(
-                    title=context.translate(I18n.TITLE),
-                    text_index=context.translate(I18n.INDEX),
-                    text_contents=context.translate(I18n.CONTENTS),
-                    text_version=context.translate(I18n.VERSION),
-                    text_api_docs=context.translate(I18n.API_DOCS),
-                    text_github=context.translate(I18n.GITHUB),
-                    text_discord=context.translate(I18n.DISCORD),
-                    current_lang=context.translate(I18n.LANGUAGE_NAME % context.lang),
-                    langs='\n'.join([
-                        '<a href="../../%s/%s.html" class="dropdown-item">%s</a>' % (l, entry_id, context.translate(I18n.LANGUAGE_NAME % l)) for l in versions.LANGUAGES
-                    ]),
-                    index='../index.html',
-                    style='../../style.css',
-                    tfc_version=versions.VERSION,
-                    location='<a class="text-muted" href="../index.html">%s</a> / <a class="text-muted" href="./index.html">%s</a> / <a class="text-muted" href="#">%s</a>' % (
-                        context.translate(I18n.INDEX),
-                        cat.name, 
-                        entry.name
-                    ),
-                    contents='\n'.join([
-                        '<li><a class="text-muted" href="../%s/index.html">%s</a>' % (cat_id, cat.name) + (
-                            '</li>'
-                            if cat_id != category_id else
-                            '<ul class="list-unstyled push-right">%s</ul>' % '\n'.join([
-                                '<li><a class="text-muted" href="./%s.html">%s</a></li>' % (os.path.relpath(ent_id, cat_id), ent.name)
-                                for ent_id, ent in cat.sorted_entries 
-                            ]) + '</li>'
-                        )
-                        for cat_id, cat in context.sorted_categories
-                    ])
-                ))
-                f.write('<h4>%s</h4><hr>' % (entry.name))
-
-                for line in entry.buffer:
-                    f.write(line)
-
-                f.write(SUFFIX)
 
 
 def parse_category(context: Context, category_dir: str, category_file: str):
@@ -257,6 +118,9 @@ def parse_entry(context: Context, entry_dir: str, entry_file: str):
 
     entry.sort = data['sortnum'] if 'sortnum' in data else -1
     entry.name = text_formatter.strip_vanilla_formatting(data['name'])
+    entry.id = entry_id
+    entry.rel_id = os.path.relpath(entry_id, category_id)
+
 
     for page in data['pages']:
         try:
@@ -271,7 +135,7 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
     page_type = data['type']
 
     if 'anchor' in data:
-        buffer.append('<div id="anchor-%s">' % data['anchor'])
+        buffer.append('<a class="anchor" id="%s"></a>' % data['anchor'])
 
     if page_type == 'patchouli:text':
         context.format_title(buffer, data)
@@ -433,85 +297,154 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
     else:
         LOG.warning('Unrecognized page type: %s' % page_type)
 
-    if 'anchor' in data:
-        buffer.append('</div>')
+
+# === Book HTML ===
 
 
-
-PREFIX = """
-<!DOCTYPE html>
-<html style="width:100%; height:100%; padding:0px; margin:0px;">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <meta charset="UTF-8">
+def build_book_html(context: Context):
     
-    <title>{title}</title>
-    
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/6fa482c6e2.js" crossorigin="anonymous"></script>
-
-    <!-- JQuery, Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="{style}">
-
-    <script type="text/javascript">
-        $(function () {{
-            $('[data-toggle="tooltip"]').tooltip()
-        }})
-    </script>
-</head>
-<body>
-
-<nav class="navbar navbar-expand-md fixed-top bg-dark">
-    <div class="navbar-header">
-        <a class="navbar-brand text-light" href="{index}">{title}</a>
-    </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbar-content">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{current_lang}</a>
-                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
-                    {langs}
+    # Main Page
+    util.write_html(context.output_dir, 'index.html', html=TEMPLATE.format(
+        title=context.translate(I18n.TITLE),
+        text_index=context.translate(I18n.INDEX),
+        text_contents=context.translate(I18n.CONTENTS),
+        text_version=context.translate(I18n.VERSION),
+        text_api_docs=context.translate(I18n.API_DOCS),
+        text_github=context.translate(I18n.GITHUB),
+        text_discord=context.translate(I18n.DISCORD),
+        current_lang=context.translate(I18n.LANGUAGE_NAME % context.lang),
+        langs='\n'.join([
+            '<a href="../%s/" class="dropdown-item">%s</a>' % (l, context.translate(I18n.LANGUAGE_NAME % l)) for l in versions.LANGUAGES
+        ]),
+        index='#',
+        style='../style.css',
+        tfc_version=versions.VERSION,
+        location='<a class="text-muted" href="#">%s</a>' % context.translate(I18n.INDEX),
+        contents='\n'.join([
+            '<li><a class="text-muted" href="./%s/">%s</a></li>' % (cat_id, cat.name)
+            for cat_id, cat in context.sorted_categories
+        ]),
+        page_content="""
+            <img class="d-block w-200 mx-auto img-fluid" src="../_images/splash.png" alt="TerraFirmaCraft Field Guide Splash Image">
+            <p>{text_home}</p>
+            <h4>{text_entries}</h4>
+        """.format(
+            text_home=context.translate(I18n.HOME),
+            text_entries=context.translate(I18n.CATEGORIES)
+        ) + '\n'.join(
+            """
+            <div class="card">
+                <div class="card-header">
+                    <a href="%s.html">%s</a>
                 </div>
-            </li>
-            <li class="nav-item active"><a class="nav-link text-light" href="{index}">{text_index}</a></li>
-            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> {text_api_docs}</a></li>
-            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fa fa-github"></i> {text_github}</a></li>
-            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> {text_discord}</a></li>
-            <li class="nav-item"><span class="nav-link text-light" href="#">{text_version} {tfc_version}</span></li>
-        </ul>
-    </div>
-</nav>
-<div class="container-fluid" style="margin-top:50px">
-    <div class="row">
-        <div class="col-md-2 py-1">
-            <div class="sticky-top" style="top: 70px">
-                <h4>{text_contents}</h4>
-                <ul class="list-unstyled">
-                    {contents}
-                </ul>
-            </div>
-        </div>
-        <div class="col-md-9 py-3">
-            <p><em>{location}</em></p>
-"""
+                <div class="card-body">
+                    %s
+            """ % (
+                cat_id,
+                cat.name,
+                cat.description
+            )
+            for cat_id, cat in context.sorted_categories
+        )
+    ))
 
-SUFFIX = """
-        </div>
-    </div>
-</div>
-</body>
-</html>
-"""
+    # Category Pages
+    for category_id, cat in context.sorted_categories:
+        util.write_html(context.output_dir, category_id, 'index.html', html=TEMPLATE.format(
+            title=context.translate(I18n.TITLE),
+            text_index=context.translate(I18n.INDEX),
+            text_contents=context.translate(I18n.CONTENTS),
+            text_version=context.translate(I18n.VERSION),
+            text_api_docs=context.translate(I18n.API_DOCS),
+            text_github=context.translate(I18n.GITHUB),
+            text_discord=context.translate(I18n.DISCORD),
+            current_lang=context.translate(I18n.LANGUAGE_NAME % context.lang),
+            langs='\n'.join([
+                '<a href="../../%s/%s/" class="dropdown-item">%s</a>' % (l, category_id, context.translate(I18n.LANGUAGE_NAME % l)) for l in versions.LANGUAGES
+            ]),
+            index='../',
+            style='../../style.css',
+            tfc_version=versions.VERSION,
+            location='<a class="text-muted" href="../">%s</a> / <a class="text-muted" href="#">%s</a>' % (
+                context.translate(I18n.INDEX),
+                cat.name
+            ),
+            contents='\n'.join([
+                '<li><a class="text-muted" href="../%s/">%s</a></li>' % (cat_id, cat.name) + (
+                    ''
+                    if cat_id != category_id else
+                    '<ul class="list-unstyled push-right">%s</ul>' % '\n'.join([
+                        '<li><a class="text-muted" href="./%s.html">%s</a></li>' % (os.path.relpath(ent_id, cat_id), ent.name)
+                        for ent_id, ent in cat.sorted_entries 
+                    ])
+                )
+                for cat_id, cat in context.sorted_categories
+            ]),
+            page_content="""
+                <h4>{category_name}</h4><p>{category_description}</p>
+                <hr>
+                <div class="card-columns">
+                    {category_listing}
+                </div>
+            """.format(
+                category_name=cat.name,
+                category_description=cat.description,
+                category_listing='\n'.join(
+                    """
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="%s.html">%s</a>
+                        </div>
+                    </div>
+                    """ % (entry.rel_id, entry.name)
+                    for _, entry in cat.sorted_entries
+                )
+            )
+        ))
+
+         # Entry Pages
+        for entry_id, entry in cat.sorted_entries:
+            util.write_html(context.output_dir, entry_id + '.html', html=TEMPLATE.format(
+                title=context.translate(I18n.TITLE),
+                text_index=context.translate(I18n.INDEX),
+                text_contents=context.translate(I18n.CONTENTS),
+                text_version=context.translate(I18n.VERSION),
+                text_api_docs=context.translate(I18n.API_DOCS),
+                text_github=context.translate(I18n.GITHUB),
+                text_discord=context.translate(I18n.DISCORD),
+                current_lang=context.translate(I18n.LANGUAGE_NAME % context.lang),
+                langs='\n'.join([
+                    '<a href="../../%s/%s.html" class="dropdown-item">%s</a>' % (l, entry_id, context.translate(I18n.LANGUAGE_NAME % l)) for l in versions.LANGUAGES
+                ]),
+                index='../',
+                style='../../style.css',
+                tfc_version=versions.VERSION,
+                location='<a class="text-muted" href="../">%s</a> / <a class="text-muted" href="./">%s</a> / <a class="text-muted" href="#">%s</a>' % (
+                    context.translate(I18n.INDEX),
+                    cat.name, 
+                    entry.name
+                ),
+                contents='\n'.join([
+                    '<li><a class="text-muted" href="../%s/">%s</a>' % (cat_id, cat.name) + (
+                        '</li>'
+                        if cat_id != category_id else
+                        '<ul class="list-unstyled push-right">%s</ul>' % '\n'.join([
+                            '<li><a class="text-muted" href="./%s.html">%s</a></li>' % (os.path.relpath(ent_id, cat_id), ent.name)
+                            for ent_id, ent in cat.sorted_entries 
+                        ]) + '</li>'
+                    )
+                    for cat_id, cat in context.sorted_categories
+                ]),
+                page_content="""
+                <h4>{entry_name}</h4>
+                <hr>
+                {inner_content}
+                """.format(
+                    entry_name=entry.name,
+                    inner_content=''.join(entry.buffer)
+                )
+            ))
+
 
 IMAGE_SINGLE = """
 <img class="d-block w-200 mx-auto img-fluid" src="{src}" alt="{text}">
