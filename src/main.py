@@ -335,10 +335,12 @@ def build_book_html(context: Context):
             """
             <div class="card">
                 <div class="card-header">
-                    <a href="%s.html">%s</a>
+                    <a href="%s/index.html">%s</a>
                 </div>
                 <div class="card-body">
                     %s
+                </div>
+            </div>
             """ % (
                 cat_id,
                 cat.name,
