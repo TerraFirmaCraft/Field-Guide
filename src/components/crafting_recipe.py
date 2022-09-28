@@ -39,6 +39,11 @@ def format_crafting_recipe_from_data(context: Context, buffer: List[str], identi
         util.require('stack' in data['result'], 'Advanced shaped crafting with complex modifiers: \'%s\'' % data['result'])
         data['result'] = data['result']['stack']  # Discard modifiers
         return format_crafting_recipe_from_data(context, buffer, identifier, data)
+    elif recipe_type == 'tfc:advanced_shapeless_crafting':
+        data['type'] = 'minecraft:crafting_shapeless'
+        util.require('stack' in data['result'], 'Advanced shapeless crafting with complex modifiers: \'%s\'' % data['result'])
+        data['result'] = data['result']['stack']  # Discard modifiers
+        return format_crafting_recipe_from_data(context, buffer, identifier, data)
     else:
         util.error('Unknown crafting recipe type: %s for recipe %s' % (recipe_type, identifier))
     
@@ -78,7 +83,7 @@ def format_crafting_recipe_from_data(context: Context, buffer: List[str], identi
             out_name,
             format_count(out_count),
              out_path
-        ))
+        ))        
 
 
 def format_ingredient(context: Context, data: Any) -> Tuple[str, str]:

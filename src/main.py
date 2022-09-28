@@ -51,7 +51,7 @@ def main():
 
     for lang in versions.LANGUAGES:
         if args.debug_only_en_us and lang != 'en_us':
-            LOG.debug('Skipping lang %s because --debug-only-en-us was present')
+            LOG.debug('Skipping lang %s because --debug-only-en-us was present' % lang)
             continue
         LOG.info('Language: %s' % lang)
         parse_book(context.with_lang(lang))

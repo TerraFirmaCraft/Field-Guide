@@ -42,14 +42,14 @@ class InternalError(Exception):
         self.reason = reason
         self.quiet = quiet
     
-    def warning(self):
-        if self.quiet:
+    def warning(self, loud: bool = False):
+        if self.quiet and not loud:
             LOG.debug(self.reason)
         else:
             LOG.warning(self.reason)
     
     def prefix(self, other_reason: str) -> 'InternalError':
-        return error('%s : %s' % (other_reason, self), self.quiet)
+        return InternalError('%s : %s' % (other_reason, self), self.quiet)
     
     def __repr__(self) -> str: return self.reason
     def __str__(self) -> str: return self.reason
