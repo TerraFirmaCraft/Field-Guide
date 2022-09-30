@@ -10,22 +10,22 @@ import util
 CACHE = {}
 
 
-def get_item_image(context: Context, item: str) -> Tuple[str, str]:
+def get_item_image(context: Context, item: str, placeholder: bool = True) -> Tuple[str, str]:
     """
     Loads an item image, based on a specific keyed representation of an item.
     The key may be an item ID ('foo:bar'), a tag ('#foo:bar'), or a csv list of item IDs ('foo:bar,foo:baz')
     Using a global cache, the image will be generated, and saved to the _images/ directory.
+    For items that aren't render-able (for various reasons), this will use a placeholder image.
     Returns:
         src : str = The path to the item image (for use in href="", or src="")
         name : str = The translated name of the item (if a single item), or a best guess (if a tag), or None (if csv)
     """
 
-    util.require('{' not in item, 'Item : Item with NBT : \'%s\'' % item, True)
-
     if item in CACHE:
         path, name, key = CACHE[item]
         if key is not None:
             try:
+                # Must re-translate the item each time, as the same image will be asked for in different localizations
                 name = context.translate(
                     'item.' + key,
                     'block.' + key
@@ -34,6 +34,8 @@ def get_item_image(context: Context, item: str) -> Tuple[str, str]:
                 e.warning()
         return path, name
     
+    util.require('{' not in item, 'Item : Item with NBT : \'%s\'' % item, True)
+
     name = None
     key = None  # A translation key, if this needs to be re-translated
 
@@ -46,21 +48,32 @@ def get_item_image(context: Context, item: str) -> Tuple[str, str]:
     else:
         items = [item]
     
-    # Create images for each item.
-    images = [create_item_image(context, i) for i in items]
-    
-    if len(images) == 1:
-        path = context.loader.save_image(context.next_id('item'), images[0])
+    if len(items) == 1:
         key = items[0].replace('/', '.').replace(':', '.')
         name = context.translate(
             'item.' + key,
             'block.' + key
         )
-    else:
-        path = context.loader.save_gif(context.next_id('item'), images)
+    
+    try:
+        # Create images for each item.
+        images = [create_item_image(context, i) for i in items]
+
+        if len(images) == 1:
+            path = context.loader.save_image(context.next_id('item'), images[0])
+        else:
+            path = context.loader.save_gif(context.next_id('item'), images)
+    except InternalError as e:
+        e.prefix('Item Image(s)').warning()
+
+        if placeholder:
+            # Fallback to using the placeholder image
+            path = '../../_images/placeholder_64.png'
+        else:
+            raise e
 
     CACHE[item] = path, name, key
-    return path, name
+    return path, name    
 
 
 def create_item_image(context: Context, item: str) -> Image.Image:

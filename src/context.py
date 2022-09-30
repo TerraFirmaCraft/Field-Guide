@@ -135,7 +135,6 @@ class Context:
     
     def format_recipe(self, buffer: List[str], data: Any, key: str = 'recipe'):
         if key in data:
-            self.recipes_failed += 1
             self.format_with_tooltip(buffer, '%s: <code>%s</code>' % (
                 self.translate(I18n.RECIPE),
                 data[key]

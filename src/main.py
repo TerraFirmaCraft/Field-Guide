@@ -184,7 +184,7 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
             crafting_recipe.format_crafting_recipe(context, buffer, data['recipe'])
             context.recipes_passed += 1
         except InternalError as e:
-            e.prefix('Recipe: \'%s\'' % data['recipe']).warning()
+            e.prefix('Recipe: \'%s\'' % data['recipe']).warning(True)
 
             # Fallback
             context.format_recipe(buffer, data)
@@ -195,7 +195,7 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
                 crafting_recipe.format_crafting_recipe(context, buffer, data['recipe2'])
                 context.recipes_passed += 1
         except InternalError as e:
-            e.prefix('Recipe: \'%s\'' % data['recipe2']).warning()
+            e.prefix('Recipe: \'%s\'' % data['recipe2']).warning(True)
 
             # Fallback
             context.format_recipe(buffer, data, 'recipe2')
@@ -205,7 +205,7 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
     elif page_type == 'patchouli:spotlight':
         # Item Images
         try:
-            item_src, item_name = item_loader.get_item_image(context, data['item'])
+            item_src, item_name = item_loader.get_item_image(context, data['item'], False)
             context.format_title_with_icon(buffer, item_src, item_name, data)
             context.items_passed += 1
         except InternalError as e:
@@ -261,7 +261,7 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
             misc_recipe.format_misc_recipe(context, buffer, data['recipe'])
             context.recipes_passed += 1
         except InternalError as e:
-            e.warning()
+            e.prefix('misc_recipe \'%s\'' % page_type).warning(True)
 
             # Fallback
             context.format_recipe(buffer, data)
@@ -290,7 +290,7 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
             ))
             context.recipes_passed += 1
         except InternalError as e:
-            e.warning()
+            e.warning(True)
             context.format_recipe(buffer, data)
             context.recipes_failed += 1
         context.format_text(buffer, data)
