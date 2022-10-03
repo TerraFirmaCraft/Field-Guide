@@ -6,6 +6,7 @@ from components import tag_loader, block_loader
 from util import InternalError
 
 import util
+import i18n
 
 CACHE = {}
 
@@ -40,8 +41,14 @@ def get_item_image(context: Context, item: str, placeholder: bool = True) -> Tup
     key = None  # A translation key, if this needs to be re-translated
 
     if item.startswith('#'):
-        # Guess the name based on the tag
-        name = item.split(':')[1].replace('_', ' ').replace('/', ', ').title()
+        try:
+            # Use a special translation key for the tag, if one exists.
+            name = context.translate(i18n.key('tag.%s' % item))
+        except InternalError as e:
+            e.prefix('Tag \'%s\'' % item).warning()
+
+            # Use a fallback name
+            name = item.split(':')[1].replace('_', ' ').replace('/', ', ').title()
         items = tag_loader.load_item_tag(context, item[1:])
     elif ',' in item:
         items = item.split(',')
