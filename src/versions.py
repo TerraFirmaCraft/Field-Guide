@@ -1,5 +1,5 @@
 
-VERSION = 'v2.1.9-beta'
+VERSION = 'v2.1.12-beta'
 MC_VERSION = '1.18.2'
 FORGE_VERSION = '40.1.73'
 LANGUAGES = ['en_us', 'ko_kr', 'zh_cn']
