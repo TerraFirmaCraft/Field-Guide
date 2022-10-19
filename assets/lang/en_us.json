@@ -35,7 +35,8 @@
     "tag.#forge:ingots/black_steel": "Black Steel Ingots",
     "tag.#forge:ingots/wrought_iron": "Wrought Iron Ingots",
     "tag.#forge:smooth_stone": "Smooth Stone",
-    "tag.#forge:stone": "Stone",    "tag.#forge:leather": "Leather",
+    "tag.#forge:stone": "Stone",
+    "tag.#forge:leather": "Leather",
     "tag.#forge:feathers": "Feathers",
     "tag.#tfc:mud": "Mud",
     "tag.#tfc:chisels": "Chisels",
@@ -48,5 +49,12 @@
     "tag.#tfc:foods/usable_in_sandwich": "Vegetables, Cooked Meat, or Dairy",
     "tag.#tfc:oak_logs": "Oak Logs",
     "tag.#tfc:saws": "Saws",
-    "tag.#tfc:high_quality_cloth": "High Quality Cloth"
+    "tag.#tfc:high_quality_cloth": "High Quality Cloth",
+    "tag.#tfc:compost_greens_low": "Poor Compost Greens",
+    "tag.#tfc:compost_greens": "Compost Greens",
+    "tag.#tfc:compost_greens_high": "Rich Compost Greens",
+    "tag.#tfc:compost_browns_low": "Poor Compost Browns",
+    "tag.#tfc:compost_browns": "Compost Browns",
+    "tag.#tfc:compost_browns_high": "Rich Compost Browns",
+    "tag.#tfc:compost_poisons": "Compost Poisons"
 }

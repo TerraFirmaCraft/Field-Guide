@@ -213,9 +213,10 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
             
             # Fallback
             context.format_title(buffer, data)
+            item_str = item_loader.decode_item(data['item'])
             items = '%s: <code>%s</code>' % (
-                context.translate(I18n.ITEMS) if ',' in data['item'] else context.translate(I18n.ITEM),
-                '</code>, <code>'.join(data['item'].split(','))
+                context.translate(I18n.ITEMS) if ',' in item_str else context.translate(I18n.ITEM),
+                '</code>, <code>'.join(item_str.split(','))
             )
             context.format_with_tooltip(buffer, items, context.translate(I18n.ITEM_ONLY_IN_GAME))
             context.items_failed += 1

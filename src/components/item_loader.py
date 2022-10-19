@@ -1,4 +1,4 @@
-from typing import Tuple
+from typing import Tuple, Mapping
 from PIL import Image
 
 from context import Context
@@ -11,6 +11,19 @@ import i18n
 CACHE = {}
 
 
+def decode_item(item: Mapping[str, str] | str) -> str:
+    """ Standardizes item/tag representations from {'item': 'foo'}, {'tag': 'foo'} to 'foo' and '#foo' """
+    if isinstance(item, str):
+        return item
+    if isinstance(item, dict):
+        if 'tag' in item:
+            return '#%s' % item['tag']
+        elif 'item' in item:
+            return item['item']
+        else:
+            util.error('Invalid format for an item: \'%s\'' % item)
+
+
 def get_item_image(context: Context, item: str, placeholder: bool = True) -> Tuple[str, str]:
     """
     Loads an item image, based on a specific keyed representation of an item.
@@ -21,6 +34,7 @@ def get_item_image(context: Context, item: str, placeholder: bool = True) -> Tup
         src : str = The path to the item image (for use in href="", or src="")
         name : str = The translated name of the item (if a single item), or a best guess (if a tag), or None (if csv)
     """
+    item = decode_item(item)
 
     if item in CACHE:
         path, name, key = CACHE[item]
