@@ -14,7 +14,10 @@ CACHE = {}
 def decode_item(item: Mapping[str, str] | str) -> str:
     """ Standardizes item/tag representations from {'item': 'foo'}, {'tag': 'foo'} to 'foo' and '#foo' """
     if isinstance(item, str):
-        return item
+        if item.startswith('tag:'):
+            return '#%s' % item[4:] 
+        else:
+            return item
     if isinstance(item, dict):
         if 'tag' in item:
             return '#%s' % item['tag']

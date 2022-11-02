@@ -39,13 +39,13 @@
     "tag.#forge:stone": "Stone",
     "tag.#forge:leather": "Leather",
     "tag.#forge:feathers": "Feathers",
+    "tag.#forge:string": "String",
     "tag.#tfc:mud": "Mud",
     "tag.#tfc:chisels": "Chisels",
     "tag.#tfc:mortar": "Mortar",
     "tag.#tfc:hammers": "Hammers",
     "tag.#tfc:lumber": "Lumber",
     "tag.#tfc:knives": "Knives",
-    "tag.#forge:string": "String",
     "tag.#tfc:fluxstone": "Flux Rocks",
     "tag.#tfc:foods/usable_in_sandwich": "Vegetables, Cooked Meat, or Dairy",
     "tag.#tfc:oak_logs": "Oak Logs",
@@ -57,5 +57,7 @@
     "tag.#tfc:compost_browns_low": "Poor Compost Browns",
     "tag.#tfc:compost_browns": "Compost Browns",
     "tag.#tfc:compost_browns_high": "Rich Compost Browns",
-    "tag.#tfc:compost_poisons": "Compost Poisons"
+    "tag.#tfc:compost_poisons": "Compost Poisons",
+    "tag.#tfc:gem_powders": "Gem Powders",
+    "tag.#tfc:barrels": "Barrels"
 }
