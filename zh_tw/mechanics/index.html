@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>群巒傳說 手冊</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/6fa482c6e2.js" crossorigin="anonymous"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../../style.css">
+
+    <script type="text/javascript">
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">群巒傳說 手冊</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">繁體中文(台灣)</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/mechanics/" class="dropdown-item">English</a>
+<a href="../../ko_kr/mechanics/" class="dropdown-item">한국어</a>
+<a href="../../zh_cn/mechanics/" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_tw/mechanics/" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">主頁</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fa fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item"><span class="nav-link text-light" href="#">版本 v2.2.3</span></li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>目錄</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">這個世界</a></li>
+<li><a class="text-muted" href="../getting_started/">新手入門</a></li>
+<li><a class="text-muted" href="../mechanics/">進階內容</a></li><ul class="list-unstyled push-right"><li><a class="text-muted" href="./advanced_building_materials.html">高階建築材料</a></li>
+<li><a class="text-muted" href="./animal_husbandry.html">畜牧業</a></li>
+<li><a class="text-muted" href="./anvils.html">砧</a></li>
+<li><a class="text-muted" href="./aqueducts.html">水渠</a></li>
+<li><a class="text-muted" href="./armor.html">盔甲</a></li>
+<li><a class="text-muted" href="./barrels.html">大桶</a></li>
+<li><a class="text-muted" href="./bellows.html">風箱</a></li>
+<li><a class="text-muted" href="./blast_furnace.html">建造高爐</a></li>
+<li><a class="text-muted" href="./bloomery.html">鍛鐵爐</a></li>
+<li><a class="text-muted" href="./bread.html">烤麵包</a></li>
+<li><a class="text-muted" href="./charcoal_forge.html">木炭爐</a></li>
+<li><a class="text-muted" href="./charcoal_pit.html">木炭坑</a></li>
+<li><a class="text-muted" href="./chisel.html">鑿子</a></li>
+<li><a class="text-muted" href="./crops.html">農作物</a></li>
+<li><a class="text-muted" href="./crucible.html">坩堝</a></li>
+<li><a class="text-muted" href="./dairy.html">乳製品</a></li>
+<li><a class="text-muted" href="./damage_types.html">傷害型別</a></li>
+<li><a class="text-muted" href="./decay.html">食物保鮮</a></li>
+<li><a class="text-muted" href="./fertilizers.html">堆肥</a></li>
+<li><a class="text-muted" href="./fire_clay.html">耐火粘土</a></li>
+<li><a class="text-muted" href="./fishing.html">釣魚</a></li>
+<li><a class="text-muted" href="./flux.html">助焊劑</a></li>
+<li><a class="text-muted" href="./gems.html">寶石</a></li>
+<li><a class="text-muted" href="./grill.html">篝火燒烤</a></li>
+<li><a class="text-muted" href="./heating.html">加熱</a></li>
+<li><a class="text-muted" href="./hydration.html">保持土壤溼潤</a></li>
+<li><a class="text-muted" href="./lamps.html">燈</a></li>
+<li><a class="text-muted" href="./leather_making.html">制皮術</a></li>
+<li><a class="text-muted" href="./lighting.html">光源</a></li>
+<li><a class="text-muted" href="./panning.html">淘金</a></li>
+<li><a class="text-muted" href="./pets.html">寵物</a></li>
+<li><a class="text-muted" href="./pot.html">篝火大鍋</a></li>
+<li><a class="text-muted" href="./powderkegs.html">火藥桶</a></li>
+<li><a class="text-muted" href="./prospecting.html">勘探</a></li>
+<li><a class="text-muted" href="./quern.html">手推磨</a></li>
+<li><a class="text-muted" href="./salad.html">沙拉</a></li>
+<li><a class="text-muted" href="./sandwiches.html">三明治</a></li>
+<li><a class="text-muted" href="./scribing_table.html">命名臺</a></li>
+<li><a class="text-muted" href="./sluices.html">洗礦槽</a></li>
+<li><a class="text-muted" href="./steel.html">鍊鋼</a></li>
+<li><a class="text-muted" href="./support_beams.html">支撐梁</a></li>
+<li><a class="text-muted" href="./weaving.html">札札弄機杼</a></li>
+<li><a class="text-muted" href="./wooden_buckets.html">木桶</a></li></ul>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">主頁</a> / <a class="text-muted" href="#">進階內容</a></em></p>
+            
+                <h4>進階內容</h4><p><p>科技樹的進階部分。從你的第一把鎬，一直到彩鋼。</p>
+</p>
+                <hr>
+                <div class="card-columns">
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="advanced_building_materials.html">高階建築材料</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="animal_husbandry.html">畜牧業</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="anvils.html">砧</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="aqueducts.html">水渠</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="armor.html">盔甲</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="barrels.html">大桶</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="bellows.html">風箱</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="blast_furnace.html">建造高爐</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="bloomery.html">鍛鐵爐</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="bread.html">烤麵包</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="charcoal_forge.html">木炭爐</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="charcoal_pit.html">木炭坑</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="chisel.html">鑿子</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="crops.html">農作物</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="crucible.html">坩堝</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="dairy.html">乳製品</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="damage_types.html">傷害型別</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="decay.html">食物保鮮</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="fertilizers.html">堆肥</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="fire_clay.html">耐火粘土</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="fishing.html">釣魚</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="flux.html">助焊劑</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="gems.html">寶石</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="grill.html">篝火燒烤</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="heating.html">加熱</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="hydration.html">保持土壤溼潤</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="lamps.html">燈</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="leather_making.html">制皮術</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="lighting.html">光源</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="panning.html">淘金</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="pets.html">寵物</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="pot.html">篝火大鍋</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="powderkegs.html">火藥桶</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="prospecting.html">勘探</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="quern.html">手推磨</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="salad.html">沙拉</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="sandwiches.html">三明治</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="scribing_table.html">命名臺</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="sluices.html">洗礦槽</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="steel.html">鍊鋼</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="support_beams.html">支撐梁</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="weaving.html">札札弄機杼</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="wooden_buckets.html">木桶</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            
+        </div>
+    </div>
+</div>
+</body>
+</html>

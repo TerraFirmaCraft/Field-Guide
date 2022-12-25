@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>群巒傳說 手冊</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/6fa482c6e2.js" crossorigin="anonymous"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../../style.css">
+
+    <script type="text/javascript">
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">群巒傳說 手冊</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">繁體中文(台灣)</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/getting_started/" class="dropdown-item">English</a>
+<a href="../../ko_kr/getting_started/" class="dropdown-item">한국어</a>
+<a href="../../zh_cn/getting_started/" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_tw/getting_started/" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">主頁</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fa fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item"><span class="nav-link text-light" href="#">版本 v2.2.3</span></li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>目錄</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">這個世界</a></li>
+<li><a class="text-muted" href="../getting_started/">新手入門</a></li><ul class="list-unstyled push-right"><li><a class="text-muted" href="./introduction.html">第一天</a></li>
+<li><a class="text-muted" href="./firepit.html">生火</a></li>
+<li><a class="text-muted" href="./pottery.html">製陶術</a></li>
+<li><a class="text-muted" href="./pit_kiln.html">坑窯</a></li>
+<li><a class="text-muted" href="./finding_ores.html">礦石、金屬和鑄造</a></li>
+<li><a class="text-muted" href="./primitive_alloys.html">原始合金</a></li>
+<li><a class="text-muted" href="./primitive_anvils.html">原始砧</a></li>
+<li><a class="text-muted" href="./building_materials.html">建築材料</a></li>
+<li><a class="text-muted" href="./a_place_to_sleep.html">如何過夜</a></li>
+<li><a class="text-muted" href="./size_and_weight.html">體積和重量</a></li>
+<li><a class="text-muted" href="./food_and_water.html">食物和水</a></li></ul>
+<li><a class="text-muted" href="../mechanics/">進階內容</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">主頁</a> / <a class="text-muted" href="#">新手入門</a></em></p>
+            
+                <h4>新手入門</h4><p><p>如何在群巒傳說的世界中生存下來。如何在渡過石器時代並獲得你的第一把鎬。</p>
+</p>
+                <hr>
+                <div class="card-columns">
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="introduction.html">第一天</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="firepit.html">生火</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="pottery.html">製陶術</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="pit_kiln.html">坑窯</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="finding_ores.html">礦石、金屬和鑄造</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="primitive_alloys.html">原始合金</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="primitive_anvils.html">原始砧</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="building_materials.html">建築材料</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="a_place_to_sleep.html">如何過夜</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="size_and_weight.html">體積和重量</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="food_and_water.html">食物和水</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            
+        </div>
+    </div>
+</div>
+</body>
+</html>

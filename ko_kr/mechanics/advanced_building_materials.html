@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft 도감</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/6fa482c6e2.js" crossorigin="anonymous"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../../style.css">
+
+    <script type="text/javascript">
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft 도감</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">한국어</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/mechanics/advanced_building_materials.html" class="dropdown-item">English</a>
+<a href="../../ko_kr/mechanics/advanced_building_materials.html" class="dropdown-item">한국어</a>
+<a href="../../zh_cn/mechanics/advanced_building_materials.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_tw/mechanics/advanced_building_materials.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">색인</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API 뮨서</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fa fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item"><span class="nav-link text-light" href="#">버전 v2.2.3</span></li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>목차</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">세계</a></li>
+<li><a class="text-muted" href="../getting_started/">시작하기</a></li>
+<li><a class="text-muted" href="../mechanics/">심화 기술</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./advanced_building_materials.html">발전된 재료</a></li>
+<li><a class="text-muted" href="./animal_husbandry.html">축산업</a></li>
+<li><a class="text-muted" href="./anvils.html">모루</a></li>
+<li><a class="text-muted" href="./aqueducts.html">Aqueducts</a></li>
+<li><a class="text-muted" href="./armor.html">Armor</a></li>
+<li><a class="text-muted" href="./barrels.html">통</a></li>
+<li><a class="text-muted" href="./bellows.html">풀무</a></li>
+<li><a class="text-muted" href="./blast_furnace.html">용광로</a></li>
+<li><a class="text-muted" href="./bloomery.html">괴철로</a></li>
+<li><a class="text-muted" href="./bread.html">빵</a></li>
+<li><a class="text-muted" href="./charcoal_forge.html">숯불 노</a></li>
+<li><a class="text-muted" href="./charcoal_pit.html">숯 구덩이</a></li>
+<li><a class="text-muted" href="./chisel.html">끌</a></li>
+<li><a class="text-muted" href="./crops.html">작물</a></li>
+<li><a class="text-muted" href="./crucible.html">도가니</a></li>
+<li><a class="text-muted" href="./dairy.html">유제품</a></li>
+<li><a class="text-muted" href="./damage_types.html">Damage Types</a></li>
+<li><a class="text-muted" href="./decay.html">음식 보존</a></li>
+<li><a class="text-muted" href="./fertilizers.html">비료</a></li>
+<li><a class="text-muted" href="./fire_clay.html">내화점토</a></li>
+<li><a class="text-muted" href="./fishing.html">낚시</a></li>
+<li><a class="text-muted" href="./flux.html">플럭스</a></li>
+<li><a class="text-muted" href="./gems.html">Gems</a></li>
+<li><a class="text-muted" href="./grill.html">모닥불과 석쇠</a></li>
+<li><a class="text-muted" href="./heating.html">가열하기</a></li>
+<li><a class="text-muted" href="./hydration.html">작물 수화</a></li>
+<li><a class="text-muted" href="./lamps.html">램프</a></li>
+<li><a class="text-muted" href="./leather_making.html">가죽 제작</a></li>
+<li><a class="text-muted" href="./lighting.html">Light Sources</a></li>
+<li><a class="text-muted" href="./panning.html">사금질</a></li>
+<li><a class="text-muted" href="./pets.html">Pets</a></li>
+<li><a class="text-muted" href="./pot.html">모닥불과 냄비</a></li>
+<li><a class="text-muted" href="./powderkegs.html">Powderkegs</a></li>
+<li><a class="text-muted" href="./prospecting.html">광물 탐색</a></li>
+<li><a class="text-muted" href="./quern.html">맷돌</a></li>
+<li><a class="text-muted" href="./salad.html">샐러드</a></li>
+<li><a class="text-muted" href="./sandwiches.html">샌드위치</a></li>
+<li><a class="text-muted" href="./scribing_table.html">필기대</a></li>
+<li><a class="text-muted" href="./sluices.html">Sluices</a></li>
+<li><a class="text-muted" href="./steel.html">강철</a></li>
+<li><a class="text-muted" href="./support_beams.html">지지대</a></li>
+<li><a class="text-muted" href="./weaving.html">직조</a></li>
+<li><a class="text-muted" href="./wooden_buckets.html">Wooden Buckets</a></li></ul></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">색인</a> / <a class="text-muted" href="./">심화 기술</a> / <a class="text-muted" href="#">발전된 재료</a></em></p>
+            
+                <h4>발전된 재료</h4>
+                <hr>
+                <p>In addition to the primitive <a href="../getting_started/building_materials.html">building materials</a> of the stone age, the acquisition of metal tools allows the construction of more advanced building materials</p>
+<h5>내용</h5>
+<p><br/>
+ 1. <a href="../mechanics/advanced_building_materials.html#alabaster">Alabaster</a><br/>
+ 2. <a href="../mechanics/advanced_building_materials.html#bricks_and_mortar">Bricks and Mortar</a><br/>
+</p>
+<a class="anchor" id="alabaster"></a><h5>석고 블록</h5>
+<p>Alabaster is a building block made from <a href="../the_world/ores_and_minerals.html#gypsum">Gypsum</a>. Alabaster can be made by directly crafting with <a href="../the_world/ores_and_minerals.html#gypsum">Gypsum</a>, however it can be made more efficiently by sealing some <a href="../the_world/ores_and_minerals.html#gypsum">Gypsum</a> with 100 mB of <span style="color:#490;">Limewater</span> in a barrel.</p>
+<h5>석고 벽돌</h5>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="석고" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item38.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="Chisels" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item70.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="석고 벽돌" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">4</p>
+                    <img src="../../_images/item69.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="석고 벽돌" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item69.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="회반죽" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item43.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-toggle="tooltip" title="석고 벽돌" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item69.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="회반죽" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item43.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-toggle="tooltip" title="석고 벽돌" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item69.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-toggle="tooltip" title="회반죽" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item43.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-toggle="tooltip" title="석고 벽돌" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item69.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-toggle="tooltip" title="회반죽" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item43.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-toggle="tooltip" title="석고 벽돌" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item69.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="석고 벽돌" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">4</p>
+                    <img src="../../_images/item71.png" />
+                </div>
+            </div>
+        </div>
+        <h5>석고 장식</h5>
+<p>Alabaster can be dyed in a <a href="../mechanics/barrels.html">Barrel</a> of dye into any color. Raw Alabaster blocks can also be <a href="../mechanics/chisel.html">chiseled</a> into <span style="color:#490;">Polished Alabaster</span> using the <span style="color:#490;">Smooth</span> chisel mode, or crafted into stairs, slabs, or walls.</p>
+<h5>Stairs and Slabs</h5>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="자홍색 석고 벽돌" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item72.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="자홍색 석고 벽돌" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item72.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-toggle="tooltip" title="자홍색 석고 벽돌" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item72.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-toggle="tooltip" title="자홍색 석고 벽돌" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item72.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-toggle="tooltip" title="자홍색 석고 벽돌" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item72.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-toggle="tooltip" title="자홍색 석고 벽돌" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item72.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="자홍색 석고 벽돌 계단" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">8</p>
+                    <img src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="윤나는 자홍색 석고" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item73.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="윤나는 자홍색 석고" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item73.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-toggle="tooltip" title="윤나는 자홍색 석고" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item73.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="윤나는 자홍색 석고 반 블록" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">6</p>
+                    <img src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <a class="anchor" id="bricks_and_mortar"></a><h5>Bricks and Mortar</h5>
+<p><span style="color:#490;">Stone Bricks</span> can be made using a <a href="../mechanics/chisel.html">Chisel</a> with some individual loose rocks. It then requires <span style="color:#490;">Mortar</span> in order to form a strong building block.<br/>
+<br/>
+Mortar can be made by adding <span style="color:#490;">Sand</span> to a barrel of <a href="../mechanics/barrels.html#limewater">Limewater</a>.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="편마암 돌멩이" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item75.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="Chisels" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item70.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="편마암 벽돌" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img src="../../_images/item74.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="편마암 벽돌" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item74.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="회반죽" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item43.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-toggle="tooltip" title="편마암 벽돌" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item74.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="회반죽" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item43.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-toggle="tooltip" title="편마암 벽돌" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item74.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-toggle="tooltip" title="회반죽" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item43.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-toggle="tooltip" title="편마암 벽돌" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item74.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-toggle="tooltip" title="회반죽" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item43.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-toggle="tooltip" title="편마암 벽돌" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item74.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="편마암 벽돌" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">4</p>
+                    <img src="../../_images/item76.png" />
+                </div>
+            </div>
+        </div>
+        <p>Other decorative stone blocks can also be made, such as both <span style="color:#490;">Cracked Bricks</span>, and <span style="color:#490;">Chiseled Stone</span>. <span style="color:#490;">Mossy</span> stone blocks can also be created by placing cobblestone or bricks underwater, near existing mossy bricks or cobblestone. The moss will start to spread to these nearby blocks.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="부드러운 편마암" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item78.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="Chisels" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item70.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="조각한 편마암" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img src="../../_images/item77.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="편마암 벽돌" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item76.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="Hammers" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item80.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="금이 간 편마암 벽돌" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img src="../../_images/item79.png" />
+                </div>
+            </div>
+        </div>
+        
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

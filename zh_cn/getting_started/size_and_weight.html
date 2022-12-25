@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>群峦传说 手册</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/6fa482c6e2.js" crossorigin="anonymous"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../../style.css">
+
+    <script type="text/javascript">
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">群峦传说 手册</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">简体中文(中国大陆)</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/getting_started/size_and_weight.html" class="dropdown-item">English</a>
+<a href="../../ko_kr/getting_started/size_and_weight.html" class="dropdown-item">한국어</a>
+<a href="../../zh_cn/getting_started/size_and_weight.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_tw/getting_started/size_and_weight.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">主页</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fa fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item"><span class="nav-link text-light" href="#">版本 v2.2.3</span></li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>目录</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">这个世界</a></li>
+<li><a class="text-muted" href="../getting_started/">新手入门</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./introduction.html">第一天</a></li>
+<li><a class="text-muted" href="./firepit.html">生火</a></li>
+<li><a class="text-muted" href="./pottery.html">制陶术</a></li>
+<li><a class="text-muted" href="./pit_kiln.html">坑窑</a></li>
+<li><a class="text-muted" href="./finding_ores.html">矿石、金属和铸造</a></li>
+<li><a class="text-muted" href="./primitive_alloys.html">原始合金</a></li>
+<li><a class="text-muted" href="./primitive_anvils.html">原始砧</a></li>
+<li><a class="text-muted" href="./building_materials.html">建筑材料</a></li>
+<li><a class="text-muted" href="./a_place_to_sleep.html">如何过夜</a></li>
+<li><a class="text-muted" href="./size_and_weight.html">体积和重量</a></li>
+<li><a class="text-muted" href="./food_and_water.html">食物和水</a></li></ul></li>
+<li><a class="text-muted" href="../mechanics/">进阶内容</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">主页</a> / <a class="text-muted" href="./">新手入门</a> / <a class="text-muted" href="#">体积和重量</a></em></p>
+            
+                <h4>体积和重量</h4>
+                <hr>
+                <p>每种物品都有其<span style="color:#490;">体积 ⇲ </span>和<span style="color:#490;">重量 ⚖</span> 。物品的体积和重量会显示在其<span style="color:#490;">工具提示</span>中，将鼠标悬停在物品上就能查看。</p>
+<h5>体积 ⇲</h5>
+<p>物品的体积决定了何种容器可以装得下这种物品。<br/>
+</p>
+<ul>
+	<li><span style="color:#490;">极小</span>的物品可以装在任何容器里。</li>
+	<li><span style="color:#490;">非常小</span>的物品可以装在任何容器里。</li>
+	<li>只有<span style="color:#490;">小</span>及以下的物品可以装在<a href="../mechanics/decay.html#small_vessels">小缸</a>里。</li>
+	<li>只有<span style="color:#490;">普通</span>及以下的物品可以装在<a href="../mechanics/decay.html#small_vessels">大缸</a>里。</li>
+</ul>
+<p></p>
+<ul>
+	<li>只有<span style="color:#490;">大</span>及以下的物品可以装在箱子里。</li>
+	<li><span style="color:#490;">非常大</span>的物品只能单独在<a href="../getting_started/pit_kiln.html">坑窑</a>中烧制。</li>
+	<li><span style="color:#490;">巨大</span>的物品不能装进任何普通容器中，而且携带它们会导致你负担过重。</li>
+</ul>
+<h5>重量 ⚖</h5>
+<p>物品的重量决定了它一组可堆叠的上限。<br/>
+</p>
+<ul>
+	<li><span style="color:#490;">非常轻</span>：64</li>
+	<li><span style="color:#490;">轻</span>：32</li>
+	<li><span style="color:#490;">中等</span>：16</li>
+	<li><span style="color:#490;">重</span>：4</li>
+	<li><span style="color:#490;">非常重</span>：1</li>
+</ul><p><br/>
+大部分物品都属于<span style="color:#490;">非常轻</span>的类别。方块一般都是<span style="color:#490;">中等</span>重量。</p>
+<p>当你带着<span style="color:#490;">巨大</span>又<span style="color:#490;">非常重</span>的物品时, 你会<span style="color:#490;">负担过重</span>. 只带一件<span style="color:#490;">巨大, 非常重</span>的物品会导致你疲惫, 同时饥饿值消耗的更快. 如果带两件以上, 就会导致你进入<span style="color:#490;">负担过重</span>状态, 导致行动极其缓慢.</p>
+<a class="anchor" id="overburdening"></a><h5>负担过重</h5>
+<p>会导致负担过重的物品有<span style="color:#490;">砧</span>, <span style="color:#490;">密封的大桶</span>, 装有物品的<span style="color:#490;">坩埚</span><br/>
+<br/>
+提示: <a href="../mechanics/animal_husbandry.html#horses">马</a>也会负担过重.</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>群峦传说 手册</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/6fa482c6e2.js" crossorigin="anonymous"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../../style.css">
+
+    <script type="text/javascript">
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">群峦传说 手册</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">简体中文(中国大陆)</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/mechanics/animal_husbandry.html" class="dropdown-item">English</a>
+<a href="../../ko_kr/mechanics/animal_husbandry.html" class="dropdown-item">한국어</a>
+<a href="../../zh_cn/mechanics/animal_husbandry.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_tw/mechanics/animal_husbandry.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">主页</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fa fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item"><span class="nav-link text-light" href="#">版本 v2.2.3</span></li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>目录</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">这个世界</a></li>
+<li><a class="text-muted" href="../getting_started/">新手入门</a></li>
+<li><a class="text-muted" href="../mechanics/">进阶内容</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./advanced_building_materials.html">高级建筑材料</a></li>
+<li><a class="text-muted" href="./animal_husbandry.html">畜牧业</a></li>
+<li><a class="text-muted" href="./anvils.html">砧</a></li>
+<li><a class="text-muted" href="./aqueducts.html">水渠</a></li>
+<li><a class="text-muted" href="./armor.html">盔甲</a></li>
+<li><a class="text-muted" href="./barrels.html">大桶</a></li>
+<li><a class="text-muted" href="./bellows.html">风箱</a></li>
+<li><a class="text-muted" href="./blast_furnace.html">建造高炉</a></li>
+<li><a class="text-muted" href="./bloomery.html">锻铁炉</a></li>
+<li><a class="text-muted" href="./bread.html">烤面包</a></li>
+<li><a class="text-muted" href="./charcoal_forge.html">木炭炉</a></li>
+<li><a class="text-muted" href="./charcoal_pit.html">木炭坑</a></li>
+<li><a class="text-muted" href="./chisel.html">凿子</a></li>
+<li><a class="text-muted" href="./crops.html">农作物</a></li>
+<li><a class="text-muted" href="./crucible.html">坩埚</a></li>
+<li><a class="text-muted" href="./dairy.html">乳制品</a></li>
+<li><a class="text-muted" href="./damage_types.html">伤害类型</a></li>
+<li><a class="text-muted" href="./decay.html">食物保鲜</a></li>
+<li><a class="text-muted" href="./fertilizers.html">堆肥</a></li>
+<li><a class="text-muted" href="./fire_clay.html">耐火粘土</a></li>
+<li><a class="text-muted" href="./fishing.html">钓鱼</a></li>
+<li><a class="text-muted" href="./flux.html">助焊剂</a></li>
+<li><a class="text-muted" href="./gems.html">宝石</a></li>
+<li><a class="text-muted" href="./grill.html">篝火烧烤</a></li>
+<li><a class="text-muted" href="./heating.html">加热</a></li>
+<li><a class="text-muted" href="./hydration.html">保持土壤湿润</a></li>
+<li><a class="text-muted" href="./lamps.html">灯</a></li>
+<li><a class="text-muted" href="./leather_making.html">制皮术</a></li>
+<li><a class="text-muted" href="./lighting.html">光源</a></li>
+<li><a class="text-muted" href="./panning.html">淘金</a></li>
+<li><a class="text-muted" href="./pets.html">宠物</a></li>
+<li><a class="text-muted" href="./pot.html">篝火大锅</a></li>
+<li><a class="text-muted" href="./powderkegs.html">火药桶</a></li>
+<li><a class="text-muted" href="./prospecting.html">勘探</a></li>
+<li><a class="text-muted" href="./quern.html">手推磨</a></li>
+<li><a class="text-muted" href="./salad.html">沙拉</a></li>
+<li><a class="text-muted" href="./sandwiches.html">三明治</a></li>
+<li><a class="text-muted" href="./scribing_table.html">命名台</a></li>
+<li><a class="text-muted" href="./sluices.html">洗矿槽</a></li>
+<li><a class="text-muted" href="./steel.html">炼钢</a></li>
+<li><a class="text-muted" href="./support_beams.html">支撑梁</a></li>
+<li><a class="text-muted" href="./weaving.html">札札弄机杼</a></li>
+<li><a class="text-muted" href="./wooden_buckets.html">木桶</a></li></ul></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">主页</a> / <a class="text-muted" href="./">进阶内容</a> / <a class="text-muted" href="#">畜牧业</a></em></p>
+            
+                <h4>畜牧业</h4>
+                <hr>
+                <p><span style="color:#490;">牲畜</span>是可以被玩家驯服和饲养的动物。牲畜可以是<span style="color:#490;">公的</span>或<span style="color:#490;">母的</span>。某些动物会有<span style="color:#490;">两性异形</span>的现象。例如，只有公猪会有獠牙。</p>
+<p>牲畜会逐渐<span style="color:#490;">衰老</span>。刚出生的幼崽不会产出资源，也不能繁殖。一段时间之后它们才会<span style="color:#490;">成年</span>。成年的牲畜可以提供蛋、奶等资源，也可以繁殖出新的幼崽。当繁殖或产出资源多次之后，牲畜有可能会衰老。衰老的动物只能作为肉用。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/image54.png" alt="tfc:textures/gui/book/tutorial/old_cow.png">
+<div style="text-align: center;"><p>这只牛太老了，不能繁殖。可以从它灰白的毛色和模糊的眼睛中看出。</p>
+</div><p>喂养牲畜可以提升与之的<span style="color:#490;">亲密度</span>。每种动物都有其喜爱的食物。手持食物对准牲畜按住<span style="color:#b0b;">Shift</span>的同时按<span style="color:#b0b;">右键</span>就可以喂养了。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/image55.png" alt="tfc:textures/gui/book/tutorial/unfamiliarized_pig.png">
+<div style="text-align: center;"><p>牲畜有一个<span style="color:#490;">亲密度</span>指标, 显示它们对您的熟悉程度. 按住<span style="color:#b0b;">Shift</span>并指向这个动物来查看亲密度.</p>
+</div>
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/image56.png" alt="tfc:textures/gui/book/tutorial/no_familiarity_decay_pig.png">
+<div style="text-align: center;"><p>如果不喂食, 亲密度每天都会减少一点. 但如果亲密度高到一定程度(出现一个白色轮廓的心), 亲密度就不会因此减少了.</p>
+</div>
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/image57.png" alt="tfc:textures/gui/book/tutorial/familiarity_limit_pig.png">
+<div style="text-align: center;"><p>成年牲畜无法达到100%的亲密度(也就是出现红色轮廓的心), 只有幼年牲畜可能达到100%的亲密度。</p>
+</div><a class="anchor" id="mammals"></a><p><span style="color:#490;">哺乳动物</span>是通过怀孕繁殖的牲畜。喂食一对亲密度超过 30% 的成年哺乳动物就会让它们开始……你懂的。之后雌性动物将会<span style="color:#490;">怀孕</span>。怀孕的动物会在几个月至一年之内产子。<br/>
+比如，<a href="../mechanics/animal_husbandry.html#pig">猪</a>就是哺乳动物。</p>
+<a class="anchor" id="wooly_animals"></a><p><span style="color:#490;">产毛动物</span>是<a href="../mechanics/animal_husbandry.html#mammals">哺乳动物</a>的一种。如果它们和你的亲密度足够高且已成年就可以<span style="color:#490;">剪毛</span>。<br/>
+<a href="../mechanics/animal_husbandry.html#sheep">绵羊</a>、<a href="../mechanics/animal_husbandry.html#alpaca">羊驼</a>和<a href="../mechanics/animal_husbandry.html#musk_ox">麝牛</a>都属于这一类动物。</p>
+<a class="anchor" id="dairy_animals"></a><p><span style="color:#490;">产奶动物</span>也是哺乳动物的一种。只要成年且亲密度足够，就可以用木桶点击雌性产奶动物来挤奶。<br/>
+<a href="../mechanics/animal_husbandry.html#goat">山羊</a>、<a href="../mechanics/animal_husbandry.html#cow">奶牛</a>和<a href="../mechanics/animal_husbandry.html#yak">牦牛</a>都属于这一类动物。</p>
+<a class="anchor" id="oviparous_animals"></a><h5>巢箱</h5>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="干草" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item12.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-toggle="tooltip" title="干草" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item12.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item46.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-toggle="tooltip" title="干草" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item12.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-toggle="tooltip" title="Lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item46.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-toggle="tooltip" title="Lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item46.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-toggle="tooltip" title="Lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item46.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-toggle="tooltip" title="Lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item46.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="巢箱" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#490;">卵生动物</span>不像<a href="../mechanics/animal_husbandry.html#mammals">哺乳动物</a>可以直接产下幼崽，而是通过产下并孵化<span style="color:#490;">蛋</span>来繁殖。它们只能在<span style="color:#490;">巢箱</span>中产卵。<br/>
+<a href="../mechanics/animal_husbandry.html#duck">鸭子</a>、<a href="../mechanics/animal_husbandry.html#quail">鹌鹑</a>和<a href="../mechanics/animal_husbandry.html#chicken">鸡</a>都属于这一类动物。</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-toggle="tooltip" title="鸡蛋" class="crafting-recipe-item-tooltip"></span>
+                
+                <img src="../../_images/item67.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-toggle="tooltip" title="煎蛋" class="crafting-recipe-item-tooltip"></span>
+                
+                <img src="../../_images/item68.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>热****</p>
+        </div>
+        <p><span style="color:#490;">蛋</span>可以煎来吃或煮来吃。雄性动物可以让雌性受精，使其产下的下一枚卵变为受精卵。受精卵会在其工具提示里显示它们还需要多久才能孵化。</p>
+<a class="anchor" id="horses"></a>
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/image58.png" alt="Recipe: tfc:leather_knapping/saddle">
+<p><span style="color:#490;">骑乘动物</span>是<a href="../mechanics/animal_husbandry.html#mammals">哺乳动物</a>的一种，可以在亲密度到达 15% 之后骑乘。</p>
+<p>骑乘动物需要用<span style="color:#490;">鞍</span>。鞍可以通过<span style="color:#490;">皮革塑形</span>制作。<a href="../mechanics/animal_husbandry.html#mule">骡</a>、<a href="../mechanics/animal_husbandry.html#donkey">驴</a>和<a href="../mechanics/animal_husbandry.html#horses">马</a>都属于这一类动物。<br/>
+<br/>
+接下来几页会展示所有可作为牲畜的动物。</p>
+<a class="anchor" id="pig"></a><h5>猪</h5>
+<p><span style="color:#490;">猪</span>会在<a href="../the_world/climate.html#temperature">温度</a>在 -10 到 35°C 之间、<a href="../the_world/climate.html#rainfall">降雨量</a>至少 200 毫米的温和森林中生成。它们是没有特殊功能的<a href="../mechanics/animal_husbandry.html#mammals">哺乳动物</a>。它们会吃任何食物（可以是腐烂的）。它们一胎能生产 1-10 个幼崽，怀孕 19 天，80 天成年。衰老前它们可以产仔 6 次。</p>
+<h5> </h5>
+<p>一只猪.</p>
+<a class="anchor" id="cow"></a><h5>牛</h5>
+<p><span style="color:#490;">牛</span>是一种会在<a href="../the_world/climate.html#temperature">温度</a>在 -10 和 35°C 之间、<a href="../the_world/climate.html#rainfall">降雨量</a>至少 250 毫米的大多数气候中生成的<a href="../mechanics/animal_husbandry.html#dairy_animals">产奶动物</a>。它们只吃<span style="color:#490;">谷物</span>（可以是腐烂的）。他们一胎能生产 1-2 个幼崽，怀孕 58 天，192 天成年。若从未挤过奶，衰老前它们可以产仔 13 次。若从未产过仔，衰老前它们可以挤奶 128 次，且每天都可挤奶。</p>
+<h5> </h5>
+<p>一只牛.</p>
+<a class="anchor" id="goat"></a><h5>山羊</h5>
+<p><span style="color:#490;">山羊</span>是一种会在<a href="../the_world/climate.html#temperature">温度</a>在 -12 到 25°C 之间、<a href="../the_world/climate.html#rainfall">降雨量</a>至少 300 毫米的温和的气候中生成的<a href="../mechanics/animal_husbandry.html#dairy_animals">产奶动物</a>。它们会吃<span style="color:#490;">谷物</span>、<span style="color:#490;">水果</span>和<span style="color:#490;">蔬菜</span>（可以是腐烂的）。他们一胎能生产 1-2 个幼崽，怀孕 32 天，96 天成年。若从未挤过奶，衰老前它们可以产仔 6 次。若从未产过仔，衰老前它们可以挤奶 60 次，且每三天可挤一次奶。</p>
+<h5> </h5>
+<p>一只山羊.</p>
+<a class="anchor" id="yak"></a><h5>牦牛</h5>
+<p><span style="color:#490;">牦牛</span>是一种会在<a href="../the_world/climate.html#temperature">温度</a>不超过 -11°C、<a href="../the_world/climate.html#rainfall">降雨量</a>至少 100 毫米的寒冷的气候中生成的<a href="../mechanics/animal_husbandry.html#dairy_animals">产奶动物</a>。它们只吃新鲜的<span style="color:#490;">谷物</span>。它们一胎只能产 1 个幼崽，怀孕 64 天，180 天成年。若从未挤过奶，衰老前它们可以产仔 23 次。若从未产过仔，衰老前它们可以挤奶 230 次，且每天都可挤奶。</p>
+<h5> </h5>
+<p>一只牦牛.</p>
+<a class="anchor" id="alpaca"></a><h5>羊驼</h5>
+<p><span style="color:#490;">羊驼</span>是一种会在<a href="../the_world/climate.html#temperature">温度</a>在 -8 到 20°C 之间、<a href="../the_world/climate.html#rainfall">降雨量</a>至少 250 毫米的温和的气候中生成的<a href="../mechanics/animal_husbandry.html#wooly_animals">产毛动物</a>。它们会吃<span style="color:#490;">谷物</span>和<span style="color:#490;">水果。他们一胎能生产 1-2 个幼崽，怀孕 36 天，98 天成年。若从未剪过毛，衰老前它们可以产仔 13 次。若从未产过仔，衰老前它们可以剪毛 180 次，且每 6 天长出一次羊毛。</span></p>
+<h5> </h5>
+<p>一只羊驼.</p>
+<a class="anchor" id="sheep"></a><h5>绵羊</h5>
+<p><span style="color:#490;">绵羊</span>是一种会在<a href="../the_world/climate.html#temperature">温度</a>在 0 到 35°C 之间、<a href="../the_world/climate.html#rainfall">降雨量</a> 70 到 300 毫米的较干燥的气候中生成的<a href="../mechanics/animal_husbandry.html#wooly_animals">产毛动物</a>。它们会吃<span style="color:#490;">谷物</span>。它们一胎能生产 1-2 个幼崽，怀孕 32 天，56 天成年。若从未剪过毛，衰老前它们可以产仔 6 次。若从未产过仔，衰老前它们可以剪毛 60 次，且每 9 天长出一次羊毛。</p>
+<h5> </h5>
+<p>一只绵羊.</p>
+<a class="anchor" id="musk_ox"></a><h5>麝牛</h5>
+<p><span style="color:#490;">麝牛</span>是一种会在<a href="../the_world/climate.html#temperature">温度</a>在 0 到 25°C 之间、<a href="../the_world/climate.html#rainfall">降雨量</a>至少 100 毫米的温和气候中生成的<a href="../mechanics/animal_husbandry.html#wooly_animals">产毛动物</a>。他们只吃<span style="color:#490;">谷物</span>。它们一胎只能生产 1 个幼崽，怀孕 64 天，168 天成年。若从未剪过毛，衰老前它们可以产仔 16 次。</p>
+<h5> </h5>
+<p>一只麝牛.</p>
+<a class="anchor" id="chicken"></a><h5>鸡</h5>
+<p><span style="color:#490;">鸡</span>是一种会在<a href="../the_world/climate.html#temperature">温度</a>不低于 14°C、<a href="../the_world/climate.html#rainfall">降雨量</a>至少 225 毫米的温暖的森林中生成的<a href="../mechanics/animal_husbandry.html#oviparous_animals">卵生动物</a>。它们会吃<span style="color:#490;">谷物</span>、<span style="color:#490;">水果</span>、<span style="color:#490;">蔬菜</span>和<span style="color:#490;">种子</span>（可以是腐烂的）。每 30 小时产一次卵，8 天孵化，24 天成年。衰老前可以产卵 100 次。</p>
+<h5> </h5>
+<p>一只鸡.</p>
+<a class="anchor" id="duck"></a><h5>鸭</h5>
+<p><span style="color:#490;">鸭</span>是一种会在<a href="../the_world/climate.html#temperature">温度</a>在 -25 到 30°C、<a href="../the_world/climate.html#rainfall">降雨量</a>至少 100 毫米的大多数平原中生成的<a href="../mechanics/animal_husbandry.html#oviparous_animals">卵生动物</a>。它们会吃<span style="color:#490;">谷物</span>、<span style="color:#490;">水果</span>、<span style="color:#490;">蔬菜</span>和<span style="color:#490;">种子</span>（可以是腐烂的）。每 32 小时产一次卵，8 天孵化，32 天成年。衰老前可以产卵 72 次。</p>
+<h5> </h5>
+<p>一只鸭.</p>
+<a class="anchor" id="quail"></a><h5>鹌鹑</h5>
+<p><span style="color:#490;">鹌鹑</span>是一种会在<a href="../the_world/climate.html#temperature">温度</a>在 -15 到 15°C、<a href="../the_world/climate.html#rainfall">降雨量</a>至少 200 毫米的较冷的气候中生成的<a href="../mechanics/animal_husbandry.html#oviparous_animals">卵生动物</a>。它们会吃<span style="color:#490;">谷物</span>、<span style="color:#490;">水果</span>、<span style="color:#490;">蔬菜</span>和<span style="color:#490;">种子</span>（可以是腐烂的）。每 28 小时产一次卵，8 天孵化， 22 天成年。衰老前可以产卵 48 次。</p>
+<h5> </h5>
+<p>一只鹌鹑.</p>
+<a class="anchor" id="donkey"></a><h5>驴</h5>
+<p><span style="color:#490;">驴</span>是一种会在<a href="../the_world/climate.html#temperature">温度</a>在至少 -15°C、<a href="../the_world/climate.html#rainfall">降雨量</a> 130 到 400mm 的潮湿的平原中生成的<a href="../mechanics/animal_husbandry.html#horses">骑乘动物</a>。可以在它们身上放置一个<span style="color:#490;">箱子</span>。它们会吃<span style="color:#490;">谷物</span>和<span style="color:#490;">水果</span>。它们一胎只能产 1 个幼崽，怀孕 19 天，80 天成年。衰老前它们可以产仔 6 次。</p>
+<h5> </h5>
+<p>一只驴.</p>
+<a class="anchor" id="mule"></a><h5>骡子</h5>
+<p><span style="color:#490;">骡子</span>是一种会在<a href="../the_world/climate.html#temperature">温度</a>在至少 -15°C、<a href="../the_world/climate.html#rainfall">降雨量</a>在 130 到 400mm 的平原中生成的<a href="../mechanics/animal_husbandry.html#horses">骑乘动物</a>。可以在它们身上放置一个<span style="color:#490;">箱子</span>。它们是<span style="color:#490;">马</span>和<span style="color:#490;">驴</span>杂交的产物，只有雄性，无法繁殖。他们吃<span style="color:#490;">谷物</span>和<span style="color:#490;">水果</span>。80 天成年。</p>
+<h5> </h5>
+<p>一只骡子.</p>
+<a class="anchor" id="horse"></a><h5>马</h5>
+<p><span style="color:#490;">马</span>是一种会在<a href="../the_world/climate.html#temperature">温度</a>在至少 -15°C、<a href="../the_world/climate.html#rainfall">降雨量</a>在 130 到 400 毫米的平原中生成的<a href="../mechanics/animal_husbandry.html#horses">骑乘动物</a>。它们会吃<span style="color:#490;">谷物</span>和<span style="color:#490;">水果</span>。它们一胎只能产 1 个幼崽，怀孕 19 天，80 天成年。衰老前它们可以产仔 6 次。</p>
+<h5> </h5>
+<p>一只马.</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

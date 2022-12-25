@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft 도감</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/6fa482c6e2.js" crossorigin="anonymous"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../../style.css">
+
+    <script type="text/javascript">
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft 도감</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">한국어</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/getting_started/introduction.html" class="dropdown-item">English</a>
+<a href="../../ko_kr/getting_started/introduction.html" class="dropdown-item">한국어</a>
+<a href="../../zh_cn/getting_started/introduction.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_tw/getting_started/introduction.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">색인</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API 뮨서</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fa fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item"><span class="nav-link text-light" href="#">버전 v2.2.3</span></li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>목차</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">세계</a></li>
+<li><a class="text-muted" href="../getting_started/">시작하기</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./introduction.html">소개</a></li>
+<li><a class="text-muted" href="./firepit.html">최초의 불</a></li>
+<li><a class="text-muted" href="./pottery.html">도자기</a></li>
+<li><a class="text-muted" href="./pit_kiln.html">구덩이 가마</a></li>
+<li><a class="text-muted" href="./finding_ores.html">광석, 금속 그리고 주조</a></li>
+<li><a class="text-muted" href="./primitive_alloys.html">기초 합금</a></li>
+<li><a class="text-muted" href="./primitive_anvils.html">기초적인 모루</a></li>
+<li><a class="text-muted" href="./building_materials.html">건축 블록</a></li>
+<li><a class="text-muted" href="./a_place_to_sleep.html">잠자리</a></li>
+<li><a class="text-muted" href="./size_and_weight.html">크기와 무게</a></li>
+<li><a class="text-muted" href="./food_and_water.html">음식과 물</a></li></ul></li>
+<li><a class="text-muted" href="../mechanics/">심화 기술</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">색인</a> / <a class="text-muted" href="./">시작하기</a> / <a class="text-muted" href="#">소개</a></em></p>
+            
+                <h4>소개</h4>
+                <hr>
+                <p>TerraFirmaCraft에서 당신이 처음으로 얻을 수 있는 것들은 막대기, 잔가지 그리고 돌멩이입니다. 이것들은 거의 모든 기후에서 바닥에 널브러진 채로 찾을 수 있습니다. <span style="color:#b0b;">오른쪽 버튼</span>을 누르거나 부수면 이 아이템들을 주워들 수 있습니다.</p>
+<h5>예시</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p>바닥에 흩어진 막대기와 돌멩이들.</p>
+<p>막대기는 바닥에서 줍는 것 외에도 나뭇잎을 맨손으로 부수어도 얻을 수 있습니다. 충분한 양의 돌과 막대기를 얻었다면, 돌을 <span style="color:#490;">뗄</span> 수 있습니다. 떼기는 돌 2개를 맞부딪쳐서 특정한 형태를 만드는 과정입니다. 돌을 떼려면 2개 이상의 돌을 손에 쥔 상태로 공기에 대고 <span style="color:#b0b;">오른쪽 버튼</span>을 누르세요. 그러면 <span style="color:#490;">떼기 인터페이스</span>가 열리게 됩니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/image15.png" alt="tfc:textures/gui/book/gui/rock_knapping.png">
+<div style="text-align: center;"><p>떼기 인터페이스.</p>
+</div><p>특정 아이템을 만들기 위해서는 사각형들을 지워서 특정 모양을 만들어야 합니다. 예를 들면, 칼 날을 만들기 위해서는 오른쪽의 모양을 만들면 됩니다.<br/>
+<br/>
+제작대와 같이, 패턴의 위치는 결과물과 관련이 없으며 특정 제작법으로는 여러 개의 결과물이 나올 수도 있습니다.</p>
+<a class="anchor" id="knife"></a>
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/image16.png" alt="Recipe: tfc:rock_knapping/knife_head_sedimentary">
+<p>여러 다양한 종류의 돌로 만들 수 있는 칼 날.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="돌 칼 머리" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item7.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Any Sticks" class="crafting-recipe-item-tooltip"></span>
+                    <img src="../../_images/item8.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="돌 칼" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img src="../../_images/item6.png" />
+                </div>
+            </div>
+        </div>
+        <p>All stone tool heads can be crafted with a stick or twig to assemble them into a tool.<br/>
+<br/>
+The stone knife can be used to harvest <span style="color:#490;">Straw</span> by breaking plants.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/image17.png" alt="Recipe: tfc:rock_knapping/axe_head_sedimentary">
+<p><span style="color:#490;">Axes</span> can be used to cut down entire trees, logs and leaves included. However, saplings and sticks will only be obtained if leaves were broken individually.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/image18.png" alt="Recipe: tfc:rock_knapping/shovel_head_sedimentary">
+<p><span style="color:#490;">Shovels</span> can be used to dig soil type blocks. They can also be used to create <span style="color:#490;">Paths</span> by <span style="color:#b0b;">using</span> them on <span style="color:#490;">Dirt</span> or <span style="color:#490;">Grass</span>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/image19.png" alt="Recipe: tfc:rock_knapping/hoe_head_sedimentary">
+<p><span style="color:#490;">Hoes</span> are useful tools for <a href="../mechanics/crops.html">Farming</a>, but they can also be used to cut down leaves and other plant matter.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/image20.png" alt="Recipe: tfc:rock_knapping/hammer_head_sedimentary">
+<p><span style="color:#490;">Hammers</span> can be used as <a href="../mechanics/damage_types.html">Crushing</a> weapons, but are more important tools used for <a href="../getting_started/primitive_anvils.html">Forging</a>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/image21.png" alt="Recipe: tfc:rock_knapping/javelin_head_sedimentary">
+<p>Finally, a <span style="color:#490;">Javelin</span> can be used as a primitive weapon, capable of being thrown at targets, or used as a <a href="../mechanics/damage_types.html">Piercing</a> weapon.</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>
