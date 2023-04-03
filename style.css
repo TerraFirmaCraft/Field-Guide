@@ -69,8 +69,8 @@ a.anchor {
     top: 36px;
     font-family: Minecraft;
     font-size: 30px;
-    color: #D0D0D0;
-	text-shadow: 2px 2px black, -1px -1px black;
+    color: black;
+	text-shadow: 2px 2px #D0D0D0, -1px -1px #D0D0D0;
     pointer-events: none;
 }
 
