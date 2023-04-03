@@ -35,7 +35,6 @@ jobs:
         ref: ${{ steps.version.outputs.version }}
         path: 'tfc'
     - name: Build
-      uses: actions/checkout@v3
       run: |
         python src/main.py --tfc-dir tfc --out-dir build --use-mcmeta --use-addons
         touch build/.nojekyll

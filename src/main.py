@@ -55,13 +55,11 @@ def main():
         mcmeta.load_cache()
     
     if use_addons:
-        os.makedirs('addons', exist_ok=True)
-        os.chdir('addons')
         for addon in versions.ADDONS:
             if not os.path.isdir('%s-%s' % (addon.mod_id, addon.version)):
                 LOG.info('Cloning %s/%s...' % (addon.user, addon.repo))
-                subprocess.call('git clone -b %s https://github.com/%s/%s %s-%s' % (addon.version, addon.user, addon.repo, addon.mod_id, addon.version))
-        os.chdir('..')
+                os.makedirs('addons/%s-%s' % (addon.mod_id, addon.version), exist_ok=True)
+                subprocess.call('git clone -b %s https://github.com/%s/%s addons/%s-%s' % (addon.version, addon.user, addon.repo, addon.mod_id, addon.version), shell=True)
 
     LOG.info('Generating docs...')
     LOG.debug('Running with:\n  tfc_dir = %s\n  out_dir = %s\n  langs = %s\n  version = %s' % (
