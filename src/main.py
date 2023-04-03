@@ -38,7 +38,7 @@ def main():
     out_dir = args.out_dir
     use_mcmeta = args.use_mcmeta
 
-    os.makedirs('out', exist_ok=True)
+    os.makedirs(out_dir, exist_ok=True)
     shutil.copy('style.css', '%s/style.css' % out_dir)
     shutil.copy('font.otf', '%s/font.otf' % out_dir)
     shutil.copy('assets/templates/redirect.html', '%s/index.html' % out_dir)
