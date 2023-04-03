@@ -42,7 +42,7 @@ def main():
     use_mcmeta = args.use_mcmeta
     use_addons = args.use_addons
 
-    os.makedirs(out_dir, exist_ok=True)
+    os.makedirs(util.path_join(out_dir, '_images'), exist_ok=True)
     shutil.copy('style.css', '%s/style.css' % out_dir)
     shutil.copy('font.otf', '%s/font.otf' % out_dir)
     shutil.copy('assets/templates/redirect.html', '%s/index.html' % out_dir)
