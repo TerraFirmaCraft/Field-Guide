@@ -81,6 +81,10 @@ def create_block_model_image(context: Context, block: str, model: Any) -> Image.
         overlay = context.loader.load_texture(model['textures']['overlay'])
         texture.paste(overlay, (0, 0), overlay)
         return create_block_model_projection(texture, texture, texture)
+    elif parent == 'minecraft:block/slab':
+        top = context.loader.load_texture(model['textures']['top'])
+        side = context.loader.load_texture(model['textures']['side'])
+        return create_slab_block_model_projection(texture, texture, top)
     else:
         util.error('Block Model : Unknown Parent \'%s\' : at \'%s\'' % (parent, block), True)
 
@@ -99,6 +103,30 @@ def create_block_model_projection(left: Image.Image, right: Image.Image, top: Im
     left.paste(top, (0, 0), top)
 
     return left
+
+def create_slab_block_model_projection(left: Image.Image, right: Image.Image, top: Image.Image) -> Image.Image:
+    # Shading
+    left = ImageEnhance.Brightness(left).enhance(0.85)
+    right = ImageEnhance.Brightness(right).enhance(0.6)
+    left = crop_retaining_position(left, 0, 8, 16, 16)
+    right = crop_retaining_position(right, 0, 8, 16, 16)
+
+    # (Approx) Dimetric Projection
+    left = left.transform((256, 256), Image.Transform.PERSPECTIVE, LEFT, Image.Resampling.NEAREST)
+    right = right.transform((256, 256), Image.Transform.PERSPECTIVE, RIGHT, Image.Resampling.NEAREST)
+    top = top.transform((256, 256), Image.Transform.PERSPECTIVE, TOP_SLAB, Image.Resampling.NEAREST)
+
+    left.paste(right, (0, 0), right)
+    left.paste(top, (0, 0), top)
+
+    return left
+
+def crop_retaining_position(img: Image.Image, u1: int, v1: int, u2: int, v2: int):
+    base = img.copy()
+    base = base.crop((u1, v1, u2, v2))
+    img = Image.new('RGBA', (img.width, img.height), (0, 0, 0, 0))
+    img.paste(base, (u1, v1))
+    return img
 
 def perspective_transformation(*pa: Tuple[int, int]):
     """ Calculates coefficients for a perspective transformation to a specific quad
@@ -120,3 +148,4 @@ ROOT = ((0, 0), (16, 0), (16, 16), (0, 16))
 LEFT = perspective_transformation((13, 57), (128, 114), (128, 255), (13, 198))
 RIGHT = perspective_transformation((128, 114), (242, 58), (242, 197), (128, 255))
 TOP = perspective_transformation((13, 57), (127, 0), (242, 58), (128, 114))
+TOP_SLAB = perspective_transformation((13, 57 + 71), (127, 0 + 71), (242, 58 + 71), (128, 114 + 71))
