@@ -84,7 +84,7 @@ def create_block_model_image(context: Context, block: str, model: Any) -> Image.
     elif parent == 'minecraft:block/slab':
         top = context.loader.load_texture(model['textures']['top'])
         side = context.loader.load_texture(model['textures']['side'])
-        return create_slab_block_model_projection(texture, texture, top)
+        return create_slab_block_model_projection(side, side, top)
     else:
         util.error('Block Model : Unknown Parent \'%s\' : at \'%s\'' % (parent, block), True)
 
