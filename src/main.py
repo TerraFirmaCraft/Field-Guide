@@ -13,7 +13,7 @@ from context import Context
 from category import Category
 from entry import Entry
 from i18n import I18n
-from components import item_loader, block_loader, crafting_recipe, knapping_recipe, misc_recipe, mcmeta, text_formatter
+from components import item_loader, block_loader, crafting_recipe, knapping_recipe, misc_recipe, mcmeta, text_formatter, barrel_recipe
 
 
 BOOK_DIR = 'src/main/resources/data/tfc/patchouli_books/field_guide/'
@@ -278,9 +278,13 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
         
         context.format_text(buffer, data)
     elif page_type in (
-        'tfc:welding_recipe',
         'tfc:instant_barrel_recipe',
-        'tfc:sealed_barrel_recipe',
+        'tfc:sealed_barrel_recipe'
+    ):
+        barrel_recipe.format_barrel_recipe(context, buffer, data['recipe'])
+        context.recipes_passed += 1
+    elif page_type in (
+        'tfc:welding_recipe',
     ):
         context.format_recipe(buffer, data)
         context.format_text(buffer, data)

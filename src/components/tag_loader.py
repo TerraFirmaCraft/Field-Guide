@@ -2,6 +2,8 @@ from context import Context
 from loader import Loader
 from typing import List
 
+def load_fluid_tag(context: Context, identifier: str) -> List[str]:
+    return sort_tag_elements(context, identifier, Loader.load_fluid_tag)
 
 def load_item_tag(context: Context, identifier: str) -> List[str]:
     return sort_tag_elements(context, identifier, Loader.load_item_tag)

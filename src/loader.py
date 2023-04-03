@@ -52,6 +52,7 @@ class Loader:
 
     def load_block_tag(self, path: str) -> Any: return self.load_resource(path, 'tags/blocks', 'data', '.json', json_reader)
     def load_item_tag(self, path: str) -> Any: return self.load_resource(path, 'tags/items', 'data', '.json', json_reader)
+    def load_fluid_tag(self, path: str) -> Any: return self.load_resource(path, 'tags/fluids', 'data', '.json', json_reader)
 
     def load_lang(self, path: str, source: str) -> Any: return self.load_resource(source + ':' + path, 'lang', 'assets', '.json', json_reader, source)
 

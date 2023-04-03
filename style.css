@@ -88,6 +88,11 @@ a.anchor {
 .misc-recipe-pos-in  { position: absolute; left: 20px;  top: 24px; }
 .misc-recipe-pos-out { position: absolute; left: 308px; top: 24px; }
 
+.two-recipe-pos-1 {position: absolute; left: 24px; top: 24px; }
+.two-recipe-pos-2 {position: absolute; left: 122px; top: 24px; }
+.two-recipe-pos-3 {position: absolute; left: 412px; top: 24px; }
+.two-recipe-pos-4 {position: absolute; left: 510px; top: 24px; }
+
 /* Text formatting for temperatures in heat recipes and other tooltips */
 
 .minecraft-text {
