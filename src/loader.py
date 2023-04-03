@@ -24,7 +24,7 @@ class Loader:
             self.domains += ['forge', 'minecraft']
         if use_addons:
             for addon in versions.ADDONS:
-                self.loaders.append((addon.mod_id, (addon.mod_id, 'forge', 'minecraft'), make_load_from_addon(addon)))
+                self.loaders.append((addon.mod_id, (addon.mod_id,), make_load_from_addon(addon)))
                 self.domains.append(addon.mod_id)
 
     
@@ -108,7 +108,7 @@ def json_reader(f):
 def make_load_from_addon(addon: versions.Addon):
     def load_from_addon(path: str, reader):
         try:
-            path = util.path_join('addons', '%s-%s' % (addon.mod_id, addon.version), 'src/main/resources', path)
+            path = util.path_join('addons', '%s-%s' % (addon.mod_id, addon.version), addon.resource_path, path)
             if path.endswith('.png'):
                 with open(path, 'rb') as f:
                     return reader(f)

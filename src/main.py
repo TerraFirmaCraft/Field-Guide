@@ -18,7 +18,6 @@ from components import item_loader, block_loader, crafting_recipe, knapping_reci
 
 
 BOOK_DIR = 'src/main/resources/data/%s/patchouli_books/field_guide/'
-ADDON_BOOK_DIR = 'addons/%s-%s/src/main/resources/data/%s/patchouli_books/field_guide/'
 TEMPLATE = util.load_html('default')
 
 
@@ -56,7 +55,7 @@ def main():
     
     if use_addons:
         for addon in versions.ADDONS:
-            if not os.path.isdir('%s-%s' % (addon.mod_id, addon.version)):
+            if not os.path.isdir('addons/%s-%s' % (addon.mod_id, addon.version)):
                 LOG.info('Cloning %s/%s...' % (addon.user, addon.repo))
                 os.makedirs('addons/%s-%s' % (addon.mod_id, addon.version), exist_ok=True)
                 subprocess.call('git clone -b %s https://github.com/%s/%s addons/%s-%s' % (addon.version, addon.user, addon.repo, addon.mod_id, addon.version), shell=True)
@@ -95,7 +94,7 @@ def parse_book(context: Context, use_addons: bool):
     
     if use_addons:
         for addon in versions.ADDONS:
-            addon_dir = util.path_join(ADDON_BOOK_DIR % (addon.mod_id, addon.version, addon.mod_id), context.lang, 'categories')
+            addon_dir = util.path_join(addon.book_dir(), context.lang, 'categories')
             for category_file in util.walk(addon_dir):
                 parse_category(context, addon_dir, category_file, is_addon=True)
 
@@ -106,7 +105,7 @@ def parse_book(context: Context, use_addons: bool):
     
     if use_addons:
         for addon in versions.ADDONS:
-            addon_dir = util.path_join(ADDON_BOOK_DIR % (addon.mod_id, addon.version, addon.mod_id), context.lang, 'entries')
+            addon_dir = util.path_join(addon.book_dir(), context.lang, 'entries')
             for entry_file in util.walk(addon_dir):
                 parse_entry(context, addon_dir, entry_file)
 
@@ -128,6 +127,7 @@ def parse_category(context: Context, category_dir: str, category_file: str, is_a
 
     if is_addon and not context.debug_i18n:
         category.name = context.translate(I18n.ADDON) % category.name
+        category.sort += 10000  # Addons go LAST
 
     context.categories[category_id] = category
 
