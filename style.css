@@ -66,10 +66,11 @@ a.anchor {
 .crafting-recipe-item-count {
     position: absolute;
     left: 52px;
-    top: 48px;
+    top: 40px;
     font-family: Minecraft;
     font-size: 30px;
-    color: #444;
+    color: #D0D0D0;
+	text-shadow: 2px 2px black;
     pointer-events: none;
 }
 
