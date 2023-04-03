@@ -1,6 +1,7 @@
 import os
 import json
 import util
+import shutil
 import logging
 import versions
 
@@ -36,6 +37,13 @@ def main():
     tfc_dir = args.tfc_dir
     out_dir = args.out_dir
     use_mcmeta = args.use_mcmeta
+
+    os.makedirs('out', exist_ok=True)
+    shutil.copy('style.css', '%s/style.css' % out_dir)
+    shutil.copy('font.otf', '%s/font.otf' % out_dir)
+    shutil.copy('assets/templates/redirect.html', '%s/index.html' % out_dir)
+    for tex in os.listdir('assets/textures'):
+        shutil.copy('assets/textures/%s' % tex, '%s/_images/%s' % (out_dir, tex))
 
     context = Context(tfc_dir, out_dir, use_mcmeta, args.debug_i18n)
 
