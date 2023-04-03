@@ -21,6 +21,7 @@ class I18n:
     ITEM = key('item')
     ITEMS = key('items')
     ITEM_ONLY_IN_GAME = key('item_only_in_game')
+    ADDON = key('addon')
 
     KEY_INVENTORY = key('key.inventory')
     KEY_ATTACK = key('key.attack')

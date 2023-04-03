@@ -53,10 +53,12 @@ class TextFormatter:
                 self.matching_tags('<a href="%s">' % key[2:], '</a>')
             elif key.startswith('l:'):
                 link = key[2:]
+                if ':' in link:  # Links from addons will have a namespace, but the namespace isn't relavant.
+                    link = link[link.index(':') + 1:]
                 link = link.replace('#', '.html#') if '#' in link else link + '.html'
                 self.matching_tags('<a href="../%s">' % link, '</a>')
             elif key == 'thing':
-                self.color_tags('#490')
+                self.color_tags('#3E8A00')  # Patchy uses #490, we darken it due to accessibility/contrast reasons
             elif key == 'item':
                 self.color_tags('#b0b')
             elif key.startswith('#'):

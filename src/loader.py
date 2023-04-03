@@ -5,11 +5,12 @@ from PIL import Image
 
 import json
 import util
+import versions
 
 
 class Loader:
 
-    def __init__(self, tfc_dir: str, output_dir: str, use_mcmeta: bool):
+    def __init__(self, tfc_dir: str, output_dir: str, use_mcmeta: bool, use_addons: bool):
         self.tfc_dir = tfc_dir
         self.output_dir = output_dir
 
@@ -21,6 +22,11 @@ class Loader:
                 ('minecraft', ('minecraft',), mcmeta.load_from_mc)
             ]
             self.domains += ['forge', 'minecraft']
+        if use_addons:
+            for addon in versions.ADDONS:
+                self.loaders.append((addon.mod_id, (addon.mod_id,), make_load_from_addon(addon)))
+                self.domains.append(addon.mod_id)
+
     
     def save_image(self, path: str, img: Image.Image) -> str:
         """ Saves an image to a location based on an identifier. Returns the relative path to that location. """
@@ -99,3 +105,17 @@ def image_reader(f):
 
 def json_reader(f):
     return json.load(f)
+
+def make_load_from_addon(addon: versions.Addon):
+    def load_from_addon(path: str, reader):
+        try:
+            path = util.path_join('addons', '%s-%s' % (addon.mod_id, addon.version), addon.resource_path, path)
+            if path.endswith('.png'):
+                with open(path, 'rb') as f:
+                    return reader(f)
+            else:
+                with open(path, 'r', encoding='utf-8') as f:
+                    return reader(f)
+        except OSError:
+            util.error('Reading \'%s\' from addon \'%s\'' % (path, addon.mod_id))
+    return load_from_addon

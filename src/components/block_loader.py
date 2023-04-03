@@ -36,6 +36,7 @@ def get_multi_block_image(context: Context, data: Any) -> str:
 
 
 def get_multi_block_images(context: Context, data: Any) -> Tuple[str, List[Image.Image]]:
+    util.require('pattern' in data, 'Multiblock : No \'pattern\' field', True)
     pattern = data['pattern']
     util.require(pattern == [['X'], ['0']] or pattern == [['X'], ['Y'], ['0']], 'Multiblock : Complex Pattern \'%s\'' % repr(pattern), True)
 

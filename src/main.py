@@ -4,6 +4,7 @@ import util
 import shutil
 import logging
 import versions
+import subprocess
 
 from typing import List, Any
 from argparse import ArgumentParser
@@ -16,7 +17,7 @@ from i18n import I18n
 from components import item_loader, block_loader, crafting_recipe, knapping_recipe, misc_recipe, mcmeta, text_formatter, barrel_recipe
 
 
-BOOK_DIR = 'src/main/resources/data/tfc/patchouli_books/field_guide/'
+BOOK_DIR = 'src/main/resources/data/%s/patchouli_books/field_guide/'
 TEMPLATE = util.load_html('default')
 
 
@@ -27,6 +28,7 @@ def main():
     parser.add_argument('--out-dir', type=str, dest='out_dir', default='out')
     parser.add_argument('--debug', action='store_true', dest='log_debug')
     parser.add_argument('--use-mcmeta', action='store_true', dest='use_mcmeta')
+    parser.add_argument('--use-addons', action='store_true', dest='use_addons', help='Download addons directly from source')
     parser.add_argument('--debug-i18n', action='store_true', dest='debug_i18n')
     parser.add_argument('--debug-only-en-us', action='store_true', dest='debug_only_en_us')
 
@@ -37,18 +39,26 @@ def main():
     tfc_dir = args.tfc_dir
     out_dir = args.out_dir
     use_mcmeta = args.use_mcmeta
+    use_addons = args.use_addons
 
-    os.makedirs('out', exist_ok=True)
+    os.makedirs(util.path_join(out_dir, '_images'), exist_ok=True)
     shutil.copy('style.css', '%s/style.css' % out_dir)
     shutil.copy('font.otf', '%s/font.otf' % out_dir)
     shutil.copy('assets/templates/redirect.html', '%s/index.html' % out_dir)
     for tex in os.listdir('assets/textures'):
         shutil.copy('assets/textures/%s' % tex, '%s/_images/%s' % (out_dir, tex))
 
-    context = Context(tfc_dir, out_dir, use_mcmeta, args.debug_i18n)
+    context = Context(tfc_dir, out_dir, use_mcmeta, use_addons, args.debug_i18n)
 
     if use_mcmeta:
         mcmeta.load_cache()
+    
+    if use_addons:
+        for addon in versions.ADDONS:
+            if not os.path.isdir('addons/%s-%s' % (addon.mod_id, addon.version)):
+                LOG.info('Cloning %s/%s...' % (addon.user, addon.repo))
+                os.makedirs('addons/%s-%s' % (addon.mod_id, addon.version), exist_ok=True)
+                subprocess.call('git clone -b %s https://github.com/%s/%s addons/%s-%s' % (addon.version, addon.user, addon.repo, addon.mod_id, addon.version), shell=True)
 
     LOG.info('Generating docs...')
     LOG.debug('Running with:\n  tfc_dir = %s\n  out_dir = %s\n  langs = %s\n  version = %s' % (
@@ -62,7 +72,7 @@ def main():
             LOG.debug('Skipping lang %s because --debug-only-en-us was present' % lang)
             continue
         LOG.info('Language: %s' % lang)
-        parse_book(context.with_lang(lang))
+        parse_book(context.with_lang(lang), use_addons)
     
         context.sort()
         build_book_html(context)
@@ -74,21 +84,33 @@ def main():
     LOG.info('  Total   : %d blocks / %d items / %d images' % (context.last_uid['block'], context.last_uid['item'], context.last_uid['image']))
 
 
-def parse_book(context: Context):
+def parse_book(context: Context, use_addons: bool):
 
-    book_dir = util.path_join(context.tfc_dir, BOOK_DIR, context.lang)
+    book_dir = util.path_join(context.tfc_dir, BOOK_DIR % 'tfc', context.lang)
     category_dir = util.path_join(book_dir, 'categories')
 
     for category_file in util.walk(category_dir):
         parse_category(context, category_dir, category_file)
+    
+    if use_addons:
+        for addon in versions.ADDONS:
+            addon_dir = util.path_join(addon.book_dir(), context.lang, 'categories')
+            for category_file in util.walk(addon_dir):
+                parse_category(context, addon_dir, category_file, is_addon=True)
 
     entry_dir = util.path_join(book_dir, 'entries')
 
     for entry_file in util.walk(entry_dir):
         parse_entry(context, entry_dir, entry_file)
+    
+    if use_addons:
+        for addon in versions.ADDONS:
+            addon_dir = util.path_join(addon.book_dir(), context.lang, 'entries')
+            for entry_file in util.walk(addon_dir):
+                parse_entry(context, addon_dir, entry_file)
 
 
-def parse_category(context: Context, category_dir: str, category_file: str):
+def parse_category(context: Context, category_dir: str, category_file: str, is_addon: bool = False):
     category: Category = Category()
     category_id: str = os.path.relpath(category_file, category_dir)
     category_id = category_id[:category_id.index('.')]
@@ -102,6 +124,10 @@ def parse_category(context: Context, category_dir: str, category_file: str):
     category.name = text_formatter.strip_vanilla_formatting(data['name'])
     category.description = ''.join(desc)
     category.sort = data['sortnum']
+
+    if is_addon and not context.debug_i18n:
+        category.name = context.translate(I18n.ADDON) % category.name
+        category.sort += 10000  # Addons go LAST
 
     context.categories[category_id] = category
 
