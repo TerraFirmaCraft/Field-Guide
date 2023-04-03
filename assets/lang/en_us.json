@@ -15,6 +15,7 @@
     "item": "Item",
     "items": "Items",
     "item_only_in_game": "View the field guide in Minecraft to see this item.",
+    "addon": "(Addon) %s",
     "key.inventory": "E",
     "key.attack": "Left Click",
     "key.use": "Right Click",
