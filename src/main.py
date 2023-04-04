@@ -307,8 +307,13 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
         'tfc:instant_barrel_recipe',
         'tfc:sealed_barrel_recipe'
     ):
-        barrel_recipe.format_barrel_recipe(context, buffer, data['recipe'])
-        context.recipes_passed += 1
+        try:
+            barrel_recipe.format_barrel_recipe(context, buffer, data['recipe'])
+            context.recipes_passed += 1
+        except InternalError as e:
+            e.prefix('barrel recipe \'%s\'' % page_type).warning(True)
+            context.format_recipe(buffer, data)
+            context.recipes_failed += 1
     elif page_type in (
         'tfc:welding_recipe',
     ):

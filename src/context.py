@@ -36,6 +36,7 @@ class Context:
             'image': 0,
             'item': 0,
             'block': 0,
+            'fluid': 0,
         }
 
         self.recipes_failed = 0
