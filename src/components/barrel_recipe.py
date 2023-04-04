@@ -4,6 +4,7 @@ from context import Context
 from components import crafting_recipe, fluid_loader
 
 import util
+from i18n import I18n
 
 def format_barrel_recipe(context: Context, buffer: List[str], identifier: str):
     data = context.loader.load_recipe(identifier)
@@ -18,7 +19,7 @@ def format_barrel_recipe(context: Context, buffer: List[str], identifier: str):
 def format_barrel_recipe_from_data(context: Context, buffer: List[str], data: Any):
     in_path = in_name = out_path = out_name = f_out_name = f_out_path = f_in_name = f_in_path = None
     in_count = out_count = 0
-    input_fluid_div = input_item_div = output_fluid_div = output_item_div = """"""
+    input_fluid_div = input_item_div = output_fluid_div = output_item_div = duration = """"""
     
     if 'input_item' in data:
         in_path, in_name = crafting_recipe.format_ingredient(context, data['input_item']['ingredient'])
@@ -33,7 +34,13 @@ def format_barrel_recipe_from_data(context: Context, buffer: List[str], data: An
     if 'output_fluid' in data:
         f_out_path, f_out_name = fluid_loader.get_fluid_image(context, data['output_fluid'])
         output_fluid_div = make_icon(f_out_name, f_out_path, 4)
-    
+    if 'duration' in data:
+        duration = f"""
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>{context.translate(I18n.TICKS) % str(data['duration'])}</p>
+        </div>
+        """
+
     to_append = f"""
     <div class="d-flex align-items-center justify-content-center">
         <div class="crafting-recipe">
@@ -42,10 +49,12 @@ def format_barrel_recipe_from_data(context: Context, buffer: List[str], data: An
             {input_fluid_div}
             {output_item_div}
             {output_fluid_div}
+            {duration}
         </div>
     </div>
     """
     buffer.append(to_append)
+
 
 def make_icon(name, path, index: int, extra_bit: str = "") -> str:
     return f"""

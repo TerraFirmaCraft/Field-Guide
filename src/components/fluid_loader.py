@@ -13,16 +13,17 @@ CACHE = {}
 
 def decode_fluid(item: Mapping[str, str] | str) -> Tuple[str, int]:
     """ Assumes a FluidStackIngredient or FluidIngredient """
-    amount = -1
+    amount = 0
     ingredient = None
-    if isinstance(item, str):
+    
+    if isinstance(item, dict):
+        if 'ingredient' in item:
+            ingredient = decode_fluid_ingredient(item['ingredient'])
+        elif 'fluid' in item or 'tag' in item:
+            ingredient = decode_fluid_ingredient(item)
+        amount = 1000 if 'amount' not in item else item['amount']
+    elif isinstance(item, str):
         ingredient = item
-    elif 'ingredient' in item:
-        ingredient = decode_fluid_ingredient(item['ingredient'])
-        if 'amount' in item:
-            amount = item['amount']
-    elif 'fluid' in item or 'tag' in item:
-        ingredient = decode_fluid_ingredient(item)
     
     if ingredient is None:
         util.error('Invalid format for a fluid: \'%s\'' % item)
@@ -55,7 +56,7 @@ def get_fluid_image(context: Context, fluid_in: str, placeholder: bool = True) -
         if key is not None:
             try:
                 # Must re-translate the item each time, as the same image will be asked for in different localizations
-                name = context.translate('fluid.' + key)
+                name = context.translate('fluid.' + key, 'block.' + key)
             except InternalError as e:
                 e.warning()
         return path, name
@@ -79,7 +80,7 @@ def get_fluid_image(context: Context, fluid_in: str, placeholder: bool = True) -
     if len(fluids) == 1:
         key = fluids[0].replace('/', '.').replace(':', '.')
         try:
-            name = context.translate('fluid.' + key)
+            name = context.translate('fluid.' + key, 'block.' + key)
         except InternalError as e:
             e.warning()
 
