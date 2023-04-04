@@ -17,7 +17,7 @@ LANGUAGES = ['en_us', 'pt_br', 'ko_kr', 'uk_ua', 'zh_cn', 'zh_tw']
 
 ADDONS = [
     Addon('eerussianguy', 'firmalife', 'v1.2.8', 'firmalife', 'src/main/resources'),
-    Addon('gaelmare', 'waterflasks', '2.0.5', 'waterflasks', 'src/main/resources'),
+    Addon('gaelmare', 'waterflasks', '2.0.6', 'waterflasks', 'src/main/resources'),
     Addon('gaelmare', 'tfcgyresorehints', '1.4', 'tfcgyres_orehints', 'src'),
 ]
 
