@@ -108,7 +108,7 @@ def create_fluid_image(fluid: str) -> Image.Image:
     path = fluid
     if ':' in path:
         _, path = fluid.split(':', 1)
-    base = Image.open('assets/templates/fluid.png')
+    base = Image.open('assets/textures/fluid.png')
     base = base.resize((64, 64), resample=Image.Resampling.NEAREST)
     if path not in FLUID_COLORS:
         util.LOG.debug('Fluid %s has no color specified.' % path)
