@@ -41,27 +41,30 @@ def get_multi_block_images(context: Context, data: Any) -> Tuple[str, List[Image
     util.require(pattern == [['X'], ['0']] or pattern == [['X'], ['Y'], ['0']], 'Multiblock : Complex Pattern \'%s\'' % repr(pattern), True)
 
     block = data['mapping']['X']
+    crop = 'crop' in block and 'age=' in block
 
     if block.startswith('#'):
         blocks = tag_loader.load_block_tag(context, block[1:])
     else:
-        util.require('[' not in block, 'Multiblock : Block with Properties \'%s\'' % block, True)
+        util.require('[' not in block or crop, 'Multiblock : Block with Properties \'%s\'' % block, True)
         blocks = [block]
 
+    statekey = '' if not crop else 'age=0'
     return block, [
-        get_block_image(context, b)
+        get_block_image(context, b, statekey)
         for b in blocks
     ]
 
 
-def get_block_image(context: Context, block: str) -> Image.Image:
+def get_block_image(context: Context, block: str, blockstate_key: str = '') -> Image.Image:
 
-    state = context.loader.load_block_state(block)
+    blockstate_name = block.split('[')[0] if '[' in block else block
+    state = context.loader.load_block_state(blockstate_name)
     util.require('variants' in state, 'BlockState : Multipart \'%s\'' % block, True)
-    util.require('' in state['variants'], 'BlockState : Block with Properties \'%s\'' % block, True)
-    util.require('model' in state['variants'][''], 'BlockState : No Model \'%s\'' % block, True)
+    util.require(blockstate_key in state['variants'], 'BlockState : Block with Properties \'%s\', expected %s' % (block, blockstate_key), True)
+    util.require('model' in state['variants'][blockstate_key], 'BlockState : No Model \'%s\'' % block, True)
 
-    model = context.loader.load_model(state['variants']['']['model'])
+    model = context.loader.load_model(state['variants'][blockstate_key]['model'])
     
     return create_block_model_image(context, block, model)
 
@@ -77,6 +80,10 @@ def create_block_model_image(context: Context, block: str, model: Any) -> Image.
         side = context.loader.load_texture(model['textures']['side'])
         end = context.loader.load_texture(model['textures']['end'])
         return create_block_model_projection(side, side, end)
+    elif parent == 'minecraft:block/template_farmland':
+        side = context.loader.load_texture(model['textures']['dirt'])
+        end = context.loader.load_texture(model['textures']['end'])
+        return create_block_model_projection(side, side, end)
     elif parent == 'tfc:block/ore':
         texture = context.loader.load_texture(model['textures']['all'])
         overlay = context.loader.load_texture(model['textures']['overlay'])
@@ -86,6 +93,9 @@ def create_block_model_image(context: Context, block: str, model: Any) -> Image.
         top = context.loader.load_texture(model['textures']['top'])
         side = context.loader.load_texture(model['textures']['side'])
         return create_slab_block_model_projection(side, side, top)
+    elif parent == 'minecraft:block/crop':
+        crop = context.loader.load_texture(model['textures']['crop'])
+        return create_crop_model_projection(crop)
     else:
         util.error('Block Model : Unknown Parent \'%s\' : at \'%s\'' % (parent, block), True)
 
@@ -121,6 +131,32 @@ def create_slab_block_model_projection(left: Image.Image, right: Image.Image, to
     left.paste(top, (0, 0), top)
 
     return left
+
+def create_crop_model_projection(crop: Image.Image) -> Image.Image:
+    # Shading
+    left = ImageEnhance.Brightness(crop).enhance(0.85)
+    right = ImageEnhance.Brightness(crop).enhance(0.6)
+    r_end = crop_retaining_position(right, 0, 0, 5, 16)
+    l_end = crop_retaining_position(left, 13, 0, 16, 16)
+    
+    # (Approx) Dimetric Projection
+    left = left.transform((256, 256), Image.Transform.PERSPECTIVE, LEFT, Image.Resampling.NEAREST)
+    right = right.transform((256, 256), Image.Transform.PERSPECTIVE, RIGHT, Image.Resampling.NEAREST)
+    r_end_t = r_end.transform((256, 256), Image.Transform.PERSPECTIVE, RIGHT, Image.Resampling.NEAREST)
+    l_end_t = l_end.transform((256, 256), Image.Transform.PERSPECTIVE, LEFT, Image.Resampling.NEAREST)
+    
+    base = Image.new('RGBA', (256, 256), (0, 0, 0, 0))
+    
+    base.paste(left, (98 - 12, 14 - 56), left)
+    base.paste(right, (100 - 128, 100 - 114), right)
+    base.paste(right, (42 - 128, 72 - 114), right)
+    base.paste(left, (42 - 12, 42 - 56), left)
+    base.paste(r_end_t, (100 - 128, 100 - 114), r_end_t)
+    base.paste(r_end_t, (42 - 128, 72 - 114), r_end_t)
+    base.paste(l_end_t, (98 - 12, 14 - 56), l_end_t)
+    base.paste(l_end_t, (42 - 12, 42 - 56), l_end_t)
+    
+    return base
 
 def crop_retaining_position(img: Image.Image, u1: int, v1: int, u2: int, v2: int):
     base = img.copy()
