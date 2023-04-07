@@ -1,5 +1,5 @@
 from PIL import Image, ImageEnhance
-from typing import Tuple, List, Any
+from typing import Tuple, List, Any, Dict
 
 from context import Context
 from components import tag_loader
@@ -7,7 +7,7 @@ from components import tag_loader
 import util
 import numpy
 
-CACHE = {}
+CACHE: Dict[str, str] = {}
 
 
 def get_multi_block_image(context: Context, data: Any) -> str:
@@ -21,7 +21,7 @@ def get_multi_block_image(context: Context, data: Any) -> str:
     elif 'multiblock' in data:
         key, images = get_multi_block_images(context, data['multiblock'])
     else:
-        util.error('Multiblock : Custom Multiblock \'%s\'' % data['multiblock_id'], True)
+        return util.error('Multiblock : Custom Multiblock \'%s\'' % data['multiblock_id'], True)
     
     if key in CACHE:
         return CACHE[key]
@@ -37,36 +37,67 @@ def get_multi_block_image(context: Context, data: Any) -> str:
 
 def get_multi_block_images(context: Context, data: Any) -> Tuple[str, List[Image.Image]]:
     util.require('pattern' in data, 'Multiblock : No \'pattern\' field', True)
-    pattern = data['pattern']
-    util.require(pattern == [['X'], ['0']] or pattern == [['X'], ['Y'], ['0']], 'Multiblock : Complex Pattern \'%s\'' % repr(pattern), True)
+    util.require(data['pattern'] == [['X'], ['0']] or data['pattern'] == [['X'], ['Y'], ['0']], 'Multiblock : Complex Pattern \'%s\'' % repr(data['pattern']), True)
 
     block = data['mapping']['X']
-    crop = 'crop' in block and 'age=' in block
 
     if block.startswith('#'):
         blocks = tag_loader.load_block_tag(context, block[1:])
     else:
-        util.require('[' not in block or crop, 'Multiblock : Block with Properties \'%s\'' % block, True)
         blocks = [block]
 
-    statekey = '' if not crop else 'age=0'
     return block, [
-        get_block_image(context, b, statekey)
+        get_block_image(context, b)
         for b in blocks
     ]
 
 
-def get_block_image(context: Context, block: str, blockstate_key: str = '') -> Image.Image:
+def get_block_image(context: Context, block_state: str) -> Image.Image:
 
-    blockstate_name = block.split('[')[0] if '[' in block else block
-    state = context.loader.load_block_state(blockstate_name)
-    util.require('variants' in state, 'BlockState : Multipart \'%s\'' % block, True)
-    util.require(blockstate_key in state['variants'], 'BlockState : Block with Properties \'%s\', expected %s' % (block, blockstate_key), True)
-    util.require('model' in state['variants'][blockstate_key], 'BlockState : No Model \'%s\'' % block, True)
+    block, state = parse_block_state(block_state)
+    state_data = context.loader.load_block_state(block)
 
-    model = context.loader.load_model(state['variants'][blockstate_key]['model'])
+    util.require('variants' in state_data and isinstance(state_data['variants'], dict), 'BlockState : Must be a \'variants\' block state: \'%s\'' % block_state, True)
+
+    # This is not perfectly accurate since we are completely unaware of default property values, but it should be close enough
+    # The ones this fails for are un-renderable anyway due to having complex models
+    variants = state_data['variants']
+    default_model_data = None
+    for key, value in variants.items():
+        if default_model_data is None:
+            default_model_data = value
+        if parse_block_properties(key).items() <= state.items():  # If the variant properties are a subset of the target state properties
+            model_data = value
+            break
+    else:
+        # Assume a default state, i.e. with default properties
+        if state == {} and variants:
+            model_data = default_model_data
+        else:
+            util.error('BlockState: No matching state found for \'%s\' in \'%s\'' % (block_state, variants), True) 
+
+    util.require('model' in model_data, 'BlockState : No Model \'%s\'' % block, True)
+
+    model = context.loader.load_model(model_data['model'])
     
     return create_block_model_image(context, block, model)
+
+
+def parse_block_state(block_state: str) -> Tuple[str, Dict[str, str]]:
+    if '[' in block_state:
+        block, properties = block_state[:-1].split('[')
+        return block, parse_block_properties(properties)
+    else:
+        return block_state, {}  # Default variant
+
+def parse_block_properties(properties: str) -> Dict[str, str]:
+    # Format: namespace:path[key1=value1,key2=value2,...]
+    state = {}
+    if '=' in properties:  # Has at least one pair
+        for property in properties.split(','):
+            key, value = property.split('=')
+            state[key] = value
+    return state
 
 
 def create_block_model_image(context: Context, block: str, model: Any) -> Image.Image:
@@ -80,6 +111,10 @@ def create_block_model_image(context: Context, block: str, model: Any) -> Image.
         side = context.loader.load_texture(model['textures']['side'])
         end = context.loader.load_texture(model['textures']['end'])
         return create_block_model_projection(side, side, end)
+    elif parent == 'minecraft:block/cube_column_horizontal':
+        side = context.loader.load_texture(model['textures']['side'])
+        end = context.loader.load_texture(model['textures']['end'])
+        return create_block_model_projection(end, side, side, rotate=True)
     elif parent == 'minecraft:block/template_farmland':
         side = context.loader.load_texture(model['textures']['dirt'])
         end = context.loader.load_texture(model['textures']['end'])
@@ -100,10 +135,14 @@ def create_block_model_image(context: Context, block: str, model: Any) -> Image.
         util.error('Block Model : Unknown Parent \'%s\' : at \'%s\'' % (parent, block), True)
 
 
-def create_block_model_projection(left: Image.Image, right: Image.Image, top: Image.Image) -> Image.Image:
+def create_block_model_projection(left: Image.Image, right: Image.Image, top: Image.Image, rotate: bool = False) -> Image.Image:
     # Shading
     left = ImageEnhance.Brightness(left).enhance(0.85)
     right = ImageEnhance.Brightness(right).enhance(0.6)
+
+    if rotate:
+        right = right.rotate(90, Image.Resampling.NEAREST)
+        top = top.rotate(90, Image.Resampling.NEAREST)
 
     # (Approx) Dimetric Projection
     left = left.transform((256, 256), Image.Transform.PERSPECTIVE, LEFT, Image.Resampling.NEAREST)

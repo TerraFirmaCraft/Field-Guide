@@ -24,13 +24,13 @@ TEMPLATE = util.load_html('default')
 def main():
     # Arguments
     parser = ArgumentParser('TFC Field Guide')
-    parser.add_argument('--tfc-dir', type=str, dest='tfc_dir', default='../TerraFirmaCraft')
-    parser.add_argument('--out-dir', type=str, dest='out_dir', default='out')
-    parser.add_argument('--debug', action='store_true', dest='log_debug')
-    parser.add_argument('--use-mcmeta', action='store_true', dest='use_mcmeta')
+    parser.add_argument('--tfc-dir', type=str, dest='tfc_dir', default='../TerraFirmaCraft', help='The source TFC directory')
+    parser.add_argument('--out-dir', type=str, dest='out_dir', default='out', help='The output directory')
+    parser.add_argument('--debug', action='store_true', dest='log_debug', help='Enable debug logging')
+    parser.add_argument('--use-mcmeta', action='store_true', dest='use_mcmeta', help='Download Minecraft and Forge source')
     parser.add_argument('--use-addons', action='store_true', dest='use_addons', help='Download addons directly from source')
-    parser.add_argument('--debug-i18n', action='store_true', dest='debug_i18n')
-    parser.add_argument('--debug-only-en-us', action='store_true', dest='debug_only_en_us')
+    parser.add_argument('--debug-i18n', action='store_true', dest='debug_i18n', help='Replace all translated text with translation keys')
+    parser.add_argument('--debug-only-en-us', action='store_true', dest='debug_only_en_us', help='Only generate en_us (faster)')
 
     args = parser.parse_args()
 
