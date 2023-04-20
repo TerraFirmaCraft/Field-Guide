@@ -166,3 +166,19 @@ class Context:
         ref = self.loader.save_image(self.next_id('image'), img)
         IMAGE_CACHE[image] = ref
         return ref
+
+    def convert_icon(self, image: str) -> str:
+        if image in IMAGE_CACHE:
+            return IMAGE_CACHE[image]
+        
+        img = self.loader.load_explicit_texture(image)
+
+        width, height = img.size
+        assert width == 16 and height == 16
+
+        # Resize to be the same as items, for item-like icons
+        img = img.resize((64, 64), Image.Resampling.NEAREST)
+        ref = self.loader.save_image(self.next_id('image'), img)
+        IMAGE_CACHE[image] = ref
+        return ref
+

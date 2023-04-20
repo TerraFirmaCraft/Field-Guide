@@ -7,6 +7,8 @@ class Entry:
     name: str  # The localized name of this entry
     id: str  # The full name, <category>/<entry>
     rel_id: str  # Just the entry name, <entry>
+    icon: str
+    icon_name: str
 
     def __init__(self):
         self.buffer = []
@@ -14,6 +16,8 @@ class Entry:
         self.name = ''
         self.id = ''
         self.rel_id = ''
+        self.icon = ''
+        self.icon_name = ''
     
     def push(self, text: str):
         self.buffer.append(text)

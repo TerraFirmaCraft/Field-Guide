@@ -155,6 +155,12 @@ def parse_entry(context: Context, entry_dir: str, entry_file: str):
     entry.id = entry_id
     entry.rel_id = os.path.relpath(entry_id, category_id)
 
+    try:
+        item_src, item_name = item_loader.get_item_image(context, data['icon'], False)
+        entry.icon = item_src
+        entry.icon_name = item_name
+    except InternalError as e:
+        e.prefix('Entry: %s' % entry).warning(False)
 
     for page in data['pages']:
         try:
@@ -439,10 +445,10 @@ def build_book_html(context: Context):
                     """
                     <div class="card">
                         <div class="card-header">
-                            <a href="%s.html">%s</a>
+                            %s
                         </div>
                     </div>
-                    """ % (entry.rel_id, entry.name)
+                    """ % optional_icon_with_link(entry.rel_id, entry.name, entry.icon, entry.icon_name)
                     for _, entry in cat.sorted_entries
                 )
             )
@@ -486,10 +492,37 @@ def build_book_html(context: Context):
                 <hr>
                 {inner_content}
                 """.format(
-                    entry_name=entry.name,
+                    entry_name=optional_icon(entry.name, entry.icon, entry.icon_name),
                     inner_content=''.join(entry.buffer)
                 )
             ))
+
+def optional_icon(name: str, icon: str, icon_name: str, tag: str = 'h4') -> str:
+    if icon:
+        return """
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="%s">
+                <img src="%s" alt="%s" />
+            </span>
+            <%s>%s</%s>
+        </div>
+        """ % (icon_name, icon, name, tag, name, tag)
+    else:
+        return '<%s>%s</%s>' % (tag, name, tag)
+
+
+def optional_icon_with_link(link: str, name: str, icon: str, icon_name: str) -> str:
+    if icon:
+        return """
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="%s">
+                <img src="%s" alt="%s" />
+            </span>
+            <a href="%s.html">%s</a>
+        </div>
+        """ % (icon_name, icon, name, link, name)
+    else:
+        return '<a href="%s">%s</a>' % (link, name)
 
 
 IMAGE_SINGLE = """

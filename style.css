@@ -39,7 +39,7 @@ a.anchor {
     height: 32px;
 }
 
-.item-header h5 {
+.item-header a, .item-header h4, .item-header h5 {
     position: relative;
     top: 2px;
     left: 42px;

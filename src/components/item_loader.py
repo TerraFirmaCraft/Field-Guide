@@ -37,6 +37,10 @@ def get_item_image(context: Context, item: str, placeholder: bool = True) -> Tup
         src : str = The path to the item image (for use in href="", or src="")
         name : str = The translated name of the item (if a single item), or a best guess (if a tag), or None (if csv)
     """
+    if item.endswith('.png'):
+        # This is not an item image, it must be a image directly
+        return context.convert_icon(item), None
+
     item = decode_item(item)
 
     if item in CACHE:
