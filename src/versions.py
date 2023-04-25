@@ -10,13 +10,13 @@ class Addon(NamedTuple):
     def book_dir(self) -> str:
         return 'addons/%s-%s/%s/data/%s/patchouli_books/field_guide/' % (self.mod_id, self.version, self.resource_path, self.mod_id)
 
-VERSION = 'v2.2.15'
+VERSION = 'v2.2.16'
 MC_VERSION = '1.18.2'
 FORGE_VERSION = '40.1.73'
 LANGUAGES = ['en_us', 'pt_br', 'ko_kr', 'uk_ua', 'zh_cn', 'zh_tw']
 
 ADDONS = [
-    Addon('eerussianguy', 'firmalife', 'v1.2.8', 'firmalife', 'src/main/resources'),
+    Addon('eerussianguy', 'firmalife', 'v1.2.9', 'firmalife', 'src/main/resources'),
     Addon('gaelmare', 'waterflasks', '2.0.6', 'waterflasks', 'src/main/resources'),
     Addon('gaelmare', 'tfcgyresorehints', '1.4', 'tfcgyres_orehints', 'src'),
 ]
