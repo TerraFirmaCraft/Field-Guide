@@ -62,7 +62,7 @@ class Loader:
 
     def load_lang(self, path: str, source: str) -> Any: return self.load_resource(source + ':' + path, 'lang', 'assets', '.json', json_reader, source)
 
-    def load_explicit_texture(self, path: str) -> Image.Image: return self.load_resource(path, '', 'assets', '.png', image_reader, 'tfc')
+    def load_explicit_texture(self, path: str) -> Image.Image: return self.load_resource(path, '', 'assets', '.png', image_reader)
     def load_texture(self, path: str) -> Image.Image: return self.load_resource(path, 'textures', 'assets', '.png', image_reader)
     
     def load_resource(self, path: str, resource_type: str, resource_root: str, resource_suffix: str, reader, source: str = None) -> Any:
