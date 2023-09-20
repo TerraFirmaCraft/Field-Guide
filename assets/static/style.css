@@ -113,3 +113,8 @@ a.anchor {
     font-family: Minecraft;
     src: url("font.otf") format("opentype");
 }
+
+/* Font Awesome CSS */
+.fa-discord:before { content: "\f392" }
+.fa-github:before { content: "\f09b" }
+.fa-gears:before { content: "\f085" }

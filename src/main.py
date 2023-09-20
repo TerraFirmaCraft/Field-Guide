@@ -26,6 +26,7 @@ def main():
     parser = ArgumentParser('TFC Field Guide')
     parser.add_argument('--tfc-dir', type=str, dest='tfc_dir', default='../TerraFirmaCraft', help='The source TFC directory')
     parser.add_argument('--out-dir', type=str, dest='out_dir', default='out', help='The output directory')
+    parser.add_argument('--root-dir', type=str, dest='root_dir', default='', help='The root directory to fetch static assets from')
     parser.add_argument('--debug', action='store_true', dest='log_debug', help='Enable debug logging')
     parser.add_argument('--use-mcmeta', action='store_true', dest='use_mcmeta', help='Download Minecraft and Forge source')
     parser.add_argument('--use-addons', action='store_true', dest='use_addons', help='Download addons directly from source')
@@ -42,13 +43,11 @@ def main():
     use_addons = args.use_addons
 
     os.makedirs(util.path_join(out_dir, '_images'), exist_ok=True)
-    shutil.copy('style.css', '%s/style.css' % out_dir)
-    shutil.copy('font.otf', '%s/font.otf' % out_dir)
-    shutil.copy('assets/templates/redirect.html', '%s/index.html' % out_dir)
+    shutil.copytree('assets/static', '%s/static' % out_dir, dirs_exist_ok=True)
     for tex in os.listdir('assets/textures'):
         shutil.copy('assets/textures/%s' % tex, '%s/_images/%s' % (out_dir, tex))
 
-    context = Context(tfc_dir, out_dir, use_mcmeta, use_addons, args.debug_i18n)
+    context = Context(tfc_dir, out_dir, args.root_dir, use_mcmeta, use_addons, args.debug_i18n)
 
     if use_mcmeta:
         mcmeta.load_cache()
@@ -367,7 +366,7 @@ def build_book_html(context: Context):
             '<a href="../%s/" class="dropdown-item">%s</a>' % (l, context.translate(I18n.LANGUAGE_NAME % l)) for l in versions.LANGUAGES
         ]),
         index='#',
-        style='../style.css',
+        root=context.root_dir,
         tfc_version=versions.VERSION,
         location='<a class="text-muted" href="#">%s</a>' % context.translate(I18n.INDEX),
         contents='\n'.join([
@@ -415,7 +414,7 @@ def build_book_html(context: Context):
                 '<a href="../../%s/%s/" class="dropdown-item">%s</a>' % (l, category_id, context.translate(I18n.LANGUAGE_NAME % l)) for l in versions.LANGUAGES
             ]),
             index='../',
-            style='../../style.css',
+            root=context.root_dir,
             tfc_version=versions.VERSION,
             location='<a class="text-muted" href="../">%s</a> / <a class="text-muted" href="#">%s</a>' % (
                 context.translate(I18n.INDEX),
@@ -469,7 +468,7 @@ def build_book_html(context: Context):
                     '<a href="../../%s/%s.html" class="dropdown-item">%s</a>' % (l, entry_id, context.translate(I18n.LANGUAGE_NAME % l)) for l in versions.LANGUAGES
                 ]),
                 index='../',
-                style='../../style.css',
+                root=context.root_dir,
                 tfc_version=versions.VERSION,
                 location='<a class="text-muted" href="../">%s</a> / <a class="text-muted" href="./">%s</a> / <a class="text-muted" href="#">%s</a>' % (
                     context.translate(I18n.INDEX),

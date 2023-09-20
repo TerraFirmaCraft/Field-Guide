@@ -9,11 +9,12 @@
 !/README.md
 
 !/requirements.txt
+
 !/src/**/*.py
+
 !/assets/lang/*.json
 !/assets/templates/*.html
 !/assets/textures/*.png
-
-!/style.css
-!/redirect.html
-!/font.otf
+!/assets/static/*.css
+!/assets/static/*.js
+!/assets/static/*.otf

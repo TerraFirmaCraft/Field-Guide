@@ -15,9 +15,10 @@ IMAGE_CACHE: Dict[str, str] = {}
 
 class Context:
 
-    def __init__(self, tfc_dir: str, output_dir: str, use_mcmeta: bool, use_addons: bool, debug_i18n: bool):
+    def __init__(self, tfc_dir: str, output_dir: str, root_dir: str, use_mcmeta: bool, use_addons: bool, debug_i18n: bool):
         self.tfc_dir = tfc_dir
         self.output_root_dir = output_dir
+        self.root_dir = root_dir
         self.output_dir = output_dir
         self.loader: Loader = Loader(tfc_dir, output_dir, use_mcmeta, use_addons)
         self.last_context = None
