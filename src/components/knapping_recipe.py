@@ -1,26 +1,20 @@
-from typing import Any
+from typing import Any, NamedTuple
 from context import Context
 from PIL import Image
 
 
-KNAPPING_RECIPE_TYPES = {
-    'tfc:rock_knapping': (
-        'tfc:textures/gui/knapping/rock/loose/granite.png',
-        None,
-    ),
-    'tfc:clay_knapping': (
-        'tfc:textures/gui/knapping/clay_ball.png',
-        'tfc:textures/gui/knapping/clay_ball_disabled.png',
-    ),
-    'tfc:fire_clay_knapping': (
-        'tfc:textures/gui/knapping/fire_clay.png',
-        'tfc:textures/gui/knapping/fire_clay_disabled.png',
-    ),
-    'tfc:leather_knapping': (
-        'tfc:textures/gui/knapping/leather.png',
-        None,
-    ),
-}
+class KnappingType(NamedTuple):
+    type_1_18: str
+    type_1_20: str
+    low: str | None
+    hi: str | None
+
+KNAPPING_TYPES = (
+    KnappingType('tfc:rock_knapping', 'tfc:rock', 'tfc:textures/gui/knapping/rock/loose/granite.png', None),
+    KnappingType('tfc:clay_knapping', 'tfc:clay', 'tfc:textures/gui/knapping/clay_ball.png', 'tfc:textures/gui/knapping/clay_ball_disabled.png'),
+    KnappingType('tfc:fire_clay_knapping', 'tfc:fire_clay', 'tfc:textures/gui/knapping/fire_clay.png', 'tfc:textures/gui/knapping/fire_clay_disabled.png'),
+    KnappingType('tfc:leather_knapping', 'tfc:leather', 'tfc:textures/gui/knapping/leather.png', None),
+)
 
 KNAPPING_RECIPE_OUTLINE = 'tfc:textures/gui/book/icons.png'
 CACHE = {}
@@ -41,13 +35,19 @@ def format_knapping_recipe(context: Context, data: Any):
     bg = bg.crop((0, 0, 90, 90))
     img.paste(bg)
 
-    low_texture, hi_texture = KNAPPING_RECIPE_TYPES[recipe_data['type']]
+    # 1.18 has the 'type' field indicating the knapping type
+    # 1.20 has the 'type' field only be 'tfc:knapping' with the 'knapping_type' field indicating the type
+    if 'knapping_type' in recipe_data:
+        type_data = next(t for t in KNAPPING_TYPES if t.type_1_20 == recipe_data['knapping_type'])
+    else:
+        type_data = next(t for t in KNAPPING_TYPES if t.type_1_18 == recipe_data['type'])
+
     low = hi = None
 
-    if low_texture:
-        low = context.loader.load_explicit_texture(low_texture)
-    if hi_texture:
-        hi = context.loader.load_explicit_texture(hi_texture)
+    if type_data.low:
+        low = context.loader.load_explicit_texture(type_data.low)
+    if type_data.hi:
+        hi = context.loader.load_explicit_texture(type_data.hi)
 
     # Pattern
     pattern = recipe_data['pattern']

@@ -18,3 +18,7 @@
 !/assets/static/*.css
 !/assets/static/*.js
 !/assets/static/*.otf
+
+!/assets/versions/**/*.html
+!/assets/versions/*/_images/*.png
+!/assets/versions/*/_images/*.gif

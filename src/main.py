@@ -17,7 +17,6 @@ from i18n import I18n
 from components import item_loader, block_loader, crafting_recipe, knapping_recipe, misc_recipe, mcmeta, text_formatter, barrel_recipe
 
 
-BOOK_DIR = 'src/main/resources/data/%s/patchouli_books/field_guide/'
 TEMPLATE = util.load_html('default')
 
 
@@ -27,9 +26,18 @@ def main():
     parser.add_argument('--tfc-dir', type=str, dest='tfc_dir', default='../TerraFirmaCraft', help='The source TFC directory')
     parser.add_argument('--out-dir', type=str, dest='out_dir', default='out', help='The output directory')
     parser.add_argument('--root-dir', type=str, dest='root_dir', default='', help='The root directory to fetch static assets from')
-    parser.add_argument('--debug', action='store_true', dest='log_debug', help='Enable debug logging')
+
+    # Version handling
+    parser.add_argument('--old-version-key', type=str, dest='old_version_key', default=None, help='If present, the key of the old version to generate')
+    parser.add_argument('--copy-existing-versions', action='store_true', dest='copy_existing_versions', default=False, help='If present, this will copy existing old versions from /assets/versions/ into the root output directory')
+    parser.add_argument('--resource-pack-book', action='store_true', dest='resource_pack_book', default=False, help='If the book is stored as a resource pack (core content in /assets/) vs. not (core content in /data/)')
+
+    # External resources
     parser.add_argument('--use-mcmeta', action='store_true', dest='use_mcmeta', help='Download Minecraft and Forge source')
     parser.add_argument('--use-addons', action='store_true', dest='use_addons', help='Download addons directly from source')
+
+    # Debug options
+    parser.add_argument('--debug', action='store_true', dest='log_debug', help='Enable debug logging')
     parser.add_argument('--debug-i18n', action='store_true', dest='debug_i18n', help='Replace all translated text with translation keys')
     parser.add_argument('--debug-only-en-us', action='store_true', dest='debug_only_en_us', help='Only generate en_us (faster)')
 
@@ -41,13 +49,37 @@ def main():
     out_dir = args.out_dir
     use_mcmeta = args.use_mcmeta
     use_addons = args.use_addons
+    old_version: bool = args.old_version_key is not None
 
+    if old_version:  # If present, output everything to a subdir
+        out_dir = os.path.join(out_dir, args.old_version_key)
+
+    # Images, local to each version
     os.makedirs(util.path_join(out_dir, '_images'), exist_ok=True)
-    shutil.copytree('assets/static', '%s/static' % out_dir, dirs_exist_ok=True)
+
     for tex in os.listdir('assets/textures'):
         shutil.copy('assets/textures/%s' % tex, '%s/_images/%s' % (out_dir, tex))
 
-    context = Context(tfc_dir, out_dir, args.root_dir, use_mcmeta, use_addons, args.debug_i18n)
+    if not old_version:  # Top level (not old versions)
+        shutil.copytree('assets/static', '%s/static' % out_dir, dirs_exist_ok=True)
+
+        # Write metadata.js
+        with open(os.path.join(out_dir, 'static', 'metadata.js'), 'w', encoding='utf-8') as f:
+            f.write('window._VERSIONS = [\n')
+            f.write('    ["%s - %s", null, false],\n' % (versions.MC_VERSION, versions.VERSION))
+            for old in versions.OLD_VERSIONS:
+                f.write('    ["%s", "%s", %s],\n' % (old.name, old.key, 'true' if old.sneaky else 'false'))
+            f.write('];')
+
+    # Always copy the redirect, which defaults to en_us/
+    shutil.copy('assets/templates/redirect.html', '%s/index.html' % out_dir)
+
+    # Just copy old versions that exist in the directory
+    if args.copy_existing_versions and os.path.isdir('assets/versions'):
+        for old in os.listdir('assets/versions'):
+            shutil.copytree('assets/versions/%s' % old, '%s/%s' % (out_dir, old), dirs_exist_ok=True)
+
+    context = Context(tfc_dir, out_dir, args.root_dir, use_mcmeta, use_addons, args.debug_i18n, args.resource_pack_book)
 
     if use_mcmeta:
         mcmeta.load_cache()
@@ -84,9 +116,7 @@ def main():
 
 
 def parse_book(context: Context, use_addons: bool):
-
-    book_dir = util.path_join(context.tfc_dir, BOOK_DIR % 'tfc', context.lang)
-    category_dir = util.path_join(book_dir, 'categories')
+    category_dir = context.resource_dir('categories')
 
     for category_file in util.walk(category_dir):
         parse_category(context, category_dir, category_file)
@@ -97,7 +127,7 @@ def parse_book(context: Context, use_addons: bool):
             for category_file in util.walk(addon_dir):
                 parse_category(context, addon_dir, category_file, is_addon=True)
 
-    entry_dir = util.path_join(book_dir, 'entries')
+    entry_dir = context.resource_dir('entries')
 
     for entry_file in util.walk(entry_dir):
         parse_entry(context, entry_dir, entry_file)
@@ -132,7 +162,6 @@ def parse_category(context: Context, category_dir: str, category_file: str, is_a
 
 
 def parse_entry(context: Context, entry_dir: str, entry_file: str):
-    entry: Entry = Entry()
     entry_id: str = os.path.relpath(entry_file, entry_dir)
     entry_id = entry_id[:entry_id.index('.')]
 
@@ -146,8 +175,6 @@ def parse_entry(context: Context, entry_dir: str, entry_file: str):
     entry: Entry = Entry()
     entry_id: str = os.path.relpath(entry_file, entry_dir)
     entry_id = entry_id[:entry_id.index('.')]
-    category_id: str = data['category']
-    category_id = category_id[category_id.index(':') + 1:]
 
     entry.sort = data['sortnum'] if 'sortnum' in data else -1
     entry.name = text_formatter.strip_vanilla_formatting(data['name'])
@@ -326,10 +353,13 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
         context.format_text(buffer, data)
         context.recipes_skipped += 1
     elif page_type in (
+        # In 1.18
         'tfc:clay_knapping_recipe',
         'tfc:fire_clay_knapping_recipe',
         'tfc:leather_knapping_recipe',
         'tfc:rock_knapping_recipe',
+        # In 1.20
+        'tfc:knapping_recipe'
     ):
         try:
             recipe_id, image = knapping_recipe.format_knapping_recipe(context, data)
@@ -361,14 +391,15 @@ def build_book_html(context: Context):
         text_api_docs=context.translate(I18n.API_DOCS),
         text_github=context.translate(I18n.GITHUB),
         text_discord=context.translate(I18n.DISCORD),
+        current_lang_key=context.lang,
         current_lang=context.translate(I18n.LANGUAGE_NAME % context.lang),
         langs='\n'.join([
             '<a href="../%s/" class="dropdown-item">%s</a>' % (l, context.translate(I18n.LANGUAGE_NAME % l)) for l in versions.LANGUAGES
         ]),
         index='#',
         root=context.root_dir,
-        tfc_version=versions.VERSION,
-        location='<a class="text-muted" href="#">%s</a>' % context.translate(I18n.INDEX),
+        tfc_version=versions.TFC_VERSION,
+        location='<a class="text-muted" href="#">%s</a>' % versions.MC_VERSION,
         contents='\n'.join([
             '<li><a class="text-muted" href="./%s/">%s</a></li>' % (cat_id, cat.name)
             for cat_id, cat in context.sorted_categories
@@ -409,15 +440,16 @@ def build_book_html(context: Context):
             text_api_docs=context.translate(I18n.API_DOCS),
             text_github=context.translate(I18n.GITHUB),
             text_discord=context.translate(I18n.DISCORD),
+            current_lang_key=context.lang,
             current_lang=context.translate(I18n.LANGUAGE_NAME % context.lang),
             langs='\n'.join([
                 '<a href="../../%s/%s/" class="dropdown-item">%s</a>' % (l, category_id, context.translate(I18n.LANGUAGE_NAME % l)) for l in versions.LANGUAGES
             ]),
             index='../',
             root=context.root_dir,
-            tfc_version=versions.VERSION,
+            tfc_version=versions.TFC_VERSION,
             location='<a class="text-muted" href="../">%s</a> / <a class="text-muted" href="#">%s</a>' % (
-                context.translate(I18n.INDEX),
+                versions.MC_VERSION,
                 cat.name
             ),
             contents='\n'.join([
@@ -463,15 +495,16 @@ def build_book_html(context: Context):
                 text_api_docs=context.translate(I18n.API_DOCS),
                 text_github=context.translate(I18n.GITHUB),
                 text_discord=context.translate(I18n.DISCORD),
+                current_lang_key=context.lang,
                 current_lang=context.translate(I18n.LANGUAGE_NAME % context.lang),
                 langs='\n'.join([
                     '<a href="../../%s/%s.html" class="dropdown-item">%s</a>' % (l, entry_id, context.translate(I18n.LANGUAGE_NAME % l)) for l in versions.LANGUAGES
                 ]),
                 index='../',
                 root=context.root_dir,
-                tfc_version=versions.VERSION,
+                tfc_version=versions.TFC_VERSION,
                 location='<a class="text-muted" href="../">%s</a> / <a class="text-muted" href="./">%s</a> / <a class="text-muted" href="#">%s</a>' % (
-                    context.translate(I18n.INDEX),
+                    versions.MC_VERSION,
                     cat.name, 
                     entry.name
                 ),
