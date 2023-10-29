@@ -114,20 +114,22 @@ class Context:
         if key in data:
             buffer.append('<h5>%s</h5>\n' % text_formatter.strip_vanilla_formatting(data[key]))
 
-    def format_title_with_icon(self, buffer: List[str], icon_src: str, icon_name: str | None, data: Any, key: str = 'title'):
+    def format_title_with_icon(self, buffer: List[str], icon_src: str, icon_name: str | None, data: Any, key: str = 'title', tag: str = 'h5', tooltip: str | None = None):
         title = icon_name
         if key in data:
             title = text_formatter.strip_vanilla_formatting(data[key])
             if not icon_name:  # For multi-items, no name, but title is present
                 icon_name = title
+        if tooltip is None:
+            tooltip = title
         buffer.append("""
         <div class="item-header">
             <span href="#" data-toggle="tooltip" title="%s">
                 <img src="%s" alt="%s" />
             </span>
-            <h5>%s</h5>
+            <%s>%s</%s>
         </div>
-        """ % (icon_name, icon_src, title, title))
+        """ % (icon_name, icon_src, tooltip, tag, title, tag))
 
     def format_centered_text(self, buffer: List[str], data: Any, key: str = 'text'):
         buffer.append('<div style="text-align: center;">')

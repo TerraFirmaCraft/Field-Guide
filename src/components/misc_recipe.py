@@ -1,9 +1,11 @@
 from typing import List, Any
 
 from context import Context
-from components import crafting_recipe
+from components import crafting_recipe, item_loader
+from util import InternalError
 
 import util
+
 
 def format_misc_recipe(context: Context, buffer: List[str], identifier: str):
     data = context.loader.load_recipe(identifier)
@@ -36,6 +38,25 @@ def format_misc_recipe(context: Context, buffer: List[str], identifier: str):
             <p>%s</p>
         </div>
         """ % tooltip)
+    elif recipe_type == 'tfc:glassworking':
+        format_misc_recipe_from_data(context, buffer, identifier, data, ingredient=data['batch'])
+        buffer.append('<h4>Steps</h4><ol>')
+
+        for key in data['operations']:
+            # Item Images
+            op_name = context.translate('tfc.enum.glassoperation.' + key)
+            util.require(key in GLASS_ITEMS, 'Missing item for glass op: %s' % key)
+            op_item = GLASS_ITEMS[key]
+            try:
+                item_src, item_name = item_loader.get_item_image(context, op_item, False)
+                buffer.append('<li>')
+                context.format_title_with_icon(buffer, item_src, op_name, data, tag='p', tooltip=item_name)
+                buffer.append('</li>')
+                context.items_passed += 1
+            except InternalError as e:
+                e.warning()
+                buffer.append('<li><p>%s</p></li>' % op_name)
+        buffer.append('</ol>')
     else:
         util.error('Cannot handle as a misc recipe: %s' % recipe_type)
 
@@ -105,3 +126,14 @@ HEAT = (
     ('white', 'white', 1500),
     ('brilliant_white', 'white', 1600)
 )
+
+GLASS_ITEMS = {
+    'saw': 'tfc:gem_saw',
+    'roll': 'tfc:wool_cloth',
+    'stretch': 'tfc:blowpipe_with_glass',
+    'blow': 'tfc:blowpipe_with_glass',
+    'table_pour': 'tfc:blowpipe_with_glass',
+    'basin_pour': 'tfc:blowpipe_with_glass',
+    'flatten': 'tfc:paddle',
+    'pinch': 'tfc:jacks',
+}

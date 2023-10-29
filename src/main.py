@@ -14,7 +14,7 @@ from context import Context
 from category import Category
 from entry import Entry
 from i18n import I18n
-from components import item_loader, block_loader, crafting_recipe, knapping_recipe, misc_recipe, mcmeta, text_formatter, barrel_recipe
+from components import item_loader, block_loader, crafting_recipe, knapping_recipe, misc_recipe, mcmeta, text_formatter, barrel_recipe, table_formatter
 
 
 TEMPLATE = util.load_html('default')
@@ -330,6 +330,7 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
         'tfc:quern_recipe',
         'tfc:loom_recipe',
         'tfc:anvil_recipe',
+        'tfc:glassworking_recipe',
     ):
         try:
             misc_recipe.format_misc_recipe(context, buffer, data['recipe'])
@@ -380,6 +381,11 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
             context.format_recipe(buffer, data)
             context.recipes_failed += 1
         context.format_text(buffer, data)
+    elif page_type == 'tfc:table':
+        try:
+            table_formatter.format_table(context, buffer, data)
+        except InternalError as e:
+            e.warning(True)
     else:
         LOG.warning('Unrecognized page type: %s' % page_type)
 

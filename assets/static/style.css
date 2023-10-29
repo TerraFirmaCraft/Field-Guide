@@ -1,3 +1,8 @@
+:root {
+    --table-bg-dark-color: #dfe2e5;
+    --table-bg-light-color: #f8f8f8;
+}
+
 .carousel-inner img {
     margin: auto;
 }
@@ -40,7 +45,7 @@ a.anchor {
     image-rendering: pixelated;
 }
 
-.item-header a, .item-header h4, .item-header h5 {
+.item-header a, .item-header h4, .item-header h5, .item-header p {
     position: relative;
     top: 2px;
     left: 42px;
@@ -131,3 +136,53 @@ img.recipe-item {
 .fa-discord:before { content: "\f392" }
 .fa-github:before { content: "\f09b" }
 .fa-gears:before { content: "\f085" }
+
+
+/* Tables */
+figure {
+    overflow-x: auto;
+    margin: 1.2em 0;
+    max-width: calc(100% + 16px);
+    padding: 0;
+}
+figure > table {
+    margin: 0;
+}
+
+table {
+    padding: 0;
+    word-break: initial;
+    margin: 0.8em 0;
+
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    text-align: left;
+}
+table tr {
+    border: 1px solid #cccccc;
+    margin: 0;
+    padding: 0;
+}
+table thead, table tr:nth-child(2n) {
+    background-color: #eeeeee;
+}
+table thead, table tr {
+    break-inside: avoid;
+    break-after: auto;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #cccccc;
+    border-bottom: 0;
+    margin: 0;
+    padding: 2px 4px;
+}
+table td {
+    border: 1px solid #cccccc;
+    margin: 0;
+    padding: 2px 4px;
+}
+table th:first-child, table td:first-child { margin-top: 0; }
+table th:last-child, table td:last-child { margin-bottom: 0; }
+table tr th { border-bottom: 0; }
