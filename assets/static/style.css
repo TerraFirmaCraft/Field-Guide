@@ -37,6 +37,7 @@ a.anchor {
     float: left;
     width: 32px;
     height: 32px;
+    image-rendering: pixelated;
 }
 
 .item-header a, .item-header h4, .item-header h5 {
@@ -53,8 +54,20 @@ a.anchor {
 
 /* Crafting / Other Recipes */
 
+img.knapping-recipe {
+    image-rendering: pixelated;
+    width: 270px;
+    height: 270px;
+}
+
 .crafting-recipe {
     position: relative;
+}
+
+img.recipe-item {
+    image-rendering: pixelated;
+    width: 64px;
+    height: 64px;
 }
 
 .crafting-recipe-item-tooltip {
@@ -88,10 +101,10 @@ a.anchor {
 .misc-recipe-pos-in  { position: absolute; left: 20px;  top: 24px; }
 .misc-recipe-pos-out { position: absolute; left: 308px; top: 24px; }
 
-.two-recipe-pos-1 {position: absolute; left: 24px; top: 24px; }
-.two-recipe-pos-2 {position: absolute; left: 122px; top: 24px; }
-.two-recipe-pos-3 {position: absolute; left: 412px; top: 24px; }
-.two-recipe-pos-4 {position: absolute; left: 510px; top: 24px; }
+.two-recipe-pos-1 { position: absolute; left: 24px; top: 24px; }
+.two-recipe-pos-2 { position: absolute; left: 122px; top: 24px; }
+.two-recipe-pos-3 { position: absolute; left: 412px; top: 24px; }
+.two-recipe-pos-4 { position: absolute; left: 510px; top: 24px; }
 
 /* Text formatting for temperatures in heat recipes and other tooltips */
 

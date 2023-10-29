@@ -45,7 +45,7 @@ def format_crafting_recipe_from_data(context: Context, buffer: List[str], identi
         data['result'] = data['result']['stack']  # Discard modifiers
         return format_crafting_recipe_from_data(context, buffer, identifier, data)
     else:
-        util.error('Unknown crafting recipe type: %s for recipe %s' % (recipe_type, identifier))
+        raise util.error('Unknown crafting recipe type: %s for recipe %s' % (recipe_type, identifier))
     
     if recipe:
         recipe.grid = [
@@ -66,7 +66,7 @@ def format_crafting_recipe_from_data(context: Context, buffer: List[str], identi
                 buffer.append("""
                 <div class="crafting-recipe-item crafting-recipe-pos-%d-%d">
                     <span href="#" data-toggle="tooltip" title="%s" class="crafting-recipe-item-tooltip"></span>
-                    <img src="%s" />
+                    <img class="recipe-item" src="%s" />
                 </div>
                 """ % (x, y, name, path))
         
@@ -75,7 +75,7 @@ def format_crafting_recipe_from_data(context: Context, buffer: List[str], identi
                 <div class="crafting-recipe-item crafting-recipe-pos-out">
                     <span href="#" data-toggle="tooltip" title="%s" class="crafting-recipe-item-tooltip"></span>
                     %s
-                    <img src="%s" />
+                    <img class="recipe-item" src="%s" />
                 </div>
             </div>
         </div>

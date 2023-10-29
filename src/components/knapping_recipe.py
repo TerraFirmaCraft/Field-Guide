@@ -66,7 +66,6 @@ def format_knapping_recipe(context: Context, data: Any):
                 if tile := (low if outside_slot else hi):
                     img.paste(tile, (5 + 16 * x, 5 + 16 * y))
     
-    img = img.resize((3 * 90, 3 * 90), Image.Resampling.NEAREST)
     path = context.loader.save_image(context.next_id('image'), img)
 
     CACHE[recipe_id] = recipe_id, path

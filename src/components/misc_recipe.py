@@ -19,9 +19,17 @@ def format_misc_recipe(context: Context, buffer: List[str], identifier: str):
         </div>
         """ % (key, tooltip))
     elif recipe_type == 'tfc:loom':
-        format_misc_recipe_from_data(context, buffer, identifier, data, in_count='input_count')
+        # 1.18 uses an ingredient with 'input_count' parameter
+        # 1.20 uses an item stack ingredient with 'ingredient' and 'count' fields
+        if 'ingredient' in data and 'input_count' in data:
+            format_misc_recipe_from_data(context, buffer, identifier, data, in_count=data['input_count'])
+        elif 'ingredient' in data and 'ingredient' in data['ingredient'] and 'count' in data['ingredient']:
+            ing = data['ingredient']
+            format_misc_recipe_from_data(context, buffer, identifier, data, ingredient=ing['ingredient'], in_count=ing['count'])
+        else:
+            util.error('Unrecognized loom recipe format: %s' % repr(data))
     elif recipe_type == 'tfc:anvil':
-        format_misc_recipe_from_data(context, buffer, identifier, data, ingredient='input')
+        format_misc_recipe_from_data(context, buffer, identifier, data, ingredient=data['input'])
         tooltip = get_tier(context, data['tier'])
         buffer.append("""
         <div style="text-align: center;" class="minecraft-text minecraft-gray">
@@ -32,11 +40,15 @@ def format_misc_recipe(context: Context, buffer: List[str], identifier: str):
         util.error('Cannot handle as a misc recipe: %s' % recipe_type)
 
 
-def format_misc_recipe_from_data(context: Context, buffer: List[str], identifier: str, data: Any, ingredient: str = 'ingredient', result: str = 'result', in_count: str = None):
+def format_misc_recipe_from_data(context: Context, buffer: List[str], identifier: str, data: Any, ingredient: Any = None, result: str = 'result', in_count: Any = None):
     util.require(result in data, 'Missing \'%s\' field for recipe: %s' % (result, identifier))
-    
-    in_path, in_name = crafting_recipe.format_ingredient(context, data[ingredient])
-    in_count = 1 if in_count is None else data[in_count]
+
+    if ingredient is None:
+        ingredient = data['ingredient']
+    if in_count is None:
+        in_count = 1
+
+    in_path, in_name = crafting_recipe.format_ingredient(context, ingredient)
     out_path, out_name, out_count = crafting_recipe.format_item_stack(context, data[result])
 
     buffer.append("""
@@ -46,16 +58,16 @@ def format_misc_recipe_from_data(context: Context, buffer: List[str], identifier
             <div class="crafting-recipe-item misc-recipe-pos-in">
                 <span href="#" data-toggle="tooltip" title="%s" class="crafting-recipe-item-tooltip"></span>
                 %s
-                <img src="%s" />
+                <img class="recipe-item" src="%s" />
             </div>
             <div class="crafting-recipe-item misc-recipe-pos-out">
                 <span href="#" data-toggle="tooltip" title="%s" class="crafting-recipe-item-tooltip"></span>
                 %s
-                <img src="%s" />
+                <img class="recipe-item" src="%s" />
             </div>
         </div>
     </div>
-    """% (
+    """ % (
         in_name,
         crafting_recipe.format_count(in_count),
         in_path,
@@ -65,7 +77,7 @@ def format_misc_recipe_from_data(context: Context, buffer: List[str], identifier
     ))
 
 
-def get_temperature(context: Context, temperature: int) -> str:
+def get_temperature(context: Context, temperature: int) -> tuple[str, str]:
     for i, (key, css, value) in enumerate(HEAT[:-1]):
         if temperature <= value:
             _, _, next_value = HEAT[i + 1]

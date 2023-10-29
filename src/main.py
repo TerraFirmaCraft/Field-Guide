@@ -79,7 +79,14 @@ def main():
         for old in os.listdir('assets/versions'):
             shutil.copytree('assets/versions/%s' % old, '%s/%s' % (out_dir, old), dirs_exist_ok=True)
 
-    context = Context(tfc_dir, out_dir, args.root_dir, use_mcmeta, use_addons, args.debug_i18n, args.resource_pack_book)
+    root_dir = args.root_dir
+
+    if args.root_dir != '' and not root_dir.startswith('/'):
+        root_dir = '/' + root_dir
+
+    LOG.info('Setting root output dir to "%s"' % root_dir)
+
+    context = Context(tfc_dir, out_dir, root_dir, use_mcmeta, use_addons, args.debug_i18n, args.resource_pack_book)
 
     if use_mcmeta:
         mcmeta.load_cache()
@@ -363,7 +370,7 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
     ):
         try:
             recipe_id, image = knapping_recipe.format_knapping_recipe(context, data)
-            buffer.append(IMAGE_SINGLE.format(
+            buffer.append(IMAGE_KNAPPING.format(
                 src=image,
                 text='Recipe: %s' % recipe_id
             ))
@@ -554,11 +561,15 @@ def optional_icon_with_link(link: str, name: str, icon: str, icon_name: str) -> 
         </div>
         """ % (icon_name, icon, name, link, name)
     else:
-        return '<a href="%s">%s</a>' % (link, name)
+        return '<a href="%s.html">%s</a>' % (link, name)
 
 
 IMAGE_SINGLE = """
 <img class="d-block w-200 mx-auto img-fluid" src="{src}" alt="{text}">
+"""
+
+IMAGE_KNAPPING = """
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="{src}" alt="{text}">
 """
 
 IMAGE_MULTIPLE_PART = """

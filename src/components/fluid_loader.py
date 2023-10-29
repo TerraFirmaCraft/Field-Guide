@@ -2,11 +2,11 @@ from typing import Tuple, Mapping
 from PIL import Image, ImageColor
 
 from context import Context
-from components import tag_loader, block_loader
+from components import tag_loader
 from util import InternalError
+from i18n import I18n
 
 import util
-import i18n
 import colorsys
 
 CACHE = {}
@@ -65,13 +65,7 @@ def get_fluid_image(context: Context, fluid_in: str, placeholder: bool = True) -
     key = None
 
     if fluid.startswith('#'):
-        try:
-            name = context.translate(i18n.key('tag.%s' % fluid))
-        except InternalError as e:
-            e.prefix('Tag \'%s\'' % fluid).warning()
-
-            # Use a fallback name
-            name = fluid.split(':')[1].replace('_', ' ').replace('/', ', ').title()
+        name = context.translate(I18n.TAG) % fluid
         fluids = tag_loader.load_fluid_tag(context, fluid[1:])
     elif ',' in fluid:
         fluids = fluid.split(',')
@@ -109,7 +103,7 @@ def create_fluid_image(fluid: str) -> Image.Image:
     if ':' in path:
         _, path = fluid.split(':', 1)
     base = Image.open('assets/textures/fluid.png')
-    base = base.resize((64, 64), resample=Image.Resampling.NEAREST)
+    base = base.resize((64, 64), resample=Image.NEAREST)
     if path not in FLUID_COLORS:
         util.LOG.debug('Fluid %s has no color specified.' % path)
         return base

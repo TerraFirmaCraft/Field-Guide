@@ -4,9 +4,9 @@ from PIL import Image
 from context import Context
 from components import tag_loader, block_loader
 from util import InternalError
+from i18n import I18n
 
 import util
-import i18n
 
 CACHE = {}
 
@@ -27,7 +27,7 @@ def decode_item(item: Mapping[str, str] | str) -> str:
             util.error('Invalid format for an item: \'%s\'' % item)
 
 
-def get_item_image(context: Context, item: str, placeholder: bool = True) -> Tuple[str, str]:
+def get_item_image(context: Context, item: str, placeholder: bool = True) -> Tuple[str, str | None]:
     """
     Loads an item image, based on a specific keyed representation of an item.
     The key may be an item ID ('foo:bar'), a tag ('#foo:bar'), or a csv list of item IDs ('foo:bar,foo:baz')
@@ -62,14 +62,7 @@ def get_item_image(context: Context, item: str, placeholder: bool = True) -> Tup
     key = None  # A translation key, if this needs to be re-translated
 
     if item.startswith('#'):
-        try:
-            # Use a special translation key for the tag, if one exists.
-            name = context.translate(i18n.key('tag.%s' % item))
-        except InternalError as e:
-            e.prefix('Tag \'%s\'' % item).warning()
-
-            # Use a fallback name
-            name = item.split(':')[1].replace('_', ' ').replace('/', ', ').title()
+        name = context.translate(I18n.TAG) % item
         items = tag_loader.load_item_tag(context, item[1:])
     elif ',' in item:
         items = item.split(',')
@@ -90,6 +83,13 @@ def get_item_image(context: Context, item: str, placeholder: bool = True) -> Tup
         if len(images) == 1:
             path = context.loader.save_image(context.next_id('item'), images[0])
         else:
+            # If any images are 64x64, then we need to resize them all to be 64x64 if we're saving a .gif
+            if any(img.size == (64, 64) for img in images):
+                images = [
+                    img.resize((64, 64), resample=Image.NEAREST)
+                    for img in images
+                ]
+
             path = context.loader.save_gif(context.next_id('item'), images)
     except InternalError as e:
         e.prefix('Item Image(s)').warning()
@@ -115,7 +115,6 @@ def create_item_image(context: Context, item: str) -> Image.Image:
             # Assume it's empty, and use a single layer item
             layer = model['textures']['base']
             img = context.loader.load_texture(layer)
-            img = img.resize((64, 64), resample=Image.Resampling.NEAREST)
             return img
         else:
             util.error('Item Model : Unknown Loader : \'%s\' at \'%s\'' % (loader, item), True)
@@ -130,13 +129,12 @@ def create_item_image(context: Context, item: str) -> Image.Image:
         # Simple single-layer item model
         layer0 = model['textures']['layer0']
         img = context.loader.load_texture(layer0)
-        img = img.resize((64, 64), resample=Image.Resampling.NEAREST)
         return img
     elif parent.startswith('tfc:block/') or parent.startswith('minecraft:block/'):
         # Block model
         block_model = context.loader.load_model(parent)
         img = block_loader.create_block_model_image(context, item, block_model)
-        img = img.resize((64, 64), resample=Image.Resampling.NEAREST)
+        img = img.resize((64, 64), resample=Image.NEAREST)
         return img
     else:
         util.error('Item Model : Unknown Parent \'%s\' : at \'%s\'' % (parent, item), True)

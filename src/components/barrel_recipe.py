@@ -2,9 +2,9 @@ from typing import List, Any
 
 from context import Context
 from components import crafting_recipe, fluid_loader
+from i18n import I18n
 
 import util
-from i18n import I18n
 
 def format_barrel_recipe(context: Context, buffer: List[str], identifier: str):
     data = context.loader.load_recipe(identifier)
@@ -60,7 +60,7 @@ def make_icon(name, path, index: int, extra_bit: str = "") -> str:
     return f"""
         <div class="crafting-recipe-item two-recipe-pos-{str(index)}">
             <span href="#" data-toggle="tooltip" title="{name}" class="crafting-recipe-item-tooltip"></span>
-            <img src="{path}" />
+            <img class="recipe-item" src="{path}" />
             {extra_bit}
         </div>
         """

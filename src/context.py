@@ -54,7 +54,6 @@ class Context:
     def resource_dir(self, path: str) -> str:
         return util.path_join(self.tfc_dir, BOOK_DIR % ('assets' if self.resource_pack else 'data'), self.lang, path)
 
-
     def with_lang(self, lang: str):
         self.lang = lang
         self.output_dir = util.path_join(self.output_root_dir, lang)
@@ -169,7 +168,7 @@ class Context:
         img = img.crop((0, 0, size, size))
         if size != 400:
             # Resize to 400 x 400, for consistent size images
-            img = img.resize((400, 400), Image.Resampling.NEAREST)
+            img = img.resize((400, 400), Image.NEAREST)
 
         ref = self.loader.save_image(self.next_id('image'), img)
         IMAGE_CACHE[image] = ref
@@ -185,7 +184,7 @@ class Context:
         assert width == 16 and height == 16
 
         # Resize to be the same as items, for item-like icons
-        img = img.resize((64, 64), Image.Resampling.NEAREST)
+        img = img.resize((64, 64), Image.NEAREST)
         ref = self.loader.save_image(self.next_id('image'), img)
         IMAGE_CACHE[image] = ref
         return ref

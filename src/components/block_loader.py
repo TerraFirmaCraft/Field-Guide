@@ -74,7 +74,7 @@ def get_block_image(context: Context, block_state: str) -> Image.Image:
         if state == {} and variants:
             model_data = default_model_data
         else:
-            util.error('BlockState: No matching state found for \'%s\' in \'%s\'' % (block_state, variants), True) 
+            raise util.error('BlockState: No matching state found for \'%s\' in \'%s\'' % (block_state, variants), True)
 
     util.require('model' in model_data, 'BlockState : No Model \'%s\'' % block, True)
 
@@ -141,13 +141,13 @@ def create_block_model_projection(left: Image.Image, right: Image.Image, top: Im
     right = ImageEnhance.Brightness(right).enhance(0.6)
 
     if rotate:
-        right = right.rotate(90, Image.Resampling.NEAREST)
-        top = top.rotate(90, Image.Resampling.NEAREST)
+        right = right.rotate(90, Image.NEAREST)
+        top = top.rotate(90, Image.NEAREST)
 
     # (Approx) Dimetric Projection
-    left = left.transform((256, 256), Image.Transform.PERSPECTIVE, LEFT, Image.Resampling.NEAREST)
-    right = right.transform((256, 256), Image.Transform.PERSPECTIVE, RIGHT, Image.Resampling.NEAREST)
-    top = top.transform((256, 256), Image.Transform.PERSPECTIVE, TOP, Image.Resampling.NEAREST)
+    left = left.transform((256, 256), Image.PERSPECTIVE, LEFT, Image.NEAREST)
+    right = right.transform((256, 256), Image.PERSPECTIVE, RIGHT, Image.NEAREST)
+    top = top.transform((256, 256), Image.PERSPECTIVE, TOP, Image.NEAREST)
 
     left.paste(right, (0, 0), right)
     left.paste(top, (0, 0), top)
@@ -162,9 +162,9 @@ def create_slab_block_model_projection(left: Image.Image, right: Image.Image, to
     right = crop_retaining_position(right, 0, 8, 16, 16)
 
     # (Approx) Dimetric Projection
-    left = left.transform((256, 256), Image.Transform.PERSPECTIVE, LEFT, Image.Resampling.NEAREST)
-    right = right.transform((256, 256), Image.Transform.PERSPECTIVE, RIGHT, Image.Resampling.NEAREST)
-    top = top.transform((256, 256), Image.Transform.PERSPECTIVE, TOP_SLAB, Image.Resampling.NEAREST)
+    left = left.transform((256, 256), Image.PERSPECTIVE, LEFT, Image.NEAREST)
+    right = right.transform((256, 256), Image.PERSPECTIVE, RIGHT, Image.NEAREST)
+    top = top.transform((256, 256), Image.PERSPECTIVE, TOP_SLAB, Image.NEAREST)
 
     left.paste(right, (0, 0), right)
     left.paste(top, (0, 0), top)
@@ -179,10 +179,10 @@ def create_crop_model_projection(crop: Image.Image) -> Image.Image:
     l_end = crop_retaining_position(left, 13, 0, 16, 16)
     
     # (Approx) Dimetric Projection
-    left = left.transform((256, 256), Image.Transform.PERSPECTIVE, LEFT, Image.Resampling.NEAREST)
-    right = right.transform((256, 256), Image.Transform.PERSPECTIVE, RIGHT, Image.Resampling.NEAREST)
-    r_end_t = r_end.transform((256, 256), Image.Transform.PERSPECTIVE, RIGHT, Image.Resampling.NEAREST)
-    l_end_t = l_end.transform((256, 256), Image.Transform.PERSPECTIVE, LEFT, Image.Resampling.NEAREST)
+    left = left.transform((256, 256), Image.PERSPECTIVE, LEFT, Image.NEAREST)
+    right = right.transform((256, 256), Image.PERSPECTIVE, RIGHT, Image.NEAREST)
+    r_end_t = r_end.transform((256, 256), Image.PERSPECTIVE, RIGHT, Image.NEAREST)
+    l_end_t = l_end.transform((256, 256), Image.PERSPECTIVE, LEFT, Image.NEAREST)
     
     base = Image.new('RGBA', (256, 256), (0, 0, 0, 0))
     

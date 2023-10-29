@@ -10,17 +10,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Font Awesome -->
-    <script src="/static/icons.min.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
 
     <!-- JQuery, Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
 
     <script type="text/javascript">
-        window._CURRENT_ROOT = '';
+        window._CURRENT_ROOT = '/Field-Guide';
         window._CURRENT_LANG = 'en_us';
         $(function () {
             $('[data-toggle="tooltip"]').tooltip();
@@ -28,8 +28,8 @@
     </script>
 
     <!-- Automatically populate the version dropdown for newer versions -->
-    <script src="/static/metadata.js" type="text/javascript"></script>
-    <script src="/static/versions.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
 </head>
 <body>
 
@@ -135,7 +135,7 @@
                 <hr>
                 <p><span style="color:#3E8A00;">Weaving</span> is the process of combining different kinds of string into <span style="color:#3E8A00;">Cloth</span>. While the last step of weaving is done in a <span style="color:#3E8A00;">Loom</span>, some cloths such as <span style="color:#3E8A00;">Wool</span>, obtained from <a href="../mechanics/animal_husbandry.html#wooly_animals">Wooly Animals</a>, requires a <span style="color:#3E8A00;">Spindle</span> to obtain <span style="color:#3E8A00;">Wool Yarn</span> in order to be woven.</p>
 
-<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image88.png" alt="Recipe: tfc:clay_knapping/spindle_head">
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image88.png" alt="Recipe: tfc:clay_knapping/spindle_head">
 <p>The <span style="color:#3E8A00;">Unfired Spindle Head</span> is knapped from clay. It can then be <a href="../mechanics/heating.html">fired</a> to make a <span style="color:#3E8A00;">Spindle Head</span>. To complete the spindle, craft it with a <span style="color:#3E8A00;">Stick</span>.</p>
 
         <div class="d-flex align-items-center justify-content-center">
@@ -144,18 +144,18 @@
         
                 <div class="crafting-recipe-item crafting-recipe-pos-0-0">
                     <span href="#" data-toggle="tooltip" title="Spindle" class="crafting-recipe-item-tooltip"></span>
-                    <img src="..\..\_images\item204.png" />
+                    <img class="recipe-item" src="..\..\_images\item204.png" />
                 </div>
                 
                 <div class="crafting-recipe-item crafting-recipe-pos-1-0">
                     <span href="#" data-toggle="tooltip" title="Wool" class="crafting-recipe-item-tooltip"></span>
-                    <img src="..\..\_images\item206.png" />
+                    <img class="recipe-item" src="..\..\_images\item206.png" />
                 </div>
                 
                 <div class="crafting-recipe-item crafting-recipe-pos-out">
                     <span href="#" data-toggle="tooltip" title="Wool Yarn" class="crafting-recipe-item-tooltip"></span>
                     <p class="crafting-recipe-item-count">8</p>
-                    <img src="..\..\_images\item205.png" />
+                    <img class="recipe-item" src="..\..\_images\item205.png" />
                 </div>
             </div>
         </div>
@@ -167,57 +167,69 @@
         
                 <div class="crafting-recipe-item crafting-recipe-pos-0-0">
                     <span href="#" data-toggle="tooltip" title="Acacia Lumber" class="crafting-recipe-item-tooltip"></span>
-                    <img src="../../_images/placeholder_64.png" />
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
                 </div>
                 
                 <div class="crafting-recipe-item crafting-recipe-pos-1-0">
                     <span href="#" data-toggle="tooltip" title="Acacia Lumber" class="crafting-recipe-item-tooltip"></span>
-                    <img src="../../_images/placeholder_64.png" />
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
                 </div>
                 
                 <div class="crafting-recipe-item crafting-recipe-pos-2-0">
                     <span href="#" data-toggle="tooltip" title="Acacia Lumber" class="crafting-recipe-item-tooltip"></span>
-                    <img src="../../_images/placeholder_64.png" />
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
                 </div>
                 
                 <div class="crafting-recipe-item crafting-recipe-pos-0-1">
                     <span href="#" data-toggle="tooltip" title="Acacia Lumber" class="crafting-recipe-item-tooltip"></span>
-                    <img src="../../_images/placeholder_64.png" />
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
                 </div>
                 
                 <div class="crafting-recipe-item crafting-recipe-pos-1-1">
                     <span href="#" data-toggle="tooltip" title="Stick" class="crafting-recipe-item-tooltip"></span>
-                    <img src="..\..\_images\item207.png" />
+                    <img class="recipe-item" src="..\..\_images\item207.png" />
                 </div>
                 
                 <div class="crafting-recipe-item crafting-recipe-pos-2-1">
                     <span href="#" data-toggle="tooltip" title="Acacia Lumber" class="crafting-recipe-item-tooltip"></span>
-                    <img src="../../_images/placeholder_64.png" />
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
                 </div>
                 
                 <div class="crafting-recipe-item crafting-recipe-pos-0-2">
                     <span href="#" data-toggle="tooltip" title="Acacia Lumber" class="crafting-recipe-item-tooltip"></span>
-                    <img src="../../_images/placeholder_64.png" />
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
                 </div>
                 
                 <div class="crafting-recipe-item crafting-recipe-pos-2-2">
                     <span href="#" data-toggle="tooltip" title="Acacia Lumber" class="crafting-recipe-item-tooltip"></span>
-                    <img src="../../_images/placeholder_64.png" />
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
                 </div>
                 
                 <div class="crafting-recipe-item crafting-recipe-pos-out">
                     <span href="#" data-toggle="tooltip" title="Acacia Loom" class="crafting-recipe-item-tooltip"></span>
                     
-                    <img src="../../_images/placeholder_64.png" />
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
                 </div>
             </div>
         </div>
         <p>The loom is crafted from just <span style="color:#3E8A00;">Lumber</span> and a <span style="color:#3E8A00;">Stick</span>.</p>
 <a class="anchor" id="wool_cloth"></a>
-        <div style="text-align: center;">
-            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this recipe.">Recipe: <code>tfc:loom/wool_cloth</code></span></p>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-toggle="tooltip" title="Wool Yarn" class="crafting-recipe-item-tooltip"></span>
+                <p class="crafting-recipe-item-count">16</p>
+                <img class="recipe-item" src="..\..\_images\item205.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-toggle="tooltip" title="Wool Cloth" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item208.png" />
+            </div>
         </div>
-        <p>The recipe for <span style="color:#3E8A00;">Wool Cloth</span> takes 16 <span style="color:#3E8A00;">Wool Yarn</span>. Adding to the loom is done with <span style="color:#b0b;">Right Click</span>. Then, hold down <span style="color:#b0b;">Right Click</span> to begin working the loom. When it is done, press <span style="color:#b0b;">Right Click</span> to retrieve the item.</p>
+    </div>
+    <p>The recipe for <span style="color:#3E8A00;">Wool Cloth</span> takes 16 <span style="color:#3E8A00;">Wool Yarn</span>. Adding to the loom is done with <span style="color:#b0b;">Right Click</span>. Then, hold down <span style="color:#b0b;">Right Click</span> to begin working the loom. When it is done, press <span style="color:#b0b;">Right Click</span> to retrieve the item.</p>
 
 <div id="content4" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -260,20 +272,56 @@
 </div>
 <div style="text-align: center;"><p>The stages of the loom working.</p>
 </div>
-        <div style="text-align: center;">
-            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this recipe.">Recipe: <code>tfc:loom/wool_block</code></span></p>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-toggle="tooltip" title="Wool Cloth" class="crafting-recipe-item-tooltip"></span>
+                <p class="crafting-recipe-item-count">4</p>
+                <img class="recipe-item" src="..\..\_images\item208.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-toggle="tooltip" title="White Wool" class="crafting-recipe-item-tooltip"></span>
+                <p class="crafting-recipe-item-count">8</p>
+                <img class="recipe-item" src="..\..\_images\item209.png" />
+            </div>
         </div>
-        <p><span style="color:#3E8A00;">Wool Cloth</span> can be re-woven into <span style="color:#3E8A00;">Wool Blocks</span>. Wool blocks can be dyed.</p>
+    </div>
+    <p><span style="color:#3E8A00;">Wool Cloth</span> can be re-woven into <span style="color:#3E8A00;">Wool Blocks</span>. Wool blocks can be dyed.</p>
 
-        <div style="text-align: center;">
-            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this recipe.">Recipe: <code>tfc:loom/silk_cloth</code></span></p>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-toggle="tooltip" title="String" class="crafting-recipe-item-tooltip"></span>
+                <p class="crafting-recipe-item-count">24</p>
+                <img class="recipe-item" src="..\..\_images\item210.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-toggle="tooltip" title="Silk Cloth" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item211.png" />
+            </div>
         </div>
-        <p><span style="color:#3E8A00;">Silk Cloth</span> can be made in the loom out of <span style="color:#3E8A00;">String</span>. It can be used as a wool cloth substitute in some cases.</p>
+    </div>
+    <p><span style="color:#3E8A00;">Silk Cloth</span> can be made in the loom out of <span style="color:#3E8A00;">String</span>. It can be used as a wool cloth substitute in some cases.</p>
 
-        <div style="text-align: center;">
-            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this recipe.">Recipe: <code>tfc:loom/burlap_cloth</code></span></p>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-toggle="tooltip" title="Jute Fiber" class="crafting-recipe-item-tooltip"></span>
+                <p class="crafting-recipe-item-count">12</p>
+                <img class="recipe-item" src="..\..\_images\item133.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-toggle="tooltip" title="Burlap Cloth" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item212.png" />
+            </div>
         </div>
-        <p><span style="color:#3E8A00;">Burlap Cloth</span> does not have a use, but it can be made from <a href="../mechanics/crops.html#jute">Jute Fiber</a>.</p>
+    </div>
+    <p><span style="color:#3E8A00;">Burlap Cloth</span> does not have a use, but it can be made from <a href="../mechanics/crops.html#jute">Jute Fiber</a>.</p>
 
         <div class="d-flex align-items-center justify-content-center">
             <div class="crafting-recipe">
@@ -281,53 +329,53 @@
         
                 <div class="crafting-recipe-item crafting-recipe-pos-0-0">
                     <span href="#" data-toggle="tooltip" title="Light Blue Dye" class="crafting-recipe-item-tooltip"></span>
-                    <img src="..\..\_images\item208.png" />
+                    <img class="recipe-item" src="..\..\_images\item213.png" />
                 </div>
                 
                 <div class="crafting-recipe-item crafting-recipe-pos-1-0">
                     <span href="#" data-toggle="tooltip" title="Light Blue Dye" class="crafting-recipe-item-tooltip"></span>
-                    <img src="..\..\_images\item208.png" />
+                    <img class="recipe-item" src="..\..\_images\item213.png" />
                 </div>
                 
                 <div class="crafting-recipe-item crafting-recipe-pos-2-0">
                     <span href="#" data-toggle="tooltip" title="Light Blue Dye" class="crafting-recipe-item-tooltip"></span>
-                    <img src="..\..\_images\item208.png" />
+                    <img class="recipe-item" src="..\..\_images\item213.png" />
                 </div>
                 
                 <div class="crafting-recipe-item crafting-recipe-pos-0-1">
-                    <span href="#" data-toggle="tooltip" title="High Quality Cloth" class="crafting-recipe-item-tooltip"></span>
-                    <img src="..\..\_images\item209.gif" />
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:high_quality_cloth" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item214.gif" />
                 </div>
                 
                 <div class="crafting-recipe-item crafting-recipe-pos-1-1">
-                    <span href="#" data-toggle="tooltip" title="High Quality Cloth" class="crafting-recipe-item-tooltip"></span>
-                    <img src="..\..\_images\item209.gif" />
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:high_quality_cloth" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item214.gif" />
                 </div>
                 
                 <div class="crafting-recipe-item crafting-recipe-pos-2-1">
-                    <span href="#" data-toggle="tooltip" title="High Quality Cloth" class="crafting-recipe-item-tooltip"></span>
-                    <img src="..\..\_images\item209.gif" />
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:high_quality_cloth" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item214.gif" />
                 </div>
                 
                 <div class="crafting-recipe-item crafting-recipe-pos-0-2">
-                    <span href="#" data-toggle="tooltip" title="Lumber" class="crafting-recipe-item-tooltip"></span>
-                    <img src="../../_images/placeholder_64.png" />
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
                 </div>
                 
                 <div class="crafting-recipe-item crafting-recipe-pos-1-2">
-                    <span href="#" data-toggle="tooltip" title="Lumber" class="crafting-recipe-item-tooltip"></span>
-                    <img src="../../_images/placeholder_64.png" />
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
                 </div>
                 
                 <div class="crafting-recipe-item crafting-recipe-pos-2-2">
-                    <span href="#" data-toggle="tooltip" title="Lumber" class="crafting-recipe-item-tooltip"></span>
-                    <img src="../../_images/placeholder_64.png" />
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
                 </div>
                 
                 <div class="crafting-recipe-item crafting-recipe-pos-out">
                     <span href="#" data-toggle="tooltip" title="Light Blue Bed" class="crafting-recipe-item-tooltip"></span>
                     
-                    <img src="../../_images/placeholder_64.png" />
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
                 </div>
             </div>
         </div>
@@ -337,54 +385,54 @@
                 <img src="../../_images/crafting_shaped.png" />
         
                 <div class="crafting-recipe-item crafting-recipe-pos-0-0">
-                    <span href="#" data-toggle="tooltip" title="Any Sticks" class="crafting-recipe-item-tooltip"></span>
-                    <img src="../../_images/placeholder_64.png" />
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
                 </div>
                 
                 <div class="crafting-recipe-item crafting-recipe-pos-1-0">
-                    <span href="#" data-toggle="tooltip" title="Any Sticks" class="crafting-recipe-item-tooltip"></span>
-                    <img src="../../_images/placeholder_64.png" />
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
                 </div>
                 
                 <div class="crafting-recipe-item crafting-recipe-pos-2-0">
-                    <span href="#" data-toggle="tooltip" title="Any Sticks" class="crafting-recipe-item-tooltip"></span>
-                    <img src="../../_images/placeholder_64.png" />
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
                 </div>
                 
                 <div class="crafting-recipe-item crafting-recipe-pos-0-1">
-                    <span href="#" data-toggle="tooltip" title="Any Sticks" class="crafting-recipe-item-tooltip"></span>
-                    <img src="../../_images/placeholder_64.png" />
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
                 </div>
                 
                 <div class="crafting-recipe-item crafting-recipe-pos-1-1">
-                    <span href="#" data-toggle="tooltip" title="High Quality Cloth" class="crafting-recipe-item-tooltip"></span>
-                    <img src="..\..\_images\item209.gif" />
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:high_quality_cloth" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item214.gif" />
                 </div>
                 
                 <div class="crafting-recipe-item crafting-recipe-pos-2-1">
-                    <span href="#" data-toggle="tooltip" title="Any Sticks" class="crafting-recipe-item-tooltip"></span>
-                    <img src="../../_images/placeholder_64.png" />
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
                 </div>
                 
                 <div class="crafting-recipe-item crafting-recipe-pos-0-2">
-                    <span href="#" data-toggle="tooltip" title="Any Sticks" class="crafting-recipe-item-tooltip"></span>
-                    <img src="../../_images/placeholder_64.png" />
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
                 </div>
                 
                 <div class="crafting-recipe-item crafting-recipe-pos-1-2">
-                    <span href="#" data-toggle="tooltip" title="Any Sticks" class="crafting-recipe-item-tooltip"></span>
-                    <img src="../../_images/placeholder_64.png" />
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
                 </div>
                 
                 <div class="crafting-recipe-item crafting-recipe-pos-2-2">
-                    <span href="#" data-toggle="tooltip" title="Any Sticks" class="crafting-recipe-item-tooltip"></span>
-                    <img src="../../_images/placeholder_64.png" />
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
                 </div>
                 
                 <div class="crafting-recipe-item crafting-recipe-pos-out">
                     <span href="#" data-toggle="tooltip" title="Painting" class="crafting-recipe-item-tooltip"></span>
                     
-                    <img src="..\..\_images\item210.png" />
+                    <img class="recipe-item" src="..\..\_images\item215.png" />
                 </div>
             </div>
         </div>

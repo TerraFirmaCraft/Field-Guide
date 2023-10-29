@@ -10,17 +10,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Font Awesome -->
-    <script src="/static/icons.min.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
 
     <!-- JQuery, Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
 
     <script type="text/javascript">
-        window._CURRENT_ROOT = '';
+        window._CURRENT_ROOT = '/Field-Guide';
         window._CURRENT_LANG = 'en_us';
         $(function () {
             $('[data-toggle="tooltip"]').tooltip();
@@ -28,8 +28,8 @@
     </script>
 
     <!-- Automatically populate the version dropdown for newer versions -->
-    <script src="/static/metadata.js" type="text/javascript"></script>
-    <script src="/static/versions.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
 </head>
 <body>
 
@@ -109,7 +109,7 @@
 <br/>
 Like crafting recipes, the location of the desired pattern doesn't matter for the output, and some recipes have multiple variants that are valid.</p>
 <a class="anchor" id="knife"></a>
-<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image11.png" alt="Recipe: tfc:rock_knapping/knife_head_sedimentary">
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image11.png" alt="Recipe: tfc:rock_knapping/knife_head_sedimentary">
 <p>A knife blade, crafted from several different rock types.</p>
 
         <div class="d-flex align-items-center justify-content-center">
@@ -118,18 +118,18 @@ Like crafting recipes, the location of the desired pattern doesn't matter for th
         
                 <div class="crafting-recipe-item crafting-recipe-pos-0-0">
                     <span href="#" data-toggle="tooltip" title="Stone Knife Head" class="crafting-recipe-item-tooltip"></span>
-                    <img src="..\..\_images\item23.png" />
+                    <img class="recipe-item" src="..\..\_images\item23.png" />
                 </div>
                 
                 <div class="crafting-recipe-item crafting-recipe-pos-0-1">
-                    <span href="#" data-toggle="tooltip" title="Any Sticks" class="crafting-recipe-item-tooltip"></span>
-                    <img src="../../_images/placeholder_64.png" />
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
                 </div>
                 
                 <div class="crafting-recipe-item crafting-recipe-pos-out">
                     <span href="#" data-toggle="tooltip" title="Stone Knife" class="crafting-recipe-item-tooltip"></span>
                     
-                    <img src="..\..\_images\item22.png" />
+                    <img class="recipe-item" src="..\..\_images\item22.png" />
                 </div>
             </div>
         </div>
@@ -137,19 +137,19 @@ Like crafting recipes, the location of the desired pattern doesn't matter for th
 <br/>
 The stone knife can be used to harvest <span style="color:#3E8A00;">Straw</span> by breaking plants.</p>
 
-<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image12.png" alt="Recipe: tfc:rock_knapping/axe_head_sedimentary">
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image12.png" alt="Recipe: tfc:rock_knapping/axe_head_sedimentary">
 <p><span style="color:#3E8A00;">Axes</span> can be used to cut down entire trees, logs and leaves included. However, saplings and sticks will only be obtained if leaves were broken individually.</p>
 
-<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image13.png" alt="Recipe: tfc:rock_knapping/shovel_head_sedimentary">
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image13.png" alt="Recipe: tfc:rock_knapping/shovel_head_sedimentary">
 <p><span style="color:#3E8A00;">Shovels</span> can be used to dig soil type blocks. They can also be used to create <span style="color:#3E8A00;">Paths</span> by <span style="color:#b0b;">using</span> them on <span style="color:#3E8A00;">Dirt</span> or <span style="color:#3E8A00;">Grass</span>.</p>
 
-<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image14.png" alt="Recipe: tfc:rock_knapping/hoe_head_sedimentary">
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image14.png" alt="Recipe: tfc:rock_knapping/hoe_head_sedimentary">
 <p><span style="color:#3E8A00;">Hoes</span> are useful tools for <a href="../mechanics/crops.html">Farming</a>, but they can also be used to cut down leaves and other plant matter.</p>
 
-<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image15.png" alt="Recipe: tfc:rock_knapping/hammer_head_sedimentary">
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image15.png" alt="Recipe: tfc:rock_knapping/hammer_head_sedimentary">
 <p><span style="color:#3E8A00;">Hammers</span> can be used as <a href="../mechanics/damage_types.html">Crushing</a> weapons, but are more important tools used for <a href="../getting_started/primitive_anvils.html">Forging</a>.</p>
 
-<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image16.png" alt="Recipe: tfc:rock_knapping/javelin_head_sedimentary">
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image16.png" alt="Recipe: tfc:rock_knapping/javelin_head_sedimentary">
 <p>Finally, a <span style="color:#3E8A00;">Javelin</span> can be used as a primitive weapon, capable of being thrown at targets, or used as a <a href="../mechanics/damage_types.html">Piercing</a> weapon.</p>
 
                 

@@ -23,7 +23,7 @@ class TextFormatter:
         cursor = 0
 
         # Patchy doesn't have an ordered list function / macro. So we have to recognize a specific pattern outside of a macro to properly HTML-ify them
-        text = re.sub(r'\$\(br\)  [0-9+]. ', '$(ol)', text)
+        text = re.sub(r'\$\(br\) {2}[0-9+]. ', '$(ol)', text)
 
         for match in re.finditer(r'(\$\(([^)]*)\))|§(.)', text):
             start, end = match.span()

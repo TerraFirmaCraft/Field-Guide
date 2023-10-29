@@ -23,6 +23,7 @@ class I18n:
     ITEM_ONLY_IN_GAME = key('item_only_in_game')
     ADDON = key('addon')
     TICKS = key('ticks')
+    TAG = key('tag')
 
     KEY_INVENTORY = key('key.inventory')
     KEY_ATTACK = key('key.attack')
