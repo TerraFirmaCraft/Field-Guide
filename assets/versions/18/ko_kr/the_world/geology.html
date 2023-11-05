@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft 도감</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'ko_kr';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft 도감</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">한국어</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/the_world\geology.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world\geology.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world\geology.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world\geology.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world\geology.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world\geology.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world\geology.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world\geology.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">색인</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API 뮨서</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">버전 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>목차</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">세계</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./biomes.html">생물군계</a></li>
+<li><a class="text-muted" href="./waterways.html">강이 흐르는 곳에서</a></li>
+<li><a class="text-muted" href="./geology.html">지질학</a></li>
+<li><a class="text-muted" href="./ores_and_minerals.html">광석과 광물</a></li>
+<li><a class="text-muted" href="./climate.html">달력과 기후</a></li>
+<li><a class="text-muted" href="./flora.html">식물</a></li>
+<li><a class="text-muted" href="./wild_crops.html">야생 작물</a></li>
+<li><a class="text-muted" href="./wild_fruits.html">야생 과일</a></li>
+<li><a class="text-muted" href="./wild_animals.html">야생동물</a></li></ul></li>
+<li><a class="text-muted" href="../getting_started/">시작하기</a></li>
+<li><a class="text-muted" href="../mechanics/">심화 기술</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">세계</a> / <a class="text-muted" href="#">지질학</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="셰일">
+                <img src="..\..\_images\item211.png" alt="지질학" />
+            </span>
+            <h4>지질학</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>TerraFirmaCraft의 세계는 <a href="https://ko.wikipedia.org/wiki/%ED%8C%90%20%EA%B5%AC%EC%A1%B0%EB%A1%A0">판 구조론</a>에 의해 생성되며, 그 중 일부는 여전히 당신 주변의 땅에서 볼 수 있습니다. <span style="color:#b0b;">E</span> 키를 누르고, <span style="color:#3E8A00;">기후</span> 탭에 들어가면 <span style="color:#3E8A00;">지역</span> 옆에 현재 지질학적 지역이 표시됩니다. 여러 종류의 지역들이 있으며, 이는 무슨 종류의 생물군계와 특성들이 그 지역에 나타날지에 대해 영향을 미칩니다.</p>
+<p>여러 종류의 지역들과 주요 특징들의 목록들은 다음과 같습니다.<br/>
+<br/>
+<strong>해양</strong><br/>
+대부분의 바다를 이루는 판의 종류로, 거의 대부분 <a href="../the_world/biomes.html#ocean">바다 또는 깊은 바다</a>로 이루어져 있습니다.<br/>
+<br/>
+<strong>대륙 저지대</strong><br/>
+세 개의 주요 대륙성 지역 중 하나입니다. <a href="../the_world/biomes.html#lowlands">저지대</a>, <a href="../the_world/biomes.html#low_canyons">낮은 협곡</a>, 또는 <a href="../the_world/biomes.html#plains">평원</a> 등의 고도가 낮은 생물군계를 흔히 이룹니다.</p>
+<p><strong>대륙 중지대</strong><br/>
+대륙 중지대는 많은 생물군계를 포함할 수 있으며 일반적으로 대륙 저/고지대와 접합니다.<br/>
+<br/>
+<strong>대륙 고지대</strong><br/>
+<a href="../the_world/biomes.html#hills">구불거리는 언덕</a>, <a href="../the_world/biomes.html#plateau">고원</a>, 그리고 <a href="../the_world/biomes.html#mountains">오래된 산</a> 등의 고도가 높은 지역입니다.<br/>
+<br/>
+<strong>해령</strong><br/>
+해령은 두 개의 해양판이 서로 멀어질 때 형성됩니다.</p>
+<p>약간의 화산들을 만들거나 드물게 화산 활동을 할 수 있습니다.<br/>
+<br/>
+<strong>해양 섭입대</strong><br/>
+섭입대는 하나의 판이 다른 판 아래로 내려가는 곳입니다. 바다에서 이는 많은 화산들과 호상 열도, 또한 해구를 만들 수 있습니다.<br/>
+<br/>
+<strong>대륙 섭입대</strong><br/>
+대륙 섭입대에서는 해안가에 큰 산이 있으며 화산 활동이 잦습니다. 활동적인 온천들과 화산들도 흔합니다.</p>
+<p><strong>열곡</strong><br/>
+열곡은 두 개의 대륙판이 멀어질 때 형성되는 곳으로, <a href="https://ko.wikipedia.org/wiki/%EC%95%84%EC%9D%B4%EC%8A%AC%EB%9E%80%EB%93%9C%EC%9D%98_%EC%A7%80%EB%A6%AC">아이슬란드</a> 등의 예가 있습니다. <a href="../the_world/biomes.html#canyons">협곡</a> 생물군계가 이곳에서 생성되며, 고도가 높은 다른 생물군계들과 덜 활동적이고 낮은 화산들 또한 생성됩니다.<br/>
+<br/>
+<strong>조산대</strong><br/>
+<a href="https://ko.wikipedia.org/wiki/%EC%A1%B0%EC%82%B0_%EC%9A%B4%EB%8F%99">조산대</a>는 산의 주요 형성 지역입니다. 조산대는 두 개의 대륙판이 충돌할 때 형성되며 <a href="../the_world/biomes.html#mountains">산</a>과 <a href="../the_world/biomes.html#plateau">고원</a>을 만들어냅니다.</p>
+<p><strong>대륙붕</strong><br/>
+마지막으로, 대륙붕은 해안가에서 떨어진 얕은 바다의 부분입니다. 따뜻한 기후에서는 산호초가 나타나기도 합니다.</p>
+<h5>암석층</h5>
+<p>세계는 또한 여러 종류의 <span style="color:#3E8A00;">암석</span>들로 나뉩니다. 각 암석의 지역들은 몇 킬로미터도 넘을 수 있고, 당신의 발 아래에 있는 층 아래에는 보통 2-3개의 또 다른 암석층이 있습니다. 각각의 암석 종류마다 다른 종류의 광석들을 찾을 수 있기 때문에, 특정한 암석 종류를 찾는 것은 광석을 찾는 데 있어 매우 중요하며, 대부분의 <a href="../the_world/ores_and_minerals.html">광석</a>들은 특정한 암석 종류에서만 나타납니다.</p>
+<p>암석에는 <span style="color:#3E8A00;">퇴적암</span>, <span style="color:#3E8A00;">변성암</span>, <span style="color:#3E8A00;">화산암</span>, 그리고 <span style="color:#3E8A00;">심성암</span> 4가지 범주가 있습니다. 암석의 범주는 각각의 암석층이 발견되는 깊이를 결정합니다. 다음 페이지에는 모든 암석의 종류와 암석이 속하는 범주에 대한 목록이 있습니다.</p>
+<a class="anchor" id="sedimentary"></a><h5>퇴적암</h5>
+<p><a href="https://ko.wikipedia.org/wiki/%ED%87%B4%EC%A0%81%EC%95%94">퇴적암</a>은 광물 또는 유기물 입자들의 퇴적으로 형성되는 암석입니다. 퇴적암은 <span style="color:#3E8A00;">높은 고도</span>나 <span style="color:#3E8A00;">중간 고도</span>의 암석층에서 찾을 수 있습니다. 다음과 같은 암석들은 퇴적암입니다.<br/>
+</p>
+<ul>
+	<li>셰일</li>
+	<li>점토암</li>
+	<li>석회암</li>
+	<li>역암</li>
+	<li>역암</li>
+	<li>각암</li>
+	<li>백악</li>
+</ul>
+<a class="anchor" id="metamorphic"></a><h5>변성암</h5>
+<p><a href="https://ko.wikipedia.org/wiki/%EB%B3%80%EC%84%B1%EC%95%94">변성암</a>은 변성작용을 받아 형성되는 암석입니다. 변성암은 <span style="color:#3E8A00;">아무 고도</span>에서나 찾을 수 있습니다. 다음은 변성암의 목록입니다.<br/>
+</p>
+<ul>
+	<li>규암</li>
+	<li>점판암</li>
+	<li>천매암</li>
+	<li>편암</li>
+	<li>편마암</li>
+	<li>대리암</li>
+</ul>
+<a class="anchor" id="igneous_extrusive"></a><h5>화산암</h5>
+<p><a href="https://ko.wikipedia.org/wiki/%ED%99%94%EC%82%B0%EC%95%94">화산암</a>은 마그마가 지표에서 식어 형성되는 암석입니다. 화산암은 <span style="color:#3E8A00;">높은 고도</span>나 <span style="color:#3E8A00;">중간 고도</span>의 암석층에서 찾을 수 있습니다. 다음과 같은 암석들은 화산암입니다.<br/>
+</p>
+<ul>
+	<li>유문암</li>
+	<li>현무암</li>
+	<li>안산암</li>
+	<li>석영안산암</li>
+</ul>
+<a class="anchor" id="igneous_intrusive"></a><h5>심성암</h5>
+<p><a href="https://ko.wikipedia.org/wiki/%EC%8B%AC%EC%84%B1%EC%95%94">심성암</a>은 마그마가 지각 아래 깊은 곳에서 식어 형성되는 암석입니다. 심성암은 <span style="color:#3E8A00;">낮은 고도</span>나 <span style="color:#3E8A00;">중간 고도</span>의 암석층에서 찾을 수 있습니다. 다음과 같은 암석은 심성암입니다.<br/>
+</p>
+<ul>
+	<li>화강암</li>
+	<li>섬록암</li>
+	<li>반려암</li>
+</ul>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

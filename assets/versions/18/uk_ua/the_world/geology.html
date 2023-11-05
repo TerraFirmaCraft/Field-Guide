@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'uk_ua';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Українська мова</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/the_world\geology.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world\geology.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world\geology.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world\geology.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world\geology.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world\geology.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world\geology.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world\geology.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">Світ</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./biomes.html">Біоми</a></li>
+<li><a class="text-muted" href="./waterways.html">Водойми</a></li>
+<li><a class="text-muted" href="./geology.html">Геологія</a></li>
+<li><a class="text-muted" href="./ores_and_minerals.html">Руди та мінерали</a></li>
+<li><a class="text-muted" href="./climate.html">Календар та клімат</a></li>
+<li><a class="text-muted" href="./flora.html">Флора</a></li>
+<li><a class="text-muted" href="./wild_crops.html">Дикі культури</a></li>
+<li><a class="text-muted" href="./wild_fruits.html">Дикоростучі фрукти</a></li>
+<li><a class="text-muted" href="./wild_animals.html">Дикі тварини</a></li></ul></li>
+<li><a class="text-muted" href="../getting_started/">Починаємо</a></li>
+<li><a class="text-muted" href="../mechanics/">Розширена механіка</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">Світ</a> / <a class="text-muted" href="#">Геологія</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Глинистий сланець">
+                <img src="..\..\_images\item211.png" alt="Геологія" />
+            </span>
+            <h4>Геологія</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>Світ TerraFirmaCraft утворений рухом <a href="https://en.wikipedia.org/wiki/Plate_tectonics">тектонічних плит</a>, завдяки чому багато що різниться на поверхні землі навколо тебе. Якщо натиснути клавішу <span style="color:#b0b;">E</span>, та обрати вкладку <span style="color:#3E8A00;">Клімат</span>, поточна тектонічна область буде вказана як <span style="color:#3E8A00;">Рельєф</span>. Тип цього рельєфу впливає на те, які види біомів і особливості присутні в цій місцевості.</p>
+<p>Нижче наведено список різних типів рельєфу і їхні основні характеристики.<br/>
+<br/>
+<strong>Океанічний</strong><br/>
+Тектонічна плита під більшістю океанів, здебільшого вкрита звичайними та глибокими <a href="../the_world/biomes.html#ocean">океанами</a>.<br/>
+<br/>
+<strong>Низький континентальний</strong><br/>
+Одна з трьох основних континентальних областей. Біоми на низькій висоті, такі як <a href="../the_world/biomes.html#lowlands">низовини</a>, <a href="../the_world/biomes.html#low_canyons">долини</a>, та <a href="../the_world/biomes.html#plains">рівнини</a> є пошириними тут.</p>
+<p><strong>Середній континентальний</strong><br/>
+Територія середньої висоти, може містити багато біомів і межує з низькими або високими територіями.<br/>
+<br/>
+<strong>Високогірний континентальний</strong><br/>
+Високогірний район із <a href="../the_world/biomes.html#hills">хвилястими пагорбами</a>, <a href="../the_world/biomes.html#plateau">височинами</a>, та <a href="../the_world/biomes.html#mountains">старими горами</a>.<br/>
+<br/>
+<strong>Серединно-океанічний хребет</strong><br/>
+Серединно-океанічний хребет утворюється, коли дві океанічні плити розходяться.</p>
+<p>Він може генерувати рідкісний вулканізм і деякі вулканічні гори.<br/>
+<br/>
+<strong>Океанічна субдукція</strong><br/>
+Зона субдукції - це місце, де одна плита прослизає під іншу. В океані це може сформувати багато вулканічних гір, островних ланцюгів і глибоких океанських хребтів.<br/>
+<br/>
+<strong>Континентальна субдукція</strong><br/>
+Континентальна зона субдукції – це зона частої вулканічної активності та величезних прибережних гір. Поширені діючі гарячі джерела та вулкани.</p>
+<p><strong>Континентальний розлом</strong><br/>
+Континентальний розлом - це місце, де розходяться два континенти, наприклад <a href="https://en.wikipedia.org/wiki/Geology_of_Iceland">Ісландія</a>. Це місце розташування біомів <a href="../the_world/biomes.html#canyons">каньйони</a>, і більш-менш активних вулканів, а також деяких високогірних біомів.<br/>
+<br/>
+<strong>Орогенний пояс</strong><br/>
+<a href="https://en.wikipedia.org/wiki/Orogeny">Орогенний пояс</a> є місцем великого гороутворення. Він виникає там, де стикаються дві континентальні плити, і утворюють високі <a href="../the_world/biomes.html#mountains">гори</a> та <a href="../the_world/biomes.html#plateau">височини</a>.</p>
+<p><strong>Континентальний шельф</strong><br/>
+Континентальний шельф — це ділянка мілкого океану біля узбережжя континенту. Саме там з’являються коралові рифи в теплішому кліматі.</p>
+<h5>Гірські породи</h5>
+<p>Земна кора поділена на різні типи <span style="color:#3E8A00;">гірських порід</span>. Пласт гірської породи може мати понад кілометр у поперечнику, і зазвичай, під твоїми ногами завжди буде два-три різних шари породи. Оскільки різні руди містяться в різних типах гірських порід, визначення місцезнаходження певних типів порід може бути дуже важливим для пошуку таких ресурсів, як <a href="../the_world/ores_and_minerals.html">руди</a>, що часто з’являються лише в певних типах гірських порід.</p>
+<p>У грі гірські породи мають чотири типи: <span style="color:#3E8A00;">осадові</span>, <span style="color:#3E8A00;">метаморфічні</span>, <span style="color:#3E8A00;">магматичні ефузивні</span>, та <span style="color:#3E8A00;">магматичні інтрузивні</span>. Ці категорії визначають, на якій глибині можна знайти різні шари гірських порід. Перелік усіх типів гірських порід і категорії, до якої вони належать, можна знайти на наступних сторінках.</p>
+<a class="anchor" id="sedimentary"></a><h5>Осадові</h5>
+<p><a href="https://en.wikipedia.org/wiki/Sedimentary_rock">Осадові</a> гірські породи утворюються шляхом накопичення або відкладення мінеральних або органічних частинок. Їх можна знайти в <span style="color:#3E8A00;">середньому та верхньому</span> шарах порід. Це: <br/>
+</p>
+<ul>
+	<li>Глинистий сланець</li>
+	<li>Аргіліт</li>
+	<li>Вапняк</li>
+	<li>Конгломерат</li>
+	<li>Доломіт</li>
+	<li>Кременистий сланець</li>
+	<li>Крейда</li>
+</ul>
+<a class="anchor" id="metamorphic"></a><h5>Метаморфічні</h5>
+<p><a href="https://en.wikipedia.org/wiki/Metamorphic_rock">Метаморфічні</a> гірські породи утворюються в результаті процесу, який називається метаморфізмом. Їх можна знайти на <span style="color:#3E8A00;">будь-якій висоті</span>. Це: <br/>
+</p>
+<ul>
+	<li>Кварцит</li>
+	<li>Шиферний сланець</li>
+	<li>Філіт</li>
+	<li>Аспідний сланець</li>
+	<li>Гнейс</li>
+	<li>Мармур</li>
+</ul>
+<a class="anchor" id="igneous_extrusive"></a><h5>Магматичні ефузивні</h5>
+<p><a href="https://en.wikipedia.org/wiki/Igneous_rock#Extrusive">Магматичні ефузивні</a> породи утворюються внаслідок охолодження магми на поверхні Землі. Їх можна знайти у <span style="color:#3E8A00;">середньому та верхньому</span> шарах. Це:<br/>
+</p>
+<ul>
+	<li>Ріоліт</li>
+	<li>Базальт</li>
+	<li>Андезит</li>
+	<li>Дацит</li>
+</ul>
+<a class="anchor" id="igneous_intrusive"></a><h5>Магматичні інтрузивні</h5>
+<p><a href="https://en.wikipedia.org/wiki/Igneous_rock#Intrusive">Магматичні інтрузивні</a> породи утворюються з магми, яка охолола під земною корою. Їх можна знайти у <span style="color:#3E8A00;">середньому та нижньому</span> шарах. Це:<br/>
+</p>
+<ul>
+	<li>Граніт</li>
+	<li>Діорит</li>
+	<li>Габро</li>
+</ul>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'zh_hk';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">繁體中文（香港特別行政區)</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/the_world\wild_animals.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world\wild_animals.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world\wild_animals.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world\wild_animals.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world\wild_animals.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world\wild_animals.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world\wild_animals.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world\wild_animals.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">這個世界</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./biomes.html">生物羣系</a></li>
+<li><a class="text-muted" href="./waterways.html">河流流向何方？</a></li>
+<li><a class="text-muted" href="./geology.html">地質學</a></li>
+<li><a class="text-muted" href="./ores_and_minerals.html">礦石和礦物</a></li>
+<li><a class="text-muted" href="./climate.html">曆法和氣候</a></li>
+<li><a class="text-muted" href="./flora.html">自然植物</a></li>
+<li><a class="text-muted" href="./wild_crops.html">野生作物</a></li>
+<li><a class="text-muted" href="./wild_fruits.html">野生水果</a></li>
+<li><a class="text-muted" href="./wild_animals.html">野生動物</a></li></ul></li>
+<li><a class="text-muted" href="../getting_started/">新手入門</a></li>
+<li><a class="text-muted" href="../mechanics/">進階內容</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">這個世界</a> / <a class="text-muted" href="#">野生動物</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="中塊獸皮">
+                <img src="..\..\_images\item1.png" alt="野生動物" />
+            </span>
+            <h4>野生動物</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>羣巒傳説的世界充滿了各種各樣的動物。有些動物對你的生存大有助益，有些動物卻非常危險。這一章節是關於野生動物的。有關牲畜的信息，請參閲<a href="../mechanics/animal_husbandry.html">畜牧業</a>章節。</p>
+<p>動物可以大致被分為幾類：<a href="../the_world/wild_animals.html#predators">捕食者</a>、<a href="../the_world/wild_animals.html#prey">獵物</a>、和<a href="../the_world/wild_animals.html#aquatic">水生生物</a>。<br/>
+<br/>
+接下來的幾頁會詳細介紹以上每一種類別的生物。</p>
+<a class="anchor" id="predators"></a><h5>捕食者</h5>
+<p><span style="color:#3E8A00;">捕食者</span>會攻擊玩家。<span style="color:#3E8A00;">夜行性</span>動物只會在晚上狩獵，而<span style="color:#3E8A00;">日行性</span>動物只會在白天狩獵。捕食者一般都處於敵對狀態，但若最近剛剛殺死了一個生物，它們便會變成中立生物。捕食者擁有<span style="color:#3E8A00;">領地意識</span>。只要你跑得夠遠，它們便不會追出它們的領地。</p>
+<h5>北極熊</h5>
+<p>北極熊生活在<a href="../the_world/climate.html#temperature">温度</a>不超過 10°C、<a href="../the_world/climate.html#rainfall">降雨量</a>不小於 100mm 的寒冷地區中。</p>
+<h5>灰熊</h5>
+<p>灰熊生活在<a href="../the_world/climate.html#temperature">温度</a>在 -15 到 15°C、<a href="../the_world/climate.html#rainfall">降雨量</a>不小於 200mm 的温和氣候的森林中。</p>
+<h5>黑熊</h5>
+<p>黑熊生活在<a href="../the_world/climate.html#temperature">温度</a>在 5 到 20°C、<a href="../the_world/climate.html#rainfall">降雨量</a>不小於 250mm 的温暖潮濕的森林中。</p>
+<h5>山獅</h5>
+<p>山獅生活在<a href="../the_world/climate.html#temperature">温度</a>在 -10 到 21°C、<a href="../the_world/climate.html#rainfall">降雨量</a>不小於 150mm 的大多數温和氣候中。</p>
+<h5>黑豹</h5>
+<p>黑豹生活在<a href="../the_world/climate.html#temperature">温度</a>在 -10 到 21°C、<a href="../the_world/climate.html#rainfall">降雨量</a>不小於 150mm 的温和氣候中。</p>
+<h5>獅</h5>
+<p>獅子生活在<a href="../the_world/climate.html#temperature">温度</a>不低於 16°C、<a href="../the_world/climate.html#rainfall">降雨量</a>在 50 到 300mm 的平原上。</p>
+<h5>劍齒虎</h5>
+<p>劍齒虎生活在<a href="../the_world/climate.html#temperature">温度</a>不低於 0°C、<a href="../the_world/climate.html#rainfall">降雨量</a>不小於 250mm 的任意地區。</p>
+<p>狼生活在<a href="../the_world/climate.html#temperature">温度</a>不高於 22°C、<a href="../the_world/climate.html#rainfall">降雨量</a>在 150 到 420mm 的地區。狼有集羣狩獵的習性。餵食狼足夠多次可能將其馴化為<a href="../mechanics/pets.html">狗</a>。</p>
+<p>冰原狼生活在<a href="../the_world/climate.html#temperature">氣温</a>低於冰點，且<a href="../the_world/climate.html#rainfall">降雨量</a>在 150 到 420mm 的地區。冰原狼由集羣狩獵的習性，體型比普通的狼更大，且不可馴服。</p>
+<p>The ocelot attacks small animals. It spawns at any <a href="../the_world/climate.html#temperature">temperature</a> from 15 to 30°C, and <a href="../the_world/climate.html#rainfall">rainfall</a> between 300 and 500mm, in forests. Feeding an ocelot enough times will tame it into a <a href="../mechanics/pets.html">Cat</a>. Ocelots can eat raw fish</p>
+<hr><a class="anchor" id="prey"></a><h5>獵物</h5>
+<p><span style="color:#3E8A00;">獵物</span>害怕玩家和捕食者。他們擅長逃離危險，但通常無法反擊。一些獵物喜歡偷吃農作物。</p>
+<h5>野豬</h5>
+<p>野豬生活在<a href="../the_world/climate.html#temperature">温度</a>不高於 25°C，<a href="../the_world/climate.html#rainfall">降雨量</a>在 130 到 400mm 的平原上。</p>
+<h5>兔子</h5>
+<p>兔子幾乎無處不在，且它們會根據所處氣候的不同而長出不同的毛色。兔子會啃食胡蘿蔔和捲心菜。它們只需要15mm 的<a href="../the_world/climate.html#rainfall">降雨量</a>就能生成。</p>
+<h5>狐狸</h5>
+<p>狐狸喜歡從灌木中啃食莓果，它可以在<a href="../the_world/climate.html#temperature">温度</a>不高於 25°C，且<a href="../the_world/climate.html#rainfall">降雨量</a>在 130 到 400mm 的森林中生成。</p>
+<p>野豬生活在<a href="../the_world/climate.html#temperature">温度</a>不高於 25°C，且<a href="../the_world/climate.html#rainfall">降雨量</a>在 130 到 400mm 的平原上。</p>
+<p>麋鹿生活在<a href="../the_world/climate.html#temperature">温度</a>在 -15 到 10°C 之間，且<a href="../the_world/climate.html#rainfall">降雨量</a>在 150 到 300mm 的任何氣候中。</p>
+<p>松雞生活在<a href="../the_world/climate.html#temperature">温度</a>在 -12 到 13°C 之間，且<a href="../the_world/climate.html#rainfall">降雨量</a>在 150 到 400mm 的任何氣候中。</p>
+<p>雉雞生活在<a href="../the_world/climate.html#temperature">温度</a>在 -5 到 17°C 之間，且<a href="../the_world/climate.html#rainfall">降雨量</a>在 100 到 300mm 的任何氣候中。</p>
+<p>火雞生活在<a href="../the_world/climate.html#temperature">温度</a>在 0 到 17°C 之間，且<a href="../the_world/climate.html#rainfall">降雨量</a>在 250 到 450mm 的任何氣候中。</p>
+<hr><a class="anchor" id="aquatic"></a><h5>海洋生物</h5>
+<p><span style="color:#3E8A00;">水生生物</span>是一大類包含了多種習性迥異的生物的類別。可以大致分為幾小類：<span style="color:#3E8A00;">灘塗動物</span>、<span style="color:#3E8A00;">魚類</span>、<span style="color:#3E8A00;">貝殼類</span>、或<span style="color:#3E8A00;">大型海洋生物</span>。</p>
+<p><span style="color:#3E8A00;">灘塗動物</span>只會生成在海岸邊。它們一天中大部分時間都在水裏游泳，部分時間在沙灘上閒逛。它們天性好奇，會跟隨玩家，但無法被馴服。</p>
+<h5>企鵝</h5>
+<p>企鵝生活在<a href="../the_world/climate.html#temperature">温度</a>不高於 -14°C、<a href="../the_world/climate.html#rainfall">降雨量</a>不小於 75mm 的寒冷海灘上。</p>
+<h5>海龜</h5>
+<p>海龜喜歡温暖的水域。它們生活在<a href="../the_world/climate.html#temperature">温度</a>不低於 21°C、<a href="../the_world/climate.html#rainfall">降雨量</a>不小於 250mm 的温暖海洋中。</p>
+<h5>魚類</h5>
+<p><span style="color:#3E8A00;">魚</span>是生活在水中的小動物。它們中的大多數都可以被<a href="../mechanics/fishing.html">釣起來</a>。不同種的魚喜好在海洋、河流或湖泊中生活。</p>
+<h5>鱈魚</h5>
+<p>鱈魚生活在<a href="../the_world/climate.html#temperature">温度</a>不高於 18°C 的寒冷海洋中。它們可以被釣起來。</p>
+<h5>河豚</h5>
+<p>河豚生活在<a href="../the_world/climate.html#temperature">温度</a>不低於 10°C 的海洋中。</p>
+<h5>水母</h5>
+<p>水母生活在<a href="../the_world/climate.html#temperature">温度</a>不低於 18°C 的温暖海洋中。</p>
+<h5>熱帶魚</h5>
+<p>熱帶魚生活在<a href="../the_world/climate.html#temperature">温度</a>不低於 18°C 的温暖海洋中。</p>
+<h5>三文魚</h5>
+<p>三文魚生活在<a href="../the_world/climate.html#temperature">温度</a>不低於 -5°C 的河流或湖泊中。</p>
+<h5>藍鰓魚</h5>
+<p>藍鰓魚生活在<a href="../the_world/climate.html#temperature">温度</a>在 -10 到 26°C 的河流或湖泊中。</p>
+<a class="anchor" id="shellfish"></a><h5>貝類</h5>
+<p><span style="color:#3E8A00;">貝類</span>是生活在水底的小動物。它們不能被釣起來，但會掉落可以食用或製成<a href="../mechanics/flux.html">助焊劑</a>的殼。貝類可以作為釣魚所需的<a href="../mechanics/fishing.html">誘餌</a>。</p>
+<h5>等足蟲</h5>
+<p>等足蟲生活在<a href="../the_world/climate.html#temperature">温度</a>不高於 14°C 的深海中。</p>
+<h5>龍蝦</h5>
+<p>龍蝦生活在<a href="../the_world/climate.html#temperature">温度</a>不高於 21°C 的海洋中。</p>
+<h5>小龍蝦</h5>
+<p>小龍蝦和龍蝦類似，不過它們生活在河流和湖泊中。它們喜歡生活在<a href="../the_world/climate.html#temperature">温度</a>不低於 5°C、<a href="../the_world/climate.html#rainfall">降雨量</a>不小於 125mm 的環境中。</p>
+<h5>馬蹄蟹</h5>
+<p>馬蹄蟹生活在<a href="../the_world/climate.html#temperature">温度</a>在 10 到 21°C、<a href="../the_world/climate.html#rainfall">降雨量</a>不大於 400mm 的温和海洋中。</p>
+<h5>大型海洋生物</h5>
+<p><span style="color:#3E8A00;">大型海洋生物</span>只生活在巨大水體中。它們中的有些會捕獵其他魚類。它們會掉落能製作成燈油的<a href="../mechanics/lamps.html#tallow">鯨脂</a>。</p>
+<h5>逆戟鯨</h5>
+<p>逆戟鯨生活在<a href="../the_world/climate.html#temperature">温度</a>不高於 19°C、<a href="../the_world/climate.html#rainfall">降雨量</a>不小於 100mm 的深海中。</p>
+<h5>海豚</h5>
+<p>海豚生活在<a href="../the_world/climate.html#temperature">温度</a>不低於 10°C、<a href="../the_world/climate.html#rainfall">降雨量</a>不小於 200mm 的深海中。</p>
+<h5>海牛</h5>
+<p>海牛生活在<a href="../the_world/climate.html#temperature">温度</a>不低於 20°C、<a href="../the_world/climate.html#rainfall">降雨量</a>不小於 300mm 的温暖湖泊中。</p>
+<h5>魷魚</h5>
+<p>魷魚可以在任何深海中生成。它們會掉落<span style="color:#3E8A00;">墨囊</span>，並給靠得太近的玩家噴上一臉墨水。傳言，那些在地下洞穴湖中生活的魷魚有一些奇怪的特性。</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

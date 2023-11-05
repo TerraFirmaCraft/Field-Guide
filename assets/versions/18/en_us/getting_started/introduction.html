@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'en_us';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/getting_started\introduction.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\introduction.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\introduction.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\introduction.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\introduction.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\introduction.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\introduction.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\introduction.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">The World</a></li>
+<li><a class="text-muted" href="../getting_started/">Getting Started</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./introduction.html">Introduction</a></li>
+<li><a class="text-muted" href="./firepit.html">Pits of Fire</a></li>
+<li><a class="text-muted" href="./pottery.html">Pottery</a></li>
+<li><a class="text-muted" href="./pit_kiln.html">Pit Kilns</a></li>
+<li><a class="text-muted" href="./finding_ores.html">Ores, Metal, and Casting</a></li>
+<li><a class="text-muted" href="./primitive_alloys.html">Primitive Alloys</a></li>
+<li><a class="text-muted" href="./primitive_anvils.html">Primitive Anvils</a></li>
+<li><a class="text-muted" href="./building_materials.html">Building Materials</a></li>
+<li><a class="text-muted" href="./a_place_to_sleep.html">A Place to Sleep</a></li>
+<li><a class="text-muted" href="./size_and_weight.html">Size and Weight</a></li>
+<li><a class="text-muted" href="./food_and_water.html">Food and Water</a></li></ul></li>
+<li><a class="text-muted" href="../mechanics/">Advanced Mechanics</a></li>
+<li><a class="text-muted" href="../tfcgyres_orehints/">(Addon) Ore Hints and Spawning</a></li>
+<li><a class="text-muted" href="../waterflasks/">(Addon) Water Flasks</a></li>
+<li><a class="text-muted" href="../firmalife/">(Addon) Firmalife</a></li>
+<li><a class="text-muted" href="../firmaciv/">(Addon) Firma: Civilization</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">Getting Started</a> / <a class="text-muted" href="#">Introduction</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Loose Granite Rock">
+                <img src="..\..\_images\item22.png" alt="Introduction" />
+            </span>
+            <h4>Introduction</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>In TerraFirmaCraft, the first things you can obtain are sticks, twigs, and loose rocks. They can be found in almost every climate, lying scattered on the ground. <span style="color:#b0b;">Right Click</span> or break these to pick them up.</p>
+<h5>Example</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>A smattering of common sticks and stones.</p>
+<p>In addition to gathering sticks and twigs on the ground, sticks can also be obtained by breaking leaves with your fist. Once you have a number of rocks and sticks, you are ready to start <span style="color:#3E8A00;">Knapping</span>. Knapping is a process where two rocks are hit together, to form a particular shape. In order to knap, first hold at least two rocks in your hand, then right click in the air, which will open up the <span style="color:#3E8A00;">Knapping Interface</span>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image10.png" alt="tfc:textures/gui/book/gui/rock_knapping.png">
+<div style="text-align: center;"><p>The Knapping Interface.</p>
+</div><p>In order to knap a particular item, you want to remove squares until you form the desired pattern. For example, create a knife blade by matching the recipe shown to the right.<br/>
+<br/>
+Like crafting recipes, the location of the desired pattern doesn't matter for the output, and some recipes have multiple variants that are valid.</p>
+<a class="anchor" id="knife"></a>
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image11.png" alt="Recipe: tfc:rock_knapping/knife_head_sedimentary">
+<p>A knife blade, crafted from several different rock types.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="Stone Knife Head" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item24.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item16.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Stone Knife" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item23.png" />
+                </div>
+            </div>
+        </div>
+        <p>All stone tool heads can be crafted with a stick or twig to assemble them into a tool.<br/>
+<br/>
+The stone knife can be used to harvest <span style="color:#3E8A00;">Straw</span> by breaking plants.</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image12.png" alt="Recipe: tfc:rock_knapping/axe_head_sedimentary">
+<p><span style="color:#3E8A00;">Axes</span> can be used to cut down entire trees, logs and leaves included. However, saplings and sticks will only be obtained if leaves were broken individually.</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image13.png" alt="Recipe: tfc:rock_knapping/shovel_head_sedimentary">
+<p><span style="color:#3E8A00;">Shovels</span> can be used to dig soil type blocks. They can also be used to create <span style="color:#3E8A00;">Paths</span> by <span style="color:#b0b;">using</span> them on <span style="color:#3E8A00;">Dirt</span> or <span style="color:#3E8A00;">Grass</span>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image14.png" alt="Recipe: tfc:rock_knapping/hoe_head_sedimentary">
+<p><span style="color:#3E8A00;">Hoes</span> are useful tools for <a href="../mechanics/crops.html">Farming</a>, but they can also be used to cut down leaves and other plant matter.</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image15.png" alt="Recipe: tfc:rock_knapping/hammer_head_sedimentary">
+<p><span style="color:#3E8A00;">Hammers</span> can be used as <a href="../mechanics/damage_types.html">Crushing</a> weapons, but are more important tools used for <a href="../getting_started/primitive_anvils.html">Forging</a>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image16.png" alt="Recipe: tfc:rock_knapping/javelin_head_sedimentary">
+<p>Finally, a <span style="color:#3E8A00;">Javelin</span> can be used as a primitive weapon, capable of being thrown at targets, or used as a <a href="../mechanics/damage_types.html">Piercing</a> weapon.</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

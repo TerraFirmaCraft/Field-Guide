@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft 도감</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'ko_kr';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft 도감</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">한국어</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/the_world\biomes.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world\biomes.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world\biomes.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world\biomes.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world\biomes.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world\biomes.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world\biomes.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world\biomes.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">색인</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API 뮨서</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">버전 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>목차</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">세계</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./biomes.html">생물군계</a></li>
+<li><a class="text-muted" href="./waterways.html">강이 흐르는 곳에서</a></li>
+<li><a class="text-muted" href="./geology.html">지질학</a></li>
+<li><a class="text-muted" href="./ores_and_minerals.html">광석과 광물</a></li>
+<li><a class="text-muted" href="./climate.html">달력과 기후</a></li>
+<li><a class="text-muted" href="./flora.html">식물</a></li>
+<li><a class="text-muted" href="./wild_crops.html">야생 작물</a></li>
+<li><a class="text-muted" href="./wild_fruits.html">야생 과일</a></li>
+<li><a class="text-muted" href="./wild_animals.html">야생동물</a></li></ul></li>
+<li><a class="text-muted" href="../getting_started/">시작하기</a></li>
+<li><a class="text-muted" href="../mechanics/">심화 기술</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">세계</a> / <a class="text-muted" href="#">생물군계</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image92.png" alt="생물군계" />
+            </span>
+            <h4>생물군계</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>세계는 <span style="color:#3E8A00;">생물군계</span>들로 이루어져 있습니다. 생물군계는 대략적인 풍경과 지표면의 물질, 그리고 다른 특징들을 결정합니다. 당신은 바다나 강줄기, 평원이나 언덕과 산 등의 여러 다양한 생물군계들을 탐험해볼 수 있습니다.</p>
+<p>다음 페이지에서는 (전부는 아니지만) 이 세계에서 당신이 찾아볼 수 있는 생물군계들에 대한 정보가 있습니다.</p>
+<h5>평원</h5>
+<p>평원은 고도가 낮은 생물군계로, 언덕과 비슷하지만 해수면 바로 위에 있습니다. 평원은 평평하며 잔디나 꽃, 또는 숲이 있을 수 있습니다.</p>
+<a class="anchor" id="plains"></a>
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image93.png" alt="tfc:textures/gui/book/biomes/plains.png">
+<div style="text-align: center;"><p>평원의 예시.</p>
+</div><a class="anchor" id="hills"></a><h5>언덕 & 구불구불한 언덕</h5>
+<p>언덕과 구불구불한 언덕은 고도가 낮거나 중간 정도인 생물군계로, 일반적으로 평원이나 고도가 높은 생물군계에 접합니다. 이곳에서는 큰 바위와, 드물지만 빈 화산 온천의 흔적을 찾을 수 있습니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image94.png" alt="tfc:textures/gui/book/biomes/rolling_hills_with_river.png">
+<div style="text-align: center;"><p>강이 흐르는 구불구불한 언덕.</p>
+</div><a class="anchor" id="badlands"></a><h5>악지</h5>
+<p>악지는 고도가 중간 정도인 대륙성 생물군계로, 보통 고원이나 산, 또는 구불구불한 언덕 근처에 있습니다. 일반적으로 모래와 사암이 겹겹이 쌓인 능선이 있습니다. 모래의 종류는 빨강/갈색 또는 노랑/하양, 아니면 중간일 수도 있습니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image95.png" alt="tfc:textures/gui/book/biomes/badlands.png">
+<div style="text-align: center;"><p>악지의 예시.</p>
+</div><a class="anchor" id="plateau"></a><h5>고원</h5>
+<p>고원은 고도가 높은 대륙성 생물군계입니다. 고원은 평평하고 풀이 많은 지역이라는 점에서 고도가 높은 평원과 비슷합니다. 고원에서는 흔히 바위들을 찾을 수 있으며, 가끔은 말랐거나 비어있는 온천도 찾을 수 있습니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image96.png" alt="tfc:textures/gui/book/biomes/plateau.png">
+<div style="text-align: center;"><p>깊은 협곡에 강이 흐르는 고원.</p>
+</div><a class="anchor" id="mountains"></a><h5>산</h5>
+<p>고도가 높은 지역에서는 여러 종류의 산들을 찾을 수 있습니다. 오래된 산 생물군계는 더 낮고 완만하지만, 산 생물군계는 바위 절벽으로 높게 뻗어 있습니다. 지질학적 활동이 활발한 곳에 형성된 산에는 온천이 생길 수 있으며, 또한 드물게는 화산이 생깁니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image97.png" alt="tfc:textures/gui/book/biomes/old_mountains.png">
+<div style="text-align: center;"><p>눈 비탈과 그 위에 온천이 있는 오래된 산.</p>
+</div><a class="anchor" id="lowlands"></a><h5>저지대</h5>
+<p>높이 솟은 <a href="../the_world/biomes.html#mountains">산</a>과는 반대로, 저지대는 축축하게 물로 채워진 생물군계입니다. 해수면 이하에서 많은 신선한 물들과 진흙이나 많은 식물도 찾을 수 있습니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image98.png" alt="tfc:textures/gui/book/biomes/lowlands.png">
+<div style="text-align: center;"><p>저지대의 예시.</p>
+</div><a class="anchor" id="low_canyons"></a><h5>낮은 협곡</h5>
+<p>낮은 협곡은 또 다른 저고도의 대륙성 생물군계로, 보통 바다나 다른 고도가 낮은 생물군계에 접합니다. 그곳은 또한 약간의 언덕과 비틀린 연못들이 있는 지역입니다. 낮은 협곡은 지질학적 보호막과 비슷하며, 활동적이지 않은 빈 온천들이 존재할 수도 있습니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image99.png" alt="tfc:textures/gui/book/biomes/low_canyons.png">
+<div style="text-align: center;"><p>낮은 협곡의 예시.</p>
+</div><a class="anchor" id="canyons"></a><h5>협곡</h5>
+<p><a href="../the_world/biomes.html#low_canyons">낮은 협곡</a>과 비슷하게, 협곡은 고도가 중간 정도인 대륙성 생물군계로 약간의 언덕과 비틀린 연못, 호수들이 있는 지역입니다. 이곳은 낮고 완만한 화산들이나 바위, 활동적인 온천들이 자주 보이는 지질학적으로 활발한 지역입니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image100.png" alt="tfc:textures/gui/book/biomes/canyons.png">
+<div style="text-align: center;"><p>근처에 화산이 있는 협곡.</p>
+</div><a class="anchor" id="ocean"></a><h5>바다</h5>
+<p>TerraFirmaCraft의 광대한 바다는 대륙을 서로 분리합니다. 바다의 표면을 본다면 그저 넓게 퍼진 물일 뿐이지만, 아래에서는 다양한 식물, 해양 동물, 그리고 해조류도 찾을 수 있습니다. 추운 기후의 바다에서는 높은 빙산들과 떠다니는 유빙들을 찾을 수도 있습니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image101.png" alt="tfc:textures/gui/book/biomes/ocean.png">
+<div style="text-align: center;"><p>해안가에서 본 바다.</p>
+</div>
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

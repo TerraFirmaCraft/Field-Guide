@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft 도감</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'ko_kr';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft 도감</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">한국어</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/getting_started\a_place_to_sleep.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\a_place_to_sleep.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\a_place_to_sleep.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\a_place_to_sleep.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\a_place_to_sleep.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\a_place_to_sleep.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\a_place_to_sleep.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\a_place_to_sleep.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">색인</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API 뮨서</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">버전 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>목차</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">세계</a></li>
+<li><a class="text-muted" href="../getting_started/">시작하기</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./introduction.html">소개</a></li>
+<li><a class="text-muted" href="./firepit.html">최초의 불</a></li>
+<li><a class="text-muted" href="./pottery.html">도자기</a></li>
+<li><a class="text-muted" href="./pit_kiln.html">구덩이 가마</a></li>
+<li><a class="text-muted" href="./finding_ores.html">광석, 금속 그리고 주조</a></li>
+<li><a class="text-muted" href="./primitive_alloys.html">기초 합금</a></li>
+<li><a class="text-muted" href="./primitive_anvils.html">기초적인 모루</a></li>
+<li><a class="text-muted" href="./building_materials.html">건축 블록</a></li>
+<li><a class="text-muted" href="./a_place_to_sleep.html">잠자리</a></li>
+<li><a class="text-muted" href="./size_and_weight.html">크기와 무게</a></li>
+<li><a class="text-muted" href="./food_and_water.html">음식과 물</a></li></ul></li>
+<li><a class="text-muted" href="../mechanics/">심화 기술</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">시작하기</a> / <a class="text-muted" href="#">잠자리</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="중간 크기 생가죽">
+                <img src="..\..\_images\item1.png" alt="잠자리" />
+            </span>
+            <h4>잠자리</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>사실은 아직 잠은 못 잡니다! <span style="color:#3E8A00;">짚단 침대</span>는 원시적인 침대로 밤을 보낼 수는 없습니다. 대신, 스폰 지점을 설정할 수는 있습니다. 짚단 침대를 만들려면 2개의 <span style="color:#3E8A00;">짚단</span>블록을 가로로 나란히 설치하고, <span style="color:#3E8A00;">큰 생가죽</span>을 우클릭하세요. 큰 생가죽은 <span style="color:#3E8A00;">곰</span>이나 <span style="color:#3E8A00;">소</span> 같은 큰 동물들에게서 드롭됩니다.</p>
+<h5>짚단 침대</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p>완성된 짚단 침대.</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

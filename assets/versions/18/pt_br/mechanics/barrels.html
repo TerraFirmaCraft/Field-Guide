@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'pt_br';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portuguese (Brazil)</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/mechanics\barrels.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\barrels.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\barrels.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\barrels.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\barrels.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\barrels.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\barrels.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\barrels.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">O mundo</a></li>
+<li><a class="text-muted" href="../getting_started/">Começando</a></li>
+<li><a class="text-muted" href="../mechanics/">Mecânica avançada</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./advanced_building_materials.html">Materiais avançados</a></li>
+<li><a class="text-muted" href="./animal_husbandry.html">Animal Husbandry</a></li>
+<li><a class="text-muted" href="./anvils.html">Anvils</a></li>
+<li><a class="text-muted" href="./aqueducts.html">Aqueducts</a></li>
+<li><a class="text-muted" href="./armor.html">Armor</a></li>
+<li><a class="text-muted" href="./barrels.html">Barrels</a></li>
+<li><a class="text-muted" href="./bellows.html">Bellows</a></li>
+<li><a class="text-muted" href="./blast_furnace.html">Blast Furnace</a></li>
+<li><a class="text-muted" href="./bloomery.html">Bloomery</a></li>
+<li><a class="text-muted" href="./bread.html">Bread</a></li>
+<li><a class="text-muted" href="./charcoal_forge.html">Charcoal Forge</a></li>
+<li><a class="text-muted" href="./charcoal_pit.html">Charcoal Pit</a></li>
+<li><a class="text-muted" href="./chisel.html">Chisel</a></li>
+<li><a class="text-muted" href="./composter.html">Composter</a></li>
+<li><a class="text-muted" href="./crops.html">Crops</a></li>
+<li><a class="text-muted" href="./crucible.html">Crucible</a></li>
+<li><a class="text-muted" href="./dairy.html">Dairy Products</a></li>
+<li><a class="text-muted" href="./damage_types.html">Damage Types</a></li>
+<li><a class="text-muted" href="./decay.html">Preservation</a></li>
+<li><a class="text-muted" href="./fertilizers.html">Fertilizers</a></li>
+<li><a class="text-muted" href="./fire_clay.html">Fire Clay</a></li>
+<li><a class="text-muted" href="./fishing.html">Fishing</a></li>
+<li><a class="text-muted" href="./flux.html">Flux</a></li>
+<li><a class="text-muted" href="./gems.html">Gems</a></li>
+<li><a class="text-muted" href="./grill.html">Firepit And Grill</a></li>
+<li><a class="text-muted" href="./heating.html">Heating</a></li>
+<li><a class="text-muted" href="./hydration.html">Keeping Hydrated</a></li>
+<li><a class="text-muted" href="./lamps.html">Lamps</a></li>
+<li><a class="text-muted" href="./leather_making.html">Leather Making</a></li>
+<li><a class="text-muted" href="./lighting.html">Light Sources</a></li>
+<li><a class="text-muted" href="./minecarts.html">Minecarts</a></li>
+<li><a class="text-muted" href="./panning.html">Panning</a></li>
+<li><a class="text-muted" href="./papermaking.html">Papermaking</a></li>
+<li><a class="text-muted" href="./pets.html">Pets</a></li>
+<li><a class="text-muted" href="./pot.html">Firepit And Pot</a></li>
+<li><a class="text-muted" href="./powderkegs.html">Powderkegs</a></li>
+<li><a class="text-muted" href="./prospecting.html">Prospecting</a></li>
+<li><a class="text-muted" href="./quern.html">Quern</a></li>
+<li><a class="text-muted" href="./salad.html">Salads</a></li>
+<li><a class="text-muted" href="./sandwiches.html">Sandwiches</a></li>
+<li><a class="text-muted" href="./scribing_table.html">Scribing Table</a></li>
+<li><a class="text-muted" href="./sluices.html">Sluices</a></li>
+<li><a class="text-muted" href="./steel.html">Steel</a></li>
+<li><a class="text-muted" href="./support_beams.html">Support Beams</a></li>
+<li><a class="text-muted" href="./weaving.html">Weaving</a></li>
+<li><a class="text-muted" href="./wooden_buckets.html">Wooden Buckets</a></li></ul></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">Mecânica avançada</a> / <a class="text-muted" href="#">Barrels</a></em></p>
+            
+                <h4><h4>Barrels</h4></h4>
+                <hr>
+                <p>The <span style="color:#3E8A00;">Barrel</span> is a device that can hold both items and fluids. The central slot is used to hold items. Fluids are shown in the tank on the left side, and can be added to the barrel by placing a filled <span style="color:#3E8A00;">bucket</span> or <span style="color:#3E8A00;">jug</span> in the top left slot. They can be removed by placing an empty fluid container in the same slot. Using <span style="color:#b0b;">Right Click</span> on the block with a bucket also works.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image45.png" alt="tfc:textures/gui/book/gui/barrel.png">
+<div style="text-align: center;"><p>The barrel interface.</p>
+</div><p>Barrels can be <span style="color:#3E8A00;">Sealed</span>. Sealing allows the barrel to be broken while keeping its contents stored. It also allows for the execution of some recipes. In the interface, sealing can be toggled with the grey button on the right side. Using <span style="color:#b0b;">Right Click</span> on the barrel with an empty hand while holding <span style="color:#b0b;">Shift</span> also toggles the seal.</p>
+<h5>Barrel Tips</h5>
+<p></p>
+<ul>
+	<li>Barrels can be filled by clicking an empty one on a fluid block in the world.</li>
+	<li>Barrels will slowly fill up with water in the rain.</li>
+	<li>Icicles melting above barrels also adds water to them.</li>
+	<li>Sealing a barrel will eject items that are not in the center slot.</li>
+</ul>
+<h5>Crafting</h5>
+<p>Barrels are an important device used for mixing various fluids and items together. To use a <span style="color:#3E8A00;">Barrel</span> recipe, the barrel must be filled with the correct ratio of fluid and items required. Depending on the recipe, it may need to be <span style="color:#3E8A00;">Sealed</span> for a period of time to allow the contents to transform.</p>
+<p>If the contents of a barrel does not match the ratio required for the recipe, any excess fluid or items will be lost. If the recipe is one which converts instantly, however, you will always need at least enough items to fully convert the fluid, according to the recipe.</p>
+<a class="anchor" id="limewater"></a>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/2to2.png" />
+            
+        <div class="crafting-recipe-item two-recipe-pos-1">
+            <span href="#" data-toggle="tooltip" title="Fluxo" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\item54.png" />
+            
+        </div>
+        
+            
+        <div class="crafting-recipe-item two-recipe-pos-2">
+            <span href="#" data-toggle="tooltip" title="Água" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\fluid1.png" />
+            
+        </div>
+        
+            
+            
+        <div class="crafting-recipe-item two-recipe-pos-4">
+            <span href="#" data-toggle="tooltip" title="Limewater" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\fluid2.png" />
+            
+        </div>
+        
+            
+        </div>
+    </div>
+    <a class="anchor" id="tannin"></a>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/2to2.png" />
+            
+        <div class="crafting-recipe-item two-recipe-pos-1">
+            <span href="#" data-toggle="tooltip" title="Tag: #tfc:makes_tannin" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\item55.gif" />
+            
+        </div>
+        
+            
+        <div class="crafting-recipe-item two-recipe-pos-2">
+            <span href="#" data-toggle="tooltip" title="Água" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\fluid1.png" />
+            
+        </div>
+        
+            
+            
+        <div class="crafting-recipe-item two-recipe-pos-4">
+            <span href="#" data-toggle="tooltip" title="Tannin" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\fluid3.png" />
+            
+        </div>
+        
+            
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>8000 Ticks</p>
+        </div>
+        
+        </div>
+    </div>
+    <p>A couple barrel recipes operate by mixing two fluids at a certain ratio. This is done by taking a filled bucket of one of the ingredients, and putting it in the fluid addition slot of a barrel that has the required amount of the other fluid. This is done for making <span style="color:#3E8A00;">Milk Vinegar</span>, where <span style="color:#3E8A00;">Vinegar</span> is added to <span style="color:#3E8A00;">Milk</span> at a 9:1 ratio. Vinegar is also added in the same ratio to <span style="color:#3E8A00;">Salt Water</span> to make <span style="color:#3E8A00;">Brine</span>.</p>
+<p>Barrels have the ability to cool <a href="../mechanics/heating.html">hot</a> items. Put a hot item in a barrel of <span style="color:#3E8A00;">Water</span>, <span style="color:#3E8A00;">Olive Oil</span>, or <span style="color:#3E8A00;">Salt Water</span>, and it will quickly bring its temperature down.</p>
+<p>Barrels have the ability to <span style="color:#3E8A00;">Dye</span> and <span style="color:#3E8A00;">Bleach</span> items. Dye fluids are made by boiling a single dye item in a <a href="../mechanics/pot.html">Pot</a>. Most color-able things, like carpet, candles, and <a href="../mechanics/advanced_building_materials.html#alabaster">Alabaster</a> can be dyed by sealing them in a barrel of dye. Dyed items can also be bleached by sealing them in a barrel of <span style="color:#3E8A00;">Lye</span>. Lye is made by boiling <span style="color:#3E8A00;">Wood Ash</span>, a product of breaking <a href="../getting_started/firepit.html">Firepits</a>, in a <a href="../mechanics/pot.html">Pot</a> of Water.</p>
+<p>Barrels can preserve items in <span style="color:#3E8A00;">Vinegar</span>. Vinegar is made by sealing <span style="color:#3E8A00;">Fruit</span> in a barrel of <span style="color:#3E8A00;">Alcohol</span>. For information on how that process works, see the relevant <a href="../mechanics/decay.html#vinegar">page</a>.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="Andaime" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Barrel Rack" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>Barrels placed against the side of a block work the same as vertical barrels, but have restrictions on placement. For example, they must have a <span style="color:#3E8A00;">Barrel Rack</span> added to them with <span style="color:#b0b;">Right Click</span> in order to have another sideways barrel above them.</p>
+<h5>Sideways Barrels</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Sideways barrels show their sealed state using the <span style="color:#3E8A00;">Tap</span>. If the tap is sideways, it is sealed.</p>
+<p>Unsealed sideways barrels automatically drain their fluid into open barrels (and other fluid containers) placed below the tap. The block the tap extends into must be a free air block in order for fluid to be able to drain.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image46.png" alt="tfc:textures/gui/book/tutorial/barrel_drip.png">
+<div style="text-align: center;"><p>A barrel dripping.</p>
+</div>
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

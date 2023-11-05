@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'zh_hk';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">繁體中文（香港特別行政區)</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/the_world/" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world/" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world/" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world/" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world/" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world/" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world/" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world/" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">這個世界</a></li><ul class="list-unstyled push-right"><li><a class="text-muted" href="./biomes.html">生物羣系</a></li>
+<li><a class="text-muted" href="./waterways.html">河流流向何方？</a></li>
+<li><a class="text-muted" href="./geology.html">地質學</a></li>
+<li><a class="text-muted" href="./ores_and_minerals.html">礦石和礦物</a></li>
+<li><a class="text-muted" href="./climate.html">曆法和氣候</a></li>
+<li><a class="text-muted" href="./flora.html">自然植物</a></li>
+<li><a class="text-muted" href="./wild_crops.html">野生作物</a></li>
+<li><a class="text-muted" href="./wild_fruits.html">野生水果</a></li>
+<li><a class="text-muted" href="./wild_animals.html">野生動物</a></li></ul>
+<li><a class="text-muted" href="../getting_started/">新手入門</a></li>
+<li><a class="text-muted" href="../mechanics/">進階內容</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="#">這個世界</a></em></p>
+            
+                <h4>這個世界</h4><p><p>深入瞭解你周圍的大自然。</p>
+</p>
+                <hr>
+                <div class="card-columns">
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image92.png" alt="生物羣系" />
+            </span>
+            <a href="biomes.html">生物羣系</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image105.png" alt="河流流向何方？" />
+            </span>
+            <a href="waterways.html">河流流向何方？</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="天然頁巖">
+                <img src="..\..\_images\item211.png" alt="地質學" />
+            </span>
+            <a href="geology.html">地質學</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="赤鐵礦">
+                <img src="..\..\_images\item212.png" alt="礦石和礦物" />
+            </span>
+            <a href="ores_and_minerals.html">礦石和礦物</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image102.png" alt="曆法和氣候" />
+            </span>
+            <a href="climate.html">曆法和氣候</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="一枝黃花">
+                <img src="..\..\_images\item210.png" alt="自然植物" />
+            </span>
+            <a href="flora.html">自然植物</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image108.png" alt="野生作物" />
+            </span>
+            <a href="wild_crops.html">野生作物</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image109.png" alt="野生水果" />
+            </span>
+            <a href="wild_fruits.html">野生水果</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="中塊獸皮">
+                <img src="..\..\_images\item1.png" alt="野生動物" />
+            </span>
+            <a href="wild_animals.html">野生動物</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+                </div>
+            
+        </div>
+    </div>
+</div>
+</body>
+</html>

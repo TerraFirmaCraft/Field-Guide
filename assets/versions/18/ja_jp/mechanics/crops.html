@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'ja_jp';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">日本語</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/mechanics\crops.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\crops.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\crops.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\crops.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\crops.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\crops.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\crops.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\crops.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">世界</a></li>
+<li><a class="text-muted" href="../getting_started/">はじめに</a></li>
+<li><a class="text-muted" href="../mechanics/">高度な加工</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./advanced_building_materials.html">高度な素材</a></li>
+<li><a class="text-muted" href="./animal_husbandry.html">牧畜</a></li>
+<li><a class="text-muted" href="./anvils.html">金床</a></li>
+<li><a class="text-muted" href="./aqueducts.html">用水路</a></li>
+<li><a class="text-muted" href="./armor.html">防具</a></li>
+<li><a class="text-muted" href="./barrels.html">樽</a></li>
+<li><a class="text-muted" href="./bellows.html">ふいご</a></li>
+<li><a class="text-muted" href="./blast_furnace.html">高炉</a></li>
+<li><a class="text-muted" href="./bloomery.html">塊鉄炉</a></li>
+<li><a class="text-muted" href="./bread.html">パン</a></li>
+<li><a class="text-muted" href="./charcoal_forge.html">溶鉱炉</a></li>
+<li><a class="text-muted" href="./charcoal_pit.html">伏せ焼き</a></li>
+<li><a class="text-muted" href="./chisel.html">ノミ</a></li>
+<li><a class="text-muted" href="./composter.html">コンポスター</a></li>
+<li><a class="text-muted" href="./crops.html">作物</a></li>
+<li><a class="text-muted" href="./crucible.html">るつぼ</a></li>
+<li><a class="text-muted" href="./dairy.html">乳製品</a></li>
+<li><a class="text-muted" href="./damage_types.html">ダメージタイプ</a></li>
+<li><a class="text-muted" href="./decay.html">保存</a></li>
+<li><a class="text-muted" href="./fertilizers.html">肥料</a></li>
+<li><a class="text-muted" href="./fire_clay.html">耐火粘土</a></li>
+<li><a class="text-muted" href="./fishing.html">釣り</a></li>
+<li><a class="text-muted" href="./flux.html">融剤</a></li>
+<li><a class="text-muted" href="./gems.html">宝石</a></li>
+<li><a class="text-muted" href="./grill.html">焚き火とグリル</a></li>
+<li><a class="text-muted" href="./heating.html">加熱</a></li>
+<li><a class="text-muted" href="./hydration.html">潤いを保つ</a></li>
+<li><a class="text-muted" href="./lamps.html">ランプ</a></li>
+<li><a class="text-muted" href="./leather_making.html">革の作成</a></li>
+<li><a class="text-muted" href="./lighting.html">光源</a></li>
+<li><a class="text-muted" href="./minecarts.html">トロッコ</a></li>
+<li><a class="text-muted" href="./panning.html">パンニング</a></li>
+<li><a class="text-muted" href="./papermaking.html">紙の作成</a></li>
+<li><a class="text-muted" href="./pets.html">ペット</a></li>
+<li><a class="text-muted" href="./pot.html">焚き火とポット</a></li>
+<li><a class="text-muted" href="./powderkegs.html">火薬樽</a></li>
+<li><a class="text-muted" href="./prospecting.html">探鉱</a></li>
+<li><a class="text-muted" href="./quern.html">石臼</a></li>
+<li><a class="text-muted" href="./salad.html">サラダ</a></li>
+<li><a class="text-muted" href="./sandwiches.html">サンドイッチ</a></li>
+<li><a class="text-muted" href="./scribing_table.html">筆記台</a></li>
+<li><a class="text-muted" href="./sluices.html">堰</a></li>
+<li><a class="text-muted" href="./steel.html">鋼</a></li>
+<li><a class="text-muted" href="./support_beams.html">梁</a></li>
+<li><a class="text-muted" href="./weaving.html">機織り</a></li>
+<li><a class="text-muted" href="./wooden_buckets.html">木のバケツ</a></li></ul></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">高度な加工</a> / <a class="text-muted" href="#">作物</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image56.png" alt="作物" />
+            </span>
+            <h4>作物</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>作物は食料やその他の材料の供給源です。 それぞれの作物はわずかに異なりますが、すべての作物にはいくつかの類似した特徴があります。 作物の栽培を始めるには、<span style="color:#3E8A00;">種</span> が必要になります。<a href="../the_world/wild_crops.html">自生作物</a> を見つけて壊すことで入手できます。 種を持っている場合は、<span style="color:#3E8A00;">クワ</span> も必要になります。 種子は <a href="../mechanics/fishing.html">餌</a> としても役立ちます。</p>
+<p>自生作物を見つけるだけでなく、すでに育てている作物から種子を入手することもできます。 完全に成熟した作物が天候によって、または放置しておくと枯れ、種子となり、次の時期にさらに多くの作物を育てるために使用できる多くの種子を落とします。</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image14.png" alt="Recipe: tfc:rock_knapping/hoe_head_sedimentary">
+<p>まず <span style="color:#3E8A00;">石のクワ</span> を <span style="color:#3E8A00;">ナッピング</span> して作成します。</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="石のクワの頭" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item84.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item16.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="石のクワ" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item83.png" />
+                </div>
+            </div>
+        </div>
+        <p>鍬の頭をナッピングしたら、バニラと同様に土ブロックを右クリックして <span style="color:#3E8A00;">農地</span> に耕すことができます。<br/>
+<br/>
+クワは、<span style="color:#3E8A00;">根付いた土</span>など を <span style="color:#3E8A00;">土</span> に変換するために使用することもできます。</p>
+<h5>作物の成長</h5>
+<p>すべての作物は成長するために農地に植える必要があります。 作物によっては、水に浸したり、成長するために支柱が必要になるなど、追加の要件があります。<br/>
+<br/>
+作物は成長するために必ずしも <span style="color:#3E8A00;">栄養素</span> を必要としませんが、確かに栄養素の存在は作物の健やかな成長に役立ちます。 <span style="color:#55FFFF;">窒素</span>、<span style="color:#FFAA00;">リン</span>、<span style="color:#FF55FF;">カリウム</span>の3つの栄養素があります。 それぞれの作物には適した栄養素があります。</p>
+<p>好物の栄養素を与えると作物の成長が早くなり、収穫時の作物の収量が向上します。 つまり、より多くの栄養素を消費した作物は、収穫したときより多くの食物を落とすことになります。 栄養素を与えると、他の栄養素を少量補充する効果もあります。</p>
+<a class="anchor" id="barley"></a><h5>大麦</h5>
+<p><strong><a href="../the_world/climate.html#temperature">温度</a></strong>: -8 - 26 °C<br/>
+<strong><a href="../mechanics/hydration.html">水分量</a></strong>: 18 - 75 %<br/>
+<strong>栄養素</strong>: 窒素<br/>
+<br/>
+大麦は単一ブロック作物です。 大麦の種は農地に植えることができ、<span style="color:#3E8A00;">大麦</span> と <span style="color:#3E8A00;">大麦の種</span> を生産します。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block4.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="oat"></a><h5>オーツ麦</h5>
+<p><strong><a href="../the_world/climate.html#temperature">温度</a></strong>: 3 - 40 °C<br/>
+<strong><a href="../mechanics/hydration.html">水分量</a></strong>: 35 - 100 %<br/>
+<strong>栄養素</strong>: リン<br/>
+<br/>
+オーツ麦は単一ブロック作物です。 オーツ麦の種は農地に植えることができ、<span style="color:#3E8A00;">オーツ麦</span> と <span style="color:#3E8A00;">オーツ麦の種() を生産します。</span></p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block5.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="rye"></a><h5>ライ麦</h5>
+<p><strong><a href="../the_world/climate.html#temperature">温度</a></strong>: -11 - 30 °C<br/>
+<strong><a href="../mechanics/hydration.html">水分量</a></strong>: 25 - 85 %<br/>
+<strong>栄養素</strong>: リン<br/>
+<br/>
+ライ麦は単一ブロック作物です。 ライ麦の種は農地に植えることができ、<span style="color:#3E8A00;">ライ麦</span> と <span style="color:#3E8A00;">ライ麦の種</span> が生産されます。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block6.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="maize"></a><h5>トウモロコシ</h5>
+<p><strong><a href="../the_world/climate.html#temperature">温度</a></strong>: 13 - 40 °C<br/>
+<strong><a href="../mechanics/hydration.html">水分量</a></strong>: 75 - 100 %<br/>
+<strong>栄養素</strong>: リン<br/>
+<br/>
+トウモロコシは 2 ブロックの高さの作物です。 トウモロコシの種は農地に植えることができ、2 ブロックの高さに成長し、<span style="color:#3E8A00;">トウモロコシ</span> と <span style="color:#3E8A00;">トウモロコシの種</span> を生産します。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p></p>
+<a class="anchor" id="wheat"></a><h5>小麦</h5>
+<p><strong><a href="../the_world/climate.html#temperature">温度</a></strong>: -4 - 35 °C<br/>
+<strong><a href="../mechanics/hydration.html">水分量</a></strong>: 25 - 100 %<br/>
+<strong>栄養素</strong>: リン<br/>
+<br/>
+小麦は単一ブロック作物です。 小麦の種は農地に植えることができ、製品として <span style="color:#3E8A00;">小麦</span> と <span style="color:#3E8A00;">小麦の種</span> を生産します。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block7.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="rice"></a><h5>米</h5>
+<p><strong><a href="../the_world/climate.html#temperature">温度</a></strong>: 15 - 30 °C<br/>
+<strong><a href="../mechanics/hydration.html">水分量</a></strong>: 25 - 100 %<br/>
+<strong>栄養素</strong>: リン<br/>
+<br/>
+米は単一ブロック作物です。 米は水中で栽培します。1ブロックの深さの淡水の農地に植えられなければなりません。 <span style="color:#3E8A00;">米</span> と <span style="color:#3E8A00;">米の種</span> が生産されます。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block8.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>注: 成長するには、米ブロックが <span style="color:#3E8A00;">水浸し</span> でなければなりません。</p>
+</div><a class="anchor" id="beet"></a><h5>ビーツ</h5>
+<p><strong><a href="../the_world/climate.html#temperature">温度</a></strong>: -5 - 20 °C<br/>
+<strong><a href="../mechanics/hydration.html">水分量</a></strong>: 18 - 85 %<br/>
+<strong>栄養素</strong>: カリウム<br/>
+<br/>
+ビーツは単一ブロック作物です。 ビーツの種は農地に植えることができ、<span style="color:#3E8A00;">ビーツ</span> および <span style="color:#3E8A00;">ビーツの種</span> を生産します。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block9.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="cabbage"></a><h5>キャベツ</h5>
+<p><strong><a href="../the_world/climate.html#temperature">温度</a></strong>: -10 - 27 °C<br/>
+<strong><a href="../mechanics/hydration.html">水分量</a></strong>: 15 - 65 %<br/>
+<strong>栄養素</strong>: 窒素<br/>
+<br/>
+キャベツは単一ブロック作物です。 キャベツの種は農地に植えることができ、<span style="color:#3E8A00;">キャベツ</span> と <span style="color:#3E8A00;">キャベツの種</span> を生産します。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block10.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="carrot"></a><h5>ニンジン</h5>
+<p><strong><a href="../the_world/climate.html#temperature">温度</a></strong>: 3 - 30 °C<br/>
+<strong><a href="../mechanics/hydration.html">水分量</a></strong>: 25 - 100 %<br/>
+<strong>栄養素</strong>: カリウム<br/>
+<br/>
+ニンジンは単一ブロック作物です。 ニンジンの種は農地に植えることができ、<span style="color:#3E8A00;">ニンジン</span> と <span style="color:#3E8A00;">ニンジンの種</span> が生産されます。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block11.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="garlic"></a><h5>ニンニク</h5>
+<p><strong><a href="../the_world/climate.html#temperature">温度</a></strong>: -20 - 18 °C<br/>
+<strong><a href="../mechanics/hydration.html">水分量</a></strong>: 15 - 75 %<br/>
+<strong>栄養素</strong>: 窒素<br/>
+<br/>
+ニンニクは単一ブロック作物です。 ニンニクの種は農地に植えることができ、<span style="color:#3E8A00;">ニンニク</span> と <span style="color:#3E8A00;">ニンニクの種</span> が生産されます。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block12.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="green_bean"></a><h5>インゲン</h5>
+<p><strong><a href="../the_world/climate.html#temperature">温度</a></strong>: 2 - 35 °C<br/>
+<strong><a href="../mechanics/hydration.html">水分量</a></strong>: 38 - 100 %<br/>
+<strong>栄養素</strong>: 窒素<br/>
+<br/>
+インゲンは2ブロックの高さのつる性の作物です。 インゲンの種は農地に植えることができ、棒がある場合は 2 ブロックの高さに成長し、<span style="color:#3E8A00;">インゲン</span> と <span style="color:#3E8A00;">いんげんの種</span> を生産します。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>作物が十分に成長するためには棒が必要です。</p>
+<a class="anchor" id="potato"></a><h5>ジャガイモ</h5>
+<p><strong><a href="../the_world/climate.html#temperature">温度</a></strong>: -1 - 37 °C<br/>
+<strong><a href="../mechanics/hydration.html">水分量</a></strong>: 50 - 100 %<br/>
+<strong>栄養素</strong>: カリウム<br/>
+<br/>
+ジャガイモは単一ブロック作物です。 ジャガイモの種は農地に植えることができ、<span style="color:#3E8A00;">ジャガイモ</span> と <span style="color:#3E8A00;">ジャガイモの種</span> が生産されます。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block13.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="pumpkin"></a><h5>ぺポカボチャ</h5>
+<p><strong><a href="../the_world/climate.html#temperature">温度</a></strong>: 0 - 30 °C<br/>
+<strong><a href="../mechanics/hydration.html">水分量</a></strong>: 30 - 80 %<br/>
+<strong>栄養素</strong>: リン<br/>
+<br/>
+ぺポカボチャは広がる作物です。 ぺポカボチャの種は農地に植えることができ、成熟するとその隣の地面に最大 2 個の <span style="color:#3E8A00;">カボチャブロック</span> を置きます。 カボチャブロックを収穫し、植物が再び成長すると、より多くのぺポカボチャを育てることができます。 ぺポカボチャは <a href="../mechanics/lighting.html#jack_o_lanterns">ジャック・オ・ランタン</a> に加工することができます。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p></p>
+<a class="anchor" id="melon"></a><h5>スイカ</h5>
+<p><strong><a href="../the_world/climate.html#temperature">温度</a></strong>: 5 - 37 °C<br/>
+<strong><a href="../mechanics/hydration.html">水分量</a></strong>: 75 - 100 %<br/>
+<strong>栄養素</strong>: リン<br/>
+<br/>
+スイカは広がる作物です。 スイカの種は農地に植えることができ、熟すまでその隣の地面に最大 2 つの <span style="color:#3E8A00;">スイカブロック</span> を置きます。 スイカを収穫し、植物が再び成長すると、より多くのスイカが成長します。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p></p>
+<a class="anchor" id="onion"></a><h5>タマネギ</h5>
+<p><strong><a href="../the_world/climate.html#temperature">温度</a></strong>: 0 - 30 °C<br/>
+<strong><a href="../mechanics/hydration.html">水分量</a></strong>: 25 - 90 %<br/>
+<strong>栄養素</strong>: 窒素<br/>
+<br/>
+タマネギは単一ブロック作物です。 タマネギの種は農地に植えることができ、製品として <span style="color:#3E8A00;">タマネギ</span> と <span style="color:#3E8A00;">タマネギの種</span> が生産されます。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block14.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="soybean"></a><h5>大豆</h5>
+<p><strong><a href="../the_world/climate.html#temperature">温度</a></strong>: 8 - 30 °C<br/>
+<strong><a href="../mechanics/hydration.html">水分量</a></strong>: 40 - 100 %<br/>
+<strong>栄養素</strong>: 窒素<br/>
+<br/>
+大豆は単一ブロック作物です。 大豆の種は農地に植えることができ、製品として <span style="color:#3E8A00;">大豆</span> と <span style="color:#3E8A00;">大豆の種</span> が生産されます。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block15.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="squash"></a><h5>カボチャ</h5>
+<p><strong><a href="../the_world/climate.html#temperature">温度</a></strong>: 5 - 33 °C<br/>
+<strong><a href="../mechanics/hydration.html">水分量</a></strong>: 23 - 95 %<br/>
+<strong>栄養素</strong>: カリウム<br/>
+<br/>
+カボチャは単一ブロック作物です。 スカッシュの種は農地に植えることができ、<span style="color:#3E8A00;">カボチャ</span> と <span style="color:#3E8A00;">カボチャの種</span> を生産します。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block16.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="sugarcane"></a><h5>サトウキビ</h5>
+<p><strong><a href="../the_world/climate.html#temperature">温度</a></strong>: 12 - 38 °C<br/>
+<strong><a href="../mechanics/hydration.html">水分量</a></strong>: 40 - 100 %<br/>
+<strong>栄養素</strong>: カリウム<br/>
+<br/>
+サトウキビは 2 ブロックの高さの作物です。 サトウキビの種は農地に植えることができ、2 ブロックの高さに成長し、<span style="color:#3E8A00;">サトウキビ</span> と <span style="color:#3E8A00;">サトウキビの種</span> を生産します。 サトウキビを使って <span style="color:#3E8A00;">砂糖</span> を作ることができます。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p></p>
+<a class="anchor" id="tomatoes"></a><h5>トマト</h5>
+<p><strong><a href="../the_world/climate.html#temperature">温度</a></strong>: 0 - 36 °C<br/>
+<strong><a href="../mechanics/hydration.html">水分量</a></strong>: 30 - 95 %<br/>
+<strong>栄養素</strong>: カリウム<br/>
+<br/>
+トマトは2ブロックの高さのつる性の作物です。 トマトの種は農地に植えることができ、棒がある場合は 2 ブロックの高さに成長し、<span style="color:#3E8A00;">トマト</span> と <span style="color:#3E8A00;">トマトの種</span> を生産します。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>作物が十分に成長するためには棒が必要です。</p>
+<a class="anchor" id="jute"></a><h5>ジュート</h5>
+<p><strong><a href="../the_world/climate.html#temperature">温度</a></strong>: 5 - 37 °C<br/>
+<strong><a href="../mechanics/hydration.html">水分量</a></strong>: 25 - 100 %<br/>
+<strong>栄養素</strong>: カリウム<br/>
+<br/>
+ジュートは2ブロックの高さの作物です。 ジュートの種は農地に植えることができ、2 ブロックの高さに成長し、<span style="color:#3E8A00;">ジュート</span> と <span style="color:#3E8A00;">ジュートの種</span> を生産します。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p></p>
+<a class="anchor" id="papyrus"></a><h5>カミガヤツリ</h5>
+<p><strong><a href="../the_world/climate.html#temperature">温度</a></strong>: 19 - 37 °C<br/>
+<strong><a href="../mechanics/hydration.html">水分量</a></strong>: 70 - 100 %<br/>
+<strong>栄養素</strong>: カリウム<br/>
+<br/>
+カミガヤツリは2ブロックの高さの作物です。 カミガヤツリの種は農地に植えることができ、2 ブロックの高さに成長し、<a href="../mechanics/papermaking.html">カミガヤツリ</a> と <span style="color:#3E8A00;">カミガヤツリの種</span> を生産します。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p></p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

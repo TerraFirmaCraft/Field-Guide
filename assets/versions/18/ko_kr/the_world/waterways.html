@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft 도감</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'ko_kr';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft 도감</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">한국어</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/the_world\waterways.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world\waterways.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world\waterways.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world\waterways.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world\waterways.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world\waterways.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world\waterways.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world\waterways.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">색인</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API 뮨서</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">버전 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>목차</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">세계</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./biomes.html">생물군계</a></li>
+<li><a class="text-muted" href="./waterways.html">강이 흐르는 곳에서</a></li>
+<li><a class="text-muted" href="./geology.html">지질학</a></li>
+<li><a class="text-muted" href="./ores_and_minerals.html">광석과 광물</a></li>
+<li><a class="text-muted" href="./climate.html">달력과 기후</a></li>
+<li><a class="text-muted" href="./flora.html">식물</a></li>
+<li><a class="text-muted" href="./wild_crops.html">야생 작물</a></li>
+<li><a class="text-muted" href="./wild_fruits.html">야생 과일</a></li>
+<li><a class="text-muted" href="./wild_animals.html">야생동물</a></li></ul></li>
+<li><a class="text-muted" href="../getting_started/">시작하기</a></li>
+<li><a class="text-muted" href="../mechanics/">심화 기술</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">세계</a> / <a class="text-muted" href="#">강이 흐르는 곳에서</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image105.png" alt="강이 흐르는 곳에서" />
+            </span>
+            <h4>강이 흐르는 곳에서</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>여러분이 탐험하는 동안 강, 호수, 또는 바다와 같은 넓은 물을 만나게 될 수도 있습니다. 강과 호수는 <span style="color:#3E8A00;">민물</span>로 이루어져 있지만, 바다는 <span style="color:#3E8A00;">바닷물</span>로 이루어져 있습니다. 민물을 마시면 갈증이 해소되지만, 바닷물을 마시면 시간이 지날수록 갈증이 더 심해집니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image106.png" alt="tfc:textures/gui/book/biomes/river.png">
+<div style="text-align: center;"><p>강.</p>
+</div><p>TerraFirmaCraft의 강은 <span style="color:#3E8A00;">흐름</span>이 있습니다. 강의 흐름은 흐르는 물과 같이 아이템이나 플레이어, 엔티티들을 밀어냅니다. 강의 흐름은 궁극적으로는 <a href="../the_world/biomes.html#ocean">바다</a>로 향하며, 그 과정에서 다른 물줄기와 합쳐질 수도 있습니다. 때때로 강이 지하로 사라질 때가 있고, 심지어 드물게는 지하의 넓은 동굴 호수를 볼 수도 있지만, 강은 결국 언젠가는 바다로 이어집니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image107.png" alt="tfc:textures/gui/book/biomes/underground_river.png">
+<div style="text-align: center;"><p>지하 강의 일부분.</p>
+</div><a class="anchor" id="ore_deposits"></a><h5>광석 침전물</h5>
+<p>강이나 호수에서는 또한 몇몇 자원들을 발견할 수도 있습니다. 첫 번째는 작은 광석 침전물입니다. 작은 광석 점이 박힌 자갈을 강이나 호수의 바닥에서 찾을 수 있습니다. 이 자갈들은 <a href="../mechanics/panning.html">사금질</a>을 하여 적은 양의 광석을 얻을 수 있습니다. 자연동, 자연은, 자연은, 그리고 주석석을 이 방법으로 찾을 수 있습니다.</p>
+<h5>예시</h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block17.png" alt="Block Visualization">
+<div style="text-align: center;"><p>점판암 속의 자연금 침전물.</p>
+</div><a class="anchor" id="gemstones"></a><h5>보석 원석</h5>
+<p>호수는 자갈 속 광석 침전물 뿐 아니라, 몇몇 보석들 또한 숨길 수 있습니다. 자수정이나 오팔은 이러한 방식으로 호수 및 강 아래의 땅 또는 광맥에서 발견될 수 있습니다.</p>
+<h5>예시</h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block45.png" alt="Block Visualization">
+<div style="text-align: center;"><p>석회암 속의 자수정 광석.</p>
+</div>
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

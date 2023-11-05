@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'ja_jp';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">日本語</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/the_world\biomes.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world\biomes.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world\biomes.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world\biomes.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world\biomes.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world\biomes.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world\biomes.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world\biomes.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">世界</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./biomes.html">バイオーム</a></li>
+<li><a class="text-muted" href="./waterways.html">川が流れる場所</a></li>
+<li><a class="text-muted" href="./geology.html">地質</a></li>
+<li><a class="text-muted" href="./ores_and_minerals.html">鉱石とミネラル</a></li>
+<li><a class="text-muted" href="./climate.html">暦と気候</a></li>
+<li><a class="text-muted" href="./flora.html">植物</a></li>
+<li><a class="text-muted" href="./wild_crops.html">自生植物</a></li>
+<li><a class="text-muted" href="./wild_fruits.html">自生果樹</a></li>
+<li><a class="text-muted" href="./wild_animals.html">野生動物</a></li></ul></li>
+<li><a class="text-muted" href="../getting_started/">はじめに</a></li>
+<li><a class="text-muted" href="../mechanics/">高度な加工</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">世界</a> / <a class="text-muted" href="#">バイオーム</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image92.png" alt="バイオーム" />
+            </span>
+            <h4>バイオーム</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>世界は <span style="color:#3E8A00;">バイオーム</span> で構成されています。 バイオームは、地形の大まかな形状、表面の素材、その他のいくつかの特徴を決定します。 海洋、渓谷、平原、丘、山など、探索できるバイオームにはいくつかの異なる種類があります。</p>
+<p>次の数ページでは、世界中で見つかる可能性のあるバイオームのいくつか (すべてではありません) を示します。</p>
+<h5>平原</h5>
+<p>平原は丘と同様、海抜わずかにある低標高のバイオームです。 それらは平らで、草や花の畑が含まれていることもあれば、森林に覆われていることもあります。</p>
+<a class="anchor" id="plains"></a>
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image93.png" alt="tfc:textures/gui/book/biomes/plains.png">
+<div style="text-align: center;"><p>平原です。</p>
+</div><a class="anchor" id="hills"></a><h5>丘陵</h5>
+<p>Hills と Rolling Hills は両方とも、低地から中標高のバイオームであり、多くの場合平地または高地地域に隣接しています。 ここでは大きな岩が見つかり、まれに火山温泉の空の残骸も見つかります。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image94.png" alt="tfc:textures/gui/book/biomes/rolling_hills_with_river.png">
+<div style="text-align: center;"><p>川が曲がりくねった丘陵地帯。</p>
+</div><a class="anchor" id="badlands"></a><h5>荒れ地</h5>
+<p>荒れ地は中標高の大陸バイオームであり、高原、山、丘陵地帯の近くでよく見られます。 砂と砂岩の層がある尾根が一般的です。 砂の種類はさまざまで、荒れ地は赤/茶色、黄色/白、あるいはその中間の色になります。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image95.png" alt="tfc:textures/gui/book/biomes/badlands.png">
+<div style="text-align: center;"><p>荒れ地です。</p>
+</div><a class="anchor" id="plateau"></a><h5>高原</h5>
+<p>高原は標高の高い大陸バイオームです。 それらは平原に似ていますが、標高が高く、平らで草が茂っています。 高原には岩が点在していることが多く、枯れた温泉が時々確認されます。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image96.png" alt="tfc:textures/gui/book/biomes/plateau.png">
+<div style="text-align: center;"><p>深い渓谷が流れる高原。</p>
+</div><a class="anchor" id="mountains"></a><h5>山岳</h5>
+<p>標高の高い地域では、複数の種類の山岳が見つかる場合があります。 古い山は短くて滑らかですが、山は岩だらけの崖の面で高く伸びています。 地殻活動が活発な地域に形成された山々は、温泉や珍しい火山を生成することもあります。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image97.png" alt="tfc:textures/gui/book/biomes/old_mountains.png">
+<div style="text-align: center;"><p>雪の斜面と温泉がある古い山々。</p>
+</div><a class="anchor" id="lowlands"></a><h5>低地</h5>
+<p>低地は湿地帯で水に満たされたバイオームとして現れることがあります。 海面以下では、真水が豊富にあり、泥やたくさんの植物も含まれている可能性があります。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image98.png" alt="tfc:textures/gui/book/biomes/lowlands.png">
+<div style="text-align: center;"><p>低地です。</p>
+</div><a class="anchor" id="low_canyons"></a><h5>低地峡谷</h5>
+<p>低地峡谷は別の低標高の大陸バイオームであり、多くの場合、海洋または他の低標高バイオームとの境界に見られます。 緩やかな丘陵地帯で、曲がりくねった池が頻繁にあります。 これは丘陵に似ており、枯れた温泉が出現する可能性があります。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image99.png" alt="tfc:textures/gui/book/biomes/low_canyons.png">
+<div style="text-align: center;"><p>低地峡谷です。</p>
+</div><a class="anchor" id="canyons"></a><h5>峡谷</h5>
+<p><a href="../the_world/biomes.html#low_canyons">低地峡谷</a> と同様に、峡谷は中標高の大陸バイオームで、適度な丘陵と頻繁に曲がりくねった池や湖があります。 この地域は地質学的に非常に活動的な地域であり、短くてずんぐりした火山、岩、そして活発な温泉が頻繁にあります。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image100.png" alt="tfc:textures/gui/book/biomes/canyons.png">
+<div style="text-align: center;"><p>遠くに火山を望む峡谷。</p>
+</div><a class="anchor" id="ocean"></a><h5>海</h5>
+<p>TerraFirmaCraft の広大な海は大陸を互いに隔てています。 海洋は、表面上は大きな特徴のない水の広がりですが、その下にはさまざまな植物、海洋生物、昆布が見つかります。 寒冷な気候では、海はそびえ立つ氷山や浮遊する海氷の塊によって占められることがあります。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image101.png" alt="tfc:textures/gui/book/biomes/ocean.png">
+<div style="text-align: center;"><p>海岸から望む海。</p>
+</div>
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

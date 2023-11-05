@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'en_us';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/getting_started\building_materials.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\building_materials.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\building_materials.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\building_materials.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\building_materials.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\building_materials.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\building_materials.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\building_materials.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">The World</a></li>
+<li><a class="text-muted" href="../getting_started/">Getting Started</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./introduction.html">Introduction</a></li>
+<li><a class="text-muted" href="./firepit.html">Pits of Fire</a></li>
+<li><a class="text-muted" href="./pottery.html">Pottery</a></li>
+<li><a class="text-muted" href="./pit_kiln.html">Pit Kilns</a></li>
+<li><a class="text-muted" href="./finding_ores.html">Ores, Metal, and Casting</a></li>
+<li><a class="text-muted" href="./primitive_alloys.html">Primitive Alloys</a></li>
+<li><a class="text-muted" href="./primitive_anvils.html">Primitive Anvils</a></li>
+<li><a class="text-muted" href="./building_materials.html">Building Materials</a></li>
+<li><a class="text-muted" href="./a_place_to_sleep.html">A Place to Sleep</a></li>
+<li><a class="text-muted" href="./size_and_weight.html">Size and Weight</a></li>
+<li><a class="text-muted" href="./food_and_water.html">Food and Water</a></li></ul></li>
+<li><a class="text-muted" href="../mechanics/">Advanced Mechanics</a></li>
+<li><a class="text-muted" href="../tfcgyres_orehints/">(Addon) Ore Hints and Spawning</a></li>
+<li><a class="text-muted" href="../waterflasks/">(Addon) Water Flasks</a></li>
+<li><a class="text-muted" href="../firmalife/">(Addon) Firmalife</a></li>
+<li><a class="text-muted" href="../firmaciv/">(Addon) Firma: Civilization</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">Getting Started</a> / <a class="text-muted" href="#">Building Materials</a></em></p>
+            
+                <h4><h4>Building Materials</h4></h4>
+                <hr>
+                <p>In the early stages of the game, building can be a challenge as many sturdy building blocks require metal tools to obtain. However, there are a few building blocks that can be obtained with just stone tools.<br/>
+<br/>
+More <a href="../mechanics/advanced_building_materials.html">building blocks</a> are obtainable with metal tools.</p>
+<h5>Contents</h5>
+<p></p>
+<ol>
+	<li><a href="../getting_started/building_materials.html#thatch">Thatch</a></li>
+	<li><a href="../getting_started/building_materials.html#mud_bricks">Mud Bricks</a></li>
+	<li><a href="../getting_started/building_materials.html#wattle_and_daub">Wattle and Daub</a></li>
+	<li><a href="../getting_started/building_materials.html#clay_and_peat">Clay Blocks and Peat</a></li>
+</ol><p></p>
+<a class="anchor" id="thatch"></a><h5>Thatch</h5>
+<p>With just a <a href="../getting_started/introduction.html#knife">Stone Knife</a>, you are able to obtain <span style="color:#3E8A00;">Straw</span> by breaking plant like blocks. This can be used to craft a very simple building material: <span style="color:#3E8A00;">Thatch</span>. Thatch is a lightweight block that isn't affected by gravity, however players and other entities can pass right through it! It can also be crafted back into <span style="color:#3E8A00;">Straw</span> if needed.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="Straw" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item2.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="Straw" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item2.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Straw" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item2.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-toggle="tooltip" title="Straw" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item2.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Thatch" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="Thatch" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Straw" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">4</p>
+                    <img class="recipe-item" src="..\..\_images\item2.png" />
+                </div>
+            </div>
+        </div>
+        <a class="anchor" id="mud_bricks"></a><h5>Mud Bricks</h5>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="Loam Mud" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item4.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="Straw" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item2.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Wet Loam Mud Bricks" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">4</p>
+                    <img class="recipe-item" src="..\..\_images\item3.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">Mud</span> can be found on the ground, underneath rivers and lakes, or in patches in low elevation swampy environments. With a little bit of <span style="color:#3E8A00;">Straw</span>, it can be crafted into Wet Mud Bricks.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>These can be placed on the ground in a dry location, and after a day they will harden into <span style="color:#3E8A00;">Mud Bricks</span>.</p>
+<h5> </h5>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="Loam Mud Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item6.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="Loam Mud Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item6.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Loam Mud Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item6.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-toggle="tooltip" title="Loam Mud Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item6.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Loam Mud Bricks" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item5.png" />
+                </div>
+            </div>
+        </div>
+        <p>These dried mud bricks can then be crafted into <span style="color:#3E8A00;">Mud Brick Blocks</span>. They can also be made into <span style="color:#3E8A00;">Stairs</span>, <span style="color:#3E8A00;">Slabs</span>, or <span style="color:#3E8A00;">Walls</span>, if so desired.</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block1.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>All different varieties of mud bricks.</p>
+</div><a class="anchor" id="wattle_and_daub"></a><h5>Wattle and Daub</h5>
+<p><span style="color:#3E8A00;">Wattle</span> and <span style="color:#3E8A00;">Daub</span> is a versatile building and decoration block.<br/>
+<br/>
+<span style="color:#3E8A00;">Wattle</span> can be crafted and placed, however it is breakable and allows players and mobs to walk through it. It can be augmented with <span style="color:#3E8A00;">Daub</span>, to make it solid.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="Tag: #minecraft:logs" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item7.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #minecraft:logs" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item7.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Wattle" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">6</p>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>In order to make <span style="color:#3E8A00;">Wattle</span> solid, it first must be woven, which requires adding sticks to the structure.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="Straw" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item2.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="Clay Ball" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item9.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-toggle="tooltip" title="Tag: #minecraft:dirt" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item10.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Daub" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">2</p>
+                    <img class="recipe-item" src="..\..\_images\item8.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="Clay Ball" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item9.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:mud" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item11.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Daub" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">2</p>
+                    <img class="recipe-item" src="..\..\_images\item8.png" />
+                </div>
+            </div>
+        </div>
+        <p></p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image1.png" alt="tfc:textures/gui/book/tutorial/wattle_weave.png">
+<div style="text-align: center;"><p>Four sticks are required to <span style="color:#3E8A00;">weave</span> wattle.</p>
+</div><p>At any time, sticks can be added on each diagonal, as well as the top and bottom. Hold a single <span style="color:#3E8A00;">Stick</span> in your hand and <span style="color:#b0b;">Right Click</span> it to add a stick. Change what part of the wattle you're adding the stick to by selecting a different side of the face.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image2.png" alt="tfc:textures/gui/book/tutorial/wattle_add_stick.png">
+<div style="text-align: center;"><p>Adding sticks to wattle.</p>
+</div>
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image3.png" alt="tfc:textures/gui/book/tutorial/wattle_add_daub.png">
+<div style="text-align: center;"><p>Using <span style="color:#3E8A00;">Daub on <span style="color:#3E8A00;">Woven Wattle</span></span> creates a solid block.</p>
+</div>
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image4.png" alt="tfc:textures/gui/book/tutorial/wattle_stained.png">
+<div style="text-align: center;"><p>It can then be <span style="color:#3E8A00;">stained</span> by using dye on it.</p>
+</div><a class="anchor" id="clay_and_peat"></a><h5>Clay Blocks and Peat</h5>
+<p>Clay obtained from the ground can be crafted into clay blocks. When placed and dug again, they'll turn back into clay. While unattractive, they are easy to obtain.<br/>
+<br/>
+Peat spawns in the world in patches along water bodies and is mineable with stone tools. Some plants will grow on it.<br/>
+<br/>
+However, peat is quite flammable.</p>
+<h5>Clay Blocks</h5>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="Clay Ball" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item9.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="Clay Ball" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item9.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Clay Ball" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item9.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-toggle="tooltip" title="Clay Ball" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item9.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Clay" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item12.png" />
+                </div>
+            </div>
+        </div>
+        
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>群峦传说 手册</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'zh_cn';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">群峦传说 手册</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">简体中文(中国大陆)</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/mechanics\prospecting.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\prospecting.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\prospecting.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\prospecting.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\prospecting.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\prospecting.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\prospecting.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\prospecting.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">主页</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">版本 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>目录</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">这个世界</a></li>
+<li><a class="text-muted" href="../getting_started/">新手入门</a></li>
+<li><a class="text-muted" href="../mechanics/">进阶内容</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./advanced_building_materials.html">高级建筑材料</a></li>
+<li><a class="text-muted" href="./animal_husbandry.html">畜牧业</a></li>
+<li><a class="text-muted" href="./anvils.html">砧</a></li>
+<li><a class="text-muted" href="./aqueducts.html">引水桥</a></li>
+<li><a class="text-muted" href="./armor.html">盔甲</a></li>
+<li><a class="text-muted" href="./barrels.html">大桶</a></li>
+<li><a class="text-muted" href="./bellows.html">风箱</a></li>
+<li><a class="text-muted" href="./blast_furnace.html">建造高炉</a></li>
+<li><a class="text-muted" href="./bloomery.html">锻铁炉</a></li>
+<li><a class="text-muted" href="./bread.html">烤面包</a></li>
+<li><a class="text-muted" href="./charcoal_forge.html">木炭炉</a></li>
+<li><a class="text-muted" href="./charcoal_pit.html">木炭坑</a></li>
+<li><a class="text-muted" href="./chisel.html">凿子</a></li>
+<li><a class="text-muted" href="./composter.html">Composter</a></li>
+<li><a class="text-muted" href="./crops.html">农作物</a></li>
+<li><a class="text-muted" href="./crucible.html">坩埚</a></li>
+<li><a class="text-muted" href="./dairy.html">乳制品</a></li>
+<li><a class="text-muted" href="./damage_types.html">伤害类型</a></li>
+<li><a class="text-muted" href="./decay.html">食物保鲜</a></li>
+<li><a class="text-muted" href="./fertilizers.html">堆肥</a></li>
+<li><a class="text-muted" href="./fire_clay.html">耐火粘土</a></li>
+<li><a class="text-muted" href="./fishing.html">钓鱼</a></li>
+<li><a class="text-muted" href="./flux.html">助焊剂</a></li>
+<li><a class="text-muted" href="./gems.html">宝石</a></li>
+<li><a class="text-muted" href="./grill.html">篝火烧烤</a></li>
+<li><a class="text-muted" href="./heating.html">加热</a></li>
+<li><a class="text-muted" href="./hydration.html">保持土壤湿润</a></li>
+<li><a class="text-muted" href="./lamps.html">灯</a></li>
+<li><a class="text-muted" href="./leather_making.html">制皮术</a></li>
+<li><a class="text-muted" href="./lighting.html">光源</a></li>
+<li><a class="text-muted" href="./minecarts.html">Minecarts</a></li>
+<li><a class="text-muted" href="./panning.html">淘金</a></li>
+<li><a class="text-muted" href="./papermaking.html">Papermaking</a></li>
+<li><a class="text-muted" href="./pets.html">宠物</a></li>
+<li><a class="text-muted" href="./pot.html">篝火大锅</a></li>
+<li><a class="text-muted" href="./powderkegs.html">火药桶</a></li>
+<li><a class="text-muted" href="./prospecting.html">勘探</a></li>
+<li><a class="text-muted" href="./quern.html">手推磨</a></li>
+<li><a class="text-muted" href="./salad.html">沙拉</a></li>
+<li><a class="text-muted" href="./sandwiches.html">三明治</a></li>
+<li><a class="text-muted" href="./scribing_table.html">命名台</a></li>
+<li><a class="text-muted" href="./sluices.html">洗矿槽</a></li>
+<li><a class="text-muted" href="./steel.html">炼钢</a></li>
+<li><a class="text-muted" href="./support_beams.html">支撑梁</a></li>
+<li><a class="text-muted" href="./weaving.html">札札弄机杼</a></li>
+<li><a class="text-muted" href="./wooden_buckets.html">木桶</a></li></ul></li>
+<li><a class="text-muted" href="../firmalife/">(Addon) Firmalife扩展模组</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">进阶内容</a> / <a class="text-muted" href="#">勘探</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="锻铁勘矿镐">
+                <img src="..\..\_images\item167.png" alt="勘探" />
+            </span>
+            <h4>勘探</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>你还记得你是在哪里捡到那些<a href="../getting_started/finding_ores.html">小矿粒</a>的，对吧？寻找更多矿石需要花费大量精力来勘探和开采。现在，你应该已经通读<a href="../the_world/ores_and_minerals.html">矿石和矿物</a>这一章节。你应该明白，如果你在寻找特定的矿石，则必须先找到它生成的岩石类型——不论是就在你家门口，或是千里之外。</p>
+<p>当仅靠捡拾小矿粒不能满足你的发展需要时就应考虑开始勘矿了。<br/>
+</p>
+<ul>
+	<li>小矿粒只会生成在矿脉水平 15 格以内，垂直 35 格以内的地表上。当地表上有一片矿粒时，它们的几何中心的正下方很可能就有一支矿脉。</li>
+	<li>有些时候，矿石也会暴露在断崖或水底，这种矿脉就很好发现了。</li>
+</ul>
+<a class="anchor" id="propick"></a>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="铜勘矿镐">
+                <img src="..\..\_images\item168.png" alt="勘矿镐" />
+            </span>
+            <h5>勘矿镐</h5>
+        </div>
+        <p>如果你挖了好久都没有找到想找的矿石或矿物（顺便一提，只有矿石会在地表生成矿粒），那么就是时候做一把<span style="color:#3E8A00;">勘矿镐</span>了。勘矿镐会搜索点击的块中心 25x25x25 的区域，并报告所找到矿石的数量和类型。</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image26.png" alt="Recipe: tfc:clay_knapping/propick_head_mold">
+<p>你可以用粘土按上图<a href="../getting_started/pottery.html">塑形</a>成一个未烧制的勘矿镐头模具。</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-toggle="tooltip" title="未烧制的勘矿镐头模具" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item169.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-toggle="tooltip" title="勘矿镐头模具" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item170.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-yellow">
+            <p>黄白****</p>
+        </div>
+        <p>模具<a href="../getting_started/pottery.html">塑形</a>完之后还需要<a href="../mechanics/heating.html">烧制</a>。<br/>
+<br/>
+将液态金属倒入到烧制好的模具中就能<a href="../getting_started/finding_ores.html#casting">铸造</a>出勘矿镐了。</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-toggle="tooltip" title="锻铁锭" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item171.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-toggle="tooltip" title="锻铁勘矿镐头" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item172.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>第三级</p>
+        </div>
+        <p>勘矿镐头也可以在<a href="../mechanics/anvils.html">砧</a>上使用任何可以制造工具的金属<span style="color:#3E8A00;">锭</span><a href="../mechanics/anvils.html#working">锻造</a>而成。<br/>
+<br/>
+最后用木棍和工具头在合成栏合成就能做出勘矿镐了。</p>
+<p>勘矿镐说有矿就是有矿，它说没矿也有可能有矿，但如果没矿它绝不会说有矿。更高等级的工具会降低甚至完全消除误报的概率。<br/>
+<br/>
+用同一等级的勘矿镐点击同一个方块不会改变报告的结果。<br/>
+<br/>
+如果在勘探处的周围有多种矿物，勘矿镐只会选择其中一种报告。</p>
+<p>勘矿镐会报告以下几种结果之一：<br/>
+</p>
+<ul>
+	<li>没发现什么有意思的。（可能是假阴性）</li>
+	<li>发现微量</li>
+	<li>发现少量</li>
+	<li>发现中量</li>
+	<li>发现大量</li>
+	<li>发现巨量</li>
+</ul><p><br/>
+发现巨量表明至少有 80 个方块。</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

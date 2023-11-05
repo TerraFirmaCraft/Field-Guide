@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'pt_br';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portuguese (Brazil)</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/getting_started\primitive_anvils.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\primitive_anvils.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\primitive_anvils.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\primitive_anvils.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\primitive_anvils.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\primitive_anvils.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\primitive_anvils.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\primitive_anvils.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">O mundo</a></li>
+<li><a class="text-muted" href="../getting_started/">Começando</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./introduction.html">Introdução</a></li>
+<li><a class="text-muted" href="./firepit.html">Pits de fogo</a></li>
+<li><a class="text-muted" href="./pottery.html">Cerâmica</a></li>
+<li><a class="text-muted" href="./pit_kiln.html">Fornos de poço</a></li>
+<li><a class="text-muted" href="./finding_ores.html">Minérios, metal e elenco</a></li>
+<li><a class="text-muted" href="./primitive_alloys.html">Ligas primitivas</a></li>
+<li><a class="text-muted" href="./primitive_anvils.html">Anvils primitivos</a></li>
+<li><a class="text-muted" href="./building_materials.html">Building Materials</a></li>
+<li><a class="text-muted" href="./a_place_to_sleep.html">Um lugar para dormir</a></li>
+<li><a class="text-muted" href="./size_and_weight.html">Tamanho e peso</a></li>
+<li><a class="text-muted" href="./food_and_water.html">Comida e água</a></li></ul></li>
+<li><a class="text-muted" href="../mechanics/">Mecânica avançada</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">Começando</a> / <a class="text-muted" href="#">Anvils primitivos</a></em></p>
+            
+                <h4><h4>Anvils primitivos</h4></h4>
+                <hr>
+                <p>Uma alternativa às ferramentas de fundição diretamente no jogo inicial e um requisito para metais de camada mais altos é usar uma <span style="color:#3E8A00;">Anvil</span>. Uma bigorna é um bloco que pode ser usado para dois processos diferentes: <a href="../mechanics/anvils.html#working">Working</a> e <a href="../mechanics/anvils.html#welding">Welding</a>. Este capítulo vai apenas mostrar como obter sua primeira bigorna primitiva de pedra.</p>
+<p>Primeiro, você precisa adquirir um bloco de <span style="color:#3E8A00;">Rocha crua</span>, aquilo é <span style="color:#3E8A00;">Intrusivo ígneo</span> (Riolito, basalto, andesita ou dacita) ou <span style="color:#3E8A00;">Ígneo extrusivo</span> (Granito, diorito ou gabro). Você pode encontrar e usar um bloco exposto no mundo, ou poderia <a href="../getting_started/primitive_anvils.html#raw_rock">extrair um</a> da rocha circundante.</p>
+<a class="anchor" id="stone_anvils"></a><h5>Rock Anvil</h5>
+<p>Você também precisará de qualquer material de <span style="color:#3E8A00;">Martelo</span>. Para fazer a bigorna, basta clicar com o botão direito do mouse no exposto <span style="color:#3E8A00;">principal</span> Face de um daqueles blocos de rocha crua com o seu <span style="color:#3E8A00;">martelo</span>, e pronto! Uma bigor será formada.<br/>
+<br/>
+Anvils tem <a href="../mechanics/anvils.html#tiers">camadas</a> E a bigorna da rocha é de nível 0 - o nível mais baixo. Só é capaz de <a href="../mechanics/anvils.html#welding">Soldar</a>Tier i lingotes.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Convertendo uma rocha crua central em uma anvil.</p>
+<a class="anchor" id="raw_rock"></a><h5>Obtendo rocha crua</h5>
+<p>Para obter um bloco de rocha cru sem quebrá -lo em rochas menores, precisa ser <span style="color:#3E8A00;">extraída</span>. Você deve minerar os blocos nos seis lados de um bloco de rocha cru - uma vez que ele é cercado por ar por todos os lados - ele será exibido como um item que pode ser capturado.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Minerando todos os seis lados de um pedaço de pedra cru - uma vez concluído, o bloco central sairá como um item.</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

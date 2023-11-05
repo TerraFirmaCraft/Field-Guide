@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'ja_jp';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">日本語</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/getting_started\pottery.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\pottery.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\pottery.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\pottery.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\pottery.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\pottery.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\pottery.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\pottery.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">世界</a></li>
+<li><a class="text-muted" href="../getting_started/">はじめに</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./introduction.html">導入</a></li>
+<li><a class="text-muted" href="./firepit.html">火を起こす</a></li>
+<li><a class="text-muted" href="./pottery.html">粘土細工</a></li>
+<li><a class="text-muted" href="./pit_kiln.html">穴窯</a></li>
+<li><a class="text-muted" href="./finding_ores.html">鉱石、金属、鋳造</a></li>
+<li><a class="text-muted" href="./primitive_alloys.html">最初の合金</a></li>
+<li><a class="text-muted" href="./primitive_anvils.html">最初の金床</a></li>
+<li><a class="text-muted" href="./building_materials.html">建材</a></li>
+<li><a class="text-muted" href="./a_place_to_sleep.html">眠る場所</a></li>
+<li><a class="text-muted" href="./size_and_weight.html">大きさと重さ</a></li>
+<li><a class="text-muted" href="./food_and_water.html">食料と水</a></li></ul></li>
+<li><a class="text-muted" href="../mechanics/">高度な加工</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">はじめに</a> / <a class="text-muted" href="#">粘土細工</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="壺">
+                <img src="..\..\_images\item25.png" alt="粘土細工" />
+            </span>
+            <h4>粘土細工</h4>
+        </div>
+        </h4>
+                <hr>
+                <p><span style="color:#3E8A00;">粘土</span>は、陶器に使用できる非常に便利でバランスのとれた材料です。 最初は見つけるのが難しいかもしれません。 粘土は草に隠れていることが多いですが、地表面に生成されます。 <a href="../the_world/climate.html#rainfall">年間降水量</a> が少なくとも 175mm 以上の地域では、粘土がいたるところに斑点状に見つかり、通常は特定の <span style="color:#3E8A00;">植thing</span> の存在が特徴です。</p>
+<h5>粘土の特定</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>粘土と、その存在を示す可能性のある植thing。</p>
+<p><span style="color:#3E8A00;">アサイリウム シダ</span>、<span style="color:#3E8A00;">カンナ</span>、<span style="color:#3E8A00;">アキノキリンソウ</span>、<span style="color:#3E8A00;">ススキ</span>、<span style="color:#3E8A00;">ペロブスキー</span>、<span style="color:#3E8A00;">ミズカンナ</span> はすべて、近くに粘土が存在することを示しています。 粘土は、川、湖、池などの水源に近い小さな堆積物でも見つかります。<br/>
+<br/>
+石ころのナッピングと同様に、粘土をこねて新しいアイテムを形成することができます。 これには5つの粘土が必要です。 石ころのナッピングとは異なり、間違った場合は、ナッピングインターフェイスを閉じても粘土が失われず、もう一度やり直すことができます。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image23.png" alt="tfc:textures/gui/book/gui/clay_knapping.png">
+<div style="text-align: center;"><p>粘土ナッピングGUI。</p>
+</div><a class="anchor" id="vessel"></a><h5>小さな壺</h5>
+<p>小さな壺は粘土で作れる多様なアイテムのひとつです。 すべての陶器アイテムと同様、使用する前に <a href="https://en.wikipedia.org/wiki/Pottery">焼成</a> する必要があります。 焼成は、粘土が硬い <span style="color:#3E8A00;">セラミック</span> になるまでアイテムを <a href="../mechanics/heating.html">加熱</a> するプロセスです。これには 1400 °C 、 <span style="color:#FFFF55;"><strong>黄白</strong></span>$までの加熱が必要です。(br2)ゲーム序盤でこれを行うには、<a href="../getting_started/pit_kiln.html">穴窯</a>を使用する必要があります。</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image24.png" alt="Recipe: tfc:clay_knapping/vessel">
+<p>小さな壺のナッピング。</p>
+<a class="anchor" id="jug"></a><h5>水入れ</h5>
+<p>もう 1 つの便利な陶器アイテムは<span style="color:#3E8A00;">水入れ</span>です。 淡水などの液体を汲んで<span style="color:#3E8A00;">飲用</span>するのに使用できます。<br/>
+<br/>
+これを使用するには、単に<span style="color:#b0b;">Right Click</span>するだけです。主に淡水のないエリアで水を飲むために水入れを使用します。 水入れには一度に <span style="color:#3E8A00;">100 mB</span> の液体を入れることができます。</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image9.png" alt="Recipe: tfc:clay_knapping/jug">
+<p>水入れのナッピング。</p>
+<a class="anchor" id="mold"></a><h5>鋳造型</h5>
+<p>粘土は <span style="color:#3E8A00;">鋳造型</span> を作るのにも必要です。 型には溶融金属を流し込むことができ、最終的には型の形状に固まります。 その後、金型に対して <span style="color:#b0b;">Right Click</span> を使用することで、鋳造したアイテムと場合によっては金型を取得できます。<br/>
+<br/>
+最も単純な型は、右側のインゴットの型です。</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image25.png" alt="Recipe: tfc:clay_knapping/ingot_mold">
+<p>インゴットの型のナッピング。</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-toggle="tooltip" title="未焼成のインゴットの型" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item26.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-toggle="tooltip" title="インゴットの型" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item27.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-yellow">
+            <p>白みがかった黄色****</p>
+        </div>
+        <p>すべての粘土製品と同様に、型を使用できるようにするには、<a href="../getting_started/pit_kiln.html">穴窯</a>.<br/>
+<br/>
+で焼成する必要があります。焼成したら、溶融金属を流し込みます。 金属が十分に冷えたら、抽出することができます。</p>
+<h5>鋳造</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this item.">Items: <code>tfc:ceramic/ingot_mold{tank:{"Amount":100</code>, <code>"FluidName":"tfc:metal/copper"}}</code></span></p>
+        </div>
+        <p>次の数ページでは、さまざまなツールの頭のナッピング方法をいくつか示します。</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image26.png" alt="Recipe: tfc:clay_knapping/propick_head_mold">
+<p><a href="../mechanics/prospecting.html#propick">探鉱槌</a> は、大量の鉱石を見つけるために不可欠なツールです。</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image27.png" alt="Recipe: tfc:clay_knapping/pickaxe_head_mold">
+<p><span style="color:#3E8A00;">つるはし</span>！ 鉱石や石を採掘するためのツールです。</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image28.png" alt="Recipe: tfc:clay_knapping/saw_blade_mold">
+<p><span style="color:#3E8A00;">ノコギリ</span>は原木を木材に加工でき、<span style="color:#3E8A00;">作業台</span> のような高度な木製コンポーネントや、<a href="../mechanics/support_beams.html">梁</a> のような他の多くの木製アイテムを作成するために必要なツールです。</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image29.png" alt="Recipe: tfc:clay_knapping/scythe_blade_mold">
+<p><span style="color:#3E8A00;">鎌</span>はひとクリックで3x3x3のエリアで植物や葉っぱを収穫できるツールです！</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image30.png" alt="Recipe: tfc:clay_knapping/chisel_head_mold">
+<p><a href="../mechanics/chisel.html">ノミ</a>は、ブロックを滑らかにしたり、多数の装飾ブロックを作成したりするために使用されるツールです。石臼の作成に必須です。</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image31.png" alt="Recipe: tfc:clay_knapping/axe_head_mold">
+<p><span style="color:#3E8A00;">斧</span>はあらゆる木の伐採に使用できます。 石斧は金属よりも効率が低いことに注意してください。</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image32.png" alt="Recipe: tfc:clay_knapping/hammer_head_mold">
+<p><span style="color:#3E8A00;">ハンマー</span>は<a href="../mechanics/anvils.html">金床</a>を作成して作業するために不可欠なツールです。</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image33.png" alt="Recipe: tfc:clay_knapping/knife_blade_mold">
+<p><span style="color:#3E8A00;">短剣</span>は武器として、または植物系ブロックの切断ツールとして使用できます。</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image34.png" alt="Recipe: tfc:clay_knapping/hoe_head_mold">
+<p>A <span style="color:#3E8A00;">クワ</span>は<a href="../mechanics/crops.html">作物</a> の植え付けと維持に使用されます。</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image35.png" alt="Recipe: tfc:clay_knapping/shovel_head_mold">
+<p><span style="color:#3E8A00;">シャベル</span>はあらゆる掘削目的に使用できます。</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

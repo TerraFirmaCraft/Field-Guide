@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>群峦传说 手册</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'zh_cn';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">群峦传说 手册</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">简体中文(中国大陆)</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/getting_started\firepit.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\firepit.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\firepit.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\firepit.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\firepit.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\firepit.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\firepit.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\firepit.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">主页</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">版本 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>目录</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">这个世界</a></li>
+<li><a class="text-muted" href="../getting_started/">新手入门</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./introduction.html">第一天</a></li>
+<li><a class="text-muted" href="./firepit.html">生火</a></li>
+<li><a class="text-muted" href="./pottery.html">制陶术</a></li>
+<li><a class="text-muted" href="./pit_kiln.html">坑窑</a></li>
+<li><a class="text-muted" href="./finding_ores.html">矿石、金属和铸造</a></li>
+<li><a class="text-muted" href="./primitive_alloys.html">原始合金</a></li>
+<li><a class="text-muted" href="./primitive_anvils.html">原始砧</a></li>
+<li><a class="text-muted" href="./building_materials.html">建筑材料</a></li>
+<li><a class="text-muted" href="./a_place_to_sleep.html">如何过夜</a></li>
+<li><a class="text-muted" href="./size_and_weight.html">体积和重量</a></li>
+<li><a class="text-muted" href="./food_and_water.html">食物和水</a></li></ul></li>
+<li><a class="text-muted" href="../mechanics/">进阶内容</a></li>
+<li><a class="text-muted" href="../firmalife/">(Addon) Firmalife扩展模组</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">新手入门</a> / <a class="text-muted" href="#">生火</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="篝火">
+                <img src="..\..\_images\item17.png" alt="生火" />
+            </span>
+            <h4>生火</h4>
+        </div>
+        </h4>
+                <hr>
+                <a class="anchor" id="firestarter"></a><p><span style="color:#3E8A00;">火</span>在文明史上是一项重大的技术进步。想要生火，就必须做一个<span style="color:#3E8A00;">起火器</span>。对准需要生火的目标按住<span style="color:#b0b;">右键</span>。片刻之后，会产生烟，然后便有几率成功生火。你可能需要多尝试几次才能成功点起火来。</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item16.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item16.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="起火器" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item18.png" />
+                </div>
+            </div>
+        </div>
+        <p>可以用两根木棍制作起火器。</p>
+<h5>篝火</h5>
+<p>With a firestarter, it is now possible to make a <span style="color:#3E8A00;">Firepit</span>. In order to make one, you will need one <span style="color:#3E8A00;">log</span>, three <span style="color:#3E8A00;">sticks</span>, and optionally up to five pieces of <span style="color:#3E8A00;">kindling</span>. Kindling can be items such as paper products, straw, or pinecones, and will increase the chance of successfully creating a firepit by 10 percent per item used. Throw (<span style="color:#b0b;">Q</span>) all the items on the ground, on the same block. Then use the firestarter on the block with the items floating above it.</p>
+<h5></h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>如果成功的话，就能创建一个篝火。</p>
+<p>再次与篝火互动就可以打开篝火界面。屏幕的左侧是四个<span style="color:#3E8A00;">燃料</span>槽。将原木、泥炭、或木棍捆之类的可燃物放置在最上面那格就能将它们添加到篝火里了。篝火会先燃烧最下面那格的燃料。左侧的刻度尺对应了篝火目前的<span style="color:#3E8A00;">温度</span>。屏幕右侧的格子则可以放置需要<a href="../mechanics/heating.html">加热</a>的物品。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image6.png" alt="tfc:textures/gui/book/gui/firepit.png">
+<div style="text-align: center;"><p>篝火界面</p>
+</div>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item16.gif" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-toggle="tooltip" title="火把" class="crafting-recipe-item-tooltip"></span>
+                <p class="crafting-recipe-item-count">2</p>
+                <img class="recipe-item" src="..\..\_images\item19.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>暖****</p>
+        </div>
+        <p>许多有用的物品可以在篝火中加热制作。例如加热木棍就可以做成两根<span style="color:#3E8A00;">火把</span>。注意！放置在世界中的火把是会燃尽的，但好在你可以用<span style="color:#3E8A00;">起火器</span>或其他<span style="color:#3E8A00;">火把</span>重新点燃它们。</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-toggle="tooltip" title="生鳕鱼" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item20.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-toggle="tooltip" title="熟鳕鱼" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item21.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>热****</p>
+        </div>
+        <p>篝火还可以用来<span style="color:#3E8A00;">加热食物</span>。生肉和面团之类的东西都可以在篝火中烧制以延长其保质期。有关保质期的知识请参考<a href="../mechanics/decay.html">这一章节</a>。</p>
+<p>篝火可以随时通过手持<span style="color:#3E8A00;">铲子</span>点击来熄灭。<br/>
+<br/>
+可以将一些其他物品放置在篝火之上来改变其功能。放置<span style="color:#3E8A00;">锻铁烤架</span>可将篝火变成<a href="../mechanics/grill.html">烧烤架</a>，可一次加热五个物品。放置<span style="color:#3E8A00;">陶锅</span>则会将篝火变成<a href="../mechanics/pot.html">大锅</a>，可用来煲汤。要移除篝火上的额外设备，可以按住<span style="color:#b0b;">Shift</span>并按下<span style="color:#b0b;">右键</span>。千万注意不要移除还未冷却的烤架和锅！</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>一个篝火，添加了烤架或锅。</p>
+<p>不同燃料的杂质含量并不一致。添加不纯净的燃料会使篝火产生更多烟尘。如果使用的燃料杂质含量越多，篝火产生的烟尘会飘得越高。所有燃料中，原木的杂质含量最少，而原木中杂质含量最多的种类是松木。松果和落叶之类的燃料杂质含量非常高以至于无法产生足够的热量来烹饪食物。</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft 도감</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'ko_kr';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft 도감</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">한국어</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/mechanics\animal_husbandry.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\animal_husbandry.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\animal_husbandry.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\animal_husbandry.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\animal_husbandry.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\animal_husbandry.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\animal_husbandry.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\animal_husbandry.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">색인</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API 뮨서</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">버전 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>목차</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">세계</a></li>
+<li><a class="text-muted" href="../getting_started/">시작하기</a></li>
+<li><a class="text-muted" href="../mechanics/">심화 기술</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./advanced_building_materials.html">발전된 재료</a></li>
+<li><a class="text-muted" href="./animal_husbandry.html">축산업</a></li>
+<li><a class="text-muted" href="./anvils.html">모루</a></li>
+<li><a class="text-muted" href="./aqueducts.html">수로</a></li>
+<li><a class="text-muted" href="./armor.html">갑옷</a></li>
+<li><a class="text-muted" href="./barrels.html">통</a></li>
+<li><a class="text-muted" href="./bellows.html">풀무</a></li>
+<li><a class="text-muted" href="./blast_furnace.html">용광로</a></li>
+<li><a class="text-muted" href="./bloomery.html">괴철로</a></li>
+<li><a class="text-muted" href="./bread.html">빵</a></li>
+<li><a class="text-muted" href="./charcoal_forge.html">숯불 노</a></li>
+<li><a class="text-muted" href="./charcoal_pit.html">숯 구덩이</a></li>
+<li><a class="text-muted" href="./chisel.html">끌</a></li>
+<li><a class="text-muted" href="./composter.html">Composter</a></li>
+<li><a class="text-muted" href="./crops.html">작물</a></li>
+<li><a class="text-muted" href="./crucible.html">도가니</a></li>
+<li><a class="text-muted" href="./dairy.html">유제품</a></li>
+<li><a class="text-muted" href="./damage_types.html">피해 종류</a></li>
+<li><a class="text-muted" href="./decay.html">음식 보존</a></li>
+<li><a class="text-muted" href="./fertilizers.html">비료</a></li>
+<li><a class="text-muted" href="./fire_clay.html">내화점토</a></li>
+<li><a class="text-muted" href="./fishing.html">낚시</a></li>
+<li><a class="text-muted" href="./flux.html">플럭스</a></li>
+<li><a class="text-muted" href="./gems.html">보석</a></li>
+<li><a class="text-muted" href="./grill.html">모닥불과 석쇠</a></li>
+<li><a class="text-muted" href="./heating.html">가열하기</a></li>
+<li><a class="text-muted" href="./hydration.html">작물 수화</a></li>
+<li><a class="text-muted" href="./lamps.html">램프</a></li>
+<li><a class="text-muted" href="./leather_making.html">가죽 제작</a></li>
+<li><a class="text-muted" href="./lighting.html">광원</a></li>
+<li><a class="text-muted" href="./minecarts.html">Minecarts</a></li>
+<li><a class="text-muted" href="./panning.html">사금질</a></li>
+<li><a class="text-muted" href="./papermaking.html">Papermaking</a></li>
+<li><a class="text-muted" href="./pets.html">반려동물</a></li>
+<li><a class="text-muted" href="./pot.html">모닥불과 냄비</a></li>
+<li><a class="text-muted" href="./powderkegs.html">화약통</a></li>
+<li><a class="text-muted" href="./prospecting.html">광물 탐색</a></li>
+<li><a class="text-muted" href="./quern.html">맷돌</a></li>
+<li><a class="text-muted" href="./salad.html">샐러드</a></li>
+<li><a class="text-muted" href="./sandwiches.html">샌드위치</a></li>
+<li><a class="text-muted" href="./scribing_table.html">필기대</a></li>
+<li><a class="text-muted" href="./sluices.html">세광통</a></li>
+<li><a class="text-muted" href="./steel.html">강철</a></li>
+<li><a class="text-muted" href="./support_beams.html">지지대</a></li>
+<li><a class="text-muted" href="./weaving.html">직조</a></li>
+<li><a class="text-muted" href="./wooden_buckets.html">나무 양동이</a></li></ul></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">심화 기술</a> / <a class="text-muted" href="#">축산업</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="달걀">
+                <img src="..\..\_images\item46.png" alt="축산업" />
+            </span>
+            <h4>축산업</h4>
+        </div>
+        </h4>
+                <hr>
+                <p><span style="color:#3E8A00;">가축</span>은 플레이어가 길들이고 교배할 수 있는 동물들입니다. 가축은 <span style="color:#3E8A00;">수컷</span>과 <span style="color:#3E8A00;">암컷</span>이 있습니다. 몇몇 동물들은 암수를 명확히 구분할 수 있습니다. 예를 들면, 수퇘지에게는 엄니가 있습니다.</p>
+<p>가축은 <span style="color:#3E8A00;">나이</span>가 있습니다. 처음에는 새끼로 태어납니다. 새끼들은 작고 플레이어에게 뭔가 해줄 수 없습니다. 특정 기간 후, 그들은 <span style="color:#3E8A00;">성체</span>가 됩니다. 성체들은 교배하거나 우유를 짜는 등의 일을 할 수 있습니다. 충분히 교배하고 작업한 이후에 동물은 <span style="color:#3E8A00;">늙습니다</span>. 늙은 동물들은 그들의 고기를 제외하면 쓸모가 없습니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image37.png" alt="tfc:textures/gui/book/tutorial/old_cow.png">
+<div style="text-align: center;"><p>이 수소는 늙어서 교배할 수 없으며, 가죽이 얼룩지고 눈이 흐립니다.</p>
+</div><p>가축에게는 먹이를 주어서 <span style="color:#3E8A00;">친밀도</span>를 높일 수 있습니다. 각각의 동물들은 선호하는 음식이 있습니다. 동물에게 먹이를 주려면, <span style="color:#b0b;">Shift</span> 키를 누르고 음식을 든 채로 <span style="color:#b0b;">오른쪽 버튼</span>을 누르면 됩니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image38.png" alt="tfc:textures/gui/book/tutorial/unfamiliarized_pig.png">
+<div style="text-align: center;"><p>가축에는 당신과 가축의 친밀도를 표시하는 <span style="color:#3E8A00;">친밀도 게이지</span>가 있습니다. <span style="color:#b0b;">Shift</span> 키를 누르고 동물을 바라보면 확인할 수 있습니다.</p>
+</div>
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image39.png" alt="tfc:textures/gui/book/tutorial/no_familiarity_decay_pig.png">
+<div style="text-align: center;"><p>먹이를 주지 않는다면 친밀도가 매일 약간씩 깎입니다. 친밀도 게이지의 하트 모양에 흰색 테두리가 생길 때까지 친밀도를 올리면, 친밀도가 더 이상 깎이지 않습니다.</p>
+</div>
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image40.png" alt="tfc:textures/gui/book/tutorial/familiarity_limit_pig.png">
+<div style="text-align: center;"><p>성체 가축은 친밀도를 끝까지 높일 수는 없습니다. 최대 친밀도에 도달하면 하트 모양에 빨간색 테두리가 생깁니다. 아기들은 100%까지 친밀도를 높일 수 있습니다.</p>
+</div><a class="anchor" id="mammals"></a><p><span style="color:#3E8A00;">포유류</span>는 <span style="color:#3E8A00;">임신</span>을 하는 가축입니다. 30% 이상의 친밀도를 가졌고 당일에 먹이를 준 성체 포유류는 근처에 다른 성별의 동물이 있으면 짝짓기를 할 수 있습니다. 암컷 동물은 <span style="color:#3E8A00;">임신</span>하며, 수정한 이후 특정 기간 후 새끼를 낳습니다.<br/>
+예시로는 <a href="../mechanics/animal_husbandry.html#pig">돼지</a>가 있습니다.</p>
+<a class="anchor" id="wooly_animals"></a><p><span style="color:#3E8A00;">털</span>이 있는 포유류는 성체이고 당신과 충분히 친밀하다면 <span style="color:#3E8A00;">깎을</span> 수 있습니다. 예시로는 <a href="../mechanics/animal_husbandry.html#sheep">양</a>, <a href="../mechanics/animal_husbandry.html#alpaca">알파카</a>, 그리고 <a href="../mechanics/animal_husbandry.html#musk_ox">사향소</a>가 있습니다.</p>
+<a class="anchor" id="dairy_animals"></a><p><span style="color:#3E8A00;">우유</span>를 짤 수 있는 포유류는 암컷에게 양동이로 우클릭을 하여 우유를 얻을 수 있습니다. 예시로는 <a href="../mechanics/animal_husbandry.html#goat">염소</a>, <a href="../mechanics/animal_husbandry.html#cow">소</a>, 그리고 <a href="../mechanics/animal_husbandry.html#yak">야크</a>가 있습니다.</p>
+<a class="anchor" id="oviparous_animals"></a><h5>둥지 상자</h5>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="짚" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item2.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-toggle="tooltip" title="짚" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item2.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-toggle="tooltip" title="짚" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item2.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="둥지 상자" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">난생 동물</span>은 <a href="../mechanics/animal_husbandry.html#mammals">포유류</a>가 아니며, <span style="color:#3E8A00;">알</span>을 낳아서 번식합니다. 알을 낳기 위해는 <span style="color:#3E8A00;">둥지 상자</span>가 필요합니다.<br/>
+예시로는 <a href="../mechanics/animal_husbandry.html#duck">오리</a>, <a href="../mechanics/animal_husbandry.html#quail">메추라기</a>, 그리고 <a href="../mechanics/animal_husbandry.html#chicken">닭</a>이 있습니다.</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-toggle="tooltip" title="달걀" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item46.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-toggle="tooltip" title="알 프라이" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item48.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>뜨거움****</p>
+        </div>
+        <p><span style="color:#3E8A00;">알</span>은 굽거나 삶아 먹을 수 있습니다. 수컷 난생동물은 암컷을 수정시킬 수 있으며, 수정된 암컷은 둥지 상자에 알을 낳습니다. 알에는 부화하기까지 얼마나 걸리는지에 대한 툴팁이 있습니다.</p>
+<a class="anchor" id="horses"></a>
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image41.png" alt="Recipe: tfc:leather_knapping/saddle">
+<p><span style="color:#3E8A00;">말속</span> 동물들은 타거나 길들일 수 있습니다. 그들을 타기 위해서는 15% 이상의 친밀도가 필요합니다.</p>
+<p>They need a <span style="color:#3E8A00;">Saddle</span> to ride, which can be <span style="color:#3E8A00;">Knapped</span>. This includes <a href="../mechanics/animal_husbandry.html#mule">Mules</a>, <a href="../mechanics/animal_husbandry.html#donkey">Donkeys</a>, and <a href="../mechanics/animal_husbandry.html#horses">Horses</a>. Mules and Donkeys can hold any chest or barrel. If holding a barrel, <span style="color:#b0b;">오른쪽 버튼</span> while holding <span style="color:#b0b;">Shift</span> can be used to remove it. The same keys while holding a bucket can be used to drain fluid from the barrel. <br/>
+<br/>
+The next few pages will go over all livestock types.</p>
+<a class="anchor" id="pig"></a><h5>돼지</h5>
+<p><span style="color:#3E8A00;">돼지</span>는 <a href="../the_world/climate.html#temperature">기온</a>이 -10°C 이상 35°C 이하이고, <a href="../the_world/climate.html#rainfall">강수량</a>이 200mm 이상인 온화한 숲에서 생성됩니다. 돼지는 특별한 점 없는 평범한 <a href="../mechanics/animal_husbandry.html#mammals">포유류</a>입니다. 돼지는 아무 음식이나 먹으며 썩은 음식도 먹을 수 있습니다. 1-10마리의 새끼를 19일의 임신 후 낳으며, 80일 뒤에 성체가 됩니다. 최대 6번 새끼를 가질 수 있습니다.</p>
+<h5> </h5>
+<p>돼지.</p>
+<a class="anchor" id="cow"></a><h5>소</h5>
+<p><span style="color:#3E8A00;">소</span>는 <a href="../the_world/climate.html#temperature">기온</a>이 -10°C 이상 35°C 이하이고, <a href="../the_world/climate.html#rainfall">강수량</a>이 250mm 이상인 대부분의 기후에서 생성됩니다. 소는 <a href="../mechanics/animal_husbandry.html#dairy_animals">우유</a>를 짤 수 있습니다. 소는 <span style="color:#3E8A00;">곡물</span>만 먹으며 썩은 음식도 먹을 수 있습니다. 1-2마리의 새끼를 58일의 임신 후 낳으며, 192일 뒤에 성체가 됩니다. 우유를 짜지 않는다면 최대 13번 새끼를 가질 수 있으며, 번식하지 않는다면 최대 128번 우유를 짤 수 있습니다. 우유는 매일 짤 수 있습니다</p>
+<h5> </h5>
+<p>소.</p>
+<a class="anchor" id="goat"></a><h5>염소</h5>
+<p><span style="color:#3E8A00;">염소</span>는 <a href="../the_world/climate.html#temperature">기온</a>이 -12°C 이상 25°C 이하이고, <a href="../the_world/climate.html#rainfall">강수량</a>이 300mm 이상인 온화한 기후에서 생성됩니다. 염소는 <a href="../mechanics/animal_husbandry.html#dairy_animals">우유</a>를 짤 수 있습니다. 염소는 <span style="color:#3E8A00;">곡물</span>, <span style="color:#3E8A00;">과일</span>, 그리고 <span style="color:#3E8A00;">채소</span>를 먹으며 썩은 음식도 먹을 수 있습니다. 1-2마리의 새끼를 32일의 임신 후 낳으며, 96일 뒤에 성체가 됩니다. 우유를 짜지 않는다면 최대 6번 새끼를 가질 수 있으며, 번식하지 않는다면 최대 60번 우유를 짤 수 있습니다. 우유는 3일마다 짤 수 있습니다.</p>
+<h5> </h5>
+<p>염소.</p>
+<a class="anchor" id="yak"></a><h5>야크</h5>
+<p><span style="color:#3E8A00;">야크</span>는 <a href="../the_world/climate.html#temperature">기온</a>이 -11°C 이하이고, 강수량이 100mm 이상인 추운 기후에서 생성됩니다. 야크는 <a href="../mechanics/animal_husbandry.html#dairy_animals">우유</a>를 짤 수 있습니다. 야크는 신선한 <span style="color:#3E8A00;">곡물</span>만 먹습니다. 1마리의 새끼만을 64일의 임신 후 낳으며, 180일 뒤에 성체가 됩니다. 우유를 짜지 않았다면 최대 23번 새끼를 가질 수 있으며, 번식하지 않는다면 최대 230번 우유를 짤 수 있습니다, 우유는 매일 짤 수 있습니다.</p>
+<h5> </h5>
+<p>야크.</p>
+<a class="anchor" id="alpaca"></a><h5>알파카</h5>
+<p><span style="color:#3E8A00;">알파카</span>는 <a href="../the_world/climate.html#temperature">기온</a>이 -8°C 이상 20°C 이하이고, 강수량이 250mm 이상인 시원한 기후에서 생성됩니다. 알파카는 <a href="../mechanics/animal_husbandry.html#wooly_animals">털</a>을 깎을 수 있습니다. 알파카는 <span style="color:#3E8A00;">곡물</span>과 <span style="color:#3E8A00;">과일</span>을 먹습니다. 1-2마리의 새끼를 36일의 임신 후 낳으며, 98일 뒤에 성체가 됩니다. 털을 깎지 않는다면 최대 13번 새끼를 가질 수 있으며, 번식하지 않는다면 최대 128번 털을 깎을 수 있습니다. 털은 6일마다 자라납니다.</p>
+<h5> </h5>
+<p>알파카.</p>
+<a class="anchor" id="sheep"></a><h5>양</h5>
+<p><span style="color:#3E8A00;">양</span>은 <a href="../the_world/climate.html#temperature">기온</a>이 0°C 이상 35°C 이하이고, 강수량이 70mm 이상 30mm 이하인 건조한 기후에서 생성됩니다. 양은 <a href="../mechanics/animal_husbandry.html#wooly_animals">털</a>을 깎을 수 있습니다. 양은 <span style="color:#3E8A00;">곡물</span>을 먹습니다. 1-2마리의 새끼를 32일의 임신 후 낳으며, 56 뒤에 성체가 됩니다. 털을 깎지 않는다면 최대 6번 새끼를 가질 수 있으며, 번식하지 않는다면 최대 60번 털을 깎을 수 있습니다. 털은 9일마다 자라납니다.</p>
+<h5> </h5>
+<p>양.</p>
+<a class="anchor" id="musk_ox"></a><h5>사향소</h5>
+<p><span style="color:#3E8A00;">Musk Oxen</span> spawn in cold climates, with <a href="../the_world/climate.html#temperature">temperature</a> between -25 and 0°C, and at least 100mm of <a href="../the_world/climate.html#rainfall">rainfall</a>. They are <a href="../mechanics/animal_husbandry.html#wooly_animals">Wooly Animals</a>. They eat <span style="color:#3E8A00;">grains</span>. They always have 1 child, are pregnant for 64 days, and reach adulthood in 168 days. They can have children 16 times, if they are never sheared, or be sheared 160 times if they are never bred. They grow wool every 96 hours.</p>
+<h5> </h5>
+<p>사향소.</p>
+<a class="anchor" id="chicken"></a><h5>닭</h5>
+<p><span style="color:#3E8A00;">닭</span>은 <a href="../the_world/climate.html#temperature">기온</a>이 14°C 이상이고, 강수량이 225mm 이상인 따뜻한 숲에서 생성됩니다. 닭은 <a href="../mechanics/animal_husbandry.html#oviparous_animals">난생동물</a>입니다. 닭은 <span style="color:#3E8A00;">곡물</span>, <span style="color:#3E8A00;">과일</span>, <span style="color:#3E8A00;">채소</span>, 그리고 <span style="color:#3E8A00;">씨앗</span>을 먹으며 썩은 음식도 먹을 수 있습니다. 달걀은 8일 후에 부화하며 24일 뒤에 성체가 됩니다. 알은 최대 100번, 30시간마다 낳을 수 있습니다.</p>
+<h5> </h5>
+<p>닭.</p>
+<a class="anchor" id="duck"></a><h5>오리</h5>
+<p><span style="color:#3E8A00;">오리</span>는 <a href="../the_world/climate.html#temperature">기온</a>이 -25°C 이상 30°C 이하이고, 강수량이 100mm 이상인 평원에서 생성됩니다. 오리는 <a href="../mechanics/animal_husbandry.html#oviparous_animals">난생동물</a>입니다. 오리는 <span style="color:#3E8A00;">곡물</span>, <span style="color:#3E8A00;">과일</span>, <span style="color:#3E8A00;">채소</span>, <span style="color:#3E8A00;">빵</span>, 그리고 <span style="color:#3E8A00;">씨앗</span>을 먹습니다. 오리 알은 8일 후에 부화하며 32일 뒤에 성체가 됩니다. 알은 최대 72번, 32시간마다 낳을 수 있습니다.</p>
+<h5> </h5>
+<p>오리.</p>
+<a class="anchor" id="quail"></a><h5>메추라기</h5>
+<p><span style="color:#3E8A00;">메추라기</span>는 <a href="../the_world/climate.html#temperature">기온</a>이 -15°C 이상 15°C 이하이고, <a href="../the_world/climate.html#rainfall">강수량</a>이 200mm 이상인 추운 기후에서 생성됩니다. 메추라기는 <a href="../mechanics/animal_husbandry.html#oviparous_animals">난생동물</a>입니다. 메추라기는 <span style="color:#3E8A00;">곡물</span>, <span style="color:#3E8A00;">과일</span>, <span style="color:#3E8A00;">채소</span>, 그리고 <span style="color:#3E8A00;">씨앗</span>을 먹으며 썩은 음식도 먹을 수 있습니다. 메추라기 알은 8일 후에 부화하며 22일 뒤에 성체가 됩니다. 알은 최대 48번, 28시간마다 낳을 수 있습니다.</p>
+<h5> </h5>
+<p>메추라기.</p>
+<a class="anchor" id="donkey"></a><h5>당나귀</h5>
+<p><span style="color:#3E8A00;">당나귀</span>는 <a href="../the_world/climate.html#temperature">기온</a>이 -15°C 이상이고, 강수량이 130mm 이상 40mm 이하인 습한 평원에서 생성됩니다. 당나귀는 <a href="../mechanics/animal_husbandry.html#horses">말속</a> 동물이며 <span style="color:#3E8A00;">상자</span>를 달 수 있습니다. 당나귀는 <span style="color:#3E8A00;">곡물</span>과 <span style="color:#3E8A00;">과일</span>을 먹습니다. 1마리의 새끼만을 19일의 임신 후에 낳으며, 80일 뒤에 성체가 됩니다. 최대 6번 새끼를 가질 수 있습니다.</p>
+<h5> </h5>
+<p>당나귀.</p>
+<a class="anchor" id="mule"></a><h5>노새</h5>
+<p><span style="color:#3E8A00;">노새</span>는 <a href="../the_world/climate.html#temperature">기온</a>이 -15°C 이상이고, 강수량이 130mm 이상 40mm 이하인 습한 평원에서 생성됩니다. 노새는 <a href="../mechanics/animal_husbandry.html#horses">말속</a> 동물이며 <span style="color:#3E8A00;">상자</span>를 달 수 있습니다. 노새는 <span style="color:#3E8A00;">곡물</span>과 <span style="color:#3E8A00;">과일</span>을 먹습니다. 또한 노새는 <span style="color:#3E8A00;">말</span>과 당나귀의 잡종으로 번식할 수 없으며 80일 뒤에 성체가 됩니다.</p>
+<h5> </h5>
+<p>노새.</p>
+<a class="anchor" id="horse"></a><h5>말</h5>
+<p><span style="color:#3E8A00;">말</span>은 <a href="../the_world/climate.html#temperature">기온</a>이 -15°C 이상이고, 강수량이 130mm 이상 40mm 이하인 평원에서 생성됩니다. 말은 <a href="../mechanics/animal_husbandry.html#horses">말속</a> 동물입니다. 말은 <span style="color:#3E8A00;">곡물</span>과 <span style="color:#3E8A00;">과일</span>을 먹습니다. 1마리의 새끼만을 19일의 임신 후에 낳으며, 80일 뒤에 성체가 됩니다. 최대 6번 새끼를 가질 수 있습니다.</p>
+<h5> </h5>
+<p>말.</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

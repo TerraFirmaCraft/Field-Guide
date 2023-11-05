@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft 도감</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'ko_kr';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft 도감</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">한국어</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/mechanics\pot.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\pot.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\pot.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\pot.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\pot.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\pot.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\pot.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\pot.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">색인</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API 뮨서</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">버전 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>목차</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">세계</a></li>
+<li><a class="text-muted" href="../getting_started/">시작하기</a></li>
+<li><a class="text-muted" href="../mechanics/">심화 기술</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./advanced_building_materials.html">발전된 재료</a></li>
+<li><a class="text-muted" href="./animal_husbandry.html">축산업</a></li>
+<li><a class="text-muted" href="./anvils.html">모루</a></li>
+<li><a class="text-muted" href="./aqueducts.html">수로</a></li>
+<li><a class="text-muted" href="./armor.html">갑옷</a></li>
+<li><a class="text-muted" href="./barrels.html">통</a></li>
+<li><a class="text-muted" href="./bellows.html">풀무</a></li>
+<li><a class="text-muted" href="./blast_furnace.html">용광로</a></li>
+<li><a class="text-muted" href="./bloomery.html">괴철로</a></li>
+<li><a class="text-muted" href="./bread.html">빵</a></li>
+<li><a class="text-muted" href="./charcoal_forge.html">숯불 노</a></li>
+<li><a class="text-muted" href="./charcoal_pit.html">숯 구덩이</a></li>
+<li><a class="text-muted" href="./chisel.html">끌</a></li>
+<li><a class="text-muted" href="./composter.html">Composter</a></li>
+<li><a class="text-muted" href="./crops.html">작물</a></li>
+<li><a class="text-muted" href="./crucible.html">도가니</a></li>
+<li><a class="text-muted" href="./dairy.html">유제품</a></li>
+<li><a class="text-muted" href="./damage_types.html">피해 종류</a></li>
+<li><a class="text-muted" href="./decay.html">음식 보존</a></li>
+<li><a class="text-muted" href="./fertilizers.html">비료</a></li>
+<li><a class="text-muted" href="./fire_clay.html">내화점토</a></li>
+<li><a class="text-muted" href="./fishing.html">낚시</a></li>
+<li><a class="text-muted" href="./flux.html">플럭스</a></li>
+<li><a class="text-muted" href="./gems.html">보석</a></li>
+<li><a class="text-muted" href="./grill.html">모닥불과 석쇠</a></li>
+<li><a class="text-muted" href="./heating.html">가열하기</a></li>
+<li><a class="text-muted" href="./hydration.html">작물 수화</a></li>
+<li><a class="text-muted" href="./lamps.html">램프</a></li>
+<li><a class="text-muted" href="./leather_making.html">가죽 제작</a></li>
+<li><a class="text-muted" href="./lighting.html">광원</a></li>
+<li><a class="text-muted" href="./minecarts.html">Minecarts</a></li>
+<li><a class="text-muted" href="./panning.html">사금질</a></li>
+<li><a class="text-muted" href="./papermaking.html">Papermaking</a></li>
+<li><a class="text-muted" href="./pets.html">반려동물</a></li>
+<li><a class="text-muted" href="./pot.html">모닥불과 냄비</a></li>
+<li><a class="text-muted" href="./powderkegs.html">화약통</a></li>
+<li><a class="text-muted" href="./prospecting.html">광물 탐색</a></li>
+<li><a class="text-muted" href="./quern.html">맷돌</a></li>
+<li><a class="text-muted" href="./salad.html">샐러드</a></li>
+<li><a class="text-muted" href="./sandwiches.html">샌드위치</a></li>
+<li><a class="text-muted" href="./scribing_table.html">필기대</a></li>
+<li><a class="text-muted" href="./sluices.html">세광통</a></li>
+<li><a class="text-muted" href="./steel.html">강철</a></li>
+<li><a class="text-muted" href="./support_beams.html">지지대</a></li>
+<li><a class="text-muted" href="./weaving.html">직조</a></li>
+<li><a class="text-muted" href="./wooden_buckets.html">나무 양동이</a></li></ul></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">심화 기술</a> / <a class="text-muted" href="#">모닥불과 냄비</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="냄비">
+                <img src="..\..\_images\item159.png" alt="모닥불과 냄비" />
+            </span>
+            <h4>모닥불과 냄비</h4>
+        </div>
+        </h4>
+                <hr>
+                <p><span style="color:#3E8A00;">냄비</span>는 모닥불에서 새로운 종류의 음식을 조리하고 다른 유용한 아이템들을 제작하게 해 주는 장치입니다.<br/>
+<br/>
+냄비를 사용하려면 <a href="../getting_started/firepit.html">모닥불</a> 위에 <span style="color:#3E8A00;">도자기 냄비</span>를 올려놓아야 합니다.</p>
+<h5></h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p>냄비를 올려놓은 모닥불.</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image73.png" alt="Recipe: tfc:clay_knapping/pot">
+<p>도자기 냄비는 먼저 <a href="../getting_started/pottery.html">점토로</a> 형태를 만들어야 합니다.</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-toggle="tooltip" title="굽지 않은 냄비" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item160.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-toggle="tooltip" title="냄비" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item161.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-yellow">
+            <p>연노랑****</p>
+        </div>
+        <p>모닥불과 사용할 수 있는 <span style="color:#3E8A00;">도자기 냄비</span>를 만들기 위해서는 먼저 <a href="../mechanics/heating.html">구워야</a> 합니다.</p>
+<p>모닥불과 비슷하게, 냄비에는 맨 위쪽부터 넣는 4개의 연료 슬롯과 온도 게이지가 있습니다. 냄비는 또한 5개의 아이템과 아무 액체 <span style="color:#3E8A00;">1000mB</span>를 포함할 수 있습니다.<br/>
+<br/>
+냄비를 사용하기 위해서는 먼저 통이나 양동이 등으로 냄비 속에 액체를 넣어야 합니다. 그 후에 아이템을 넣고 냄비를 사용할 수 있습니다. 냄비는 제작이 완료될 때까지 계속 끓습니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image74.png" alt="tfc:textures/gui/book/gui/pot.png">
+<div style="text-align: center;"><p>끓으면서 수프를 만드는 중인 냄비의 인터페이스.</p>
+</div><a class="anchor" id="soup"></a>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="맛있는 수프">
+                <img src="..\..\_images\item162.png" alt="수프 제작법" />
+            </span>
+            <h5>수프 제작법</h5>
+        </div>
+        <p>수프는 3-5개의 <span style="color:#3E8A00;">과일</span>, <span style="color:#3E8A00;">채소</span>, <span style="color:#3E8A00;">고기</span>를 <span style="color:#3E8A00;">물</span>이 든 냄비에서 끓여 만듭니다. 제작을 완료한 후에는 냄비 속의 물이 빨갛게 변합니다. <span style="color:#3E8A00;">그릇</span>을 들고 <span style="color:#b0b;">오른쪽 버튼</span>을 누르면 수프를 꺼낼 수 있습니다. 수프는 여러 영양소를 하나의 음식으로 결합합니다.</p>
+<h5>간단한 제작법</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="이 아이템을 확인하려면 Minecraft에서 도감을 확인하세요.">아이템: <code>tfc:bucket/red_dye</code></span></p>
+        </div>
+        <p>다른 냄비 제작법들은 아이템과 액체를 다른 무언가로 바꿉니다. 예를 들면, 5개의 <span style="color:#3E8A00;">재</span>를 <span style="color:#3E8A00;">물</span>에서 끓이면 <span style="color:#3E8A00;">잿물</span>이 됩니다.</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

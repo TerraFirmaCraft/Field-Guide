@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'uk_ua';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Українська мова</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/the_world\climate.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world\climate.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world\climate.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world\climate.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world\climate.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world\climate.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world\climate.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world\climate.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">Світ</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./biomes.html">Біоми</a></li>
+<li><a class="text-muted" href="./waterways.html">Водойми</a></li>
+<li><a class="text-muted" href="./geology.html">Геологія</a></li>
+<li><a class="text-muted" href="./ores_and_minerals.html">Руди та мінерали</a></li>
+<li><a class="text-muted" href="./climate.html">Календар та клімат</a></li>
+<li><a class="text-muted" href="./flora.html">Флора</a></li>
+<li><a class="text-muted" href="./wild_crops.html">Дикі культури</a></li>
+<li><a class="text-muted" href="./wild_fruits.html">Дикоростучі фрукти</a></li>
+<li><a class="text-muted" href="./wild_animals.html">Дикі тварини</a></li></ul></li>
+<li><a class="text-muted" href="../getting_started/">Починаємо</a></li>
+<li><a class="text-muted" href="../mechanics/">Розширена механіка</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">Світ</a> / <a class="text-muted" href="#">Календар та клімат</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image102.png" alt="Календар та клімат" />
+            </span>
+            <h4>Календар та клімат</h4>
+        </div>
+        </h4>
+                <hr>
+                <a class="anchor" id="calendar"></a><p>У TerraFirmaCraft дуже важливими є клімат і час. Почнемо з <span style="color:#3E8A00;">календаря</span>.<br/>
+<br/>
+У будь-який час ти можеш переглянути календар, натиснувши клавішу <span style="color:#b0b;">E</span>, та обрати вкладку календаря. На цій вкладці зазначено <span style="color:#3E8A00;">пору року</span>, <span style="color:#3E8A00;">день тижня</span>, та <span style="color:#3E8A00;">дату</span>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image103.png" alt="tfc:textures/gui/book/gui/calendar.png">
+<div style="text-align: center;"><p>Вкладка календаря</p>
+</div><p>Є пори року, а погода та клімат змінюватимуться разом з ними! У TerraFirmaCraft чотири пори року, кожна з яких поділена на <span style="color:#3E8A00;">ранній</span>, <span style="color:#3E8A00;">середній</span> та <span style="color:#3E8A00;">пізній</span> місяці. Чотири пори року це:<br/>
+</p>
+<ul>
+	<li><strong>Весна</strong>: березень, квітень, травень</li>
+	<li><strong>Літо</strong>: червень, липень, серпень</li>
+	<li><strong>Осінь</strong>: вересень, жовтень, листопад</li>
+	<li><strong>Зима</strong>: грудень, січень, лютий</li>
+</ul>
+<p>Поточна пора року може вплинути на температуру місцевості, кількість опадів (буде дощ або сніг), та інше. Зверни увагу на вкладку календаря, буде корисним!<br/>
+<br/>
+А тепер про клімат...</p>
+<a class="anchor" id="climate"></a><h5>Клімат</h5>
+<p>Ще одна вкладка на головному екрані інвентаря – це інформація про <span style="color:#3E8A00;">клімат</span>. Ця інформація стосується поточного місця твого знаходження<br/>
+<br/>
+Перший рядок вкаже загальний <a href="https://en.wikipedia.org/wiki/K%C3%B6ppen_climate_classification">клімат</a> .<br/>
+<br/>
+Другий рядок вказує на <a href="../the_world/geology.html">тектонічний рельєф</a>.<br/>
+<br/>
+Третій рядок вказує <span style="color:#3E8A00;">середньорічну температуру</span>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image104.png" alt="tfc:textures/gui/book/gui/climate.png">
+<div style="text-align: center;"><p>Вкладка клімату</p>
+</div><a class="anchor" id="temperature"></a><p>На температуру в TerraFirmaCraft впливає ряд факторів:<br/>
+</p>
+<ul>
+	<li>По-перше, найбільшу роль відіграватиме географічна широта (координата Z).</li>
+	<li>По-друге, на температуру вплине нинішня пора року – найспекотніше влітку, а найхолодніше взимку.</li>
+	<li>Нарешті, температура може змінюватися щодня, а також коливатися час від часу.</li>
+</ul>
+<p>Останній рядок вказує поточну температуру, що зсумовує всі ці, вищезазначені фактори.<br/>
+<br/>
+Температура може впливати на багато речей: чи будуть рости зернові культури та інші рослини, чи утвориться крига або стане сніг, тощо.</p>
+<a class="anchor" id="rainfall"></a><h5>Опади</h5>
+<p>Кількість опадів – ще одна кліматична величина, яка може змінюватися залежно від того, де ти знаходишся. Річна кількість опадів вимірюється в міліметрах (мм) і може становити від 0 мм до 500 мм. Опади впливають на типи флори, які зустрічаються в цій місцевості, а також на типи ґрунту, від піску та кактусів до суглинку, мулу та бавовняних дерев.</p>
+<p>Опади також важливі, оскільки вони впливають на те, що можна вирощувати в місцевості. Опади є одним із головних чинників <a href="../mechanics/hydration.html">зволоження</a>, яка є точним показником того, наскільки вологий ґрунт у певній місцевості, і використовується <a href="../mechanics/crops.html">рослинами</a>, <a href="../the_world/wild_fruits.html#fruit_trees">фруктовими деревами</a>, та <a href="../the_world/wild_fruits.html#tall_bushes">ягідними кущами</a> щоб визначити, чи можуть вони тут рости.</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'en_us';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/mechanics\weaving.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\weaving.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\weaving.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\weaving.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\weaving.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\weaving.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\weaving.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\weaving.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">The World</a></li>
+<li><a class="text-muted" href="../getting_started/">Getting Started</a></li>
+<li><a class="text-muted" href="../mechanics/">Advanced Mechanics</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./advanced_building_materials.html">Advanced Materials</a></li>
+<li><a class="text-muted" href="./animal_husbandry.html">Animal Husbandry</a></li>
+<li><a class="text-muted" href="./anvils.html">Anvils</a></li>
+<li><a class="text-muted" href="./aqueducts.html">Aqueducts</a></li>
+<li><a class="text-muted" href="./armor.html">Armor</a></li>
+<li><a class="text-muted" href="./barrels.html">Barrels</a></li>
+<li><a class="text-muted" href="./bellows.html">Bellows</a></li>
+<li><a class="text-muted" href="./blast_furnace.html">Blast Furnace</a></li>
+<li><a class="text-muted" href="./bloomery.html">Bloomery</a></li>
+<li><a class="text-muted" href="./bread.html">Bread</a></li>
+<li><a class="text-muted" href="./charcoal_forge.html">Charcoal Forge</a></li>
+<li><a class="text-muted" href="./charcoal_pit.html">Charcoal Pit</a></li>
+<li><a class="text-muted" href="./chisel.html">Chisel</a></li>
+<li><a class="text-muted" href="./composter.html">Composter</a></li>
+<li><a class="text-muted" href="./crops.html">Crops</a></li>
+<li><a class="text-muted" href="./crucible.html">Crucible</a></li>
+<li><a class="text-muted" href="./dairy.html">Dairy Products</a></li>
+<li><a class="text-muted" href="./damage_types.html">Damage Types</a></li>
+<li><a class="text-muted" href="./decay.html">Preservation</a></li>
+<li><a class="text-muted" href="./fertilizers.html">Fertilizers</a></li>
+<li><a class="text-muted" href="./fire_clay.html">Fire Clay</a></li>
+<li><a class="text-muted" href="./fishing.html">Fishing</a></li>
+<li><a class="text-muted" href="./flux.html">Flux</a></li>
+<li><a class="text-muted" href="./gems.html">Gems</a></li>
+<li><a class="text-muted" href="./grill.html">Firepit And Grill</a></li>
+<li><a class="text-muted" href="./heating.html">Heating</a></li>
+<li><a class="text-muted" href="./hydration.html">Keeping Hydrated</a></li>
+<li><a class="text-muted" href="./lamps.html">Lamps</a></li>
+<li><a class="text-muted" href="./leather_making.html">Leather Making</a></li>
+<li><a class="text-muted" href="./lighting.html">Light Sources</a></li>
+<li><a class="text-muted" href="./minecarts.html">Minecarts</a></li>
+<li><a class="text-muted" href="./panning.html">Panning</a></li>
+<li><a class="text-muted" href="./papermaking.html">Papermaking</a></li>
+<li><a class="text-muted" href="./pets.html">Pets</a></li>
+<li><a class="text-muted" href="./pot.html">Firepit And Pot</a></li>
+<li><a class="text-muted" href="./powderkegs.html">Powderkegs</a></li>
+<li><a class="text-muted" href="./prospecting.html">Prospecting</a></li>
+<li><a class="text-muted" href="./quern.html">Quern</a></li>
+<li><a class="text-muted" href="./salad.html">Salads</a></li>
+<li><a class="text-muted" href="./sandwiches.html">Sandwiches</a></li>
+<li><a class="text-muted" href="./scribing_table.html">Scribing Table</a></li>
+<li><a class="text-muted" href="./sluices.html">Sluices</a></li>
+<li><a class="text-muted" href="./steel.html">Steel</a></li>
+<li><a class="text-muted" href="./support_beams.html">Support Beams</a></li>
+<li><a class="text-muted" href="./weaving.html">Weaving</a></li>
+<li><a class="text-muted" href="./wooden_buckets.html">Wooden Buckets</a></li></ul></li>
+<li><a class="text-muted" href="../tfcgyres_orehints/">(Addon) Ore Hints and Spawning</a></li>
+<li><a class="text-muted" href="../waterflasks/">(Addon) Water Flasks</a></li>
+<li><a class="text-muted" href="../firmalife/">(Addon) Firmalife</a></li>
+<li><a class="text-muted" href="../firmaciv/">(Addon) Firma: Civilization</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">Advanced Mechanics</a> / <a class="text-muted" href="#">Weaving</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Spindle">
+                <img src="..\..\_images\item196.png" alt="Weaving" />
+            </span>
+            <h4>Weaving</h4>
+        </div>
+        </h4>
+                <hr>
+                <p><span style="color:#3E8A00;">Weaving</span> is the process of combining different kinds of string into <span style="color:#3E8A00;">Cloth</span>. While the last step of weaving is done in a <span style="color:#3E8A00;">Loom</span>, some cloths such as <span style="color:#3E8A00;">Wool</span>, obtained from <a href="../mechanics/animal_husbandry.html#wooly_animals">Wooly Animals</a>, requires a <span style="color:#3E8A00;">Spindle</span> to obtain <span style="color:#3E8A00;">Wool Yarn</span> in order to be woven.</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image87.png" alt="Recipe: tfc:clay_knapping/spindle_head">
+<p>The <span style="color:#3E8A00;">Unfired Spindle Head</span> is knapped from clay. It can then be <a href="../mechanics/heating.html">fired</a> to make a <span style="color:#3E8A00;">Spindle Head</span>. To complete the spindle, craft it with a <span style="color:#3E8A00;">Stick</span>.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="Spindle" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item196.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="Wool" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item198.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Wool Yarn" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">8</p>
+                    <img class="recipe-item" src="..\..\_images\item197.png" />
+                </div>
+            </div>
+        </div>
+        <p>Crafting <span style="color:#3E8A00;">Wool</span> with a Spindle yields <span style="color:#3E8A00;">Wool Yarn</span>.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="Acacia Lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item199.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="Acacia Lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item199.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-toggle="tooltip" title="Acacia Lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item199.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Acacia Lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item199.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-toggle="tooltip" title="Stick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item200.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-toggle="tooltip" title="Acacia Lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item199.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-toggle="tooltip" title="Acacia Lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item199.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-toggle="tooltip" title="Acacia Lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item199.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Acacia Loom" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>The loom is crafted from just <span style="color:#3E8A00;">Lumber</span> and a <span style="color:#3E8A00;">Stick</span>.</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-toggle="tooltip" title="Wool Yarn" class="crafting-recipe-item-tooltip"></span>
+                <p class="crafting-recipe-item-count">16</p>
+                <img class="recipe-item" src="..\..\_images\item197.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-toggle="tooltip" title="Wool Cloth" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item201.png" />
+            </div>
+        </div>
+    </div>
+    <p>The recipe for <span style="color:#3E8A00;">Wool Cloth</span> takes 16 <span style="color:#3E8A00;">Wool Yarn</span>. Adding to the loom is done with <span style="color:#b0b;">Right Click</span>. Then, hold down <span style="color:#b0b;">Right Click</span> to begin working the loom. When it is done, press <span style="color:#b0b;">Right Click</span> to retrieve the item.</p>
+
+<div id="content4" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#content4" data-slide-to="0" class="active"></li>
+        
+<li data-target="#content4" data-slide-to="1"></li>
+
+<li data-target="#content4" data-slide-to="2"></li>
+
+<li data-target="#content4" data-slide-to="3"></li>
+
+    </ol>
+    <div class="carousel-inner">
+        
+<div class="carousel-item active">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image88.png" alt="tfc:textures/gui/book/tutorial/loom_empty.png">
+</div>
+
+<div class="carousel-item ">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image89.png" alt="tfc:textures/gui/book/tutorial/loom_full.png">
+</div>
+
+<div class="carousel-item ">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image90.png" alt="tfc:textures/gui/book/tutorial/loom_working.png">
+</div>
+
+<div class="carousel-item ">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image91.png" alt="tfc:textures/gui/book/tutorial/loom_done.png">
+</div>
+
+    </div>
+    <a class="carousel-control-prev" href="#content4" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#content4" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<div style="text-align: center;"><p>The stages of the loom working.</p>
+</div>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-toggle="tooltip" title="Wool Cloth" class="crafting-recipe-item-tooltip"></span>
+                <p class="crafting-recipe-item-count">4</p>
+                <img class="recipe-item" src="..\..\_images\item201.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-toggle="tooltip" title="White Wool" class="crafting-recipe-item-tooltip"></span>
+                <p class="crafting-recipe-item-count">8</p>
+                <img class="recipe-item" src="..\..\_images\item202.png" />
+            </div>
+        </div>
+    </div>
+    <p><span style="color:#3E8A00;">Wool Cloth</span> can be re-woven into <span style="color:#3E8A00;">Wool Blocks</span>. Wool blocks can be dyed.</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-toggle="tooltip" title="String" class="crafting-recipe-item-tooltip"></span>
+                <p class="crafting-recipe-item-count">24</p>
+                <img class="recipe-item" src="..\..\_images\item203.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-toggle="tooltip" title="Silk Cloth" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item204.png" />
+            </div>
+        </div>
+    </div>
+    <p><span style="color:#3E8A00;">Silk Cloth</span> can be made in the loom out of <span style="color:#3E8A00;">String</span>. It can be used as a wool cloth substitute in some cases.</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-toggle="tooltip" title="Jute Fiber" class="crafting-recipe-item-tooltip"></span>
+                <p class="crafting-recipe-item-count">12</p>
+                <img class="recipe-item" src="..\..\_images\item120.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-toggle="tooltip" title="Burlap Cloth" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item205.png" />
+            </div>
+        </div>
+    </div>
+    <p><span style="color:#3E8A00;">Burlap Cloth</span> does not have a use, but it can be made from <a href="../mechanics/crops.html#jute">Jute Fiber</a>.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="Light Blue Dye" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item206.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="Light Blue Dye" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item206.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-toggle="tooltip" title="Light Blue Dye" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item206.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:high_quality_cloth" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item207.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:high_quality_cloth" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item207.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:high_quality_cloth" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item207.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Light Blue Bed" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item16.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item16.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item16.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item16.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:high_quality_cloth" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item207.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item16.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item16.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item16.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item16.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Painting" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item208.png" />
+                </div>
+            </div>
+        </div>
+        
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

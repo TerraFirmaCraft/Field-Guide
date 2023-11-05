@@ -1,5 +1,6 @@
 from typing import NamedTuple
 
+
 class Addon(NamedTuple):
     user: str  # Username of a GitHub repository for the addon's source code
     repo: str  # Repository name
@@ -18,31 +19,31 @@ class OldVersion(NamedTuple):
 
 
 # 1.18.2 Versions
+# 
+# These are kept in case the old version ever needs to be regenerated
+#
+# VERSION = 'v2.2.30'
+# MC_VERSION = '1.18.2'
+# FORGE_VERSION = '40.1.73'
+# LANGUAGES = ['en_us', 'ja_jp', 'pt_br', 'ko_kr', 'uk_ua', 'zh_cn', 'zh_hk', 'zh_tw']
+#
+# ADDONS = (
+#     Addon('eerussianguy', 'firmalife', 'v1.2.12', 'firmalife', 'src/main/resources'),
+#     Addon('gaelmare', 'waterflasks', '2.0.6', 'waterflasks', 'src/main/resources'),
+#     Addon('gaelmare', 'tfcgyresorehints', '1.4', 'tfcgyres_orehints', 'src'),
+#     Addon('HyperDashPony', 'FirmaCiv', '0.0.30-alpha-1.18.2', 'firmaciv', 'src/main/resources'),
+# )
 
-VERSION = 'v2.2.30'
-MC_VERSION = '1.18.2'
-FORGE_VERSION = '40.1.73'
-LANGUAGES = ['en_us', 'ja_jp', 'pt_br', 'ko_kr', 'uk_ua', 'zh_cn', 'zh_hk', 'zh_tw']
 
-ADDONS = (
-    Addon('eerussianguy', 'firmalife', 'v1.2.12', 'firmalife', 'src/main/resources'),
-    Addon('gaelmare', 'waterflasks', '2.0.6', 'waterflasks', 'src/main/resources'),
-    Addon('gaelmare', 'tfcgyresorehints', '1.4', 'tfcgyres_orehints', 'src'),
-    Addon('HyperDashPony', 'FirmaCiv', '0.0.30-alpha-1.18.2', 'firmaciv', 'src/main/resources'),
-)
-
-
-"""
-VERSION = '48999a2'
+VERSION = 'v3.0.0-beta'
 MC_VERSION = '1.20.1'
 FORGE_VERSION = '47.1.3'
-LANGUAGES = ('en_us', )
+LANGUAGES = ('en_us', 'ja_jp', 'pt_br', 'ko_kr', 'uk_ua', 'zh_cn', 'zh_hk', 'zh_tw')
 
 ADDONS = ()
-"""
 
 OLD_VERSIONS = (
-    OldVersion('20', '1.20.1 - 48999a2', True),
+    OldVersion('18', '1.18.2 - 2.2.32', False),
 )
 
 TFC_VERSION = '%s - %s' % (MC_VERSION, VERSION)

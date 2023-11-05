@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft 도감</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'ko_kr';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft 도감</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">한국어</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/getting_started\building_materials.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\building_materials.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\building_materials.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\building_materials.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\building_materials.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\building_materials.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\building_materials.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\building_materials.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">색인</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API 뮨서</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">버전 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>목차</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">세계</a></li>
+<li><a class="text-muted" href="../getting_started/">시작하기</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./introduction.html">소개</a></li>
+<li><a class="text-muted" href="./firepit.html">최초의 불</a></li>
+<li><a class="text-muted" href="./pottery.html">도자기</a></li>
+<li><a class="text-muted" href="./pit_kiln.html">구덩이 가마</a></li>
+<li><a class="text-muted" href="./finding_ores.html">광석, 금속 그리고 주조</a></li>
+<li><a class="text-muted" href="./primitive_alloys.html">기초 합금</a></li>
+<li><a class="text-muted" href="./primitive_anvils.html">기초적인 모루</a></li>
+<li><a class="text-muted" href="./building_materials.html">건축 블록</a></li>
+<li><a class="text-muted" href="./a_place_to_sleep.html">잠자리</a></li>
+<li><a class="text-muted" href="./size_and_weight.html">크기와 무게</a></li>
+<li><a class="text-muted" href="./food_and_water.html">음식과 물</a></li></ul></li>
+<li><a class="text-muted" href="../mechanics/">심화 기술</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">시작하기</a> / <a class="text-muted" href="#">건축 블록</a></em></p>
+            
+                <h4><h4>건축 블록</h4></h4>
+                <hr>
+                <p>게임의 초반에는 여러 금속 도구들이 없기 때문에, 건축이 쉽지 않을 수 있습니다. 그러나 돌 도구만으로도 얻을 수 있는 몇몇 건축 블록들이 있습니다.<br/>
+<br/>
+금속 도구를 이용해 만들 수 있는 건축 블록은 <a href="../mechanics/advanced_building_materials.html">여기</a>를 참고하세요.</p>
+<h5>내용</h5>
+<p></p>
+<ol>
+	<li><a href="../getting_started/building_materials.html#thatch">짚단</a></li>
+	<li><a href="../getting_started/building_materials.html#mud_bricks">진흙 벽돌</a></li>
+	<li><a href="../getting_started/building_materials.html#wattle_and_daub">욋가지와 칠</a></li>
+	<li><a href="../getting_started/building_materials.html#clay_and_peat">점토와 이탄</a></li>
+</ol><p></p>
+<a class="anchor" id="thatch"></a><h5>짚단</h5>
+<p><a href="../getting_started/introduction.html#knife">돌 칼</a>만 있다면, 식물들을 잘라내어 <span style="color:#3E8A00;">짚</span>을 얻을 수 있습니다. 이 짚으로는 아주 간단한 건축 블록인 <span style="color:#3E8A00;">짚단</span>을 만들 수 있습니다. 짚단은 중력의 영향을 받지 않는 아주 가벼운 블록입니다, 그러나 플레이어와 다른 엔티티들이 짚단을 뚫고 지나갈 수 있습니다! 짚단은 필요하다면 다시 <span style="color:#3E8A00;">짚</span>으로 분해할 수 있습니다.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="짚" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item2.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="짚" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item2.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="짚" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item2.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-toggle="tooltip" title="짚" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item2.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="짚단" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="짚단" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="짚" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">4</p>
+                    <img class="recipe-item" src="..\..\_images\item2.png" />
+                </div>
+            </div>
+        </div>
+        <a class="anchor" id="mud_bricks"></a><h5>진흙 벽돌</h5>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="양토 진흙" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item4.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="짚" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item2.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="젖은 양토 진흙 벽돌" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">4</p>
+                    <img class="recipe-item" src="..\..\_images\item3.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">진흙</span>은 땅 위에서나 강과 호수 바닥, 또는 늪지대의 낮은 곳에서 발견할 수 있습니다. 점토와 <span style="color:#3E8A00;">짚</span>이 있다면 젖은 진흙 벽돌을 만들 수 있습니다.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p>이 벽돌들을 마른 땅에 올려놓은 후, 하루가 지나면 벽돌들이 굳고 <span style="color:#3E8A00;">진흙 벽돌</span>이 됩니다.</p>
+<h5> </h5>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="양토 진흙 벽돌" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item6.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="양토 진흙 벽돌" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item6.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="양토 진흙 벽돌" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item6.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-toggle="tooltip" title="양토 진흙 벽돌" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item6.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="양토 진흙 벽돌" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item5.png" />
+                </div>
+            </div>
+        </div>
+        <p>마른 진흙 벽돌들로는 <span style="color:#3E8A00;">진흙 벽돌 블록</span>을 만들 수 있습니다. 필요하다면 벽돌로 <span style="color:#3E8A00;">계단</span>이나 <span style="color:#3E8A00;">반 블록</span>, <span style="color:#3E8A00;">벽</span> 역시 만들 수 있습니다.</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block1.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>모든 진흙 벽돌의 종류</p>
+</div><a class="anchor" id="wattle_and_daub"></a><h5>초벽</h5>
+<p><span style="color:#3E8A00;">초벽</span>은 다목적 건축/장식 블록입니다.<br/>
+<br/>
+<span style="color:#3E8A00;">욋가지</span>를 만들어서 설치하면, 쉽게 부서지고 플레이어와 몹들이 지나다닐 수 있습니다. <span style="color:#3E8A00;">칠</span>을 사용하면 욋가지를 단단하게 만들 수 있습니다.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="Tag: #minecraft:logs" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item7.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #minecraft:logs" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item7.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="욋가지" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">6</p>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">욋가지</span>를 단단하게 만들기 위해, 욋가지에 막대기를 추가하여 엮어야 합니다.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="짚" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item2.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="점토 덩이" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item9.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-toggle="tooltip" title="Tag: #minecraft:dirt" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item10.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="칠" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">2</p>
+                    <img class="recipe-item" src="..\..\_images\item8.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="점토 덩이" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item9.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:mud" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item11.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="칠" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">2</p>
+                    <img class="recipe-item" src="..\..\_images\item8.png" />
+                </div>
+            </div>
+        </div>
+        <p></p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image1.png" alt="tfc:textures/gui/book/tutorial/wattle_weave.png">
+<div style="text-align: center;"><p>욋가지를 <span style="color:#3E8A00;">엮기</span> 위해서는 4개의 막대기가 필요합니다.</p>
+</div><p>막대기는 각각의 대각선과 위, 아래쪽에 추가할 수 있습니다. <span style="color:#3E8A00;">막대기</span>를 들고 욋가지에 <span style="color:#b0b;">오른쪽 버튼</span>을 누르면 막대기를 추가할 수 있습니다. 다른 쪽 면을 선택하면 당신이 막대기를 추가할 면을 바꿀 수 있습니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image2.png" alt="tfc:textures/gui/book/tutorial/wattle_add_stick.png">
+<div style="text-align: center;"><p>욋가지에 막대기를 추가하기.</p>
+</div>
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image3.png" alt="tfc:textures/gui/book/tutorial/wattle_add_daub.png">
+<div style="text-align: center;"><p><span style="color:#3E8A00;">칠</span>을 <span style="color:#3E8A00;">엮은 욋가지</span>에 사용하면 초벽이 됩니다.</p>
+</div>
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image4.png" alt="tfc:textures/gui/book/tutorial/wattle_stained.png">
+<div style="text-align: center;"><p>염료를 사용하면 초벽을 <span style="color:#3E8A00;">염색할 수 있습니다</span>.</p>
+</div><a class="anchor" id="clay_and_peat"></a><h5>점토 블록과 이탄</h5>
+<p>점토로는 점토 블록을 만들 수 있습니다. 점토 블록을 설치하고 부수면 다시 점토로 돌아옵니다. 딱히 아름답지는 않지만, 점토 블록을 얻기는 어렵지 않습니다.<br/>
+<br/>
+이탄은 물 근처의 월드에서 생성되고 돌 도구로 캘 수 있습니다. 몇몇 식물들은 이탄 위에서 자랍니다.<br/>
+<br/>
+이탄은 불에 꽤 잘 탑니다.</p>
+<h5>점토 블록</h5>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="점토 덩이" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item9.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="점토 덩이" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item9.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="점토 덩이" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item9.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-toggle="tooltip" title="점토 덩이" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item9.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="점토" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item12.png" />
+                </div>
+            </div>
+        </div>
+        
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

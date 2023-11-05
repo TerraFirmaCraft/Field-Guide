@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'uk_ua';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Українська мова</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/mechanics/" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics/" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics/" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics/" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics/" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics/" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics/" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics/" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">Світ</a></li>
+<li><a class="text-muted" href="../getting_started/">Починаємо</a></li>
+<li><a class="text-muted" href="../mechanics/">Розширена механіка</a></li><ul class="list-unstyled push-right"><li><a class="text-muted" href="./advanced_building_materials.html">Передові матеріали</a></li>
+<li><a class="text-muted" href="./animal_husbandry.html">Тваринництво</a></li>
+<li><a class="text-muted" href="./anvils.html">Ковадло</a></li>
+<li><a class="text-muted" href="./aqueducts.html">Акведук</a></li>
+<li><a class="text-muted" href="./armor.html">Броня (обладунки)</a></li>
+<li><a class="text-muted" href="./barrels.html">Діжки</a></li>
+<li><a class="text-muted" href="./bellows.html">Міхи</a></li>
+<li><a class="text-muted" href="./blast_furnace.html">Доменна піч</a></li>
+<li><a class="text-muted" href="./bloomery.html">Сиродутне горно</a></li>
+<li><a class="text-muted" href="./bread.html">Хліб</a></li>
+<li><a class="text-muted" href="./charcoal_forge.html">Ковальське горно</a></li>
+<li><a class="text-muted" href="./charcoal_pit.html">Вуглярка</a></li>
+<li><a class="text-muted" href="./chisel.html">Долото</a></li>
+<li><a class="text-muted" href="./composter.html">Компостер</a></li>
+<li><a class="text-muted" href="./crops.html">Городина</a></li>
+<li><a class="text-muted" href="./crucible.html">Тигель</a></li>
+<li><a class="text-muted" href="./dairy.html">Молочні продукти</a></li>
+<li><a class="text-muted" href="./damage_types.html">Види пошкоджень</a></li>
+<li><a class="text-muted" href="./decay.html">Консервація</a></li>
+<li><a class="text-muted" href="./fertilizers.html">Добрива</a></li>
+<li><a class="text-muted" href="./fire_clay.html">Вогнетривка глина</a></li>
+<li><a class="text-muted" href="./fishing.html">Рибальство</a></li>
+<li><a class="text-muted" href="./flux.html">Флюс</a></li>
+<li><a class="text-muted" href="./gems.html">Дорогоцінне каміння</a></li>
+<li><a class="text-muted" href="./grill.html">Багаття та гриль</a></li>
+<li><a class="text-muted" href="./heating.html">Нагрівання</a></li>
+<li><a class="text-muted" href="./hydration.html">Зрошування</a></li>
+<li><a class="text-muted" href="./lamps.html">Ліхтарі</a></li>
+<li><a class="text-muted" href="./leather_making.html">Обробка шкіри</a></li>
+<li><a class="text-muted" href="./lighting.html">Освітлення</a></li>
+<li><a class="text-muted" href="./minecarts.html">Вагонетка</a></li>
+<li><a class="text-muted" href="./panning.html">Промивання</a></li>
+<li><a class="text-muted" href="./papermaking.html">Виготовлення паперу</a></li>
+<li><a class="text-muted" href="./pets.html">Улюбленці</a></li>
+<li><a class="text-muted" href="./pot.html">Багаття та казан</a></li>
+<li><a class="text-muted" href="./powderkegs.html">Порохова бочка</a></li>
+<li><a class="text-muted" href="./prospecting.html">Геологорозвідка</a></li>
+<li><a class="text-muted" href="./quern.html">Млин</a></li>
+<li><a class="text-muted" href="./salad.html">Салати</a></li>
+<li><a class="text-muted" href="./sandwiches.html">Бутерброди</a></li>
+<li><a class="text-muted" href="./scribing_table.html">Стіл писаря</a></li>
+<li><a class="text-muted" href="./sluices.html">Мийний жолоб</a></li>
+<li><a class="text-muted" href="./steel.html">Сталь</a></li>
+<li><a class="text-muted" href="./support_beams.html">Опорні балки</a></li>
+<li><a class="text-muted" href="./weaving.html">Ткацтво</a></li>
+<li><a class="text-muted" href="./wooden_buckets.html">Дерев'яні відра</a></li></ul>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="#">Розширена механіка</a></em></p>
+            
+                <h4>Розширена механіка</h4><p><p>Розділи дерева передових технологій, від першого кайла до кольорової сталі. Акведуки, криця, ковке залізо, доменна піч, чавун, сталь. Передові технології не стоять на місці. Все набуває розвитку.</p>
+</p>
+                <hr>
+                <div class="card-columns">
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Ріолітова цеглина">
+                <img src="..\..\_images\item31.png" alt="Передові матеріали" />
+            </span>
+            <a href="advanced_building_materials.html">Передові матеріали</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Яйце">
+                <img src="..\..\_images\item46.png" alt="Тваринництво" />
+            </span>
+            <a href="animal_husbandry.html">Тваринництво</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Ковадло з міді">
+                <img src="../../_images/placeholder_64.png" alt="Ковадло" />
+            </span>
+            <a href="anvils.html">Ковадло</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Акведук з глинистого сланця">
+                <img src="../../_images/placeholder_64.png" alt="Акведук" />
+            </span>
+            <a href="aqueducts.html">Акведук</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Нагрудник з міді">
+                <img src="..\..\_images\item51.png" alt="Броня (обладунки)" />
+            </span>
+            <a href="armor.html">Броня (обладунки)</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="barrels.html">Діжки</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Міхи">
+                <img src="../../_images/placeholder_64.png" alt="Міхи" />
+            </span>
+            <a href="bellows.html">Міхи</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Доменна піч">
+                <img src="..\..\_images\item57.png" alt="Доменна піч" />
+            </span>
+            <a href="blast_furnace.html">Доменна піч</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Сиродутне горно">
+                <img src="../../_images/placeholder_64.png" alt="Сиродутне горно" />
+            </span>
+            <a href="bloomery.html">Сиродутне горно</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image49.png" alt="Хліб" />
+            </span>
+            <a href="bread.html">Хліб</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image50.png" alt="Ковальське горно" />
+            </span>
+            <a href="charcoal_forge.html">Ковальське горно</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Деревне вугілля">
+                <img src="..\..\_images\item73.png" alt="Вуглярка" />
+            </span>
+            <a href="charcoal_pit.html">Вуглярка</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Долото з ковкого заліза">
+                <img src="..\..\_images\item74.png" alt="Долото" />
+            </span>
+            <a href="chisel.html">Долото</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image55.png" alt="Компостер" />
+            </span>
+            <a href="composter.html">Компостер</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image56.png" alt="Городина" />
+            </span>
+            <a href="crops.html">Городина</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Тигель">
+                <img src="../../_images/placeholder_64.png" alt="Тигель" />
+            </span>
+            <a href="crucible.html">Тигель</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image59.png" alt="Молочні продукти" />
+            </span>
+            <a href="dairy.html">Молочні продукти</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Меч з червоної сталі">
+                <img src="..\..\_images\item87.png" alt="Види пошкоджень" />
+            </span>
+            <a href="damage_types.html">Види пошкоджень</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Гнила плоть">
+                <img src="..\..\_images\item88.png" alt="Консервація" />
+            </span>
+            <a href="decay.html">Консервація</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Сильвіновий пил">
+                <img src="..\..\_images\item93.png" alt="Добрива" />
+            </span>
+            <a href="fertilizers.html">Добрива</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Шмат вогнетривкої глини">
+                <img src="..\..\_images\item99.png" alt="Вогнетривка глина" />
+            </span>
+            <a href="fire_clay.html">Вогнетривка глина</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Вудка з гачком з міді">
+                <img src="..\..\_images\item102.png" alt="Рибальство" />
+            </span>
+            <a href="fishing.html">Рибальство</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Флюс">
+                <img src="..\..\_images\item54.png" alt="Флюс" />
+            </span>
+            <a href="flux.html">Флюс</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Опал">
+                <img src="..\..\_images\item108.png" alt="Дорогоцінне каміння" />
+            </span>
+            <a href="gems.html">Дорогоцінне каміння</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Гриль на багатті">
+                <img src="..\..\_images\item113.png" alt="Багаття та гриль" />
+            </span>
+            <a href="grill.html">Багаття та гриль</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image64.png" alt="Нагрівання" />
+            </span>
+            <a href="heating.html">Нагрівання</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image65.png" alt="Зрошування" />
+            </span>
+            <a href="hydration.html">Зрошування</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Ліхтар з бісмутової бронзи">
+                <img src="..\..\_images\item116.png" alt="Ліхтарі" />
+            </span>
+            <a href="lamps.html">Ліхтарі</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Шкіра">
+                <img src="..\..\_images\item123.png" alt="Обробка шкіри" />
+            </span>
+            <a href="leather_making.html">Обробка шкіри</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Свічка">
+                <img src="../../_images/placeholder_64.png" alt="Освітлення" />
+            </span>
+            <a href="lighting.html">Освітлення</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Вагонетка зі скринею з бавовнового дерева">
+                <img src="..\..\_images\item129.png" alt="Вагонетка" />
+            </span>
+            <a href="minecarts.html">Вагонетка</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image70.png" alt="Промивання" />
+            </span>
+            <a href="panning.html">Промивання</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Сирий папір">
+                <img src="..\..\_images\item143.png" alt="Виготовлення паперу" />
+            </span>
+            <a href="papermaking.html">Виготовлення паперу</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Повідець">
+                <img src="..\..\_images\item158.png" alt="Улюбленці" />
+            </span>
+            <a href="pets.html">Улюбленці</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Казан на багатті">
+                <img src="..\..\_images\item159.png" alt="Багаття та казан" />
+            </span>
+            <a href="pot.html">Багаття та казан</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Порохова бочка">
+                <img src="../../_images/placeholder_64.png" alt="Порохова бочка" />
+            </span>
+            <a href="powderkegs.html">Порохова бочка</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Геологічний молоток з ковкого заліза">
+                <img src="..\..\_images\item167.png" alt="Геологорозвідка" />
+            </span>
+            <a href="prospecting.html">Геологорозвідка</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Нижнє жорно">
+                <img src="../../_images/placeholder_64.png" alt="Млин" />
+            </span>
+            <a href="quern.html">Млин</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image79.png" alt="Салати" />
+            </span>
+            <a href="salad.html">Салати</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image82.png" alt="Бутерброди" />
+            </span>
+            <a href="sandwiches.html">Бутерброди</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Чорний барвник">
+                <img src="..\..\_images\item183.png" alt="Стіл писаря" />
+            </span>
+            <a href="scribing_table.html">Стіл писаря</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image84.png" alt="Мийний жолоб" />
+            </span>
+            <a href="sluices.html">Мийний жолоб</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Злиток сталі">
+                <img src="..\..\_images\item188.png" alt="Сталь" />
+            </span>
+            <a href="steel.html">Сталь</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Опорна балка з дуба">
+                <img src="../../_images/placeholder_64.png" alt="Опорні балки" />
+            </span>
+            <a href="support_beams.html">Опорні балки</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Веретено">
+                <img src="..\..\_images\item196.png" alt="Ткацтво" />
+            </span>
+            <a href="weaving.html">Ткацтво</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Дерев'яне відро">
+                <img src="..\..\_images\item209.png" alt="Дерев'яні відра" />
+            </span>
+            <a href="wooden_buckets.html">Дерев'яні відра</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+                </div>
+            
+        </div>
+    </div>
+</div>
+</body>
+</html>

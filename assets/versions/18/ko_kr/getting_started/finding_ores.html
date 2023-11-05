@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft 도감</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'ko_kr';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft 도감</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">한국어</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/getting_started\finding_ores.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\finding_ores.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\finding_ores.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\finding_ores.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\finding_ores.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\finding_ores.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\finding_ores.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\finding_ores.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">색인</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API 뮨서</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">버전 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>목차</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">세계</a></li>
+<li><a class="text-muted" href="../getting_started/">시작하기</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./introduction.html">소개</a></li>
+<li><a class="text-muted" href="./firepit.html">최초의 불</a></li>
+<li><a class="text-muted" href="./pottery.html">도자기</a></li>
+<li><a class="text-muted" href="./pit_kiln.html">구덩이 가마</a></li>
+<li><a class="text-muted" href="./finding_ores.html">광석, 금속 그리고 주조</a></li>
+<li><a class="text-muted" href="./primitive_alloys.html">기초 합금</a></li>
+<li><a class="text-muted" href="./primitive_anvils.html">기초적인 모루</a></li>
+<li><a class="text-muted" href="./building_materials.html">건축 블록</a></li>
+<li><a class="text-muted" href="./a_place_to_sleep.html">잠자리</a></li>
+<li><a class="text-muted" href="./size_and_weight.html">크기와 무게</a></li>
+<li><a class="text-muted" href="./food_and_water.html">음식과 물</a></li></ul></li>
+<li><a class="text-muted" href="../mechanics/">심화 기술</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">시작하기</a> / <a class="text-muted" href="#">광석, 금속 그리고 주조</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="평범한 자연동">
+                <img src="..\..\_images\item13.png" alt="광석, 금속 그리고 주조" />
+            </span>
+            <h4>광석, 금속 그리고 주조</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>당신은 막대기, 잔가지나 돌멩이 말고도 땅에 굴러다니는 작은 광석 조각들을 마주칠 지도 모릅니다. 이 광석들은 당신이 곡괭이를 만들기 전까지는 유일하게 얻을 수 있는 금속과 광석이기 때문에 중요합니다.</p>
+<h5></h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p>모든 작은 광석 조각</p>
+<p>이 작은 광석 조각들은 두 가지 역할을 합니다: 금속을 만들 수 있고, 더 중요하게는 땅 아래 어딘가에 큰 광맥이 어딘가 있다는 것을 나타냅니다. 광석을 찾은 곳을 메모해두면 나중에 광맥을 <a href="../mechanics/prospecting.html">탐사</a>할 때 분명 도움이 될 것입니다.<br/>
+<br/>
+다음 페이지에는 12가지 종류의 작은 광석과 광석을 녹여서 만들 수 있는 금속이 있습니다.</p>
+<h5>작은 광석들</h5>
+<p></p>
+<ul>
+	<li>자연동 (<span style="color:#3E8A00;">구리</span>)</li>
+	<li>자연금 (<span style="color:#3E8A00;">금</span>)</li>
+	<li>적철석 (<span style="color:#3E8A00;">주철</span>)</li>
+	<li>자연은 (<span style="color:#3E8A00;">은</span>)</li>
+	<li>주석석 (<span style="color:#3E8A00;">주석</span>)</li>
+	<li>휘창연석 (<span style="color:#3E8A00;">비스무트</span>)</li>
+	<li>규니켈석 (<span style="color:#3E8A00;">니켈</span>)</li>
+	<li>공작석 (<span style="color:#3E8A00;">구리</span>)</li>
+	<li>자철석 (<span style="color:#3E8A00;">주철</span>)</li>
+	<li>갈철석 (<span style="color:#3E8A00;">주철</span>)</li>
+	<li>섬아연석 (<span style="color:#3E8A00;">아연</span>)</li>
+	<li>사면동석 (<span style="color:#3E8A00;">구리</span>)</li>
+</ul>
+<a class="anchor" id="casting"></a><h5>주조</h5>
+<p>TerraFirmaCraft에서, 광석들은 각각 실제로 금속을 추출할 수 있는 <span style="color:#3E8A00;">유닛</span> (<span style="color:#3E8A00;">mB: 밀리버킷</span>)을 가지고 있습니다. 이와 같은 작은 광석들은 지표면에서 찾을 수 있고 품질이 가장 나빠 <span style="color:#3E8A00;">10 mB</span>의 금속밖에 얻을 수 없습니다. 이 금속을 추출하기 위해서는 광석을 <span style="color:#3E8A00;">녹여</span>야 하며, <span style="color:#3E8A00;">주조</span>를 통해 도구로 만들 수 있습니다.</p>
+<p>주조에 필요한 것:<br/>
+</p>
+<ul>
+	<li><a href="../getting_started/pottery.html#vessel">작은 항아리</a></li>
+	<li><a href="../getting_started/pit_kiln.html">구덩이 가마</a>를 만들 충분한 재료.</li>
+	<li>녹은 금속을 부을 <a href="../getting_started/pottery.html#mold">금형</a>.</li>
+	<li><span style="color:#3E8A00;">구리</span> 등 주조에 적합한 금속의 아무 광석 100 mb.</li>
+</ul><p><br/>
+<br/>
+<em>참고: <a href="../getting_started/primitive_alloys.html">합금</a></em>을 사용해서 주조를 할 수 있습니다</p>
+<p>일단, <span style="color:#3E8A00;">작은 항아리</span>를 열어 광석을 안에 넣으세요. 광석 속의 금속의 총량을 신중하게 세세요! 그리고, 당신은 <a href="../getting_started/pit_kiln.html">구덩이 가마</a>를 만들고 안에 작은 항아리를 넣어야 합니다. 작은 항아리가 가열되면, 그 안의 광석들은 녹고 녹은 금속으로 채워진 작은 항아리가 나옵니다.<br/>
+<br/>
+작은 항아리를 꺼내고 <span style="color:#b0b;">오른쪽 버튼</span>를 눌러 <span style="color:#3E8A00;">주조</span> 인터페이스를 열 수 있습니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image5.png" alt="tfc:textures/gui/book/gui/casting.png">
+<div style="text-align: center;"><p>주조 인터페이스.</p>
+</div><p>주조 인터페이스를 열고, 빈 금형을 중앙의 슬롯에 놓으세요. 작은 항아리가 비어 있지 않다면 금형이 차오릅니다. (만약 작은 항아리가 굳어 버린다면, 다시 구덩이 가마로 가열할 수 있습니다.) 금형이 가득 차면, 슬롯에서 제거하고 식혀야 합니다. 금형이 식은 후에는 금형을 웅크리고 클릭하거나 조합창에 올려놓아 내용물을 빼낼 수 있습니다.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="구리 곡괭이 머리" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item15.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item16.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="구리 곡괭이" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item14.png" />
+                </div>
+            </div>
+        </div>
+        <p>도구 머리가 있으면 첫 곡괭이를 만들 수 있습니다! 구리를 충분히 모아서 구덩이 가마에 녹이고, 금형에 담아 주조한 다음 막대기와 조합하면 완성!</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

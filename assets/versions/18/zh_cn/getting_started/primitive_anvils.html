@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>群峦传说 手册</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'zh_cn';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">群峦传说 手册</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">简体中文(中国大陆)</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/getting_started\primitive_anvils.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\primitive_anvils.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\primitive_anvils.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\primitive_anvils.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\primitive_anvils.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\primitive_anvils.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\primitive_anvils.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\primitive_anvils.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">主页</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">版本 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>目录</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">这个世界</a></li>
+<li><a class="text-muted" href="../getting_started/">新手入门</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./introduction.html">第一天</a></li>
+<li><a class="text-muted" href="./firepit.html">生火</a></li>
+<li><a class="text-muted" href="./pottery.html">制陶术</a></li>
+<li><a class="text-muted" href="./pit_kiln.html">坑窑</a></li>
+<li><a class="text-muted" href="./finding_ores.html">矿石、金属和铸造</a></li>
+<li><a class="text-muted" href="./primitive_alloys.html">原始合金</a></li>
+<li><a class="text-muted" href="./primitive_anvils.html">原始砧</a></li>
+<li><a class="text-muted" href="./building_materials.html">建筑材料</a></li>
+<li><a class="text-muted" href="./a_place_to_sleep.html">如何过夜</a></li>
+<li><a class="text-muted" href="./size_and_weight.html">体积和重量</a></li>
+<li><a class="text-muted" href="./food_and_water.html">食物和水</a></li></ul></li>
+<li><a class="text-muted" href="../mechanics/">进阶内容</a></li>
+<li><a class="text-muted" href="../firmalife/">(Addon) Firmalife扩展模组</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">新手入门</a> / <a class="text-muted" href="#">原始砧</a></em></p>
+            
+                <h4><h4>原始砧</h4></h4>
+                <hr>
+                <p>用<span style="color:#3E8A00;">砧</span>锻造金属锭是不同于铸造的另一种制作工具的方法。同时砧也是发展使用更高级金属的必需品。砧既可以用来<a href="../mechanics/anvils.html#working">锻造</a>，也可以用来<a href="../mechanics/anvils.html#welding">焊接</a>。这一章节我们只讲如何获得你的第一个原始石砧。</p>
+<p>首先，你得找到一块<span style="color:#3E8A00;">天然的</span><span style="color:#3E8A00;">喷出岩</span> （流纹岩、玄武岩、安山岩、或英安岩）或<span style="color:#3E8A00;">侵入岩</span>（花岗岩、闪长岩、或辉长岩）。你可以直接使用暴露在地表的那些，或者也可以把它们从岩壁上<a href="../getting_started/primitive_anvils.html#raw_rock">采下来</a>。</p>
+<a class="anchor" id="stone_anvils"></a><h5>石砧</h5>
+<p>你还需要一把任意材料制成的<span style="color:#3E8A00;">锤</span>。要把岩石变成砧，手持<span style="color:#3E8A00;">锤</span>右键点击其<span style="color:#3E8A00;">顶面</span>即可。<br/>
+<br/>
+砧是有不同<a href="../mechanics/anvils.html#tiers">等级</a>的。石砧的等级是 0 - 也就是最低等级。它只能用来<a href="../mechanics/anvils.html#welding">焊接</a> 1 级的金属锭。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>将中间那块岩石作为石砧。</p>
+<a class="anchor" id="raw_rock"></a><h5>获得原石</h5>
+<p>想要获得一块天然的岩石，直接用镐挖是不行的。唯一的方法是将其六面所相邻的方块都挖掉，悬空的岩石就会掉落其本体了。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>挖掉一块原石的所有六个邻面 - 之后，中心块将作为物品掉落。</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'ja_jp';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">日本語</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/getting_started\primitive_anvils.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\primitive_anvils.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\primitive_anvils.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\primitive_anvils.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\primitive_anvils.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\primitive_anvils.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\primitive_anvils.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\primitive_anvils.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">世界</a></li>
+<li><a class="text-muted" href="../getting_started/">はじめに</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./introduction.html">導入</a></li>
+<li><a class="text-muted" href="./firepit.html">火を起こす</a></li>
+<li><a class="text-muted" href="./pottery.html">粘土細工</a></li>
+<li><a class="text-muted" href="./pit_kiln.html">穴窯</a></li>
+<li><a class="text-muted" href="./finding_ores.html">鉱石、金属、鋳造</a></li>
+<li><a class="text-muted" href="./primitive_alloys.html">最初の合金</a></li>
+<li><a class="text-muted" href="./primitive_anvils.html">最初の金床</a></li>
+<li><a class="text-muted" href="./building_materials.html">建材</a></li>
+<li><a class="text-muted" href="./a_place_to_sleep.html">眠る場所</a></li>
+<li><a class="text-muted" href="./size_and_weight.html">大きさと重さ</a></li>
+<li><a class="text-muted" href="./food_and_water.html">食料と水</a></li></ul></li>
+<li><a class="text-muted" href="../mechanics/">高度な加工</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">はじめに</a> / <a class="text-muted" href="#">最初の金床</a></em></p>
+            
+                <h4><h4>最初の金床</h4></h4>
+                <hr>
+                <p>TFCの初期段階でツールを直接鋳造する代わりの方法を使用する、および高度な金属を加工するためには、<span style="color:#3E8A00;">金床</span> を使用することになります。 金床は、<a href="../mechanics/anvils.html#working">鍛造</a> と <a href="../mechanics/anvils.html#welding">溶接</a> という 2 つの異なるプロセスに使用できるブロックです。 この章では、最初の金床、石の金床を入手する方法を説明します。</p>
+<p>まず、<span style="color:#3E8A00;">ある種類の石</span> のブロック、つまり <span style="color:#3E8A00;">噴出火成岩</span> (流紋岩、玄武岩、安山岩、デイサイト) または <span style="color:#3E8A00;">貫入火成岩</span> を取得する必要があります。 (花崗岩、閃緑岩、斑れい岩)。 世界にある露出したブロックを見つけて使用することも、<a href="../getting_started/primitive_anvils.html#raw_rock">周囲の岩</a>から 1 つ抽出することもできます。</p>
+<a class="anchor" id="stone_anvils"></a><h5>石の金床</h5>
+<p><span style="color:#3E8A00;">ハンマー</span> も必要です。。 金床を作るには、<span style="color:#3E8A00;">ハンマー</span> を持って、金床にしたい石ブロックの露出した <span style="color:#3E8A00;">上</span> 面を右クリックするだけです。 金床が形成されます。<br/>
+<br/>
+金床には <a href="../mechanics/anvils.html#tiers">ティア</a> があり、石の金床は ティア0 (最下位のティア) です。 <a href="../mechanics/anvils.html#welding">溶接</a>ではTier 1インゴットのみ扱うことができます。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>中央の石を金床へ加工します。</p>
+<a class="anchor" id="raw_rock"></a><h5>石の回収</h5>
+<p>砕かずに石ブロックを取得するには、<span style="color:#3E8A00;">抽出</span> する必要があります。 石ブロックの 6 面すべてのブロックを採掘する必要があります。すべての面が空気に囲まれると、拾えるアイテムとして飛び出します。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>原石の 6 面すべてを採掘します。完了すると、中央の石ブロックがアイテムとして外れます。</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

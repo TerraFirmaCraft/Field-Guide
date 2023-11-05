@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft 도감</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'ko_kr';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft 도감</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">한국어</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/mechanics\sluices.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\sluices.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\sluices.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\sluices.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\sluices.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\sluices.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\sluices.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\sluices.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">색인</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API 뮨서</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">버전 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>목차</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">세계</a></li>
+<li><a class="text-muted" href="../getting_started/">시작하기</a></li>
+<li><a class="text-muted" href="../mechanics/">심화 기술</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./advanced_building_materials.html">발전된 재료</a></li>
+<li><a class="text-muted" href="./animal_husbandry.html">축산업</a></li>
+<li><a class="text-muted" href="./anvils.html">모루</a></li>
+<li><a class="text-muted" href="./aqueducts.html">수로</a></li>
+<li><a class="text-muted" href="./armor.html">갑옷</a></li>
+<li><a class="text-muted" href="./barrels.html">통</a></li>
+<li><a class="text-muted" href="./bellows.html">풀무</a></li>
+<li><a class="text-muted" href="./blast_furnace.html">용광로</a></li>
+<li><a class="text-muted" href="./bloomery.html">괴철로</a></li>
+<li><a class="text-muted" href="./bread.html">빵</a></li>
+<li><a class="text-muted" href="./charcoal_forge.html">숯불 노</a></li>
+<li><a class="text-muted" href="./charcoal_pit.html">숯 구덩이</a></li>
+<li><a class="text-muted" href="./chisel.html">끌</a></li>
+<li><a class="text-muted" href="./composter.html">Composter</a></li>
+<li><a class="text-muted" href="./crops.html">작물</a></li>
+<li><a class="text-muted" href="./crucible.html">도가니</a></li>
+<li><a class="text-muted" href="./dairy.html">유제품</a></li>
+<li><a class="text-muted" href="./damage_types.html">피해 종류</a></li>
+<li><a class="text-muted" href="./decay.html">음식 보존</a></li>
+<li><a class="text-muted" href="./fertilizers.html">비료</a></li>
+<li><a class="text-muted" href="./fire_clay.html">내화점토</a></li>
+<li><a class="text-muted" href="./fishing.html">낚시</a></li>
+<li><a class="text-muted" href="./flux.html">플럭스</a></li>
+<li><a class="text-muted" href="./gems.html">보석</a></li>
+<li><a class="text-muted" href="./grill.html">모닥불과 석쇠</a></li>
+<li><a class="text-muted" href="./heating.html">가열하기</a></li>
+<li><a class="text-muted" href="./hydration.html">작물 수화</a></li>
+<li><a class="text-muted" href="./lamps.html">램프</a></li>
+<li><a class="text-muted" href="./leather_making.html">가죽 제작</a></li>
+<li><a class="text-muted" href="./lighting.html">광원</a></li>
+<li><a class="text-muted" href="./minecarts.html">Minecarts</a></li>
+<li><a class="text-muted" href="./panning.html">사금질</a></li>
+<li><a class="text-muted" href="./papermaking.html">Papermaking</a></li>
+<li><a class="text-muted" href="./pets.html">반려동물</a></li>
+<li><a class="text-muted" href="./pot.html">모닥불과 냄비</a></li>
+<li><a class="text-muted" href="./powderkegs.html">화약통</a></li>
+<li><a class="text-muted" href="./prospecting.html">광물 탐색</a></li>
+<li><a class="text-muted" href="./quern.html">맷돌</a></li>
+<li><a class="text-muted" href="./salad.html">샐러드</a></li>
+<li><a class="text-muted" href="./sandwiches.html">샌드위치</a></li>
+<li><a class="text-muted" href="./scribing_table.html">필기대</a></li>
+<li><a class="text-muted" href="./sluices.html">세광통</a></li>
+<li><a class="text-muted" href="./steel.html">강철</a></li>
+<li><a class="text-muted" href="./support_beams.html">지지대</a></li>
+<li><a class="text-muted" href="./weaving.html">직조</a></li>
+<li><a class="text-muted" href="./wooden_buckets.html">나무 양동이</a></li></ul></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">심화 기술</a> / <a class="text-muted" href="#">세광통</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image84.png" alt="세광통" />
+            </span>
+            <h4>세광통</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>The <span style="color:#3E8A00;">Sluice</span> is a device that is used to process <a href="../the_world/waterways.html#ore_deposits">Ore Deposits</a>, producing the same results that <a href="../mechanics/panning.html">Panning</a> does, with different probabilities.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item16.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item16.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-toggle="tooltip" title="세쿼이아나무 목재" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item187.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item16.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-toggle="tooltip" title="세쿼이아나무 목재" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item187.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-toggle="tooltip" title="세쿼이아나무 목재" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item187.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="세쿼이아나무 세광통" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>세광통은 막대기와 목재로 만듭니다.</p>
+<p>세광통은 2블록의 공간을 차지합니다. 물이 세광통의 위쪽으로 들어와 아래쪽으로 흘러야 올바르게 작동합니다. 세광통은 물이 흐르는 것 처럼 보일 때 작동시킬 수 있습니다. 세광통으로 흘러들어오는 물은 흐르는 물의 마지막 블록이어야 합니다. 세광통의 물이 흘러나가도록 세광통 아래쪽에는 빈 공간이 있엉야 합니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image85.png" alt="tfc:textures/gui/book/tutorial/sluice_cross.png">
+<div style="text-align: center;"><p>올바르게 설치된 세광통.</p>
+</div><p>세광통을 사용하려면, 침전물 아이템을 세광통으로 흐르는 물에 던지면 됩니다. 침전물이 세광통 위에 표시되고, 잠깐 기다리면, 확률적으로 아이템이 세광통 아래쪽으로 나오게 됩니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image86.png" alt="tfc:textures/gui/book/tutorial/sluice_in_use.png">
+<div style="text-align: center;"><p>아이템이 안에 들어있는 작동 중인 세광통.</p>
+</div><h5>Products of Panning</h5>
+<p>Sluicing can give three possible products: <span style="color:#3E8A00;">Ore</span>, <span style="color:#3E8A00;">Loose Rocks</span>, and <a href="../mechanics/gems.html">Gems</a>. The probabilities are as follows:<br/>
+</p>
+<ul>
+	<li>Ore: 55%%</li>
+	<li>Loose Rock: 22.5%%</li>
+	<li>Gem: 0.9%%Each rock type has a specific gem that it will drop, that is exclusive to that rock type.</li>
+</ul>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

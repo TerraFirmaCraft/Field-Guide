@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'zh_hk';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">繁體中文（香港特別行政區)</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/mechanics\pets.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\pets.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\pets.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\pets.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\pets.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\pets.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\pets.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\pets.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">這個世界</a></li>
+<li><a class="text-muted" href="../getting_started/">新手入門</a></li>
+<li><a class="text-muted" href="../mechanics/">進階內容</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./advanced_building_materials.html">高級建築材料</a></li>
+<li><a class="text-muted" href="./animal_husbandry.html">畜牧業</a></li>
+<li><a class="text-muted" href="./anvils.html">砧</a></li>
+<li><a class="text-muted" href="./aqueducts.html">引水橋</a></li>
+<li><a class="text-muted" href="./armor.html">盔甲</a></li>
+<li><a class="text-muted" href="./barrels.html">大桶</a></li>
+<li><a class="text-muted" href="./bellows.html">風箱</a></li>
+<li><a class="text-muted" href="./blast_furnace.html">建造高爐</a></li>
+<li><a class="text-muted" href="./bloomery.html">鍛鐵爐</a></li>
+<li><a class="text-muted" href="./bread.html">烤麪包</a></li>
+<li><a class="text-muted" href="./charcoal_forge.html">木炭爐</a></li>
+<li><a class="text-muted" href="./charcoal_pit.html">木炭坑</a></li>
+<li><a class="text-muted" href="./chisel.html">鑿子</a></li>
+<li><a class="text-muted" href="./composter.html">堆肥桶</a></li>
+<li><a class="text-muted" href="./crops.html">農作物</a></li>
+<li><a class="text-muted" href="./crucible.html">坩堝</a></li>
+<li><a class="text-muted" href="./dairy.html">乳製品</a></li>
+<li><a class="text-muted" href="./damage_types.html">傷害類型</a></li>
+<li><a class="text-muted" href="./decay.html">食物保鮮</a></li>
+<li><a class="text-muted" href="./fertilizers.html">肥料</a></li>
+<li><a class="text-muted" href="./fire_clay.html">耐火黏土</a></li>
+<li><a class="text-muted" href="./fishing.html">釣魚</a></li>
+<li><a class="text-muted" href="./flux.html">助焊劑</a></li>
+<li><a class="text-muted" href="./gems.html">寶石</a></li>
+<li><a class="text-muted" href="./grill.html">篝火燒烤</a></li>
+<li><a class="text-muted" href="./heating.html">加熱</a></li>
+<li><a class="text-muted" href="./hydration.html">保持土壤濕潤</a></li>
+<li><a class="text-muted" href="./lamps.html">燈</a></li>
+<li><a class="text-muted" href="./leather_making.html">制皮術</a></li>
+<li><a class="text-muted" href="./lighting.html">光源</a></li>
+<li><a class="text-muted" href="./minecarts.html">礦車</a></li>
+<li><a class="text-muted" href="./panning.html">淘金</a></li>
+<li><a class="text-muted" href="./papermaking.html">造紙術</a></li>
+<li><a class="text-muted" href="./pets.html">寵物</a></li>
+<li><a class="text-muted" href="./pot.html">篝火大鍋</a></li>
+<li><a class="text-muted" href="./powderkegs.html">火藥桶</a></li>
+<li><a class="text-muted" href="./prospecting.html">勘探</a></li>
+<li><a class="text-muted" href="./quern.html">手推磨</a></li>
+<li><a class="text-muted" href="./salad.html">沙拉</a></li>
+<li><a class="text-muted" href="./sandwiches.html">三明治</a></li>
+<li><a class="text-muted" href="./scribing_table.html">命名台</a></li>
+<li><a class="text-muted" href="./sluices.html">洗礦槽</a></li>
+<li><a class="text-muted" href="./steel.html">鍊鋼</a></li>
+<li><a class="text-muted" href="./support_beams.html">支撐樑</a></li>
+<li><a class="text-muted" href="./weaving.html">札札弄機杼</a></li>
+<li><a class="text-muted" href="./wooden_buckets.html">木桶</a></li></ul></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">進階內容</a> / <a class="text-muted" href="#">寵物</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="牽繩">
+                <img src="..\..\_images\item158.png" alt="寵物" />
+            </span>
+            <h4>寵物</h4>
+        </div>
+        </h4>
+                <hr>
+                <p><span style="color:#3E8A00;">寵物</span>是一種與<a href="../mechanics/animal_husbandry.html">牲畜</a>行為類似的動物。它們不會產出資源，但會聽從玩家的指令、跟隨玩家、並且幫你做捕獵和捕殺害蟲等事情。</p>
+<p>寵物會把某個特定的玩家認作<span style="color:#3E8A00;">主人</span>。要成為寵物的主人，你需要給它餵食直到親密度提高到15%。寵物只會聽從來自主人的命令。<br/>
+<br/>
+用染料點擊寵物就可以改變它的項圈的顏色。</p>
+<p>狗</p>
+<p>狗是一種喜歡吃穀物、蔬菜和肉類（無論是否腐敗）的寵物。它會幫助你狩獵大多數的陸地捕食者或獵物。</p>
+<p>貓</p>
+<p>貓是一種喜歡吃穀物、熟肉以及乳製品的寵物。它們會幫助你狩獵陸地獵物和小型魚類。在家裏的時候，貓會自行捕殺害蟲，不需要命令。當被要求坐下的時候，貓可能不總是會聽話。</p>
+<p>負責任的寵物主人需要學習如何管理自己的寵物。好在這並不是件難事。在空手的狀態下按住<span style="color:#b0b;">Shift</span>並按下<span style="color:#b0b;">Right Click</span>就可以打開<span style="color:#3E8A00;">寵物面板</span>。這個面板包含了一系列可以命令寵物做的事情，例如<span style="color:#3E8A00;">去休息吧！</span>、<span style="color:#3E8A00;">這兒就是你的新家了</span>、<span style="color:#3E8A00;">坐下！</span>、<span style="color:#3E8A00;">跟着我！</span>、以及<span style="color:#3E8A00;">協助我！</span>。</p>
+<p><span style="color:#3E8A00;">【去休息吧！】</span>是寵物的默認狀態，點擊這個命令就能讓寵物回到這個狀態。在休息狀態下，在家裏的寵物會繞着家閒逛，但是不會跑遠，並且會每天睡一次覺。如果寵物離家很遠，它就會毫無目的的閒逛。</p>
+<p><span style="color:#3E8A00;">【這兒就是你的新家了】</span>會設置這個寵物的“家”的位置。這樣就可以告訴寵物，在休息的時候呆在這附近，不要跑太遠。這個命令不會改變寵物現在正在做的事情。<br/>
+<br/>
+<span style="color:#3E8A00;">【坐下！】</span>會命令寵物原地坐下。然而寵物會有自己的想法，坐久了感覺無聊，就會自己站起來溜達！</p>
+<p><span style="color:#3E8A00;">【協助我！】</span>會告訴寵物跟着你，並且在你發動攻擊或被攻擊的時候參加戰鬥。寵物只會攻擊他們力所能及的敵人（例如, 貓肯定不會幫你獵殺熊！）。<br/>
+<br/>
+<span style="color:#3E8A00;">【跟着我！】</span>和“協助我”類似，不同之處在於寵物不會冒險加入你的戰鬥。</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

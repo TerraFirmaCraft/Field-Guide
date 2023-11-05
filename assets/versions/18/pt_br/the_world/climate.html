@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'pt_br';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portuguese (Brazil)</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/the_world\climate.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world\climate.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world\climate.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world\climate.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world\climate.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world\climate.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world\climate.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world\climate.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">O mundo</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./biomes.html">Biomas</a></li>
+<li><a class="text-muted" href="./waterways.html">Onde o Rio Corre</a></li>
+<li><a class="text-muted" href="./geology.html">Geologia</a></li>
+<li><a class="text-muted" href="./ores_and_minerals.html">Ores and minerals</a></li>
+<li><a class="text-muted" href="./climate.html">Calendário e clima</a></li>
+<li><a class="text-muted" href="./flora.html">Flora</a></li>
+<li><a class="text-muted" href="./wild_crops.html">Culturas selvagens</a></li>
+<li><a class="text-muted" href="./wild_fruits.html">Frutas selvagens</a></li>
+<li><a class="text-muted" href="./wild_animals.html">Wild Animals</a></li></ul></li>
+<li><a class="text-muted" href="../getting_started/">Começando</a></li>
+<li><a class="text-muted" href="../mechanics/">Mecânica avançada</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">O mundo</a> / <a class="text-muted" href="#">Calendário e clima</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image102.png" alt="Calendário e clima" />
+            </span>
+            <h4>Calendário e clima</h4>
+        </div>
+        </h4>
+                <hr>
+                <a class="anchor" id="calendar"></a><p>Em Terrafirmacraft, o clima e o tempo são fatores muito importantes. Vamos começar com o <span style="color:#3E8A00;">Calendário</span>.<br/>
+<br/>
+A qualquer momento, você pode ver o calendário pressionando <span style="color:#b0b;">E</span>, e clicando na guia Calendário. Isso mostrará o <span style="color:#3E8A00;">Temporada</span>, o <span style="color:#3E8A00;">Dia</span>, e a <span style="color:#3E8A00;">Data</span>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image103.png" alt="tfc:textures/gui/book/gui/calendar.png">
+<div style="text-align: center;"><p>A tela do calendário</p>
+</div><p>Há estações, e o clima e o clima mudarão junto com eles! Há quatro temporadas em Terrafirmacraft, cada uma dividida em <span style="color:#3E8A00;">Cedo</span>, <span style="color:#3E8A00;">MID</span> e <span style="color:#3E8A00;">Tarde</span> meses. As quatro estações são:<br/>
+</p>
+<ul>
+	<li><strong>Primavera</strong>: Março - Maio</li>
+	<li><strong>Verão</strong>: Junho -Agostot</li>
+	<li><strong>Outono</strong>: Setembro - Novembro(li)<strong>Inverno</strong>: Dezembro - Fevereiro</li>
+</ul>
+<p>A temporada atual pode influenciar a temperatura da área, a precipitação (se chover ou nevar), entre outras coisas. Preste atenção à guia do calendário, será útil!<br/>
+<br/>
+Agora, no clima...</p>
+<a class="anchor" id="climate"></a><h5>Clima</h5>
+<p>Outra guia na tela principal de inventário é o <span style="color:#3E8A00;">Clima</span> tela. Este mostra informações sobre o local atual<br/>
+<br/>
+A primeira linha mostra o geral <a href="https://en.wikipedia.org/wiki/K%C3%B6ppen_climate_classification">Clima</a> .<br/>
+<br/>
+A segunda linha mostra o <a href="../the_world/geology.html">Província geológica</a>.<br/>
+<br/>
+A terceira linha mostra o <span style="color:#3E8A00;">Temperatura média anual</span>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image104.png" alt="tfc:textures/gui/book/gui/climate.png">
+<div style="text-align: center;"><p>A tela climática</p>
+</div><a class="anchor" id="temperature"></a><p>A temperatura em Terrafirmacraft é influenciada por vários fatores:<br/>
+</p>
+<ul>
+	<li>Em primeiro lugar, a região, especialmente a latitude (Z Coordenada) desempenhará o maior papel.</li>
+	<li>Em segundo lugar, a temporada atual influenciará a temperatura - será mais quente durante o verão e mais frio durante o inverno.</li>
+	<li>Finalmente, a temperatura pode ser diferente dia a dia, bem como variando de hora a hora.</li>
+</ul>
+<p>A última linha mostra a temperatura atual, incluindo todos esses fatores mencionados acima.<br/>
+<br/>
+A temperatura pode influenciar muitas coisas: se as colheitas e as plantas crescerão, se a neve e o gelo formarem ou derreterão e muito mais.</p>
+<a class="anchor" id="rainfall"></a><h5>Chuva</h5>
+<p>As chuvas são outro valor climático que pode variar dependendo de onde você está no mundo. A precipitação anual é medida em milímetros (mm) e pode estar entre 0 mm e 500 mm. A precipitação afeta os tipos de flora que são encontrados em uma área e também os tipos de solo, de areia e cactos, barro, lodo e árvores Kapok.</p>
+<p>As chuvas também são importantes, pois afeta o que as coisas podem ser cultivadas em uma área. As chuvas são um dos principais contribuintes para <a href="../mechanics/hydration.html">Hidratação</a>, que é uma medida exata de quão molhado o solo está em um determinado local e é usado por <a href="../mechanics/crops.html">Plantações</a>, <a href="../the_world/wild_fruits.html#fruit_trees">Árvores frutiferas</a>, e <a href="../the_world/wild_fruits.html#tall_bushes">Arbustos de bagas</a> para determinar se eles podem crescer.</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

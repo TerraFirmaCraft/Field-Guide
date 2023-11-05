@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft 도감</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'ko_kr';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft 도감</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">한국어</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/getting_started\size_and_weight.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\size_and_weight.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\size_and_weight.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\size_and_weight.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\size_and_weight.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\size_and_weight.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\size_and_weight.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\size_and_weight.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">색인</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API 뮨서</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">버전 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>목차</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">세계</a></li>
+<li><a class="text-muted" href="../getting_started/">시작하기</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./introduction.html">소개</a></li>
+<li><a class="text-muted" href="./firepit.html">최초의 불</a></li>
+<li><a class="text-muted" href="./pottery.html">도자기</a></li>
+<li><a class="text-muted" href="./pit_kiln.html">구덩이 가마</a></li>
+<li><a class="text-muted" href="./finding_ores.html">광석, 금속 그리고 주조</a></li>
+<li><a class="text-muted" href="./primitive_alloys.html">기초 합금</a></li>
+<li><a class="text-muted" href="./primitive_anvils.html">기초적인 모루</a></li>
+<li><a class="text-muted" href="./building_materials.html">건축 블록</a></li>
+<li><a class="text-muted" href="./a_place_to_sleep.html">잠자리</a></li>
+<li><a class="text-muted" href="./size_and_weight.html">크기와 무게</a></li>
+<li><a class="text-muted" href="./food_and_water.html">음식과 물</a></li></ul></li>
+<li><a class="text-muted" href="../mechanics/">심화 기술</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">시작하기</a> / <a class="text-muted" href="#">크기와 무게</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image36.png" alt="크기와 무게" />
+            </span>
+            <h4>크기와 무게</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>모든 아이템에는 <span style="color:#3E8A00;">크기 ⇲</span>와 <span style="color:#3E8A00;">무게 ⚖</span>가 있습니다. 아이템의 크기와 무게는 <span style="color:#3E8A00;">툴팁</span>에 나타납니다. 툴팁은 아이템에 마우스를 올렸을 때 볼 수 있습니다.</p>
+<h5>크기 ⇲</h5>
+<p>크기는 아이템이 들어갈 수 있는 블록을 결정합니다.<br/>
+</p>
+<ul>
+	<li><span style="color:#3E8A00;">조그마한</span> 아이템들은 어떤 블록에도 들어갑니다.</li>
+	<li><span style="color:#3E8A00;">아주 작은</span> 아이템들은 어떤 블록에도 들어갑니다.</li>
+	<li><span style="color:#3E8A00;">작은</span> 크기 이하의 아이템들은 <a href="../mechanics/decay.html#small_vessels">작은 항아리</a>에 들어갑니다.</li>
+	<li><span style="color:#3E8A00;">보통</span> 크기 이하의 아이템들은 <a href="../mechanics/decay.html#small_vessels">큰 항아리</a>에 들어갑니다.</li>
+</ul>
+<p></p>
+<ul>
+	<li><span style="color:#3E8A00;">큰</span> 크기 이하의 아이템들은 상자에 들어갑니다. <a href="../getting_started/pit_kiln.html">구덩이 가마</a>에는 4개까지 들어갑니다.</li>
+	<li><span style="color:#3E8A00;">아주 큰</span> 아이템들은 구덩이 가마에 1개가 들어갑니다.</li>
+	<li><span style="color:#3E8A00;">거대한</span>아이템들은 일반적인 블록에 들어갈 수 없으며 과중량을 유발합니다.</li>
+</ul>
+<h5>무게 ⚖</h5>
+<p>무게는 아이템의 최대 스택 수를 정합니다.<br/>
+</p>
+<ul>
+	<li><span style="color:#3E8A00;">아주 가벼움</span>: 64</li>
+	<li><span style="color:#3E8A00;">가벼움</span>: 32</li>
+	<li><span style="color:#3E8A00;">중간</span>: 16</li>
+	<li><span style="color:#3E8A00;">무거움</span>: 4</li>
+	<li><span style="color:#3E8A00;">아주 무거움</span>: 1</li>
+</ul><p><br/>
+대부분의 아이템은 기본적으로 <span style="color:#3E8A00;">아주 가벼움</span>입니다. 블록들은 보통 <span style="color:#3E8A00;">중간</span>입니다.</p>
+<p><span style="color:#3E8A00;">과중량</span>은 당신이 <span style="color:#3E8A00;">무거움</span> 또는 <span style="color:#3E8A00;">아주 무거움</span> 아이템을 들고 있을 때 발생합니다. 하나의 <span style="color:#3E8A00;">무거움/아주 무거움</span> 아이템을 드는 것은 당신을 탈진하게 하며, 배고픔이 더 빨리 닳게 합니다. 두 개 이상을 들면 <span style="color:#3E8A00;">과중량</span> 상태 효과를 받으며, 이동 속도를 매우 늦춥니다.</p>
+<a class="anchor" id="overburdening"></a><h5>과중량</h5>
+<p>과중량을 유발하는 아이템에는 <span style="color:#3E8A00;">모루</span>, <span style="color:#3E8A00;">밀봉된 통</span>, (내용물이 있는)<span style="color:#3E8A00;">도가니</span> 등이 있습니다<br/>
+<br/>
+참고: <a href="../mechanics/animal_husbandry.html#horses">말</a> 역시도 과중량에 걸릴 수 있습니다.</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

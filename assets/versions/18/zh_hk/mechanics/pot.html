@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'zh_hk';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">繁體中文（香港特別行政區)</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/mechanics\pot.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\pot.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\pot.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\pot.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\pot.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\pot.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\pot.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\pot.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">這個世界</a></li>
+<li><a class="text-muted" href="../getting_started/">新手入門</a></li>
+<li><a class="text-muted" href="../mechanics/">進階內容</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./advanced_building_materials.html">高級建築材料</a></li>
+<li><a class="text-muted" href="./animal_husbandry.html">畜牧業</a></li>
+<li><a class="text-muted" href="./anvils.html">砧</a></li>
+<li><a class="text-muted" href="./aqueducts.html">引水橋</a></li>
+<li><a class="text-muted" href="./armor.html">盔甲</a></li>
+<li><a class="text-muted" href="./barrels.html">大桶</a></li>
+<li><a class="text-muted" href="./bellows.html">風箱</a></li>
+<li><a class="text-muted" href="./blast_furnace.html">建造高爐</a></li>
+<li><a class="text-muted" href="./bloomery.html">鍛鐵爐</a></li>
+<li><a class="text-muted" href="./bread.html">烤麪包</a></li>
+<li><a class="text-muted" href="./charcoal_forge.html">木炭爐</a></li>
+<li><a class="text-muted" href="./charcoal_pit.html">木炭坑</a></li>
+<li><a class="text-muted" href="./chisel.html">鑿子</a></li>
+<li><a class="text-muted" href="./composter.html">堆肥桶</a></li>
+<li><a class="text-muted" href="./crops.html">農作物</a></li>
+<li><a class="text-muted" href="./crucible.html">坩堝</a></li>
+<li><a class="text-muted" href="./dairy.html">乳製品</a></li>
+<li><a class="text-muted" href="./damage_types.html">傷害類型</a></li>
+<li><a class="text-muted" href="./decay.html">食物保鮮</a></li>
+<li><a class="text-muted" href="./fertilizers.html">肥料</a></li>
+<li><a class="text-muted" href="./fire_clay.html">耐火黏土</a></li>
+<li><a class="text-muted" href="./fishing.html">釣魚</a></li>
+<li><a class="text-muted" href="./flux.html">助焊劑</a></li>
+<li><a class="text-muted" href="./gems.html">寶石</a></li>
+<li><a class="text-muted" href="./grill.html">篝火燒烤</a></li>
+<li><a class="text-muted" href="./heating.html">加熱</a></li>
+<li><a class="text-muted" href="./hydration.html">保持土壤濕潤</a></li>
+<li><a class="text-muted" href="./lamps.html">燈</a></li>
+<li><a class="text-muted" href="./leather_making.html">制皮術</a></li>
+<li><a class="text-muted" href="./lighting.html">光源</a></li>
+<li><a class="text-muted" href="./minecarts.html">礦車</a></li>
+<li><a class="text-muted" href="./panning.html">淘金</a></li>
+<li><a class="text-muted" href="./papermaking.html">造紙術</a></li>
+<li><a class="text-muted" href="./pets.html">寵物</a></li>
+<li><a class="text-muted" href="./pot.html">篝火大鍋</a></li>
+<li><a class="text-muted" href="./powderkegs.html">火藥桶</a></li>
+<li><a class="text-muted" href="./prospecting.html">勘探</a></li>
+<li><a class="text-muted" href="./quern.html">手推磨</a></li>
+<li><a class="text-muted" href="./salad.html">沙拉</a></li>
+<li><a class="text-muted" href="./sandwiches.html">三明治</a></li>
+<li><a class="text-muted" href="./scribing_table.html">命名台</a></li>
+<li><a class="text-muted" href="./sluices.html">洗礦槽</a></li>
+<li><a class="text-muted" href="./steel.html">鍊鋼</a></li>
+<li><a class="text-muted" href="./support_beams.html">支撐樑</a></li>
+<li><a class="text-muted" href="./weaving.html">札札弄機杼</a></li>
+<li><a class="text-muted" href="./wooden_buckets.html">木桶</a></li></ul></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">進階內容</a> / <a class="text-muted" href="#">篝火大鍋</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="鍋">
+                <img src="..\..\_images\item159.png" alt="篝火大鍋" />
+            </span>
+            <h4>篝火大鍋</h4>
+        </div>
+        </h4>
+                <hr>
+                <p><span style="color:#3E8A00;">陶鍋</span>是一種可以用來升級篝火的物品。有陶鍋的篝火可以用來製作特殊的餐點或實用的物品。<br/>
+<br/>
+手持<span style="color:#3E8A00;">陶鍋</span>對準<a href="../getting_started/firepit.html">篝火</a>按<span style="color:#b0b;">Right Click</span>就能將它放上去了。</p>
+<h5></h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>附有陶鍋的篝火。</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image73.png" alt="Recipe: tfc:clay_knapping/pot">
+<p>陶鍋必須先用黏土<a href="../getting_started/pottery.html">塑形</a>。</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-toggle="tooltip" title="未燒製的陶鍋" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item160.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-toggle="tooltip" title="陶鍋" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item161.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-yellow">
+            <p>黃白****</p>
+        </div>
+        <p>然後它必須<a href="../mechanics/heating.html">燒製</a>成<span style="color:#3E8A00;">陶鍋</span>才可以放在篝火上。</p>
+<p>和普通篝火類似，陶鍋有四個燃料槽，必須在頂部空格中添加燃料。温度指示器也和篝火相同。唯一不同的是它不再能直接加熱物品了，取而代之的是五個用於放置食材的空格。陶鍋還可容納最多 <span style="color:#3E8A00;">1000 mB</span> 的液體。<br/>
+<br/>
+要用鍋燉湯，先必須手持任何類型的液體容器（如木桶）對準陶鍋按<span style="color:#b0b;">Right Click</span>。然後添加物品，點燃篝火。湯會沸騰一段時間，直到製作完成。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image74.png" alt="tfc:textures/gui/book/gui/pot.png">
+<div style="text-align: center;"><p>正在用陶鍋燉湯。</p>
+</div><a class="anchor" id="soup"></a>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="水果湯">
+                <img src="..\..\_images\item162.png" alt="燉湯配方" />
+            </span>
+            <h5>燉湯配方</h5>
+        </div>
+        <p>湯可以包含 3-5 個 <span style="color:#3E8A00;">水果</span>、<span style="color:#3E8A00;">蔬菜</span>或<span style="color:#3E8A00;">肉類</span>。湯燉好了之後鍋裏的水會變成紅色。拿着<span style="color:#3E8A00;">碗</span><span style="color:#b0b;">對着湯按下Right Click</span>就能盛一碗出來。湯會將所有食材的營養元素組合成一頓餐點。</p>
+<h5>簡單配方</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this item.">Item: <code>tfc:bucket/red_dye</code></span></p>
+        </div>
+        <p>陶鍋還可以將某些液體轉化為其他液體。例如，在水中煮沸 5 份<span style="color:#3E8A00;">草木灰</span>可以製成<span style="color:#3E8A00;">鹼液</span>。</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

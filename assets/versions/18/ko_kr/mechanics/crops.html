@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft 도감</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'ko_kr';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft 도감</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">한국어</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/mechanics\crops.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\crops.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\crops.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\crops.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\crops.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\crops.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\crops.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\crops.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">색인</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API 뮨서</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">버전 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>목차</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">세계</a></li>
+<li><a class="text-muted" href="../getting_started/">시작하기</a></li>
+<li><a class="text-muted" href="../mechanics/">심화 기술</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./advanced_building_materials.html">발전된 재료</a></li>
+<li><a class="text-muted" href="./animal_husbandry.html">축산업</a></li>
+<li><a class="text-muted" href="./anvils.html">모루</a></li>
+<li><a class="text-muted" href="./aqueducts.html">수로</a></li>
+<li><a class="text-muted" href="./armor.html">갑옷</a></li>
+<li><a class="text-muted" href="./barrels.html">통</a></li>
+<li><a class="text-muted" href="./bellows.html">풀무</a></li>
+<li><a class="text-muted" href="./blast_furnace.html">용광로</a></li>
+<li><a class="text-muted" href="./bloomery.html">괴철로</a></li>
+<li><a class="text-muted" href="./bread.html">빵</a></li>
+<li><a class="text-muted" href="./charcoal_forge.html">숯불 노</a></li>
+<li><a class="text-muted" href="./charcoal_pit.html">숯 구덩이</a></li>
+<li><a class="text-muted" href="./chisel.html">끌</a></li>
+<li><a class="text-muted" href="./composter.html">Composter</a></li>
+<li><a class="text-muted" href="./crops.html">작물</a></li>
+<li><a class="text-muted" href="./crucible.html">도가니</a></li>
+<li><a class="text-muted" href="./dairy.html">유제품</a></li>
+<li><a class="text-muted" href="./damage_types.html">피해 종류</a></li>
+<li><a class="text-muted" href="./decay.html">음식 보존</a></li>
+<li><a class="text-muted" href="./fertilizers.html">비료</a></li>
+<li><a class="text-muted" href="./fire_clay.html">내화점토</a></li>
+<li><a class="text-muted" href="./fishing.html">낚시</a></li>
+<li><a class="text-muted" href="./flux.html">플럭스</a></li>
+<li><a class="text-muted" href="./gems.html">보석</a></li>
+<li><a class="text-muted" href="./grill.html">모닥불과 석쇠</a></li>
+<li><a class="text-muted" href="./heating.html">가열하기</a></li>
+<li><a class="text-muted" href="./hydration.html">작물 수화</a></li>
+<li><a class="text-muted" href="./lamps.html">램프</a></li>
+<li><a class="text-muted" href="./leather_making.html">가죽 제작</a></li>
+<li><a class="text-muted" href="./lighting.html">광원</a></li>
+<li><a class="text-muted" href="./minecarts.html">Minecarts</a></li>
+<li><a class="text-muted" href="./panning.html">사금질</a></li>
+<li><a class="text-muted" href="./papermaking.html">Papermaking</a></li>
+<li><a class="text-muted" href="./pets.html">반려동물</a></li>
+<li><a class="text-muted" href="./pot.html">모닥불과 냄비</a></li>
+<li><a class="text-muted" href="./powderkegs.html">화약통</a></li>
+<li><a class="text-muted" href="./prospecting.html">광물 탐색</a></li>
+<li><a class="text-muted" href="./quern.html">맷돌</a></li>
+<li><a class="text-muted" href="./salad.html">샐러드</a></li>
+<li><a class="text-muted" href="./sandwiches.html">샌드위치</a></li>
+<li><a class="text-muted" href="./scribing_table.html">필기대</a></li>
+<li><a class="text-muted" href="./sluices.html">세광통</a></li>
+<li><a class="text-muted" href="./steel.html">강철</a></li>
+<li><a class="text-muted" href="./support_beams.html">지지대</a></li>
+<li><a class="text-muted" href="./weaving.html">직조</a></li>
+<li><a class="text-muted" href="./wooden_buckets.html">나무 양동이</a></li></ul></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">심화 기술</a> / <a class="text-muted" href="#">작물</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image56.png" alt="작물" />
+            </span>
+            <h4>작물</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>작물은 음식과 여러 재료들을 만드는 데 사용됩니다. 각각의 작물마다 약간은 다르지만, 작물에는 비슷한 법칙이 있습니다. 작물을 기르기 시작하려면 <span style="color:#3E8A00;">씨앗</span>이 필요하며, 씨앗은 <a href="../the_world/wild_crops.html">야생 작물</a>을 찾아서 부수면 얻을 수 있습니다.<br/>
+<br/>
+씨를 얻었다면 이제 <span style="color:#3E8A00;">괭이</span>가 필요합니다. 씨앗은 또한 낚싯대 <a href="../mechanics/fishing.html">미끼</a>로도 사용할 수 있습니다.</p>
+<p>In addition to finding wild crops, seeds can also be produced from existing crops. When a fully mature crop dies - either by weather, or leaving it to rot - it will go to seed, dropping more seeds that can be used to grow even more crops next season.</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image14.png" alt="Recipe: tfc:rock_knapping/hoe_head_sedimentary">
+<p>To get started, a <span style="color:#3E8A00;">Stone Hoe</span> can be <span style="color:#3E8A00;">knapped</span> as seen above.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="돌 괭이 머리" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item84.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item16.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="돌 괭이" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item83.png" />
+                </div>
+            </div>
+        </div>
+        <p>괭이 머리를 만든 후에는 괭이를 만들 수 있습니다.<br/>
+<br/>
+괭이는 바닐라와 흙을 우클릭하여 <span style="color:#3E8A00;">경작지</span>로 만들 수 있습니다. 괭이는 또한 <span style="color:#3E8A00;">뿌리내린 흙</span>을 <span style="color:#3E8A00;">흙</span>으로 바꾸는 데도 사용할 수 있습니다.</p>
+<h5>Growing Crops</h5>
+<p>All crops need to be planted on farmland in order to grow. Some crops have additional requirements such as being waterlogged or requiring a stick to grow on.<br/>
+<br/>
+Crops do not need <span style="color:#3E8A00;">nutrients</span> to grow, but they certainly help. There are three nutrients: <span style="color:#55FFFF;">Nitrogen</span>, <span style="color:#FFAA00;">Phosphorous</span>, and <span style="color:#FF55FF;">Potassium</span>. Each crop has a favorite nutrient.</p>
+<p>작물이 선호하는 영양소를 소모하면 더 빨리 자라며, 작물의 수확량도 늘어납니다. 즉, 작물을 부술 때 더 많은 아이템이 나옵니다. 영양소를 소모하면 그 주변의 다른 영양소들을 약간 보충해주는 효과도 있습니다.</p>
+<a class="anchor" id="barley"></a><h5>보리</h5>
+<p><strong><a href="../the_world/climate.html#temperature">기온</a></strong>: -8 - 26 °C<br/>
+<strong><a href="../mechanics/hydration.html">수분</a></strong>: 18 - 75 %<br/>
+<strong>선호 영양소</strong>: 질소<br/>
+<br/>
+보리는 한 블록 높이의 작물입니다. 보리 씨앗은 경작지에 심을 수 있으며 <span style="color:#3E8A00;">보리</span>와 <span style="color:#3E8A00;">보리 씨앗</span>을 수확할 수 있습니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block4.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="oat"></a><h5>귀리</h5>
+<p><strong><a href="../the_world/climate.html#temperature">기온</a></strong>: 3 - 40 °C<br/>
+<strong><a href="../mechanics/hydration.html">수분</a></strong>: 35 - 100 %<br/>
+<strong>선호 영양소</strong>: 인<br/>
+<br/>
+귀리는 한 블록 높이의 작물입니다. 귀리 씨앗은 경작지에 심을 수 있으며 <span style="color:#3E8A00;">귀리</span>와 <span style="color:#3E8A00;">귀리 씨앗</span>을 수확할 수 있습니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block5.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="rye"></a><h5>호밀</h5>
+<p><strong><a href="../the_world/climate.html#temperature">기온</a></strong>: -11 - 30 °C<br/>
+<strong><a href="../mechanics/hydration.html">수분</a></strong>: 25 - 85 %<br/>
+<strong>선호 영양소</strong>: 인<br/>
+<br/>
+호밀은 한 블록 높이의 작물입니다. 호밀 씨앗은 경작지에 심을 수 있으며 <span style="color:#3E8A00;">호밀</span>과 <span style="color:#3E8A00;">호밀 씨앗</span>을 수확할 수 있습니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block6.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="maize"></a><h5>옥수수</h5>
+<p><strong><a href="../the_world/climate.html#temperature">기온</a></strong>: 13 - 40 °C<br/>
+<strong><a href="../mechanics/hydration.html">수분</a></strong>: 75 - 100 %<br/>
+<strong>선호 영양소</strong>: 인<br/>
+<br/>
+옥수수는 두 블록 높이의 작물입니다. 옥수수 씨앗은 경작지에 심을 수 있으며 두 블록 높이로 자라납니다. <span style="color:#3E8A00;">옥수수</span>와 <span style="color:#3E8A00;">옥수수 씨앗</span>을 수확할 수 있습니다.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p></p>
+<a class="anchor" id="wheat"></a><h5>밀</h5>
+<p><strong><a href="../the_world/climate.html#temperature">기온</a></strong>: -4 - 35 °C<br/>
+<strong><a href="../mechanics/hydration.html">수분</a></strong>: 25 - 100 %<br/>
+<strong>선호 영양소</strong>: 인<br/>
+<br/>
+밀은 한 블록 높이의 작물입니다. 밀 씨앗은 경작지에 심을 수 있으며 <span style="color:#3E8A00;">밀</span>과 <span style="color:#3E8A00;">밀 씨앗</span>을 수확할 수 있습니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block7.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="rice"></a><h5>쌀</h5>
+<p><strong><a href="../the_world/climate.html#temperature">기온</a></strong>: 15 - 30 °C<br/>
+<strong><a href="../mechanics/hydration.html">수분</a></strong>: 25 - 100 %<br/>
+<strong>선호 영양소</strong>: 인<br/>
+<br/>
+쌀은 한 블록 높이의 작물입니다. 쌀 씨앗은 경작지에 심을 수 있으며 한 블록 깊이의 민물에서 자라야 합니다. <span style="color:#3E8A00;">쌀</span>과 <span style="color:#3E8A00;">쌀 씨앗</span>을 얻을 수 있습니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block8.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>참고: 쌀이 자라기 위해서는 <span style="color:#3E8A00;">물에 잠겨 있어야</span> 합니다.</p>
+</div><a class="anchor" id="beet"></a><h5>비트</h5>
+<p><strong><a href="../the_world/climate.html#temperature">기온</a></strong>: -5 - 20 °C<br/>
+<strong><a href="../mechanics/hydration.html">수분</a></strong>: 18 - 85 %<br/>
+<strong>선호 영양소</strong>: 칼륨<br/>
+<br/>
+비트는 한 블록 높이의 작물입니다. 비트 씨앗은 경작지에 심을 수 있으며 <span style="color:#3E8A00;">비트</span>와 <span style="color:#3E8A00;">비트 씨앗</span>을 수확할 수 있습니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block9.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="cabbage"></a><h5>양배추</h5>
+<p><strong><a href="../the_world/climate.html#temperature">기온</a></strong>: -10 - 27 °C<br/>
+<strong><a href="../mechanics/hydration.html">수분</a></strong>: 15 - 65 %<br/>
+<strong>선호 영양소</strong>: 질소<br/>
+<br/>
+양배추는 한 블록 높이의 작물입니다. 양배추 씨앗은 경작지에 심을 수 있으며 <span style="color:#3E8A00;">양배추</span>와 <span style="color:#3E8A00;">양배추 씨앗</span>을 수확할 수 있습니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block10.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="carrot"></a><h5>당근</h5>
+<p><strong><a href="../the_world/climate.html#temperature">기온</a></strong>: 3 - 30 °C<br/>
+<strong><a href="../mechanics/hydration.html">수분</a></strong>: 25 - 100 %<br/>
+<strong>선호 영양소</strong>: 칼륨<br/>
+<br/>
+당근은 한 블록 높이의 작물입니다. 당근 씨앗은 경작지에 심을 수 있으며 <span style="color:#3E8A00;">당근</span>과 <span style="color:#3E8A00;">당근 씨앗</span>을 수확할 수 있습니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block11.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="garlic"></a><h5>마늘</h5>
+<p><strong><a href="../the_world/climate.html#temperature">기온</a></strong>: -20 - 18 °C<br/>
+<strong><a href="../mechanics/hydration.html">수분</a></strong>: 15 - 75 %<br/>
+<strong>선호 영양소</strong>: 질소<br/>
+<br/>
+마늘은 한 블록 높이의 작물입니다. 마늘 씨앗은 경작지에 심을 수 있으며 <span style="color:#3E8A00;">마늘</span>과 <span style="color:#3E8A00;">마늘 씨앗</span>을 수확할 수 있습니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block12.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="green_bean"></a><h5>완두</h5>
+<p><strong><a href="../the_world/climate.html#temperature">기온</a></strong>: 2 - 35 °C<br/>
+<strong><a href="../mechanics/hydration.html">수분</a></strong>: 38 - 100 %<br/>
+<strong>선호 영양소</strong>: 질소<br/>
+<br/>
+완두는 두 블록 높이의 덩굴 작물입니다. 완두 씨앗은 경작지에 심을 수 있으며 막대기가 있다면 두 블록 높이로 자라납니다. <span style="color:#3E8A00;">완두</span>와 <span style="color:#3E8A00;">완두 씨앗</span>을 수확할 수 있습니다.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p>완두가 완전히 자라기 위해서는 막대기가 필요합니다.</p>
+<a class="anchor" id="potato"></a><h5>감자</h5>
+<p><strong><a href="../the_world/climate.html#temperature">기온</a></strong>: -1 - 37 °C<br/>
+<strong><a href="../mechanics/hydration.html">수분</a></strong>: 50 - 100 %<br/>
+<strong>선호 영양소</strong>: 칼륨<br/>
+<br/>
+감자는 한 블록 높이의 작물입니다. 감자 씨앗은 경작지에 심을 수 있으며 <span style="color:#3E8A00;">감자</span>와 <span style="color:#3E8A00;">감자 씨앗</span>을 수확할 수 있습니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block13.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="pumpkin"></a><h5>호박</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Temperature</a></strong>: 0 - 30 °C<br/>
+<strong><a href="../mechanics/hydration.html">Hydration</a></strong>: 30 - 80 %<br/>
+<strong>Nutrient</strong>: Phosphorus<br/>
+<br/>
+Pumpkins are a spreading crop. Pumpkin seeds can be planted on farmland and will place up to two <span style="color:#3E8A00;">Pumpkin Blocks</span> on the ground next to it while it is mature. If the pumpkin blocks are harvested, and the plant matures again, it can grow more pumpkins. Pumpkins can be made into <a href="../mechanics/lighting.html#jack_o_lanterns">Jack 'o Lanterns</a>.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p></p>
+<a class="anchor" id="melon"></a><h5>수박</h5>
+<p><strong><a href="../the_world/climate.html#temperature">기온</a></strong>: 5 - 37 °C<br/>
+<strong><a href="../mechanics/hydration.html">수분</a></strong>: 75 - 100 %<br/>
+<strong>선호 영양소</strong>: 인<br/>
+<br/>
+수박은 옆으로 자라는 작물입니다. 수박 씨앗은 경작지에 심을 수 있으며 성숙한 동안 양 옆으로 <span style="color:#3E8A00;">수박 블록</span>을 자라게 합니다. 수박 블록을 수확하고 나서, 수박이 다시 성숙하면 수박 블록이 더 자랄 수 있습니다.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p></p>
+<a class="anchor" id="onion"></a><h5>양파</h5>
+<p><strong><a href="../the_world/climate.html#temperature">기온</a></strong>: 0 - 30 °C<br/>
+<strong><a href="../mechanics/hydration.html">수분</a></strong>: 25 - 90 %<br/>
+<strong>선호 영양소</strong>: 질소<br/>
+<br/>
+양파는 한 블록 높이의 작물입니다. 양파 씨앗은 경작지에 심을 수 있으며 <span style="color:#3E8A00;">양파</span>와 <span style="color:#3E8A00;">양파 씨앗</span>을 수확할 수 있습니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block14.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="soybean"></a><h5>대두</h5>
+<p><strong><a href="../the_world/climate.html#temperature">기온</a></strong>: 8 - 30 °C<br/>
+<strong><a href="../mechanics/hydration.html">수분</a></strong>: 40 - 100 %<br/>
+<strong>선호 영양소</strong>: 질소<br/>
+<br/>
+대두는 한 블록 높이의 작물입니다. 대두 씨앗은 경작지에 심을 수 있으며 <span style="color:#3E8A00;">대두</span>와 <span style="color:#3E8A00;">대두 씨앗</span>을 수확할 수 있습니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block15.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="squash"></a><h5>애호박</h5>
+<p><strong><a href="../the_world/climate.html#temperature">기온</a></strong>: 5 - 33 °C<br/>
+<strong><a href="../mechanics/hydration.html">수분</a></strong>: 23 - 95 %<br/>
+<strong>선호 영양소</strong>: 칼륨<br/>
+<br/>
+애호박은 한 블록 높이의 작물입니다. 애호박 씨앗은 경작지에 심을 수 있으며 <span style="color:#3E8A00;">애호박</span>과 <span style="color:#3E8A00;">애호박 씨앗</span>을 수확할 수 있습니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block16.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="sugarcane"></a><h5>사탕수수</h5>
+<p><strong><a href="../the_world/climate.html#temperature">기온</a></strong>: 12 - 38 °C<br/>
+<strong><a href="../mechanics/hydration.html">수분</a></strong>: 40 - 100 %<br/>
+<strong>선호 영양소</strong>: 칼륨<br/>
+<br/>
+사탕수수는 두 블록 높이의 작물입니다. 사탕수수 씨앗은 경작지에 심을 수 있으며 두 블록 높이로 자라납니다. <span style="color:#3E8A00;">사탕수수</span>와 <span style="color:#3E8A00;">사탕수수 씨앗</span>을 수확할 수 있습니다. 사탕수수로는 <span style="color:#3E8A00;">설탕</span>을 만들 수 있습니다.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p></p>
+<a class="anchor" id="tomatoes"></a><h5>토마토</h5>
+<p><strong><a href="../the_world/climate.html#temperature">기온</a></strong>: 0 - 36 °C<br/>
+<strong><a href="../mechanics/hydration.html">수분</a></strong>: 30 - 95 %<br/>
+<strong>선호 영양소</strong>: 칼륨<br/>
+<br/>
+토마토는 두 블록 높이의 덩굴 작물입니다. 토마토 씨앗은 경작지에 심을 수 있으며 막대기가 있다면 두 블록 높이로 자라납니다. <span style="color:#3E8A00;">토마토</span>와 <span style="color:#3E8A00;">토마토 씨앗</span>을 수확할 수 있습니다.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p>완두가 완전히 자라기 위해서는 막대기가 필요합니다.</p>
+<a class="anchor" id="jute"></a><h5>황마</h5>
+<p><strong><a href="../the_world/climate.html#temperature">기온</a></strong>: 5 - 37 °C<br/>
+<strong><a href="../mechanics/hydration.html">수분</a></strong>: 25 - 100 %<br/>
+<strong>선호 영양소</strong>: 칼륨<br/>
+<br/>
+황마는 두 블록 높이의 작물입니다. 황마 씨앗은 경작지에 심을 수 있으며 두 블록 높이로 자라납니다. <span style="color:#3E8A00;">황마</span>와 <span style="color:#3E8A00;">황마 씨앗</span>을 수확할 수 있습니다.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p></p>
+<a class="anchor" id="papyrus"></a><h5>Papyrus</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Temperature</a></strong>: 19 - 37 °C<br/>
+<strong><a href="../mechanics/hydration.html">Hydration</a></strong>: 70 - 100 %<br/>
+<strong>Nutrient</strong>: Potassium<br/>
+<br/>
+Papyrus is a two block tall crop. Papyrus seeds can be planted on farmland, will grow two blocks tall, and will produce <a href="../mechanics/papermaking.html">Papyrus</a> and <span style="color:#3E8A00;">Papyrus Seeds</span> as a product.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p></p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

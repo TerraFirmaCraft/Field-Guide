@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>群峦传说 手册</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'zh_cn';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">群峦传说 手册</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">简体中文(中国大陆)</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/getting_started\food_and_water.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\food_and_water.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\food_and_water.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\food_and_water.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\food_and_water.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\food_and_water.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\food_and_water.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\food_and_water.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">主页</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">版本 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>目录</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">这个世界</a></li>
+<li><a class="text-muted" href="../getting_started/">新手入门</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./introduction.html">第一天</a></li>
+<li><a class="text-muted" href="./firepit.html">生火</a></li>
+<li><a class="text-muted" href="./pottery.html">制陶术</a></li>
+<li><a class="text-muted" href="./pit_kiln.html">坑窑</a></li>
+<li><a class="text-muted" href="./finding_ores.html">矿石、金属和铸造</a></li>
+<li><a class="text-muted" href="./primitive_alloys.html">原始合金</a></li>
+<li><a class="text-muted" href="./primitive_anvils.html">原始砧</a></li>
+<li><a class="text-muted" href="./building_materials.html">建筑材料</a></li>
+<li><a class="text-muted" href="./a_place_to_sleep.html">如何过夜</a></li>
+<li><a class="text-muted" href="./size_and_weight.html">体积和重量</a></li>
+<li><a class="text-muted" href="./food_and_water.html">食物和水</a></li></ul></li>
+<li><a class="text-muted" href="../mechanics/">进阶内容</a></li>
+<li><a class="text-muted" href="../firmalife/">(Addon) Firmalife扩展模组</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">新手入门</a> / <a class="text-muted" href="#">食物和水</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image7.png" alt="食物和水" />
+            </span>
+            <h4>食物和水</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>在群峦传说中，你不仅需要注意你的饥饿度，还需要管理你的口渴度。饥饿度的机制和原版类似。大部分的食物会为你回复五分之一饥饿条，其他一些食物（比如<span style="color:#3E8A00;">香蒲根</span>）则会少回复些。进食还会使你回复一些<span style="color:#3E8A00;">饱和度</span>，也就是饱腹感。</p>
+<p>几乎任何动作都会消耗饥饿度。疾跑、游泳、或<a href="../getting_started/size_and_weight.html#overburdening">负担过重</a>都会更快消耗饥饿度。有关某样食物可以为你回复的<span style="color:#3E8A00;">饱和度</span>、<span style="color:#3E8A00;">口渴度</span>、和<span style="color:#3E8A00;">营养元素</span>可以通过在物品栏中将鼠标放置在其上并按住<span style="color:#b0b;">Shift</span>检视。</p>
+<p>所有食物都可以用这种方法展开详细的工具提示。食物的<a href="../mechanics/decay.html">保质期</a>也会在此显示。需要注意的是，不是所有能吃的东西都有营养价值。比如<a href="../mechanics/bread.html">面团</a>可以吃，但毫无营养，而且也不会回复饱和度或口渴度。这样的食物吃了也没多少好处。</p>
+<p>以下是一个食物的工具提示的示例：<br/>
+<br/>
+橙子<br/>
+<span style="color:#00AA00;">保质期：1004年 七月6日 11:59（约1月1天）</span><br/>
+营养：<br/>
+- 饱和度：2%<br/>
+- 口渴值：2%<br/>
+<span style="color:#55FF55;">- 水果：0.5</span></p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image8.png" alt="tfc:textures/gui/book/gui/nutrition.png">
+<div style="text-align: center;"><p>这是营养界面。每个状态条显示了你目前的营养水平。</p>
+</div><a class="anchor" id="nutrients"></a><h5>营养元素</h5>
+<p>群峦传说中有五种营养元素。它们都可以通过吃东西摄入：<strong><span style="color:#55FF55;">水果</span></strong>、<strong><span style="color:#00AA00;">蔬菜</span></strong>、<strong><span style="color:#FF5555;">蛋白质</span></strong>、<strong><span style="color:#FFAA00;">谷物</span></strong>、和<strong><span style="color:#AA00AA;">乳制品</span></strong>。保持每种营养元素都处于较高水平会增加你的最大生命值，反之则会降低生命值。食用食物就能摄入它所蕴含的营养元素。通过制作<a href="../mechanics/pot.html#soup">汤</a>之类的<span style="color:#3E8A00;">餐点</span>可以将多种食材组合成为一顿食物。<span style="color:#3E8A00;">用餐</span>比分开吃烹饪材料更好，因为你的营养元素水平是根据你吃的最后几个食物决定的。</p>
+<p><strong><span style="color:#55FF55;">水果</span></strong>：水果元素的主要来源于<a href="../the_world/wild_fruits.html">果木</a>。比如灌木和果树。两个值得注意的特例是<a href="../mechanics/crops.html#pumpkin">南瓜</a>和<a href="../mechanics/crops.html#pumpkin">西瓜</a>。这两种植物也被算作是水果。<br/>
+<br/>
+<strong><span style="color:#00AA00;">蔬菜</span></strong>：大部分<a href="../mechanics/crops.html">农作物</a>都蕴含这种营养元素。<br/>
+<br/>
+<strong><span style="color:#FF5555;">蛋白质</span></strong>：<a href="../the_world/wild_animals.html">动物</a>肉都含有蛋白质。对于不想杀生的玩家来说，一个肉食的替代品则是<a href="../mechanics/crops.html#soybean">大豆</a>。大豆同时拥有蛋白质和蔬菜元素。</p>
+<p><strong><span style="color:#FFAA00;">谷物</span></strong>：谷物元素是由……呃，谷物提供的。比如<a href="../mechanics/crops.html#barley">大麦</a>。如何将谷物变成有用的食物主要写在<a href="../mechanics/bread.html">烤面包</a>章节。<span style="color:#3E8A00;">香蒲根</span>和<span style="color:#3E8A00;">芋头根</span>也算谷物。<br/>
+<br/>
+<strong><span style="color:#AA00AA;">乳制品</span></strong>：所有乳制品都是用<span style="color:#3E8A00;">奶</span>制成的。想要获得奶，就必须繁殖<a href="../mechanics/animal_husbandry.html#dairy_animals">产奶动物</a>。如何将生奶变成有用的食物主要写在<a href="../mechanics/dairy.html">乳制品</a>章节。<br/>
+<br/>
+食物一旦腐败便完全不能吃了。关于防止食物腐败的知识，请阅读<a href="../mechanics/decay.html">食物保鲜</a>章节。</p>
+<a class="anchor" id="thirst"></a><h5>口渴度</h5>
+<p>口渴度指的是你身体中的水分含量。口渴度和饥饿度一样会缓慢流失。处于高温环境，或进行剧烈运动都会使口渴度流失得更快。用<span style="color:#b0b;">右键</span>点击<span style="color:#3E8A00;">淡水</span>水源方块就可以回复你的口渴度，但要注意喝咸水反而会导致你损失更多口渴度，有时你还会获得会让你持续流失更多口渴度的<span style="color:#3E8A00;">干渴</span>状态效果。</p>
+<h5>饮水安全</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>河流和湖泊中的水往往都是淡水。另外，<span style="color:#3E8A00;">阔叶香蒲</span>之类的植物只会生长在淡水中。</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image9.png" alt="Recipe: tfc:clay_knapping/jug">
+<p>将粘土<a href="../getting_started/pottery.html">塑形</a>并烧制成一只<a href="../getting_started/pottery.html#jug">罐</a>便能将水带在身边了。手持空罐用<span style="color:#b0b;">右键</span>点击水源就能盛水。按住<span style="color:#b0b;">右键</span>便能从中喝水。</p>
+<p>当你的饥饿度或口渴度太低时，你的移动和挖掘速度都会变得很缓慢，还会不断受到伤害。你的营养元素会在死亡后重置。</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

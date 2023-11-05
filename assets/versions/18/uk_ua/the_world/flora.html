@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'uk_ua';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Українська мова</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/the_world\flora.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world\flora.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world\flora.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world\flora.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world\flora.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world\flora.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world\flora.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world\flora.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">Світ</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./biomes.html">Біоми</a></li>
+<li><a class="text-muted" href="./waterways.html">Водойми</a></li>
+<li><a class="text-muted" href="./geology.html">Геологія</a></li>
+<li><a class="text-muted" href="./ores_and_minerals.html">Руди та мінерали</a></li>
+<li><a class="text-muted" href="./climate.html">Календар та клімат</a></li>
+<li><a class="text-muted" href="./flora.html">Флора</a></li>
+<li><a class="text-muted" href="./wild_crops.html">Дикі культури</a></li>
+<li><a class="text-muted" href="./wild_fruits.html">Дикоростучі фрукти</a></li>
+<li><a class="text-muted" href="./wild_animals.html">Дикі тварини</a></li></ul></li>
+<li><a class="text-muted" href="../getting_started/">Починаємо</a></li>
+<li><a class="text-muted" href="../mechanics/">Розширена механіка</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">Світ</a> / <a class="text-muted" href="#">Флора</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Золотушник">
+                <img src="..\..\_images\item210.png" alt="Флора" />
+            </span>
+            <h4>Флора</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>У TerraFirmaCraft є багато, дуже багато різних видів рослин.<br/>
+<br/>
+Різні рослини з’являються в різних <a href="../the_world/climate.html">кліматичних умовах</a>. Їх зовнішній вигляд змінюється протягом поточного сезону, проходячи цикли цвітіння та спокою, змінюючи колір згідно зміни температури. Різнокольорові квіти можна подрібнити <a href="../mechanics/quern.html">млином</a> для отримання барвників.</p>
+<h5>Звичайні рослини</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Звичайні рослини схожі на маленькі квіти. Вони ростуть на траві, землі та у городі.</p>
+<h5>Сухостій</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Сухостійкі рослини схожі на звичайні, але можуть рости на піску. З'являються в районах із малою кількістю опадів.</p>
+<a class="anchor" id="cacti"></a><h5>Кактуси</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Кактуси можуть вирости на два блоки, і вони завдадуть вам шкоди!</p>
+<h5>Пластуни</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Повзучі рослини приймають форму навколишніх граней блоків.</p>
+<h5>Епіфіти</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Епіфіти живуть тільки на стовбурах дерев.</p>
+<h5>Коротка трава</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Короткі трав’яні блоки з віком стають вищими. Вони здатні рости на торфі та багнюці.</p>
+<h5>Висока трава</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Високі трав’яні блоки достатньо довгі, щоб закрити ваше поле зору.</p>
+<h5>Лоза</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Лози розростаються по світу самостійно, якщо є відповідна температура.</p>
+<h5>Ліани</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Плакучі ліани ростуть вниз до кореневого блоку.</p>
+<h5>Звивисті ліани</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Звивисті ліани звиваються вгору від поверхні землі. Можуть бути в суцільному варіанті.</p>
+<h5>Водяні рослини</h5>
+<p>Водяні рослини можуть з'являтися у прісній або солоній воді. Взагалі вони ростуть і діють подібно до рослин, що ростуть на поверхні. Деякі водяні рослини є їстівними.</p>
+<h5>Звичайні рослини</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Звичайні водяні рослини можна різати за допомогою <span style="color:#3E8A00;"></span>ножа та отримати <span style="color:#3E8A00;">водорості</span>.</p>
+<h5>Водорості</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Водорості - це трава, що росте під водою.</p>
+<h5>Довгі водорості</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Довгі водяні рослини ростуть з нижнього блоку, що у воді. <span style="color:#3E8A00;">Водне таро</span> та рогіз можна різати <span style="color:#3E8A00;">ножем</span> та отримати <span style="color:#3E8A00;">коріння</span>.</p>
+<h5>Плейстофіти</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Плейстофіти - рослини що ростуть на поверхні води. Човни ламають їх при контакті.</p>
+<h5>Ламінарія</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Ламінарія - це звивисті ліани, які ростуть під водою.</p>
+<h5>Ламінарієві дерева</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Під водою водорості виростають у складні дерева. Квіти можна збирати зa допомогою <span style="color:#3E8A00;">ножа</span>.</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

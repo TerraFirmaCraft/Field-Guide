@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'en_us';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/the_world\climate.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world\climate.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world\climate.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world\climate.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world\climate.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world\climate.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world\climate.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world\climate.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">The World</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./biomes.html">Biomes</a></li>
+<li><a class="text-muted" href="./waterways.html">Where the River Flows</a></li>
+<li><a class="text-muted" href="./geology.html">Geology</a></li>
+<li><a class="text-muted" href="./ores_and_minerals.html">Ores and Minerals</a></li>
+<li><a class="text-muted" href="./climate.html">Calendar and Climate</a></li>
+<li><a class="text-muted" href="./flora.html">Flora</a></li>
+<li><a class="text-muted" href="./wild_crops.html">Wild Crops</a></li>
+<li><a class="text-muted" href="./wild_fruits.html">Wild Fruits</a></li>
+<li><a class="text-muted" href="./wild_animals.html">Wild Animals</a></li></ul></li>
+<li><a class="text-muted" href="../getting_started/">Getting Started</a></li>
+<li><a class="text-muted" href="../mechanics/">Advanced Mechanics</a></li>
+<li><a class="text-muted" href="../tfcgyres_orehints/">(Addon) Ore Hints and Spawning</a></li>
+<li><a class="text-muted" href="../waterflasks/">(Addon) Water Flasks</a></li>
+<li><a class="text-muted" href="../firmalife/">(Addon) Firmalife</a></li>
+<li><a class="text-muted" href="../firmaciv/">(Addon) Firma: Civilization</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">The World</a> / <a class="text-muted" href="#">Calendar and Climate</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image102.png" alt="Calendar and Climate" />
+            </span>
+            <h4>Calendar and Climate</h4>
+        </div>
+        </h4>
+                <hr>
+                <a class="anchor" id="calendar"></a><p>In TerraFirmaCraft, the climate and the time are both very important factors. Let's start with the <span style="color:#3E8A00;">Calendar</span>.<br/>
+<br/>
+At any time, you can view the calendar by pressing <span style="color:#b0b;">E</span>, and clicking on the calendar tab. This will show the <span style="color:#3E8A00;">Season</span>, the <span style="color:#3E8A00;">Day</span>, and the <span style="color:#3E8A00;">Date</span>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image103.png" alt="tfc:textures/gui/book/gui/calendar.png">
+<div style="text-align: center;"><p>The Calendar Screen</p>
+</div><p>There are seasons, and the weather and climate will change along with them! There are four seasons in TerraFirmaCraft, each divided up into <span style="color:#3E8A00;">Early</span>, <span style="color:#3E8A00;">Mid</span> and <span style="color:#3E8A00;">Late</span> months. The four seasons are:<br/>
+</p>
+<ul>
+	<li><strong>Spring</strong>: March - May</li>
+	<li><strong>Summer</strong>: June - August</li>
+	<li><strong>Autumn</strong>: September - November</li>
+	<li><strong>Winter</strong>: December - February</li>
+</ul>
+<p>The current season can influence the temperature of the area, the precipitation (if it will rain or snow), among other things. Pay attention to the calendar tab, it will be useful!<br/>
+<br/>
+Now, onto the climate...</p>
+<a class="anchor" id="climate"></a><h5>Climate</h5>
+<p>Another tab on the main inventory screen is the <span style="color:#3E8A00;">Climate</span> screen. This one shows information about the current location<br/>
+<br/>
+The first line shows the overall <a href="https://en.wikipedia.org/wiki/K%C3%B6ppen_climate_classification">Climate</a> .<br/>
+<br/>
+The second line shows the <a href="../the_world/geology.html">Geologic Province</a>.<br/>
+<br/>
+The third line shows the <span style="color:#3E8A00;">Average Annual Temperature</span>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image104.png" alt="tfc:textures/gui/book/gui/climate.png">
+<div style="text-align: center;"><p>The Climate Screen</p>
+</div><a class="anchor" id="temperature"></a><p>Temperature in TerraFirmaCraft is influenced by a number of factors:<br/>
+</p>
+<ul>
+	<li>Firstly, the region, especially the latitude (Z coordinate) will play the largest role.</li>
+	<li>Secondly, the current season will influence the temperature - it will be hottest during Summer, and coldest during Winter.</li>
+	<li>Finally, the temperature can be different day to day as well as varying from hour to hour.</li>
+</ul>
+<p>The last line shows the current temperature, including all these aforementioned factors.<br/>
+<br/>
+Temperature can influence many things: if crops and plants will grow, if snow and ice will form or melt, and more.</p>
+<a class="anchor" id="rainfall"></a><h5>Rainfall</h5>
+<p>Rainfall is another climate value that can vary depending on where you are in the world. The annual rainfall is measured in millimeters (mm) and can be between 0mm - 500mm. Rainfall affects the types of flora that are found in an area, and also the types of soil, from sand and cacti, to loam, to silt and kapok trees.</p>
+<p>Rainfall is also important as it affects what things can be grown in an area. Rainfall is one of the main contributors to <a href="../mechanics/hydration.html">Hydration</a>, which is an exact measure of how wet the soil is in a given location, and is used by <a href="../mechanics/crops.html">Crops</a>, <a href="../the_world/wild_fruits.html#fruit_trees">Fruit Trees</a>, and <a href="../the_world/wild_fruits.html#tall_bushes">Berry Bushes</a> to determine if they can grow.</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

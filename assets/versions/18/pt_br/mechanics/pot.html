@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'pt_br';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portuguese (Brazil)</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/mechanics\pot.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\pot.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\pot.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\pot.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\pot.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\pot.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\pot.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\pot.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">O mundo</a></li>
+<li><a class="text-muted" href="../getting_started/">Começando</a></li>
+<li><a class="text-muted" href="../mechanics/">Mecânica avançada</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./advanced_building_materials.html">Materiais avançados</a></li>
+<li><a class="text-muted" href="./animal_husbandry.html">Animal Husbandry</a></li>
+<li><a class="text-muted" href="./anvils.html">Anvils</a></li>
+<li><a class="text-muted" href="./aqueducts.html">Aqueducts</a></li>
+<li><a class="text-muted" href="./armor.html">Armor</a></li>
+<li><a class="text-muted" href="./barrels.html">Barrels</a></li>
+<li><a class="text-muted" href="./bellows.html">Bellows</a></li>
+<li><a class="text-muted" href="./blast_furnace.html">Blast Furnace</a></li>
+<li><a class="text-muted" href="./bloomery.html">Bloomery</a></li>
+<li><a class="text-muted" href="./bread.html">Bread</a></li>
+<li><a class="text-muted" href="./charcoal_forge.html">Charcoal Forge</a></li>
+<li><a class="text-muted" href="./charcoal_pit.html">Charcoal Pit</a></li>
+<li><a class="text-muted" href="./chisel.html">Chisel</a></li>
+<li><a class="text-muted" href="./composter.html">Composter</a></li>
+<li><a class="text-muted" href="./crops.html">Crops</a></li>
+<li><a class="text-muted" href="./crucible.html">Crucible</a></li>
+<li><a class="text-muted" href="./dairy.html">Dairy Products</a></li>
+<li><a class="text-muted" href="./damage_types.html">Damage Types</a></li>
+<li><a class="text-muted" href="./decay.html">Preservation</a></li>
+<li><a class="text-muted" href="./fertilizers.html">Fertilizers</a></li>
+<li><a class="text-muted" href="./fire_clay.html">Fire Clay</a></li>
+<li><a class="text-muted" href="./fishing.html">Fishing</a></li>
+<li><a class="text-muted" href="./flux.html">Flux</a></li>
+<li><a class="text-muted" href="./gems.html">Gems</a></li>
+<li><a class="text-muted" href="./grill.html">Firepit And Grill</a></li>
+<li><a class="text-muted" href="./heating.html">Heating</a></li>
+<li><a class="text-muted" href="./hydration.html">Keeping Hydrated</a></li>
+<li><a class="text-muted" href="./lamps.html">Lamps</a></li>
+<li><a class="text-muted" href="./leather_making.html">Leather Making</a></li>
+<li><a class="text-muted" href="./lighting.html">Light Sources</a></li>
+<li><a class="text-muted" href="./minecarts.html">Minecarts</a></li>
+<li><a class="text-muted" href="./panning.html">Panning</a></li>
+<li><a class="text-muted" href="./papermaking.html">Papermaking</a></li>
+<li><a class="text-muted" href="./pets.html">Pets</a></li>
+<li><a class="text-muted" href="./pot.html">Firepit And Pot</a></li>
+<li><a class="text-muted" href="./powderkegs.html">Powderkegs</a></li>
+<li><a class="text-muted" href="./prospecting.html">Prospecting</a></li>
+<li><a class="text-muted" href="./quern.html">Quern</a></li>
+<li><a class="text-muted" href="./salad.html">Salads</a></li>
+<li><a class="text-muted" href="./sandwiches.html">Sandwiches</a></li>
+<li><a class="text-muted" href="./scribing_table.html">Scribing Table</a></li>
+<li><a class="text-muted" href="./sluices.html">Sluices</a></li>
+<li><a class="text-muted" href="./steel.html">Steel</a></li>
+<li><a class="text-muted" href="./support_beams.html">Support Beams</a></li>
+<li><a class="text-muted" href="./weaving.html">Weaving</a></li>
+<li><a class="text-muted" href="./wooden_buckets.html">Wooden Buckets</a></li></ul></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">Mecânica avançada</a> / <a class="text-muted" href="#">Firepit And Pot</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Pot">
+                <img src="..\..\_images\item159.png" alt="Firepit And Pot" />
+            </span>
+            <h4>Firepit And Pot</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>A <span style="color:#3E8A00;">Pot</span> is an item that can be added to the firepit to cook new types of food and also produce some other useful items.<br/>
+<br/>
+In order to create a firepit with a pot, first create a <a href="../getting_started/firepit.html">Firepit</a>, then use a <span style="color:#3E8A00;">Ceramic Pot</span> on the firepit.</p>
+<h5></h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>A firepit with a pot attached.</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image73.png" alt="Recipe: tfc:clay_knapping/pot">
+<p>A ceramic pot must be <a href="../getting_started/pottery.html">Knapped</a> out of clay first.</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-toggle="tooltip" title="Unfired Pot" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item160.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-toggle="tooltip" title="Pot" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item161.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-yellow">
+            <p>Branco Amarelado****</p>
+        </div>
+        <p>It then must be <a href="../mechanics/heating.html">fired</a> to create a <span style="color:#3E8A00;">Ceramic Pot</span> which can be used on the firepit.</p>
+<p>Like the firepit, the pot has four slots for fuel which must be added in the top slot, and a temperature indicator. The pot also contains five item slots and holds up to <span style="color:#3E8A00;">1000 mB</span> of any fluid.<br/>
+<br/>
+In order to cook something in the pot, first the fluid must be added by using any type of fluid container, such as a bucket, on the pot. Then add items and light the pot. It will begin boiling for a while until the recipe is completed.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image74.png" alt="tfc:textures/gui/book/gui/pot.png">
+<div style="text-align: center;"><p>The pot interface, actively boiling and making a type of soup.</p>
+</div><a class="anchor" id="soup"></a>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Tasty Soup">
+                <img src="..\..\_images\item162.png" alt="Soup Recipes" />
+            </span>
+            <h5>Soup Recipes</h5>
+        </div>
+        <p>Soup is made from 3-5 <span style="color:#3E8A00;">fruits</span>, <span style="color:#3E8A00;">vegetables</span>, or <span style="color:#3E8A00;">meats</span> in a pot of <span style="color:#3E8A00;">water</span>. When the recipe is done, the water in the pot will turn red. <span style="color:#b0b;">Right Click</span> with a <span style="color:#3E8A00;">bowl</span> to retrieve it. Soup combines multiple nutrients into a single meal.</p>
+<h5>Simple Recipes</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this item.">Item: <code>tfc:bucket/red_dye</code></span></p>
+        </div>
+        <p>Other pot recipes transform the items and fluid in the pot into something else. For example, boiling 5 <span style="color:#3E8A00;">ash</span> in <span style="color:#3E8A00;">water</span> makes <span style="color:#3E8A00;">lye</span>.</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

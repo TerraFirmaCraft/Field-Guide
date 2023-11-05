@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>群峦传说 手册</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'zh_cn';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">群峦传说 手册</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">简体中文(中国大陆)</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/the_world\biomes.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world\biomes.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world\biomes.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world\biomes.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world\biomes.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world\biomes.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world\biomes.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world\biomes.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">主页</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">版本 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>目录</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">这个世界</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./biomes.html">生物群系</a></li>
+<li><a class="text-muted" href="./waterways.html">河流流向何方？</a></li>
+<li><a class="text-muted" href="./geology.html">地质学</a></li>
+<li><a class="text-muted" href="./ores_and_minerals.html">矿石和矿物</a></li>
+<li><a class="text-muted" href="./climate.html">历法和气候</a></li>
+<li><a class="text-muted" href="./flora.html">自然植物</a></li>
+<li><a class="text-muted" href="./wild_crops.html">野生作物</a></li>
+<li><a class="text-muted" href="./wild_fruits.html">野生水果</a></li>
+<li><a class="text-muted" href="./wild_animals.html">野生动物</a></li></ul></li>
+<li><a class="text-muted" href="../getting_started/">新手入门</a></li>
+<li><a class="text-muted" href="../mechanics/">进阶内容</a></li>
+<li><a class="text-muted" href="../firmalife/">(Addon) Firmalife扩展模组</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">这个世界</a> / <a class="text-muted" href="#">生物群系</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image92.png" alt="生物群系" />
+            </span>
+            <h4>生物群系</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>这个世界是由不同的<span style="color:#3E8A00;">生物群系</span>组成的。生物群系决定了一个区域的地形结构、地表材料和其他的一些特征。从海洋到平原，从丘陵再到山脉。这个世界的一切你都能尽情探索。</p>
+<p>接下来的几页包含了关于一部分你能遇见的生物群系的信息。</p>
+<h5>平原</h5>
+<p>平原是一个低海拔的生物群系。和丘陵类似，它们仅比海平面高一点点。它们地形宽广，有时蔓生着大片的野花野草，又或者点缀着稀疏的树林。</p>
+<a class="anchor" id="plains"></a>
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image93.png" alt="tfc:textures/gui/book/biomes/plains.png">
+<div style="text-align: center;"><p>一片平原。</p>
+</div><a class="anchor" id="hills"></a><h5>丘陵和连绵丘陵</h5>
+<p>丘陵和连绵丘陵是两种低海拔到中海拔的生物群系，通常与平原或海拔较高的地区接壤。这里有不少巨石，火山温泉也会在此处罕见地生成。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image94.png" alt="tfc:textures/gui/book/biomes/rolling_hills_with_river.png">
+<div style="text-align: center;"><p>一条小河穿行于丘陵之间。</p>
+</div><a class="anchor" id="badlands"></a><h5>恶地</h5>
+<p>恶地是一种中海拔陆地生物群系，通常位于高原、山脉或连绵丘陵附近。其特征是那些被沙子和砂岩覆盖着的崎岖山脊。沙子的颜色不尽相同，有时是红棕色的，有时是黄白色的，也可能介于两者之间。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image95.png" alt="tfc:textures/gui/book/biomes/badlands.png">
+<div style="text-align: center;"><p>一片恶地。</p>
+</div><a class="anchor" id="plateau"></a><h5>高原</h5>
+<p>高原是一种高海拔陆地生物群系。它们那一望无际的原野看上去与平原相似，但海拔要比平原高上许多。高原上经常有巨石点缀，偶尔还能找到干涸的死温泉。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image96.png" alt="tfc:textures/gui/book/biomes/plateau.png">
+<div style="text-align: center;"><p>一条深河峡谷横穿高原。</p>
+</div><a class="anchor" id="mountains"></a><h5>山脉</h5>
+<p>在高海拔地区会生成多种不同类型的山脉。原始山脉比较矮小平滑，而普通山脉则更为高耸，其表面暴露的石块也更多些。位于板块运动剧烈地区的山脉有时还会生成温泉，甚至是火山。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image97.png" alt="tfc:textures/gui/book/biomes/old_mountains.png">
+<div style="text-align: center;"><p>积雪山坡上的一眼温泉。</p>
+</div><a class="anchor" id="lowlands"></a><h5>低地</h5>
+<p>与高耸入云的山脉相反，低地是一种泥泞而潮湿的生物群系。它们往往位于海平面或海平面之下。这里淡水水源充足，到处都是壤泥和各种植物。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image98.png" alt="tfc:textures/gui/book/biomes/lowlands.png">
+<div style="text-align: center;"><p>一片低地。</p>
+</div><a class="anchor" id="low_canyons"></a><h5>低地峡谷</h5>
+<p>低地峡谷也是一个低海拔陆地生物群系，通常与海洋或其他低海拔生物群系接壤。这里地势起伏中等，形状不齐的小水池遍布于其中，有时还会生成干涸的休眠温泉。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image99.png" alt="tfc:textures/gui/book/biomes/low_canyons.png">
+<div style="text-align: center;"><p>一个低地峡谷。</p>
+</div><a class="anchor" id="canyons"></a><h5>峡谷</h5>
+<p>与<a href="../the_world/biomes.html#low_canyons">低地峡谷</a>类似，峡谷是一个中等海拔的陆地生物群系。这里的地势起伏中等，小水池和湖泊遍布。这是一个地质非常活跃的生物群系，矮小的火山、巨石和活跃的温泉都很常见。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image100.png" alt="tfc:textures/gui/book/biomes/canyons.png">
+<div style="text-align: center;"><p>一片峡谷，远处有一座火山。</p>
+</div><a class="anchor" id="ocean"></a><h5>海洋</h5>
+<p>群峦传说的浩瀚海洋将各个大陆分隔开来。表面上海洋毫无特色，但水下则是完全不同的一番景象——千奇百怪的植物和海洋生物遍布于此，海带也会在这个生物群系生成。而在较冷的气候中，高耸的冰山和海冰则会漂浮于海面之上。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image101.png" alt="tfc:textures/gui/book/biomes/ocean.png">
+<div style="text-align: center;"><p>从海滩上眺望地平线。</p>
+</div>
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'pt_br';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portuguese (Brazil)</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/the_world\wild_animals.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world\wild_animals.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world\wild_animals.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world\wild_animals.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world\wild_animals.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world\wild_animals.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world\wild_animals.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world\wild_animals.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">O mundo</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./biomes.html">Biomas</a></li>
+<li><a class="text-muted" href="./waterways.html">Onde o Rio Corre</a></li>
+<li><a class="text-muted" href="./geology.html">Geologia</a></li>
+<li><a class="text-muted" href="./ores_and_minerals.html">Ores and minerals</a></li>
+<li><a class="text-muted" href="./climate.html">Calendário e clima</a></li>
+<li><a class="text-muted" href="./flora.html">Flora</a></li>
+<li><a class="text-muted" href="./wild_crops.html">Culturas selvagens</a></li>
+<li><a class="text-muted" href="./wild_fruits.html">Frutas selvagens</a></li>
+<li><a class="text-muted" href="./wild_animals.html">Wild Animals</a></li></ul></li>
+<li><a class="text-muted" href="../getting_started/">Começando</a></li>
+<li><a class="text-muted" href="../mechanics/">Mecânica avançada</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">O mundo</a> / <a class="text-muted" href="#">Wild Animals</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Couro cru médio">
+                <img src="..\..\_images\item1.png" alt="Wild Animals" />
+            </span>
+            <h4>Wild Animals</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>O mundo do TFC está cheio de vida animal. Alguns animais estão aqui para ajudar, e outros são incrivelmente perigosos. Esta seção é sobre animais selvagens. Para obter informações sobre gado, animais que podem fornecer itens que você precisa, consulte o <a href="../mechanics/animal_husbandry.html">Criação animal</a> página.</p>
+<p>Os animais podem ser agrupados em algumas categorias diferentes: <a href="../the_world/wild_animals.html#predators">Predadores</a>, <a href="../the_world/wild_animals.html#prey">Prey</a>, e <a href="../the_world/wild_animals.html#aquatic">Aquatic</a> animais.<br/>
+<br/>
+As próximas páginas detalharão cada uma dessas categorias de animais.</p>
+<a class="anchor" id="predators"></a><h5>Predadores</h5>
+<p><span style="color:#3E8A00;">Predadores</span> são animais que podem atacar o jogador. Eles são <span style="color:#3E8A00;">Nocturnal</span>, apenas caça à noite, ou <span style="color:#3E8A00;">Diurnal</span>, Apenas caçando durante o dia. Os predadores podem ser neutros ou hostis, dependendo se eles mataram um alvo recentemente. Os predadores têm um território doméstico que eles defenderão - se você correr longe o suficiente, o predador vai parar de perseguir e voltar para casa.</p>
+<h5>Urso polar</h5>
+<p>O urso polar aparece apenas nas regiões mais frias, em uma <a href="../the_world/climate.html#temperature">temperature</a> no máximo 10°C, com um <a href="../the_world/climate.html#rainfall">chuva</a> de pelo menos 100mm.</p>
+<h5>Urso pardo</h5>
+<p>O urso pardo aparece em florestas de climas moderados, com uma <a href="../the_world/climate.html#temperature">temperature</a> faixa de -15 a 15°C e pelo menos 200 mm de <a href="../the_world/climate.html#rainfall">chuva</a>.</p>
+<h5>Urso preto</h5>
+<p>O urso preto aparece em florestas de climas mais quentes e úmidos, de <a href="../the_world/climate.html#tempertemperaturarature$("> 5 a 20°C e pelo menos 250 mm de <a href="../the_world/climate.html#rainfall">chuva</a></a>.</p>
+<h5>Puma</h5>
+<p>O puma prefere a maioria dos climas moderados, com <a href="../the_world/climate.html#temperature">temperatura</a> de -10 a 21°C e pelo menos 150 mm de <a href="../the_world/climate.html#rainfall">chuva</a>.</p>
+<h5>Pantera</h5>
+<p>TEle Pantera prefere a maioria dos climas moderados, com <a href="../the_world/climate.html#temperature">temperatura</a> de -10 a 21°C e pelo menos 150 mm de <a href="../the_world/climate.html#rainfall">chuva</a>.</p>
+<h5>Leoa</h5>
+<p>O leão aparece em planícies com uma média <a href="../the_world/climate.html#temperature">temperature</a> de pelo menos 16°C e <a href="../the_world/climate.html#rainfall">chuva</a> entre 50 e 300 mm.</p>
+<h5>Sabertooth</h5>
+<p>O Sabertooth aparece em qualquer <a href="../the_world/climate.html#temperature">temperatura</a> acima de 0°C e qualquer <a href="../the_world/climate.html#rainfall">chuva</a> acima de 250 mm.</p>
+<p>O lobo aparece em qualquer <a href="../the_world/climate.html#temperature">temperatura</a> abaixo de 22°C e <a href="../the_world/climate.html#rainfall">chuva</a> entre 150 e 420mm. Eles caçam em pacotes. Alimentar um lobo o suficiente vezes o domá <a href="../mechanics/pets.html">Cadela</a>.</p>
+<p>O lobo gigante aparece a qualquer <a href="../the_world/climate.html#temperature">temperature</a> abaixo de zero e <a href="../the_world/climate.html#rainfall">chuva</a> entre 150 e 420mm. Eles caçam em pacotes. Eles são maiores que os lobos comuns e não são domiciliares.</p>
+<p>The ocelot attacks small animals. It spawns at any <a href="../the_world/climate.html#temperature">temperature</a> from 15 to 30°C, and <a href="../the_world/climate.html#rainfall">rainfall</a> between 300 and 500mm, in forests. Feeding an ocelot enough times will tame it into a <a href="../mechanics/pets.html">Cat</a>. Ocelots can eat raw fish</p>
+<hr><a class="anchor" id="prey"></a><h5>Presa</h5>
+<p><span style="color:#3E8A00;">Presa</span> Os animais temem jogadores e predadores. Eles são hábeis em fugir do perigo, mas geralmente não podem revidar. Alguns animais de presa gostam de lanches nas colheitas.</p>
+<h5>Javali</h5>
+<p>Os javalis aparecem em planícies com <a href="../the_world/climate.html#tempertemperaturarature$("> abaixo de 25°C e acima de -5°C, e <a href="../the_world/climate.html#rainfall">chuva</a></a> entre 130 e 400 mm.</p>
+<h5>Coelha</h5>
+<p>O coelho é conhecido por mastigar cenouras e repolho. Eles são onipresentes no mundo, trocando seu casaco com base no clima. Eles só precisam de 15 mm de <a href="../the_world/climate.html#rainfall">chuva</a> Aparecer.</p>
+<h5>Raposa</h5>
+<p>A raposa gosta de comer as bagas de arbustos. Pode ser encontrado em florestas com <a href="../the_world/climate.html#temperature">temperatura</a> abaixo de 25°C e <a href="../the_world/climate.html#rainfall">chuva</a> entre 130 e 400mm.</p>
+<p>O cervo aparece em qualquer <a href="../the_world/climate.html#temperature">temperatura</a> abaixo de 25°C e acima -15°C, e <a href="../the_world/climate.html#rainfall">chuva</a> entre 130 e 400mm.</p>
+<p>O alce gera em qualquer <a href="../the_world/climate.html#temperature">temperatura</a> abaixo de 10°C e acima -15°C, e <a href="../the_world/climate.html#rainfall">chuva</a> entre 150 e 300 mm.</p>
+<p>O galope gera em qualquer <a href="../the_world/climate.html#temperature">temperatura</a> abaixo de 13°C e acima -12°C, e <a href="../the_world/climate.html#rainfall">chuva</a> entre 150 e 400 mm.</p>
+<p>O faisão aparece em florestas em qualquer <a href="../the_world/climate.html#temperature">temperatura</a> abaixo de 17°C e acima -5°C, e <a href="../the_world/climate.html#rainfall">chuva</a> entre 100 e 300 mm.</p>
+<p>O peru aparece em qualquer <a href="../the_world/climate.html#temperature">temperatura</a> abaixo de 17°C e acima de 0°C, e <a href="../the_world/climate.html#rainfall">chuva</a> entre 250 e 450mm.</p>
+<hr><a class="anchor" id="aquatic"></a><h5>Animais aquaticos</h5>
+<p><span style="color:#3E8A00;">Animais aquaticos</span> são uma categoria ampla que abrange vários comportamentos diferentes. Eles podem ser <span style="color:#3E8A00;">Moradores da costa</span>, <span style="color:#3E8A00;">Peixe</span>, <span style="color:#3E8A00;">Marisco</span>, ou <span style="color:#3E8A00;">Grandes criaturas aquáticas</span></p>
+<p><span style="color:#3E8A00;">Animais em terra</span> Apenas aparece nas margens do mar e passa um pouco do dia nadando e alguns andando na praia. São criaturas curiosas e seguirão o jogador, mas não podem ser domadas.</p>
+<h5>Pinguim</h5>
+<p>O pinguim aparece apenas nas praias mais frias, com <a href="../the_world/climate.html#temperature">temperatura</a> no máximo -14°C e <a href="../the_world/climate.html#rainfall">chuva</a> de pelo menos 75 mm.</p>
+<h5>Tartaruga marinha</h5>
+<p>A tartaruga do mar gosta de água morna. Ele aparece <a href="../the_world/climate.html#temperature">temperatura</a> de pelo menos 21°C e <a href="../the_world/climate.html#rainfall">chuva</a> de pelo menos 250 mm.</p>
+<h5>Peixe</h5>
+<p><span style="color:#3E8A00;">Peixe</span> são pequenas criaturas que nadam na água. A maioria deles pode ser <a href="../mechanics/fishing.html">pesco</a>. Alguns preferem oceanos, rios ou lagos.</p>
+<h5>Bacalhau</h5>
+<p>Bacalhau prefere oceanos mais frios, <a href="../the_world/climate.html#temperature">temperatura</a> no máximo 18°C. Eles podem ser pescados.</p>
+<h5>Baiacu</h5>
+<p>Baiacu vive em qualquer oceano com pelo menos nasce de 10°C.</p>
+<h5>Água-viva</h5>
+<p>Águas-vivas vivem em oceanos mais quentes, com nasce de pelo menos 18°C.</p>
+<h5>Peixe tropical</h5>
+<p>Peixes tropicais preferem oceanos mais quentes, com nasce de pelo menos 18°C.</p>
+<h5>Salmão</h5>
+<p>O salmão nasce em qualquer rio ou lago com nasce de pelo menos -5°C.</p>
+<h5>Bluegill</h5>
+<p>Bluegill nasce em qualquer rio ou lago com nasce de pelo menos -10°C e no máximo 26°C.</p>
+<a class="anchor" id="shellfish"></a><h5>Marisco</h5>
+<p><span style="color:#3E8A00;">Marisco</span> são pequenos animais que vivem no chão de corpos de água. Eles não podem ser pescados, mas soltar conchas que podem ser comidas ou transformadas em <a href="../mechanics/flux.html">fluxo</a>. Mariscos pode ser <a href="../mechanics/fishing.html">isca</a> para peixe.</p>
+<h5>Isópode</h5>
+<p>Isópodes aparecem em seções mais profundas de oceanos de <a href="../the_world/climate.html#temperature">temperatura</a> no máximo 14°C.</p>
+<h5>Lagosta</h5>
+<p>A lagosta nasce em qualquer oceano que tenha, no máximo, nasce de 21°C.</p>
+<h5>Lagostim</h5>
+<p>Lagostins são como lagosta, mas aparecem em rios e lagos. Eles precisam de uma <a href="../the_world/climate.html#temperature">temperatura</a> de pelo menos 5°C e um <a href="../the_world/climate.html#rainfall">chuva</a> de pelo menos 125 mm.</p>
+<h5>Caranguejo-ferradura</h5>
+<p>Caranguejos-ferraduras aparecem em oceanos de clima moderado, <a href="../the_world/climate.html#temperature">temperatura</a> entre 10 e 21°C e com um <a href="../the_world/climate.html#rainfall">rainfall</a> Sem máximo de 400 mm.</p>
+<h5>Grandes criaturas de água</h5>
+<p><span style="color:#3E8A00;">Grandes criaturas de água</span> são animais maiores que vivem nos corpos maiores de água. Alguns deles caçam peixes. Eles caem <a href="../mechanics/lamps.html#tallow">gordura</a>, que pode ser transformado em combustível de lâmpada.</p>
+<h5>Orca</h5>
+<p>Orca baleias vivem em oceanos profundos com <a href="../the_world/climate.html#temperature">temperatura</a> de no máximo 19°C e <a href="../the_world/climate.html#rainfall">chuva</a> de pelo menos 100 mm.</p>
+<h5>Golfinho</h5>
+<p>Golfinhos vivem em oceanos profundos com <a href="../the_world/climate.html#temperature">temperatura</a> de pelo menos 10°C e <a href="../the_world/climate.html#rainfall">chuva</a> de pelo menos 200 mm.</p>
+<h5>Peixe-boi</h5>
+<p>Peixe-boi vivem em qualquer lago quente, com <a href="../the_world/climate.html#temperature">temperatura</a> de pelo menos 20°C e <a href="../the_world/climate.html#rainfall">chuva</a> no máximo 300 mm.</p>
+<h5>Lula</h5>
+<p>Lula pode gerar em qualquer oceano profundo. Eles caem <span style="color:#3E8A00;">Sacos de tinta</span>, e tinta qualquer jogador que chegue muito perto. Alguns dizem que as lulas em cavernas profundas e inexploradas têm propriedades estranhas.</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

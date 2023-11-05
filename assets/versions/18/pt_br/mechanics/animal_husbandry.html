@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'pt_br';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portuguese (Brazil)</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/mechanics\animal_husbandry.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\animal_husbandry.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\animal_husbandry.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\animal_husbandry.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\animal_husbandry.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\animal_husbandry.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\animal_husbandry.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\animal_husbandry.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">O mundo</a></li>
+<li><a class="text-muted" href="../getting_started/">Começando</a></li>
+<li><a class="text-muted" href="../mechanics/">Mecânica avançada</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./advanced_building_materials.html">Materiais avançados</a></li>
+<li><a class="text-muted" href="./animal_husbandry.html">Animal Husbandry</a></li>
+<li><a class="text-muted" href="./anvils.html">Anvils</a></li>
+<li><a class="text-muted" href="./aqueducts.html">Aqueducts</a></li>
+<li><a class="text-muted" href="./armor.html">Armor</a></li>
+<li><a class="text-muted" href="./barrels.html">Barrels</a></li>
+<li><a class="text-muted" href="./bellows.html">Bellows</a></li>
+<li><a class="text-muted" href="./blast_furnace.html">Blast Furnace</a></li>
+<li><a class="text-muted" href="./bloomery.html">Bloomery</a></li>
+<li><a class="text-muted" href="./bread.html">Bread</a></li>
+<li><a class="text-muted" href="./charcoal_forge.html">Charcoal Forge</a></li>
+<li><a class="text-muted" href="./charcoal_pit.html">Charcoal Pit</a></li>
+<li><a class="text-muted" href="./chisel.html">Chisel</a></li>
+<li><a class="text-muted" href="./composter.html">Composter</a></li>
+<li><a class="text-muted" href="./crops.html">Crops</a></li>
+<li><a class="text-muted" href="./crucible.html">Crucible</a></li>
+<li><a class="text-muted" href="./dairy.html">Dairy Products</a></li>
+<li><a class="text-muted" href="./damage_types.html">Damage Types</a></li>
+<li><a class="text-muted" href="./decay.html">Preservation</a></li>
+<li><a class="text-muted" href="./fertilizers.html">Fertilizers</a></li>
+<li><a class="text-muted" href="./fire_clay.html">Fire Clay</a></li>
+<li><a class="text-muted" href="./fishing.html">Fishing</a></li>
+<li><a class="text-muted" href="./flux.html">Flux</a></li>
+<li><a class="text-muted" href="./gems.html">Gems</a></li>
+<li><a class="text-muted" href="./grill.html">Firepit And Grill</a></li>
+<li><a class="text-muted" href="./heating.html">Heating</a></li>
+<li><a class="text-muted" href="./hydration.html">Keeping Hydrated</a></li>
+<li><a class="text-muted" href="./lamps.html">Lamps</a></li>
+<li><a class="text-muted" href="./leather_making.html">Leather Making</a></li>
+<li><a class="text-muted" href="./lighting.html">Light Sources</a></li>
+<li><a class="text-muted" href="./minecarts.html">Minecarts</a></li>
+<li><a class="text-muted" href="./panning.html">Panning</a></li>
+<li><a class="text-muted" href="./papermaking.html">Papermaking</a></li>
+<li><a class="text-muted" href="./pets.html">Pets</a></li>
+<li><a class="text-muted" href="./pot.html">Firepit And Pot</a></li>
+<li><a class="text-muted" href="./powderkegs.html">Powderkegs</a></li>
+<li><a class="text-muted" href="./prospecting.html">Prospecting</a></li>
+<li><a class="text-muted" href="./quern.html">Quern</a></li>
+<li><a class="text-muted" href="./salad.html">Salads</a></li>
+<li><a class="text-muted" href="./sandwiches.html">Sandwiches</a></li>
+<li><a class="text-muted" href="./scribing_table.html">Scribing Table</a></li>
+<li><a class="text-muted" href="./sluices.html">Sluices</a></li>
+<li><a class="text-muted" href="./steel.html">Steel</a></li>
+<li><a class="text-muted" href="./support_beams.html">Support Beams</a></li>
+<li><a class="text-muted" href="./weaving.html">Weaving</a></li>
+<li><a class="text-muted" href="./wooden_buckets.html">Wooden Buckets</a></li></ul></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">Mecânica avançada</a> / <a class="text-muted" href="#">Animal Husbandry</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Ovo">
+                <img src="..\..\_images\item46.png" alt="Animal Husbandry" />
+            </span>
+            <h4>Animal Husbandry</h4>
+        </div>
+        </h4>
+                <hr>
+                <p><span style="color:#3E8A00;">Livestock</span> are animals that can be tamed and bred by the player. Livestock can be either <span style="color:#3E8A00;">male</span> or <span style="color:#3E8A00;">female</span>. For some animals, it is possible to tell their sex visually. For example, male pigs have tusks.</p>
+<p>Livestock experience <span style="color:#3E8A00;">aging</span>. They are born as babies, which are smaller and cannot provide things for the player. After a certain number of days, they grow into <span style="color:#3E8A00;">adult</span> animals, which are able to do things like breed or produce milk. After they breed or are used enough times, animals become <span style="color:#3E8A00;">old</span>, and are only useful for their meat.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image37.png" alt="tfc:textures/gui/book/tutorial/old_cow.png">
+<div style="text-align: center;"><p>This bull is old and cannot breed, so it has a faded coat and grey, unseeing eyes.</p>
+</div><p>Livestock can be fed to raise <span style="color:#3E8A00;">familiarity</span>. Each animal has foods that it prefers to eat. To feed an animal, <span style="color:#b0b;">Shift</span> and <span style="color:#b0b;">Right Click</span> with food in your hand.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image38.png" alt="tfc:textures/gui/book/tutorial/unfamiliarized_pig.png">
+<div style="text-align: center;"><p>Livestock have a <span style="color:#3E8A00;">Familiarity Indicator</span> that shows how familiar they are with you. Hold <span style="color:#b0b;">Shift</span> and look at the animal to reveal it.</p>
+</div>
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image39.png" alt="tfc:textures/gui/book/tutorial/no_familiarity_decay_pig.png">
+<div style="text-align: center;"><p>Familiarity decays a little each day if not fed. Raising the familiarity enough prevents decay, indicated by the white outlined heart.</p>
+</div>
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image40.png" alt="tfc:textures/gui/book/tutorial/familiarity_limit_pig.png">
+<div style="text-align: center;"><p>Adult livestock cannot be fully familiarized, indicated by the red outlined heart. Babies can reach 100% familiarity.</p>
+</div><a class="anchor" id="mammals"></a><p><span style="color:#3E8A00;">Mammals</span> are livestock that experience <span style="color:#3E8A00;">Pregnancy</span>. Adult mammals that are above 30% familiarity and have been fed that day will mate, given that they are of opposite genders and near each other. The female animal will become <span style="color:#3E8A00;">pregnant</span>, which causes it to have children a set number of days after fertilization.<br/>
+An example is <a href="../mechanics/animal_husbandry.html#pig">Pigs</a>.</p>
+<a class="anchor" id="wooly_animals"></a><p><span style="color:#3E8A00;">Wooly Animals</span> are <a href="../mechanics/animal_husbandry.html#mammals">Mammals</a> that can be <span style="color:#3E8A00;">Sheared</span> if they are adults and familiar enough to you. Some examples are <a href="../mechanics/animal_husbandry.html#sheep">Sheep</a>, <a href="../mechanics/animal_husbandry.html#alpaca">Alpacas</a>, and <a href="../mechanics/animal_husbandry.html#musk_ox">Musk Oxen</a>.</p>
+<a class="anchor" id="dairy_animals"></a><p><span style="color:#3E8A00;">Dairy Animals</span> are mammals that make <span style="color:#3E8A00;">Milk</span>. Female dairy animals can be clicked with a bucket to obtain milk. Some examples are <a href="../mechanics/animal_husbandry.html#goat">Goats</a>, <a href="../mechanics/animal_husbandry.html#cow">Cows</a>, and <a href="../mechanics/animal_husbandry.html#yak">Yaks</a>.</p>
+<a class="anchor" id="oviparous_animals"></a><h5>Nest Box</h5>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="Palha" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item2.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-toggle="tooltip" title="Palha" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item2.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-toggle="tooltip" title="Palha" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item2.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Ninho" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">Oviparous Animals</span> are not <a href="../mechanics/animal_husbandry.html#mammals">Mammals</a>, and instead produce children by laying <span style="color:#3E8A00;">Eggs</span>. They need a <span style="color:#3E8A00;">Nest Box</span> to lay eggs, which they are capable of locating on their own.<br/>
+Some examples are <a href="../mechanics/animal_husbandry.html#duck">Ducks</a>, <a href="../mechanics/animal_husbandry.html#quail">Quails</a>, and <a href="../mechanics/animal_husbandry.html#chicken">Chickens</a>.</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-toggle="tooltip" title="Ovo" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item46.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-toggle="tooltip" title="Ovo frito" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item48.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>Quente****</p>
+        </div>
+        <p><span style="color:#3E8A00;">Eggs</span> can be cooked or boiled for food. Male oviparous animals can fertilize females, which causes the next egg laid in the nest box to be fertilized. Fertilized eggs will have a tooltip with how long until they are ready to hatch.</p>
+<a class="anchor" id="horses"></a>
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image41.png" alt="Recipe: tfc:leather_knapping/saddle">
+<p><span style="color:#3E8A00;">Equines</span> are <a href="../mechanics/animal_husbandry.html#mammals">Mammals</a> that can be ridden when tamed. They become rideable after reaching 15% familiarity.</p>
+<p>They need a <span style="color:#3E8A00;">Saddle</span> to ride, which can be <span style="color:#3E8A00;">Knapped</span>. This includes <a href="../mechanics/animal_husbandry.html#mule">Mules</a>, <a href="../mechanics/animal_husbandry.html#donkey">Donkeys</a>, and <a href="../mechanics/animal_husbandry.html#horses">Horses</a>. Mules and Donkeys can hold any chest or barrel. If holding a barrel, <span style="color:#b0b;">Right Click</span> while holding <span style="color:#b0b;">Shift</span> can be used to remove it. The same keys while holding a bucket can be used to drain fluid from the barrel. <br/>
+<br/>
+The next few pages will go over all livestock types.</p>
+<a class="anchor" id="pig"></a><h5>Pigs</h5>
+<p><span style="color:#3E8A00;">Pigs</span> spawn in mild forests with <a href="../the_world/climate.html#temperature">temperature</a> between -10 and 35°C, and at least 200mm of <a href="../the_world/climate.html#rainfall">rainfall</a>. They are <a href="../mechanics/animal_husbandry.html#mammals">Mammals</a> with no special abilities. They will eat any food, even if it is rotten. They have 1-10 children, are pregnant for just 19 days, and reach adulthood in 80 days. They can have children 6 times.</p>
+<h5> </h5>
+<p>A pig.</p>
+<a class="anchor" id="cow"></a><h5>Cows</h5>
+<p><span style="color:#3E8A00;">Cows</span> spawn in most climates, between <a href="../the_world/climate.html#temperature">temperature</a> -10 and 35°C, and at least 250mm of <a href="../the_world/climate.html#rainfall">rainfall</a>. They are <a href="../mechanics/animal_husbandry.html#dairy_animals">Dairy Animals</a>. They only eat <span style="color:#3E8A00;">grains</span>, which may be rotten. They can have 1-2 children, are pregnant for 58 days, and reach adulthood in 192 days. They can have children 13 times, if they are never milked, or be milked 128 times, if they are never bred. They produce milk every day.</p>
+<h5> </h5>
+<p>A cow.</p>
+<a class="anchor" id="goat"></a><h5>Goats</h5>
+<p><span style="color:#3E8A00;">Goats</span> spawn in moderate climates, with <a href="../the_world/climate.html#temperature">temperature</a> between -12 and 25°C, and at least 300mm of <a href="../the_world/climate.html#rainfall">rainfall</a>. They are <a href="../mechanics/animal_husbandry.html#dairy_animals">Dairy Animals</a>. They eat <span style="color:#3E8A00;">grains</span>, <span style="color:#3E8A00;">fruits</span>, and <span style="color:#3E8A00;">vegetables</span>, which may be rotten. They can have 1-2 children, are pregnant for 32 days, and reach adulthood in 96 days. They can have children 6 times if they are never milked, or be milked 60 times if they are never bred. They produce milk every 3 days.</p>
+<h5> </h5>
+<p>A goat.</p>
+<a class="anchor" id="yak"></a><h5>Yak</h5>
+<p><span style="color:#3E8A00;">Yaks</span> spawn in cold climates, with <a href="../the_world/climate.html#temperature">temperature</a> of at most -11°C, and at least 100mm of <a href="../the_world/climate.html#rainfall">rainfall</a>. They are <a href="../mechanics/animal_husbandry.html#dairy_animals">Dairy Animals</a>. They eat only fresh <span style="color:#3E8A00;">grains</span>. They always have 1 child, are pregnant for 64 days, and reach adulthood in 180 days. They can have children 23 times, if they are never milked, or be milked 230 times, if they are never bred. They produce milk once a day.</p>
+<h5> </h5>
+<p>A yak.</p>
+<a class="anchor" id="alpaca"></a><h5>Alpaca</h5>
+<p><span style="color:#3E8A00;">Alpacas</span> spawn in moderate climates, with <a href="../the_world/climate.html#temperature">temperature</a> between -8 and 20°C, and at least 250mm of <a href="../the_world/climate.html#rainfall">rainfall</a>. They are <a href="../mechanics/animal_husbandry.html#wooly_animals">Wooly Animals</a>. They eat <span style="color:#3E8A00;">grains</span> and <span style="color:#3E8A00;">fruits</span>. They have 1-2 children, are pregnant for 36 days, and reach adulthood in 98 days. They can have children 13 times, if they are never sheared, or be sheared 128 times, if they are never bred. They grow wool every 6 days.</p>
+<h5> </h5>
+<p>An alpaca.</p>
+<a class="anchor" id="sheep"></a><h5>Sheep</h5>
+<p><span style="color:#3E8A00;">Sheep</span> spawn in drier climates, with <a href="../the_world/climate.html#temperature">temperature</a> between 0 and 35°C, and between 70 and 300mm of <a href="../the_world/climate.html#rainfall">rainfall</a>. They are <a href="../mechanics/animal_husbandry.html#wooly_animals">Wooly Animals</a>. They eat <span style="color:#3E8A00;">grains</span>. They have 1-2 children, are pregnant for 32 days, and reach adulthood in 56 days. They can have children 6 times, if they are never sheared, or be sheared 60 times, if they are never bred. They grow wool every 9 days.</p>
+<h5> </h5>
+<p>A sheep.</p>
+<a class="anchor" id="musk_ox"></a><h5>Musk Ox</h5>
+<p><span style="color:#3E8A00;">Musk Oxen</span> spawn in cold climates, with <a href="../the_world/climate.html#temperature">temperature</a> between -25 and 0°C, and at least 100mm of <a href="../the_world/climate.html#rainfall">rainfall</a>. They are <a href="../mechanics/animal_husbandry.html#wooly_animals">Wooly Animals</a>. They eat <span style="color:#3E8A00;">grains</span>. They always have 1 child, are pregnant for 64 days, and reach adulthood in 168 days. They can have children 16 times, if they are never sheared, or be sheared 160 times if they are never bred. They grow wool every 96 hours.</p>
+<h5> </h5>
+<p>A musk ox.</p>
+<a class="anchor" id="chicken"></a><h5>Chickens</h5>
+<p><span style="color:#3E8A00;">Chickens</span> spawn in warm forests, with <a href="../the_world/climate.html#temperature">temperature</a> of at least 14°C, and at least 225mm of <a href="../the_world/climate.html#rainfall">rainfall</a>. They are <a href="../mechanics/animal_husbandry.html#oviparous_animals">Oviparous Animals</a>. They eat <span style="color:#3E8A00;">grains</span>, <span style="color:#3E8A00;">fruits</span>, <span style="color:#3E8A00;">vegetables</span>, and <span style="color:#3E8A00;">seeds</span>, which can be rotten. Their eggs hatch in 8 days, and become adults in 24 days. They can lay eggs 100 times. They produce eggs every 30 hours.</p>
+<h5> </h5>
+<p>A chicken.</p>
+<a class="anchor" id="duck"></a><h5>Ducks</h5>
+<p><span style="color:#3E8A00;">Ducks</span> spawn in most plains, with <a href="../the_world/climate.html#temperature">temperature</a> between -25 and 30°C, and at least 100mm of <a href="../the_world/climate.html#rainfall">rainfall</a>. They are <a href="../mechanics/animal_husbandry.html#oviparous_animals">Oviparous Animals</a>. They eat <span style="color:#3E8A00;">grains</span>, <span style="color:#3E8A00;">fruits</span>, <span style="color:#3E8A00;">vegetables</span>, <span style="color:#3E8A00;">bread</span>, and <span style="color:#3E8A00;">seeds</span>. Their eggs hatch in 8 days, and become adults in 32 days. They can lay eggs 72 times. They produce eggs every 32 hours.</p>
+<h5> </h5>
+<p>A duck.</p>
+<a class="anchor" id="quail"></a><h5>Quail</h5>
+<p><span style="color:#3E8A00;">Quails</span> spawn in colder climates, with <a href="../the_world/climate.html#temperature">temperature</a> between -15 and 15°C, and at least 200mm of  <a href="../the_world/climate.html#rainfall">rainfall</a>. They are <a href="../mechanics/animal_husbandry.html#oviparous_animals">Oviparous Animals</a>. They eat <span style="color:#3E8A00;">grains</span>, <span style="color:#3E8A00;">fruits</span>, <span style="color:#3E8A00;">vegetables</span>, and <span style="color:#3E8A00;">seeds</span>, which can be rotten. Their eggs hatch in 8 days, and become adults in 22 days. They can lay eggs 48 times. They produce eggs every 28 hours.</p>
+<h5> </h5>
+<p>A quail.</p>
+<a class="anchor" id="donkey"></a><h5>Donkeys</h5>
+<p><span style="color:#3E8A00;">Donkeys</span> spawn in wetter plains, with <a href="../the_world/climate.html#temperature">temperature</a> of at least -15°C, and between 130 and 400mm of <a href="../the_world/climate.html#rainfall">rainfall</a>. They are a kind of <a href="../mechanics/animal_husbandry.html#horses">Equine</a> that can carry a <span style="color:#3E8A00;">chest</span>. They eat <span style="color:#3E8A00;">grains</span> and <span style="color:#3E8A00;">fruits</span>. They have 1 child, are pregnant for 19 days, and reach adulthood in 80 days. They can have children 6 times.</p>
+<h5> </h5>
+<p>A donkey.</p>
+<a class="anchor" id="mule"></a><h5>Mules</h5>
+<p><span style="color:#3E8A00;">Mules</span> spawn in plains with <a href="../the_world/climate.html#temperature">temperature</a> of at least -15°C, and between 130 and 400mm of <a href="../the_world/climate.html#rainfall">rainfall</a>. They are a kind of <a href="../mechanics/animal_husbandry.html#horses">Equine</a> that can carry a <span style="color:#3E8A00;">chest</span> and are the always-male product of a <span style="color:#3E8A00;">horse</span> and a donkey. They eat <span style="color:#3E8A00;">grains</span> and <span style="color:#3E8A00;">fruits</span>. They reach adulthood in 80 days.</p>
+<h5> </h5>
+<p>A mule.</p>
+<a class="anchor" id="horse"></a><h5>Horses</h5>
+<p><span style="color:#3E8A00;">Horses</span> spawn in plains with <a href="../the_world/climate.html#temperature">temperature</a> of at least -15°C, and between 130 and 400mm of <a href="../the_world/climate.html#rainfall">rainfall</a>. They are a kind of <a href="../mechanics/animal_husbandry.html#horses">Equine</a>. They eat <span style="color:#3E8A00;">grains</span> and <span style="color:#3E8A00;">fruits</span>. They have 1 child, are pregnant for 19 days, and reach adulthood in 80 days. They can have children 6 times.</p>
+<h5> </h5>
+<p>A horse.</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

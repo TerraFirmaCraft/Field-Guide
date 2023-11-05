@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'en_us';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/the_world\wild_animals.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world\wild_animals.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world\wild_animals.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world\wild_animals.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world\wild_animals.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world\wild_animals.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world\wild_animals.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world\wild_animals.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">The World</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./biomes.html">Biomes</a></li>
+<li><a class="text-muted" href="./waterways.html">Where the River Flows</a></li>
+<li><a class="text-muted" href="./geology.html">Geology</a></li>
+<li><a class="text-muted" href="./ores_and_minerals.html">Ores and Minerals</a></li>
+<li><a class="text-muted" href="./climate.html">Calendar and Climate</a></li>
+<li><a class="text-muted" href="./flora.html">Flora</a></li>
+<li><a class="text-muted" href="./wild_crops.html">Wild Crops</a></li>
+<li><a class="text-muted" href="./wild_fruits.html">Wild Fruits</a></li>
+<li><a class="text-muted" href="./wild_animals.html">Wild Animals</a></li></ul></li>
+<li><a class="text-muted" href="../getting_started/">Getting Started</a></li>
+<li><a class="text-muted" href="../mechanics/">Advanced Mechanics</a></li>
+<li><a class="text-muted" href="../tfcgyres_orehints/">(Addon) Ore Hints and Spawning</a></li>
+<li><a class="text-muted" href="../waterflasks/">(Addon) Water Flasks</a></li>
+<li><a class="text-muted" href="../firmalife/">(Addon) Firmalife</a></li>
+<li><a class="text-muted" href="../firmaciv/">(Addon) Firma: Civilization</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">The World</a> / <a class="text-muted" href="#">Wild Animals</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Medium Raw Hide">
+                <img src="..\..\_images\item1.png" alt="Wild Animals" />
+            </span>
+            <h4>Wild Animals</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>The world of TFC is full of animal life. Some animals are here to help, and some are incredibly dangerous. This section is about wild animals. For information on livestock, animals that can give you items you need, see the <a href="../mechanics/animal_husbandry.html">Animal Husbandry</a> page.</p>
+<p>Animals can be grouped into a few different categories: <a href="../the_world/wild_animals.html#predators">Predators</a>, <a href="../the_world/wild_animals.html#prey">Prey</a>, and <a href="../the_world/wild_animals.html#aquatic">Aquatic</a> animals.<br/>
+<br/>
+The next few pages will detail each of these categories of animals.</p>
+<a class="anchor" id="predators"></a><h5>Predators</h5>
+<p><span style="color:#3E8A00;">Predators</span> are animals that can attack the player. They are either <span style="color:#3E8A00;">Nocturnal</span>, only hunting at night, or <span style="color:#3E8A00;">Diurnal</span>, only hunting during the day. Predators can be neutral or hostile, depending on if they have killed a target recently. Predators have a home territory that they will defend - if you run far enough away, the predator will stop chasing and return home.</p>
+<h5>Polar Bear</h5>
+<p>The polar bear spawns in only the coldest regions, <a href="../the_world/climate.html#temperature">temperature</a> at most 10°C, with a <a href="../the_world/climate.html#rainfall">rainfall</a> of at least 100mm.</p>
+<h5>Grizzly Bear</h5>
+<p>The grizzly bear spawns in forests of moderate climates, with a <a href="../the_world/climate.html#temperature">temperature</a> range of -15 to 15°C and at least 200mm of <a href="../the_world/climate.html#rainfall">rainfall</a>.</p>
+<h5>Black Bear</h5>
+<p>The black bear spawns in forests of warmer, wetter climates, of <a href="../the_world/climate.html#temperature">temperature</a> 5 to 20°C and at least 250mm of <a href="../the_world/climate.html#rainfall">rainfall</a>.</p>
+<h5>Cougar</h5>
+<p>The cougar prefers most moderate climates, with <a href="../the_world/climate.html#temperature">temperature</a> from -10 to 21°C and at least 150mm of <a href="../the_world/climate.html#rainfall">rainfall</a>.</p>
+<h5>Panther</h5>
+<p>The panther prefers most moderate climates, with <a href="../the_world/climate.html#temperature">temperature</a> from -10 to 21°C and at least 150mm of <a href="../the_world/climate.html#rainfall">rainfall</a>.</p>
+<h5>Lion</h5>
+<p>The lion spawns in plains with an average <a href="../the_world/climate.html#temperature">temperature</a> of at least 16°C, and <a href="../the_world/climate.html#rainfall">rainfall</a> between 50 and 300mm.</p>
+<h5>Sabertooth</h5>
+<p>The sabertooth spawns at any <a href="../the_world/climate.html#temperature">temperature</a> above 0°C, and any <a href="../the_world/climate.html#rainfall">rainfall</a> above 250mm.</p>
+<p>The wolf spawns at any <a href="../the_world/climate.html#temperature">temperature</a> below 22°C, and <a href="../the_world/climate.html#rainfall">rainfall</a> between 150 and 420mm. They hunt in packs. Feeding a wolf enough times will tame it into a <a href="../mechanics/pets.html">Dog</a>.</p>
+<p>The direwolf spawns at any <a href="../the_world/climate.html#temperature">temperature</a> below freezing, and <a href="../the_world/climate.html#rainfall">rainfall</a> between 150 and 420mm. They hunt in packs. They are larger than regular wolves, and are not tamable.</p>
+<p>The ocelot attacks small animals. It spawns at any <a href="../the_world/climate.html#temperature">temperature</a> from 15 to 30°C, and <a href="../the_world/climate.html#rainfall">rainfall</a> between 300 and 500mm, in forests. Feeding an ocelot enough times will tame it into a <a href="../mechanics/pets.html">Cat</a>. Ocelots can eat raw fish</p>
+<hr><a class="anchor" id="prey"></a><h5>Prey</h5>
+<p><span style="color:#3E8A00;">Prey</span> animals fear players and predators. They are adept at fleeing from danger, but generally cannot fight back. Some prey animals enjoy snacking on crops.</p>
+<h5>Boar</h5>
+<p>The boar spawns in plains with <a href="../the_world/climate.html#temperature">temperature</a> below 25°C and above -5°C, and <a href="../the_world/climate.html#rainfall">rainfall</a> between 130 and 400mm.</p>
+<h5>Rabbit</h5>
+<p>The rabbit is known to chew on carrots and cabbage. They are ubiquitous in the world, changing their coat based on climate. They only need 15mm of <a href="../the_world/climate.html#rainfall">rainfall</a> to spawn.</p>
+<h5>Fox</h5>
+<p>The fox likes to eat the berries off of bushes. It can be found in forests with <a href="../the_world/climate.html#temperature">temperature</a> below 25°C, and <a href="../the_world/climate.html#rainfall">rainfall</a> between 130 and 400mm.</p>
+<p>The deer spawns at any <a href="../the_world/climate.html#temperature">temperature</a> below 25°C and above -15°C, and <a href="../the_world/climate.html#rainfall">rainfall</a> between 130 and 400mm.</p>
+<p>The moose spawns at any <a href="../the_world/climate.html#temperature">temperature</a> below 10°C and above -15°C, and <a href="../the_world/climate.html#rainfall">rainfall</a> between 150 and 300mm.</p>
+<p>The grouse spawns at any <a href="../the_world/climate.html#temperature">temperature</a> below 13°C and above -12°C, and <a href="../the_world/climate.html#rainfall">rainfall</a> between 150 and 400mm.</p>
+<p>The pheasant spawns in forests at any <a href="../the_world/climate.html#temperature">temperature</a> below 17°C and above -5°C, and <a href="../the_world/climate.html#rainfall">rainfall</a> between 100 and 300mm.</p>
+<p>The turkey spawns at any <a href="../the_world/climate.html#temperature">temperature</a> below 17°C and above 0°C, and <a href="../the_world/climate.html#rainfall">rainfall</a> between 250 and 450mm.</p>
+<hr><a class="anchor" id="aquatic"></a><h5>Aquatic Animals</h5>
+<p><span style="color:#3E8A00;">Aquatic Animals</span> are a broad category which covers a number of different behaviors. They may be <span style="color:#3E8A00;">Shore Dwellers</span>, <span style="color:#3E8A00;">Fish</span>, <span style="color:#3E8A00;">Shellfish</span>, or <span style="color:#3E8A00;">Large Aquatic Creatures</span></p>
+<p><span style="color:#3E8A00;">Shore Animals</span> only spawn on sea shores and spend some of their day swimming, and some walking on the beach. They are curious creatures, and will follow the player around, but cannot be tamed.</p>
+<h5>Penguin</h5>
+<p>The penguin spawns in only the coldest beaches, with <a href="../the_world/climate.html#temperature">temperature</a> of at most -14°C and <a href="../the_world/climate.html#rainfall">rainfall</a> of at least 75mm.</p>
+<h5>Sea Turtle</h5>
+<p>The sea turtle likes warm water. It spawns in <a href="../the_world/climate.html#temperature">temperature</a> of at least 21°C and <a href="../the_world/climate.html#rainfall">rainfall</a> of at least 250mm.</p>
+<h5>Fish</h5>
+<p><span style="color:#3E8A00;">Fish</span> are small creatures that swim in water. Most of them can be <a href="../mechanics/fishing.html">fished</a>. Some prefer oceans, rivers, or lakes.</p>
+<h5>Cod</h5>
+<p>Cod prefer colder oceans, <a href="../the_world/climate.html#temperature">temperature</a> at most 18°C. They can be fished.</p>
+<h5>Pufferfish</h5>
+<p>Pufferfish live in any ocean with at least a <a href="../the_world/climate.html#temperature">temperature</a> of 10°C.</p>
+<h5>Jellyfish</h5>
+<p>Jellyfish live in warmer oceans, with a <a href="../the_world/climate.html#temperature">temperature</a> of at least 18°C.</p>
+<h5>Tropical Fish</h5>
+<p>Tropical fish prefer warmer oceans, with a <a href="../the_world/climate.html#temperature">temperature</a> of at least 18°C.</p>
+<h5>Salmon</h5>
+<p>Salmon spawn in any river or lake with a <a href="../the_world/climate.html#temperature">temperature</a> of at least -5°C.</p>
+<h5>Bluegill</h5>
+<p>Bluegill spawn in any river or lake with a <a href="../the_world/climate.html#temperature">temperature</a> of at least -10°C and at most 26°C.</p>
+<a class="anchor" id="shellfish"></a><h5>Shellfish</h5>
+<p><span style="color:#3E8A00;">Shellfish</span> are small animals that live on the floor of bodies of water. They cannot be fished, but drop shells that can be eaten or made into <a href="../mechanics/flux.html">flux</a>. Shellfish can be <a href="../mechanics/fishing.html">bait</a> for fish.</p>
+<h5>Isopod</h5>
+<p>Isopods spawn in deeper sections of oceans of <a href="../the_world/climate.html#temperature">temperature</a> at most 14°C.</p>
+<h5>Lobster</h5>
+<p>Lobster spawn in any ocean that is at most of a <a href="../the_world/climate.html#temperature">temperature</a> of 21°C.</p>
+<h5>Crayfish</h5>
+<p>Crayfish are like lobster, but spawn in rivers and lakes. They need a <a href="../the_world/climate.html#temperature">temperature</a> of at least 5°C and a <a href="../the_world/climate.html#rainfall">rainfall</a> of at least 125mm.</p>
+<h5>Horseshoe Crab</h5>
+<p>Horseshoe crabs spawn in oceans of moderate climate, <a href="../the_world/climate.html#temperature">temperature</a> between 10 and 21°C and with a <a href="../the_world/climate.html#rainfall">rainfall</a> of at most 400mm.</p>
+<h5>Large Water Creatures</h5>
+<p><span style="color:#3E8A00;">Large Water Creatures</span> are larger animals that live in the bigger bodies of water. Some of them hunt fish. They drop <a href="../mechanics/lamps.html#tallow">blubber</a>, which can be made into lamp fuel.</p>
+<h5>Orca</h5>
+<p>Orca whales live in deep oceans with <a href="../the_world/climate.html#temperature">temperature</a> of at most 19°C and <a href="../the_world/climate.html#rainfall">rainfall</a> of at least 100mm.</p>
+<h5>Dolphin</h5>
+<p>Dolphins live in deep oceans with <a href="../the_world/climate.html#temperature">temperature</a> of at least 10°C and <a href="../the_world/climate.html#rainfall">rainfall</a> of at least 200mm.</p>
+<h5>Manatee</h5>
+<p>Manatees live in any warm lake, with <a href="../the_world/climate.html#temperature">temperature</a> of at least 20°C and <a href="../the_world/climate.html#rainfall">rainfall</a> of at most 300mm.</p>
+<h5>Squid</h5>
+<p>Squid can spawn in any deep ocean. They drop <span style="color:#3E8A00;">Ink Sacs</span>, and ink any player that gets too close. Some say that squids in deep, unexplored caves have strange properties.</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

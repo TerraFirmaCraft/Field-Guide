@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'pt_br';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portuguese (Brazil)</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/getting_started\food_and_water.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\food_and_water.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\food_and_water.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\food_and_water.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\food_and_water.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\food_and_water.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\food_and_water.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\food_and_water.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">O mundo</a></li>
+<li><a class="text-muted" href="../getting_started/">Começando</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./introduction.html">Introdução</a></li>
+<li><a class="text-muted" href="./firepit.html">Pits de fogo</a></li>
+<li><a class="text-muted" href="./pottery.html">Cerâmica</a></li>
+<li><a class="text-muted" href="./pit_kiln.html">Fornos de poço</a></li>
+<li><a class="text-muted" href="./finding_ores.html">Minérios, metal e elenco</a></li>
+<li><a class="text-muted" href="./primitive_alloys.html">Ligas primitivas</a></li>
+<li><a class="text-muted" href="./primitive_anvils.html">Anvils primitivos</a></li>
+<li><a class="text-muted" href="./building_materials.html">Building Materials</a></li>
+<li><a class="text-muted" href="./a_place_to_sleep.html">Um lugar para dormir</a></li>
+<li><a class="text-muted" href="./size_and_weight.html">Tamanho e peso</a></li>
+<li><a class="text-muted" href="./food_and_water.html">Comida e água</a></li></ul></li>
+<li><a class="text-muted" href="../mechanics/">Mecânica avançada</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">Começando</a> / <a class="text-muted" href="#">Comida e água</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image7.png" alt="Comida e água" />
+            </span>
+            <h4>Comida e água</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>No Terrafirmacraft, não apenas você deve gerenciar sua fome, mas deve administrar sua sede. A fome funciona semelhante à baunilha. A maioria dos pedaços de comida restaura cerca de um quinto do seu bar de fome. Alguns pedaços de comida podem restaurar um pouco menos, como <span style="color:#3E8A00;">Cattail Roots</span>. Comer comida também restaura <span style="color:#3E8A00;">Saturação</span>, o que pode ser pensado como você está cheio.</p>
+<p>Alguns alimentos são muito recheados, então eles impedem você de perder a fome por mais tempo, enquanto alguns alimentos têm um efeito de curta duração.<br/>
+<br/>
+Você perderá a fome apenas de jogabilidade regular. A fome drena mais rápido se você fizer coisas como correr, nadar ou se tornar <a href="../getting_started/size_and_weight.html#overburdening">Sobrecarregada</a>. Informações sobre o <span style="color:#3E8A00;">Saturação</span>, <span style="color:#3E8A00;">Água</span>, assim como <span style="color:#3E8A00;">Nutrientes</span> Disponível em um alimento está disponível pairando sobre ele em seu inventário. Usando <span style="color:#b0b;">Shift</span> revela a dica de ferramenta completa.</p>
+<p>Todos os alimentos têm uma dica de ferramenta com essas informações. A dica de ferramenta inclui o <a href="../mechanics/decay.html">Data de decaimento</a> da comida, que pode ser estendida com preservação. Ao visualizar essas informações, é importante perceber que nem todos os alimentos têm valor nutricional. Por exemplo, <a href="../mechanics/bread.html">Massa</a> é um alimento, mas não possui nutrição, saturação ou valor da água. Comer não faria muito bem.</p>
+<p>Uma dica de ferramenta de alimentos pode parecer:<br/>
+<br/>
+<strong>Laranja</strong><br/>
+  <span style="color:#00AA00;"><strong>Expira em: 11:59 July 6, 1004 (em 1 mês (s) e 1 dia(s))</strong></span><br/>
+  <span style="color:#555555;">Nutrição:<br/>
+  - Saturação: 2%<br/>
+  - Água: 10%<br/>
+<span style="color:#55FF55;">  - Fruta: 0.5</span></span></p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image8.png" alt="tfc:textures/gui/book/gui/nutrition.png">
+<div style="text-align: center;"><p>A tela nutricional, com barras mostrando os níveis de cada nutriente.</p>
+</div><a class="anchor" id="nutrients"></a><h5>Nutrientes</h5>
+<p>Existem cinco nutrientes, todos obtidos com comida: <strong><span style="color:#55FF55;">Fruta</span></strong>, <strong><span style="color:#00AA00;">Vegetais</span></strong>, <strong><span style="color:#FF5555;">Proteína</span></strong>, <strong><span style="color:#FFAA00;">Grão</span></strong>, e <strong><span style="color:#AA00AA;">Laticínio</span></strong>. Ter uma grande quantidade de todos os nutrientes aumenta sua saúde máxima, enquanto uma má nutrição diminui. Comer comida oferece seus nutrientes. Refeições como <a href="../mechanics/pot.html#soup">Sopa</a> Combine mais nutrientes em uma refeição. Isso é importante, porque as refeições que você comeu há um tempo atrás não conta com sua nutrição.</p>
+<p><strong><span style="color:#55FF55;">Fruta</span></strong>: Nutrientes de frutas são encontrados principalmente de <a href="../the_world/wild_fruits.html">Plantas de frutificação</a>, como arbustos de baga e árvores frutíferas. Uma exceção notável a isso é <a href="../mechanics/crops.html#pumpkin">Abóboras</a> e <a href="../mechanics/crops.html#pumpkin">Melons</a>, quais nutricionalmente são frutas.<br/>
+<br/>
+<strong><span style="color:#00AA00;">Vegetais</span></strong>: Encontrado em quase todos <a href="../mechanics/crops.html">Cortar</a>.<br/>
+<br/>
+<strong><span style="color:#FF5555;">Proteína</span></strong>: A proteína pode ser obtida da carne de <a href="../the_world/wild_animals.html">Animais</a>. Também pode ser obtido de <a href="../mechanics/crops.html#soybean">Soybeans</a>, que possuem nutrientes de proteínas e vegetais.</p>
+<p><strong><span style="color:#FFAA00;">Grão</span></strong>: Grão é encontrado em culturas de grãos, como <a href="../mechanics/crops.html#barley">Cevada</a>. O processamento de grãos está no <a href="../mechanics/bread.html">Bread</a> página. <span style="color:#3E8A00;">Cattail</span> e <span style="color:#3E8A00;">Taro</span> Raízes também são grãos.<br/>
+<br/>
+<strong><span style="color:#AA00AA;">Laticínio</span></strong>: Tudo o laticínio vem de <span style="color:#3E8A00;">Leite</span>, que vem de <a href="../mechanics/animal_husbandry.html#dairy_animals">Animais lácteos</a>. Processando e bebendo leite é coberto no <a href="../mechanics/dairy.html">Laticínio</a> página.<br/>
+<br/>
+Toda a comida no mundo não é útil se apodrecer. Veja o <a href="../mechanics/decay.html">Preservação</a> página para obter informações sobre como prevenir isso.</p>
+<a class="anchor" id="thirst"></a><h5>Sede</h5>
+<p>A sede é o nível de água em seu corpo. Ele se esgota a um ritmo semelhante à fome. Em altas temperaturas ou níveis de alto uso de fome, sua sede vai se esgotar mais rapidamente. Felizmente, bebendo <span style="color:#3E8A00;">Água fresca</span> reabastecer a sede. Isso pode ser feito clicando <span style="color:#b0b;">Right Click</span> em um bloco de água. Beber água salgada faz com que você perca a sede e até tem a chance de lhe dar o <span style="color:#3E8A00;">Sede</span> efeito, que o drenará ainda mais.</p>
+<h5>Segurança da água</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Para evitar água salgada, procure rios, lagos e plantas de água doce como <span style="color:#3E8A00;">Cattails</span>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image9.png" alt="Recipe: tfc:clay_knapping/jug">
+<p><a href="../getting_started/pottery.html">Escassez</a> e disparando a <a href="../getting_started/pottery.html#jug">jug</a> é uma maneira de levar água com você. Preencha-o como um balde com <span style="color:#b0b;">Right Click</span>. Contenção <span style="color:#b0b;">Right Click</span> bebe a água.</p>
+<p>Esgotar alimentos ou água resulta completamente em movimentos e mineração lentos e começam a sofrer danos. Se você morrer, sua nutrição é redefinida.</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

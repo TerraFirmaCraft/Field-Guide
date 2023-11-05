@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>群峦传说 手册</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'zh_cn';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">群峦传说 手册</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">简体中文(中国大陆)</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/mechanics\charcoal_forge.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\charcoal_forge.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\charcoal_forge.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\charcoal_forge.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\charcoal_forge.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\charcoal_forge.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\charcoal_forge.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\charcoal_forge.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">主页</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">版本 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>目录</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">这个世界</a></li>
+<li><a class="text-muted" href="../getting_started/">新手入门</a></li>
+<li><a class="text-muted" href="../mechanics/">进阶内容</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./advanced_building_materials.html">高级建筑材料</a></li>
+<li><a class="text-muted" href="./animal_husbandry.html">畜牧业</a></li>
+<li><a class="text-muted" href="./anvils.html">砧</a></li>
+<li><a class="text-muted" href="./aqueducts.html">引水桥</a></li>
+<li><a class="text-muted" href="./armor.html">盔甲</a></li>
+<li><a class="text-muted" href="./barrels.html">大桶</a></li>
+<li><a class="text-muted" href="./bellows.html">风箱</a></li>
+<li><a class="text-muted" href="./blast_furnace.html">建造高炉</a></li>
+<li><a class="text-muted" href="./bloomery.html">锻铁炉</a></li>
+<li><a class="text-muted" href="./bread.html">烤面包</a></li>
+<li><a class="text-muted" href="./charcoal_forge.html">木炭炉</a></li>
+<li><a class="text-muted" href="./charcoal_pit.html">木炭坑</a></li>
+<li><a class="text-muted" href="./chisel.html">凿子</a></li>
+<li><a class="text-muted" href="./composter.html">Composter</a></li>
+<li><a class="text-muted" href="./crops.html">农作物</a></li>
+<li><a class="text-muted" href="./crucible.html">坩埚</a></li>
+<li><a class="text-muted" href="./dairy.html">乳制品</a></li>
+<li><a class="text-muted" href="./damage_types.html">伤害类型</a></li>
+<li><a class="text-muted" href="./decay.html">食物保鲜</a></li>
+<li><a class="text-muted" href="./fertilizers.html">堆肥</a></li>
+<li><a class="text-muted" href="./fire_clay.html">耐火粘土</a></li>
+<li><a class="text-muted" href="./fishing.html">钓鱼</a></li>
+<li><a class="text-muted" href="./flux.html">助焊剂</a></li>
+<li><a class="text-muted" href="./gems.html">宝石</a></li>
+<li><a class="text-muted" href="./grill.html">篝火烧烤</a></li>
+<li><a class="text-muted" href="./heating.html">加热</a></li>
+<li><a class="text-muted" href="./hydration.html">保持土壤湿润</a></li>
+<li><a class="text-muted" href="./lamps.html">灯</a></li>
+<li><a class="text-muted" href="./leather_making.html">制皮术</a></li>
+<li><a class="text-muted" href="./lighting.html">光源</a></li>
+<li><a class="text-muted" href="./minecarts.html">Minecarts</a></li>
+<li><a class="text-muted" href="./panning.html">淘金</a></li>
+<li><a class="text-muted" href="./papermaking.html">Papermaking</a></li>
+<li><a class="text-muted" href="./pets.html">宠物</a></li>
+<li><a class="text-muted" href="./pot.html">篝火大锅</a></li>
+<li><a class="text-muted" href="./powderkegs.html">火药桶</a></li>
+<li><a class="text-muted" href="./prospecting.html">勘探</a></li>
+<li><a class="text-muted" href="./quern.html">手推磨</a></li>
+<li><a class="text-muted" href="./salad.html">沙拉</a></li>
+<li><a class="text-muted" href="./sandwiches.html">三明治</a></li>
+<li><a class="text-muted" href="./scribing_table.html">命名台</a></li>
+<li><a class="text-muted" href="./sluices.html">洗矿槽</a></li>
+<li><a class="text-muted" href="./steel.html">炼钢</a></li>
+<li><a class="text-muted" href="./support_beams.html">支撑梁</a></li>
+<li><a class="text-muted" href="./weaving.html">札札弄机杼</a></li>
+<li><a class="text-muted" href="./wooden_buckets.html">木桶</a></li></ul></li>
+<li><a class="text-muted" href="../firmalife/">(Addon) Firmalife扩展模组</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">进阶内容</a> / <a class="text-muted" href="#">木炭炉</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image50.png" alt="木炭炉" />
+            </span>
+            <h4>木炭炉</h4>
+        </div>
+        </h4>
+                <hr>
+                <p><span style="color:#3E8A00;">木炭炉</span>是一种用于<a href="../mechanics/heating.html">加热</a>和熔化物品的设备。<a href="../mechanics/crucible.html">坩埚</a>也必须配合炉才能使用。木炭炉最大的作用是将物品加热到可以在<a href="../mechanics/anvils.html">砧</a>上锻造的温度。<br/>
+将 5 块<span style="color:#3E8A00;">石头</span>围绕一个 7 或 8 层的<a href="../mechanics/charcoal_pit.html#charcoal_pile">木炭堆</a>就能搭建成木炭炉了。</p>
+<h5>木炭炉</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构: <code>tfc:charcoal_forge</code></span></p>
+        </div>
+        <p>一个构建完成的木炭炉多方块结构，准备点燃。</p>
+<p>木炭炉只能在通风良好的地方正常工作。木炭炉方块的正上方必须是空气或一口<a href="../mechanics/crucible.html">坩埚</a>。另外，木炭炉方块或它周围两格十字形的区域内（由右侧示意图中的蓝色染色玻璃标注）必须至少有一格<span style="color:#3E8A00;">露天</span>方块。<br/>
+<br/>
+可以在木炭炉正上方一格的相邻位置放置一个<a href="../mechanics/bellows.html">风箱</a>来提高木炭炉的最大温度。</p>
+<h5></h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p></p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image51.png" alt="tfc:textures/gui/book/gui/charcoal_forge.png">
+<div style="text-align: center;"><p>木炭炉界面</p>
+</div><p>木炭炉底部的五个空格用于放置燃料。木炭炉燃烧时会不时地消耗燃料。燃料可以是<span style="color:#3E8A00;">木炭</span>或其他自然<a href="../the_world/ores_and_minerals.html#bituminous_coal">煤炭</a>。上面的五个空格用于放置需要加热的物品。左侧的指示器显示了木炭炉当前的温度。右侧的空格可放置可容纳液态金属的容器，例如<span style="color:#3E8A00;">小缸</span>和<span style="color:#3E8A00;">模具</span>。在熔炉中熔化的物品将自动注入这些容器。</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

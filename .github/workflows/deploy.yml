@@ -36,7 +36,7 @@ jobs:
         path: 'tfc'
     - name: Build
       run: |
-        python src/main.py --tfc-dir tfc --out-dir build --root-dir "/Field-Guide" --use-mcmeta --use-addons --copy-existing-versions
+        python src/main.py --tfc-dir tfc --out-dir build --resource-pack-book --root-dir "Field-Guide" --use-mcmeta --use-addons --copy-existing-versions
         touch build/.nojekyll
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4
