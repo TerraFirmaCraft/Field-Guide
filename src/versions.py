@@ -8,8 +8,13 @@ class Addon(NamedTuple):
     mod_id: str  # Mod ID of the addon
     resource_path: str  # Directory path within the repository of a `resources` folder (where `data` and `assets` might be loaded from)
 
-    def book_dir(self) -> str:
-        return 'addons/%s-%s/%s/data/%s/patchouli_books/field_guide/' % (self.mod_id, self.version, self.resource_path, self.mod_id)
+    def book_dir(self, resource_pack: bool) -> str:
+        return 'addons/%s-%s/%s/%s/tfc/patchouli_books/field_guide/' % (
+            self.mod_id,
+            self.version,
+            self.resource_path,
+            ('assets' if resource_pack else 'data'),
+        )
 
 
 class OldVersion(NamedTuple):
@@ -35,15 +40,17 @@ class OldVersion(NamedTuple):
 # )
 
 
-VERSION = 'v3.0.0-beta'
+VERSION = 'v3.1.4-beta'
 MC_VERSION = '1.20.1'
 FORGE_VERSION = '47.1.3'
 LANGUAGES = ('en_us', 'ja_jp', 'pt_br', 'ko_kr', 'uk_ua', 'zh_cn', 'zh_hk', 'zh_tw')
 
-ADDONS = ()
+ADDONS = (
+    Addon('HyperDashPony', 'FirmaCiv', '0.1.10-alpha-1.20.1', 'firmaciv', 'src/main/resources'),
+)
 
 OLD_VERSIONS = (
-    OldVersion('18', '1.18.2 - 2.2.32', False),
+    OldVersion('18', '1.18.2 - v2.2.32', False),
 )
 
 TFC_VERSION = '%s - %s' % (MC_VERSION, VERSION)

@@ -130,7 +130,7 @@ def parse_book(context: Context, use_addons: bool):
     
     if use_addons:
         for addon in versions.ADDONS:
-            addon_dir = util.path_join(addon.book_dir(), context.lang, 'categories')
+            addon_dir = util.path_join(addon.book_dir(context.resource_pack), context.lang, 'categories')
             for category_file in util.walk(addon_dir):
                 parse_category(context, addon_dir, category_file, is_addon=True)
 
@@ -141,7 +141,7 @@ def parse_book(context: Context, use_addons: bool):
     
     if use_addons:
         for addon in versions.ADDONS:
-            addon_dir = util.path_join(addon.book_dir(), context.lang, 'entries')
+            addon_dir = util.path_join(addon.book_dir(context.resource_pack), context.lang, 'entries')
             for entry_file in util.walk(addon_dir):
                 parse_entry(context, addon_dir, entry_file)
 
@@ -254,8 +254,9 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
     elif page_type == 'patchouli:crafting':
         context.format_title(buffer, data)
         try:
-            crafting_recipe.format_crafting_recipe(context, buffer, data['recipe'])
-            context.recipes_passed += 1
+            if 'recipe' in data:
+                crafting_recipe.format_crafting_recipe(context, buffer, data['recipe'])
+                context.recipes_passed += 1
         except InternalError as e:
             e.prefix('Recipe: \'%s\'' % data['recipe']).warning(True)
 
