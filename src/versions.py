@@ -43,7 +43,7 @@ class OldVersion(NamedTuple):
 VERSION = 'v3.1.4-beta'
 MC_VERSION = '1.20.1'
 FORGE_VERSION = '47.1.3'
-LANGUAGES = ('en_us', 'ja_jp', 'pt_br', 'ko_kr', 'uk_ua', 'zh_cn', 'zh_hk', 'zh_tw')
+LANGUAGES = ('en_us', 'ja_jp', 'pt_br', 'ko_kr', 'uk_ua', 'zh_cn', 'zh_hk', 'zh_tw', 'ru_ru')
 
 ADDONS = (
     Addon('HyperDashPony', 'FirmaCiv', '0.1.10-alpha-1.20.1', 'firmaciv', 'src/main/resources'),
