@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'uk_ua';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Українська мова</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/getting_started\food_and_water.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\food_and_water.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\food_and_water.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\food_and_water.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\food_and_water.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\food_and_water.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\food_and_water.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\food_and_water.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">Світ</a></li>
+<li><a class="text-muted" href="../getting_started/">Починаємо</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./introduction.html">Вступ</a></li>
+<li><a class="text-muted" href="./firepit.html">Вогонь та багаття</a></li>
+<li><a class="text-muted" href="./pottery.html">Гончарство</a></li>
+<li><a class="text-muted" href="./pit_kiln.html">Ямна піч</a></li>
+<li><a class="text-muted" href="./finding_ores.html">Руда, метал, виливка</a></li>
+<li><a class="text-muted" href="./primitive_alloys.html">Примітивні сплави</a></li>
+<li><a class="text-muted" href="./primitive_anvils.html">Примітивне ковадло</a></li>
+<li><a class="text-muted" href="./building_materials.html">Будівельні матеріали</a></li>
+<li><a class="text-muted" href="./a_place_to_sleep.html">Місце для відпочинку</a></li>
+<li><a class="text-muted" href="./size_and_weight.html">Розмір та вага</a></li>
+<li><a class="text-muted" href="./food_and_water.html">Їжа та вода</a></li></ul></li>
+<li><a class="text-muted" href="../mechanics/">Розширена механіка</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">Починаємо</a> / <a class="text-muted" href="#">Їжа та вода</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image7.png" alt="Їжа та вода" />
+            </span>
+            <h4>Їжа та вода</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>У TerraFirmaCraft, ти повинен контролювати не лише свій голод, але й свою спрагу. Голод діє згідно ванільному. Більшість шматочків їжі відновлюють приблизно п’яту частину голоду. Деякі шматки їжі можуть відновлювати трохи менше, наприклад <span style="color:#3E8A00;">коріння рогозу</span>. Вживання їжі відновлює шкалу <span style="color:#3E8A00;">насичення</span>, що вказує наскільки ти ситий, або голодний.</p>
+<p>Деякі продукти дуже ситні, тому ти довше не відчуватимеш голоду, тоді як деякі продукти мають короткочасний ефект.<br/>
+<br/>
+Шкала насичення зменшується швидше коли ти бігаєш, плаваєш та <a href="../getting_started/size_and_weight.html#overburdening">перевантажуєшся</a>. Тобто швидше спалюєш калорії. Інформацію про <span style="color:#3E8A00;">насичення</span>, <span style="color:#3E8A00;">вміст води</span>, та <span style="color:#3E8A00;">поживні речовини</span>, що містить їжа, можна побачити, навівши на неї курсор у своєму інвентарі. Використання <span style="color:#b0b;">Shift</span> надасть повну підказку.</p>
+<p>Усі продукти мають спливаючу підказку з цією інформацією. Спливаюча підказка містить <a href="../mechanics/decay.html">термін придатності</a> їжі, що можна подовжити консервуванням. Переглядаючи цю інформацію важливо розуміти, що не всі продукти мають поживну цінність. Наприклад, <a href="../mechanics/bread.html">тісто</a>. Воно не має поживної цінності, насиченості та води. Його вживання нічого тобі не дасть.</p>
+<p>Підказка про їжу може мати такий вигляд:<br/>
+<br/>
+<strong>Апельсин</strong><br/>
+  <span style="color:#00AA00;"><strong>Вжити до: 11:59 6 липня, 1004 (через 1 місяць(і/ів) та 1 день(дні/днів))</strong></span><br/>
+  <span style="color:#555555;">Поживність:<br/>
+  - Насиченість: 2%<br/>
+  - Вода: 10%<br/>
+<span style="color:#55FF55;">  - Фрукти: 0.5</span></span></p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image8.png" alt="tfc:textures/gui/book/gui/nutrition.png">
+<div style="text-align: center;"><p>Екран поживних речовин із покажчиками рівнів всього раціону</p>
+</div><a class="anchor" id="nutrients"></a><h5>Раціон</h5>
+<p>Є п'ять поживних речовин, що можуть бути отримані з їжі: <strong><span style="color:#55FF55;">фрукти</span></strong>, <strong><span style="color:#00AA00;">овочі</span></strong>, <strong><span style="color:#FF5555;">білок</span></strong>, <strong><span style="color:#FFAA00;">зернові</span></strong>, та <strong><span style="color:#AA00AA;">молочні</span></strong> продукти. Наявність певної кількості всіх поживних речовин підвищує твоє максимальне здоров’я. Споживання їжі дає тобі її поживні речовини. Такі страви, як <a href="../mechanics/pot.html#soup">суп</a>, поєднують більше речовин в один прийом їжі. Це важливо, оскільки страви, які ти їв деякий час тому, не зараховуються до твого раціону.</p>
+<p><strong><span style="color:#55FF55;">Фрукти</span></strong>: Поживні речовини фруктів в основному містяться у <a href="../the_world/wild_fruits.html">фруктових плодах</a>, що ростуть на ягідних кущах, та фруктових деревах. Винятком є <a href="../mechanics/crops.html#pumpkin">гарбузи</a> та <a href="../mechanics/crops.html#pumpkin">кавуни</a>, що за поживністтю є фруктами.<br/>
+<br/>
+<strong><span style="color:#00AA00;">Овочі</span></strong>: Зустрічається майже в кожній <a href="../mechanics/crops.html">культурі</a>, що можна виростити у городі на грядках.<br/>
+<br/>
+<strong><span style="color:#FF5555;">Білки</span></strong>: Білок можна отримати з м'яса <a href="../the_world/wild_animals.html">тварин</a>. Ще він міститься у <a href="../mechanics/crops.html#soybean">соєвих бобах</a>. Вони містять і білок і речовини овоча.</p>
+<p><strong><span style="color:#FFAA00;">Зернові</span></strong>: містяться у зернових культурах, таких як <a href="../mechanics/crops.html#barley">ячмінь</a> чи <a href="../mechanics/crops.html#barley">жито</a>. Про переробку зерна читай <a href="../mechanics/bread.html">тут</a>. <span style="color:#3E8A00;">Рогіз</span> та <span style="color:#3E8A00;">таро</span> теж є зерновими.<br/>
+<br/>
+<strong><span style="color:#AA00AA;">Молочні</span></strong>: Усі молочні продукти походять з <span style="color:#3E8A00;">молока</span>, що можна отримати від  <a href="../mechanics/animal_husbandry.html#dairy_animals">молочних тварин</a>. Про переробку молока читати <a href="../mechanics/dairy.html">тут</a>.<br/>
+<br/>
+Вся їжа світу не корисна, якщо вона псується. Переглянь <a href="../mechanics/decay.html">цю</a> сторінку, щоб взнати про запобігання псуванню їжі.</p>
+<a class="anchor" id="thirst"></a><h5>Спрага</h5>
+<p>Спрага – це рівень води у твоєму тілі. Рівень спраги зменшується зі швидкістю, подібною до голоду. При високій температурі, або при сильному голоді, рівнь спраги зменшується швидше. На щастя, вживання <span style="color:#3E8A00;">прісної води</span> втамовує спрагу. Щоб пити воду, треба тримати <span style="color:#b0b;">Right Click</span> на блоці води. Запам'ятай, вживання солоної води може викликати ефект <span style="color:#3E8A00;">спраги</span>, що буде виснажувати тебе ще швидше.</p>
+<h5>Безпека на воді</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Щоб уникнути солоної води, шукай річки, озера та прісноводні рослини - <span style="color:#3E8A00;">рогіз</span>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image9.png" alt="Recipe: tfc:clay_knapping/jug">
+<p><a href="../getting_started/pottery.html">Виліпи</a> з глини, та випали собі  <a href="../getting_started/pottery.html#jug">глечик</a> - це можливість носити воду із собою. Наповни його, як відро, кліком <span style="color:#b0b;">Right Click</span>. Як утримувати <span style="color:#b0b;">Right Click</span> ти з нього питимеш.</p>
+<p>Повне виснаження або голод призводить до повільного руху та видобутку, а також отримання шкоди. Якщо ти помреш, твоє харчування перезавантажиться.</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

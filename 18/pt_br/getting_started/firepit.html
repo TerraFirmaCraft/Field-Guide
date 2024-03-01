@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'pt_br';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portuguese (Brazil)</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/getting_started\firepit.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\firepit.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\firepit.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\firepit.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\firepit.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\firepit.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\firepit.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\firepit.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">O mundo</a></li>
+<li><a class="text-muted" href="../getting_started/">Começando</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./introduction.html">Introdução</a></li>
+<li><a class="text-muted" href="./firepit.html">Pits de fogo</a></li>
+<li><a class="text-muted" href="./pottery.html">Cerâmica</a></li>
+<li><a class="text-muted" href="./pit_kiln.html">Fornos de poço</a></li>
+<li><a class="text-muted" href="./finding_ores.html">Minérios, metal e elenco</a></li>
+<li><a class="text-muted" href="./primitive_alloys.html">Ligas primitivas</a></li>
+<li><a class="text-muted" href="./primitive_anvils.html">Anvils primitivos</a></li>
+<li><a class="text-muted" href="./building_materials.html">Building Materials</a></li>
+<li><a class="text-muted" href="./a_place_to_sleep.html">Um lugar para dormir</a></li>
+<li><a class="text-muted" href="./size_and_weight.html">Tamanho e peso</a></li>
+<li><a class="text-muted" href="./food_and_water.html">Comida e água</a></li></ul></li>
+<li><a class="text-muted" href="../mechanics/">Mecânica avançada</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">Começando</a> / <a class="text-muted" href="#">Pits de fogo</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Fogueira">
+                <img src="..\..\_images\item17.png" alt="Pits de fogo" />
+            </span>
+            <h4>Pits de fogo</h4>
+        </div>
+        </h4>
+                <hr>
+                <a class="anchor" id="firestarter"></a><p><span style="color:#3E8A00;">Fogo</span> é um importante avanço tecnológico. Para criar incêndio, você precisará de um <span style="color:#3E8A00;">Acendedor</span>. Para usar, basta segurar <span style="color:#b0b;">Right Click</span> no chão. Depois de alguns momentos, fumaça e fogo serão criados. Pode levar algumas tentativas para acender com sucesso.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item16.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item16.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Acendedor" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item18.png" />
+                </div>
+            </div>
+        </div>
+        <p>A criação de um Acendedor pode ser feita com dois paus.</p>
+<h5>Fogueira</h5>
+<p>With a firestarter, it is now possible to make a <span style="color:#3E8A00;">Firepit</span>. In order to make one, you will need one <span style="color:#3E8A00;">log</span>, three <span style="color:#3E8A00;">sticks</span>, and optionally up to five pieces of <span style="color:#3E8A00;">kindling</span>. Kindling can be items such as paper products, straw, or pinecones, and will increase the chance of successfully creating a firepit by 10 percent per item used. Throw (<span style="color:#b0b;">Q</span>) all the items on the ground, on the same block. Then use the firestarter on the block with the items floating above it.</p>
+<h5></h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Se você tiver sucesso, uma fogueira será criada.</p>
+<p>O uso da fogueira agora abrirá a tela da fogueira. À esquerda estão quatro <span style="color:#3E8A00;">fuel</span> slots. Torros, turfa e feixes de pau podem ser usados como combustível de fogo, colocando-os no slot superior. O combustível será consumido a partir do slot BottomMest. Há um medidor que exibe a corrente <span style="color:#3E8A00;">Temperatura</span> do fogo e à direita um slot para itens serem <a href="../mechanics/heating.html">aquecida</a> in.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image6.png" alt="tfc:textures/gui/book/gui/firepit.png">
+<div style="text-align: center;"><p>A tela da Fogueira</p>
+</div>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item16.gif" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-toggle="tooltip" title="Tocha" class="crafting-recipe-item-tooltip"></span>
+                <p class="crafting-recipe-item-count">2</p>
+                <img class="recipe-item" src="..\..\_images\item19.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>Esquentando****</p>
+        </div>
+        <p>Muitos itens úteis podem ser feitos em uma fogueira aquecendo -os. Os paus podem ser aquecidos, onde eles produzirão dois <span style="color:#3E8A00;">Torches</span>. Observe que as tochas acabarão por queimar e precisam ser re-ilegais usando um <span style="color:#3E8A00;">Acendedor</span>, ou usando outro <span style="color:#3E8A00;">Tocha</span> neles.</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-toggle="tooltip" title="Raw Cod" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item20.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-toggle="tooltip" title="Cooked Cod" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item21.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>Quente****</p>
+        </div>
+        <p>A fogueira também é um bom dispositivo para <span style="color:#3E8A00;">cozinhar comida</span>. Todas as carnes e massas cruas podem ser cozidas em uma fogueira, que prolongará sua vida útil. (Mais sobre isso <a href="../mechanics/decay.html">aqui</a>)</p>
+<p>A fogueira pode ser extinta a qualquer momento usando um <span style="color:#3E8A00;">Shovel</span> nele.<br/>
+<br/>
+Uma fogueira também pode ter outros dispositivos adicionados a ele para estender sua funcionalidade. Usando um <span style="color:#3E8A00;">Grill de ferro forjado</span> converterá a fogueira em um <a href="../mechanics/grill.html">Grade</a>, e usando um <span style="color:#3E8A00;">Pote de cerâmica</span> converterá a fogueira em um <a href="../mechanics/pot.html">Panela</a>. Para remover qualquer um dos dispositivos, <span style="color:#b0b;">Right Click</span> enquanto aguarda <span style="color:#b0b;">Shift</span>. Cuidado para não tentar remover uma churrasqueira ou maconha!</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>A fogueira, with either a grill or pot added.</p>
+<p>Os combustíveis de fogo têm diferentes níveis de pureza. A adição de combustíveis impuros aos incêndios os torna mais esfumaçados. Se o fogo queimar muito, a fumaça começará a voar muito alto no ar. Os combustíveis mais puros são troncos, sendo o pinheiro o log menos puro. Combustíveis como pinhas e folhas caídas não são quentes o suficiente para cozinhar muito e são muito impuras.</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

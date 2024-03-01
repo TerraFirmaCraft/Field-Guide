@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'en_us';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/mechanics\crops.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\crops.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\crops.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\crops.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\crops.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\crops.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\crops.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\crops.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">The World</a></li>
+<li><a class="text-muted" href="../getting_started/">Getting Started</a></li>
+<li><a class="text-muted" href="../mechanics/">Advanced Mechanics</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./advanced_building_materials.html">Advanced Materials</a></li>
+<li><a class="text-muted" href="./animal_husbandry.html">Animal Husbandry</a></li>
+<li><a class="text-muted" href="./anvils.html">Anvils</a></li>
+<li><a class="text-muted" href="./aqueducts.html">Aqueducts</a></li>
+<li><a class="text-muted" href="./armor.html">Armor</a></li>
+<li><a class="text-muted" href="./barrels.html">Barrels</a></li>
+<li><a class="text-muted" href="./bellows.html">Bellows</a></li>
+<li><a class="text-muted" href="./blast_furnace.html">Blast Furnace</a></li>
+<li><a class="text-muted" href="./bloomery.html">Bloomery</a></li>
+<li><a class="text-muted" href="./bread.html">Bread</a></li>
+<li><a class="text-muted" href="./charcoal_forge.html">Charcoal Forge</a></li>
+<li><a class="text-muted" href="./charcoal_pit.html">Charcoal Pit</a></li>
+<li><a class="text-muted" href="./chisel.html">Chisel</a></li>
+<li><a class="text-muted" href="./composter.html">Composter</a></li>
+<li><a class="text-muted" href="./crops.html">Crops</a></li>
+<li><a class="text-muted" href="./crucible.html">Crucible</a></li>
+<li><a class="text-muted" href="./dairy.html">Dairy Products</a></li>
+<li><a class="text-muted" href="./damage_types.html">Damage Types</a></li>
+<li><a class="text-muted" href="./decay.html">Preservation</a></li>
+<li><a class="text-muted" href="./fertilizers.html">Fertilizers</a></li>
+<li><a class="text-muted" href="./fire_clay.html">Fire Clay</a></li>
+<li><a class="text-muted" href="./fishing.html">Fishing</a></li>
+<li><a class="text-muted" href="./flux.html">Flux</a></li>
+<li><a class="text-muted" href="./gems.html">Gems</a></li>
+<li><a class="text-muted" href="./grill.html">Firepit And Grill</a></li>
+<li><a class="text-muted" href="./heating.html">Heating</a></li>
+<li><a class="text-muted" href="./hydration.html">Keeping Hydrated</a></li>
+<li><a class="text-muted" href="./lamps.html">Lamps</a></li>
+<li><a class="text-muted" href="./leather_making.html">Leather Making</a></li>
+<li><a class="text-muted" href="./lighting.html">Light Sources</a></li>
+<li><a class="text-muted" href="./minecarts.html">Minecarts</a></li>
+<li><a class="text-muted" href="./panning.html">Panning</a></li>
+<li><a class="text-muted" href="./papermaking.html">Papermaking</a></li>
+<li><a class="text-muted" href="./pets.html">Pets</a></li>
+<li><a class="text-muted" href="./pot.html">Firepit And Pot</a></li>
+<li><a class="text-muted" href="./powderkegs.html">Powderkegs</a></li>
+<li><a class="text-muted" href="./prospecting.html">Prospecting</a></li>
+<li><a class="text-muted" href="./quern.html">Quern</a></li>
+<li><a class="text-muted" href="./salad.html">Salads</a></li>
+<li><a class="text-muted" href="./sandwiches.html">Sandwiches</a></li>
+<li><a class="text-muted" href="./scribing_table.html">Scribing Table</a></li>
+<li><a class="text-muted" href="./sluices.html">Sluices</a></li>
+<li><a class="text-muted" href="./steel.html">Steel</a></li>
+<li><a class="text-muted" href="./support_beams.html">Support Beams</a></li>
+<li><a class="text-muted" href="./weaving.html">Weaving</a></li>
+<li><a class="text-muted" href="./wooden_buckets.html">Wooden Buckets</a></li></ul></li>
+<li><a class="text-muted" href="../tfcgyres_orehints/">(Addon) Ore Hints and Spawning</a></li>
+<li><a class="text-muted" href="../waterflasks/">(Addon) Water Flasks</a></li>
+<li><a class="text-muted" href="../firmalife/">(Addon) Firmalife</a></li>
+<li><a class="text-muted" href="../firmaciv/">(Addon) Firma: Civilization</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">Advanced Mechanics</a> / <a class="text-muted" href="#">Crops</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image56.png" alt="Crops" />
+            </span>
+            <h4>Crops</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>Crops are a source of food and some other materials. While each crop is slightly different, crops all have some similar principles. In order to start growing crops, you will need some <span style="color:#3E8A00;">Seeds</span>, which can be obtained by searching for <a href="../the_world/wild_crops.html">Wild Crops</a> and breaking them.<br/>
+<br/>
+Once you have obtained seeds, you will also need a <span style="color:#3E8A00;">Hoe</span>. Seeds are also useful as <a href="../mechanics/fishing.html">bait</a>.</p>
+<p>In addition to finding wild crops, seeds can also be produced from existing crops. When a fully mature crop dies - either by weather, or leaving it to rot - it will go to seed, dropping more seeds that can be used to grow even more crops next season.</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image14.png" alt="Recipe: tfc:rock_knapping/hoe_head_sedimentary">
+<p>To get started, a <span style="color:#3E8A00;">Stone Hoe</span> can be <span style="color:#3E8A00;">knapped</span> as seen above.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="Stone Hoe Head" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item84.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item16.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Stone Hoe" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item83.png" />
+                </div>
+            </div>
+        </div>
+        <p>Once the hoe head is knapped, it can be crafted into a Hoe.<br/>
+<br/>
+Hoes function as in Vanilla, by right clicking dirt blocks to turn them into <span style="color:#3E8A00;">Farmland</span>. They can also be used to convert <span style="color:#3E8A00;">Rooted Dirt</span> into <span style="color:#3E8A00;">Dirt</span>.</p>
+<h5>Growing Crops</h5>
+<p>All crops need to be planted on farmland in order to grow. Some crops have additional requirements such as being waterlogged or requiring a stick to grow on.<br/>
+<br/>
+Crops do not need <span style="color:#3E8A00;">nutrients</span> to grow, but they certainly help. There are three nutrients: <span style="color:#55FFFF;">Nitrogen</span>, <span style="color:#FFAA00;">Phosphorous</span>, and <span style="color:#FF55FF;">Potassium</span>. Each crop has a favorite nutrient.</p>
+<p>Consuming its favorite nutrient causes a crop to grow faster, and improves the yield of the crop at harvest time. That means that crops that consumed more nutrients drop more food when broken! Consuming a nutrient also has the effect of replenishing the other nutrients around it a small amount.</p>
+<a class="anchor" id="barley"></a><h5>Barley</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Temperature</a></strong>: -8 - 26 °C<br/>
+<strong><a href="../mechanics/hydration.html">Hydration</a></strong>: 18 - 75 %<br/>
+<strong>Nutrient</strong>: Nitrogen<br/>
+<br/>
+Barley is a single block crop. Barley seeds can be planted on farmland and will produce <span style="color:#3E8A00;">Barley</span> and <span style="color:#3E8A00;">Barley Seeds</span> as a product.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block4.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="oat"></a><h5>Oat</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Temperature</a></strong>: 3 - 40 °C<br/>
+<strong><a href="../mechanics/hydration.html">Hydration</a></strong>: 35 - 100 %<br/>
+<strong>Nutrient</strong>: Phosphorus<br/>
+<br/>
+Oat is a single block crop. Oat seeds can be planted on farmland and will produce <span style="color:#3E8A00;">Oat</span> and <span style="color:#3E8A00;">Oat Seeds</span> as a product.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block5.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="rye"></a><h5>Rye</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Temperature</a></strong>: -11 - 30 °C<br/>
+<strong><a href="../mechanics/hydration.html">Hydration</a></strong>: 25 - 85 %<br/>
+<strong>Nutrient</strong>: Phosphorus<br/>
+<br/>
+Rye is a single block crop. Rye seeds can be planted on farmland and will produce <span style="color:#3E8A00;">Rye</span> and <span style="color:#3E8A00;">Rye Seeds</span> as a product.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block6.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="maize"></a><h5>Maize</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Temperature</a></strong>: 13 - 40 °C<br/>
+<strong><a href="../mechanics/hydration.html">Hydration</a></strong>: 75 - 100 %<br/>
+<strong>Nutrient</strong>: Phosphorus<br/>
+<br/>
+Maize is a two block tall crop. Maize seeds can be planted on farmland, will grow two blocks tall, and will produce <span style="color:#3E8A00;">Maize</span> and <span style="color:#3E8A00;">Maize Seeds</span> as a product.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p></p>
+<a class="anchor" id="wheat"></a><h5>Wheat</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Temperature</a></strong>: -4 - 35 °C<br/>
+<strong><a href="../mechanics/hydration.html">Hydration</a></strong>: 25 - 100 %<br/>
+<strong>Nutrient</strong>: Phosphorus<br/>
+<br/>
+Wheat is a single block crop. Wheat seeds can be planted on farmland and will produce <span style="color:#3E8A00;">Wheat</span> and <span style="color:#3E8A00;">Wheat Seeds</span> as a product.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block7.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="rice"></a><h5>Rice</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Temperature</a></strong>: 15 - 30 °C<br/>
+<strong><a href="../mechanics/hydration.html">Hydration</a></strong>: 25 - 100 %<br/>
+<strong>Nutrient</strong>: Phosphorus<br/>
+<br/>
+Rice is a single block crop. Rice must be grown underwater - it must be planted on farmland, in freshwater that is a single block deep. It will produce <span style="color:#3E8A00;">Rice</span> and <span style="color:#3E8A00;">Rice Seeds</span> as a product.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block8.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>Note: in order to grow, the rice block must be <span style="color:#3E8A00;">Waterlogged</span>.</p>
+</div><a class="anchor" id="beet"></a><h5>Beet</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Temperature</a></strong>: -5 - 20 °C<br/>
+<strong><a href="../mechanics/hydration.html">Hydration</a></strong>: 18 - 85 %<br/>
+<strong>Nutrient</strong>: Potassium<br/>
+<br/>
+Beets are a a single block crop. Beet seeds can be planted on farmland and will produce <span style="color:#3E8A00;">Beet</span> and <span style="color:#3E8A00;">Beet Seeds</span> as a product.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block9.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="cabbage"></a><h5>Cabbage</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Temperature</a></strong>: -10 - 27 °C<br/>
+<strong><a href="../mechanics/hydration.html">Hydration</a></strong>: 15 - 65 %<br/>
+<strong>Nutrient</strong>: Nitrogen<br/>
+<br/>
+Cabbage is a single block crop. Cabbage seeds can be planted on farmland and will produce <span style="color:#3E8A00;">Cabbage</span> and <span style="color:#3E8A00;">Cabbage Seeds</span> as a product.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block10.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="carrot"></a><h5>Carrot</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Temperature</a></strong>: 3 - 30 °C<br/>
+<strong><a href="../mechanics/hydration.html">Hydration</a></strong>: 25 - 100 %<br/>
+<strong>Nutrient</strong>: Potassium<br/>
+<br/>
+Carrot is a single block crop. Carrot seeds can be planted on farmland and will produce <span style="color:#3E8A00;">Carrot</span> and <span style="color:#3E8A00;">Carrot Seeds</span> as a product.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block11.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="garlic"></a><h5>Garlic</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Temperature</a></strong>: -20 - 18 °C<br/>
+<strong><a href="../mechanics/hydration.html">Hydration</a></strong>: 15 - 75 %<br/>
+<strong>Nutrient</strong>: Nitrogen<br/>
+<br/>
+Garlic is a single block crop. Garlic seeds can be planted on farmland and will produce <span style="color:#3E8A00;">Garlic</span> and <span style="color:#3E8A00;">Garlic Seeds</span> as a product.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block12.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="green_bean"></a><h5>Green Beans</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Temperature</a></strong>: 2 - 35 °C<br/>
+<strong><a href="../mechanics/hydration.html">Hydration</a></strong>: 38 - 100 %<br/>
+<strong>Nutrient</strong>: Nitrogen<br/>
+<br/>
+Green Beans is a climbing two block tall crop. Green Bean seeds can be planted on farmland, will grow two blocks tall if a stick is present, and will produce <span style="color:#3E8A00;">Green Beans</span> and <span style="color:#3E8A00;">Green Bean Seeds</span> as a product.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>The stick is required in order for the crop to fully grow.</p>
+<a class="anchor" id="potato"></a><h5>Potatoes</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Temperature</a></strong>: -1 - 37 °C<br/>
+<strong><a href="../mechanics/hydration.html">Hydration</a></strong>: 50 - 100 %<br/>
+<strong>Nutrient</strong>: Potassium<br/>
+<br/>
+Potatoes are a single block crop. Potato seeds can be planted on farmland and will produce <span style="color:#3E8A00;">Potatoes</span> and <span style="color:#3E8A00;">Potato Seeds</span> as a product.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block13.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="pumpkin"></a><h5>Pumpkins</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Temperature</a></strong>: 0 - 30 °C<br/>
+<strong><a href="../mechanics/hydration.html">Hydration</a></strong>: 30 - 80 %<br/>
+<strong>Nutrient</strong>: Phosphorus<br/>
+<br/>
+Pumpkins are a spreading crop. Pumpkin seeds can be planted on farmland and will place up to two <span style="color:#3E8A00;">Pumpkin Blocks</span> on the ground next to it while it is mature. If the pumpkin blocks are harvested, and the plant matures again, it can grow more pumpkins. Pumpkins can be made into <a href="../mechanics/lighting.html#jack_o_lanterns">Jack 'o Lanterns</a>.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p></p>
+<a class="anchor" id="melon"></a><h5>Melons</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Temperature</a></strong>: 5 - 37 °C<br/>
+<strong><a href="../mechanics/hydration.html">Hydration</a></strong>: 75 - 100 %<br/>
+<strong>Nutrient</strong>: Phosphorus<br/>
+<br/>
+Melons are a spreading crop. Melon seeds can be planted on farmland and will place up to two <span style="color:#3E8A00;">Melon Blocks</span> on the ground next to it while it is mature. If the melon blocks are harvested, and the plant matures again, it can grow more melon.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p></p>
+<a class="anchor" id="onion"></a><h5>Onions</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Temperature</a></strong>: 0 - 30 °C<br/>
+<strong><a href="../mechanics/hydration.html">Hydration</a></strong>: 25 - 90 %<br/>
+<strong>Nutrient</strong>: Nitrogen<br/>
+<br/>
+Onions are a single block crop. Onion seeds can be planted on farmland and will produce <span style="color:#3E8A00;">Onions</span> and <span style="color:#3E8A00;">Onion Seeds</span> as a product.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block14.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="soybean"></a><h5>Soybean</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Temperature</a></strong>: 8 - 30 °C<br/>
+<strong><a href="../mechanics/hydration.html">Hydration</a></strong>: 40 - 100 %<br/>
+<strong>Nutrient</strong>: Nitrogen<br/>
+<br/>
+Soybean is a single block crop. Soybean seeds can be planted on farmland and will produce <span style="color:#3E8A00;">Soybean</span> and <span style="color:#3E8A00;">Soybean Seeds</span> as a product.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block15.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="squash"></a><h5>Squash</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Temperature</a></strong>: 5 - 33 °C<br/>
+<strong><a href="../mechanics/hydration.html">Hydration</a></strong>: 23 - 95 %<br/>
+<strong>Nutrient</strong>: Potassium<br/>
+<br/>
+Squash is a single block crop. Squash seeds can be planted on farmland and will produce <span style="color:#3E8A00;">Squash</span> and <span style="color:#3E8A00;">Squash Seeds</span> as a product.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block16.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="sugarcane"></a><h5>Sugarcane</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Temperature</a></strong>: 12 - 38 °C<br/>
+<strong><a href="../mechanics/hydration.html">Hydration</a></strong>: 40 - 100 %<br/>
+<strong>Nutrient</strong>: Potassium<br/>
+<br/>
+Sugarcane is a two block tall crop. Sugarcane seeds can be planted on farmland, will grow two blocks tall, and will produce <span style="color:#3E8A00;">Sugarcane</span> and <span style="color:#3E8A00;">Sugarcane Seeds</span> as a product. Sugarcane can be used to make <span style="color:#3E8A00;">Sugar</span>.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p></p>
+<a class="anchor" id="tomatoes"></a><h5>Tomatoes</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Temperature</a></strong>: 0 - 36 °C<br/>
+<strong><a href="../mechanics/hydration.html">Hydration</a></strong>: 30 - 95 %<br/>
+<strong>Nutrient</strong>: Potassium<br/>
+<br/>
+Tomatoes are a climbing two block tall crop. Tomato seeds can be planted on farmland, will grow two blocks tall if a stick is present, and will produce <span style="color:#3E8A00;">Tomatoes</span> and <span style="color:#3E8A00;">Tomato Seeds</span> as a product.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>The stick is required in order for the crop to fully grow.</p>
+<a class="anchor" id="jute"></a><h5>Jute</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Temperature</a></strong>: 5 - 37 °C<br/>
+<strong><a href="../mechanics/hydration.html">Hydration</a></strong>: 25 - 100 %<br/>
+<strong>Nutrient</strong>: Potassium<br/>
+<br/>
+Jute is a two block tall crop. Jute seeds can be planted on farmland, will grow two blocks tall, and will produce <span style="color:#3E8A00;">Jute</span> and <span style="color:#3E8A00;">Jute Seeds</span> as a product.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p></p>
+<a class="anchor" id="papyrus"></a><h5>Papyrus</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Temperature</a></strong>: 19 - 37 °C<br/>
+<strong><a href="../mechanics/hydration.html">Hydration</a></strong>: 70 - 100 %<br/>
+<strong>Nutrient</strong>: Potassium<br/>
+<br/>
+Papyrus is a two block tall crop. Papyrus seeds can be planted on farmland, will grow two blocks tall, and will produce <a href="../mechanics/papermaking.html">Papyrus</a> and <span style="color:#3E8A00;">Papyrus Seeds</span> as a product.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p></p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

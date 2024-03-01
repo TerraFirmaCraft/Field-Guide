@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft 도감</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'ko_kr';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft 도감</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">한국어</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/the_world/" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world/" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world/" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world/" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world/" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world/" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world/" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world/" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">색인</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API 뮨서</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">버전 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>목차</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">세계</a></li><ul class="list-unstyled push-right"><li><a class="text-muted" href="./biomes.html">생물군계</a></li>
+<li><a class="text-muted" href="./waterways.html">강이 흐르는 곳에서</a></li>
+<li><a class="text-muted" href="./geology.html">지질학</a></li>
+<li><a class="text-muted" href="./ores_and_minerals.html">광석과 광물</a></li>
+<li><a class="text-muted" href="./climate.html">달력과 기후</a></li>
+<li><a class="text-muted" href="./flora.html">식물</a></li>
+<li><a class="text-muted" href="./wild_crops.html">야생 작물</a></li>
+<li><a class="text-muted" href="./wild_fruits.html">야생 과일</a></li>
+<li><a class="text-muted" href="./wild_animals.html">야생동물</a></li></ul>
+<li><a class="text-muted" href="../getting_started/">시작하기</a></li>
+<li><a class="text-muted" href="../mechanics/">심화 기술</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="#">세계</a></em></p>
+            
+                <h4>세계</h4><p><p>당신을 둘러싸고 있는 자연의 세계에 대한 모든 것.</p>
+</p>
+                <hr>
+                <div class="card-columns">
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image92.png" alt="생물군계" />
+            </span>
+            <a href="biomes.html">생물군계</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image105.png" alt="강이 흐르는 곳에서" />
+            </span>
+            <a href="waterways.html">강이 흐르는 곳에서</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="셰일">
+                <img src="..\..\_images\item211.png" alt="지질학" />
+            </span>
+            <a href="geology.html">지질학</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="평범한 적철석">
+                <img src="..\..\_images\item212.png" alt="광석과 광물" />
+            </span>
+            <a href="ores_and_minerals.html">광석과 광물</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image102.png" alt="달력과 기후" />
+            </span>
+            <a href="climate.html">달력과 기후</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="미역취">
+                <img src="..\..\_images\item210.png" alt="식물" />
+            </span>
+            <a href="flora.html">식물</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image108.png" alt="야생 작물" />
+            </span>
+            <a href="wild_crops.html">야생 작물</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image109.png" alt="야생 과일" />
+            </span>
+            <a href="wild_fruits.html">야생 과일</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="중간 크기 생가죽">
+                <img src="..\..\_images\item1.png" alt="야생동물" />
+            </span>
+            <a href="wild_animals.html">야생동물</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+                </div>
+            
+        </div>
+    </div>
+</div>
+</body>
+</html>

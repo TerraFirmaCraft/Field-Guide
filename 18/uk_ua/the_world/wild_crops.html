@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'uk_ua';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Українська мова</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/the_world\wild_crops.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world\wild_crops.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world\wild_crops.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world\wild_crops.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world\wild_crops.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world\wild_crops.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world\wild_crops.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world\wild_crops.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">Світ</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./biomes.html">Біоми</a></li>
+<li><a class="text-muted" href="./waterways.html">Водойми</a></li>
+<li><a class="text-muted" href="./geology.html">Геологія</a></li>
+<li><a class="text-muted" href="./ores_and_minerals.html">Руди та мінерали</a></li>
+<li><a class="text-muted" href="./climate.html">Календар та клімат</a></li>
+<li><a class="text-muted" href="./flora.html">Флора</a></li>
+<li><a class="text-muted" href="./wild_crops.html">Дикі культури</a></li>
+<li><a class="text-muted" href="./wild_fruits.html">Дикоростучі фрукти</a></li>
+<li><a class="text-muted" href="./wild_animals.html">Дикі тварини</a></li></ul></li>
+<li><a class="text-muted" href="../getting_started/">Починаємо</a></li>
+<li><a class="text-muted" href="../mechanics/">Розширена механіка</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">Світ</a> / <a class="text-muted" href="#">Дикі культури</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image108.png" alt="Дикі культури" />
+            </span>
+            <h4>Дикі культури</h4>
+        </div>
+        </h4>
+                <hr>
+                <p><span style="color:#3E8A00;">Дикі культури</span> можна знайти по всьому світу. Вони з'являться невеликими ділянками. Їх можна збирати для їжі та насіння. Насіння можна пророщувати самостійно в своєму городі на грядках.<br/>
+<br/>
+Збирати врожай дикорослих культур можна як руками, так і за допомогою <span style="color:#3E8A00;">ножа</span> або іншим гострим інструментом. З них випадає <span style="color:#3E8A00;">насіння</span> та сам <span style="color:#3E8A00;">плід</span>.</p>
+<h5>Дика пшениця</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Приклад дикого врожаю, в даному випадку - <a href="../mechanics/crops.html#wheat">пшениця</a>.</p>
+<p>Існує багато різних видів дикорослих культур. Кожна культура, яку можна культивувати, має дикий варіант, що росте десь у світі. Переглянь список <a href="../mechanics/crops.html">культур</a>, що можна вирощувати. Дикі культури мають вигляд, подібний до своїх культивованих клонів, але вони більш приховані в траві. Дикі культури прив'язані до клімату, в якому можна культивувати саму рослину. Тому, якщо шукаєш конкретну культуру, шукай клімат, де її можна культивувати.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Всі дикі рослини, що культивуються</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

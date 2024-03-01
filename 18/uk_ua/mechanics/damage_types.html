@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'uk_ua';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Українська мова</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/mechanics\damage_types.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\damage_types.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\damage_types.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\damage_types.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\damage_types.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\damage_types.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\damage_types.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\damage_types.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">Світ</a></li>
+<li><a class="text-muted" href="../getting_started/">Починаємо</a></li>
+<li><a class="text-muted" href="../mechanics/">Розширена механіка</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./advanced_building_materials.html">Передові матеріали</a></li>
+<li><a class="text-muted" href="./animal_husbandry.html">Тваринництво</a></li>
+<li><a class="text-muted" href="./anvils.html">Ковадло</a></li>
+<li><a class="text-muted" href="./aqueducts.html">Акведук</a></li>
+<li><a class="text-muted" href="./armor.html">Броня (обладунки)</a></li>
+<li><a class="text-muted" href="./barrels.html">Діжки</a></li>
+<li><a class="text-muted" href="./bellows.html">Міхи</a></li>
+<li><a class="text-muted" href="./blast_furnace.html">Доменна піч</a></li>
+<li><a class="text-muted" href="./bloomery.html">Сиродутне горно</a></li>
+<li><a class="text-muted" href="./bread.html">Хліб</a></li>
+<li><a class="text-muted" href="./charcoal_forge.html">Ковальське горно</a></li>
+<li><a class="text-muted" href="./charcoal_pit.html">Вуглярка</a></li>
+<li><a class="text-muted" href="./chisel.html">Долото</a></li>
+<li><a class="text-muted" href="./composter.html">Компостер</a></li>
+<li><a class="text-muted" href="./crops.html">Городина</a></li>
+<li><a class="text-muted" href="./crucible.html">Тигель</a></li>
+<li><a class="text-muted" href="./dairy.html">Молочні продукти</a></li>
+<li><a class="text-muted" href="./damage_types.html">Види пошкоджень</a></li>
+<li><a class="text-muted" href="./decay.html">Консервація</a></li>
+<li><a class="text-muted" href="./fertilizers.html">Добрива</a></li>
+<li><a class="text-muted" href="./fire_clay.html">Вогнетривка глина</a></li>
+<li><a class="text-muted" href="./fishing.html">Рибальство</a></li>
+<li><a class="text-muted" href="./flux.html">Флюс</a></li>
+<li><a class="text-muted" href="./gems.html">Дорогоцінне каміння</a></li>
+<li><a class="text-muted" href="./grill.html">Багаття та гриль</a></li>
+<li><a class="text-muted" href="./heating.html">Нагрівання</a></li>
+<li><a class="text-muted" href="./hydration.html">Зрошування</a></li>
+<li><a class="text-muted" href="./lamps.html">Ліхтарі</a></li>
+<li><a class="text-muted" href="./leather_making.html">Обробка шкіри</a></li>
+<li><a class="text-muted" href="./lighting.html">Освітлення</a></li>
+<li><a class="text-muted" href="./minecarts.html">Вагонетка</a></li>
+<li><a class="text-muted" href="./panning.html">Промивання</a></li>
+<li><a class="text-muted" href="./papermaking.html">Виготовлення паперу</a></li>
+<li><a class="text-muted" href="./pets.html">Улюбленці</a></li>
+<li><a class="text-muted" href="./pot.html">Багаття та казан</a></li>
+<li><a class="text-muted" href="./powderkegs.html">Порохова бочка</a></li>
+<li><a class="text-muted" href="./prospecting.html">Геологорозвідка</a></li>
+<li><a class="text-muted" href="./quern.html">Млин</a></li>
+<li><a class="text-muted" href="./salad.html">Салати</a></li>
+<li><a class="text-muted" href="./sandwiches.html">Бутерброди</a></li>
+<li><a class="text-muted" href="./scribing_table.html">Стіл писаря</a></li>
+<li><a class="text-muted" href="./sluices.html">Мийний жолоб</a></li>
+<li><a class="text-muted" href="./steel.html">Сталь</a></li>
+<li><a class="text-muted" href="./support_beams.html">Опорні балки</a></li>
+<li><a class="text-muted" href="./weaving.html">Ткацтво</a></li>
+<li><a class="text-muted" href="./wooden_buckets.html">Дерев'яні відра</a></li></ul></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">Розширена механіка</a> / <a class="text-muted" href="#">Види пошкоджень</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Меч з червоної сталі">
+                <img src="..\..\_images\item87.png" alt="Види пошкоджень" />
+            </span>
+            <h4>Види пошкоджень</h4>
+        </div>
+        </h4>
+                <hr>
+                <p><span style="color:#3E8A00;">Типи фізичної шкоди</span> описують характер шкоди, яку можуть завдати гравці та моби. Є три типи: <span style="color:#3E8A00;">проколювання</span>, <span style="color:#3E8A00;">різання</span>, та <span style="color:#3E8A00;">дроблення</span>. Деякі сутності здатні протистояти певним типам пошкоджень, що ускладнює або робить неможливим вбити їх певними методами.</p>
+<h5>Проколювання</h5>
+<p><span style="color:#3E8A00;">Проколювання</span> можуть здійснити гострі види зброї, такі як <span style="color:#3E8A00;">ножі</span>, <span style="color:#3E8A00;">стріли</span> та <span style="color:#3E8A00;">списи</span>. <span style="color:#3E8A00;">Павуки</span>, та <a href="../the_world/flora.html#cacti">кактуси</a> теж шкодять проколюванням. <span style="color:#3E8A00;">Скелети</span> невразливі до цих пошкоджень, а <span style="color:#3E8A00;">зомбі</span> геть трішки проколюються.</p>
+<h5>Різання (рубання)</h5>
+<p><span style="color:#3E8A00;">Ріжучої</span> шкоди завдають такі види зброї, як <span style="color:#3E8A00;">сокира</span> та <span style="color:#3E8A00;">меч</span>. Також порізати можуть великі <a href="../the_world/wild_animals.html#predators">хижаки</a>, наприклад ведмеді, або пуми. <span style="color:#3E8A00;">Кріпер</span> вразливий до різання.</p>
+<h5>Дроблення</h5>
+<p>Шкоду <span style="color:#3E8A00;">дроблення</span> завдає тупа зброя, як от <span style="color:#3E8A00;">молот</span> та <span style="color:#3E8A00;">булава</span>. <span style="color:#3E8A00;">Зомбі</span> завдають нищівної шкоди, але ж вони мають стійкість до неї. <span style="color:#3E8A00;">Кріпер</span> теж має імунітет до дроблення. А от <span style="color:#3E8A00;">скелет</span> вразливий до нього.</p>
+<a class="anchor" id="armor"></a><p><a href="../mechanics/armor.html">Обладунки</a> мають власний набір стійкості до пошкоджень. Ці набори залежать від рівня матеріалу, з якого виготовлені, але можуть відрізнятися. Наприклад, бронзові. Обладунки з <span style="color:#3E8A00;">бісмутової бронзи</span> найкраще протистоять <span style="color:#3E8A00;">дробленню</span>, з <span style="color:#3E8A00;">чорної бронзи</span> - <span style="color:#3E8A00;">різанню</span>, а з <span style="color:#3E8A00;">олов'яної бронзи</span> рівномірно справляються з будь-якими пошкодженнями.</p>
+<p>Для обладунків з <span style="color:#3E8A00;">кольорової сталі</span> також є відмінності. <span style="color:#3E8A00;">Синя сталь</span> найкраще протистоїть <span style="color:#3E8A00;">дробленню</span>, а <span style="color:#3E8A00;">червона сталь</span> - <span style="color:#3E8A00;">проколюванню</span>.</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

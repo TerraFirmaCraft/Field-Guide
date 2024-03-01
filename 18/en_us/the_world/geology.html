@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'en_us';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/the_world\geology.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world\geology.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world\geology.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world\geology.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world\geology.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world\geology.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world\geology.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world\geology.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">The World</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./biomes.html">Biomes</a></li>
+<li><a class="text-muted" href="./waterways.html">Where the River Flows</a></li>
+<li><a class="text-muted" href="./geology.html">Geology</a></li>
+<li><a class="text-muted" href="./ores_and_minerals.html">Ores and Minerals</a></li>
+<li><a class="text-muted" href="./climate.html">Calendar and Climate</a></li>
+<li><a class="text-muted" href="./flora.html">Flora</a></li>
+<li><a class="text-muted" href="./wild_crops.html">Wild Crops</a></li>
+<li><a class="text-muted" href="./wild_fruits.html">Wild Fruits</a></li>
+<li><a class="text-muted" href="./wild_animals.html">Wild Animals</a></li></ul></li>
+<li><a class="text-muted" href="../getting_started/">Getting Started</a></li>
+<li><a class="text-muted" href="../mechanics/">Advanced Mechanics</a></li>
+<li><a class="text-muted" href="../tfcgyres_orehints/">(Addon) Ore Hints and Spawning</a></li>
+<li><a class="text-muted" href="../waterflasks/">(Addon) Water Flasks</a></li>
+<li><a class="text-muted" href="../firmalife/">(Addon) Firmalife</a></li>
+<li><a class="text-muted" href="../firmaciv/">(Addon) Firma: Civilization</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">The World</a> / <a class="text-muted" href="#">Geology</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Raw Shale">
+                <img src="..\..\_images\item211.png" alt="Geology" />
+            </span>
+            <h4>Geology</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>The world of TerraFirmaCraft is formed by the movement of <a href="https://en.wikipedia.org/wiki/Plate_tectonics">plate tectonics</a>, and some of that is still visible in the ground around you. By pressing <span style="color:#b0b;">E</span>, and clicking on the <span style="color:#3E8A00;">Climate</span> tab, the current tectonic area will be listed under <span style="color:#3E8A00;">Region</span>. There are several regions that will influence what kinds of biomes and features are present in the area.</p>
+<p>Below is a list of the different types of regions, and their primary features<br/>
+<br/>
+<strong>Oceanic</strong><br/>
+The tectonic plate under most oceans, mostly covered with normal and deep <a href="../the_world/biomes.html#ocean">Oceans</a>.<br/>
+<br/>
+<strong>Low Altitude Continental</strong><br/>
+One of three main continental areas. Low altitude biomes such as <a href="../the_world/biomes.html#lowlands">Lowlands</a>, <a href="../the_world/biomes.html#low_canyons">Low Canyons</a>, or <a href="../the_world/biomes.html#plains">Plains</a> are common.</p>
+<p><strong>Mid Altitude Continental</strong><br/>
+A mid elevation continental area, can contain many biomes and usually borders low or high altitude continental areas.<br/>
+<br/>
+<strong>High Altitude Continental</strong><br/>
+A high altitude area with <a href="../the_world/biomes.html#hills">Rolling Hills</a>, <a href="../the_world/biomes.html#plateau">Plateaus</a>, and <a href="../the_world/biomes.html#mountains">Old Mountains</a>.<br/>
+<br/>
+<strong>Mid-Ocean Ridge</strong><br/>
+A mid ocean ridge forms when two oceanic plates diverge away from each other.</p>
+<p>It can generate rare volcanism and some volcanic mountains.<br/>
+<br/>
+<strong>Oceanic Subduction</strong><br/>
+A subduction zone is where one plate slips under the other. In the ocean, this can form lots of volcanic mountains, island chains, and deep ocean ridges.<br/>
+<br/>
+<strong>Continental Subduction</strong><br/>
+A continental subduction zone is an area of frequent volcanic activity, and huge coastal mountains. Active hot springs and volcanoes are common.</p>
+<p><strong>Continental Rift</strong><br/>
+A continental rift is the site where two continents diverge, like <a href="https://en.wikipedia.org/wiki/Geology_of_Iceland">Iceland</a>. It is the location of <a href="../the_world/biomes.html#canyons">Canyons</a> biomes, and shorter less active volcanoes, along with some other high altitude biomes.<br/>
+<br/>
+<strong>Orogenic Belt</strong><br/>
+An <a href="https://en.wikipedia.org/wiki/Orogeny">Orogeny</a> is the site of major mountain building. It forms where two continental plates collide and produces tall <a href="../the_world/biomes.html#mountains">Mountains</a> and <a href="../the_world/biomes.html#plateau">Plateaus</a>.</p>
+<p><strong>Continental Shelf</strong><br/>
+Finally, a continental shelf is a section of shallow ocean off the coast of a continent. It is where coral reefs appear in warmer climates.</p>
+<h5>Rock Layers</h5>
+<p>The world is also divided up into different types of <span style="color:#3E8A00;">Rock</span>. Rock regions can be over a kilometer across, and there will usually be two or three different rock layers under your feet at all times. As different ores are found in different rock types, locating specific rock types can be very important for finding resources such as <a href="../the_world/ores_and_minerals.html">Ores</a>, which will often only appear in certain rock types.</p>
+<p>Rocks come in four categories: <span style="color:#3E8A00;">Sedimentary</span>, <span style="color:#3E8A00;">Metamorphic</span>, <span style="color:#3E8A00;">Igneous Extrusive</span>, and <span style="color:#3E8A00;">Igneous Intrusive</span>. These categories determine at what depth the different rock layers can be found. A listing of all the different rock types and what category they belong to can be found on the following pages.</p>
+<a class="anchor" id="sedimentary"></a><h5>Sedimentary</h5>
+<p><a href="https://en.wikipedia.org/wiki/Sedimentary_rock">Sedimentary</a> rocks are formed by the accumulation or deposition of mineral or organic particles. They can be found in <span style="color:#3E8A00;">mid to high altitude</span> rock layers. They are:<br/>
+</p>
+<ul>
+	<li>Shale</li>
+	<li>Claystone</li>
+	<li>Limestone</li>
+	<li>Conglomerate</li>
+	<li>Dolomite</li>
+	<li>Chert</li>
+	<li>Chalk</li>
+</ul>
+<a class="anchor" id="metamorphic"></a><h5>Metamorphic</h5>
+<p><a href="https://en.wikipedia.org/wiki/Metamorphic_rock">Metamorphic</a> rocks are created by a process called metamorphism. They can be found at <span style="color:#3E8A00;">any elevation</span>. They are:<br/>
+</p>
+<ul>
+	<li>Quartzite</li>
+	<li>Slate</li>
+	<li>Phyllite</li>
+	<li>Schist</li>
+	<li>Gneiss</li>
+	<li>Marble</li>
+</ul>
+<a class="anchor" id="igneous_extrusive"></a><h5>Igneous Extrusive</h5>
+<p><a href="https://en.wikipedia.org/wiki/Igneous_rock#Extrusive">Igneous Extrusive</a> rocks are formed from magma cooling on the Earth's surface. They can be found at <span style="color:#3E8A00;">mid to high altitude</span> rock layers. They are:<br/>
+</p>
+<ul>
+	<li>Rhyolite</li>
+	<li>Basalt</li>
+	<li>Andesite</li>
+	<li>Dacite</li>
+</ul>
+<a class="anchor" id="igneous_intrusive"></a><h5>Igneous Intrusive</h5>
+<p><a href="https://en.wikipedia.org/wiki/Igneous_rock#Intrusive">Igneous Intrusive</a> rocks are formed from magma which cooled under the Earth's crust. They can be found at <span style="color:#3E8A00;">mid to low altitude</span> rock layers. They are:<br/>
+</p>
+<ul>
+	<li>Granite</li>
+	<li>Diorite</li>
+	<li>Gabbro</li>
+</ul>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

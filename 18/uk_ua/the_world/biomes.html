@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'uk_ua';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Українська мова</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/the_world\biomes.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world\biomes.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world\biomes.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world\biomes.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world\biomes.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world\biomes.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world\biomes.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world\biomes.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">Світ</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./biomes.html">Біоми</a></li>
+<li><a class="text-muted" href="./waterways.html">Водойми</a></li>
+<li><a class="text-muted" href="./geology.html">Геологія</a></li>
+<li><a class="text-muted" href="./ores_and_minerals.html">Руди та мінерали</a></li>
+<li><a class="text-muted" href="./climate.html">Календар та клімат</a></li>
+<li><a class="text-muted" href="./flora.html">Флора</a></li>
+<li><a class="text-muted" href="./wild_crops.html">Дикі культури</a></li>
+<li><a class="text-muted" href="./wild_fruits.html">Дикоростучі фрукти</a></li>
+<li><a class="text-muted" href="./wild_animals.html">Дикі тварини</a></li></ul></li>
+<li><a class="text-muted" href="../getting_started/">Починаємо</a></li>
+<li><a class="text-muted" href="../mechanics/">Розширена механіка</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">Світ</a> / <a class="text-muted" href="#">Біоми</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image92.png" alt="Біоми" />
+            </span>
+            <h4>Біоми</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>Безмежний світ TFC складається з <span style="color:#3E8A00;">біомів</span>. Біоми визначають форму ландшафту, присутність певних гірських порід, та деякі інші особливості. Є кілька різних типів біомів для дослідження. Це океани, долини, рівнини, пагорби та гори, тощо. Біом не визначає клімат, а навпаки, клімат може вплинути на формування біома.</p>
+<p>Наступні кілька сторінок опишуть деякі біоми, які ти зустрінеш у світі. Усі біоми, що є у грі, автор не покаже. Хай буде тобі трохи ґрунту для цікавих досліджень. </p>
+<h5>Рівнини</h5>
+<p>Рівнини – це біом на низькій висоті, схожий на пагорби, але трохи вище рівня моря. Він пологий, може містити поля трав та квітів, або може бути лісовим.</p>
+<a class="anchor" id="plains"></a>
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image93.png" alt="tfc:textures/gui/book/biomes/plains.png">
+<div style="text-align: center;"><p>Рівнини</p>
+</div><a class="anchor" id="hills"></a><h5>Пагорби</h5>
+<p>Пагорби – це біом від низької до середньої висоти, який часто межує з рівнинами або високогірними регіонами. Тут можна зустріти великі валуни, рідко — порожні залишки вулканічних гарячих джерел.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image94.png" alt="tfc:textures/gui/book/biomes/rolling_hills_with_river.png">
+<div style="text-align: center;"><p>Хвилясті пагорби, між якими тече річка</p>
+</div><a class="anchor" id="badlands"></a><h5>Безплідні землі</h5>
+<p>Безплідні землі — це континентальний біом на середній висоті, який часто зустрічається поблизу височин, гір або пагорбів. Поширені гряди з прошарками піску та пісковику. Типи піску різняться, а степи можуть бути або червоно-коричневими, або жовто-білими, або десь посередині.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image95.png" alt="tfc:textures/gui/book/biomes/badlands.png">
+<div style="text-align: center;"><p>Безплідні землі</p>
+</div><a class="anchor" id="plateau"></a><h5>Височини</h5>
+<p>Височина — це високогірний континентальний біом. Він схожий на рівнини, але на більшій висоті є пологі трав'янисті ділянки. На височині часто розкидані валуни, а сухі або порожні гарячі джерела можна спостерігати тут час від часу.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image96.png" alt="tfc:textures/gui/book/biomes/plateau.png">
+<div style="text-align: center;"><p>Височина, по якій протікає глибока річка</p>
+</div><a class="anchor" id="mountains"></a><h5>Гори</h5>
+<p>У високогірних районах можна зустріти кілька типів гір. Старі гори нижчі та пологіші ніж молодші, що тягнуться у висоту крутими скелями. Гори, утворені в районах високої тектонічної активності, також можуть генерувати гарячі джерела та рідкісні вулкани.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image97.png" alt="tfc:textures/gui/book/biomes/old_mountains.png">
+<div style="text-align: center;"><p>Старі гори з гарячими джерелами на засніжених схилах</p>
+</div><a class="anchor" id="lowlands"></a><h5>Низовини</h5>
+<p>Протилежно до високих гір, низовина може виглядати як болотистий, заповнений водою біом. На рівні моря або нижче, з великою кількістю прісної води. Низовини можуть містити мул і багато рослинності.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image98.png" alt="tfc:textures/gui/book/biomes/lowlands.png">
+<div style="text-align: center;"><p>Низовини</p>
+</div><a class="anchor" id="low_canyons"></a><h5>Долини</h5>
+<p>Долина — ще один низький континентальний біом, який часто зустрічається на межі океанів або інших низьких біомів. Це помірно горбиста місцевість з частими звивистими ставками. Він схожий на геологічний щит. Тут можуть з'являтися порожні, недіючі гарячі джерела.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image99.png" alt="tfc:textures/gui/book/biomes/low_canyons.png">
+<div style="text-align: center;"><p>Долини</p>
+</div><a class="anchor" id="canyons"></a><h5>Каньйони</h5>
+<p>Подібно до <a href="../the_world/biomes.html#low_canyons">долин</a>, каньйони – це континентальний біом на середній висоті з помірними пагорбами та частими звивистими річками та озерами. Це дуже геологічно активна територія з частими малими і великими вулканами, валунами та діючими гарячими джерелами.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image100.png" alt="tfc:textures/gui/book/biomes/canyons.png">
+<div style="text-align: center;"><p>Каньйон з вулканом на обрії</p>
+</div><a class="anchor" id="ocean"></a><h5>Океани</h5>
+<p>Величезні океани TerraFirmaCraft відокремлюють континенти один від одного. Океани — це великі невиразні простори води, але під поверхнею можна знайти різні рослини, морських істот та водорості. У більш холодному кліматі океанами можуть плавати високі айсберги та морські крижини.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image101.png" alt="tfc:textures/gui/book/biomes/ocean.png">
+<div style="text-align: center;"><p>Океан, вигляд з узбережжя</p>
+</div>
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

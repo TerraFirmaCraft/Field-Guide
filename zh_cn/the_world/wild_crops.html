@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>群峦传说 手册</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'zh_cn';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">群峦传说 手册</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">简体中文(中国大陆)</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/the_world/wild_crops.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world/wild_crops.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world/wild_crops.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world/wild_crops.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world/wild_crops.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world/wild_crops.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world/wild_crops.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world/wild_crops.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">主页</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">版本 1.20.1 - v3.1.9</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>目录</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">这个世界</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./geology.html">地质学</a></li>
+<li><a class="text-muted" href="./ores_and_minerals.html">矿石和矿物</a></li>
+<li><a class="text-muted" href="./climate.html">历法和气候</a></li>
+<li><a class="text-muted" href="./flora.html">自然植物</a></li>
+<li><a class="text-muted" href="./wild_crops.html">野生作物</a></li>
+<li><a class="text-muted" href="./wild_fruits.html">野生水果</a></li>
+<li><a class="text-muted" href="./wild_animals.html">野生动物</a></li></ul></li>
+<li><a class="text-muted" href="../getting_started/">新手入门</a></li>
+<li><a class="text-muted" href="../mechanics/">进阶内容</a></li>
+<li><a class="text-muted" href="../firmalife/">(Addon) Firmalife扩展模组</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.20.1</a> / <a class="text-muted" href="./">这个世界</a> / <a class="text-muted" href="#">野生作物</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="../../_images/image64.png" alt="野生作物" />
+            </span>
+            <h4>野生作物</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>世界各地都能找到小团的<span style="color:#3E8A00;">野生作物</span>。<br/>
+<br/>
+用手就可以收获野生作物，当然<span style="color:#3E8A00;">刀</span>或其他锋利的工具也行。它们会掉落<span style="color:#3E8A00;">种子</span>和一些<span style="color:#3E8A00;">农产品</span>。再次种植这些种子就可以种出人工栽培版本的作物。</p>
+<h5>野生小麦</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>作为示例，这是<a href="../mechanics/crops.html#wheat">小麦</a>的野生版本。</p>
+<p>Every <a href="../mechanics/crops.html">crop</a> that can be cultivated can also be found in the wild. Wild crops will look similar to their cultivated counterparts, but are more hidden within the grass. Wild crops are only mature from June to October. Otherwise, they appear dead until the next Summer.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>所有野生作物的变种</p>
+<h5>Finding Wild Crops</h5>
+<p>Wild crops will spawn in climates near where the crop itself can be cultivated, so if looking for a specific crop, look in the climate where the crop can be cultivated. However, unlike <a href="../mechanics/crops.html">Crops</a> that the player has planted, wild crops do not require <a href="../mechanics/hydration.html">Hydration</a>. Instead, they are found in areas depending on the average Temperature and Rainfall.</p>
+<p>The next pages show a table of the environments where wild crops can be found.</p>
+<h5>Wild Crop Requirements</h5>
+<p></p>
+<figure class="table-figure"><table><thead><tr><th><p>Crop</p></th><th><p>Temperature (°C)</p></th><th><p>Rainfall (mm)</p></th></tr></thead><tbody><tr><td><p>Barley</p></td><td><p> -8 - 26</p></td><td><p> 70 - 310</p></td></tr><tr><td><p>Oat</p></td><td><p>  3 - 40</p></td><td><p>140 - 400</p></td></tr><tr><td><p>Rye</p></td><td><p>-11 - 30</p></td><td><p>100 - 350</p></td></tr><tr><td><p>Maize</p></td><td><p> 13 - 40</p></td><td><p>300 - 500</p></td></tr><tr><td><p>Wheat</p></td><td><p> -4 - 35</p></td><td><p>100 - 400</p></td></tr><tr><td><p>Rice</p></td><td><p> 15 - 30</p></td><td><p>100 - 500</p></td></tr><tr><td><p>Beet</p></td><td><p> -5 - 20</p></td><td><p> 70 - 300</p></td></tr><tr><td><p>Cabbage</p></td><td><p>-10 - 27</p></td><td><p> 60 - 280</p></td></tr><tr><td><p>Carrot</p></td><td><p>  3 - 30</p></td><td><p>100 - 400</p></td></tr><tr><td><p>Garlic</p></td><td><p>-20 - 18</p></td><td><p> 60 - 310</p></td></tr><tr><td><p>Green Bean</p></td><td><p>  2 - 35</p></td><td><p>150 - 410</p></td></tr><tr><td><p>Melon</p></td><td><p>  5 - 37</p></td><td><p>200 - 500</p></td></tr></tbody></table></figure><hr><h5>Wild Crop Requirements</h5>
+<p></p>
+<figure class="table-figure"><table><thead><tr><th><p>Crop</p></th><th><p>Temperature (°C)</p></th><th><p>Rainfall (mm)</p></th></tr></thead><tbody><tr><td><p>Potato</p></td><td><p> -1 - 37</p></td><td><p>200 - 410</p></td></tr><tr><td><p>Pumpkin</p></td><td><p>  0 - 30</p></td><td><p>120 - 390</p></td></tr><tr><td><p>Onion</p></td><td><p>  0 - 30</p></td><td><p>100 - 390</p></td></tr><tr><td><p>Soybean</p></td><td><p>  8 - 30</p></td><td><p>160 - 410</p></td></tr><tr><td><p>Squash</p></td><td><p>  5 - 33</p></td><td><p> 90 - 390</p></td></tr><tr><td><p>Sugarcane</p></td><td><p> 12 - 38</p></td><td><p>160 - 500</p></td></tr><tr><td><p>Tomato</p></td><td><p>  0 - 36</p></td><td><p>120 - 390</p></td></tr><tr><td><p>Jute</p></td><td><p>  5 - 37</p></td><td><p>100 - 410</p></td></tr><tr><td><p>Papyrus</p></td><td><p> 19 - 37</p></td><td><p>310 - 500</p></td></tr><tr><td><p>Red Bell Pepper</p></td><td><p> 16 - 30</p></td><td><p>190 - 400</p></td></tr><tr><td><p>Yellow Bell Pepper</p></td><td><p> 16 - 30</p></td><td><p>190 - 400</p></td></tr></tbody></table></figure><hr>
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

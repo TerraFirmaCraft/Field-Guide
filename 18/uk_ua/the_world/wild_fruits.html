@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'uk_ua';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Українська мова</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/the_world\wild_fruits.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world\wild_fruits.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world\wild_fruits.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world\wild_fruits.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world\wild_fruits.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world\wild_fruits.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world\wild_fruits.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world\wild_fruits.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">Світ</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./biomes.html">Біоми</a></li>
+<li><a class="text-muted" href="./waterways.html">Водойми</a></li>
+<li><a class="text-muted" href="./geology.html">Геологія</a></li>
+<li><a class="text-muted" href="./ores_and_minerals.html">Руди та мінерали</a></li>
+<li><a class="text-muted" href="./climate.html">Календар та клімат</a></li>
+<li><a class="text-muted" href="./flora.html">Флора</a></li>
+<li><a class="text-muted" href="./wild_crops.html">Дикі культури</a></li>
+<li><a class="text-muted" href="./wild_fruits.html">Дикоростучі фрукти</a></li>
+<li><a class="text-muted" href="./wild_animals.html">Дикі тварини</a></li></ul></li>
+<li><a class="text-muted" href="../getting_started/">Починаємо</a></li>
+<li><a class="text-muted" href="../mechanics/">Розширена механіка</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">Світ</a> / <a class="text-muted" href="#">Дикоростучі фрукти</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image109.png" alt="Дикоростучі фрукти" />
+            </span>
+            <h4>Дикоростучі фрукти</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>У світі росте багато різних сортів дикоростучіх фруктів. Їх можна збирати, щоб їсти, або вирощувати.  Плоди та ягоди можна знайти на трьох видах рослин: <a href="../the_world/wild_fruits.html#fruit_trees">фруктові дерева</a>, <a href="../the_world/wild_fruits.html#tall_bushes">високі</a> та <a href="../the_world/wild_fruits.html#small_bushes">низькі кущі</a>.<br/>
+<br/>
+Усі плодові рослини мають загальний життєвий цикл. Вони будуть рости, квітнути, давати плоди, а потім залишатися в стані спокою протягом річного циклу.</p>
+<p>Плодові рослини є сезонними. У холодну пору року ці рослини виглядатимуть сірими та млявими. Навесні вони стають зеленими і здоровими, готуються до плодоношення і ростуть. Точний час, коли це відбувається, залежить від плоду. Плодові рослини можуть загинути і від старості, і від невідповідних кліматичних умов.</p>
+<a class="anchor" id="fruit_trees"></a><h5>Фруктові дерева</h5>
+<p><span style="color:#3E8A00;">Фруктові дерева</span> виростають із крихітних саджанців у великі квітучі дерева. Гілки фруктових дерев — це їхнє серце, і вони будуть рости, поки існують сприятливі кліматичні умови. <span style="color:#3E8A00;">Листя</span> згодом виростає з гілок. Потім з'являються квіти і, нарешті плоди.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image110.png" alt="tfc:textures/gui/book/tutorial/fruit_tree.png">
+<div style="text-align: center;"><p>Звичайне фруктове дерево</p>
+</div><p>Плодове дерево починається з <span style="color:#3E8A00;">саджанця</span>. Саджанці почнуть рости, як тільки встановлено першу частину дерева, але згідно сезону. Розмір готового дерева приблизно визначається кількістю саджанців у вихідному блоці. Більше саджанців — більше дерево. <br/>
+До одного блоку можна додати більше саджанців <span style="color:#3E8A00;">щепленням</span>. Щоб з'єднати саджанці у одному блоці треба <span style="color:#b0b;">Right Click</span> на ньому, тримаючи саджанець та <span style="color:#3E8A00;">ніж</span> у руках.</p>
+<p>Щоб отримати саджанці фруктового дерева, зрубай <span style="color:#3E8A00;">сокирою</span> 'ліктьові' блоки (блоки гілок, які прикріплені до блоку з одного боку і зверху). Саджанці також можна розмістити на цих 'ліктях', якщо вони не надто високо в дереві. Це дозволяє на одному плодовому дереві вирощувати кілька різних плодів. Щоб зібрати плоди використовуй <span style="color:#b0b;">Right Click</span> по листю, коли плоди зрілі. Це дасть один плід і поверне рослину до стадії росту, поки вона не перейде в сплячку на зиму.</p>
+<a class="anchor" id="cherry"></a><h5>Вишня</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 5 - 25 °C<br/>
+<strong><a href="../mechanics/hydration.html">Опади</a></strong>: 100 - 350мм<br/>
+<br/>
+Вишневі дерева ростуть з січня по березень, починають цвісти в квітні-травні, а плодоносять у червні.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Вишневе дерево</p>
+<a class="anchor" id="green_apple"></a><h5>Яблуня зеленоплідна</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 1 - 25 °C<br/>
+<strong><a href="../mechanics/hydration.html">Опади</a></strong>: 110 - 280мм<br/>
+<br/>
+Зеленоплідні яблуні ростуть з березня по липень, цвітуть у серпні-вересні, плодоносять у жовтні.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Зеленоплідна яблуня</p>
+<a class="anchor" id="lemon"></a><h5>Лимон</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 10 - 30 °C<br/>
+<strong><a href="../mechanics/hydration.html">Опади</a></strong>: 180 - 470мм<br/>
+<br/>
+Лимонні дерева ростуть з лютого по травень, починають цвісти в червні-липні, плодоносять у серпні.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Лимонне дерево</p>
+<a class="anchor" id="olive"></a><h5>Оливкове дерево</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 5 - 30 °C<br/>
+<strong><a href="../mechanics/hydration.html">Опади</a></strong>: 150 - 500мм<br/>
+<br/>
+Оливкові дерева ростуть з березня по липень, починають цвісти в серпні-вересні, плодоносять у жовтні.<br/>
+<br/>
+Зрілі плоди можна використовувати для виробництва <a href="../mechanics/lamps.html#olives">оливкової олії</a>, що використовується як паливо для ламп.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Оливкове дерево</p>
+<a class="anchor" id="orange"></a><h5>Апельсин</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 15 - 36 °C<br/>
+<strong><a href="../mechanics/hydration.html">Опади</a></strong>: 250 - 500mm<br/>
+<br/>
+Апельсинові дерева ростуть з березня по червень, починають цвісти в липні-серпні, плодоносять у вересні.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Апельсинове дерево</p>
+<a class="anchor" id="peach"></a><h5>Персик</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 4 - 27 °C<br/>
+<strong><a href="../mechanics/hydration.html">Опади</a></strong>: 60 - 230мм<br/>
+<br/>
+Персикові дерева ростуть з грудня по березень, цвітуть у квітні-травні, плодоносять у червні.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Персикове дерево</p>
+<a class="anchor" id="plum"></a><h5>Слива</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 15 - 31 °C<br/>
+<strong><a href="../mechanics/hydration.html">Опади</a></strong>: 250 - 400мм<br/>
+<br/>
+Слива росте з січня по квітень, цвіте в травні-червні, плодоносить у липні.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Сливове дерево</p>
+<a class="anchor" id="red_apple"></a><h5>Яблуня червоноплідна</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 1 - 25 °C<br/>
+<strong><a href="../mechanics/hydration.html">Опади</a></strong>: 100 - 280мм<br/>
+<br/>
+Червоноплідні яблуні ростуть з березня по липень, починають цвісти в серпні-вересні, плодоносять у жовтні.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Червоноплідна яблуня</p>
+<a class="anchor" id="banana"></a><h5>Банан</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 17 - 35 °C<br/>
+<strong><a href="../mechanics/hydration.html">Опади</a></strong>: 280 - 500мм<br/>
+<br/>
+Банани - це особливий вид фруктів. Вони ростуть лише вертикально, у них немає листя, а плоди лише на самому верхньому блоці. Саджанці висаджують з квітучої частини рослини. Після збору плодів сама рослина гине і більше не дає плодів. Навесні її необхідно пересадити.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Банан</p>
+<a class="anchor" id="tall_bushes"></a><h5>Високі кущі</h5>
+<p><span style="color:#3E8A00;">Високі кущі</span> - це фруктові блоки, які здатні рости в усіх напрямках і поширюватися. Вони або ростуть вгору до трьох блоків, або розміщують <span style="color:#3E8A00;">пагони</span> з боків, які можуть вирости у новий кущ. Через деякий час кущі перестануть розростатися і досягнуть зрілості. Зрізання цих кущів гострим інструментом має шанс скинути новий кущ. Повністю дозрілі кущі завжди опадають самі.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image111.png" alt="tfc:textures/gui/book/tutorial/berry_bush.png">
+<div style="text-align: center;"><p>Високий дикий кущ</p>
+</div><p>Високі кущі здатні розростатися, коли їхнім пагонам є де прижитися. На практиці це означає, що для розміщення пагону потрібен міцний блок під ним. Забезпечення рівної відкритої ділянки, вільної від трави чи іншого сміття, дає їм найкращі шанси для росту.</p>
+<p>Кущі, на відміну від фруктових дерев, враховують навколишні водні блоки, щоб визначити <a href="../mechanics/hydration.html">вологість</a> блоку під собою. Фруктові ж дерева враховують лиш кількість опадів.<br/>
+Будь-який повний блок куща може формувати ягоди. Ягоди можна збирати, клацнувши <span style="color:#b0b;">Right Click</span>.</p>
+<a class="anchor" id="blackberry"></a><h5>Кущ ожини</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 7 - 24 °C<br/>
+<strong><a href="../mechanics/hydration.html">Опади</a></strong>: 24 - 100мм<br/>
+<br/>
+Кущі ожини ростуть з лютого по травень, починають цвісти в червні та липні, а плодоносять у серпні.<br/>
+<br/>
+Їх можна знайти в місцях з невеликою кількістю дерев.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Кущ ожини</p>
+<a class="anchor" id="raspberry"></a><h5>Кущ малини</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 5 - 25 °C<br/>
+<strong><a href="../mechanics/hydration.html">Опади</a></strong>: 24 - 100мм<br/>
+<br/>
+Кущі малини ростуть з квітня по липень, цвітуть у серпні-вересні, плодоносять у жовтні.<br/>
+<br/>
+Їх можна зустріти в місцях з невеликою кількістю дерев.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Кущ малини</p>
+<a class="anchor" id="blueberry"></a><h5>Кущ чорниці</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 7 - 29 °C<br/>
+<strong><a href="../mechanics/hydration.html">Опади</a></strong>: 12 - 100мм<br/>
+<br/>
+Кущі чорниці ростуть з лютого по травень, цвітуть у червні-липні, плодоносять у серпні.<br/>
+<br/>
+Їх можна зустріти в місцях з невеликою кількістю дерев.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Кущ чорниці</p>
+<a class="anchor" id="elderberry"></a><h5>Кущ бузини</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 10 - 33 °C<br/>
+<strong><a href="../mechanics/hydration.html">Опади</a></strong>: 12 - 100мм<br/>
+<br/>
+Кущі бузини ростуть з лютого по травень, цвітуть у червні-липні, плодоносять у серпні.<br/>
+<br/>
+Їх можна зустріти в місцях з невеликою кількістю дерев.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Кущ бузини</p>
+<a class="anchor" id="small_bushes"></a><h5>Малі кущі</h5>
+<p><span style="color:#3E8A00;">Малі кущі</span> є різновидом низьких фруктових блоків, які з'являються в лісах. Невеликі кущі час від часу поширюються на навколишні блоки, якщо поруч не надто багато інших кущів.<br/>
+<br/>
+Маленькі кущі пройдуть три стадії росту до появи ягід. Ягоди збирають просто, натисни на стиглій ягоді <span style="color:#b0b;">Right Click</span>.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Три різні розміри малих кущів</p>
+<a class="anchor" id="bunchberry"></a><h5>Кущ кизилу</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 15 - 35 °C<br/>
+<strong><a href="../mechanics/hydration.html">Вологість</a></strong>: 24 - 100 %<br/>
+<br/>
+Кущі кизилу ростуть з травня по липень, цвітуть у серпні-вересні, плодоносять у жовтні.<br/>
+<br/>
+Їх можна зустріти в лісах.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Помісячні стадії росту куща кизилу</p>
+<a class="anchor" id="gooseberry"></a><h5>Кущ аґрусу</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 5 - 27 °C<br/>
+<strong><a href="../mechanics/hydration.html">Вологість</a></strong>: 24 - 100 %<br/>
+<br/>
+Кущі аґрусу ростуть з квітня по липень, цвітуть у серпні-вересні, плодоносять у жовтні.<br/>
+<br/>
+Їх можна зустріти в лісах.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Помісячні стадії росту куща аґрусу</p>
+<a class="anchor" id="snowberry"></a><h5>Кущ сніжноягідника</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -7 - 18 °C<br/>
+<strong><a href="../mechanics/hydration.html">Вологість</a></strong>: 24 - 100 %<br/>
+<br/>
+Кущі сніжноягідника ростуть з березня по червень, цвітуть у липні-серпні, плодоносять у вересні.<br/>
+<br/>
+Їх можна зустріти в лісах.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Помісячні стадії росту куща сніжноягідника</p>
+<a class="anchor" id="cloudberry"></a><h5>Кущ морошки</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -2 - 17 °C<br/>
+<strong><a href="../mechanics/hydration.html">Вологість</a></strong>: 9 - 100 %<br/>
+<br/>
+Кущі морошки ростуть з лютого по травень, цвітуть у червні-серпні, плодоносять у вересні.<br/>
+<br/>
+Їх можна зустріти в лісах.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Помісячні стадії росту куща морошки</p>
+<a class="anchor" id="strawberry"></a><h5>Кущ полуниці</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 5 - 28 °C<br/>
+<strong><a href="../mechanics/hydration.html">Вологість</a></strong>: 12 - 100 %<br/>
+<br/>
+Кущі полуниці ростуть з жовтня по грудень, цвітуть у січні-лютому, плодоносять у березні.<br/>
+<br/>
+Їх можна зустріти в лісах.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Помісячні стадії росту куща полуниці</p>
+<a class="anchor" id="wintergreen_berry"></a><h5>Кущ брусниці</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -6 - 17 °C<br/>
+<strong><a href="../mechanics/hydration.html">Вологість</a></strong>: 12 - 100 %<br/>
+<br/>
+Кущі брусниці ростуть з травня по вересень, починають цвісти в жовтні-листопаді, плодоносять в грудні.<br/>
+<br/>
+Їх можна зустріти в лісах.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Помісячні стадії росту куща брусниці</p>
+<a class="anchor" id="cranberry"></a><h5>Кущ журавлини</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -5 - 17 °C<br/>
+<strong><a href="../mechanics/hydration.html">Вологість</a></strong>: 30 - 100 %<br/>
+<br/>
+Кущі журавлини ростуть з березня по червень, цвітуть у липні-серпні, плодоносять у вересні.<br/>
+<br/>
+Їх можна зустріти в лісах. На відміну від більшості маленьких кущів, журавлину вирощують під водою.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Помісячні стадії росту куща журавлини</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

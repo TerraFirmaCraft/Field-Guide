@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft 도감</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'ko_kr';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft 도감</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">한국어</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/the_world\wild_animals.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world\wild_animals.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world\wild_animals.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world\wild_animals.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world\wild_animals.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world\wild_animals.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world\wild_animals.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world\wild_animals.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">색인</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API 뮨서</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">버전 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>목차</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">세계</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./biomes.html">생물군계</a></li>
+<li><a class="text-muted" href="./waterways.html">강이 흐르는 곳에서</a></li>
+<li><a class="text-muted" href="./geology.html">지질학</a></li>
+<li><a class="text-muted" href="./ores_and_minerals.html">광석과 광물</a></li>
+<li><a class="text-muted" href="./climate.html">달력과 기후</a></li>
+<li><a class="text-muted" href="./flora.html">식물</a></li>
+<li><a class="text-muted" href="./wild_crops.html">야생 작물</a></li>
+<li><a class="text-muted" href="./wild_fruits.html">야생 과일</a></li>
+<li><a class="text-muted" href="./wild_animals.html">야생동물</a></li></ul></li>
+<li><a class="text-muted" href="../getting_started/">시작하기</a></li>
+<li><a class="text-muted" href="../mechanics/">심화 기술</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">세계</a> / <a class="text-muted" href="#">야생동물</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="중간 크기 생가죽">
+                <img src="..\..\_images\item1.png" alt="야생동물" />
+            </span>
+            <h4>야생동물</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>TerraFirmaCraft의 세상은 동물들로 가득합니다. 몇몇 동물들은 도움이 되지만, 다른 동물들은 매우 위험합니다. 이 단락은 야생동물에 관한 것입니다. 당신에게 도움을 줄 수 있는 생물과 동물들에 대해서는 <a href="../mechanics/animal_husbandry.html">축산업</a> 페이지를 확인하세요.</p>
+<p>동물들은 <a href="../the_world/wild_animals.html#predators">포식자</a>, <a href="../the_world/wild_animals.html#prey">피식자</a>, 그리고 <a href="../the_world/wild_animals.html#aquatic">수생 동물</a>들로 분류될 수 있습니다.<br/>
+<br/>
+다음 페이지에서는 각각의 동물 분류에 대해서 설명합니다.</p>
+<a class="anchor" id="predators"></a><h5>포식자</h5>
+<p><span style="color:#3E8A00;">포식자</span>는 플레이어를 공격할 수 있는 동물입니다. 그들은 밤에만 사냥하는 <span style="color:#3E8A00;">야행성</span>이거나, 낮에만 사냥하는 <span style="color:#3E8A00;">주행성</span>입니다. 포식자들은 최근에 먹잇감을 사냥했는지에 따라 중립적이거나 공격적입니다. 포식자들은 방어하는 자신의 영역이 있으므로 충분히 멀리 도망친다면 그들은 당신을 쫓는 대신 자신의 영역으로 돌아갈 것입니다.</p>
+<h5>북극곰</h5>
+<p>북극곰은 <a href="../the_world/climate.html#temperature">기온</a>이 10°C 이하이고, <a href="../the_world/climate.html#rainfall">강수량</a>이 100mm 이상인 가장 추운 지역에서만 생성됩니다.</p>
+<h5>회색곰</h5>
+<p>회색곰은 <a href="../the_world/climate.html#temperature">기온</a>이 -15°C 이상 15°C 이하이고, <a href="../the_world/climate.html#rainfall">강수량</a>이 200mm 이상인 온화한 기후를 가진 숲에서 생성됩니다.</p>
+<h5>흑곰</h5>
+<p>흑곰은 <a href="../the_world/climate.html#temperature">기온</a>이 5°C 이상 20°C 이하이고, <a href="../the_world/climate.html#rainfall">강수량</a>이 250mm 이상인 따뜻하고 습한 기후를 가진 숲에서 생성됩니다.</p>
+<h5>퓨마</h5>
+<p>퓨마는 <a href="../the_world/climate.html#temperature">기온</a>이 -10°C 이상 21°C 이하이고, <a href="../the_world/climate.html#rainfall">강수량</a>이 150mm 이상인 대부분의 온화한 기후를 선호합니다.</p>
+<h5>표범</h5>
+<p>표범은 <a href="../the_world/climate.html#temperature">기온</a>이 -10°C 이상 21°C 이하이고, <a href="../the_world/climate.html#rainfall">강수량</a>이 150mm 이상인 대부분의 온화한 기후를 선호합니다.</p>
+<h5>사자</h5>
+<p>사자는 <a href="../the_world/climate.html#temperature">기온</a>이 16°C 이상이고, <a href="../the_world/climate.html#rainfall">강수량</a>이 50mm 이상 300mm 이하인 평원에 생성됩니다.</p>
+<h5>검치호</h5>
+<p>검치호는 <a href="../the_world/climate.html#temperature">기온</a>이 0°C 이상이고, <a href="../the_world/climate.html#rainfall">강수량</a>이 250mm 이상인 곳에 생성됩니다.</p>
+<p>늑대는 <a href="../the_world/climate.html#temperature">기온</a>이 22°C 이하이고, <a href="../the_world/climate.html#rainfall">강수량</a>이 150mm 이상 420mm 이하인 곳에 생성됩니다. 늑대는 무리지어 사냥합니다. 늑대를 충분한 시간동안 길들이면 <a href="../mechanics/pets.html">개</a>가 됩니다.</p>
+<p>The direwolf spawns at any <a href="../the_world/climate.html#temperature">temperature</a> below freezing, and <a href="../the_world/climate.html#rainfall">rainfall</a> between 150 and 420mm. They hunt in packs. They are larger than regular wolves, and are not tamable.</p>
+<p>The ocelot attacks small animals. It spawns at any <a href="../the_world/climate.html#temperature">temperature</a> from 15 to 30°C, and <a href="../the_world/climate.html#rainfall">rainfall</a> between 300 and 500mm, in forests. Feeding an ocelot enough times will tame it into a <a href="../mechanics/pets.html">Cat</a>. Ocelots can eat raw fish</p>
+<hr><a class="anchor" id="prey"></a><h5>피식자</h5>
+<p><span style="color:#3E8A00;">피식자</span> 동물들은 플레이어와 포식자 동물들을 두려워합니다. 그들은 위험을 잘 피하지만, 반격하지는 못합니다. 일부 피식자 동물들은 농작물을 먹는 것을 좋아합니다.</p>
+<h5>Boar</h5>
+<p>The boar spawns in plains with <a href="../the_world/climate.html#temperature">temperature</a> below 25°C and above -5°C, and <a href="../the_world/climate.html#rainfall">rainfall</a> between 130 and 400mm.</p>
+<h5>Rabbit</h5>
+<p>The rabbit is known to chew on carrots and cabbage. They are ubiquitous in the world, changing their coat based on climate. They only need 15mm of <a href="../the_world/climate.html#rainfall">rainfall</a> to spawn.</p>
+<h5>Fox</h5>
+<p>The fox likes to eat the berries off of bushes. It can be found in forests with <a href="../the_world/climate.html#temperature">temperature</a> below 25°C, and <a href="../the_world/climate.html#rainfall">rainfall</a> between 130 and 400mm.</p>
+<p>The deer spawns at any <a href="../the_world/climate.html#temperature">temperature</a> below 25°C and above -15°C, and <a href="../the_world/climate.html#rainfall">rainfall</a> between 130 and 400mm.</p>
+<p>The moose spawns at any <a href="../the_world/climate.html#temperature">temperature</a> below 10°C and above -15°C, and <a href="../the_world/climate.html#rainfall">rainfall</a> between 150 and 300mm.</p>
+<p>The grouse spawns at any <a href="../the_world/climate.html#temperature">temperature</a> below 13°C and above -12°C, and <a href="../the_world/climate.html#rainfall">rainfall</a> between 150 and 400mm.</p>
+<p>The pheasant spawns in forests at any <a href="../the_world/climate.html#temperature">temperature</a> below 17°C and above -5°C, and <a href="../the_world/climate.html#rainfall">rainfall</a> between 100 and 300mm.</p>
+<p>The turkey spawns at any <a href="../the_world/climate.html#temperature">temperature</a> below 17°C and above 0°C, and <a href="../the_world/climate.html#rainfall">rainfall</a> between 250 and 450mm.</p>
+<hr><a class="anchor" id="aquatic"></a><h5>수생 동물</h5>
+<p><span style="color:#3E8A00;">수생 동물</span>들은 여러 다른 종류를 포함하는 넓은 분류입니다. 수생 동물에는 <span style="color:#3E8A00;">해안 생물</span>, <span style="color:#3E8A00;">물고기</span>, <span style="color:#3E8A00;">갑각류</span>, 또는 <span style="color:#3E8A00;">거대 해양 생물</span> 등이 있습니다.</p>
+<p><span style="color:#3E8A00;">해안 생물</span>은 해안에만 생성되며 낮에는 잠시 물에서 지내고, 다시 해안으로 돌아오기도 합니다. 해안 생물들은 호기심이 많아서 플레이어를 따라다니지만, 길들일 수는 없습니다.</p>
+<h5>펭귄</h5>
+<p>펭귄은 <a href="../the_world/climate.html#temperature">기온</a>이 -14°C 이하이고, <a href="../the_world/climate.html#rainfall">강수량</a>이 75mm 이상인 가장 추운 해변에만 생성됩니다.</p>
+<h5>바다거북</h5>
+<p>바다거북은 따뜻한 물을 좋아합니다. <a href="../the_world/climate.html#temperature">기온</a>이 21°C 이상이고, <a href="../the_world/climate.html#rainfall">강수량</a>이 250mm 이상인 지역에 생성됩니다.</p>
+<h5>물고기</h5>
+<p><span style="color:#3E8A00;">물고기</span>는 물에서 헤엄치는 작은 생물입니다. 대부분은 <a href="../mechanics/fishing.html">낚시</a>할 수 있습니다. 각각 바다, 강, 호수를 사는 종류가 있습니다.</p>
+<h5>대구</h5>
+<p>대구는 <a href="../the_world/climate.html#temperature">기온</a>이 18°C 이하인 추운 바다를 선호합니다. 낚시할 수 있습니다.</p>
+<h5>복어</h5>
+<p>복어는 <a href="../the_world/climate.html#temperature">기온</a>이 10°C 이상인 바다에 삽니다.</p>
+<h5>해파리</h5>
+<p>해파리는 <a href="../the_world/climate.html#temperature">기온</a>이 18°C 이상인 따뜻한 바다에 삽니다.</p>
+<h5>열대어</h5>
+<p>열대어는 <a href="../the_world/climate.html#temperature">기온</a>이 18°C 이상인 따뜻한 바다를 선호합니다.</p>
+<h5>연어</h5>
+<p>연어는 <a href="../the_world/climate.html#temperature">기온</a>이 -5°C 이상인 강이나 호수에서 생성됩니다.</p>
+<h5>블루길</h5>
+<p>블루길은 <a href="../the_world/climate.html#temperature">기온</a>이 -10°C 이상 26°C 이하인 강이나 호수에 생성됩니다.</p>
+<a class="anchor" id="shellfish"></a><h5>갑각류</h5>
+<p><span style="color:#3E8A00;">갑각류</span>는 물 속 바닥에 사는 동물들입니다. 낚시할 수는 없지만, 먹거나 <a href="../mechanics/flux.html">플럭스</a>를 만들 수 있는 껍데기를 떨어뜨립니다. 갑각류는 낚시용 <a href="../mechanics/fishing.html">미끼</a>가 될 수 있습니다.</p>
+<h5>등각류</h5>
+<p>등각류는 <a href="../the_world/climate.html#temperature">기온</a>이 14°C 이하인 깊은 바다에서 생성됩니다.</p>
+<h5>바닷가재</h5>
+<p>바닷가재는 <a href="../the_world/climate.html#temperature">기온</a>이 21°C 이하인 바다에서 생성됩니다.</p>
+<h5>민물가재</h5>
+<p>민물가재는 바닷가재와 비슷하지만, 강과 호수에 생성됩니다. <a href="../the_world/climate.html#temperature">기온</a>이 5°C 이상이고, <a href="../the_world/climate.html#rainfall">강수량</a>이 125mm 이상인 지역에서 생성됩니다.</p>
+<h5>투구게</h5>
+<p>투구게는 <a href="../the_world/climate.html#temperature">기온</a>이 10°C 이상 21°C 이하이고, <a href="../the_world/climate.html#rainfall">강수량</a>이 400mm 이하인 온화한 기후의 바다에 생성됩니다.</p>
+<h5>거대 해양 생물</h5>
+<p><span style="color:#3E8A00;">거대 해양 생물</span>은 더 넓은 물에 사는 큰 동물입니다. 그 중 일부는 물고기를 먹기도 합니다. 이들은 등불의 연료로 쓰일 수 있는 <a href="../mechanics/lamps.html#tallow">고래기름</a>을 떨어뜨립니다.</p>
+<h5>범고래</h5>
+<p>범고래는 <a href="../the_world/climate.html#temperature">기온</a>이 19°C 이하이고, <a href="../the_world/climate.html#rainfall">강수량</a>이 100mm 이상인 깊은 바다에 삽니다.</p>
+<h5>돌고래</h5>
+<p>돌고래는 <a href="../the_world/climate.html#temperature">기온</a>이 10°C 이상이고, <a href="../the_world/climate.html#rainfall">강수량</a>이 200mm 이상인 깊은 바다에 삽니다.</p>
+<h5>매너티</h5>
+<p>매너티는 <a href="../the_world/climate.html#temperature">기온</a>이 20°C 이상이고, <a href="../the_world/climate.html#rainfall">강수량</a>이 300mm 이하인 따뜻한 호수에 삽니다.</p>
+<h5>오징어</h5>
+<p>오징어는 깊은 바다에 생성됩니다. 오징어는 <span style="color:#3E8A00;">먹물 주머니</span>를 떨어뜨리고 플레이어가 가까이 접근하면 먹물을 뿜습니다. 깊고 험한 동굴에 사는 오징어는 특이한 특징을 가진다고 합니다.</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'zh_hk';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">繁體中文（香港特別行政區)</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/getting_started\finding_ores.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\finding_ores.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\finding_ores.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\finding_ores.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\finding_ores.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\finding_ores.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\finding_ores.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\finding_ores.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">這個世界</a></li>
+<li><a class="text-muted" href="../getting_started/">新手入門</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./introduction.html">第一天</a></li>
+<li><a class="text-muted" href="./firepit.html">生火</a></li>
+<li><a class="text-muted" href="./pottery.html">製陶術</a></li>
+<li><a class="text-muted" href="./pit_kiln.html">坑窯</a></li>
+<li><a class="text-muted" href="./finding_ores.html">礦石、金屬和鑄造</a></li>
+<li><a class="text-muted" href="./primitive_alloys.html">原始合金</a></li>
+<li><a class="text-muted" href="./primitive_anvils.html">原始砧</a></li>
+<li><a class="text-muted" href="./building_materials.html">建築材料</a></li>
+<li><a class="text-muted" href="./a_place_to_sleep.html">如何過夜</a></li>
+<li><a class="text-muted" href="./size_and_weight.html">體積和重量</a></li>
+<li><a class="text-muted" href="./food_and_water.html">食物和水</a></li></ul></li>
+<li><a class="text-muted" href="../mechanics/">進階內容</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">新手入門</a> / <a class="text-muted" href="#">礦石、金屬和鑄造</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="原生銅">
+                <img src="..\..\_images\item13.png" alt="礦石、金屬和鑄造" />
+            </span>
+            <h4>礦石、金屬和鑄造</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>除了地上的那些木棍、樹枝和小石子，你可能還遇到過散落在地表的小礦粒。多收集一點吧，在你獲得鎬之前，這是你獲得礦石和金屬為數不多的方法之一。</p>
+<h5></h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>每種不同的小礦粒</p>
+<p>這些小礦粒不僅為你提供了早期生存至關重要的金屬素材，它們還提示你它們附近的淺表層巖石中可能存在大型礦脈。留心標記你發現這些小礦粒的位置，這些信息等你以後有了<a href="../mechanics/prospecting.html">勘礦鎬</a>之後會很有用的。<br/>
+<br/>
+下一頁會介紹這個世界中的的十二種礦粒和他們所對應的金屬。</p>
+<h5>小礦石粒</h5>
+<p></p>
+<ul>
+	<li>原生銅粒（<span style="color:#3E8A00;">銅</span>）</li>
+	<li>原生金粒（<span style="color:#3E8A00;">金</span>）</li>
+	<li>赤鐵礦粒（<span style="color:#3E8A00;">鑄鐵</span>）</li>
+	<li>原生銀粒（<span style="color:#3E8A00;">銀</span>）</li>
+	<li>錫石粒（<span style="color:#3E8A00;">錫</span>）</li>
+	<li>輝鉍礦粒（<span style="color:#3E8A00;">鉍</span>）</li>
+	<li>綠鎳礦粒（<span style="color:#3E8A00;">鎳</span>）</li>
+	<li>孔雀石粒（<span style="color:#3E8A00;">銅</span>）</li>
+	<li>磁鐵礦粒（<span style="color:#3E8A00;">鑄鐵</span>）</li>
+	<li>褐鐵礦粒（<span style="color:#3E8A00;">鑄鐵</span>）</li>
+	<li>閃鋅礦粒（<span style="color:#3E8A00;">鋅</span>）</li>
+	<li>黝銅礦粒（<span style="color:#3E8A00;">銅</span>）</li>
+</ul>
+<a class="anchor" id="casting"></a><h5>鑄造</h5>
+<p>在羣巒傳説中，每個礦石包含的實際金屬的<span style="color:#3E8A00;">單位</span>（<span style="color:#3E8A00;">mB（也就是毫桶）</span>）是不同的。像這樣在地表發現的小礦粒質量最低，只能提供 <span style="color:#3E8A00;">10 mB</span> 的金屬。為了提取這種金屬，需要將其熔化，並使用稱為<span style="color:#3E8A00;">鑄造</span>的工藝製成工具。</p>
+<p>開始之前，你需要準備：<br/>
+</p>
+<ul>
+	<li>一隻<a href="../getting_started/pottery.html#vessel">小缸</a></li>
+	<li>足夠搭建一個<a href="../getting_started/pit_kiln.html">坑窯</a>的材料。</li>
+	<li>若干個用來澆鑄金屬的<a href="../getting_started/pottery.html#mold">模具</a>。</li>
+	<li>最後，也是最重要的，至少價值 100 mB 的可以用來鑄造的金屬礦石。早期的話就只有<span style="color:#3E8A00;">銅</span>了（三種銅礦石中的任意一種，或者混搭都行）。</li>
+</ul><p><br/>
+<em>備註：如果材料足夠，也可以直接鑄造某些<a href="../getting_started/primitive_alloys.html">合金</a></em>。</p>
+<p>首先，打開並將想要熔化的礦粒放進<span style="color:#3E8A00;">小缸</span>中。記得一定要數好金屬的數量！然後，把裝有礦粒的小缸放進<a href="../getting_started/pit_kiln.html">坑窯</a>中並點燃。礦石會隨着容器的升温而熔化，當火熄滅之後你就能將裝有液態金屬的小缸從中取出了。<br/>
+<br/>
+將小缸從坑窯中取出並手持小缸按下<span style="color:#b0b;">Right Click</span>來打開<span style="color:#3E8A00;">鑄造</span>界面。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image5.png" alt="tfc:textures/gui/book/gui/casting.png">
+<div style="text-align: center;"><p>鑄造界面。</p>
+</div><p>接下來，只要將燒製好的模具放在屏幕中間的空格內就可以將液態金屬澆鑄進模具了。一定要趁金屬還沒凝固時澆鑄。如果金屬變冷了的話就只能再造一個坑窯把它熔化了！模具注滿之後就可以從小缸中拿出來冷卻了。等待模具中的金屬凝固之後，手持模具<span style="color:#b0b;">Right Click</span>點擊，或將模具放入合成格中就可以將成品取出。</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="銅鎬頭" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item15.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item16.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="銅鎬" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item14.png" />
+                </div>
+            </div>
+        </div>
+        <p>現在你學會如何鑄造金屬工具了，來嘗試做一把鎬吧！去收集礦粒，做一個鎬頭模具，再在坑窯裏熔化礦粒並澆鑄到模具裏，最後加上一根木棍就好了！</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

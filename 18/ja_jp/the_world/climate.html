@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'ja_jp';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">日本語</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/the_world\climate.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world\climate.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world\climate.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world\climate.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world\climate.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world\climate.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world\climate.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world\climate.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">世界</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./biomes.html">バイオーム</a></li>
+<li><a class="text-muted" href="./waterways.html">川が流れる場所</a></li>
+<li><a class="text-muted" href="./geology.html">地質</a></li>
+<li><a class="text-muted" href="./ores_and_minerals.html">鉱石とミネラル</a></li>
+<li><a class="text-muted" href="./climate.html">暦と気候</a></li>
+<li><a class="text-muted" href="./flora.html">植物</a></li>
+<li><a class="text-muted" href="./wild_crops.html">自生植物</a></li>
+<li><a class="text-muted" href="./wild_fruits.html">自生果樹</a></li>
+<li><a class="text-muted" href="./wild_animals.html">野生動物</a></li></ul></li>
+<li><a class="text-muted" href="../getting_started/">はじめに</a></li>
+<li><a class="text-muted" href="../mechanics/">高度な加工</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">世界</a> / <a class="text-muted" href="#">暦と気候</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image102.png" alt="暦と気候" />
+            </span>
+            <h4>暦と気候</h4>
+        </div>
+        </h4>
+                <hr>
+                <a class="anchor" id="calendar"></a><p>TerraFirmaCraft では、気候と時間の両方が非常に重要な要素です。 <span style="color:#3E8A00;">暦</span> から始めましょう。<br/>
+<br/>
+<span style="color:#b0b;">E</span> を押して、[カレンダー] タブをクリックすると、いつでもカレンダーを表示できます。 これにより、<span style="color:#3E8A00;">季節</span>、<span style="color:#3E8A00;">曜日</span>、および <span style="color:#3E8A00;">日付</span> が表示されます。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image103.png" alt="tfc:textures/gui/book/gui/calendar.png">
+<div style="text-align: center;"><p>カレンダーGUI</p>
+</div><p>季節があり、それに合わせて天気や気候も変化します。 TerraFirmaCraft には 4 つのシーズンがあり、それぞれが <span style="color:#3E8A00;">上旬</span>、<span style="color:#3E8A00;">中旬</span>、<span style="color:#3E8A00;">下旬</span> に分かれています。 四季は次のとおりです:<br/>
+</p>
+<ul>
+	<li><strong>春</strong>: 3 月～5 月</li>
+	<li><strong>夏</strong>: 6 月～8 月</li>
+	<li><strong>秋 </strong>: 9 月 - 11 月</li>
+	<li>冬: 12 月 - 2 月</li>
+</ul>
+<p>現在の季節は、その地域の気温、降水量 (雨や雪が降るかどうか) などに影響を与える可能性があります。 便利なカレンダー タブに注目してください!<br/>
+<br/>
+さて、気候についてです...</p>
+<a class="anchor" id="climate"></a><h5>気候</h5>
+<p>メインのインベントリ画面のもう一つのタブは、<span style="color:#3E8A00;">気候</span> GUIです。 これは現在の場所に関する情報を示しています。<br/>
+<br/>
+最初の行は全体的な <a href="https://en.wikipedia.org/wiki/K%C3%B6ppen_climate_classification">気候</a> を示しています。<br/>
+<br/>
+ 2 行目は、<a href="../the_world/geology.html"> 地質</a> を示します。<br/>
+<br/>
+ 3 行目は、<span style="color:#3E8A00;">平均気温・降水量など</span> を示します。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image104.png" alt="tfc:textures/gui/book/gui/climate.png">
+<div style="text-align: center;"><p>気候GUI</p>
+</div><a class="anchor" id="temperature"></a><p>TerraFirmaCraft の気温はさまざまな要因によって影響されます。<br/>
+</p>
+<ul>
+	<li>まず、地域、特に緯度 (Z 座標) が最も大きな役割を果たします。</li>
+	<li>次に、現在の季節が気温に影響します。 - 夏の間は最も暑く、冬の間は最も寒くなります。</li>
+	<li>最後に、気温は日ごとに異なる可能性があり、時間ごとに異なる可能性があります。</li>
+</ul>
+<p>最後の行は、前述のすべての要素を含む現在の気温を示しています。<br/>
+<br/>
+気温は、作物や植物が成長するかどうか、雪や氷が形成されるか溶けるかなど、多くのことに影響を与える可能性があります。</p>
+<a class="anchor" id="rainfall"></a><h5>降水量</h5>
+<p>降水量は、世界のどこにいるかによって異なる可能性があるもう 1 つの気候値です。 年間降水量はミリメートル (mm) 単位で測定され、0mm ～ 500mm の範囲になります。 降水量は、その地域で見られる植物の種類に影響を与え、また、砂、サボテン、ローム、シルト、カポックの木に至るまでの土壌の種類にも影響を与えます。</p>
+<p>降水量はその地域で何を栽培できるかに影響するため、非常に重要です。 降水量は、<a href="../mechanics/Hydration.html">水分量</a> に寄与する主な要因の 1 つです。これは、特定の場所の土壌の湿り具合を正確に測定するもので、<a href="../mechanics/crops.html">作物</a>、<a href="../the_world/wild_fruits.html#fruit_trees">果樹</a> によって使用されます。 これらをを調べて、成長できるかどうかを判断します。</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

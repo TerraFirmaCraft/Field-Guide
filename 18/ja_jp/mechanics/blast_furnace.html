@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'ja_jp';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">日本語</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/mechanics\blast_furnace.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\blast_furnace.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\blast_furnace.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\blast_furnace.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\blast_furnace.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\blast_furnace.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\blast_furnace.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\blast_furnace.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">世界</a></li>
+<li><a class="text-muted" href="../getting_started/">はじめに</a></li>
+<li><a class="text-muted" href="../mechanics/">高度な加工</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./advanced_building_materials.html">高度な素材</a></li>
+<li><a class="text-muted" href="./animal_husbandry.html">牧畜</a></li>
+<li><a class="text-muted" href="./anvils.html">金床</a></li>
+<li><a class="text-muted" href="./aqueducts.html">用水路</a></li>
+<li><a class="text-muted" href="./armor.html">防具</a></li>
+<li><a class="text-muted" href="./barrels.html">樽</a></li>
+<li><a class="text-muted" href="./bellows.html">ふいご</a></li>
+<li><a class="text-muted" href="./blast_furnace.html">高炉</a></li>
+<li><a class="text-muted" href="./bloomery.html">塊鉄炉</a></li>
+<li><a class="text-muted" href="./bread.html">パン</a></li>
+<li><a class="text-muted" href="./charcoal_forge.html">溶鉱炉</a></li>
+<li><a class="text-muted" href="./charcoal_pit.html">伏せ焼き</a></li>
+<li><a class="text-muted" href="./chisel.html">ノミ</a></li>
+<li><a class="text-muted" href="./composter.html">コンポスター</a></li>
+<li><a class="text-muted" href="./crops.html">作物</a></li>
+<li><a class="text-muted" href="./crucible.html">るつぼ</a></li>
+<li><a class="text-muted" href="./dairy.html">乳製品</a></li>
+<li><a class="text-muted" href="./damage_types.html">ダメージタイプ</a></li>
+<li><a class="text-muted" href="./decay.html">保存</a></li>
+<li><a class="text-muted" href="./fertilizers.html">肥料</a></li>
+<li><a class="text-muted" href="./fire_clay.html">耐火粘土</a></li>
+<li><a class="text-muted" href="./fishing.html">釣り</a></li>
+<li><a class="text-muted" href="./flux.html">融剤</a></li>
+<li><a class="text-muted" href="./gems.html">宝石</a></li>
+<li><a class="text-muted" href="./grill.html">焚き火とグリル</a></li>
+<li><a class="text-muted" href="./heating.html">加熱</a></li>
+<li><a class="text-muted" href="./hydration.html">潤いを保つ</a></li>
+<li><a class="text-muted" href="./lamps.html">ランプ</a></li>
+<li><a class="text-muted" href="./leather_making.html">革の作成</a></li>
+<li><a class="text-muted" href="./lighting.html">光源</a></li>
+<li><a class="text-muted" href="./minecarts.html">トロッコ</a></li>
+<li><a class="text-muted" href="./panning.html">パンニング</a></li>
+<li><a class="text-muted" href="./papermaking.html">紙の作成</a></li>
+<li><a class="text-muted" href="./pets.html">ペット</a></li>
+<li><a class="text-muted" href="./pot.html">焚き火とポット</a></li>
+<li><a class="text-muted" href="./powderkegs.html">火薬樽</a></li>
+<li><a class="text-muted" href="./prospecting.html">探鉱</a></li>
+<li><a class="text-muted" href="./quern.html">石臼</a></li>
+<li><a class="text-muted" href="./salad.html">サラダ</a></li>
+<li><a class="text-muted" href="./sandwiches.html">サンドイッチ</a></li>
+<li><a class="text-muted" href="./scribing_table.html">筆記台</a></li>
+<li><a class="text-muted" href="./sluices.html">堰</a></li>
+<li><a class="text-muted" href="./steel.html">鋼</a></li>
+<li><a class="text-muted" href="./support_beams.html">梁</a></li>
+<li><a class="text-muted" href="./weaving.html">機織り</a></li>
+<li><a class="text-muted" href="./wooden_buckets.html">木のバケツ</a></li></ul></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">高度な加工</a> / <a class="text-muted" href="#">高炉</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="高炉">
+                <img src="..\..\_images\item57.png" alt="高炉" />
+            </span>
+            <h4>高炉</h4>
+        </div>
+        </h4>
+                <hr>
+                <p><span style="color:#3E8A00;">高炉</span> は、<span style="color:#3E8A00;">鋼</span> の作成に使用される高度な装置です。 <span style="color:#3E8A00;">鉄鉱石</span>、<span style="color:#3E8A00;">木炭</span>、および <span style="color:#3E8A00;">融剤</span> を制御された高温環境で混合すると、鋳鉄や錬鉄よりも強力な金属を作成できます。<br/>
+<br/>
+溶鉱炉を入手するには、まず <a href="../mechanics/rucible.html">るつぼ</a> と大量の <span style="color:#3E8A00;">錬鉄の金属板</span> が必要です。</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="錬鉄のプレート" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item58.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="錬鉄のプレート" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item58.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-toggle="tooltip" title="錬鉄のプレート" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item58.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="錬鉄のプレート" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item58.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-toggle="tooltip" title="るつぼ" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-toggle="tooltip" title="錬鉄のプレート" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item58.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-toggle="tooltip" title="錬鉄のプレート" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item58.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-toggle="tooltip" title="錬鉄のプレート" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item58.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-toggle="tooltip" title="錬鉄のプレート" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item58.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="高炉" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item57.png" />
+                </div>
+            </div>
+        </div>
+        <p>高炉本体を作るには <span style="color:#3E8A00;">るつぼ</span> と、必要となる <span style="color:#3E8A00;">錬鉄の金属板</span> の一部が必要です。</p>
+<p>次に、高炉とその <span style="color:#3E8A00;">煙突</span> を建設する必要があります。 煙突は <a href="../mechanics/fire_clay.html#fire_bricks">耐火レンガ</a> で作る必要があります。これは、高炉の高温に耐えるのに十分な強度があるためです。 さらに補強するために、<span style="color:#3E8A00;">錬鉄の金属板</span> で裏打ちする必要があります。 必要に応じて、<span style="color:#3E8A00;">鋼</span> などのより強力な金属を金属板に使用することもできます。</p>
+<h5>高炉</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock: <code>tfc:blast_furnace</code></span></p>
+        </div>
+        <p>煙突の高さを最小限に抑えた高炉。</p>
+<p>高炉の煙突は最大 5 層まであり、各層を完成させるには 4 つの <span style="color:#3E8A00;">耐火レンガ</span> と 12 枚の <span style="color:#3E8A00;">錬鉄の金属板</span> が必要です。 層が増えると高炉の総容量が増加し、一度により多くの鋼を製錬できるようになります。 各煙突層は最大 5 つまであり、高炉はさらに 4 つの鉱石を保持できます。</p>
+<p>高炉を使用するには、煙突の上部にアイテムをドロップする必要があります。鋼を作る場合は、同じ数 <span style="color:#3E8A00;">鉄鉱石</span> と <a href="../mechanics/flux.html">融剤</a> を追加する必要があります。 <span style="color:#3E8A00;">鋳鉄</span> に溶ける鉄鉱石やアイテムであれば何でも構いません。 また、高炉の稼働中に消費される <a href="../mechanics/charcoal_pit.html">木炭</a> を供給する必要があります。</p>
+<p>高炉を使用すると、高炉GUIが開きます。 ここでは、高炉に入っている鉱石と燃料の両方のメーターが表示されます。 右上のスロットには、<span style="color:#3E8A00;">羽口</span> がなければなりません。これは、鋼鉄を製錬するための高温に達するために必要な、溶鉱炉に空気を送り込むために使用される金属パイプです。 羽口は <a href="../mechanics/anvils.html">金床</a> で鍛造できます。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image47.png" alt="tfc:textures/gui/book/gui/blast_furnace.png">
+<div style="text-align: center;"><p>高炉GUI。</p>
+</div><p>高炉が鉄を溶かす温度に達するためには <a href="../mechanics/bellows.html">ふいご</a> も必要になります。 これは高炉の 4 つの側面のいずれかに設置できます。</p>
+<h5></h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock: <code>tfc:full_blast_furnace</code></span></p>
+        </div>
+        <p>ふいごとるつぼを取り付けた最大の高炉。</p>
+<p>精錬を開始するには、<a href="../getting_started/firepit.html#firestarter">火起こし器</a> または <span style="color:#3E8A00;">火打石と打ち金</span> を使って高炉に点火します。時間の経過とともに内部の鉱石が加熱され始めます。 高炉に燃料が残っていることを確認し、高炉の内部温度が木炭の最高燃焼温度に達した後、ふいごを使用して高炉に空気を供給します。 中の鉱石が十分に加熱されると溶けて <a href="../mechanics/steel.html">銑鉄</a> に変わります。</p>
+<p>この溶融金属は、溶鉱炉の直下に配置された <a href="../mechanics/rucible.html">るつぼ</a> などの溶融金属用コンテナに滴下します。 るつぼの出力スロットからインゴット鋳型に鋳造し、<a href="../mechanics/steel.html">鋼</a> に加工することができます。</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

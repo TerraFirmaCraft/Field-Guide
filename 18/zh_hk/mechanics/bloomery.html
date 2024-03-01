@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'zh_hk';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">繁體中文（香港特別行政區)</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/mechanics\bloomery.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\bloomery.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\bloomery.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\bloomery.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\bloomery.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\bloomery.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\bloomery.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\bloomery.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">這個世界</a></li>
+<li><a class="text-muted" href="../getting_started/">新手入門</a></li>
+<li><a class="text-muted" href="../mechanics/">進階內容</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./advanced_building_materials.html">高級建築材料</a></li>
+<li><a class="text-muted" href="./animal_husbandry.html">畜牧業</a></li>
+<li><a class="text-muted" href="./anvils.html">砧</a></li>
+<li><a class="text-muted" href="./aqueducts.html">引水橋</a></li>
+<li><a class="text-muted" href="./armor.html">盔甲</a></li>
+<li><a class="text-muted" href="./barrels.html">大桶</a></li>
+<li><a class="text-muted" href="./bellows.html">風箱</a></li>
+<li><a class="text-muted" href="./blast_furnace.html">建造高爐</a></li>
+<li><a class="text-muted" href="./bloomery.html">鍛鐵爐</a></li>
+<li><a class="text-muted" href="./bread.html">烤麪包</a></li>
+<li><a class="text-muted" href="./charcoal_forge.html">木炭爐</a></li>
+<li><a class="text-muted" href="./charcoal_pit.html">木炭坑</a></li>
+<li><a class="text-muted" href="./chisel.html">鑿子</a></li>
+<li><a class="text-muted" href="./composter.html">堆肥桶</a></li>
+<li><a class="text-muted" href="./crops.html">農作物</a></li>
+<li><a class="text-muted" href="./crucible.html">坩堝</a></li>
+<li><a class="text-muted" href="./dairy.html">乳製品</a></li>
+<li><a class="text-muted" href="./damage_types.html">傷害類型</a></li>
+<li><a class="text-muted" href="./decay.html">食物保鮮</a></li>
+<li><a class="text-muted" href="./fertilizers.html">肥料</a></li>
+<li><a class="text-muted" href="./fire_clay.html">耐火黏土</a></li>
+<li><a class="text-muted" href="./fishing.html">釣魚</a></li>
+<li><a class="text-muted" href="./flux.html">助焊劑</a></li>
+<li><a class="text-muted" href="./gems.html">寶石</a></li>
+<li><a class="text-muted" href="./grill.html">篝火燒烤</a></li>
+<li><a class="text-muted" href="./heating.html">加熱</a></li>
+<li><a class="text-muted" href="./hydration.html">保持土壤濕潤</a></li>
+<li><a class="text-muted" href="./lamps.html">燈</a></li>
+<li><a class="text-muted" href="./leather_making.html">制皮術</a></li>
+<li><a class="text-muted" href="./lighting.html">光源</a></li>
+<li><a class="text-muted" href="./minecarts.html">礦車</a></li>
+<li><a class="text-muted" href="./panning.html">淘金</a></li>
+<li><a class="text-muted" href="./papermaking.html">造紙術</a></li>
+<li><a class="text-muted" href="./pets.html">寵物</a></li>
+<li><a class="text-muted" href="./pot.html">篝火大鍋</a></li>
+<li><a class="text-muted" href="./powderkegs.html">火藥桶</a></li>
+<li><a class="text-muted" href="./prospecting.html">勘探</a></li>
+<li><a class="text-muted" href="./quern.html">手推磨</a></li>
+<li><a class="text-muted" href="./salad.html">沙拉</a></li>
+<li><a class="text-muted" href="./sandwiches.html">三明治</a></li>
+<li><a class="text-muted" href="./scribing_table.html">命名台</a></li>
+<li><a class="text-muted" href="./sluices.html">洗礦槽</a></li>
+<li><a class="text-muted" href="./steel.html">鍊鋼</a></li>
+<li><a class="text-muted" href="./support_beams.html">支撐樑</a></li>
+<li><a class="text-muted" href="./weaving.html">札札弄機杼</a></li>
+<li><a class="text-muted" href="./wooden_buckets.html">木桶</a></li></ul></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">進階內容</a> / <a class="text-muted" href="#">鍛鐵爐</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="鍛鐵爐">
+                <img src="../../_images/placeholder_64.png" alt="鍛鐵爐" />
+            </span>
+            <h4>鍛鐵爐</h4>
+        </div>
+        </h4>
+                <hr>
+                <p><span style="color:#3E8A00;">鍛鐵爐</span>是一種能將<span style="color:#3E8A00;">鐵礦石</span>精煉成<span style="color:#3E8A00;">生鐵方坯</span>的設備，而生鐵方坯則可以鍛造成<span style="color:#3E8A00;">鍛鐵</span>。有幾種不同的天然鐵礦石：<a href="../the_world/ores_and_minerals.html#hematite">赤鐵礦</a>、<a href="../the_world/ores_and_minerals.html#limonite">褐鐵礦</a>、和<a href="../the_world/ores_and_minerals.html#magnetite">磁鐵礦</a>。注意，直接熔化鐵礦石、或其他含鐵的工具和裝備只能得到<span style="color:#3E8A00;">鑄鐵</span>，而不是<span style="color:#3E8A00;">鍛鐵</span>。要將鑄鐵變成有用的鍛鐵，就必須使用鍛鐵爐。鍛鐵爐可以接受任何含鐵的物品 - 礦石、礦錠、或者是做好的工具都可以。</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:double_sheets/any_bronze" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item59.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:double_sheets/any_bronze" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item59.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:double_sheets/any_bronze" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item59.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:double_sheets/any_bronze" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item59.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:double_sheets/any_bronze" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item59.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:double_sheets/any_bronze" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item59.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:double_sheets/any_bronze" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item59.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:double_sheets/any_bronze" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item59.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="鍛鐵爐" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>製作鍛鐵爐需要 8 張<span style="color:#3E8A00;">青銅雙層薄板</span>.</p>
+<h5>鍛鐵爐</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock: <code>tfc:bloomery</code></span></p>
+        </div>
+        <p>最基礎的鍛鐵爐結構。鍛鐵爐方塊可以用<span style="color:#b0b;">Right Click</span>打開或關閉。</p>
+<p>鍛鐵爐可以容納最多 24 件<span style="color:#3E8A00;">含鐵物品</span>和 24 塊<a href="../mechanics/charcoal_pit.html">木炭</a>，每層煙囱可以容納各 8 塊。想要加高煙囱，只需要在之前所示基礎上再疊加兩層石頭方塊就可以了。<br/>
+<br/>
+要將物品加入鍛鐵爐中，只需要從煙囱頂部將物品丟下即可。若形成了一層灰黑色的熔渣物質就説明成功了。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image48.png" alt="tfc:textures/gui/book/tutorial/bloomery_hole.png">
+<div style="text-align: center;"><p>將物品添加到鍛鐵爐中。</p>
+</div><p>投入鍛鐵爐的木炭和<span style="color:#3E8A00;">含鐵物品</span>數量必須相等。要讓鍛鐵爐開始工作，只需要點燃鍛鐵爐門的方塊，再等上大半天的時間即可。等看到鍛鐵爐門方塊不亮了就説明完成了。鍛鐵爐會將之前投入的每 100mB 的鑄鐵轉化為一塊<span style="color:#3E8A00;">方坯塊</span>。用鎬反覆挖掘方坯塊就能得到<span style="color:#3E8A00;">生鐵方坯</span>。注意：若投入的鐵的數量不是 100mB 的整數倍，多餘的部分會被浪費。</p>
+<h5>方坯</h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block2.png" alt="Block Visualization">
+<div style="text-align: center;"><p>一個方坯，充滿了鍛鐵。</p>
+</div>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-toggle="tooltip" title="生鐵方坯" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item60.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-toggle="tooltip" title="精鐵方坯" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item61.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>第二級</p>
+        </div>
+        <p><span style="color:#3E8A00;">生鐵方坯</span>還必須在<a href="../mechanics/anvils.html">砧</a>上打造成<span style="color:#3E8A00;">精鐵方坯</span>。</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-toggle="tooltip" title="精鐵方坯" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item61.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-toggle="tooltip" title="鍛鐵錠" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item62.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>第二級</p>
+        </div>
+        <p>在<a href="../mechanics/anvils.html">砧</a>上進一步打造<span style="color:#3E8A00;">精鐵方坯</span>就能獲得<span style="color:#3E8A00;">鍛鐵錠</span>了。</p>
+<h5>鐵匠的筆記</h5>
+<p></p>
+<ul>
+	<li>如果投入鍛鐵爐的物品超出了它的所能處理的數量，它就會從鍛鐵爐門口吐出來。</li>
+	<li>如果要取回投入鍛鐵爐中的物品，不要試圖挖掘塔中的熔融物，直接把鍛鐵爐方塊挖掉即可。</li>
+	<li>方坯只會熔化成鑄鐵，而不是鍛鐵。方坯必須經過錘鍊才能變成鍛鐵！</li>
+</ul>
+<p></p>
+<ul>
+	<li>鍛鐵爐只關心投入其中的物品的數量，而不是質量。在鍛鐵爐中燒煉富礦與貧礦會消耗等量的木炭！</li>
+	<li>熔融物很容易將周圍的其他方塊點着，千萬小心！</li>
+</ul>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

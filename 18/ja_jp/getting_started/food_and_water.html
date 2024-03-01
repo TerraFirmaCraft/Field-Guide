@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'ja_jp';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">日本語</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/getting_started\food_and_water.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\food_and_water.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\food_and_water.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\food_and_water.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\food_and_water.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\food_and_water.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\food_and_water.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\food_and_water.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">世界</a></li>
+<li><a class="text-muted" href="../getting_started/">はじめに</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./introduction.html">導入</a></li>
+<li><a class="text-muted" href="./firepit.html">火を起こす</a></li>
+<li><a class="text-muted" href="./pottery.html">粘土細工</a></li>
+<li><a class="text-muted" href="./pit_kiln.html">穴窯</a></li>
+<li><a class="text-muted" href="./finding_ores.html">鉱石、金属、鋳造</a></li>
+<li><a class="text-muted" href="./primitive_alloys.html">最初の合金</a></li>
+<li><a class="text-muted" href="./primitive_anvils.html">最初の金床</a></li>
+<li><a class="text-muted" href="./building_materials.html">建材</a></li>
+<li><a class="text-muted" href="./a_place_to_sleep.html">眠る場所</a></li>
+<li><a class="text-muted" href="./size_and_weight.html">大きさと重さ</a></li>
+<li><a class="text-muted" href="./food_and_water.html">食料と水</a></li></ul></li>
+<li><a class="text-muted" href="../mechanics/">高度な加工</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">はじめに</a> / <a class="text-muted" href="#">食料と水</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image7.png" alt="食料と水" />
+            </span>
+            <h4>食料と水</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>TerraFirmaCraft では、満腹度を管理するだけでなく、喉の渇きも管理する必要があります。 空腹はバニラと同様に機能します。 ほとんどの食べ物は空腹バーの約 5 分の 1 を回復します。 <span style="color:#3E8A00;">ガマの根</span> など、一部の食料の回復量は少し少なくなる場合があります。 食べ物を食べると <span style="color:#3E8A00;">腹持ち</span> も回復します。これは満腹感(隠し満腹度)を表すものと考えることができます。</p>
+<p>一部の食べ物は満腹感があり、長時間満腹感を失わずに済みますが、一部の食べ物は効果が短命です。<br/>
+<br/>
+通常のゲームプレイだけで満腹度を失います。 走ったり、泳いだり、<a href="../getting_started/size_and_weight.html#overburdening">重量超過</a> になったりすると、満腹度がより早く減ります。 食品から得られる <span style="color:#3E8A00;">満腹度</span>、<span style="color:#3E8A00;">水分</span>、および <span style="color:#3E8A00;">栄養価</span> に関する情報は、インベントリ内で食品にカーソルを置くと表示されます。 <span style="color:#b0b;">Shift</span> を使用すると、完全なツールチップが表示されます。</p>
+<p>すべての食品には、情報が記載されたツールチップが表示されます。 ツールチップには食品の <a href="../mechanics/decay.html">腐るまでの時間</a> が含まれており、保存により延長される可能性があります。 この情報を見るときは、すべての食品に多くの栄養があるわけではないことを認識することが重要です。 たとえば、<a href="../mechanics/bread.html">パン生地</a> は食品ですが、栄養価、腹持ち、水分の値はありません。 それを食べてもあまりメリットはありません。</p>
+<p>ツールチップの表示の例:<br/>
+<br/>
+<strong>オレンジ</strong><br/>
+  <span style="color:#00AA00;"><strong>11:59 7月 6, 1004に腐る(あと 1 ヵ 月 1 日)</strong></span><br/>
+  <span style="color:#555555;">栄養素:<br/>
+  - 腹持ち: 2%<br/>
+  - 水分: 10%<br/>
+<span style="color:#55FF55;">  - 果物: 0.5</span></span></p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image8.png" alt="tfc:textures/gui/book/gui/nutrition.png">
+<div style="text-align: center;"><p>栄養価GUI。各栄養価のバランスを示すバーが表示されます。</p>
+</div><a class="anchor" id="nutrients"></a><h5>栄養素</h5>
+<p>5つの栄養素があり、様々な食べ物から摂取できます: <strong><span style="color:#55FF55;">果物</span></strong>、<strong><span style="color:#00AA00;">野菜</span></strong>、<strong><span style="color:#FF5555;"> タンパク質</span></strong>、<strong><span style="color:#FFAA00;">穀物</span></strong>、および<strong><span style="color:#AA00AA;">乳製品</span></strong>。 栄養素をバランスよく大量に保持しておくと最大HPが向上しますが、栄養が不足すると最大HPが低下します。 食べ物を食べると、その栄養素が摂れます。 <a href="../mechanics/pot.html#soup">スープ</a> などの食事は、1 回の食事により多くの栄養素を組み合わせて摂取できます。 少し前に食べた食事をもう一度食べても栄養価にカウントされないため、覚えておく必要があります。</p>
+<p><strong><span style="color:#55FF55;">果物</span></strong>: 果物の栄養素は主にベリーの茂みや果樹などの<a href="../the_world/wild_fruits.html">結実植物</a>から得られます。 これに対する注目すべき例外は <a href="../mechanics/crops.html#pumpkin">カボチャ</a> と <a href="../mechanics/crops.html#pumpkin">メロン</a> で、これらが含む栄養素は果物です。<br/>
+<br/>
+<strong>$ (2)野菜</strong>: ほぼすべての <a href="../mechanics/crops.html">作物</a>から得られます。<br/>
+<br/>
+<strong><span style="color:#FF5555;">タンパク質</span></strong>: タンパク質は <a href="../the_world/wild_animals.html">動物</a> の肉から得られます。タンパク質と野菜の栄養素を含む <a href="../mechanics/crops.html#soybean">大豆</a> からも入手できます。</p>
+<p><strong><span style="color:#FFAA00;">穀物</span></strong>: 穀物は、<a href="../mechanics/crops.html#barley">大麦・小麦・米・ライ麦</a>などの穀物に含まれます。 穀物の加工については <a href="../mechanics/bread.html">パン</a> ページにあります。 <span style="color:#3E8A00;">ガマの根</span> と <span style="color:#3E8A00;">タロイモ</span> も穀物です。<br/>
+<br/>
+<strong><span style="color:#AA00AA;">乳製品</span></strong>: すべての乳製品は <span style="color:#3E8A00;"> ミルク</span>が由来です。 これは <a href="../mechanics/animal_husbandry.html#dairy_animals">乳製品動物</a> から来ています。 牛乳の加工と飲用については、<a href="../mechanics/dairy.html">乳製品</a> ページで説明されています。<br/>
+<br/>
+あらゆる食べ物はすべて腐ったら役に立ちません。 これを防ぐ方法については、<a href="../mechanics/decay.html">食料の保存</a> ページを参照してください。</p>
+<a class="anchor" id="thirst"></a><h5>渇き</h5>
+<p>喉の渇きとは、体内の水分量のことです。 満腹度と同じ速度で減少します。 気温が高い場合、または空腹感が高いレベルだと喉の渇きが早くなります。 幸いなことに、<span style="color:#3E8A00;">淡水</span> を飲むと喉の渇きが回復します。これは、水ブロック上で <span style="color:#b0b;">Right Click</span> をクリックすることで実行できます。 海などにある塩水を飲むと喉が即座に渇き、<span style="color:#3E8A00;">渇き</span> 効果が発生してさらに水分を消耗する可能性もあります。</p>
+<h5>安全な水</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>塩水を避けるには、川、湖、<span style="color:#3E8A00;">Cattails</span> などの淡水植物を探してください。</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image9.png" alt="Recipe: tfc:clay_knapping/jug">
+<p><a href="../getting_started/pottery.html">ナッピング</a> して <a href="../getting_started/pottery.html#jug">水入れ</a> を作成・使用することは、適切な飲み水を運ぶ方法です。 バケツのように <span style="color:#b0b;">Right Click</span> で液体を入れます。 <span style="color:#b0b;">Right Click</span> を押し続けると中身を飲みます。</p>
+<p>満腹度や水分が完全に枯渇すると、動きや採掘速度が鈍くなり、ダメージを受け始めます。 これが原因で死亡すると栄養素はリセットされます。</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

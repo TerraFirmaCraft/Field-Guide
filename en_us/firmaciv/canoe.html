@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'en_us';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/firmaciv/canoe.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/firmaciv/canoe.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/firmaciv/canoe.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/firmaciv/canoe.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/firmaciv/canoe.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/firmaciv/canoe.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/firmaciv/canoe.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/firmaciv/canoe.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.20.1 - v3.1.9</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">The World</a></li>
+<li><a class="text-muted" href="../getting_started/">Getting Started</a></li>
+<li><a class="text-muted" href="../mechanics/">Advanced Mechanics</a></li>
+<li><a class="text-muted" href="../firmalife/">(Addon) Firmalife</a></li>
+<li><a class="text-muted" href="../firmaciv/">(Addon) Firma: Civilization</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./watercraft.html">Getting Started: Boats</a></li>
+<li><a class="text-muted" href="./canoe.html">Dugout Canoes</a></li>
+<li><a class="text-muted" href="./kayak.html">Kayaks</a></li>
+<li><a class="text-muted" href="./rowboat.html">Rowboats</a></li>
+<li><a class="text-muted" href="./navigation.html">Navigation</a></li></ul></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.20.1</a> / <a class="text-muted" href="./">(Addon) Firma: Civilization</a> / <a class="text-muted" href="#">Dugout Canoes</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="ICON ONLY">
+                <img src="../../_images/item316.png" alt="Dugout Canoes" />
+            </span>
+            <h4>Dugout Canoes</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>The Dugout Canoe will likely be the first step on your aquatic journey! If you're in the copper age, you can probably build a canoe.</p>
+<p>You can put blocks or animals in both seats, but be aware that there's no way to pilot the boat if you do this! It's most useful if you just want to send materials down a river on their own.<br/>
+<br/>
+A canoe has two seats, and is piloted from the rear. You need to hold a canoe paddle in order to move at full speed, and if two players are holding paddles, you can go even faster.</p>
+<p>To build a Dugout Canoe, place 3 stripped logs in a row, horizontally, and cut off the tops with a saw. Then, carve out the canoe shape with an axe. Finally, light the inside of the canoe on fire to hollow out the hull. It will take the same amount of time as a pit kiln to complete the hollowing process.</p>
+<p>Carving out a Dugout Canoe requires a softer wood, and as a result, only some logs are workable:<br/>
+<br/>
+Douglas Fir<br/>
+Pine<br/>
+Palm<br/>
+Spruce<br/>
+Sequoia<br/>
+Kapok<br/>
+Mangrove<br/>
+White Cedar<br/>
+Willow</p>
+<h5>Just a Log</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>The first step in making a Dugout Canoe.</p>
+<h5>Weird Slabs</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>The top of the log has been removed using a saw.</p>
+<h5>A Strange Sculpture</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>A fully carved Dugout Canoe, ready for hollowing out the hull.</p>
+<h5>Dugout Canoe</h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/image123.png" alt="firmaciv:textures/gui/book/canoe_isometric.png">
+<div style="text-align: center;"><p>A completed Dugout Canoe.</p>
+</div>
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Canoe Paddle" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/item317.png" />
+                </div>
+            </div>
+        </div>
+        <p>Don't forget to craft a paddle or two!</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

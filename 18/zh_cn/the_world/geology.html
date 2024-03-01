@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>群峦传说 手册</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'zh_cn';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">群峦传说 手册</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">简体中文(中国大陆)</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/the_world\geology.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world\geology.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world\geology.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world\geology.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world\geology.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world\geology.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world\geology.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world\geology.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">主页</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">版本 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>目录</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">这个世界</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./biomes.html">生物群系</a></li>
+<li><a class="text-muted" href="./waterways.html">河流流向何方？</a></li>
+<li><a class="text-muted" href="./geology.html">地质学</a></li>
+<li><a class="text-muted" href="./ores_and_minerals.html">矿石和矿物</a></li>
+<li><a class="text-muted" href="./climate.html">历法和气候</a></li>
+<li><a class="text-muted" href="./flora.html">自然植物</a></li>
+<li><a class="text-muted" href="./wild_crops.html">野生作物</a></li>
+<li><a class="text-muted" href="./wild_fruits.html">野生水果</a></li>
+<li><a class="text-muted" href="./wild_animals.html">野生动物</a></li></ul></li>
+<li><a class="text-muted" href="../getting_started/">新手入门</a></li>
+<li><a class="text-muted" href="../mechanics/">进阶内容</a></li>
+<li><a class="text-muted" href="../firmalife/">(Addon) Firmalife扩展模组</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">这个世界</a> / <a class="text-muted" href="#">地质学</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="天然页岩">
+                <img src="..\..\_images\item211.png" alt="地质学" />
+            </span>
+            <h4>地质学</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>群峦传说中的不同地貌是由<a href="https://zh.wikipedia.org/wiki/%E6%9D%BF%E5%9D%97%E6%9E%84%E9%80%A0%E8%AE%BA">板块运动</a>造成的。你或许可以从你周围的环境中推测出某个区域的地质结构。只要打开物品栏并点击<span style="color:#3E8A00;">气候</span>选项卡就可以查看当前所处的<span style="color:#3E8A00;">板块区域</span>。某些区域的地质结构会影响何种生物群系和特征可以生成。</p>
+<p>以下是所有的板块区域和它们的大致特征一览。<br/>
+<br/>
+<strong>大洋</strong><br/>
+大部分被<a href="../the_world/biomes.html#ocean">海洋</a>或深海生物群系所覆盖的区域都属于大洋板块。<br/>
+<br/>
+<strong>低海拔大陆</strong><br/>
+三种常见的大陆板块之一。常见的生物群系包括<a href="../the_world/biomes.html#lowlands">低地</a>、<a href="../the_world/biomes.html#low_canyons">低地峡谷</a>和<a href="../the_world/biomes.html#plains">平原</a>等低海拔生物群系。</p>
+<p><strong>中海拔大陆</strong><br/>
+中等高度的大陆板块，包含许多生物群系，通常与低海拔或高海拔大陆板块接壤。<br/>
+<br/>
+<strong>高海拔大陆</strong><br/>
+海拔较高的地区。<a href="../the_world/biomes.html#hills">连绵丘陵</a>、<a href="../the_world/biomes.html#plateau">高原</a>和<a href="../the_world/biomes.html#mountains">原始山脉</a>等生物群系会生成在这里。<br/>
+<br/>
+<strong>大洋中脊</strong><br/>
+当两个大洋板块相互分离时，就会形成大洋中脊。</p>
+<p>火山和海底火山有时会在这个区域生成。<br/>
+<br/>
+<strong>大洋俯冲带</strong><br/>
+俯冲带是指一个板块隐没至另一板块之下的区域。若这种现象发生在海洋中，就会形成许多火山、岛链和深海脊。<br/>
+<br/>
+<strong>大陆俯冲带</strong><br/>
+同前者类似，大陆俯冲带也是一个火山活动频繁的区域。这里会形成巨大的沿海山脉。活温泉和火山也很常见。</p>
+<p><strong>大陆裂谷</strong><br/>
+大陆裂谷是指两块大陆板块相互分离时形成的地质结构。现实世界中的<a href="https://zh.wikipedia.org/wiki/%E5%86%B0%E5%B2%9B">冰岛</a>就是一个典型例子。<a href="../the_world/biomes.html#canyons">峡谷</a>、休眠火山和一些其他高海拔生物群系会在此处生成。<br/>
+<br/>
+<strong>造山带</strong><br/>
+两块大陆板块互相碰撞就会形成<a href="https://zh.wikipedia.org/wiki/%E9%80%A0%E5%B1%B1%E9%81%8B%E5%8B%95">造山带</a>。造山带，顾名思义，是构造新的山脉的区域。<a href="../the_world/biomes.html#mountains">山脉</a>和<a href="../the_world/biomes.html#plateau">高原</a>生物群系会在此处生成。</p>
+<p><strong>大陆架</strong><br/>
+最后，大陆架是指大陆沿岸的浅海地区。只要气候足够温暖，这里就会生成大片珊瑚礁。</p>
+<h5>岩层</h5>
+<p>这个世界也是由不同类型的<span style="color:#3E8A00;">岩石</span>构成的。一块同质的岩石区域有时会广达一公里，且根据深度的不同，会有其他两到三种不同的岩石构成分明的岩石层。不同的岩石类型中包含了不同的<a href="../the_world/ores_and_minerals.html">矿石</a>，且大部分矿石只会出现在特定的岩石类型中。若想找到它们，就必须先找到正确的岩石类型。</p>
+<p>岩石分为四类：<span style="color:#3E8A00;">沉积岩</span>、<span style="color:#3E8A00;">变质岩</span>、<span style="color:#3E8A00;">喷出岩</span>和<span style="color:#3E8A00;">侵入岩</span>。这些类别决定了岩石可能出现的深度。所有不同的岩石类型及其所属类别的列表可在后面的页面中找到。</p>
+<a class="anchor" id="sedimentary"></a><h5>沉积岩</h5>
+<p><a href="https://zh.wikipedia.org/wiki/%E6%B2%89%E7%A7%AF%E5%B2%A9">沉积岩</a>是由矿物和有机颗粒的堆积与沉积形成的。它们只会出现在<span style="color:#3E8A00;">中层或高层</span>岩层中。它们包括：<br/>
+</p>
+<ul>
+	<li>页岩</li>
+	<li>粘土岩</li>
+	<li>石灰岩</li>
+	<li>砾岩</li>
+	<li>白云岩</li>
+	<li>硅质岩</li>
+	<li>白垩岩</li>
+</ul>
+<a class="anchor" id="metamorphic"></a><h5>变质岩</h5>
+<p><a href="https://zh.wikipedia.org/wiki/%E5%8F%98%E8%B4%A8%E5%B2%A9">变质岩</a>是经由变质作用而形成的岩石。它们可以在<span style="color:#3E8A00;">任何高度层</span>找到。它们包括：<br/>
+</p>
+<ul>
+	<li>石英岩</li>
+	<li>板岩</li>
+	<li>千枚岩</li>
+	<li>片岩</li>
+	<li>片麻岩</li>
+	<li>大理岩</li>
+</ul>
+<a class="anchor" id="igneous_extrusive"></a><h5>喷出岩</h5>
+<p><a href="https://zh.wikipedia.org/wiki/%E7%81%AB%E6%88%90%E5%B2%A9#%E5%88%86%E7%B1%BB%E6%96%B9%E5%BC%8F">喷出岩</a>是由喷出地表的岩浆冷却形成的。它们只会出现在<span style="color:#3E8A00;">中层或高层</span>岩层中。它们包括：<br/>
+</p>
+<ul>
+	<li>流纹岩</li>
+	<li>玄武岩</li>
+	<li>安山岩</li>
+	<li>英安岩</li>
+</ul>
+<a class="anchor" id="igneous_intrusive"></a><h5>侵入岩</h5>
+<p><a href="https://zh.wikipedia.org/wiki/%E7%81%AB%E6%88%90%E5%B2%A9#%E5%88%86%E7%B1%BB%E6%96%B9%E5%BC%8F">侵入岩</a>是由在地表下冷却的岩浆形成的。它们只会出现在<span style="color:#3E8A00;">中层或底层</span>岩层中。它们包括：<br/>
+</p>
+<ul>
+	<li>花岗岩</li>
+	<li>闪长岩</li>
+	<li>辉长岩</li>
+</ul>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

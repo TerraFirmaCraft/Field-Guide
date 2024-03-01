@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'uk_ua';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Українська мова</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/mechanics\animal_husbandry.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\animal_husbandry.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\animal_husbandry.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\animal_husbandry.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\animal_husbandry.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\animal_husbandry.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\animal_husbandry.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\animal_husbandry.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">Світ</a></li>
+<li><a class="text-muted" href="../getting_started/">Починаємо</a></li>
+<li><a class="text-muted" href="../mechanics/">Розширена механіка</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./advanced_building_materials.html">Передові матеріали</a></li>
+<li><a class="text-muted" href="./animal_husbandry.html">Тваринництво</a></li>
+<li><a class="text-muted" href="./anvils.html">Ковадло</a></li>
+<li><a class="text-muted" href="./aqueducts.html">Акведук</a></li>
+<li><a class="text-muted" href="./armor.html">Броня (обладунки)</a></li>
+<li><a class="text-muted" href="./barrels.html">Діжки</a></li>
+<li><a class="text-muted" href="./bellows.html">Міхи</a></li>
+<li><a class="text-muted" href="./blast_furnace.html">Доменна піч</a></li>
+<li><a class="text-muted" href="./bloomery.html">Сиродутне горно</a></li>
+<li><a class="text-muted" href="./bread.html">Хліб</a></li>
+<li><a class="text-muted" href="./charcoal_forge.html">Ковальське горно</a></li>
+<li><a class="text-muted" href="./charcoal_pit.html">Вуглярка</a></li>
+<li><a class="text-muted" href="./chisel.html">Долото</a></li>
+<li><a class="text-muted" href="./composter.html">Компостер</a></li>
+<li><a class="text-muted" href="./crops.html">Городина</a></li>
+<li><a class="text-muted" href="./crucible.html">Тигель</a></li>
+<li><a class="text-muted" href="./dairy.html">Молочні продукти</a></li>
+<li><a class="text-muted" href="./damage_types.html">Види пошкоджень</a></li>
+<li><a class="text-muted" href="./decay.html">Консервація</a></li>
+<li><a class="text-muted" href="./fertilizers.html">Добрива</a></li>
+<li><a class="text-muted" href="./fire_clay.html">Вогнетривка глина</a></li>
+<li><a class="text-muted" href="./fishing.html">Рибальство</a></li>
+<li><a class="text-muted" href="./flux.html">Флюс</a></li>
+<li><a class="text-muted" href="./gems.html">Дорогоцінне каміння</a></li>
+<li><a class="text-muted" href="./grill.html">Багаття та гриль</a></li>
+<li><a class="text-muted" href="./heating.html">Нагрівання</a></li>
+<li><a class="text-muted" href="./hydration.html">Зрошування</a></li>
+<li><a class="text-muted" href="./lamps.html">Ліхтарі</a></li>
+<li><a class="text-muted" href="./leather_making.html">Обробка шкіри</a></li>
+<li><a class="text-muted" href="./lighting.html">Освітлення</a></li>
+<li><a class="text-muted" href="./minecarts.html">Вагонетка</a></li>
+<li><a class="text-muted" href="./panning.html">Промивання</a></li>
+<li><a class="text-muted" href="./papermaking.html">Виготовлення паперу</a></li>
+<li><a class="text-muted" href="./pets.html">Улюбленці</a></li>
+<li><a class="text-muted" href="./pot.html">Багаття та казан</a></li>
+<li><a class="text-muted" href="./powderkegs.html">Порохова бочка</a></li>
+<li><a class="text-muted" href="./prospecting.html">Геологорозвідка</a></li>
+<li><a class="text-muted" href="./quern.html">Млин</a></li>
+<li><a class="text-muted" href="./salad.html">Салати</a></li>
+<li><a class="text-muted" href="./sandwiches.html">Бутерброди</a></li>
+<li><a class="text-muted" href="./scribing_table.html">Стіл писаря</a></li>
+<li><a class="text-muted" href="./sluices.html">Мийний жолоб</a></li>
+<li><a class="text-muted" href="./steel.html">Сталь</a></li>
+<li><a class="text-muted" href="./support_beams.html">Опорні балки</a></li>
+<li><a class="text-muted" href="./weaving.html">Ткацтво</a></li>
+<li><a class="text-muted" href="./wooden_buckets.html">Дерев'яні відра</a></li></ul></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">Розширена механіка</a> / <a class="text-muted" href="#">Тваринництво</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Яйце">
+                <img src="..\..\_images\item46.png" alt="Тваринництво" />
+            </span>
+            <h4>Тваринництво</h4>
+        </div>
+        </h4>
+                <hr>
+                <p><span style="color:#3E8A00;">Худоба</span> - це тварини, яких гравець може приручати та розводити. Худоба має стать,  <span style="color:#3E8A00;">чоловічу</span> або <span style="color:#3E8A00;">жіночу</span>. У деяких тварин можна визначити стать візуально. Наприклад, у кабанів є ікла.</p>
+<p>Худоба має свій <span style="color:#3E8A00;">термін життя</span>, та вік. Вони народжуються немовлятами, що поки не дають нічого корисного. Через певну кількість днів вони дорослішають до <span style="color:#3E8A00;">зрілого</span> віку, та будуть здатні до розмноження та виробництва продукції - молока, вовни, шкіри, тощо. Тварини згодом втрачають здатність розмножуватись, бо вони <span style="color:#3E8A00;">старіють</span>, та можуть дати тобі лиш м'ясо.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image37.png" alt="tfc:textures/gui/book/tutorial/old_cow.png">
+<div style="text-align: center;"><p>Цей бик старий і не може розмножуватися. Він має вицвіле хутро та сірі потьмянілі очі</p>
+</div><p>Худобу треба годувати для <span style="color:#3E8A00;">приручення</span>. Для кожної тварини є продукти, які вона вважає за найкращі. Щоб погодувати тварину, натисни <span style="color:#b0b;">Shift</span> та <span style="color:#b0b;">Right Click</span> з їжею в руках.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image38.png" alt="tfc:textures/gui/book/tutorial/unfamiliarized_pig.png">
+<div style="text-align: center;"><p>У худоби є <span style="color:#3E8A00;">індикатор причучення</span>. Утримуй <span style="color:#b0b;">Shift</span> та дивись на тварину, щоб його побачити.</p>
+</div>
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image39.png" alt="tfc:textures/gui/book/tutorial/no_familiarity_decay_pig.png">
+<div style="text-align: center;"><p>Приручення потруху зникає, коли худобу не годувати. Підвищення рівня запобігає занепаду, що зазначено білим окресленим серцем.</p>
+</div>
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image40.png" alt="tfc:textures/gui/book/tutorial/familiarity_limit_pig.png">
+<div style="text-align: center;"><p>Дорослу худобу неможливо повністю приручити, на що вказує серце з червоним контуром. Але ж їхній виводок може досягти 100% прирученості.</p>
+</div><a class="anchor" id="mammals"></a><p><span style="color:#3E8A00;">Ссавці</span> - це худоба, яка переживає <span style="color:#3E8A00;">вагітність</span>. Дорослі ссавці, рівень приручення яких перевищує 30%, та яких годували того дня, спаровуються. Спаровування буде здійснено у тому випадку, коли тварини протилежних статей і знаходяться поруч один з одним. Самка <span style="color:#3E8A00;">завагітніє</span>, та, через певну кількість днів, приведе приплід.<br/>
+Прикладом є <a href="../mechanics/animal_husbandry.html#pig">свині</a>.</p>
+<a class="anchor" id="wooly_animals"></a><p><span style="color:#3E8A00;">Вовняні тварини</span> - це <a href="../mechanics/animal_husbandry.html#mammals">ссавці</a>, яких можна <span style="color:#3E8A00;">стригти</span> якщо вони дорослі та достатньо приручені. Деякі приклади: <a href="../mechanics/animal_husbandry.html#sheep">вівця</a>, <a href="../mechanics/animal_husbandry.html#alpaca">альпака</a>, та <a href="../mechanics/animal_husbandry.html#musk_ox">вівцебик</a>.</p>
+<a class="anchor" id="dairy_animals"></a><p><span style="color:#3E8A00;">Молочні тварини</span>  - це ссавці, що дають <span style="color:#3E8A00;">молоко</span>. Самка дасть тобі його, як використаєш на тварині відро. Прикладом молочних тварин є: <a href="../mechanics/animal_husbandry.html#goat">коза</a>, <a href="../mechanics/animal_husbandry.html#cow">корова</a>, та <a href="../mechanics/animal_husbandry.html#yak">самка яка</a>.</p>
+<a class="anchor" id="oviparous_animals"></a><h5>Гніздо</h5>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="Солома" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item2.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-toggle="tooltip" title="Солома" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item2.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-toggle="tooltip" title="Солома" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item2.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Гніздо" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">Яйцекладні тварини</span> не є <a href="../mechanics/animal_husbandry.html#mammals">ссавцями</a>. Вони розмножуються шляхом відкладання <span style="color:#3E8A00;">яєць</span>. Для цього їм потрібно зробити <span style="color:#3E8A00;">гніздо</span>. Це гніздо вони здатні знайти самотужки.<br/>
+Деякі приклади цих птахів: <a href="../mechanics/animal_husbandry.html#duck">качка</a>, <a href="../mechanics/animal_husbandry.html#quail">перепілка</a>, та <a href="../mechanics/animal_husbandry.html#chicken">курка</a>.</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-toggle="tooltip" title="Яйце" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item46.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-toggle="tooltip" title="Яєчня" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item48.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>Гаряче****</p>
+        </div>
+        <p><span style="color:#3E8A00;">Яйця</span> можна варити або смажити для їжі. Самці яйцекладних тварин можуть запліднювати самок, що призводить до запліднення наступного яйця, відкладеного в гніздовий ящик. Запліднені яйця матимуть підказку про те, скільки часу вони будуть готові до вилуплення.</p>
+<a class="anchor" id="horses"></a>
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image41.png" alt="Recipe: tfc:leather_knapping/saddle">
+<p><span style="color:#3E8A00;">Коні</span> - це <a href="../mechanics/animal_husbandry.html#mammals">ссавці</a>, на яких можна їздити верхи, якщо приручити їх більш за 15%.</p>
+<p>Для верхової їзди потрібно мати <span style="color:#3E8A00;">сідло</span>. Його можна виготовити, користуючись <span style="color:#3E8A00;">обробкою</span> шкіри. їздити можна на <a href="../mechanics/animal_husbandry.html#mule">мулах</a>, <a href="../mechanics/animal_husbandry.html#donkey">віслюках</a>, та <a href="../mechanics/animal_husbandry.html#horses">конях</a>. Мули та віслюки вміють перевозити бочки абож скрині. Завантажити зе на тварину можна клавішою <span style="color:#b0b;">Right Click</span>, щоб зняти, то потрібно тримати <span style="color:#b0b;">Shift</span>. Ці ж комбінації, тримаючи відро, можна використовувати для зливу рідини з бочки. <br/>
+<br/>
+Більш детальна інформація про худобу на наступних сторінках.</p>
+<a class="anchor" id="pig"></a><h5>Свині</h5>
+<p><span style="color:#3E8A00;">Свині</span> живуть у м'яких лісах з <a href="../the_world/climate.html#temperature">температурою</a> від -10 до 35°C, та, принаймні 200mm <a href="../the_world/climate.html#rainfall">опадів</a>. Це <a href="../mechanics/animal_husbandry.html#mammals">ссавці</a> без особливих здібностей. Вони їдять будь-яку їжу, навіть якщо вона тухла. Свиня, при опоросі, може привести від 1 до 10 поросят через 19 днів після запліднення. Поросята дорослішають впрожовж 80 днів. Самка може заплідніти до 6 разів протягом життя.</p>
+<h5> </h5>
+<p>Свині</p>
+<a class="anchor" id="cow"></a><h5>Корови</h5>
+<p><span style="color:#3E8A00;">Корови</span> живуть при <a href="../the_world/climate.html#temperature">температурі</a> від -10 до 35°C, та 250мм <a href="../the_world/climate.html#rainfall">опадів</a>. Вони є <a href="../mechanics/animal_husbandry.html#dairy_animals">молочними тваринами</a>. Їдять лише <span style="color:#3E8A00;">зерно</span>, навіть згнивше. Корова народжує 1-2 теля через 58 днів після запліднення. Телята досягають зрілого віку за 192 дні. Як корову не доїти, то вона може отелитися 13 разів протягом зрілого життя. Якщо її доїти та не парувати, то вона даватиме молоко 128 разів. Доїти можна один раз на день.</p>
+<h5> </h5>
+<p>Корова</p>
+<a class="anchor" id="goat"></a><h5>Кози</h5>
+<p><span style="color:#3E8A00;">Кози</span> хивуть у помірному кліматі, з <a href="../the_world/climate.html#temperature">температурою</a> від -12 до 25°C, та 300мм <a href="../the_world/climate.html#rainfall">опадів</a>. Вони є  <a href="../mechanics/animal_husbandry.html#dairy_animals">молочними тваринами</a>. Годувати їх можна <span style="color:#3E8A00;">зерном</span>, <span style="color:#3E8A00;">фруктами</span>, та <span style="color:#3E8A00;">овочами</span>, навіть гнилими. Коза окочується через 32 дні, після зпліднення. Народжує 1-2 козеняти, які досягають зрілого віку за 96 днів. Як козу не доїти, то вона може запліднити 6 разів протягом зрілого життя. Якщо її доїти та не парувати, то вона даватиме молоко 60 разів. Доїти можна один раз на три дні.</p>
+<h5> </h5>
+<p>Коза</p>
+<a class="anchor" id="yak"></a><h5>Як</h5>
+<p><span style="color:#3E8A00;">Як</span> живе у холодному кліматі, з <a href="../the_world/climate.html#temperature">температурою</a> менш -11°C, та 100мм <a href="../the_world/climate.html#rainfall">опадів</a>. Є <a href="../mechanics/animal_husbandry.html#dairy_animals">молочною худобою</a>. їсть тільки свіже <span style="color:#3E8A00;">зерно</span>. Корова нарджує 1 теля через 64 дні, після зпліднення. Телята досягають зрілого віку за 180 днів. Як корову не доїти, то вона може запліднити 23 рази протягом зрілого життя. Якщо її доїти, та не парувати, то вона даватиме молоко 230 разів. Доїти можна щодня.</p>
+<h5> </h5>
+<p>Як</p>
+<a class="anchor" id="alpaca"></a><h5>Альпака</h5>
+<p><span style="color:#3E8A00;">Альпака</span> живе у помірному кліматі, з <a href="../the_world/climate.html#temperature">температурою</a> від -8 до 20°C, та 250мм <a href="../the_world/climate.html#rainfall">опадів</a>. Вона є <a href="../mechanics/animal_husbandry.html#wooly_animals">вовняною худобою</a>. Годувати треба <span style="color:#3E8A00;">зерномs</span> та <span style="color:#3E8A00;">фруктами</span>. Альпака окочується за 26 днів, після зпліднення. Народжує 1-2 ягняти, які досягають зрілого віку за 98 днів. Як альпаку не стригти, то вона може запліднити 13 разів протягом життя. Якщо її стригти, та не парувати, то вона, протягом життя даватиме вовну 128 разів. Стригти можна один раз на 6 днів.</p>
+<h5> </h5>
+<p>Альпака</p>
+<a class="anchor" id="sheep"></a><h5>Вівця</h5>
+<p><span style="color:#3E8A00;">Вівця</span> живе у більш сухому кліматі, з <a href="../the_world/climate.html#temperature">температурою</a> від 0 до 35°C, та від 70 до 300мм <a href="../the_world/climate.html#rainfall">опадів</a>. Вона є <a href="../mechanics/animal_husbandry.html#wooly_animals">вовняною худобою</a>. Годувати треба <span style="color:#3E8A00;">зерном</span>. Вівця окочується за 32 дні, після зпліднення. Народжує 1-2 ягняти, які досягають зрілого віку за 56 днів. Якщо вівцю не стригти, то вона може запліднити 6 разів протягом зрілого життя. Якщо її стригти, та не парувати, то вона даватиме вовну 60 разів. Стригти можна один раз на 9 днів.</p>
+<h5> </h5>
+<p>Вівця</p>
+<a class="anchor" id="musk_ox"></a><h5>Вівцебик</h5>
+<p><span style="color:#3E8A00;">Вівцебик</span> живе у холодному кліматі, з <a href="../the_world/climate.html#temperature">температурою</a> від -25 до 0°C, та 100мм <a href="../the_world/climate.html#rainfall">опадів</a>. Є <a href="../mechanics/animal_husbandry.html#wooly_animals">вовняною твариною</a>. Кормити треба <span style="color:#3E8A00;">зерном</span>. Корова народжує 1 теля, після 64 днів вагітності. Теля дорослішає 168 днів. Корова можуте народжувати 16 разів, як їх ніколи не стригти, або 160 разів, якщо їх ніколи не парувати. Кожні 96 годин можна стригти.</p>
+<h5> </h5>
+<p>Вівцебик</p>
+<a class="anchor" id="chicken"></a><h5>Кури</h5>
+<p><span style="color:#3E8A00;">Кури</span> з'являються у теплих лісах, з <a href="../the_world/climate.html#temperature">температурою</a> від 14°C, та від 225мм <a href="../the_world/climate.html#rainfall">опадів</a>. Вони є <a href="../mechanics/animal_husbandry.html#oviparous_animals">яйцекладними птахами</a>. Кормити їх можна <span style="color:#3E8A00;">зерном</span>, <span style="color:#3E8A00;">фруктами</span>, <span style="color:#3E8A00;">овочами</span>, та <span style="color:#3E8A00;">насінням</span>, навіть прогнившими. Запліднені яйця курей вилупляться за 8 днів. Курчата стануть дорослими за 24 дні. Курка може відкладати яйця кожні 30 годин, та 100 разів за своє зріле життя.</p>
+<h5> </h5>
+<p>Курка</p>
+<a class="anchor" id="duck"></a><h5>Качки</h5>
+<p><span style="color:#3E8A00;">Качки</span> з'являються на більшості рівнин, з <a href="../the_world/climate.html#temperature">температурою</a> від -25 до 30°C, та принаймні 100мм <a href="../the_world/climate.html#rainfall">опадів</a>. Вони є <a href="../mechanics/animal_husbandry.html#oviparous_animals">яйцекладними птахами</a>. Кормити їх можна <span style="color:#3E8A00;">зерном</span>, <span style="color:#3E8A00;">фруктами</span>, <span style="color:#3E8A00;">овочами</span>, <span style="color:#3E8A00;">хлібом</span>, та <span style="color:#3E8A00;">насінням</span>. Запліднені яйця качок вилупляться за 8 днів. Каченята стануть дорослими за 32 дні. Качка може відкладати яйця кожні 32 годин, та 72 разів за своє зріле життя.</p>
+<h5> </h5>
+<p>Качка</p>
+<a class="anchor" id="quail"></a><h5>Перепілка</h5>
+<p><span style="color:#3E8A00;">Перепілка</span> поважає холодний клімат, з <a href="../the_world/climate.html#temperature">температурою</a> від -15 до 15°C, та принаймні 200мм <a href="../the_world/climate.html#rainfall">опадів</a>. Вона є <a href="../mechanics/animal_husbandry.html#oviparous_animals">яйцекладним птахом</a>. Кормити її можна <span style="color:#3E8A00;">зерном</span>, <span style="color:#3E8A00;">фруктами</span>, <span style="color:#3E8A00;">овочами</span>, та <span style="color:#3E8A00;">насінням</span>, навіть прогнившим. Запліднені яйця перепілки вилупляться за 8 днів. Курчата стануть дорослими за 22 дні. Перепілка може відкладати яйця кожні 28 годин, та 48 разів за своє зріле життя.</p>
+<h5> </h5>
+<p>Перепілка</p>
+<a class="anchor" id="donkey"></a><h5>Віслюки</h5>
+<p><span style="color:#3E8A00;">Віслюку</span> подобаються вологі рівнини, з <a href="../the_world/climate.html#temperature">температурою</a> більше -15°C, та від 130 до 400мм <a href="../the_world/climate.html#rainfall">опадів</a>. Це різновид їздових <a href="../mechanics/animal_husbandry.html#horses">коней</a>, що можуть везти на собі <span style="color:#3E8A00;">скриню</span>. Кормити можна <span style="color:#3E8A00;">зерном</span> та <span style="color:#3E8A00;">фруктами</span>. Самка віслюка народжує лиш 1 лоша, після 19 днів вагітності. Лоша росте 80 днів до зрілості. Вагітнити самка може 6 разів за зріле життя</p>
+<h5> </h5>
+<p>Віслюк</p>
+<a class="anchor" id="mule"></a><h5>Мули</h5>
+<p><span style="color:#3E8A00;">Мул</span> живе на рівнинах з <a href="../the_world/climate.html#temperature">температурою</a> щонайменше -15°C, та від 130 до 400мм <a href="../the_world/climate.html#rainfall">опадів</a>. Вони є різновидом <a href="../mechanics/animal_husbandry.html#horses">коней</a>, що можуть возити на собі <span style="color:#3E8A00;">скриню</span>. Він є гібридом від схрещення <span style="color:#3E8A00;">кобили</span> з віслюком. Кормити мула можна <span style="color:#3E8A00;">зерном</span> та <span style="color:#3E8A00;">фруктами</span>. Мале лоша виростає за 80 днів до зрілого віку.</p>
+<h5> </h5>
+<p>Мул</p>
+<a class="anchor" id="horse"></a><h5>Коні</h5>
+<p><span style="color:#3E8A00;">Коні</span> з'являються на рівнинах з  <a href="../the_world/climate.html#temperature">температурою</a> вище -15°C, та від 130 до 400мм <a href="../the_world/climate.html#rainfall">опадів</a>. Вони є їздовими <a href="../mechanics/animal_husbandry.html#horses">конями</a>. Кормити їх треба <span style="color:#3E8A00;">зерном</span> та <span style="color:#3E8A00;">фруктами</span>. Кобила народжує одне лоша за 19 днів від запліднення. Мале лоша росте 80 днів до зрілості. За зріле життя кобила може запліднити 6 разів.</p>
+<h5> </h5>
+<p>Кінь</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

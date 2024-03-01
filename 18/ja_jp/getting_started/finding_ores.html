@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'ja_jp';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">日本語</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/getting_started\finding_ores.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\finding_ores.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\finding_ores.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\finding_ores.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\finding_ores.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\finding_ores.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\finding_ores.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\finding_ores.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">世界</a></li>
+<li><a class="text-muted" href="../getting_started/">はじめに</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./introduction.html">導入</a></li>
+<li><a class="text-muted" href="./firepit.html">火を起こす</a></li>
+<li><a class="text-muted" href="./pottery.html">粘土細工</a></li>
+<li><a class="text-muted" href="./pit_kiln.html">穴窯</a></li>
+<li><a class="text-muted" href="./finding_ores.html">鉱石、金属、鋳造</a></li>
+<li><a class="text-muted" href="./primitive_alloys.html">最初の合金</a></li>
+<li><a class="text-muted" href="./primitive_anvils.html">最初の金床</a></li>
+<li><a class="text-muted" href="./building_materials.html">建材</a></li>
+<li><a class="text-muted" href="./a_place_to_sleep.html">眠る場所</a></li>
+<li><a class="text-muted" href="./size_and_weight.html">大きさと重さ</a></li>
+<li><a class="text-muted" href="./food_and_water.html">食料と水</a></li></ul></li>
+<li><a class="text-muted" href="../mechanics/">高度な加工</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">はじめに</a> / <a class="text-muted" href="#">鉱石、金属、鋳造</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="中純度の自然銅">
+                <img src="..\..\_images\item13.png" alt="鉱石、金属、鋳造" />
+            </span>
+            <h4>鉱石、金属、鋳造</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>地面に落ちている棒、小枝、石ころのほかに、小さな鉱石が地面に散らばっているところに遭遇することがあります。 これらは、つるはしを入手する前の鉱石と金属の唯一の供給源の 1 つであるため、重要です。</p>
+<h5></h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>すべての小さな鉱石</p>
+<p>これらの小さな鉱石片は2つの目的に役立ちます。1つは溶かして金属の供給源となること、そしてより重要なこととして、近くのどこか (おそらく地下や地表近く) に鉱脈が存在することを示すことです。 鉱脈の位置は、後の <a href="../mechanics/prospecting.html">探鉱</a>で特定できます。<br/>
+<br/>
+ 12 種類の小さな鉱石と、そこから取り出せる金属・溶け込むものは次のページにリストされています。</p>
+<h5>小さな鉱石</h5>
+<p></p>
+<ul>
+	<li>自然銅 (<span style="color:#3E8A00;">銅</span>)</li>
+	<li>自然金 (<span style="color:#3E8A00;">金</span>)</li>
+	<li>赤鉄鉱 (<span style="color:#3E8A00;">鋳鉄</span>)</li>
+	<li>自然銀 (<span style="color:#3E8A00;">銀</span>)</li>
+	<li>錫石 (<span style="color:#3E8A00;">錫</span>)</li>
+	<li>輝蒼鉛鉱 (<span style="color:#3E8A00;">蒼鉛(ビスマス)</span>)</li>
+	<li>珪ニッケル鉱 (<span style="color:#3E8A00;">ニッケル</span>)</li>
+	<li>孔雀石 (<span style="color:#3E8A00;">銅</span>)</li>
+	<li>磁鉄鉱 (<span style="color:#3E8A00;">鋳鉄</span>)</li>
+	<li>褐鉄鉱 (<span style="color:#3E8A00;">鋳鉄</span>)</li>
+	<li>閃亜鉛鉱 (<span style="color:#3E8A00;">亜鉛</span>)</li>
+	<li>安四面銅鉱 (<span style="color:#3E8A00;">銅</span>)</li>
+</ul>
+<a class="anchor" id="casting"></a><h5>鋳造</h5>
+<p>TFCでは、各鉱石には特定の数の <span style="color:#3E8A00;">units</span>、または抽出できる実際の金属 <span style="color:#3E8A00;">mB (millibuckets)</span> が含まれています。 地表で見つかる小さな鉱石は最も品質が低く、<span style="color:#3E8A00;">10 mB</span> の金属しか得られません。 この金属を抽出するには、金属を <span style="color:#3E8A00;">溶解</span>させ、<span style="color:#3E8A00;">鋳造</span> と呼ばれるプロセスを使用してツールに加工する必要があります。</p>
+<p>必要なもの:<br/>
+</p>
+<ul>
+	<li><a href="../getting_started/pottery.html#vessel">小さな壺</a></li>
+	<li><a href="../getting_started/pit_kiln.html">穴窯</a>に必要な材料。 </li>
+	<li>溶融金属を鋳造するための 1 つ以上の <a href="../getting_started/pottery.html#mold">鋳造型。</li>
+	<li>鋳造に適した合計 100 mB 以上の金属 : <span style="color:#3E8A00;">銅</span></a>、その 3 つの鉱石形態のうちの 1 つまたは複数。</li>
+</ul><p><br/>
+<br/>
+<em>注: 鋳造は、一部の <a href="../getting_started/primitive_alloys.html"> 合金 </a></em>でも行うことができます。</p>
+<p>まず、<span style="color:#3E8A00;">小さな壺</span> を開け、中に鉱石を入れます。 鉱石に含まれる金属の総量を注意深く数えてください(1回の鋳造ごとに100mB)。 次に、中に小さな壺を入れた <a href="../getting_started/pit_kiln.html">穴窯</a> を構築する必要があります(溶鉱炉も使用可能)。 容器が加熱されると、中の鉱石が溶け、溶けた金属の入った壺が残ります。<br/>
+<br/>
+容器を取り出し、<span style="color:#b0b;">Right Click</span>してください。 、<span style="color:#3E8A00;">鋳造GUI</span>を開きます。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image5.png" alt="tfc:textures/gui/book/gui/casting.png">
+<div style="text-align: center;"><p>鋳造GUI。</p>
+</div><p>鋳造インターフェイスを開いた状態で、空の焼成済み型を中央のスロットに置きます。 金属が液体のままである限り、型が満たされていきます。 （金属が時間経過で冷えて固まった場合は、溶鉱炉または穴窯で再加熱できます。）型がいっぱいになったら、型を取り出して放置し冷まします(水の中に入れることで素早く冷却可能)。 冷めたら、型を使用するか、クラフトすることで、型とその中身を取り出すことができます。</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="銅のツルハシの頭" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item15.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item16.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="銅のツルハシ" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item14.png" />
+                </div>
+            </div>
+        </div>
+        <p>ツールヘッドを手に持って、最初のツールを作成できるようになりました。 ツールの頭を作るのに十分な銅(100mB分)を見つけ、ツールの型を焼成し、穴窯または溶鉱炉を使用して鉱石を溶かしツールの頭を鋳造します。 それを棒とクラフトすればツールの完成です！</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

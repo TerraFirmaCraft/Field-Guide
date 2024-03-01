@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'pt_br';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portuguese (Brazil)</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/getting_started\finding_ores.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\finding_ores.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\finding_ores.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\finding_ores.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\finding_ores.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\finding_ores.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\finding_ores.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\finding_ores.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">O mundo</a></li>
+<li><a class="text-muted" href="../getting_started/">Começando</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./introduction.html">Introdução</a></li>
+<li><a class="text-muted" href="./firepit.html">Pits de fogo</a></li>
+<li><a class="text-muted" href="./pottery.html">Cerâmica</a></li>
+<li><a class="text-muted" href="./pit_kiln.html">Fornos de poço</a></li>
+<li><a class="text-muted" href="./finding_ores.html">Minérios, metal e elenco</a></li>
+<li><a class="text-muted" href="./primitive_alloys.html">Ligas primitivas</a></li>
+<li><a class="text-muted" href="./primitive_anvils.html">Anvils primitivos</a></li>
+<li><a class="text-muted" href="./building_materials.html">Building Materials</a></li>
+<li><a class="text-muted" href="./a_place_to_sleep.html">Um lugar para dormir</a></li>
+<li><a class="text-muted" href="./size_and_weight.html">Tamanho e peso</a></li>
+<li><a class="text-muted" href="./food_and_water.html">Comida e água</a></li></ul></li>
+<li><a class="text-muted" href="../mechanics/">Mecânica avançada</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">Começando</a> / <a class="text-muted" href="#">Minérios, metal e elenco</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Cobre nativo">
+                <img src="..\..\_images\item13.png" alt="Minérios, metal e elenco" />
+            </span>
+            <h4>Minérios, metal e elenco</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>Além de paus, galhos e pedras no chão, em suas viagens, você pode encontrar pequenos pedaços de minérios espalhados pelo chão. Isso é importante, pois são uma das únicas fontes de minério e metal antes de obter uma picareta.</p>
+<h5></h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Todos os pequenos pedaços de minério</p>
+<p>Essas pequenas peças de minério podem servir a dois propósitos: eles podem fornecer uma fonte de metal e, mais importante, indicam a presença de uma veia maior de minério em algum lugar nas proximidades, provavelmente subterrâneo e próximo à superfície. Certifique -se de observar onde você encontra minérios pequenos, pois a localização das veias de minério será útil mais tarde durante <a href="../mechanics/prospecting.html">Prospecting</a>.<br/>
+<br/>
+Os doze tipos de minérios pequenos e o metal em que podem ser derretidos estão listados na próxima página.</p>
+<h5>Minérios pequenos</h5>
+<p></p>
+<ul>
+	<li>Cobre nativo (<span style="color:#3E8A00;">Copper</span>)</li>
+	<li>Ouro nativo (<span style="color:#3E8A00;">Gold</span>)</li>
+	<li>Hematita (<span style="color:#3E8A00;">Cast Iron</span>)</li>
+	<li>Prata nativa (<span style="color:#3E8A00;">Silver</span>)</li>
+	<li>Cassiterite (<span style="color:#3E8A00;">Tin</span>)</li>
+	<li>Bismutinita (<span style="color:#3E8A00;">Bismuth</span>)</li>
+	<li>Garnings (<span style="color:#3E8A00;">Nickel</span>)</li>
+	<li>MaMalaquita<span style="color:#3E8A00;">Cobre</span>)</li>
+	<li>Magnetita (<span style="color:#3E8A00;">Cast Iron</span>)</li>
+	<li>Limonite (<span style="color:#3E8A00;">Cast Iron</span>)</li>
+	<li>Sphalerite (<span style="color:#3E8A00;">Zinc</span>)</li>
+	<li>Tetrahedrite (<span style="color:#3E8A00;">Copper</span>)</li>
+</ul>
+<a class="anchor" id="casting"></a><h5>Elenco</h5>
+<p>No Terrafirmacraft, os minérios contêm um certo número de <span style="color:#3E8A00;">units</span>, or <span style="color:#3E8A00;">mB (millibuckets)</span> de metal real que pode ser extraído. Pequenos minérios como este encontrados na superfície são a qualidade mais baixa e apenas fornecem <span style="color:#3E8A00;">10 mB</span> de metal. Para extrair este metal, precisa ser <span style="color:#3E8A00;">melted</span>, e transformados em ferramentas usando um processo chamado <span style="color:#3E8A00;">casting</span>.</p>
+<p>Você precisará:<br/>
+</p>
+<ul>
+	<li>A <a href="../getting_started/pottery.html#vessel">Pequeno vaso</a></li>
+	<li>Materiais suficientes para um <a href="../getting_started/pit_kiln.html">Pit Kiln</a>.</li>
+	<li>Um ou mais <a href="../getting_started/pottery.html#mold">Mold(s)</a> lançar o metal fundido.</li>
+	<li>E finalmente, pelo menos 100 MB total de um metal adequado para o elenco: <span style="color:#3E8A00;">Copper</span>, em um ou mais de suas três formas de minério.</li>
+</ul><p><br/>
+<br/>
+<em>Nota: a fundição também pode ser feita com alguns <a href="../getting_started/primitive_alloys.html">Alloys</a></em></p>
+<p>Primeiro, abra o <span style="color:#3E8A00;">Small Vessel</span> e coloque os minérios dentro. Conte com cuidado a quantidade total de metal nos minérios! Então, você precisa construir um <a href="../getting_started/pit_kiln.html">Pit Kiln</a> com a pequena embarcação cheia dentro. À medida que o navio aquece, os minérios dentro dela derreterão e você ficará com um vaso de metal fundido.<br/>
+<br/>
+Take the vessel out and <span style="color:#b0b;">Right Click</span> it, to open the <span style="color:#3E8A00;">Casting</span> interface.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image5.png" alt="tfc:textures/gui/book/gui/casting.png">
+<div style="text-align: center;"><p>A interface de fundição.</p>
+</div><p>Com a interface de fundição aberta, coloque seu molde vazio no slot central. Ele preencherá enquanto o navio permanecer líquido. (Se o vaso solidificar, ele poderá ser reaquecido em outro forno do poço.) Quando o molde estiver cheio, ele poderá ser removido e deixado para esfriar. Uma vez frio, o molde e seu conteúdo podem ser extraídos usando o molde ou colocando -o na grade de criação.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="Copper Pickaxe Head" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item15.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item16.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Copper Pickaxe" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item14.png" />
+                </div>
+            </div>
+        </div>
+        <p>Com uma cabeça de ferramenta na mão, agora você pode criar sua primeira picareta! Encontre cobre suficiente para fazer uma cabeça de picareta, disparar um molde de picareta e derreter o minério usando um forno e depois lance a cabeça. Bate -o em um graveto e pronto!</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

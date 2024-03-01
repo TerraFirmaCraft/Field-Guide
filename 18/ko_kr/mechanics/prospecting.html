@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft 도감</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'ko_kr';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft 도감</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">한국어</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/mechanics\prospecting.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\prospecting.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\prospecting.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\prospecting.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\prospecting.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\prospecting.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\prospecting.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\prospecting.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">색인</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API 뮨서</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">버전 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>목차</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">세계</a></li>
+<li><a class="text-muted" href="../getting_started/">시작하기</a></li>
+<li><a class="text-muted" href="../mechanics/">심화 기술</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./advanced_building_materials.html">발전된 재료</a></li>
+<li><a class="text-muted" href="./animal_husbandry.html">축산업</a></li>
+<li><a class="text-muted" href="./anvils.html">모루</a></li>
+<li><a class="text-muted" href="./aqueducts.html">수로</a></li>
+<li><a class="text-muted" href="./armor.html">갑옷</a></li>
+<li><a class="text-muted" href="./barrels.html">통</a></li>
+<li><a class="text-muted" href="./bellows.html">풀무</a></li>
+<li><a class="text-muted" href="./blast_furnace.html">용광로</a></li>
+<li><a class="text-muted" href="./bloomery.html">괴철로</a></li>
+<li><a class="text-muted" href="./bread.html">빵</a></li>
+<li><a class="text-muted" href="./charcoal_forge.html">숯불 노</a></li>
+<li><a class="text-muted" href="./charcoal_pit.html">숯 구덩이</a></li>
+<li><a class="text-muted" href="./chisel.html">끌</a></li>
+<li><a class="text-muted" href="./composter.html">Composter</a></li>
+<li><a class="text-muted" href="./crops.html">작물</a></li>
+<li><a class="text-muted" href="./crucible.html">도가니</a></li>
+<li><a class="text-muted" href="./dairy.html">유제품</a></li>
+<li><a class="text-muted" href="./damage_types.html">피해 종류</a></li>
+<li><a class="text-muted" href="./decay.html">음식 보존</a></li>
+<li><a class="text-muted" href="./fertilizers.html">비료</a></li>
+<li><a class="text-muted" href="./fire_clay.html">내화점토</a></li>
+<li><a class="text-muted" href="./fishing.html">낚시</a></li>
+<li><a class="text-muted" href="./flux.html">플럭스</a></li>
+<li><a class="text-muted" href="./gems.html">보석</a></li>
+<li><a class="text-muted" href="./grill.html">모닥불과 석쇠</a></li>
+<li><a class="text-muted" href="./heating.html">가열하기</a></li>
+<li><a class="text-muted" href="./hydration.html">작물 수화</a></li>
+<li><a class="text-muted" href="./lamps.html">램프</a></li>
+<li><a class="text-muted" href="./leather_making.html">가죽 제작</a></li>
+<li><a class="text-muted" href="./lighting.html">광원</a></li>
+<li><a class="text-muted" href="./minecarts.html">Minecarts</a></li>
+<li><a class="text-muted" href="./panning.html">사금질</a></li>
+<li><a class="text-muted" href="./papermaking.html">Papermaking</a></li>
+<li><a class="text-muted" href="./pets.html">반려동물</a></li>
+<li><a class="text-muted" href="./pot.html">모닥불과 냄비</a></li>
+<li><a class="text-muted" href="./powderkegs.html">화약통</a></li>
+<li><a class="text-muted" href="./prospecting.html">광물 탐색</a></li>
+<li><a class="text-muted" href="./quern.html">맷돌</a></li>
+<li><a class="text-muted" href="./salad.html">샐러드</a></li>
+<li><a class="text-muted" href="./sandwiches.html">샌드위치</a></li>
+<li><a class="text-muted" href="./scribing_table.html">필기대</a></li>
+<li><a class="text-muted" href="./sluices.html">세광통</a></li>
+<li><a class="text-muted" href="./steel.html">강철</a></li>
+<li><a class="text-muted" href="./support_beams.html">지지대</a></li>
+<li><a class="text-muted" href="./weaving.html">직조</a></li>
+<li><a class="text-muted" href="./wooden_buckets.html">나무 양동이</a></li></ul></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">심화 기술</a> / <a class="text-muted" href="#">광물 탐색</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="연철 탐색기">
+                <img src="..\..\_images\item167.png" alt="광물 탐색" />
+            </span>
+            <h4>광물 탐색</h4>
+        </div>
+        </h4>
+                <hr>
+                <p><a href="../getting_started/finding_ores.html">작은 금속 조각</a>들, 기억하시나요? 더 많은 광석들을 찾기 위해서는 광범위한 탐색이 필요할 지도 모릅니다. 이를 위해서는 <a href="../the_world/ores_and_minerals.html">광석과 광물</a>들과 굉장히 익숙해져야 합니다. 당신이 특정 자원을 찾고 있다면, 해당 광석이 생성되는 암석의 종류를 세계에서 찾아야 합니다.</p>
+<p>작은 조각을 줍는 것만으로 성에 차지 않는다면, 이제 광맥을 탐색할 시간입니다.<br/>
+</p>
+<ul>
+	<li>작은 광석 조각들은 광맥이 가로 15블록, 세로 35블록 이내에 있을 때 나타납니다. 당신이 광석 조각들의 중앙을 찾는다면, 광맥이 당신 바로 아래에 있을 확률이 높습니다.</li>
+	<li>땅에 드러난 광맥은 멀리서 볼 수 있는 절벽이나 수역에서 발견할 수 있습니다.</li>
+</ul>
+<a class="anchor" id="propick"></a>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="구리 탐색기">
+                <img src="..\..\_images\item168.png" alt="탐색기" />
+            </span>
+            <h5>탐색기</h5>
+        </div>
+        <p>당신이 (조각을 찾을 수 없는) 광석이나 광물의 광맥을 찾고 있고 위치를 전혀 추측할 수 없다면, <span style="color:#3E8A00;">탐색기</span>를 사용할 수 있습니다. 탐색기는 사용한 블록의 25x25x25 주변 범위에 있는 광석의 양과 종류를 표시합니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image26.png" alt="Recipe: tfc:clay_knapping/propick_head_mold">
+<p>탐색기를 만들려면 <a href="../getting_started/pottery.html">점토</a>로 위와 같은 모양을 만들어야 합니다.</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-toggle="tooltip" title="굽지 않은 탐색기 머리 금형" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item169.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-toggle="tooltip" title="탐색기 머리 금형" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item170.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-yellow">
+            <p>연노랑****</p>
+        </div>
+        <p>금형의 <a href="../getting_started/pottery.html">모양을 제작</a>했다면 <span style="color:#3E8A00;">탐색기 머리 금형</span>을 만들기 위해서 <a href="../mechanics/heating.html">구워져야</a> 합니다.<br/>
+<br/>
+탐색기 머리를 만들려면 녹은 금속을 금형에 담아 <a href="../getting_started/finding_ores.html#casting">주조</a>해야 합니다.</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-toggle="tooltip" title="연철 주괴" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item171.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-toggle="tooltip" title="연철 탐색기 머리" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item172.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>티어 III</p>
+        </div>
+        <p>탐색기 머리는 또한 금속 <span style="color:#3E8A00;">주괴</span>를 <a href="../mechanics/anvils.html">모루</a>에서 <a href="../mechanics/anvils.html#working">단조</a>하여 만들 수도 있습니다.<br/>
+<br/>
+탐색기는 탐색기 머리를 막대기와 조합해 만들 수 있습니다.</p>
+<p>탐색기는 실제로 없는 광물이 있다고 탐색하지는 않습니다. 다만, 범위 내에 광맥이 있는 경우에도 없다고 표시되는 경우는 있습니다. 높은 티어의 탐색기일수록 이런 효과가 줄어들거나 아예 사라집니다.<br/>
+<br/>
+하나의 블록에 사용하면 같은 티어의 탐색기는 광석이 제거되지 않는 한 항상 같은 결과를 나타냅니다.<br/>
+<br/>
+만일 주변에 여러 가지의 광맥이 존재하더라도, 탐색기에서는 하나의 광맥만이 표시됩니다.</p>
+<p>탐색기를 사용하면 이 결과들 중 하나가 나타납니다.<br/>
+</p>
+<ul>
+	<li>아무것도 찾지 못 함. (거짓일 가능성 있음)</li>
+	<li>광물의 흔적</li>
+	<li>작은 광맥</li>
+	<li>중간 크기 광맥</li>
+	<li>큰 광맥</li>
+	<li>아주 큰 광맥</li>
+</ul><p><br/>
+아주 큰 광맥은 최소 80개 이상의 블록으로 이루어집니다.</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

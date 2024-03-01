@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'uk_ua';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Українська мова</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/the_world\wild_animals.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world\wild_animals.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world\wild_animals.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world\wild_animals.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world\wild_animals.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world\wild_animals.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world\wild_animals.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world\wild_animals.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">Світ</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./biomes.html">Біоми</a></li>
+<li><a class="text-muted" href="./waterways.html">Водойми</a></li>
+<li><a class="text-muted" href="./geology.html">Геологія</a></li>
+<li><a class="text-muted" href="./ores_and_minerals.html">Руди та мінерали</a></li>
+<li><a class="text-muted" href="./climate.html">Календар та клімат</a></li>
+<li><a class="text-muted" href="./flora.html">Флора</a></li>
+<li><a class="text-muted" href="./wild_crops.html">Дикі культури</a></li>
+<li><a class="text-muted" href="./wild_fruits.html">Дикоростучі фрукти</a></li>
+<li><a class="text-muted" href="./wild_animals.html">Дикі тварини</a></li></ul></li>
+<li><a class="text-muted" href="../getting_started/">Починаємо</a></li>
+<li><a class="text-muted" href="../mechanics/">Розширена механіка</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">Світ</a> / <a class="text-muted" href="#">Дикі тварини</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Середня свіжа шкура">
+                <img src="..\..\_images\item1.png" alt="Дикі тварини" />
+            </span>
+            <h4>Дикі тварини</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>Світ TFC наповнений тваринами. Деякі тварини будуть тобі допомагати, а деякі є неймовірно небезпечними. Цей розділ про диких тварин. Щоб отримати інформацію про худобу - тварин, які можуть дати тобі корисні речі та їжу, переглянь сторінку <a href="../mechanics/animal_husbandry.html">тваринництво</a>.</p>
+<p>Тварин можна поділити на кілька категорій: <a href="../the_world/wild_animals.html#predators">хижаки</a>, <a href="../the_world/wild_animals.html#prey">здобич</a>, та <a href="../the_world/wild_animals.html#aquatic">водяні</a>.<br/>
+<br/>
+Наступні кілька сторінок детальніше опишуть кожну з цих категорій тварин.</p>
+<a class="anchor" id="predators"></a><h5>Хижаки</h5>
+<p><span style="color:#3E8A00;">Хижаки</span> - це тварини, які можуть атакувати гравця. Вони є або <span style="color:#3E8A00;">нічними</span>, що полюють вночі, або <span style="color:#3E8A00;">денними</span>, що полюють вдень. Хижаки можуть бути нейтральними або ворожими, залежно від того, чи давно вони вполювали здобич. У хижаків є домашня територія, яку вони будуть захищати. Якщо ти втечеш досить далеко від хижака, він припинить погоню і повернеться додому.</p>
+<h5>Ведмідь білий</h5>
+<p>Білий ведмідь живе у найхолодніших регіонах, <a href="../the_world/climate.html#temperature">температурою</a> нижче 10°C, при <a href="../the_world/climate.html#rainfall">кількості опадів</a> від 100мм.</p>
+<h5>Ведмідь грізлі</h5>
+<p>Ведмідь грізлі живе в лісах помірного клімату, з <a href="../the_world/climate.html#temperature">температурою</a> від -15 дo 15°C, та принаймні 200мм <a href="../the_world/climate.html#rainfall">опадів</a>.</p>
+<h5>Ведмідь чорний</h5>
+<p>Чорний ведмідь живе у лісах із теплішим кліматом, <a href="../the_world/climate.html#temperature">температурою</a> від 5 до 20°C, та близько 250мм <a href="../the_world/climate.html#rainfall">опадів</a>.</p>
+<h5>Пума</h5>
+<p>Пума віддає перевагу найбільш помірному клімату з <a href="../the_world/climate.html#temperature">температурою</a> від -10 до 21°C і щонайменше 150мм <a href="../the_world/climate.html#rainfall">опадів</a>.</p>
+<h5>Пантера</h5>
+<p>Пантера живе у помірному кліматі з <a href="../the_world/climate.html#temperature">температурою</a> від -10 до 21°C та кількістю <a href="../the_world/climate.html#rainfall">опадів</a> не менше 150мм.</p>
+<h5>Лев</h5>
+<p>Лев оселився на рівнинах із середньою <a href="../the_world/climate.html#temperature">температурою</a> не менше 16°C, та кількістю  <a href="../the_world/climate.html#rainfall">опадів</a> від 50 до 300мм.</p>
+<h5>Шаблезубий тигр</h5>
+<p>Шаблезубий тигр живе на рівнинах із середньою <a href="../the_world/climate.html#temperature">температурою</a> вище 0°C, та <a href="../the_world/climate.html#rainfall">опадами</a> більш за 250мм.</p>
+<p>Вовки зустрічаються біомах з <a href="../the_world/climate.html#temperature">температурою</a> до 22°C, та кількістю <a href="../the_world/climate.html#rainfall">опадів</a> від 150 до 420мм. Полюють зграями. Як годувати вовка, то можна його приручити.</p>
+<p>Люті вовки з'являються у регіонах з <a href="../the_world/climate.html#temperature">температурою</a> нижче 0°C, та кількістю <a href="../the_world/climate.html#rainfall">опадів</a> від 150 до 420мм. Полюють зграями. Вони не піддаються прирученню.</p>
+<p>Оцелот полює на дрібних тварин. Мешкає в будь-яких лісах з  <a href="../the_world/climate.html#temperature">температурою</a> від 15 до 30°C, та <a href="../the_world/climate.html#rainfall">опадами</a> 300 - 500мм. Оцелота можна приручити, він стане прирученим <a href="../mechanics/pets.html">котом або кішкою</a>. Оцелоти їдять сиру рибу.</p>
+<hr><a class="anchor" id="prey"></a><h5>Здобич</h5>
+<p><span style="color:#3E8A00;">Здобич</span> - це дикі тварини. Вони бояться хижаків та гравця. Вправно тікають від небезпеки, але зазвичай не можуть дати відсіч. Деякі травоядні полюбляють перекушувати врожаєм.</p>
+<h5>Дикий кабан</h5>
+<p>Дикий кабан живе на рівнинах з <a href="../the_world/climate.html#temperature">температурою</a> нижче 25°C та вище -5°C, з кількістю <a href="../the_world/climate.html#rainfall">опадів</a> між 130 та 400мм.</p>
+<h5>Кролик</h5>
+<p>Кролик гризе моркву і капусту. Живе по всьому світі, змінюючи хутро залежно від клімату. Йому потрібно лиш 15мм <a href="../the_world/climate.html#rainfall">опадів</a>.</p>
+<h5>Лисиця</h5>
+<p>Лисиця їсть ягоди з кущів. Зустрічають у лісах з <a href="../the_world/climate.html#temperature">температурою</a> нижче 25°C, та кількістю <a href="../the_world/climate.html#rainfall">опадів</a> між 130 та 400мм.</p>
+<p>Для появи оленя достатньо <a href="../the_world/climate.html#temperature">температури</a> нижче 25°C, але вище -15°C, та <a href="../the_world/climate.html#rainfall">опадів</a> від 130 до 400мм.</p>
+<p>Лосю треба <a href="../the_world/climate.html#temperature">температура</a> між -15°C та 10°C, з <a href="../the_world/climate.html#rainfall">опадами</a> від 150 до 300мм.</p>
+<p>Рябчики живуть при <a href="../the_world/climate.html#temperature">температурі</a> від -12°C до 13°C, при <a href="../the_world/climate.html#rainfall">опадах</a> від 150 до 400мм.</p>
+<p>Фазану потрібна <a href="../the_world/climate.html#temperature">температура</a> між -5°C та 17°C, з кількістю <a href="../the_world/climate.html#rainfall">опадів</a> від 100 до 300мм.</p>
+<p>Індичці треба <a href="../the_world/climate.html#temperature">температура</a> від 0°C до 17°C, та <a href="../the_world/climate.html#rainfall">опади</a> між 250 та 450мм.</p>
+<hr><a class="anchor" id="aquatic"></a><h5>Водяні тварини</h5>
+<p><span style="color:#3E8A00;">Водяні тварини</span> - це широка категорія, яка охоплює низку різних видів поведінки. Вони можуть бути <span style="color:#3E8A00;">мешканцями берега</span>, <span style="color:#3E8A00;">рибами</span>, <span style="color:#3E8A00;">молюсками</span>, або ж <span style="color:#3E8A00;">великими водяними істотами</span>.</p>
+<p><span style="color:#3E8A00;">Берегові тварини</span> живуть лише на морських берегах і проводять частину свого дня у воді, а частину гуляють по пляжу. Це цікаві істоти, які йдуть за гравцем, але їх неможливо приручити.</p>
+<h5>Пінгвін</h5>
+<p>Пінгвін обожнює найхолодніші пляжі, з <a href="../the_world/climate.html#temperature">температурою</a> нижче -14°C та кількістю <a href="../the_world/climate.html#rainfall">опадів</a> не менше 75мм.</p>
+<h5>Морська черепаха</h5>
+<p>Морській черепасі до вподоби тепла вода, <a href="../the_world/climate.html#temperature">температурою</a> вище 21°C та кількість <a href="../the_world/climate.html#rainfall">опадів</a> більше за 250мм.</p>
+<h5>Риба</h5>
+<p><span style="color:#3E8A00;">Риби</span> - маленькі істоти, що мешкають у воді. Більшість з них можна <a href="../mechanics/fishing.html">ловити</a>. Деякі віддають перевагу океанам, деякі річкам або озерам.</p>
+<h5>Тріска</h5>
+<p>Тріска віддає перевагу холоднішим океанам, <a href="../the_world/climate.html#temperature">температура</a> яких нижче 18°C. Її можна ловити.</p>
+<h5>Риба фугу</h5>
+<p>Риба фугу живе в будь-якому океані, де є принаймні  <a href="../the_world/climate.html#temperature">температура</a> вища за 10°C.</p>
+<h5>Медуза</h5>
+<p>Медузи живуть у теплих океанах,  <a href="../the_world/climate.html#temperature">температурою</a> не менш ніж 18°C.</p>
+<h5>Тропічна риба</h5>
+<p>Тропічні риби живуть у теплих океанах, з <a href="../the_world/climate.html#temperature">температурою</a> не нижче 18°C.</p>
+<h5>Лосось</h5>
+<p>Лосось живе у річці або в озері з  <a href="../the_world/climate.html#temperature">температурою</a> вище -5°C.</p>
+<h5>Синьозябровий окунь</h5>
+<p>Синьозябровий окунь мешкає в річках та озерах з <a href="../the_world/climate.html#temperature">температурою</a> між -10°C та 26°C.</p>
+<a class="anchor" id="shellfish"></a><h5>Молюски</h5>
+<p><span style="color:#3E8A00;">Молюски</span> - це невеликі тварини, які живуть на дні водойм. Їх не можна ловити, але вони скидають мушлі, які можна з’їсти або зробити з них <a href="../mechanics/flux.html">флюс</a>. Молюски можуть бути <a href="../mechanics/fishing.html">наживкою</a> для риб.</p>
+<h5>Рівноніг</h5>
+<p>Рівноногі мешкають у найглибших частинах океанів <a href="../the_world/climate.html#temperature">температурою</a> нижче ніж 14°C.</p>
+<h5>Лобстер</h5>
+<p>Лобстери живуть в будь-якому океані, з <a href="../the_world/climate.html#temperature">температурою</a> нижче 21°C.</p>
+<h5>Раки</h5>
+<p>Рак живе у річці, або озері. Йому потрібна <a href="../the_world/climate.html#temperature">температура</a> більша за 5°C та кількість <a href="../the_world/climate.html#rainfall">опадів</a> не менше 125мм.</p>
+<h5>Краб-підкова</h5>
+<p>Підковоподібні краби мешкають в океанах з помірним кліматом, <a href="../the_world/climate.html#temperature">температурою</a> від 10 до 21°C та кількістю <a href="../the_world/climate.html#rainfall">опадів</a> менше 400мм.</p>
+<h5>Великі водяні істоти</h5>
+<p><span style="color:#3E8A00;">Великі водяні істоти</span> - це великі тварини, які живуть у великих водоймах. Деякі з них полюють на рибу. З цих істот можна вполювати <a href="../mechanics/lamps.html#tallow">сало</a>, що перетворюється у паливо для ламп.</p>
+<h5>Косатка</h5>
+<p>Косатки живуть у глибоких океанах з <a href="../the_world/climate.html#temperature">температурою</a> не вище за 19°C та кількістю <a href="../the_world/climate.html#rainfall">опадів</a> не менше 100мм.</p>
+<h5>Дельфін</h5>
+<p>Дельфіни живуть у глибоких океанах з <a href="../the_world/climate.html#temperature">температурою</a> не нижче 10°C та кількістю <a href="../the_world/climate.html#rainfall">опадів</a> не менш ніж 200мм.</p>
+<h5>Ламантин</h5>
+<p>Ламантин живе в будь-якому теплому озері, з <a href="../the_world/climate.html#temperature">температурою</a> вище 20°C та кількістю <a href="../the_world/climate.html#rainfall">опадів</a> не більше 300мм.</p>
+<h5>Кальмар</h5>
+<p>Кальмари можуть мешкати в будь-якому глибокому океані. З них полюють <span style="color:#3E8A00;">чорнильні мішечки</span>. Вони також випускають чорнило в гравця, коли той наближається занадто близько. Дехто каже, що кальмари в глибоких, незвіданих печерах мають дивні властивості.</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

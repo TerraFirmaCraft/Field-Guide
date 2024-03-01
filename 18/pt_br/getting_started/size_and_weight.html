@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'pt_br';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portuguese (Brazil)</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/getting_started\size_and_weight.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\size_and_weight.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\size_and_weight.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\size_and_weight.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\size_and_weight.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\size_and_weight.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\size_and_weight.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\size_and_weight.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">O mundo</a></li>
+<li><a class="text-muted" href="../getting_started/">Começando</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./introduction.html">Introdução</a></li>
+<li><a class="text-muted" href="./firepit.html">Pits de fogo</a></li>
+<li><a class="text-muted" href="./pottery.html">Cerâmica</a></li>
+<li><a class="text-muted" href="./pit_kiln.html">Fornos de poço</a></li>
+<li><a class="text-muted" href="./finding_ores.html">Minérios, metal e elenco</a></li>
+<li><a class="text-muted" href="./primitive_alloys.html">Ligas primitivas</a></li>
+<li><a class="text-muted" href="./primitive_anvils.html">Anvils primitivos</a></li>
+<li><a class="text-muted" href="./building_materials.html">Building Materials</a></li>
+<li><a class="text-muted" href="./a_place_to_sleep.html">Um lugar para dormir</a></li>
+<li><a class="text-muted" href="./size_and_weight.html">Tamanho e peso</a></li>
+<li><a class="text-muted" href="./food_and_water.html">Comida e água</a></li></ul></li>
+<li><a class="text-muted" href="../mechanics/">Mecânica avançada</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">Começando</a> / <a class="text-muted" href="#">Tamanho e peso</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image36.png" alt="Tamanho e peso" />
+            </span>
+            <h4>Tamanho e peso</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>Cada item tem um <span style="color:#3E8A00;">Tamanho ⇲</span> e <span style="color:#3E8A00;">Peso ⚖</span>. O tamanho e o peso de um item são mostrados no <span style="color:#3E8A00;">dica de ferramenta</span>, que aparece quando você passa o mouse sobre ele com o mouse.</p>
+<h5>Tamanho ⇲</h5>
+<p>O tamanho determina qual bloqueio de armazenamento um item pode caber dentro de.<br/>
+</p>
+<ul>
+	<li><span style="color:#3E8A00;">Pequena</span> itens se encaixam em qualquer coisa.</li>
+	<li><span style="color:#3E8A00;">Muito pequeno</span> itens se encaixam em qualquer coisa.</li>
+	<li><span style="color:#3E8A00;">Pequena</span> Os itens são o maior item que se encaixa <a href="../mechanics/decay.html#small_vessels">Small Vessels</a>.</li>
+	<li><span style="color:#3E8A00;">Normal</span> Os itens são os maiores que se encaixam <a href="../mechanics/decay.html#small_vessels">Large Vessels</a>.</li>
+</ul>
+<p></p>
+<ul>
+	<li><span style="color:#3E8A00;">Grande</span> Os itens são os maiores que cabem nos baús. <a href="../getting_started/pit_kiln.html">Fornos de poço</a> pode segurar quatro.</li>
+	<li><span style="color:#3E8A00;">Muito grande</span> Os itens são colocados sozinhos em fornos.</li>
+	<li><span style="color:#3E8A00;">Enorme</span> Os itens não se encaixam em nenhum dispositivo de armazenamento normal. Eles também contam para sobrecarregar.</li>
+</ul>
+<h5>Peso ⚖</h5>
+<p>O peso determina o tamanho máximo da pilha dos itens.<br/>
+</p>
+<ul>
+	<li><span style="color:#3E8A00;">Muito Leve</span>: 64</li>
+	<li><span style="color:#3E8A00;">Leve</span>: 32</li>
+	<li><span style="color:#3E8A00;">Média</span>: 16</li>
+	<li><span style="color:#3E8A00;">Pesada</span>: 4</li>
+	<li><span style="color:#3E8A00;">Muito pesado</span>: 1</li>
+</ul><p><br/>
+A maioria dos itens são <span style="color:#3E8A00;">Muito Leve</span> por padrão. Os blocos são geralmente <span style="color:#3E8A00;">Média</span>.</p>
+<p><span style="color:#3E8A00;">Sobrecarregando</span> acontece quando você carrega itens que são ambos <span style="color:#3E8A00;">Enorme</span> e <span style="color:#3E8A00;">Muito pesado</span>. Carregando apenas um <span style="color:#3E8A00;">Enorme, muito pesado</span> O item faz com que você fique exausto, tornando sua comida mais rápida. Carregar dois ou mais dá a você o <span style="color:#3E8A00;">Sobrecarregada</span> Efeito de status, o que torna o movimento muito lento.</p>
+<a class="anchor" id="overburdening"></a><h5>Sobrecarregando</h5>
+<p>Os itens que contam para a sobrecarga incluem <span style="color:#3E8A00;">Anvils</span>, <span style="color:#3E8A00;">Sealed Barrels</span>, <span style="color:#3E8A00;">Crucibles</span> (com conteúdo)<br/>
+<br/>
+Observação: <a href="../mechanics/animal_husbandry.html#horses">Éguas</a> também pode ser sobrecarregado.</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

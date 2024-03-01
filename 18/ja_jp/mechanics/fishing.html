@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'ja_jp';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">日本語</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/mechanics\fishing.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\fishing.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\fishing.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\fishing.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\fishing.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\fishing.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\fishing.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\fishing.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">世界</a></li>
+<li><a class="text-muted" href="../getting_started/">はじめに</a></li>
+<li><a class="text-muted" href="../mechanics/">高度な加工</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./advanced_building_materials.html">高度な素材</a></li>
+<li><a class="text-muted" href="./animal_husbandry.html">牧畜</a></li>
+<li><a class="text-muted" href="./anvils.html">金床</a></li>
+<li><a class="text-muted" href="./aqueducts.html">用水路</a></li>
+<li><a class="text-muted" href="./armor.html">防具</a></li>
+<li><a class="text-muted" href="./barrels.html">樽</a></li>
+<li><a class="text-muted" href="./bellows.html">ふいご</a></li>
+<li><a class="text-muted" href="./blast_furnace.html">高炉</a></li>
+<li><a class="text-muted" href="./bloomery.html">塊鉄炉</a></li>
+<li><a class="text-muted" href="./bread.html">パン</a></li>
+<li><a class="text-muted" href="./charcoal_forge.html">溶鉱炉</a></li>
+<li><a class="text-muted" href="./charcoal_pit.html">伏せ焼き</a></li>
+<li><a class="text-muted" href="./chisel.html">ノミ</a></li>
+<li><a class="text-muted" href="./composter.html">コンポスター</a></li>
+<li><a class="text-muted" href="./crops.html">作物</a></li>
+<li><a class="text-muted" href="./crucible.html">るつぼ</a></li>
+<li><a class="text-muted" href="./dairy.html">乳製品</a></li>
+<li><a class="text-muted" href="./damage_types.html">ダメージタイプ</a></li>
+<li><a class="text-muted" href="./decay.html">保存</a></li>
+<li><a class="text-muted" href="./fertilizers.html">肥料</a></li>
+<li><a class="text-muted" href="./fire_clay.html">耐火粘土</a></li>
+<li><a class="text-muted" href="./fishing.html">釣り</a></li>
+<li><a class="text-muted" href="./flux.html">融剤</a></li>
+<li><a class="text-muted" href="./gems.html">宝石</a></li>
+<li><a class="text-muted" href="./grill.html">焚き火とグリル</a></li>
+<li><a class="text-muted" href="./heating.html">加熱</a></li>
+<li><a class="text-muted" href="./hydration.html">潤いを保つ</a></li>
+<li><a class="text-muted" href="./lamps.html">ランプ</a></li>
+<li><a class="text-muted" href="./leather_making.html">革の作成</a></li>
+<li><a class="text-muted" href="./lighting.html">光源</a></li>
+<li><a class="text-muted" href="./minecarts.html">トロッコ</a></li>
+<li><a class="text-muted" href="./panning.html">パンニング</a></li>
+<li><a class="text-muted" href="./papermaking.html">紙の作成</a></li>
+<li><a class="text-muted" href="./pets.html">ペット</a></li>
+<li><a class="text-muted" href="./pot.html">焚き火とポット</a></li>
+<li><a class="text-muted" href="./powderkegs.html">火薬樽</a></li>
+<li><a class="text-muted" href="./prospecting.html">探鉱</a></li>
+<li><a class="text-muted" href="./quern.html">石臼</a></li>
+<li><a class="text-muted" href="./salad.html">サラダ</a></li>
+<li><a class="text-muted" href="./sandwiches.html">サンドイッチ</a></li>
+<li><a class="text-muted" href="./scribing_table.html">筆記台</a></li>
+<li><a class="text-muted" href="./sluices.html">堰</a></li>
+<li><a class="text-muted" href="./steel.html">鋼</a></li>
+<li><a class="text-muted" href="./support_beams.html">梁</a></li>
+<li><a class="text-muted" href="./weaving.html">機織り</a></li>
+<li><a class="text-muted" href="./wooden_buckets.html">木のバケツ</a></li></ul></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">高度な加工</a> / <a class="text-muted" href="#">釣り</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="銅の釣り竿">
+                <img src="..\..\_images\item102.png" alt="釣り" />
+            </span>
+            <h4>釣り</h4>
+        </div>
+        </h4>
+                <hr>
+                <p><span style="color:#3E8A00;">釣り</span> は、川、湖、海を泳ぐ魚を狩る方法です。 釣り竿には餌を付ける必要があります。 魚は餌を食べようとしますが、場合によってはそのまま逃げられることもあります。 魚を釣り上げるのは手間がかかりますが、より高いレベルのフックを使用すると簡単になります。</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-toggle="tooltip" title="蒼鉛青銅のプレート" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item103.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-toggle="tooltip" title="蒼鉛青銅の釣り針" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item104.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>Tier II</p>
+        </div>
+        <p>まず、<a href="../mechanics/anvils.html">金床</a> で釣り針を鍛造する必要があります。</p>
+<h5>釣り竿</h5>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item16.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item16.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-toggle="tooltip" title="羊毛の糸" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item106.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item16.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-toggle="tooltip" title="蒼鉛青銅の釣り針" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item104.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-toggle="tooltip" title="羊毛の糸" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item106.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="蒼鉛青銅の釣り竿" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item105.png" />
+                </div>
+            </div>
+        </div>
+        <p>釣り竿は釣り針で作られています。</p>
+<p>釣り竿は餌がなければ役に立ちません。 餌は作業台で釣り竿に追加できます。 通常の魚を捕まえるには、<span style="color:#3E8A00;">種</span> または <span style="color:#3E8A00;">生の貝</span> が必要です。 <span style="color:#3E8A00;">イルカ</span> や <span style="color:#3E8A00;">シャチ</span> などの大きな魚を捕まえるには、<span style="color:#b0b;">タラ</span>、<span style="color:#b0b;">サケ</span>、<span style="color:#b0b;">熱帯魚</span>、<span style="color:#b0b;">ブルーギル</span> が必要です。</p>
+<p>浮きを解放するには、<span style="color:#b0b;">Right Click</span> します。 魚がフックを見つけて食いつくのを待ちます。 次に <span style="color:#b0b;">Right Click</span> してそれを引き上げます。これを行うと、ホットバーのメーターがいっぱいになります。 あまりにも早く引くと、魚が餌を持って逃げてしまいます。 釣りをするたびに、魚が餌を食べる可能性があります。 魚を捕まえるには、魚を陸に引き上げ、道具を使って殺します。 釣り竿を左手で持つと、作業が簡単になります。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image62.png" alt="tfc:textures/gui/book/tutorial/fishing.png">
+<div style="text-align: center;"><p>釣りバーは、アクティブになると経験値バーの見た目で現れます。</p>
+</div>
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

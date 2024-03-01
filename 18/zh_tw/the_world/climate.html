@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>群巒傳說 手冊</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'zh_tw';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">群巒傳說 手冊</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">繁體中文(台灣)</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/the_world\climate.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world\climate.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world\climate.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world\climate.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world\climate.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world\climate.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world\climate.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world\climate.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">主頁</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">版本 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>目錄</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">這個世界</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./biomes.html">生物群系</a></li>
+<li><a class="text-muted" href="./waterways.html">河流流向何方？</a></li>
+<li><a class="text-muted" href="./geology.html">地質學</a></li>
+<li><a class="text-muted" href="./ores_and_minerals.html">礦石和礦物</a></li>
+<li><a class="text-muted" href="./climate.html">曆法和氣候</a></li>
+<li><a class="text-muted" href="./flora.html">自然植物</a></li>
+<li><a class="text-muted" href="./wild_crops.html">野生作物</a></li>
+<li><a class="text-muted" href="./wild_fruits.html">野生水果</a></li>
+<li><a class="text-muted" href="./wild_animals.html">野生動物</a></li></ul></li>
+<li><a class="text-muted" href="../getting_started/">新手入門</a></li>
+<li><a class="text-muted" href="../mechanics/">進階內容</a></li>
+<li><a class="text-muted" href="../firmalife/">(Addon) Firmalife擴充套件模組</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">這個世界</a> / <a class="text-muted" href="#">曆法和氣候</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image102.png" alt="曆法和氣候" />
+            </span>
+            <h4>曆法和氣候</h4>
+        </div>
+        </h4>
+                <hr>
+                <a class="anchor" id="calendar"></a><p>在群巒傳說中，氣候和時間都是影響生存的非常重要的要素。首先，我們先來談談<span style="color:#3E8A00;">日曆</span>。<br/>
+<br/>
+在任何時候，只要開啟物品欄並點選<span style="color:#3E8A00;">日曆</span>選項卡就能檢視日曆。這裡會顯示當前的<span style="color:#3E8A00;">季節</span>、<span style="color:#3E8A00;">日曆日</span>和<span style="color:#3E8A00;">日期</span>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image103.png" alt="tfc:textures/gui/book/gui/calendar.png">
+<div style="text-align: center;"><p>日曆介面</p>
+</div><p>群巒傳說的世界是有四季的，氣象和氣候也會隨之變化。每個季節根據月份分為<span style="color:#3E8A00;">初期</span>、<span style="color:#3E8A00;">仲期</span>和<span style="color:#3E8A00;">暮期</span>。以下是四季所對應的月份：<br/>
+</p>
+<ul>
+	<li><strong>春季</strong>：三月 - 五月</li>
+	<li><strong>夏季</strong>：六月 - 八月</li>
+	<li><strong>秋季</strong>：九月 - 十一月</li>
+	<li><strong>冬季</strong>：十二月 - 次年二月</li>
+</ul>
+<p>當前季節會影響地區的溫度和降水（如果可以下雨或下雪）等。所以一定要經常檢視日曆，它對你的生存會有很大的幫助！<br/>
+<br/>
+接下來，我們來談談氣候。</p>
+<a class="anchor" id="climate"></a><h5>氣候</h5>
+<p>物品欄介面中的另一個選項卡是<span style="color:#3E8A00;">氣候</span>介面。這個頁面會顯示有關當前地理位置的資訊。<br/>
+<br/>
+第一行會顯示該地區的<a href="https://zh.wikipedia.org/wiki/%E6%9F%AF%E6%9C%AC%E6%B0%94%E5%80%99%E5%88%86%E7%B1%BB%E6%B3%95">氣候分類</a>。<br/>
+<br/>
+第二行會顯示<a href="../the_world/geology.html">地質結構</a>。<br/>
+<br/>
+第三行則會顯示<span style="color:#3E8A00;">年平均溫度</span>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image104.png" alt="tfc:textures/gui/book/gui/climate.png">
+<div style="text-align: center;"><p>氣候介面</p>
+</div><a class="anchor" id="temperature"></a><p>一個地區的溫度是由幾個因素共同決定的。<br/>
+</p>
+<ul>
+	<li>首先，地質結構和緯度（Z 座標）的影響是最大的。</li>
+	<li>其次是當前的季節——夏天最熱，冬天最冷。</li>
+	<li>最後，每天的不同時間溫度也會有所不同，且天和天之間也會有小幅變動。</li>
+</ul>
+<p>最後一行顯示的是當前由上述因素共同決定後的溫度。<br/>
+<br/>
+溫度會影響很多事情：作物和植物是否會生長，冰雪是否會形成或融化等等。</p>
+<a class="anchor" id="rainfall"></a><h5>降雨量</h5>
+<p>降雨量是一個會根據地理位置而變化的數值。年降雨量以毫米（mm）為單位，可以在 0mm - 500mm 之間取值。地表土壤是沙子還是淤泥，植被是仙人掌還是木棉樹都由降雨量決定。</p>
+<p>一個區域的降雨量還決定了何種農作物能被種植在這兒。降雨量的多少是影響土地<a href="../mechanics/hydration.html">溼潤度</a>的一個重要因素，而溼潤度則決定了<a href="../mechanics/crops.html">農作物</a>、<a href="../the_world/wild_fruits.html#fruit_trees">果樹</a>、和<a href="../the_world/wild_fruits.html#tall_bushes">灌木叢</a>是否可以生長。</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

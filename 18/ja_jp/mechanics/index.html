@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'ja_jp';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">日本語</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/mechanics/" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics/" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics/" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics/" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics/" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics/" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics/" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics/" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">世界</a></li>
+<li><a class="text-muted" href="../getting_started/">はじめに</a></li>
+<li><a class="text-muted" href="../mechanics/">高度な加工</a></li><ul class="list-unstyled push-right"><li><a class="text-muted" href="./advanced_building_materials.html">高度な素材</a></li>
+<li><a class="text-muted" href="./animal_husbandry.html">牧畜</a></li>
+<li><a class="text-muted" href="./anvils.html">金床</a></li>
+<li><a class="text-muted" href="./aqueducts.html">用水路</a></li>
+<li><a class="text-muted" href="./armor.html">防具</a></li>
+<li><a class="text-muted" href="./barrels.html">樽</a></li>
+<li><a class="text-muted" href="./bellows.html">ふいご</a></li>
+<li><a class="text-muted" href="./blast_furnace.html">高炉</a></li>
+<li><a class="text-muted" href="./bloomery.html">塊鉄炉</a></li>
+<li><a class="text-muted" href="./bread.html">パン</a></li>
+<li><a class="text-muted" href="./charcoal_forge.html">溶鉱炉</a></li>
+<li><a class="text-muted" href="./charcoal_pit.html">伏せ焼き</a></li>
+<li><a class="text-muted" href="./chisel.html">ノミ</a></li>
+<li><a class="text-muted" href="./composter.html">コンポスター</a></li>
+<li><a class="text-muted" href="./crops.html">作物</a></li>
+<li><a class="text-muted" href="./crucible.html">るつぼ</a></li>
+<li><a class="text-muted" href="./dairy.html">乳製品</a></li>
+<li><a class="text-muted" href="./damage_types.html">ダメージタイプ</a></li>
+<li><a class="text-muted" href="./decay.html">保存</a></li>
+<li><a class="text-muted" href="./fertilizers.html">肥料</a></li>
+<li><a class="text-muted" href="./fire_clay.html">耐火粘土</a></li>
+<li><a class="text-muted" href="./fishing.html">釣り</a></li>
+<li><a class="text-muted" href="./flux.html">融剤</a></li>
+<li><a class="text-muted" href="./gems.html">宝石</a></li>
+<li><a class="text-muted" href="./grill.html">焚き火とグリル</a></li>
+<li><a class="text-muted" href="./heating.html">加熱</a></li>
+<li><a class="text-muted" href="./hydration.html">潤いを保つ</a></li>
+<li><a class="text-muted" href="./lamps.html">ランプ</a></li>
+<li><a class="text-muted" href="./leather_making.html">革の作成</a></li>
+<li><a class="text-muted" href="./lighting.html">光源</a></li>
+<li><a class="text-muted" href="./minecarts.html">トロッコ</a></li>
+<li><a class="text-muted" href="./panning.html">パンニング</a></li>
+<li><a class="text-muted" href="./papermaking.html">紙の作成</a></li>
+<li><a class="text-muted" href="./pets.html">ペット</a></li>
+<li><a class="text-muted" href="./pot.html">焚き火とポット</a></li>
+<li><a class="text-muted" href="./powderkegs.html">火薬樽</a></li>
+<li><a class="text-muted" href="./prospecting.html">探鉱</a></li>
+<li><a class="text-muted" href="./quern.html">石臼</a></li>
+<li><a class="text-muted" href="./salad.html">サラダ</a></li>
+<li><a class="text-muted" href="./sandwiches.html">サンドイッチ</a></li>
+<li><a class="text-muted" href="./scribing_table.html">筆記台</a></li>
+<li><a class="text-muted" href="./sluices.html">堰</a></li>
+<li><a class="text-muted" href="./steel.html">鋼</a></li>
+<li><a class="text-muted" href="./support_beams.html">梁</a></li>
+<li><a class="text-muted" href="./weaving.html">機織り</a></li>
+<li><a class="text-muted" href="./wooden_buckets.html">木のバケツ</a></li></ul>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="#">高度な加工</a></em></p>
+            
+                <h4>高度な加工</h4><p><p>最初のツルハシを作るところから赤・青鋼にたどり着くまでの高度な加工を知れる項目です。</p>
+</p>
+                <hr>
+                <div class="card-columns">
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="流紋岩のレンガ">
+                <img src="..\..\_images\item31.png" alt="高度な素材" />
+            </span>
+            <a href="advanced_building_materials.html">高度な素材</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="卵">
+                <img src="..\..\_images\item46.png" alt="牧畜" />
+            </span>
+            <a href="animal_husbandry.html">牧畜</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="銅の金床">
+                <img src="../../_images/placeholder_64.png" alt="金床" />
+            </span>
+            <a href="anvils.html">金床</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="頁岩の用水路">
+                <img src="../../_images/placeholder_64.png" alt="用水路" />
+            </span>
+            <a href="aqueducts.html">用水路</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="銅のチェストプレート">
+                <img src="..\..\_images\item51.png" alt="防具" />
+            </span>
+            <a href="armor.html">防具</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="barrels.html">樽</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="ふいご">
+                <img src="../../_images/placeholder_64.png" alt="ふいご" />
+            </span>
+            <a href="bellows.html">ふいご</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="高炉">
+                <img src="..\..\_images\item57.png" alt="高炉" />
+            </span>
+            <a href="blast_furnace.html">高炉</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="塊鉄炉">
+                <img src="../../_images/placeholder_64.png" alt="塊鉄炉" />
+            </span>
+            <a href="bloomery.html">塊鉄炉</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image49.png" alt="パン" />
+            </span>
+            <a href="bread.html">パン</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image50.png" alt="溶鉱炉" />
+            </span>
+            <a href="charcoal_forge.html">溶鉱炉</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="木炭">
+                <img src="..\..\_images\item73.png" alt="伏せ焼き" />
+            </span>
+            <a href="charcoal_pit.html">伏せ焼き</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="錬鉄のノミ">
+                <img src="..\..\_images\item74.png" alt="ノミ" />
+            </span>
+            <a href="chisel.html">ノミ</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image55.png" alt="コンポスター" />
+            </span>
+            <a href="composter.html">コンポスター</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image56.png" alt="作物" />
+            </span>
+            <a href="crops.html">作物</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="るつぼ">
+                <img src="../../_images/placeholder_64.png" alt="るつぼ" />
+            </span>
+            <a href="crucible.html">るつぼ</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image59.png" alt="乳製品" />
+            </span>
+            <a href="dairy.html">乳製品</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="赤鋼の剣">
+                <img src="..\..\_images\item87.png" alt="ダメージタイプ" />
+            </span>
+            <a href="damage_types.html">ダメージタイプ</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="腐った肉">
+                <img src="..\..\_images\item88.png" alt="保存" />
+            </span>
+            <a href="decay.html">保存</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="カリ岩塩の粉">
+                <img src="..\..\_images\item93.png" alt="肥料" />
+            </span>
+            <a href="fertilizers.html">肥料</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="耐火粘土">
+                <img src="..\..\_images\item99.png" alt="耐火粘土" />
+            </span>
+            <a href="fire_clay.html">耐火粘土</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="銅の釣り竿">
+                <img src="..\..\_images\item102.png" alt="釣り" />
+            </span>
+            <a href="fishing.html">釣り</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="融剤">
+                <img src="..\..\_images\item54.png" alt="融剤" />
+            </span>
+            <a href="flux.html">融剤</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="カットされたオパール">
+                <img src="..\..\_images\item108.png" alt="宝石" />
+            </span>
+            <a href="gems.html">宝石</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="グリル">
+                <img src="..\..\_images\item113.png" alt="焚き火とグリル" />
+            </span>
+            <a href="grill.html">焚き火とグリル</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image64.png" alt="加熱" />
+            </span>
+            <a href="heating.html">加熱</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image65.png" alt="潤いを保つ" />
+            </span>
+            <a href="hydration.html">潤いを保つ</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="蒼鉛青銅のランタン">
+                <img src="..\..\_images\item116.png" alt="ランプ" />
+            </span>
+            <a href="lamps.html">ランプ</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="革">
+                <img src="..\..\_images\item123.png" alt="革の作成" />
+            </span>
+            <a href="leather_making.html">革の作成</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="ろうそく">
+                <img src="../../_images/placeholder_64.png" alt="光源" />
+            </span>
+            <a href="lighting.html">光源</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="カポックのチェスト付きトロッコ">
+                <img src="..\..\_images\item129.png" alt="トロッコ" />
+            </span>
+            <a href="minecarts.html">トロッコ</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image70.png" alt="パンニング" />
+            </span>
+            <a href="panning.html">パンニング</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Unrefined Paper">
+                <img src="..\..\_images\item143.png" alt="紙の作成" />
+            </span>
+            <a href="papermaking.html">紙の作成</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="リード">
+                <img src="..\..\_images\item158.png" alt="ペット" />
+            </span>
+            <a href="pets.html">ペット</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="鍋">
+                <img src="..\..\_images\item159.png" alt="焚き火とポット" />
+            </span>
+            <a href="pot.html">焚き火とポット</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="火薬樽">
+                <img src="../../_images/placeholder_64.png" alt="火薬樽" />
+            </span>
+            <a href="powderkegs.html">火薬樽</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="錬鉄の探鉱槌">
+                <img src="..\..\_images\item167.png" alt="探鉱" />
+            </span>
+            <a href="prospecting.html">探鉱</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="下臼">
+                <img src="../../_images/placeholder_64.png" alt="石臼" />
+            </span>
+            <a href="quern.html">石臼</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image79.png" alt="サラダ" />
+            </span>
+            <a href="salad.html">サラダ</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image82.png" alt="サンドイッチ" />
+            </span>
+            <a href="sandwiches.html">サンドイッチ</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="黒色の染料">
+                <img src="..\..\_images\item183.png" alt="筆記台" />
+            </span>
+            <a href="scribing_table.html">筆記台</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="None">
+                <img src="..\..\_images\image84.png" alt="堰" />
+            </span>
+            <a href="sluices.html">堰</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="鋼のインゴット">
+                <img src="..\..\_images\item188.png" alt="鋼" />
+            </span>
+            <a href="steel.html">鋼</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="オークの梁">
+                <img src="../../_images/placeholder_64.png" alt="梁" />
+            </span>
+            <a href="support_beams.html">梁</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="紡錘">
+                <img src="..\..\_images\item196.png" alt="機織り" />
+            </span>
+            <a href="weaving.html">機織り</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="木のバケツ">
+                <img src="..\..\_images\item209.png" alt="木のバケツ" />
+            </span>
+            <a href="wooden_buckets.html">木のバケツ</a>
+        </div>
+        
+                        </div>
+                    </div>
+                    
+                </div>
+            
+        </div>
+    </div>
+</div>
+</body>
+</html>

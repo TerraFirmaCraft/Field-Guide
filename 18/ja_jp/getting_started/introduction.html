@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'ja_jp';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">日本語</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/getting_started\introduction.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\introduction.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\introduction.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\introduction.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\introduction.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\introduction.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\introduction.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\introduction.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">世界</a></li>
+<li><a class="text-muted" href="../getting_started/">はじめに</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./introduction.html">導入</a></li>
+<li><a class="text-muted" href="./firepit.html">火を起こす</a></li>
+<li><a class="text-muted" href="./pottery.html">粘土細工</a></li>
+<li><a class="text-muted" href="./pit_kiln.html">穴窯</a></li>
+<li><a class="text-muted" href="./finding_ores.html">鉱石、金属、鋳造</a></li>
+<li><a class="text-muted" href="./primitive_alloys.html">最初の合金</a></li>
+<li><a class="text-muted" href="./primitive_anvils.html">最初の金床</a></li>
+<li><a class="text-muted" href="./building_materials.html">建材</a></li>
+<li><a class="text-muted" href="./a_place_to_sleep.html">眠る場所</a></li>
+<li><a class="text-muted" href="./size_and_weight.html">大きさと重さ</a></li>
+<li><a class="text-muted" href="./food_and_water.html">食料と水</a></li></ul></li>
+<li><a class="text-muted" href="../mechanics/">高度な加工</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">はじめに</a> / <a class="text-muted" href="#">導入</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="花崗岩の小石">
+                <img src="..\..\_images\item22.png" alt="導入" />
+            </span>
+            <h4>導入</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>TerraFirmaCraftで最初に入手できるのは棒、小枝、石ころです。 それらはほぼすべての気候で見つかり、地面に点在しています。<span style="color:#b0b;">Right Click</span> または破壊で回収できます。</p>
+<h5>Example</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>石ころや棒の生成の例です。</p>
+<p>棒は地面に落ちている棒や小枝を集めるほか、葉っぱを拳で折ることでも入手できます。 いくつかの石と棒を用意したら、 <span style="color:#3E8A00;">ナッピング</span>を始める準備は完了です。 ナッピングとは、2 つの石を叩き合わせて特定の形状を形成するプロセスです。ナップするには、まず少なくとも 2 つの岩を手に持ち、空中で右クリックすると<span style="color:#3E8A00;">ナッピングGUI</span>が開きます。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image10.png" alt="tfc:textures/gui/book/gui/rock_knapping.png">
+<div style="text-align: center;"><p>粘土ナッピングGUI。</p>
+</div><p>特定のアイテムをナップするには、目的の形状ができるまで正方形をクリックして削るする必要があります。 たとえば、右に示すレシピと一致させてナイフの刃を作成します。<br/>
+<br/>
+クラフトと同様に、目的の形状の位置は関係なく、一部のレシピには有効な複数のバリエーションがあります。</p>
+<a class="anchor" id="knife"></a>
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image11.png" alt="Recipe: tfc:rock_knapping/knife_head_sedimentary">
+<p>いくつかの異なる種類の岩石から作られたナイフの刃。</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="石のナイフの刃" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item24.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item16.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="石のナイフ" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item23.png" />
+                </div>
+            </div>
+        </div>
+        <p>すべての石器の頭は、棒や小枝を組み合わせて道具として組み立てることができます。<br/>
+<br/>
+石のナイフは、植物を破壊し<span style="color:#3E8A00;">藁</span>を得るのに使用できます。</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image12.png" alt="Recipe: tfc:rock_knapping/axe_head_sedimentary">
+<p><span style="color:#3E8A00;">斧</span>を使用すると、木全体、丸太、葉を伐採できます。 ただし、苗木と棒は葉を個別に破壊した場合にのみ入手できます。</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image13.png" alt="Recipe: tfc:rock_knapping/shovel_head_sedimentary">
+<p><span style="color:#3E8A00;">シャベル</span>は土系ブロックの破壊に使用できます。<span style="color:#3E8A00;">土</span>や<span style="color:#3E8A00;">草</span>に<span style="color:#b0b;">使用</span>して<span style="color:#3E8A00;">道</span>を作成することもできます。</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image14.png" alt="Recipe: tfc:rock_knapping/hoe_head_sedimentary">
+<p><span style="color:#3E8A00;">クワ</span>は<a href="../mechanics/crops.html">農業</a>に使用できます。また、葉や他の植物を破壊するためにも使用できます。</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image15.png" alt="Recipe: tfc:rock_knapping/hammer_head_sedimentary">
+<p><span style="color:#3E8A00;">ハンマー</span>は<a href="../mechanics/damage_types.html">粉砕ダメージ</a>を与える武器として使用できます。より重要な用途として<a href="../getting_started/primitive_anvils.html">鍛冶</a>にも使用します。</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image16.png" alt="Recipe: tfc:rock_knapping/javelin_head_sedimentary">
+<p>最後に、<span style="color:#3E8A00;">槍</span>はターゲットに投げることができる原始的な武器として使用したり、 <a href="../mechanics/damage_types.html">貫通ダメージ</a>を与える近接武器として使用できます。石器時代の狩りの主役です。</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'ja_jp';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">日本語</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/mechanics\lighting.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\lighting.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\lighting.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\lighting.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\lighting.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\lighting.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\lighting.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\lighting.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">世界</a></li>
+<li><a class="text-muted" href="../getting_started/">はじめに</a></li>
+<li><a class="text-muted" href="../mechanics/">高度な加工</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./advanced_building_materials.html">高度な素材</a></li>
+<li><a class="text-muted" href="./animal_husbandry.html">牧畜</a></li>
+<li><a class="text-muted" href="./anvils.html">金床</a></li>
+<li><a class="text-muted" href="./aqueducts.html">用水路</a></li>
+<li><a class="text-muted" href="./armor.html">防具</a></li>
+<li><a class="text-muted" href="./barrels.html">樽</a></li>
+<li><a class="text-muted" href="./bellows.html">ふいご</a></li>
+<li><a class="text-muted" href="./blast_furnace.html">高炉</a></li>
+<li><a class="text-muted" href="./bloomery.html">塊鉄炉</a></li>
+<li><a class="text-muted" href="./bread.html">パン</a></li>
+<li><a class="text-muted" href="./charcoal_forge.html">溶鉱炉</a></li>
+<li><a class="text-muted" href="./charcoal_pit.html">伏せ焼き</a></li>
+<li><a class="text-muted" href="./chisel.html">ノミ</a></li>
+<li><a class="text-muted" href="./composter.html">コンポスター</a></li>
+<li><a class="text-muted" href="./crops.html">作物</a></li>
+<li><a class="text-muted" href="./crucible.html">るつぼ</a></li>
+<li><a class="text-muted" href="./dairy.html">乳製品</a></li>
+<li><a class="text-muted" href="./damage_types.html">ダメージタイプ</a></li>
+<li><a class="text-muted" href="./decay.html">保存</a></li>
+<li><a class="text-muted" href="./fertilizers.html">肥料</a></li>
+<li><a class="text-muted" href="./fire_clay.html">耐火粘土</a></li>
+<li><a class="text-muted" href="./fishing.html">釣り</a></li>
+<li><a class="text-muted" href="./flux.html">融剤</a></li>
+<li><a class="text-muted" href="./gems.html">宝石</a></li>
+<li><a class="text-muted" href="./grill.html">焚き火とグリル</a></li>
+<li><a class="text-muted" href="./heating.html">加熱</a></li>
+<li><a class="text-muted" href="./hydration.html">潤いを保つ</a></li>
+<li><a class="text-muted" href="./lamps.html">ランプ</a></li>
+<li><a class="text-muted" href="./leather_making.html">革の作成</a></li>
+<li><a class="text-muted" href="./lighting.html">光源</a></li>
+<li><a class="text-muted" href="./minecarts.html">トロッコ</a></li>
+<li><a class="text-muted" href="./panning.html">パンニング</a></li>
+<li><a class="text-muted" href="./papermaking.html">紙の作成</a></li>
+<li><a class="text-muted" href="./pets.html">ペット</a></li>
+<li><a class="text-muted" href="./pot.html">焚き火とポット</a></li>
+<li><a class="text-muted" href="./powderkegs.html">火薬樽</a></li>
+<li><a class="text-muted" href="./prospecting.html">探鉱</a></li>
+<li><a class="text-muted" href="./quern.html">石臼</a></li>
+<li><a class="text-muted" href="./salad.html">サラダ</a></li>
+<li><a class="text-muted" href="./sandwiches.html">サンドイッチ</a></li>
+<li><a class="text-muted" href="./scribing_table.html">筆記台</a></li>
+<li><a class="text-muted" href="./sluices.html">堰</a></li>
+<li><a class="text-muted" href="./steel.html">鋼</a></li>
+<li><a class="text-muted" href="./support_beams.html">梁</a></li>
+<li><a class="text-muted" href="./weaving.html">機織り</a></li>
+<li><a class="text-muted" href="./wooden_buckets.html">木のバケツ</a></li></ul></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">高度な加工</a> / <a class="text-muted" href="#">光源</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="ろうそく">
+                <img src="../../_images/placeholder_64.png" alt="光源" />
+            </span>
+            <h4>光源</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>TFC で光を生成する方法は多数あります。 1 つの方法は <a href="../mechanics/lamps.html">ランプ</a> を使用することですが、燃料が必要です。 一部の光源はスパークのみを必要とします。</p>
+<h5>目次</h5>
+<p></p>
+<ul>
+	<li>1. <a href="../mechanics/lighting.html#torches">松明</a></li>
+	<li>2. <a href="../mechanics/lighting.html#candles">ろうそく</a></li>
+	<li>3. <a href="../mechanics/lighting.html#jack_o_lanterns">ジャック・オ・ランタン</a></li>
+</ul>
+<a class="anchor" id="torches"></a>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item16.gif" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-toggle="tooltip" title="松明" class="crafting-recipe-item-tooltip"></span>
+                <p class="crafting-recipe-item-count">2</p>
+                <img class="recipe-item" src="..\..\_images\item19.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>あたたかい****</p>
+        </div>
+        <p>松明は、<a href="../getting_started/firepit.html">焚き火</a> またはその他の加熱装置でスティックまたはスティックの束を加熱することで作成できます。</p>
+<p>松明は 3 日間持続し、その後 <span style="color:#3E8A00;">消えた松明</span> になり、もう一つの松明でクリックするか、着火ツールを使用することで再点火できます。 松明に対してスティックをクリックして松明にするすることもできます。 水に落としたたいまつは <span style="color:#3E8A00;">木の灰</span> と <span style="color:#3E8A00;">棒</span> に変わります。</p>
+<a class="anchor" id="candles"></a><h5>ろうそく</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>たいまつは 11 日間持続し、再点灯することもできます。</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/2to2.png" />
+            
+        <div class="crafting-recipe-item two-recipe-pos-1">
+            <span href="#" data-toggle="tooltip" title="羊毛の糸" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\item106.png" />
+            
+        </div>
+        
+            
+        <div class="crafting-recipe-item two-recipe-pos-2">
+            <span href="#" data-toggle="tooltip" title="獣脂" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\fluid6.png" />
+            
+        </div>
+        
+            
+        <div class="crafting-recipe-item two-recipe-pos-3">
+            <span href="#" data-toggle="tooltip" title="ろうそく" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="../../_images/placeholder_64.png" />
+            
+        </div>
+        
+            
+            
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>4000 Ticks</p>
+        </div>
+        
+        </div>
+    </div>
+    <a class="anchor" id="jack_o_lanterns"></a><h5>ジャック・オ・ランタン</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>ジャック・オ・ランタンは、<span style="color:#3E8A00;">くりぬかれたカボチャ</span> の点灯バージョンで、元のカボチャに戻るまで 4.5 日間持続します。</p>
+<p><span style="color:#3E8A00;">くりぬかれたカボチャ</span> は、新鮮なカボチャで <span style="color:#3E8A00;">ハサミ</span> または <span style="color:#3E8A00;">ナイフ</span> を使って <a href="../mechanics/crops.html#pumpkin">カボチャ</a>に対して<span style="color:#b0b;">Right Click</span> をクリックして作成されます。 くりぬかれたカボチャは腐らないので、頭にかぶることもできます。</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

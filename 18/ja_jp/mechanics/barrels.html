@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'ja_jp';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">日本語</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/mechanics\barrels.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\barrels.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\barrels.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\barrels.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\barrels.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\barrels.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\barrels.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\barrels.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">世界</a></li>
+<li><a class="text-muted" href="../getting_started/">はじめに</a></li>
+<li><a class="text-muted" href="../mechanics/">高度な加工</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./advanced_building_materials.html">高度な素材</a></li>
+<li><a class="text-muted" href="./animal_husbandry.html">牧畜</a></li>
+<li><a class="text-muted" href="./anvils.html">金床</a></li>
+<li><a class="text-muted" href="./aqueducts.html">用水路</a></li>
+<li><a class="text-muted" href="./armor.html">防具</a></li>
+<li><a class="text-muted" href="./barrels.html">樽</a></li>
+<li><a class="text-muted" href="./bellows.html">ふいご</a></li>
+<li><a class="text-muted" href="./blast_furnace.html">高炉</a></li>
+<li><a class="text-muted" href="./bloomery.html">塊鉄炉</a></li>
+<li><a class="text-muted" href="./bread.html">パン</a></li>
+<li><a class="text-muted" href="./charcoal_forge.html">溶鉱炉</a></li>
+<li><a class="text-muted" href="./charcoal_pit.html">伏せ焼き</a></li>
+<li><a class="text-muted" href="./chisel.html">ノミ</a></li>
+<li><a class="text-muted" href="./composter.html">コンポスター</a></li>
+<li><a class="text-muted" href="./crops.html">作物</a></li>
+<li><a class="text-muted" href="./crucible.html">るつぼ</a></li>
+<li><a class="text-muted" href="./dairy.html">乳製品</a></li>
+<li><a class="text-muted" href="./damage_types.html">ダメージタイプ</a></li>
+<li><a class="text-muted" href="./decay.html">保存</a></li>
+<li><a class="text-muted" href="./fertilizers.html">肥料</a></li>
+<li><a class="text-muted" href="./fire_clay.html">耐火粘土</a></li>
+<li><a class="text-muted" href="./fishing.html">釣り</a></li>
+<li><a class="text-muted" href="./flux.html">融剤</a></li>
+<li><a class="text-muted" href="./gems.html">宝石</a></li>
+<li><a class="text-muted" href="./grill.html">焚き火とグリル</a></li>
+<li><a class="text-muted" href="./heating.html">加熱</a></li>
+<li><a class="text-muted" href="./hydration.html">潤いを保つ</a></li>
+<li><a class="text-muted" href="./lamps.html">ランプ</a></li>
+<li><a class="text-muted" href="./leather_making.html">革の作成</a></li>
+<li><a class="text-muted" href="./lighting.html">光源</a></li>
+<li><a class="text-muted" href="./minecarts.html">トロッコ</a></li>
+<li><a class="text-muted" href="./panning.html">パンニング</a></li>
+<li><a class="text-muted" href="./papermaking.html">紙の作成</a></li>
+<li><a class="text-muted" href="./pets.html">ペット</a></li>
+<li><a class="text-muted" href="./pot.html">焚き火とポット</a></li>
+<li><a class="text-muted" href="./powderkegs.html">火薬樽</a></li>
+<li><a class="text-muted" href="./prospecting.html">探鉱</a></li>
+<li><a class="text-muted" href="./quern.html">石臼</a></li>
+<li><a class="text-muted" href="./salad.html">サラダ</a></li>
+<li><a class="text-muted" href="./sandwiches.html">サンドイッチ</a></li>
+<li><a class="text-muted" href="./scribing_table.html">筆記台</a></li>
+<li><a class="text-muted" href="./sluices.html">堰</a></li>
+<li><a class="text-muted" href="./steel.html">鋼</a></li>
+<li><a class="text-muted" href="./support_beams.html">梁</a></li>
+<li><a class="text-muted" href="./weaving.html">機織り</a></li>
+<li><a class="text-muted" href="./wooden_buckets.html">木のバケツ</a></li></ul></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">高度な加工</a> / <a class="text-muted" href="#">樽</a></em></p>
+            
+                <h4><h4>樽</h4></h4>
+                <hr>
+                <p><span style="color:#3E8A00;">樽</span> は、アイテムと液体の両方を保持できるデバイスです。 中央のスロットはアイテムを保持するために使用されます。 液体は左側のタンクに表示されており、満たされた <span style="color:#3E8A00;">バケツ</span> または <span style="color:#3E8A00;">水入れ</span> を左上のスロットに置くことで樽に追加できます。 空の液体輸送アイテムを同じスロットに置くことで、これを取り出すことができます。 バケツを持って樽に対し <span style="color:#b0b;">Right Click</span> を使用しても機能します。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image45.png" alt="tfc:textures/gui/book/gui/barrel.png">
+<div style="text-align: center;"><p>樽GUI。</p>
+</div><p>樽は <span style="color:#3E8A00;">密封</span> することができます。 密封状態だと中身を保管したまま樽を破壊できます。 密封することで一部のレシピの実行も可能になります。 樽GUIで右側にある灰色のボタンを使用して非密封/密封を切り替えることができます。 <span style="color:#b0b;">Shift</span> を押しながら素手で樽に <span style="color:#b0b;">Right Click</span> を使用しても密封を切り替えられます。</p>
+<h5>樽のヒント</h5>
+<p></p>
+<ul>
+	<li>ワールド内の液体ブロックに空の樽をクリックすると、樽を満たすことができます。</li>
+	<li>樽が密封されていない状態で雨が降ると、ゆっくりと水で満たされます。</li>
+	<li>樽の上の氷が溶けると水が入ります。</li>
+	<li>樽を密閉すると、中央のスロットにないアイテムが排出されます。</li>
+</ul>
+<h5>作成</h5>
+<p>樽は、さまざまな液体やアイテムを混合するために使用される重要なブロックです。 <span style="color:#3E8A00;">樽</span> レシピを使用するには、樽に正しい比率の液体と必要なアイテムを入れる必要があります。 レシピによっては、内容を変形させるために一定期間 <span style="color:#3E8A00;">密封</span> する必要があることもあります。</p>
+<p>樽の内容物がレシピに必要な比率と一致しない場合、余分な液体やアイテムは失われます。 ただし、レシピが即座に変換するものである場合は、レシピに従って液体を完全に変換するのに十分なアイテムが常に必要になります。</p>
+<a class="anchor" id="limewater"></a>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/2to2.png" />
+            
+        <div class="crafting-recipe-item two-recipe-pos-1">
+            <span href="#" data-toggle="tooltip" title="融剤" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\item54.png" />
+            
+        </div>
+        
+            
+        <div class="crafting-recipe-item two-recipe-pos-2">
+            <span href="#" data-toggle="tooltip" title="水" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\fluid1.png" />
+            
+        </div>
+        
+            
+            
+        <div class="crafting-recipe-item two-recipe-pos-4">
+            <span href="#" data-toggle="tooltip" title="石灰水" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\fluid2.png" />
+            
+        </div>
+        
+            
+        </div>
+    </div>
+    <a class="anchor" id="tannin"></a>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/2to2.png" />
+            
+        <div class="crafting-recipe-item two-recipe-pos-1">
+            <span href="#" data-toggle="tooltip" title="Tag: #tfc:makes_tannin" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\item55.gif" />
+            
+        </div>
+        
+            
+        <div class="crafting-recipe-item two-recipe-pos-2">
+            <span href="#" data-toggle="tooltip" title="水" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\fluid1.png" />
+            
+        </div>
+        
+            
+            
+        <div class="crafting-recipe-item two-recipe-pos-4">
+            <span href="#" data-toggle="tooltip" title="タンニン" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\fluid3.png" />
+            
+        </div>
+        
+            
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>8000 Ticks</p>
+        </div>
+        
+        </div>
+    </div>
+    <p>いくつかの樽レシピは、2 つの液体を特定の比率で混合することによって機能します。 これは、材料の 1 つを満たしたバケツに汲み、必要な量の他の液体が入っている樽の液体追加スロットに入れることによって行われます。 これは <span style="color:#3E8A00;">酢牛乳</span> を作るために行われます。<span style="color:#3E8A00;">酢</span> と <span style="color:#3E8A00;">牛乳</span> が 9:1 の比率になるとき作成できます。 同じ割合で酢に <span style="color:#3E8A00;">塩水</span> を加えて <span style="color:#3E8A00;">塩酢</span> を作れます。</p>
+<p>樽には <a href="../mechanics/heating.html">熱い</a> アイテムを冷却する機能があります。 <span style="color:#3E8A00;">水</span>、<span style="color:#3E8A00;">オリーブオイル</span>、または <span style="color:#3E8A00;">塩水</span> の樽に熱いアイテムを入れると、すぐに温度が下がります。</p>
+<p>樽には、アイテムを <span style="color:#3E8A00;">染色</span> および <span style="color:#3E8A00;">漂白</span> する能力があります。 染料液は、染料を <a href="../mechanics/pot.html">ポット</a> で沸騰させることによって作成されます。 カーペット、キャンドル、<a href="../mechanics/advanced_building_materials.html#alabaster">アラバスター</a> など、ほとんどの着色可能なものは、染料の入った樽に密封することで染色できます。 染色したアイテムは、<span style="color:#3E8A00;">灰汁</span> の樽に密封することで漂白することもできます。 灰汁は、<a href="../getting_started/firepit.html">焚き火</a> を壊して得られる <span style="color:#3E8A00;">木の灰</span> を <a href="../mechanics/pot.html">ポット</a> の水で沸騰させることによって作られます。</p>
+<p>樽は <span style="color:#3E8A00;">酢</span> にアイテムを保存できます。 酢は <span style="color:#3E8A00;">果物</span> を <span style="color:#3E8A00;">酒</span> 入りの樽に密封して作られます。 このプロセスがどのように機能するかについては、関連する <a href="../mechanics/decay.html#vinegar">こちら</a> を参照してください。</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="足場" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Barrel Rack" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>ブロックの側面に対して配置された樽は垂直な樽と同じように機能しますが、配置には制限があります。 たとえば、上に別の横向きの樽を置くには、<span style="color:#b0b;">Right Click</span> を使用して <span style="color:#3E8A00;">バレルラック</span> を追加する必要があります。</p>
+<h5>横向きの樽</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>横向きの樽は <span style="color:#3E8A00;">タップ</span> を使用して密閉状態を示します。 蛇口が横向きの場合は密閉されています。</p>
+<p>密封されていない横向き樽は、蛇口の下に置かれた開いた樽 (およびその他の液体コンテナ) に液体を自動的に排出します。 液体を排出できるようにするには、蛇口があるブロックは空気ブロックでなければなりません。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image46.png" alt="tfc:textures/gui/book/tutorial/barrel_drip.png">
+<div style="text-align: center;"><p>横向きの樽の蛇口から液体が排出される。</p>
+</div>
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

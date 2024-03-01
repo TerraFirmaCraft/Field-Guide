@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft 도감</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'ko_kr';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft 도감</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">한국어</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/mechanics\anvils.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\anvils.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\anvils.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\anvils.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\anvils.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\anvils.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\anvils.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\anvils.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">색인</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API 뮨서</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">버전 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>목차</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">세계</a></li>
+<li><a class="text-muted" href="../getting_started/">시작하기</a></li>
+<li><a class="text-muted" href="../mechanics/">심화 기술</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./advanced_building_materials.html">발전된 재료</a></li>
+<li><a class="text-muted" href="./animal_husbandry.html">축산업</a></li>
+<li><a class="text-muted" href="./anvils.html">모루</a></li>
+<li><a class="text-muted" href="./aqueducts.html">수로</a></li>
+<li><a class="text-muted" href="./armor.html">갑옷</a></li>
+<li><a class="text-muted" href="./barrels.html">통</a></li>
+<li><a class="text-muted" href="./bellows.html">풀무</a></li>
+<li><a class="text-muted" href="./blast_furnace.html">용광로</a></li>
+<li><a class="text-muted" href="./bloomery.html">괴철로</a></li>
+<li><a class="text-muted" href="./bread.html">빵</a></li>
+<li><a class="text-muted" href="./charcoal_forge.html">숯불 노</a></li>
+<li><a class="text-muted" href="./charcoal_pit.html">숯 구덩이</a></li>
+<li><a class="text-muted" href="./chisel.html">끌</a></li>
+<li><a class="text-muted" href="./composter.html">Composter</a></li>
+<li><a class="text-muted" href="./crops.html">작물</a></li>
+<li><a class="text-muted" href="./crucible.html">도가니</a></li>
+<li><a class="text-muted" href="./dairy.html">유제품</a></li>
+<li><a class="text-muted" href="./damage_types.html">피해 종류</a></li>
+<li><a class="text-muted" href="./decay.html">음식 보존</a></li>
+<li><a class="text-muted" href="./fertilizers.html">비료</a></li>
+<li><a class="text-muted" href="./fire_clay.html">내화점토</a></li>
+<li><a class="text-muted" href="./fishing.html">낚시</a></li>
+<li><a class="text-muted" href="./flux.html">플럭스</a></li>
+<li><a class="text-muted" href="./gems.html">보석</a></li>
+<li><a class="text-muted" href="./grill.html">모닥불과 석쇠</a></li>
+<li><a class="text-muted" href="./heating.html">가열하기</a></li>
+<li><a class="text-muted" href="./hydration.html">작물 수화</a></li>
+<li><a class="text-muted" href="./lamps.html">램프</a></li>
+<li><a class="text-muted" href="./leather_making.html">가죽 제작</a></li>
+<li><a class="text-muted" href="./lighting.html">광원</a></li>
+<li><a class="text-muted" href="./minecarts.html">Minecarts</a></li>
+<li><a class="text-muted" href="./panning.html">사금질</a></li>
+<li><a class="text-muted" href="./papermaking.html">Papermaking</a></li>
+<li><a class="text-muted" href="./pets.html">반려동물</a></li>
+<li><a class="text-muted" href="./pot.html">모닥불과 냄비</a></li>
+<li><a class="text-muted" href="./powderkegs.html">화약통</a></li>
+<li><a class="text-muted" href="./prospecting.html">광물 탐색</a></li>
+<li><a class="text-muted" href="./quern.html">맷돌</a></li>
+<li><a class="text-muted" href="./salad.html">샐러드</a></li>
+<li><a class="text-muted" href="./sandwiches.html">샌드위치</a></li>
+<li><a class="text-muted" href="./scribing_table.html">필기대</a></li>
+<li><a class="text-muted" href="./sluices.html">세광통</a></li>
+<li><a class="text-muted" href="./steel.html">강철</a></li>
+<li><a class="text-muted" href="./support_beams.html">지지대</a></li>
+<li><a class="text-muted" href="./weaving.html">직조</a></li>
+<li><a class="text-muted" href="./wooden_buckets.html">나무 양동이</a></li></ul></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">심화 기술</a> / <a class="text-muted" href="#">모루</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="구리 모루">
+                <img src="../../_images/placeholder_64.png" alt="모루" />
+            </span>
+            <h4>모루</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>모루는 금속 주괴를 용접하고 단조하여 여러 다양한 형태로 만드는, 금속 가공에 중요한 장치입니다.<br/>
+<br/>
+모루는 금속을 다른 형태로 변형하는 <a href="../mechanics/anvils.html#working">단조</a>와 두 개의 금속을 하나로 합치는 <a href="../mechanics/anvils.html#welding">용접</a> 2가지의 일을 할 수 있습니다.</p>
+<h5></h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p>모든 종류의 금속 모루.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="구리 합괴" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item49.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="구리 합괴" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item49.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-toggle="tooltip" title="구리 합괴" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item49.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-toggle="tooltip" title="구리 합괴" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item49.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-toggle="tooltip" title="구리 합괴" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item49.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-toggle="tooltip" title="구리 합괴" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item49.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-toggle="tooltip" title="구리 합괴" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item49.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="구리 모루" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>모루는 금속 <span style="color:#3E8A00;">합괴</span>로 제작할 수 있습니다. 최초의 모루를 만들기 위해서는 먼저 <a href="../getting_started/primitive_anvils.html">돌 모루</a>에서 금속을 <a href="../mechanics/anvils.html#welding">용접</a>해야 합니다.</p>
+<a class="anchor" id="tiers"></a><p>모루는 <span style="color:#3E8A00;">티어</span>가 있으며, 티어는 모루가 용접하고 변형할 수 있는 재료의 종류를 결정합니다. 모루에서는 모루와 같은 티어의 금속을 변형할 수 있으며 한 티어 높은 금속을 용접할 수 있습니다.<br/>
+</p>
+<ul>
+	<li><strong>티어 0</strong>: 돌 모루</li>
+	<li><strong>티어 I</strong>: 구리</li>
+	<li><strong>티어 II</strong>: 비스무트 청동, 헤파티존, 청동</li>
+	<li><strong>티어 III</strong>: 연철</li>
+	<li><strong>티어 IV</strong>: 강철</li>
+	<li><strong>티어 V</strong>: 흑강</li>
+	<li><strong>티어 VI</strong>: 적강, 청강</li>
+</ul>
+<a class="anchor" id="working"></a><h5>단조</h5>
+<p>모루에서 아이템을 단조하려면 먼저 오른쪽에 보이는 바와 같이 모루를 열어야 합니다. 왼쪽에는 2개의 입력 아이템 슬롯이 있으며, 단조는 왼쪽 슬롯에서 진행됩니다. 모루에서 단조하는 데는 망치가 필요합니다. 망치는 모루의 망치 슬롯에 두거나 <strong>또는</strong> 손에 들고 있을 수 있습니다. 아이템을 단조할 때마다 망치의 내구도는 감소합니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image42.png" alt="tfc:textures/gui/book/gui/anvil_empty.png">
+<div style="text-align: center;"><p>모루 인터페이스.</p>
+</div><p>그리고 나서는 당신이 원하는 아이템으로 <span style="color:#3E8A00;">계획</span>을 선택해야 합니다. 계획서가 그려진 버튼을 클릭하고 제작할 아이템을 선택하세요. 다시 모루 인터페이스로 돌아오면 계획서 버튼에 선택한 아이템이 표시되며 <span style="color:#3E8A00;">조건</span>과 <span style="color:#3E8A00;">목표 지점</span>이 표시됩니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image43.png" alt="tfc:textures/gui/book/gui/anvil_in_use.png">
+<div style="text-align: center;"><p>곡괭이 제작을 선택한 이후.</p>
+</div><h5>목표</h5>
+<p>모루 창의 중앙에는 2개의 화살표가 있습니다. <span style="color:#00AA00;">초록색</span> 화살표는 현재의 단조 진행도입니다. <span style="color:#AA0000;">빨간색</span> 화살표는 목표 지점입니다. 당신의 목표는 초록색 화살표를 빨간색 화살표에 정확히 맞추는 것입니다.<br/>
+<br/>
+이를 위해서는 <span style="color:#00AA00;">초록색</span>과 <span style="color:#AA0000;">빨간색</span> 행동 버튼을 눌러 정해진 양만큼 초록색 화살표를 좌우로 움직여야 합니다.</p>
+<p><span style="color:#00AA00;">초록색</span> 행동들은 진행도를 <strong>오른쪽</strong>으로 이동시키며, <span style="color:#AA0000;">빨간색</span> 행동들은 <strong>왼쪽</strong>으로 이동시킵니다. 진행도를 진행도 바 바깥으로 이동시키면, 아이템에 너무 많은 충격이 가해지며 아이템을 잃게 됩니다. 그러나 단조 중에는 또한 <span style="color:#3E8A00;">규칙</span>도 맞추어야 합니다...</p>
+<h5>단조 규칙</h5>
+<p><span style="color:#3E8A00;">규칙</span>은 모루 창 위쪽에 표시되는 2-3개의 아이콘입니다. 이 아이콘들은 단조를 완성하기 위해 취해야 하는 특정한 행동들을 표시합니다. 예를 들면면 <span style="color:#00AA00;">굽히기 (뒤에서 2번째로)</span>는 끝내기 전 뒤에서 2번째로 <strong>무조건</strong> <span style="color:#00AA00;">굽히기</span>를 해야 한다는 것을 의미합니다.</p>
+<p>마지막으로 한 3개의 행동들이 규칙 아래에 표시됩니다. 조건이 만족되었을 때, 해당 조건의 테두리는 초록색으로 변합니다. 모든 조건이 만족되었을 때만 단조를 완료할 수 있습니다.<br/>
+<br/>
+마지막으로, 단조할 때는 아이템의 <a href="../mechanics/heating.html">온도</a>에 주의해야 합니다. 금속은 아이템의 툴팁에 <u>단조 가능</u>이 표시되는 온도 이상에서만 단조할 수 있습니다. 단조 중에 아이템을 다시 꺼내어서 가열할 수도 있습니다.</p>
+<h5>단조 보너스</h5>
+<p>단조는 지루하고, 또 목표를 맞추기까지 오랜 시행착오가 필요할 수도 있습니다. 하지만, 효율적으로 단조한다면 보상이 주어집니다. 도구 머리와 같은 일부 아이템들은 적은 행동만으로 목표를 맞추었을 때, 얼마나 효율적으로 단조했는가에 기반하여 단조 보너스가 주어집니다. 이 보너스는 해당 머리를 사용해 만든 아이템에 적용됩니다.</p>
+<h5>완벽한 단조</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="이 아이템을 확인하려면 Minecraft에서 도감을 확인하세요.">아이템: <code>tfc:metal/pickaxe/wrought_iron{"tfc:forging_bonus":4}</code></span></p>
+        </div>
+        <p>단조 보너스는 다음과 같습니다.</p>
+<ul>
+	<li>어설픈 단조</li>
+	<li>쓸만한 단조</li>
+	<li>전문적인 단조</li>
+	<li>완벽한 단조</li>
+</ul><p><br/>
+단조 보너스는 도구의 내구도를 올리거나 채굴 속도를 높이고, 공격 대미지를 높이는 등 도구의 능력치를 강화합니다.</p>
+<a class="anchor" id="welding"></a><h5>용접</h5>
+<p>용접은 두 개의 아이템을 합쳐서 하나로 만드는 작업입니다. 용접은 <a href="../getting_started/primitive_anvils.html">돌 모루</a>나 금속 모루에서나 똑같은 방법으로 할 수 있습니다.<br/>
+<br/>
+먼저, 용접하고 싶은 두 개의 아이템을 모루에 올려놓아야 합니다. 아이템을 들고 웅크린 채로 모루를 클릭하거나 직접 모루 인터페이스를 열어서 넣을 수 있습니다.</p>
+<p>용접을 하기 위해서는 하나의 <a href="../mechanics/flux.html">플럭스</a>가 모루에 들어 있어야 합니다. 또한 용접할 아이템 모두가 툴팁에 <u>용접 가능</u>이라고 표시될 만큼 <a href="../mechanics/heating.html">충분히 뜨거워야</a> 합니다. 그리고 나서 모루에 웅크리고 <span style="color:#3E8A00;">망치</span>로 클릭하면 아이템이 용접되는 망치질 소리가 들릴 것입니다. 그리고 모루를 웅크리고 맨손으로 <span style="color:#b0b;">오른쪽 버튼</span>을 눌러 꺼낼 수 있습니다.</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

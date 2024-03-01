@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'pt_br';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portuguese (Brazil)</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/getting_started\pottery.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\pottery.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\pottery.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\pottery.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\pottery.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\pottery.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\pottery.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\pottery.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">O mundo</a></li>
+<li><a class="text-muted" href="../getting_started/">Começando</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./introduction.html">Introdução</a></li>
+<li><a class="text-muted" href="./firepit.html">Pits de fogo</a></li>
+<li><a class="text-muted" href="./pottery.html">Cerâmica</a></li>
+<li><a class="text-muted" href="./pit_kiln.html">Fornos de poço</a></li>
+<li><a class="text-muted" href="./finding_ores.html">Minérios, metal e elenco</a></li>
+<li><a class="text-muted" href="./primitive_alloys.html">Ligas primitivas</a></li>
+<li><a class="text-muted" href="./primitive_anvils.html">Anvils primitivos</a></li>
+<li><a class="text-muted" href="./building_materials.html">Building Materials</a></li>
+<li><a class="text-muted" href="./a_place_to_sleep.html">Um lugar para dormir</a></li>
+<li><a class="text-muted" href="./size_and_weight.html">Tamanho e peso</a></li>
+<li><a class="text-muted" href="./food_and_water.html">Comida e água</a></li></ul></li>
+<li><a class="text-muted" href="../mechanics/">Mecânica avançada</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">Começando</a> / <a class="text-muted" href="#">Cerâmica</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Vessel">
+                <img src="..\..\_images\item25.png" alt="Cerâmica" />
+            </span>
+            <h4>Cerâmica</h4>
+        </div>
+        </h4>
+                <hr>
+                <p><span style="color:#3E8A00;">Argila</span> é um material incrivelmente útil e equilibrado que pode ser usado para cerâmica. Pode ser um desafio para localizar a princípio. A argila é geralmente escondida pela grama, mas geralmente é encontrada em dois locais. Em áreas com pelo menos 175mm <a href="../the_world/climate.html#rainfall">Chuvas anuais</a>, argila pode ser encontrada em patches em todo o lugar, geralmente marcada pela presença de certos <span style="color:#3E8A00;">Plantas</span>.</p>
+<h5>Indicadores de argila</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Argila, com uma das plantas que podem indicar sua presença.</p>
+<p><span style="color:#3E8A00;">Athyrium longe</span>, , <span style="color:#3E8A00;">Goldenrod</span>, <span style="color:#3E8A00;">Grama de pampas</span>, <span style="color:#3E8A00;">Perovskia</span>, e <span style="color:#3E8A00;">Canna de água</span> Todos indicam a presença de argila nas proximidades. A argila também pode ser encontrada em depósitos menores próximos a fontes de água, como rios, lagos ou lagoas.<br/>
+<br/>
+Como nas rochas, a argila pode ser usada para formar novos itens. Requer cinco argila na sua mão para remar. Ao contrário das rochas, se você cometer um erro, poderá simplesmente fechar o knapping interface, remodelar seu barro e tente novamente.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image23.png" alt="tfc:textures/gui/book/gui/clay_knapping.png">
+<div style="text-align: center;"><p>A Knapping Interface.</p>
+</div><a class="anchor" id="vessel"></a><h5>Small Vessel</h5>
+<p>A pequena vessel é um desses itens. Como todos os itens de cerâmica, deve ser <a href="https://en.wikipedia.org/wiki/Pottery">despedida</a> antes que possa ser usado. Disparar é um processo de <a href="../mechanics/heating.html">aquecimento</a> o item até um ponto em que a argila se transformará em um difícil <span style="color:#3E8A00;">Cerâmica</span> material, que requer aquecimento a 1200 ° C, ou <span style="color:#FFFF55;"><strong>Amarela</strong></span>.<br/>
+<br/>
+Para fazer isso no início do jogo, você precisará usar um <a href="../getting_started/pit_kiln.html">Forno do poço</a>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image24.png" alt="Recipe: tfc:clay_knapping/vessel">
+<p>Knapping a Clay Small Vessel.</p>
+<a class="anchor" id="jug"></a><h5>Jug</h5>
+<p>Outro item útil de cerâmica é o <span style="color:#3E8A00;">Jug</span>. Pode ser usado para pegar e <span style="color:#3E8A00;">bebida</span> Fluidos, como água doce.<br/>
+<br/>
+Para usá -lo, simplesmente <span style="color:#b0b;">Right Click</span> O jarro sobre o fluido do mundo. Em seguida, use o jarro para beber dele. O jarro pode segurar <span style="color:#3E8A00;">100 mB</span> de fluido de cada vez.</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image9.png" alt="Recipe: tfc:clay_knapping/jug">
+<p>Knapping a Clay Jug.</p>
+<a class="anchor" id="mold"></a><h5>Moldes</h5>
+<p>Argila também é necessária para fazer <span style="color:#3E8A00;">Moldes</span>. Os moldes podem ter o metal fundido derramado neles, o que acabará se solidificando na forma de um molde. O item e potencialmente o molde podem ser recuperados usando <span style="color:#b0b;">Right Click</span> no molde.<br/>
+<br/>
+O tipo mais simples de molde é o molde de lingote, à direita.</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image25.png" alt="Recipe: tfc:clay_knapping/ingot_mold">
+<p>Knapping a Clay Ingot Mold.</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-toggle="tooltip" title="Molde de lingote em argila" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item26.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-toggle="tooltip" title="Molde de lingote vazio" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item27.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-yellow">
+            <p>Branco Amarelado****</p>
+        </div>
+        <p>O molde então precisa ser disparado, como todos os itens de argila, para ser utilizável - provavelmente em um <a href="../getting_started/pit_kiln.html">Forno do poço</a>.<br/>
+<br/>
+Uma vez que é disparado, o metal fundido pode ser derramado. Depois que o metal esfriar o suficiente, ele pode ser extraído.</p>
+<h5>Elenco</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this item.">Items: <code>tfc:ceramic/ingot_mold{tank:{"Amount":100</code>, <code>"FluidName":"tfc:metal/copper"}}</code></span></p>
+        </div>
+        <p>As próximas páginas mostram vários dos padrões de troca de várias ferramentas.</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image26.png" alt="Recipe: tfc:clay_knapping/propick_head_mold">
+<p>Uma <a href="../mechanics/prospecting.html#propick">Escolha do prospector</a> é uma ferramenta essencial para localizar grandes quantidades de minério.</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image27.png" alt="Recipe: tfc:clay_knapping/pickaxe_head_mold">
+<p>A <span style="color:#3E8A00;">Picareta</span>! A ferramenta de pão e manteiga para mineração.</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image28.png" alt="Recipe: tfc:clay_knapping/saw_blade_mold">
+<p>A <span style="color:#3E8A00;">Serra</span> é uma ferramenta necessária para criar componentes avançados de madeira como um <span style="color:#3E8A00;">Bancada de Trabalho</span> junto com muitos outros dispositivos como <a href="../mechanics/support_beams.html">Apoia</a>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image29.png" alt="Recipe: tfc:clay_knapping/scythe_blade_mold">
+<p>A <span style="color:#3E8A00;">Enxada</span> é uma ferramenta que pode colher plantas e folhas em uma área de 3x3x3!</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image30.png" alt="Recipe: tfc:clay_knapping/chisel_head_mold">
+<p>A <a href="../mechanics/chisel.html">Formão</a> é uma ferramenta usada para suavizar blocos, além de criar um grande número de blocos decorativos.</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image31.png" alt="Recipe: tfc:clay_knapping/axe_head_mold">
+<p>Um <span style="color:#3E8A00;">Machado</span> Para todas as suas fins de corte de árvores. Observe que os eixos de pedra são menos eficientes que o metal!</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image32.png" alt="Recipe: tfc:clay_knapping/hammer_head_mold">
+<p>O <span style="color:#3E8A00;">Martelo</span> é uma ferramenta essencial para criar e trabalhar em <a href="../mechanics/anvils.html">Anvils</a>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image33.png" alt="Recipe: tfc:clay_knapping/knife_blade_mold">
+<p>A <span style="color:#3E8A00;">Faca</span> pode ser usado como arma ou como uma ferramenta de corte para blocos de tipo de planta.</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image34.png" alt="Recipe: tfc:clay_knapping/hoe_head_mold">
+<p>A <span style="color:#3E8A00;">Enxada</span> usado para plantar e manter <a href="../mechanics/crops.html">Plantações</a>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="..\..\_images\image35.png" alt="Recipe: tfc:clay_knapping/shovel_head_mold">
+<p>A <span style="color:#3E8A00;">Pá</span> Para todos os seus fins de escavação.</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

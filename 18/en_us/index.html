@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'en_us';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="#">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../en_us/" class="dropdown-item">English</a>
+<a href="../ja_jp/" class="dropdown-item">日本語</a>
+<a href="../pt_br/" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../ko_kr/" class="dropdown-item">한국어</a>
+<a href="../uk_ua/" class="dropdown-item">Українська мова</a>
+<a href="../zh_cn/" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../zh_hk/" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../zh_tw/" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="#">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="./the_world/">The World</a></li>
+<li><a class="text-muted" href="./getting_started/">Getting Started</a></li>
+<li><a class="text-muted" href="./mechanics/">Advanced Mechanics</a></li>
+<li><a class="text-muted" href="./tfcgyres_orehints/">(Addon) Ore Hints and Spawning</a></li>
+<li><a class="text-muted" href="./waterflasks/">(Addon) Water Flasks</a></li>
+<li><a class="text-muted" href="./firmalife/">(Addon) Firmalife</a></li>
+<li><a class="text-muted" href="./firmaciv/">(Addon) Firma: Civilization</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="#">1.18.2</a></em></p>
+            
+            <img class="d-block w-200 mx-auto img-fluid" src="../_images/splash.png" alt="TerraFirmaCraft Field Guide Splash Image">
+            <p>This is a translation of the TerraFirmaCraft Field Guide, which is viewable in game. Some parts of this field guide are only visible in-game, such as multiblock visualizations or some recipes.</p>
+            <h4>Categories</h4>
+        
+            <div class="card">
+                <div class="card-header">
+                    <a href="the_world/index.html">The World</a>
+                </div>
+                <div class="card-body">
+                    <p>All about the natural world around you.</p>
+
+                </div>
+            </div>
+            
+
+            <div class="card">
+                <div class="card-header">
+                    <a href="getting_started/index.html">Getting Started</a>
+                </div>
+                <div class="card-body">
+                    <p>An introduction to surviving in the world of TerraFirmaCraft. How to survive the stone age and obtain your first pickaxe.</p>
+
+                </div>
+            </div>
+            
+
+            <div class="card">
+                <div class="card-header">
+                    <a href="mechanics/index.html">Advanced Mechanics</a>
+                </div>
+                <div class="card-body">
+                    <p>Advanced sections of the tech tree, from the first pickaxe, all the way to colored steel.</p>
+
+                </div>
+            </div>
+            
+
+            <div class="card">
+                <div class="card-header">
+                    <a href="tfcgyres_orehints/index.html">(Addon) Ore Hints and Spawning</a>
+                </div>
+                <div class="card-body">
+                    <p>Mineral veins now have hint rocks like metal veins have small nuggets! Ore veins are better, especially at the bottom of the world.<br/>
+<br/>
+Thanks to AnodeCathode of TechNodeFirmaCraft for the "hint rock" idea and initial rock selections.</p>
+
+                </div>
+            </div>
+            
+
+            <div class="card">
+                <div class="card-header">
+                    <a href="waterflasks/index.html">(Addon) Water Flasks</a>
+                </div>
+                <div class="card-body">
+                    <p>Have some better containers for carrying your drinks around with you.</p>
+
+                </div>
+            </div>
+            
+
+            <div class="card">
+                <div class="card-header">
+                    <a href="firmalife/index.html">(Addon) Firmalife</a>
+                </div>
+                <div class="card-body">
+                    <p>All about the Firmalife addon</p>
+
+                </div>
+            </div>
+            
+
+            <div class="card">
+                <div class="card-header">
+                    <a href="firmaciv/index.html">(Addon) Firma: Civilization</a>
+                </div>
+                <div class="card-body">
+                    <p>All you need to know about the features added with Firma: Civilization</p>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+</body>
+</html>

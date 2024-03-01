@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft 도감</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'ko_kr';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft 도감</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">한국어</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/mechanics\leather_making.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\leather_making.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\leather_making.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\leather_making.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\leather_making.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\leather_making.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\leather_making.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\leather_making.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">색인</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API 뮨서</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">버전 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>목차</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">세계</a></li>
+<li><a class="text-muted" href="../getting_started/">시작하기</a></li>
+<li><a class="text-muted" href="../mechanics/">심화 기술</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./advanced_building_materials.html">발전된 재료</a></li>
+<li><a class="text-muted" href="./animal_husbandry.html">축산업</a></li>
+<li><a class="text-muted" href="./anvils.html">모루</a></li>
+<li><a class="text-muted" href="./aqueducts.html">수로</a></li>
+<li><a class="text-muted" href="./armor.html">갑옷</a></li>
+<li><a class="text-muted" href="./barrels.html">통</a></li>
+<li><a class="text-muted" href="./bellows.html">풀무</a></li>
+<li><a class="text-muted" href="./blast_furnace.html">용광로</a></li>
+<li><a class="text-muted" href="./bloomery.html">괴철로</a></li>
+<li><a class="text-muted" href="./bread.html">빵</a></li>
+<li><a class="text-muted" href="./charcoal_forge.html">숯불 노</a></li>
+<li><a class="text-muted" href="./charcoal_pit.html">숯 구덩이</a></li>
+<li><a class="text-muted" href="./chisel.html">끌</a></li>
+<li><a class="text-muted" href="./composter.html">Composter</a></li>
+<li><a class="text-muted" href="./crops.html">작물</a></li>
+<li><a class="text-muted" href="./crucible.html">도가니</a></li>
+<li><a class="text-muted" href="./dairy.html">유제품</a></li>
+<li><a class="text-muted" href="./damage_types.html">피해 종류</a></li>
+<li><a class="text-muted" href="./decay.html">음식 보존</a></li>
+<li><a class="text-muted" href="./fertilizers.html">비료</a></li>
+<li><a class="text-muted" href="./fire_clay.html">내화점토</a></li>
+<li><a class="text-muted" href="./fishing.html">낚시</a></li>
+<li><a class="text-muted" href="./flux.html">플럭스</a></li>
+<li><a class="text-muted" href="./gems.html">보석</a></li>
+<li><a class="text-muted" href="./grill.html">모닥불과 석쇠</a></li>
+<li><a class="text-muted" href="./heating.html">가열하기</a></li>
+<li><a class="text-muted" href="./hydration.html">작물 수화</a></li>
+<li><a class="text-muted" href="./lamps.html">램프</a></li>
+<li><a class="text-muted" href="./leather_making.html">가죽 제작</a></li>
+<li><a class="text-muted" href="./lighting.html">광원</a></li>
+<li><a class="text-muted" href="./minecarts.html">Minecarts</a></li>
+<li><a class="text-muted" href="./panning.html">사금질</a></li>
+<li><a class="text-muted" href="./papermaking.html">Papermaking</a></li>
+<li><a class="text-muted" href="./pets.html">반려동물</a></li>
+<li><a class="text-muted" href="./pot.html">모닥불과 냄비</a></li>
+<li><a class="text-muted" href="./powderkegs.html">화약통</a></li>
+<li><a class="text-muted" href="./prospecting.html">광물 탐색</a></li>
+<li><a class="text-muted" href="./quern.html">맷돌</a></li>
+<li><a class="text-muted" href="./salad.html">샐러드</a></li>
+<li><a class="text-muted" href="./sandwiches.html">샌드위치</a></li>
+<li><a class="text-muted" href="./scribing_table.html">필기대</a></li>
+<li><a class="text-muted" href="./sluices.html">세광통</a></li>
+<li><a class="text-muted" href="./steel.html">강철</a></li>
+<li><a class="text-muted" href="./support_beams.html">지지대</a></li>
+<li><a class="text-muted" href="./weaving.html">직조</a></li>
+<li><a class="text-muted" href="./wooden_buckets.html">나무 양동이</a></li></ul></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">심화 기술</a> / <a class="text-muted" href="#">가죽 제작</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="가죽">
+                <img src="..\..\_images\item123.png" alt="가죽 제작" />
+            </span>
+            <h4>가죽 제작</h4>
+        </div>
+        </h4>
+                <hr>
+                <p><span style="color:#3E8A00;">가죽</span>은 생가죽으로 만드는 견고한 재료입니다. 가죽으로는 <span style="color:#3E8A00;">가죽 갑옷</span>, <span style="color:#3E8A00;">안장</span>, 또는 <a href="../mechanics/bellows.html">풀무</a>를 만들 수 있습니다. 생가죽은 <a href="../mechanics/leather_making.html#soaking">석회수에 불리고</a>, <a href="../mechanics/leather_making.html#scraping">털을 빼고</a>, <a href="../mechanics/leather_making.html#preparing">세척하고</a>, <a href="../mechanics/leather_making.html#tanning">무두질</a>하여 <span style="color:#3E8A00;">가죽</span>으로 만들 수 있습니다.</p>
+
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="생가죽">
+                <img src="..\..\_images\item124.gif" alt="생가죽" />
+            </span>
+            <h5>생가죽</h5>
+        </div>
+        <p>일단 처음으로는 <span style="color:#3E8A00;">생가죽</span>을 얻어야 합니다. 생가죽은 여러 <a href="../the_world/wild_animals.html">동물</a>들을 잡아 얻을 수 있습니다. 각각의 동물들은 다양한 크기의 <span style="color:#3E8A00;">생가죽</span>을 드롭합니다.</p>
+<p>가죽 제작에는 여러 재료와 도구들이 필요합니다. 필요한 것들은 다음과 같습니다.<br/>
+</p>
+<ul>
+	<li><a href="../mechanics/barrels.html#limewater">석회수</a> - <a href="../mechanics/flux.html">플럭스</a>를 <span style="color:#3E8A00;">물</span>에 녹인 용액</li>
+	<li>물</li>
+	<li><a href="../mechanics/barrels.html#tannin">탄닌</a> - 특정 나무의 원목으로부터 만들어지는 산성 용액</li>
+	<li><span style="color:#3E8A00;">생가죽</span></li>
+</ul><p><br/>
+이 모든 것이 있다면, 이제 가죽 가공을 시작할 준비가 되었습니다.</p>
+<a class="anchor" id="soaking"></a>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/2to2.png" />
+            
+        <div class="crafting-recipe-item two-recipe-pos-1">
+            <span href="#" data-toggle="tooltip" title="중간 크기 생가죽" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\item1.png" />
+            
+        </div>
+        
+            
+        <div class="crafting-recipe-item two-recipe-pos-2">
+            <span href="#" data-toggle="tooltip" title="석회수" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\fluid2.png" />
+            
+        </div>
+        
+            
+        <div class="crafting-recipe-item two-recipe-pos-3">
+            <span href="#" data-toggle="tooltip" title="불린 중간 크기 생가죽" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\item125.png" />
+            
+        </div>
+        
+            
+            
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>8000 Ticks</p>
+        </div>
+        
+        </div>
+    </div>
+    <a class="anchor" id="scraping"></a>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="털 빼기">
+                <img src="..\..\_images\item126.gif" alt="털 빼기" />
+            </span>
+            <h5>털 빼기</h5>
+        </div>
+        <p>불린 후에, <span style="color:#3E8A00;">불린 생가죽</span>에서 털 등을 제거하기 위해 가죽을 긁어야 합니다. 가죽을 긁기 위해서는 가죽을 <span style="color:#3E8A00;">통나무</span> 옆면 위에 올려놓아야 합니다. <span style="color:#3E8A00;">칼</span>을 들고, 가죽의 각 부위에 <span style="color:#b0b;">오른쪽 버튼</span>을 누르면 색이 약간 변할 것입니다.</p>
+
+<div id="content15" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#content15" data-slide-to="0" class="active"></li>
+        
+<li data-target="#content15" data-slide-to="1"></li>
+
+<li data-target="#content15" data-slide-to="2"></li>
+
+<li data-target="#content15" data-slide-to="3"></li>
+
+    </ol>
+    <div class="carousel-inner">
+        
+<div class="carousel-item active">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image66.png" alt="tfc:textures/gui/book/tutorial/soaked_hide_1.png">
+</div>
+
+<div class="carousel-item ">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image67.png" alt="tfc:textures/gui/book/tutorial/soaked_hide_2.png">
+</div>
+
+<div class="carousel-item ">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image68.png" alt="tfc:textures/gui/book/tutorial/soaked_hide_3.png">
+</div>
+
+<div class="carousel-item ">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image69.png" alt="tfc:textures/gui/book/tutorial/soaked_hide_4.png">
+</div>
+
+    </div>
+    <a class="carousel-control-prev" href="#content15" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#content15" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<div style="text-align: center;"><p>가죽을 다 긁은 후에, 가죽을 부수면 <span style="color:#3E8A00;">털을 뺀 생가죽</span>을 얻을 수 있습니다</p>
+</div><a class="anchor" id="preparing"></a>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/2to2.png" />
+            
+        <div class="crafting-recipe-item two-recipe-pos-1">
+            <span href="#" data-toggle="tooltip" title="털을 뺀 중간 크기 생가죽" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\item127.png" />
+            
+        </div>
+        
+            
+        <div class="crafting-recipe-item two-recipe-pos-2">
+            <span href="#" data-toggle="tooltip" title="물" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\fluid1.png" />
+            
+        </div>
+        
+            
+        <div class="crafting-recipe-item two-recipe-pos-3">
+            <span href="#" data-toggle="tooltip" title="세척된 중간 크기 가죽" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\item128.png" />
+            
+        </div>
+        
+            
+            
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>8000 Ticks</p>
+        </div>
+        
+        </div>
+    </div>
+    <a class="anchor" id="tanning"></a>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/2to2.png" />
+            
+        <div class="crafting-recipe-item two-recipe-pos-1">
+            <span href="#" data-toggle="tooltip" title="세척된 중간 크기 가죽" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\item128.png" />
+            
+        </div>
+        
+            
+        <div class="crafting-recipe-item two-recipe-pos-2">
+            <span href="#" data-toggle="tooltip" title="탄닌" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\fluid3.png" />
+            
+        </div>
+        
+            
+        <div class="crafting-recipe-item two-recipe-pos-3">
+            <span href="#" data-toggle="tooltip" title="가죽" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\item123.png" />
+            <p class="crafting-recipe-item-count">2</p>
+        </div>
+        
+            
+            
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>8000 Ticks</p>
+        </div>
+        
+        </div>
+    </div>
+    
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'pt_br';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portuguese (Brazil)</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/mechanics/glassworking.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics/glassworking.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics/glassworking.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics/glassworking.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics/glassworking.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics/glassworking.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics/glassworking.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics/glassworking.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.20.1 - v3.1.9</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">O mundo</a></li>
+<li><a class="text-muted" href="../getting_started/">Começando</a></li>
+<li><a class="text-muted" href="../mechanics/">Mecânica avançada</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./advanced_building_materials.html">Materiais avançados</a></li>
+<li><a class="text-muted" href="./animal_husbandry.html">Animal Husbandry</a></li>
+<li><a class="text-muted" href="./anvils.html">Anvils</a></li>
+<li><a class="text-muted" href="./aqueducts.html">Aqueducts</a></li>
+<li><a class="text-muted" href="./armor.html">Armor</a></li>
+<li><a class="text-muted" href="./barrels.html">Barrels</a></li>
+<li><a class="text-muted" href="./bellows.html">Bellows</a></li>
+<li><a class="text-muted" href="./blast_furnace.html">Blast Furnace</a></li>
+<li><a class="text-muted" href="./bloomery.html">Bloomery</a></li>
+<li><a class="text-muted" href="./bowls.html">Bowls</a></li>
+<li><a class="text-muted" href="./bread.html">Bread</a></li>
+<li><a class="text-muted" href="./charcoal_forge.html">Charcoal Forge</a></li>
+<li><a class="text-muted" href="./charcoal_pit.html">Charcoal Pit</a></li>
+<li><a class="text-muted" href="./chisel.html">Chisel</a></li>
+<li><a class="text-muted" href="./composter.html">Composter</a></li>
+<li><a class="text-muted" href="./crankshaft.html">Crankshafts</a></li>
+<li><a class="text-muted" href="./crops.html">Crops</a></li>
+<li><a class="text-muted" href="./crucible.html">Crucible</a></li>
+<li><a class="text-muted" href="./dairy.html">Dairy Products</a></li>
+<li><a class="text-muted" href="./damage_types.html">Damage Types</a></li>
+<li><a class="text-muted" href="./decay.html">Preservation</a></li>
+<li><a class="text-muted" href="./dye.html">Dye</a></li>
+<li><a class="text-muted" href="./fertilizers.html">Fertilizers</a></li>
+<li><a class="text-muted" href="./fire_clay.html">Fire Clay</a></li>
+<li><a class="text-muted" href="./fishing.html">Fishing</a></li>
+<li><a class="text-muted" href="./flux.html">Flux</a></li>
+<li><a class="text-muted" href="./gems.html">Gems</a></li>
+<li><a class="text-muted" href="./glassworking.html">Glassworking</a></li>
+<li><a class="text-muted" href="./glassworking_applications.html">Glass Products</a></li>
+<li><a class="text-muted" href="./grill.html">Firepit And Grill</a></li>
+<li><a class="text-muted" href="./heating.html">Heating</a></li>
+<li><a class="text-muted" href="./hydration.html">Keeping Hydrated</a></li>
+<li><a class="text-muted" href="./jarring.html">Jarring</a></li>
+<li><a class="text-muted" href="./lamps.html">Lamps</a></li>
+<li><a class="text-muted" href="./leather_making.html">Leather Making</a></li>
+<li><a class="text-muted" href="./lighting.html">Light Sources</a></li>
+<li><a class="text-muted" href="./mechanical_power.html">Mechanical Power</a></li>
+<li><a class="text-muted" href="./minecarts.html">Minecarts</a></li>
+<li><a class="text-muted" href="./panning.html">Panning</a></li>
+<li><a class="text-muted" href="./papermaking.html">Papermaking</a></li>
+<li><a class="text-muted" href="./pets.html">Pets</a></li>
+<li><a class="text-muted" href="./pot.html">Firepit And Pot</a></li>
+<li><a class="text-muted" href="./powderkegs.html">Powderkegs</a></li>
+<li><a class="text-muted" href="./prospecting.html">Prospecting</a></li>
+<li><a class="text-muted" href="./pumps.html">Pumps</a></li>
+<li><a class="text-muted" href="./quern.html">Quern</a></li>
+<li><a class="text-muted" href="./salad.html">Salads</a></li>
+<li><a class="text-muted" href="./sandwiches.html">Sandwiches</a></li>
+<li><a class="text-muted" href="./scribing_table.html">Scribing Table</a></li>
+<li><a class="text-muted" href="./sluices.html">Sluices</a></li>
+<li><a class="text-muted" href="./steel.html">Steel</a></li>
+<li><a class="text-muted" href="./support_beams.html">Support Beams & Collapses</a></li>
+<li><a class="text-muted" href="./weaving.html">Weaving</a></li>
+<li><a class="text-muted" href="./wooden_buckets.html">Wooden Buckets</a></li></ul></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.20.1</a> / <a class="text-muted" href="./">Mecânica avançada</a> / <a class="text-muted" href="#">Glassworking</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Glass Bottle">
+                <img src="../../_images/item163.png" alt="Glassworking" />
+            </span>
+            <h4>Glassworking</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>Glassworking is the process of turning sand into glass. To start, you must create a <span style="color:#3E8A00;">Glass Batch</span>, of which there are four types:<br/>
+<br/>
+ 1. <span style="color:#3E8A00;">Silica</span>, from white sand.<br/>
+ 2. <span style="color:#3E8A00;">Hematitic</span>, from yellow, red, or pink sand.<br/>
+ 3. <span style="color:#3E8A00;">Olivine</span>, from green or brown sand.<br/>
+ 4. <span style="color:#3E8A00;">Volcanic</span>, from black sand.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="White Sand" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item184.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="White Sand" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item184.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-toggle="tooltip" title="White Sand" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item184.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="White Sand" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item184.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:glassworking_potash" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item185.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-toggle="tooltip" title="Lime" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item118.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Silica Glass Batch" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">4</p>
+                    <img class="recipe-item" src="../../_images/item162.png" />
+                </div>
+            </div>
+        </div>
+        <p>Glass batches can then be crafted using one of the aforementioned colors of sand, plus <a href="../mechanics/glassworking.html#lime">Lime</a> and a type of <a href="../mechanics/glassworking.html#potash">Potash</a>.</p>
+<a class="anchor" id="lime"></a>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-toggle="tooltip" title="Fluxo" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="../../_images/item60.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-toggle="tooltip" title="Lime" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="../../_images/item118.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-red">
+            <p>Incandescente Brilhante****</p>
+        </div>
+        <p><span style="color:#3E8A00;">Lime</span> is one of the ingredients required to make glass batches. It is a powder obtained by <a href="../mechanics/heating.html">heating</a> <a href="../mechanics/flux.html">Flux</a>.</p>
+<a class="anchor" id="potash"></a>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-toggle="tooltip" title="Dried Seaweed" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="../../_images/item186.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-toggle="tooltip" title="Soda Ash" class="crafting-recipe-item-tooltip"></span>
+                <p class="crafting-recipe-item-count">3</p>
+                <img class="recipe-item" src="../../_images/item187.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>Quente****</p>
+        </div>
+        <p>A type of <span style="color:#3E8A00;">Potash</span> or equivalent is also required for glass batches. <span style="color:#3E8A00;">Soda Ash</span> can be used, which is a powder made from heating <span style="color:#3E8A00;">Dried Seaweed</span> or <span style="color:#3E8A00;">Kelp</span>. <a href="../the_world/ores_and_minerals.html#saltpeter">Saltpeter</a> can be used as well.</p>
+<h5>Tools of the Trade</h5>
+<p>Glassworking is done by starting with a glass batch, and then completing a series of steps. These steps may require specific tools:<br/>
+</p>
+<ul>
+	<li>A <a href="../mechanics/glassworking.html#blowpipe">Blowpipe</a>, to <span style="color:#3E8A00;">Blow</span> and <span style="color:#3E8A00;">Stretch</span></li>
+	<li>A <a href="../mechanics/glassworking.html#paddle">Paddle</a>, to <span style="color:#3E8A00;">Flatten</span></li>
+	<li><a href="../mechanics/glassworking.html#jacks">Jacks</a>, to <span style="color:#3E8A00;">Pinch</span></li>
+	<li>A <a href="../mechanics/glassworking.html#saw">Gem Saw</a>, to <span style="color:#3E8A00;">Saw</span></li>
+</ul>
+<a class="anchor" id="blowpipe"></a>
+<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="../../_images/image55.png" alt="Recipe: tfc:clay_knapping/blowpipe">
+<p>The most important tool is the <span style="color:#3E8A00;">Blowpipe</span>. It can be <span style="color:#3E8A00;">knapped</span> from clay, and then fired into a <span style="color:#3E8A00;">Ceramic Blowpipe</span>.</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-toggle="tooltip" title="Brass Rod" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="../../_images/item188.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-toggle="tooltip" title="Blowpipe" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="../../_images/placeholder_64.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>Nível II</p>
+        </div>
+        <p>Ceramic blowpipes are brittle, and have a chance to to break when used. A more sturdy blowpipe can be <a href="../mechanics/anvils.html#working">worked</a> from a <span style="color:#3E8A00;">Brass Rod</span> on an anvil.</p>
+<a class="anchor" id="paddle"></a>
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Paddle" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/item158.png" />
+                </div>
+            </div>
+        </div>
+        <p>The <span style="color:#3E8A00;">Flatten</span> operation can be done with a <span style="color:#3E8A00;">Paddle</span>, which is crafted from wood.</p>
+<a class="anchor" id="jacks"></a>
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this recipe.">Recipe: <code>tfc:welding/jacks</code></span></p>
+        </div>
+        <p>The <span style="color:#3E8A00;">Pinch</span> operation can be done with <span style="color:#3E8A00;">Jacks</span>, made from welding two brass rods together.</p>
+<a class="anchor" id="saw"></a>
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="Brass Rod" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item188.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:gem_powders" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item137.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Gem Saw" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/item159.png" />
+                </div>
+            </div>
+        </div>
+        <p>The <span style="color:#3E8A00;">Saw</span> operation can be done with a <span style="color:#3E8A00;">Gem Saw</span>. The gem saw is also used to break both <span style="color:#3E8A00;">Glass Blocks</span> and <span style="color:#3E8A00;">Glass Panes</span> and obtain them.</p>
+<h5>How to Glass</h5>
+<p>First, glass on the blowpipe must be heated to <span style="color:#AA0000;"><strong>Faint Red</strong></span>.Then, hold the blowpipe and hold <span style="color:#b0b;">Right Click</span> to perform each step.<br/>
+<br/>
+<strong>Blow</strong><br/>
+Use the <span style="color:#3E8A00;">Blowpipe</span> while facing straight ahead.<br/>
+<br/>
+<strong>Stretch</strong><br/>
+Use the <span style="color:#3E8A00;">Blowpipe</span> while facing straight down.</p>
+<p><strong>Flatten</strong><br/>
+Use the <span style="color:#3E8A00;">Blowpipe</span> while holding a <a href="../mechanics/glassworking.html#paddle">Paddle</a> in your offhand.<br/>
+<br/>
+<strong>Pinch</strong><br/>
+Use the <span style="color:#3E8A00;">Blowpipe</span> while holding <a href="../mechanics/glassworking.html#jacks">Jacks</a> in your offhand.<br/>
+<br/>
+<strong>Saw</strong><br/>
+Use the <span style="color:#3E8A00;">Blowpipe</span> while holding a <a href="../mechanics/glassworking.html#saw">Gem Saw</a> in your offhand.<br/>
+<br/>
+<strong>Roll</strong><br/>
+Use the <span style="color:#3E8A00;">Blowpipe</span> with a <a href="../mechanics/weaving.html#wool_cloth">Wool Cloth</a> in your offhand.</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

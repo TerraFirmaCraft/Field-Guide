@@ -1,0 +1,188 @@
+:root {
+    --table-bg-dark-color: #dfe2e5;
+    --table-bg-light-color: #f8f8f8;
+}
+
+.carousel-inner img {
+    margin: auto;
+}
+
+@media only screen and (min-width: 500px) {
+    .carousel-control-next,
+    .carousel-control-prev {
+        filter: invert(100%);
+    }
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* For the list of links on the left side of the page */
+
+.push-right {
+    padding-left: 30px
+}
+
+/* Anchors, to account for the fixed top bar
+ * https://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header
+*/
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -60px;
+    visibility: hidden;
+}
+
+/* Item Tooltips - used for patchouli:item_spotlight pages */
+
+.item-header img {
+    float: left;
+    width: 32px;
+    height: 32px;
+    image-rendering: pixelated;
+}
+
+.item-header a, .item-header h4, .item-header h5, .item-header p {
+    position: relative;
+    top: 2px;
+    left: 42px;
+}
+
+.item-header span {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+}
+
+/* Crafting / Other Recipes */
+
+img.knapping-recipe {
+    image-rendering: pixelated;
+    width: 270px;
+    height: 270px;
+}
+
+.crafting-recipe {
+    position: relative;
+}
+
+img.recipe-item {
+    image-rendering: pixelated;
+    width: 64px;
+    height: 64px;
+}
+
+.crafting-recipe-item-tooltip {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+}
+
+.crafting-recipe-item-count {
+    position: absolute;
+    left: 48px;
+    top: 36px;
+    font-family: Minecraft;
+    font-size: 30px;
+    color: black;
+    text-shadow: 2px 2px #D0D0D0, -1px -1px #D0D0D0;
+    pointer-events: none;
+}
+
+.crafting-recipe-pos-0-0 { position: absolute; left: 20px;  top: 20px;  }
+.crafting-recipe-pos-0-1 { position: absolute; left: 20px;  top: 96px;  }
+.crafting-recipe-pos-0-2 { position: absolute; left: 20px;  top: 172px; }
+.crafting-recipe-pos-1-0 { position: absolute; left: 96px;  top: 20px;  }
+.crafting-recipe-pos-1-1 { position: absolute; left: 96px;  top: 96px;  }
+.crafting-recipe-pos-1-2 { position: absolute; left: 96px;  top: 172px; }
+.crafting-recipe-pos-2-0 { position: absolute; left: 172px; top: 20px;  }
+.crafting-recipe-pos-2-1 { position: absolute; left: 172px; top: 96px;  }
+.crafting-recipe-pos-2-2 { position: absolute; left: 172px; top: 172px; }
+.crafting-recipe-pos-out { position: absolute; left: 324px; top: 96px;  }
+
+.misc-recipe-pos-in  { position: absolute; left: 20px;  top: 24px; }
+.misc-recipe-pos-out { position: absolute; left: 308px; top: 24px; }
+
+.two-recipe-pos-1 { position: absolute; left: 24px; top: 24px; }
+.two-recipe-pos-2 { position: absolute; left: 122px; top: 24px; }
+.two-recipe-pos-3 { position: absolute; left: 412px; top: 24px; }
+.two-recipe-pos-4 { position: absolute; left: 510px; top: 24px; }
+
+/* Text formatting for temperatures in heat recipes and other tooltips */
+
+.minecraft-text {
+    font-family: Minecraft;
+    font-size: 30px;
+}
+
+.minecraft-gray     { color: #AAAAAA; }
+.minecraft-dark-red { color: #AA0000; }
+.minecraft-red      { color: #FF5555; }
+.minecraft-gold     { color: #FFAA00; }
+.minecraft-yellow   { color: #FFFF55; text-shadow: 0px 0px 4px #444; }
+.minecraft-white    { color: #FFFFFF; text-shadow: 0px 0px 4px #444; }
+
+/* Minecraft Font, for count/amount labels on items */
+
+@font-face {
+    font-family: Minecraft;
+    src: url("font.otf") format("opentype");
+}
+
+/* Font Awesome CSS */
+.fa-discord:before { content: "\f392" }
+.fa-github:before { content: "\f09b" }
+.fa-gears:before { content: "\f085" }
+
+
+/* Tables */
+figure {
+    overflow-x: auto;
+    margin: 1.2em 0;
+    max-width: calc(100% + 16px);
+    padding: 0;
+}
+figure > table {
+    margin: 0;
+}
+
+table {
+    padding: 0;
+    word-break: initial;
+    margin: 0.8em 0;
+
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    text-align: left;
+}
+table tr {
+    border: 1px solid #cccccc;
+    margin: 0;
+    padding: 0;
+}
+table thead, table tr:nth-child(2n) {
+    background-color: #eeeeee;
+}
+table thead, table tr {
+    break-inside: avoid;
+    break-after: auto;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #cccccc;
+    border-bottom: 0;
+    margin: 0;
+    padding: 2px 4px;
+}
+table td {
+    border: 1px solid #cccccc;
+    margin: 0;
+    padding: 2px 4px;
+}
+table th:first-child, table td:first-child { margin-top: 0; }
+table th:last-child, table td:last-child { margin-bottom: 0; }
+table tr th { border-bottom: 0; }
