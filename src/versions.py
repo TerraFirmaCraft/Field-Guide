@@ -40,12 +40,13 @@ class OldVersion(NamedTuple):
 # )
 
 
-VERSION = 'v3.1.4-beta'
+VERSION = 'v3.1.9'
 MC_VERSION = '1.20.1'
 FORGE_VERSION = '47.1.3'
 LANGUAGES = ('en_us', 'ja_jp', 'pt_br', 'ko_kr', 'uk_ua', 'zh_cn', 'zh_hk', 'zh_tw')
 
 ADDONS = (
+    Addon('eerussianguy', 'firmalife', 'v2.0.9-beta', 'firmalife', 'src/main/resources'),
     Addon('HyperDashPony', 'FirmaCiv', '0.1.10-alpha-1.20.1', 'firmaciv', 'src/main/resources'),
 )
 
