@@ -419,12 +419,13 @@ def build_book_html(context: Context):
             for cat_id, cat in context.sorted_categories
         ]),
         page_content="""
-            <img class="d-block w-200 mx-auto img-fluid" src="../_images/splash.png" alt="TerraFirmaCraft Field Guide Splash Image">
+            <img class="d-block w-200 mx-auto img-fluid" src="../_images/{splash_image}.png" alt="TerraFirmaCraft Field Guide Splash Image">
             <p>{text_home}</p>
             <h4>{text_entries}</h4>
         """.format(
             text_home=context.translate(I18n.HOME),
-            text_entries=context.translate(I18n.CATEGORIES)
+            text_entries=context.translate(I18n.CATEGORIES),
+            splash_image='splash' if versions.MC_VERSION != '1.20.1' else 'splash_120'
         ) + '\n'.join(
             """
             <div class="card">
