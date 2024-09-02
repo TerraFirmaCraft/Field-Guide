@@ -46,7 +46,7 @@ def format_crafting_recipe_from_data(context: Context, buffer: List[str], identi
         return format_crafting_recipe_from_data(context, buffer, identifier, data)
     else:
         raise util.error('Unknown crafting recipe type: %s for recipe %s' % (recipe_type, identifier))
-    
+
     if recipe:
         recipe.grid = [
             format_ingredient(context, key) if key else None
@@ -58,22 +58,22 @@ def format_crafting_recipe_from_data(context: Context, buffer: List[str], identi
             <div class="crafting-recipe">
                 <img src="../../_images/crafting_%s.png" />
         """ % ('shapeless' if recipe.shapeless else 'shaped'))
-        
+
         for i, key in enumerate(recipe.grid):
             if key:
                 path, name = key
                 x, y = i % 3, i // 3
                 buffer.append("""
                 <div class="crafting-recipe-item crafting-recipe-pos-%d-%d">
-                    <span href="#" data-toggle="tooltip" title="%s" class="crafting-recipe-item-tooltip"></span>
+                    <span href="#" data-bs-toggle="tooltip" title="%s" class="crafting-recipe-item-tooltip"></span>
                     <img class="recipe-item" src="%s" />
                 </div>
                 """ % (x, y, name, path))
-        
+
         out_path, out_name, out_count = recipe.output
         buffer.append("""
                 <div class="crafting-recipe-item crafting-recipe-pos-out">
-                    <span href="#" data-toggle="tooltip" title="%s" class="crafting-recipe-item-tooltip"></span>
+                    <span href="#" data-bs-toggle="tooltip" title="%s" class="crafting-recipe-item-tooltip"></span>
                     %s
                     <img class="recipe-item" src="%s" />
                 </div>
@@ -83,7 +83,7 @@ def format_crafting_recipe_from_data(context: Context, buffer: List[str], identi
             out_name,
             format_count(out_count),
              out_path
-        ))        
+        ))
 
 
 def format_ingredient(context: Context, data: Any) -> Tuple[str, str]:

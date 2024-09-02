@@ -77,12 +77,12 @@ def format_misc_recipe_from_data(context: Context, buffer: List[str], identifier
         <div class="crafting-recipe">
             <img src="../../_images/1to1.png" />
             <div class="crafting-recipe-item misc-recipe-pos-in">
-                <span href="#" data-toggle="tooltip" title="%s" class="crafting-recipe-item-tooltip"></span>
+                <span href="#" data-bs-toggle="tooltip" title="%s" class="crafting-recipe-item-tooltip"></span>
                 %s
                 <img class="recipe-item" src="%s" />
             </div>
             <div class="crafting-recipe-item misc-recipe-pos-out">
-                <span href="#" data-toggle="tooltip" title="%s" class="crafting-recipe-item-tooltip"></span>
+                <span href="#" data-bs-toggle="tooltip" title="%s" class="crafting-recipe-item-tooltip"></span>
                 %s
                 <img class="recipe-item" src="%s" />
             </div>
