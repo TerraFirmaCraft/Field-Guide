@@ -30,11 +30,6 @@ def format_knapping_recipe(context: Context, data: Any):
 
     img = Image.new('RGBA', (90, 90), (0, 0, 0, 0))
 
-    # Background
-    bg = context.loader.load_explicit_texture(KNAPPING_RECIPE_OUTLINE)
-    bg = bg.crop((0, 0, 90, 90))
-    img.paste(bg)
-
     # 1.18 has the 'type' field indicating the knapping type
     # 1.20 has the 'type' field only be 'tfc:knapping' with the 'knapping_type' field indicating the type
     if 'knapping_type' in recipe_data:

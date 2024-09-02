@@ -55,11 +55,27 @@ img.entry-card-icon {
 
 /* Crafting / Other Recipes */
 
-img.knapping-recipe {
+.knapping-recipe {
+    position: relative;
+    margin: 1rem 0;
+}
+
+.knapping-recipe-overlay {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 270px;
+    height: 270px;
+}
+
+.knapping-recipe-img {
     image-rendering: pixelated;
     width: 270px;
     height: 270px;
-    margin: 1rem 0;
+}
+
+html[data-bs-theme="dark"] .knapping-recipe > img:first-child {
+    filter: invert(100%);
 }
 
 .crafting-recipe {

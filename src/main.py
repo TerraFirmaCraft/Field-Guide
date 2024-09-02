@@ -596,7 +596,14 @@ IMAGE_SINGLE = """
 """
 
 IMAGE_KNAPPING = """
-<img class="d-block w-200 mx-auto img-fluid knapping-recipe" src="{src}" alt="{text}">
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="{src}" alt="{text}">
+        </div>
+    </div>
+</div>
 """
 
 IMAGE_MULTIPLE_PART = """
