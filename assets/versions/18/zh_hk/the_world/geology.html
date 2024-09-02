@@ -1,51 +1,46 @@
-<!DOCTYPE html>
-<html style="width:100%; height:100%; padding:0px; margin:0px;">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <meta charset="UTF-8">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>TerraFirmaCraft Field Guide</title>
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <!-- Font Awesome -->
-    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
-
-    <!-- JQuery, Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
 
-    <script type="text/javascript">
-        window._CURRENT_ROOT = '/Field-Guide';
-        window._CURRENT_LANG = 'zh_hk';
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip();
-        })
-    </script>
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft Field Guide</a>
 
-    <!-- Automatically populate the version dropdown for newer versions -->
-    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
-    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
-</head>
-<body>
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-<nav class="navbar navbar-expand-md fixed-top bg-dark">
-    <div class="navbar-header">
-        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
-    </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbar-content">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">繁體中文（香港特別行政區)</a>
-                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
-                    <a href="../../en_us/the_world\geology.html" class="dropdown-item">English</a>
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Version 1.18.2 - v2.2.30
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 繁體中文（香港特別行政區)
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/the_world\geology.html" class="dropdown-item">English</a>
 <a href="../../ja_jp/the_world\geology.html" class="dropdown-item">日本語</a>
 <a href="../../pt_br/the_world\geology.html" class="dropdown-item">Portuguese (Brazil)</a>
 <a href="../../ko_kr/the_world\geology.html" class="dropdown-item">한국어</a>
@@ -53,52 +48,89 @@
 <a href="../../zh_cn/the_world\geology.html" class="dropdown-item">简体中文(中国大陆)</a>
 <a href="../../zh_hk/the_world\geology.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
 <a href="../../zh_tw/the_world\geology.html" class="dropdown-item">繁體中文(台灣)</a>
-                </div>
+              </div>
             </li>
-            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
-            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
-            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
-            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
-            <li class="nav-item dropdown" id="version-dropdown">
-                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
-                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
-                </div>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
             </li>
-        </ul>
-    </div>
-</nav>
-<div class="container-fluid" style="margin-top:50px">
-    <div class="row">
-        <div class="col-md-2 py-1">
-            <div class="sticky-top" style="top: 70px">
-                <h4>Contents</h4>
-                <ul class="list-unstyled">
-                    <li><a class="text-muted" href="../the_world/">這個世界</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./biomes.html">生物羣系</a></li>
-<li><a class="text-muted" href="./waterways.html">河流流向何方？</a></li>
-<li><a class="text-muted" href="./geology.html">地質學</a></li>
-<li><a class="text-muted" href="./ores_and_minerals.html">礦石和礦物</a></li>
-<li><a class="text-muted" href="./climate.html">曆法和氣候</a></li>
-<li><a class="text-muted" href="./flora.html">自然植物</a></li>
-<li><a class="text-muted" href="./wild_crops.html">野生作物</a></li>
-<li><a class="text-muted" href="./wild_fruits.html">野生水果</a></li>
-<li><a class="text-muted" href="./wild_animals.html">野生動物</a></li></ul></li>
-<li><a class="text-muted" href="../getting_started/">新手入門</a></li>
-<li><a class="text-muted" href="../mechanics/">進階內容</a></li>
-                </ul>
-            </div>
+          </ul>
         </div>
-        <div class="col-md-9 py-3">
-            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">這個世界</a> / <a class="text-muted" href="#">地質學</a></em></p>
-            
-                <h4>
-        <div class="item-header">
-            <span href="#" data-toggle="tooltip" title="天然頁巖">
-                <img src="..\..\_images\item211.png" alt="地質學" />
-            </span>
-            <h4>地質學</h4>
-        </div>
-        </h4>
-                <hr>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Contents</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Index</a></li>
+            <li><a href="../the_world/">這個世界</a><ul><li><a href="./biomes.html">生物羣系</a></li>
+<li><a href="./waterways.html">河流流向何方？</a></li>
+<li><a href="./geology.html">地質學</a></li>
+<li><a href="./ores_and_minerals.html">礦石和礦物</a></li>
+<li><a href="./climate.html">曆法和氣候</a></li>
+<li><a href="./flora.html">自然植物</a></li>
+<li><a href="./wild_crops.html">野生作物</a></li>
+<li><a href="./wild_fruits.html">野生水果</a></li>
+<li><a href="./wild_animals.html">野生動物</a></li></ul></li>
+<li><a href="../getting_started/">新手入門</a></li>
+<li><a href="../mechanics/">進階內容</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">這個世界</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">地質學</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\item211.png" alt="地質學" title="天然頁巖" /><span>地質學</span>
+        </h1>
                 <p>羣巒傳説中的不同地貌是由<a href="https://zh.wikipedia.org/wiki/%E6%9D%BF%E5%9D%97%E6%9E%84%E9%80%A0%E8%AE%BA">板塊運動</a>造成的。你或許可以從你周圍的環境中推測出某個區域的地質結構。只要打開物品欄並點擊<span style="color:#3E8A00;">氣候</span>選項卡就可以查看當前所處的<span style="color:#3E8A00;">板塊區域</span>。某些區域的地質結構會影響何種生物羣系和特徵可以生成。</p>
 <p>以下是所有的板塊區域和它們的大致特徵一覽。<br/>
 <br/>
@@ -175,7 +207,46 @@
 
                 
         </div>
+      </div>
     </div>
-</div>
-</body>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'zh_hk';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+  </body>
 </html>

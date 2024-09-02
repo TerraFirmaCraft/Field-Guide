@@ -1,51 +1,46 @@
-<!DOCTYPE html>
-<html style="width:100%; height:100%; padding:0px; margin:0px;">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <meta charset="UTF-8">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>TerraFirmaCraft 도감</title>
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <!-- Font Awesome -->
-    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
-
-    <!-- JQuery, Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
 
-    <script type="text/javascript">
-        window._CURRENT_ROOT = '/Field-Guide';
-        window._CURRENT_LANG = 'ko_kr';
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip();
-        })
-    </script>
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft 도감</a>
 
-    <!-- Automatically populate the version dropdown for newer versions -->
-    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
-    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
-</head>
-<body>
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-<nav class="navbar navbar-expand-md fixed-top bg-dark">
-    <div class="navbar-header">
-        <a class="navbar-brand text-light" href="../">TerraFirmaCraft 도감</a>
-    </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbar-content">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">한국어</a>
-                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
-                    <a href="../../en_us/the_world\ores_and_minerals.html" class="dropdown-item">English</a>
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> 버전 1.18.2 - v2.2.30
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 한국어
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/the_world\ores_and_minerals.html" class="dropdown-item">English</a>
 <a href="../../ja_jp/the_world\ores_and_minerals.html" class="dropdown-item">日本語</a>
 <a href="../../pt_br/the_world\ores_and_minerals.html" class="dropdown-item">Portuguese (Brazil)</a>
 <a href="../../ko_kr/the_world\ores_and_minerals.html" class="dropdown-item">한국어</a>
@@ -53,52 +48,89 @@
 <a href="../../zh_cn/the_world\ores_and_minerals.html" class="dropdown-item">简体中文(中国大陆)</a>
 <a href="../../zh_hk/the_world\ores_and_minerals.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
 <a href="../../zh_tw/the_world\ores_and_minerals.html" class="dropdown-item">繁體中文(台灣)</a>
-                </div>
+              </div>
             </li>
-            <li class="nav-item active"><a class="nav-link text-light" href="../">색인</a></li>
-            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API 뮨서</a></li>
-            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
-            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
-            <li class="nav-item dropdown" id="version-dropdown">
-                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">버전 1.18.2 - v2.2.30</a>
-                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
-                </div>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
             </li>
-        </ul>
-    </div>
-</nav>
-<div class="container-fluid" style="margin-top:50px">
-    <div class="row">
-        <div class="col-md-2 py-1">
-            <div class="sticky-top" style="top: 70px">
-                <h4>목차</h4>
-                <ul class="list-unstyled">
-                    <li><a class="text-muted" href="../the_world/">세계</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./biomes.html">생물군계</a></li>
-<li><a class="text-muted" href="./waterways.html">강이 흐르는 곳에서</a></li>
-<li><a class="text-muted" href="./geology.html">지질학</a></li>
-<li><a class="text-muted" href="./ores_and_minerals.html">광석과 광물</a></li>
-<li><a class="text-muted" href="./climate.html">달력과 기후</a></li>
-<li><a class="text-muted" href="./flora.html">식물</a></li>
-<li><a class="text-muted" href="./wild_crops.html">야생 작물</a></li>
-<li><a class="text-muted" href="./wild_fruits.html">야생 과일</a></li>
-<li><a class="text-muted" href="./wild_animals.html">야생동물</a></li></ul></li>
-<li><a class="text-muted" href="../getting_started/">시작하기</a></li>
-<li><a class="text-muted" href="../mechanics/">심화 기술</a></li>
-                </ul>
-            </div>
+          </ul>
         </div>
-        <div class="col-md-9 py-3">
-            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">세계</a> / <a class="text-muted" href="#">광석과 광물</a></em></p>
-            
-                <h4>
-        <div class="item-header">
-            <span href="#" data-toggle="tooltip" title="평범한 적철석">
-                <img src="..\..\_images\item212.png" alt="광석과 광물" />
-            </span>
-            <h4>광석과 광물</h4>
-        </div>
-        </h4>
-                <hr>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>목차</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">색인</a></li>
+            <li><a href="../the_world/">세계</a><ul><li><a href="./biomes.html">생물군계</a></li>
+<li><a href="./waterways.html">강이 흐르는 곳에서</a></li>
+<li><a href="./geology.html">지질학</a></li>
+<li><a href="./ores_and_minerals.html">광석과 광물</a></li>
+<li><a href="./climate.html">달력과 기후</a></li>
+<li><a href="./flora.html">식물</a></li>
+<li><a href="./wild_crops.html">야생 작물</a></li>
+<li><a href="./wild_fruits.html">야생 과일</a></li>
+<li><a href="./wild_animals.html">야생동물</a></li></ul></li>
+<li><a href="../getting_started/">시작하기</a></li>
+<li><a href="../mechanics/">심화 기술</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">세계</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">광석과 광물</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\item212.png" alt="광석과 광물" title="평범한 적철석" /><span>광석과 광물</span>
+        </h1>
                 <p>TerraFirmaCraft에서 광석과 광물들은 흔하지 않습니다. 바닐라와 다르게, 광석들은 <a href="../mechanics/prospecting.html">탐색기</a>로 찾을 수 있는 거대하지만 드문 광맥에서 찾을 수 있습니다. 각각의 광물마다 발견할 수 있는 암석 종류나 고도가 다릅니다. 따라서 원하는 광석을 찾기 위해서는 올바른 고도에서 올바른 암석의 종류를 찾는 것이 중요합니다.</p>
 <p>또한, 몇몇 광석들에는 <span style="color:#3E8A00;">등급</span>이 있습니다. 광석 블록은 빈약하거나, 평범하거나, 또는 풍부할 수 있으며 각각의 광맥들은 각 종류의 블록마다 다른 밀집도를 가지고 있습니다. <span style="color:#3E8A00;">풍부한</span> 광맥일수록 더 효율적입니다.<br/>
 <br/>
@@ -171,7 +203,7 @@
 <div style="text-align: center;"><p>편암 속의 사면동석 광석.</p>
 </div><a class="anchor" id="bituminous_coal"></a>
         <div class="item-header">
-            <span href="#" data-toggle="tooltip" title="역청탄">
+            <span href="#" data-bs-toggle="tooltip" title="역청탄">
                 <img src="..\..\_images\item213.png" alt="역청탄" />
             </span>
             <h5>역청탄</h5>
@@ -183,7 +215,7 @@
 <div style="text-align: center;"><p>각암 속의 역청탄.</p>
 </div><a class="anchor" id="lignite"></a>
         <div class="item-header">
-            <span href="#" data-toggle="tooltip" title="갈탄">
+            <span href="#" data-bs-toggle="tooltip" title="갈탄">
                 <img src="..\..\_images\item214.png" alt="갈탄" />
             </span>
             <h5>갈탄</h5>
@@ -195,7 +227,7 @@
 <div style="text-align: center;"><p>백운암 속의 갈탄.</p>
 </div><a class="anchor" id="kaolinite"></a>
         <div class="item-header">
-            <span href="#" data-toggle="tooltip" title="고령석">
+            <span href="#" data-bs-toggle="tooltip" title="고령석">
                 <img src="..\..\_images\item215.png" alt="고령석" />
             </span>
             <h5>고령석</h5>
@@ -207,7 +239,7 @@
 <div style="text-align: center;"><p>점토암 속의 고령석.</p>
 </div><a class="anchor" id="graphite"></a>
         <div class="item-header">
-            <span href="#" data-toggle="tooltip" title="흑연">
+            <span href="#" data-bs-toggle="tooltip" title="흑연">
                 <img src="..\..\_images\item216.png" alt="흑연" />
             </span>
             <h5>흑연</h5>
@@ -219,7 +251,7 @@
 <div style="text-align: center;"><p>편마암 속의 흑연.</p>
 </div><a class="anchor" id="cinnabar"></a>
         <div class="item-header">
-            <span href="#" data-toggle="tooltip" title="진사">
+            <span href="#" data-bs-toggle="tooltip" title="진사">
                 <img src="..\..\_images\item217.png" alt="진사" />
             </span>
             <h5>진사</h5>
@@ -233,7 +265,7 @@
 <div style="text-align: center;"><p>규암 속의 진사.</p>
 </div><a class="anchor" id="cryolite"></a>
         <div class="item-header">
-            <span href="#" data-toggle="tooltip" title="빙정석">
+            <span href="#" data-bs-toggle="tooltip" title="빙정석">
                 <img src="..\..\_images\item218.png" alt="빙정석" />
             </span>
             <h5>빙정석</h5>
@@ -245,7 +277,7 @@
 <div style="text-align: center;"><p>화강암 속의 빙정석.</p>
 </div><a class="anchor" id="saltpeter"></a>
         <div class="item-header">
-            <span href="#" data-toggle="tooltip" title="초석">
+            <span href="#" data-bs-toggle="tooltip" title="초석">
                 <img src="..\..\_images\item219.png" alt="초석" />
             </span>
             <h5>초석</h5>
@@ -259,7 +291,7 @@
 <div style="text-align: center;"><p>셰일 속의 초석.</p>
 </div><a class="anchor" id="sulfur"></a>
         <div class="item-header">
-            <span href="#" data-toggle="tooltip" title="황">
+            <span href="#" data-bs-toggle="tooltip" title="황">
                 <img src="..\..\_images\item175.png" alt="황" />
             </span>
             <h5>황</h5>
@@ -271,7 +303,7 @@
 <div style="text-align: center;"><p>현무암 속의 황.</p>
 </div><a class="anchor" id="sylvite"></a>
         <div class="item-header">
-            <span href="#" data-toggle="tooltip" title="칼리암염">
+            <span href="#" data-bs-toggle="tooltip" title="칼리암염">
                 <img src="..\..\_images\item220.png" alt="칼리암염" />
             </span>
             <h5>칼리암염</h5>
@@ -283,7 +315,7 @@
 <div style="text-align: center;"><p>각암 속의 칼리암염.</p>
 </div><a class="anchor" id="borax"></a>
         <div class="item-header">
-            <span href="#" data-toggle="tooltip" title="붕사">
+            <span href="#" data-bs-toggle="tooltip" title="붕사">
                 <img src="..\..\_images\item221.png" alt="붕사" />
             </span>
             <h5>붕사</h5>
@@ -295,7 +327,7 @@
 <div style="text-align: center;"><p>셰일 속의 붕사.</p>
 </div><a class="anchor" id="lapis_lazuli"></a>
         <div class="item-header">
-            <span href="#" data-toggle="tooltip" title="청금석">
+            <span href="#" data-bs-toggle="tooltip" title="청금석">
                 <img src="..\..\_images\item222.png" alt="청금석" />
             </span>
             <h5>청금석</h5>
@@ -307,7 +339,7 @@
 <div style="text-align: center;"><p>석회암 속의 청금석.</p>
 </div><a class="anchor" id="gypsum"></a>
         <div class="item-header">
-            <span href="#" data-toggle="tooltip" title="석고">
+            <span href="#" data-bs-toggle="tooltip" title="석고">
                 <img src="..\..\_images\item33.png" alt="석고" />
             </span>
             <h5>석고</h5>
@@ -319,7 +351,7 @@
 <div style="text-align: center;"><p>천매암 속의 석고.</p>
 </div><a class="anchor" id="halite"></a>
         <div class="item-header">
-            <span href="#" data-toggle="tooltip" title="암염">
+            <span href="#" data-bs-toggle="tooltip" title="암염">
                 <img src="..\..\_images\item91.png" alt="암염" />
             </span>
             <h5>암염</h5>
@@ -331,7 +363,7 @@
 <div style="text-align: center;"><p>백악 속의 암염.</p>
 </div><a class="anchor" id="emerald"></a>
         <div class="item-header">
-            <span href="#" data-toggle="tooltip" title="에메랄드">
+            <span href="#" data-bs-toggle="tooltip" title="에메랄드">
                 <img src="..\..\_images\item178.png" alt="에메랄드" />
             </span>
             <h5>에메랄드</h5>
@@ -345,7 +377,7 @@
 <div style="text-align: center;"><p>섬록암 속의 에메랄드.</p>
 </div><a class="anchor" id="diamond"></a>
         <div class="item-header">
-            <span href="#" data-toggle="tooltip" title="킴벌라이트">
+            <span href="#" data-bs-toggle="tooltip" title="킴벌라이트">
                 <img src="..\..\_images\item223.png" alt="킴벌라이트" />
             </span>
             <h5>킴벌라이트</h5>
@@ -358,7 +390,46 @@
 </div>
                 
         </div>
+      </div>
     </div>
-</div>
-</body>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API 뮨서
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'ko_kr';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+  </body>
 </html>
