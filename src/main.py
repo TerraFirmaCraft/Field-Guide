@@ -90,7 +90,7 @@ def main():
 
     if use_mcmeta:
         mcmeta.load_cache()
-    
+
     if use_addons:
         for addon in versions.ADDONS:
             if not os.path.isdir('addons/%s-%s' % (addon.mod_id, addon.version)):
@@ -111,10 +111,10 @@ def main():
             continue
         LOG.info('Language: %s' % lang)
         parse_book(context.with_lang(lang), use_addons)
-    
+
         context.sort()
         build_book_html(context)
-    
+
     LOG.info('Done')
     LOG.info('  Recipes : %d passed / %d failed / %d skipped' % (context.recipes_passed, context.recipes_failed, context.recipes_skipped))
     LOG.info('  Items   : %d passed / %d failed' % (context.items_passed, context.items_failed))
@@ -127,7 +127,7 @@ def parse_book(context: Context, use_addons: bool):
 
     for category_file in util.walk(category_dir):
         parse_category(context, category_dir, category_file)
-    
+
     if use_addons:
         for addon in versions.ADDONS:
             addon_dir = util.path_join(addon.book_dir(context.resource_pack), context.lang, 'categories')
@@ -138,7 +138,7 @@ def parse_book(context: Context, use_addons: bool):
 
     for entry_file in util.walk(entry_dir):
         parse_entry(context, entry_dir, entry_file)
-    
+
     if use_addons:
         for addon in versions.ADDONS:
             addon_dir = util.path_join(addon.book_dir(context.resource_pack), context.lang, 'entries')
@@ -240,7 +240,8 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
 
             seq = [IMAGE_MULTIPLE_SEQ.format(
                 id=uid,
-                count=i
+                count=i,
+                count_human_readable=i+1
             ) for i, _ in enumerate(images) if i > 0]
 
             buffer.append(IMAGE_MULTIPLE.format(
@@ -248,7 +249,7 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
                 seq=''.join(seq),
                 parts=''.join(parts)
             ))
-        
+
         context.format_centered_text(buffer, data)
 
     elif page_type == 'patchouli:crafting':
@@ -263,7 +264,7 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
             # Fallback
             context.format_recipe(buffer, data)
             context.recipes_failed += 1
-        
+
         try:
             if 'recipe2' in data:
                 crafting_recipe.format_crafting_recipe(context, buffer, data['recipe2'])
@@ -274,7 +275,7 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
             # Fallback
             context.format_recipe(buffer, data, 'recipe2')
             context.recipes_failed += 1
-        
+
         context.format_text(buffer, data)
     elif page_type == 'patchouli:spotlight':
         # Item Images
@@ -284,7 +285,7 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
             context.items_passed += 1
         except InternalError as e:
             e.warning()
-            
+
             # Fallback
             context.format_title(buffer, data)
             item_str = item_loader.decode_item(data['item'])
@@ -294,7 +295,7 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
             )
             context.format_with_tooltip(buffer, items, context.translate(I18n.ITEM_ONLY_IN_GAME))
             context.items_failed += 1
-        
+
         context.format_text(buffer, data)
 
     elif page_type == 'patchouli:entity':
@@ -304,7 +305,7 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
         buffer.append('<hr>')
     elif page_type == 'patchouli:multiblock' or page_type == 'tfc:multimultiblock':
         context.format_title(buffer, data, 'name')
-        
+
         try:
             src = block_loader.get_multi_block_image(context, data)
             buffer.append(IMAGE_SINGLE.format(
@@ -342,7 +343,7 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
             # Fallback
             context.format_recipe(buffer, data)
             context.recipes_failed += 1
-        
+
         context.format_text(buffer, data)
     elif page_type in (
         'tfc:instant_barrel_recipe',
@@ -395,7 +396,7 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
 
 
 def build_book_html(context: Context):
-    
+
     # Main Page
     util.write_html(context.output_dir, 'index.html', html=TEMPLATE.format(
         title=context.translate(I18n.TITLE),
@@ -413,27 +414,28 @@ def build_book_html(context: Context):
         index='#',
         root=context.root_dir,
         tfc_version=versions.TFC_VERSION,
-        location='<a class="text-muted" href="#">%s</a>' % versions.MC_VERSION,
+        location=index_breadcrumb(None),
         contents='\n'.join([
-            '<li><a class="text-muted" href="./%s/">%s</a></li>' % (cat_id, cat.name)
+            '<li><a href="./%s/">%s</a></li>' % (cat_id, cat.name)
             for cat_id, cat in context.sorted_categories
         ]),
         page_content="""
-            <img class="d-block w-200 mx-auto img-fluid" src="../_images/{splash_image}.png" alt="TerraFirmaCraft Field Guide Splash Image">
+            <img class="d-block w-200 mx-auto mb-3 img-fluid" src="../_images/{splash_image}.png" alt="TerraFirmaCraft Field Guide Splash Image">
             <p>{text_home}</p>
-            <h4>{text_entries}</h4>
+            <p><strong>{text_entries}</strong></p>
+            <div class="row row-cols-1 row-cols-md-2 g-3">
         """.format(
             text_home=context.translate(I18n.HOME),
             text_entries=context.translate(I18n.CATEGORIES),
             splash_image='splash' if versions.MC_VERSION != '1.20.1' else 'splash_120'
         ) + '\n'.join(
             """
-            <div class="card">
-                <div class="card-header">
-                    <a href="%s/index.html">%s</a>
-                </div>
-                <div class="card-body">
-                    %s
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <a href="%s/index.html">%s</a>
+                    </div>
+                    <div class="card-body">%s</div>
                 </div>
             </div>
             """ % (
@@ -442,7 +444,7 @@ def build_book_html(context: Context):
                 cat.description
             )
             for cat_id, cat in context.sorted_categories
-        )
+        ) + '</div>'
     ))
 
     # Category Pages
@@ -463,25 +465,28 @@ def build_book_html(context: Context):
             index='../',
             root=context.root_dir,
             tfc_version=versions.TFC_VERSION,
-            location='<a class="text-muted" href="../">%s</a> / <a class="text-muted" href="#">%s</a>' % (
-                versions.MC_VERSION,
-                cat.name
+            location="""
+                {index_breadcrumb}
+                <li class="breadcrumb-item active" aria-current="page">{category_name}</li>
+            """.format(
+                index_breadcrumb=index_breadcrumb('../'),
+                category_name=cat.name
             ),
             contents='\n'.join([
-                '<li><a class="text-muted" href="../%s/">%s</a></li>' % (cat_id, cat.name) + (
+                '<li><a href="../%s/">%s</a>' % (cat_id, cat.name) + (
                     ''
                     if cat_id != category_id else
-                    '<ul class="list-unstyled push-right">%s</ul>' % '\n'.join([
-                        '<li><a class="text-muted" href="./%s.html">%s</a></li>' % (os.path.relpath(ent_id, cat_id), ent.name)
-                        for ent_id, ent in cat.sorted_entries 
+                    '<ul>%s</ul>' % '\n'.join([
+                        '<li><a href="./%s.html">%s</a></li>' % (os.path.relpath(ent_id, cat_id), ent.name)
+                        for ent_id, ent in cat.sorted_entries
                     ])
-                )
+                ) + '</li>'
                 for cat_id, cat in context.sorted_categories
             ]),
             page_content="""
-                <h4>{category_name}</h4><p>{category_description}</p>
-                <hr>
-                <div class="card-columns">
+                <h1 class="mb-4">{category_name}</h1>
+                <p>{category_description}</p>
+                <div class="row row-cols-1 row-cols-md-3 g-3">
                     {category_listing}
                 </div>
             """.format(
@@ -489,12 +494,10 @@ def build_book_html(context: Context):
                 category_description=cat.description,
                 category_listing='\n'.join(
                     """
-                    <div class="card">
-                        <div class="card-header">
-                            %s
-                        </div>
+                    <div class="col">
+                        <div class="card">%s</div>
                     </div>
-                    """ % optional_icon_with_link(entry.rel_id, entry.name, entry.icon, entry.icon_name)
+                    """ % entry_card_with_default_icon(entry.rel_id, entry.name, entry.icon, entry.icon_name)
                     for _, entry in cat.sorted_entries
                 )
             )
@@ -518,59 +521,75 @@ def build_book_html(context: Context):
                 index='../',
                 root=context.root_dir,
                 tfc_version=versions.TFC_VERSION,
-                location='<a class="text-muted" href="../">%s</a> / <a class="text-muted" href="./">%s</a> / <a class="text-muted" href="#">%s</a>' % (
-                    versions.MC_VERSION,
-                    cat.name, 
-                    entry.name
+                location="""
+                    {index_breadcrumb}
+                    <li class="breadcrumb-item"><a href="./">{category_name}</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{entry_name}</li>
+                """.format(
+                    index_breadcrumb=index_breadcrumb('../'),
+                    category_name=cat.name,
+                    entry_name=entry.name
                 ),
                 contents='\n'.join([
-                    '<li><a class="text-muted" href="../%s/">%s</a>' % (cat_id, cat.name) + (
+                    '<li><a href="../%s/">%s</a>' % (cat_id, cat.name) + (
                         '</li>'
                         if cat_id != category_id else
-                        '<ul class="list-unstyled push-right">%s</ul>' % '\n'.join([
-                            '<li><a class="text-muted" href="./%s.html">%s</a></li>' % (os.path.relpath(ent_id, cat_id), ent.name)
-                            for ent_id, ent in cat.sorted_entries 
+                        '<ul>%s</ul>' % '\n'.join([
+                            '<li><a href="./%s.html">%s</a></li>' % (os.path.relpath(ent_id, cat_id), ent.name)
+                            for ent_id, ent in cat.sorted_entries
                         ]) + '</li>'
                     )
                     for cat_id, cat in context.sorted_categories
                 ]),
                 page_content="""
-                <h4>{entry_name}</h4>
-                <hr>
+                <h1 class="d-flex align-items-center mb-4">{entry_name}</h1>
                 {inner_content}
                 """.format(
-                    entry_name=optional_icon(entry.name, entry.icon, entry.icon_name),
+                    entry_name=title_with_optional_icon(entry.name, entry.icon, entry.icon_name),
                     inner_content=''.join(entry.buffer)
                 )
             ))
 
-def optional_icon(name: str, icon: str, icon_name: str, tag: str = 'h4') -> str:
-    if icon:
+def title_with_optional_icon(text: str, icon_src: str, icon_title: str) -> str:
+    if icon_src:
         return """
-        <div class="item-header">
-            <span href="#" data-toggle="tooltip" title="%s">
-                <img src="%s" alt="%s" />
-            </span>
-            <%s>%s</%s>
-        </div>
-        """ % (icon_name, icon, name, tag, name, tag)
+        <img class="icon-title me-3" src="{icon_src}" alt="{text}" title="{icon_title}" /><span>{text}</span>
+        """.format(
+            icon_title=icon_title,
+            icon_src=icon_src,
+            text=text
+        )
     else:
-        return '<%s>%s</%s>' % (tag, name, tag)
+        return text
 
+def entry_card_with_default_icon(entry_page: str, entry_title: str, icon_src: str, icon_title: str) -> str:
+    if not icon_src:
+        icon_src = util.path_join('..', '..', '_images', 'placeholder_16.png')
 
-def optional_icon_with_link(link: str, name: str, icon: str, icon_name: str) -> str:
-    if icon:
-        return """
-        <div class="item-header">
-            <span href="#" data-toggle="tooltip" title="%s">
-                <img src="%s" alt="%s" />
-            </span>
-            <a href="%s.html">%s</a>
+    return """
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="{icon_src}" alt="{entry_title}" />
+            <a href="{entry_page}.html">{entry_title}</a>
         </div>
-        """ % (icon_name, icon, name, link, name)
-    else:
-        return '<a href="%s.html">%s</a>' % (link, name)
+    </div>
+    """.format(
+        icon_title=icon_title,
+        icon_src=icon_src,
+        entry_title=entry_title,
+        entry_page=entry_page
+    )
 
+def index_breadcrumb(relative_path: str|None) -> str:
+    icon_html = '<i class="bi bi-house-fill"></i>'
+    if not relative_path:
+        return f'<li class="breadcrumb-item">{icon_html}</li>'
+    else:
+        return f"""
+            <li class="breadcrumb-item">
+                <a href="{relative_path}">{icon_html}</a>
+            </li>
+        """
 
 IMAGE_SINGLE = """
 <img class="d-block w-200 mx-auto img-fluid" src="{src}" alt="{text}">
@@ -587,29 +606,28 @@ IMAGE_MULTIPLE_PART = """
 """
 
 IMAGE_MULTIPLE_SEQ = """
-<li data-target="#{id}" data-slide-to="{count}"></li>
+<button type="button" data-bs-target="#{id}" data-bs-slide-to="{count}" aria-label="Slide {count_human_readable}"></button>
 """
 
 IMAGE_MULTIPLE = """
-<div id="{id}" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-        <li data-target="#{id}" data-slide-to="0" class="active"></li>
+<div id="{id}" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#{id}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         {seq}
-    </ol>
+    </div>
     <div class="carousel-inner">
         {parts}
     </div>
-    <a class="carousel-control-prev" href="#{id}" role="button" data-slide="prev">
+    <button type="button" class="carousel-control-prev" data-bs-target="#{id}" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#{id}" role="button" data-slide="next">
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button type="button" class="carousel-control-next" data-bs-target="#{id}" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
+        <span class="visually-hidden">Next</span>
+    </button>
 </div>
 """
-
 
 if __name__ == '__main__':
     main()

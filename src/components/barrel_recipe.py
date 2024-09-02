@@ -20,7 +20,7 @@ def format_barrel_recipe_from_data(context: Context, buffer: List[str], data: An
     in_path = in_name = out_path = out_name = f_out_name = f_out_path = f_in_name = f_in_path = None
     in_count = out_count = 0
     input_fluid_div = input_item_div = output_fluid_div = output_item_div = duration = """"""
-    
+
     if 'input_item' in data:
         in_path, in_name = crafting_recipe.format_ingredient(context, data['input_item']['ingredient'])
         in_count = data['input_item']['count'] if 'count' in data['input_item'] else 1
@@ -59,7 +59,7 @@ def format_barrel_recipe_from_data(context: Context, buffer: List[str], data: An
 def make_icon(name, path, index: int, extra_bit: str = "") -> str:
     return f"""
         <div class="crafting-recipe-item two-recipe-pos-{str(index)}">
-            <span href="#" data-toggle="tooltip" title="{name}" class="crafting-recipe-item-tooltip"></span>
+            <span href="#" data-bs-toggle="tooltip" title="{name}" class="crafting-recipe-item-tooltip"></span>
             <img class="recipe-item" src="{path}" />
             {extra_bit}
         </div>

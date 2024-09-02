@@ -69,7 +69,7 @@ class Context:
                 self.lang_keys.update(self.loader.load_lang(lang, domain))
             except InternalError as e:
                 LOG.warning('Translation : %s' % e)
-        
+
         self.with_local_lang('en_us')  # First load en_us
         self.with_local_lang(lang)  # Then load the current language
 
@@ -77,7 +77,7 @@ class Context:
         self.keybindings = {k[len('field_guide.'):]: self.translate(k) for k in I18n.KEYS}
 
         return self
-    
+
     def with_local_lang(self, lang: str):
         try:
             with open(util.path_join('./assets/lang/%s.json' % lang), 'r', encoding='utf-8') as f:
@@ -91,11 +91,11 @@ class Context:
         """ Returns a unique ID to be used in a id="" field. Successive calls will return a new ID. """
         self.last_uid[prefix] += 1
         return '%s%d' % (prefix, self.last_uid[prefix])
-    
+
     def add_entry(self, category_id: str, entry_id: str, entry: Entry):
         self.entries[entry_id] = entry
         self.categories[category_id].entries.append(entry_id)
-    
+
     def sort(self):
         """ Initializes sorted lists for all categories and entries. """
         self.sorted_categories = sorted([
@@ -105,11 +105,11 @@ class Context:
         for _, cat in self.sorted_categories:
             sorted_entry_names = sorted(cat.entries, key=lambda e: (self.entries[e].sort, e))
             cat.sorted_entries = [(e, self.entries[e]) for e in sorted_entry_names]
-    
+
     def format_text(self, buffer: List[str], data: Any, key: str = 'text'):
         if key in data:
             text_formatter.format_text(buffer, data[key], self.keybindings)
-    
+
     def format_title(self, buffer: List[str], data: Any, key: str = 'title'):
         if key in data:
             buffer.append('<h5>%s</h5>\n' % text_formatter.strip_vanilla_formatting(data[key]))
@@ -124,7 +124,7 @@ class Context:
             tooltip = title
         buffer.append("""
         <div class="item-header">
-            <span href="#" data-toggle="tooltip" title="%s">
+            <span href="#" data-bs-toggle="tooltip" title="%s">
                 <img src="%s" alt="%s" />
             </span>
             <%s>%s</%s>
@@ -135,14 +135,14 @@ class Context:
         buffer.append('<div style="text-align: center;">')
         self.format_text(buffer, data, key)
         buffer.append('</div>')
-    
+
     def format_with_tooltip(self, buffer: List[str], text: str, tooltip: str):
         buffer.append("""
         <div style="text-align: center;">
-            <p class="text-muted"><span href="#" data-toggle="tooltip" title="%s">%s</span></p>
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="%s">%s</span></p>
         </div>
         """ % (tooltip, text))
-    
+
     def format_recipe(self, buffer: List[str], data: Any, key: str = 'recipe'):
         if key in data:
             self.format_with_tooltip(buffer, '%s: <code>%s</code>' % (
@@ -163,7 +163,7 @@ class Context:
             return IMAGE_CACHE[image]
 
         img = self.loader.load_explicit_texture(image)
-        
+
         width, height = img.size
         assert width == height and width % 256 == 0
         size = width * 200 // 256
@@ -179,7 +179,7 @@ class Context:
     def convert_icon(self, image: str) -> str:
         if image in IMAGE_CACHE:
             return IMAGE_CACHE[image]
-        
+
         img = self.loader.load_explicit_texture(image)
 
         width, height = img.size
@@ -190,4 +190,3 @@ class Context:
         ref = self.loader.save_image(self.next_id('image'), img)
         IMAGE_CACHE[image] = ref
         return ref
-

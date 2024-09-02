@@ -3,8 +3,26 @@
     --table-bg-light-color: #f8f8f8;
 }
 
+#nav-primary {
+    background-color: var(--bs-gray-800);
+}
+
+.card-body > *:last-child {
+    margin-bottom: 0;
+}
+
 .carousel-inner img {
     margin: auto;
+}
+
+img.icon-title {
+    height: 48px;
+    image-rendering: pixelated;
+}
+
+img.entry-card-icon {
+    height: 32px;
+    image-rendering: pixelated;
 }
 
 @media only screen and (min-width: 500px) {
@@ -12,28 +30,6 @@
     .carousel-control-prev {
         filter: invert(100%);
     }
-}
-
-.tooltip {
-    position: relative;
-    display: inline-block;
-}
-
-/* For the list of links on the left side of the page */
-
-.push-right {
-    padding-left: 30px
-}
-
-/* Anchors, to account for the fixed top bar
- * https://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header
-*/
-
-a.anchor {
-    display: block;
-    position: relative;
-    top: -60px;
-    visibility: hidden;
 }
 
 /* Item Tooltips - used for patchouli:item_spotlight pages */
@@ -63,10 +59,16 @@ img.knapping-recipe {
     image-rendering: pixelated;
     width: 270px;
     height: 270px;
+    margin: 1rem 0;
 }
 
 .crafting-recipe {
     position: relative;
+    margin: 1rem 0;
+}
+
+html[data-bs-theme="dark"] .crafting-recipe > img:first-child {
+    filter: invert(100%);
 }
 
 img.recipe-item {
@@ -90,6 +92,11 @@ img.recipe-item {
     color: black;
     text-shadow: 2px 2px #D0D0D0, -1px -1px #D0D0D0;
     pointer-events: none;
+}
+
+html[data-bs-theme="dark"] .crafting-recipe-item-count {
+    color: white;
+    text-shadow: none;
 }
 
 .crafting-recipe-pos-0-0 { position: absolute; left: 20px;  top: 20px;  }
@@ -125,18 +132,17 @@ img.recipe-item {
 .minecraft-yellow   { color: #FFFF55; text-shadow: 0px 0px 4px #444; }
 .minecraft-white    { color: #FFFFFF; text-shadow: 0px 0px 4px #444; }
 
+html[data-bs-theme="dark"] .minecraft-yellow,
+html[data-bs-theme="dark"] .minecraft-white {
+    text-shadow: none;
+}
+
 /* Minecraft Font, for count/amount labels on items */
 
 @font-face {
     font-family: Minecraft;
     src: url("font.otf") format("opentype");
 }
-
-/* Font Awesome CSS */
-.fa-discord:before { content: "\f392" }
-.fa-github:before { content: "\f09b" }
-.fa-gears:before { content: "\f085" }
-
 
 /* Tables */
 figure {
