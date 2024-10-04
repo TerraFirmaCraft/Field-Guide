@@ -17,8 +17,11 @@ $ python src/main.py --tfc-dir /path/to/tfc [--debug]
 $ cd out
 $ python -m http.server 8000
 
-# New versions (1.20) require additional arguments:
-$ python src/main.py ... --resource-pack-book --copy-existing-versions
+# Include Minecraft data (stored locally in /.cache) and Addons (stored locally in /addons)
+$ python src/main.py ... --use-mcmeta --use-addons
+
+# Include the old versions (stored in /assets/versions)
+$ python src/main.py ... --copy-existing-versions
 
 # For 'old' local versions
 # When generating an old version to commit

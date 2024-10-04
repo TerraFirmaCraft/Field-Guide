@@ -58,6 +58,8 @@ OLD_VERSIONS = (
 
 TFC_VERSION = '%s - %s' % (MC_VERSION, VERSION)
 
+IS_RESOURCE_PACK = MC_VERSION != '1.18.2'
+
 
 if __name__ == '__main__':
     print(VERSION)

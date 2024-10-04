@@ -30,7 +30,6 @@ def main():
     # Version handling
     parser.add_argument('--old-version-key', type=str, dest='old_version_key', default=None, help='If present, the key of the old version to generate')
     parser.add_argument('--copy-existing-versions', action='store_true', dest='copy_existing_versions', default=False, help='If present, this will copy existing old versions from /assets/versions/ into the root output directory')
-    parser.add_argument('--resource-pack-book', action='store_true', dest='resource_pack_book', default=False, help='If the book is stored as a resource pack (core content in /assets/) vs. not (core content in /data/)')
 
     # External resources
     parser.add_argument('--use-mcmeta', action='store_true', dest='use_mcmeta', help='Download Minecraft and Forge source')
@@ -86,7 +85,7 @@ def main():
 
     LOG.info('Setting root output dir to "%s"' % root_dir)
 
-    context = Context(tfc_dir, out_dir, root_dir, use_mcmeta, use_addons, args.debug_i18n, args.resource_pack_book)
+    context = Context(tfc_dir, out_dir, root_dir, use_mcmeta, use_addons, args.debug_i18n)
 
     if use_mcmeta:
         mcmeta.load_cache()
@@ -97,6 +96,10 @@ def main():
                 LOG.info('Cloning %s/%s...' % (addon.user, addon.repo))
                 os.makedirs('addons/%s-%s' % (addon.mod_id, addon.version), exist_ok=True)
                 subprocess.call('git clone -b %s https://github.com/%s/%s addons/%s-%s' % (addon.version, addon.user, addon.repo, addon.mod_id, addon.version), shell=True)
+
+                # This is a hack - we don't want git submodules or sub-repos to be present, but keep the cache around
+                # So just delete the /.git/ folder
+                shutil.rmtree('addons/%s-%s/.git' % (addon.mod_id, addon.version), True)
 
     LOG.info('Generating docs...')
     LOG.debug('Running with:\n  tfc_dir = %s\n  out_dir = %s\n  langs = %s\n  version = %s' % (
@@ -130,7 +133,7 @@ def parse_book(context: Context, use_addons: bool):
 
     if use_addons:
         for addon in versions.ADDONS:
-            addon_dir = util.path_join(addon.book_dir(context.resource_pack), context.lang, 'categories')
+            addon_dir = util.path_join(addon.book_dir(versions.IS_RESOURCE_PACK), context.lang, 'categories')
             for category_file in util.walk(addon_dir):
                 parse_category(context, addon_dir, category_file, is_addon=True)
 
@@ -141,7 +144,7 @@ def parse_book(context: Context, use_addons: bool):
 
     if use_addons:
         for addon in versions.ADDONS:
-            addon_dir = util.path_join(addon.book_dir(context.resource_pack), context.lang, 'entries')
+            addon_dir = util.path_join(addon.book_dir(versions.IS_RESOURCE_PACK), context.lang, 'entries')
             for entry_file in util.walk(addon_dir):
                 parse_entry(context, addon_dir, entry_file)
 

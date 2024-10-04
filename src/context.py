@@ -6,6 +6,7 @@ from util import LOG, InternalError
 from i18n import I18n
 from components import text_formatter
 from loader import Loader
+from versions import IS_RESOURCE_PACK
 
 import util
 import json
@@ -17,7 +18,7 @@ BOOK_DIR = 'src/main/resources/%s/tfc/patchouli_books/field_guide/'
 
 class Context:
 
-    def __init__(self, tfc_dir: str, output_dir: str, root_dir: str, use_mcmeta: bool, use_addons: bool, debug_i18n: bool, resource_pack: bool):
+    def __init__(self, tfc_dir: str, output_dir: str, root_dir: str, use_mcmeta: bool, use_addons: bool, debug_i18n: bool):
         self.tfc_dir = tfc_dir
         self.output_root_dir = output_dir
         self.root_dir = root_dir
@@ -25,7 +26,6 @@ class Context:
         self.loader: Loader = Loader(tfc_dir, output_dir, use_mcmeta, use_addons)
         self.last_context = None
         self.debug_i18n = debug_i18n
-        self.resource_pack = resource_pack
 
         self.categories: Dict[str, Category] = {}
         self.entries: Dict[str, Entry] = {}
@@ -52,7 +52,7 @@ class Context:
         self.blocks_failed = 0
 
     def resource_dir(self, path: str) -> str:
-        return util.path_join(self.tfc_dir, BOOK_DIR % ('assets' if self.resource_pack else 'data'), self.lang, path)
+        return util.path_join(self.tfc_dir, BOOK_DIR % ('assets' if IS_RESOURCE_PACK else 'data'), self.lang, path)
 
     def with_lang(self, lang: str):
         self.lang = lang
