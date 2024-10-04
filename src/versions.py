@@ -49,6 +49,7 @@ ADDONS = (
     Addon('eerussianguy', 'firmalife', 'v2.1.8', 'firmalife', 'src/main/resources'),
     Addon('HyperDashPony', 'FirmaCiv', '0.2.5-alpha-1.20.1', 'firmaciv', 'src/main/resources'),
     Addon('eerussianguy', 'beneath', 'v1.0', 'beneath', 'src/main/resources'),
+    Addon('MrHiTech123', 'Artisanal', 'v1.0', 'artisanal', 'src/main/resources'),
 )
 
 OLD_VERSIONS = (
