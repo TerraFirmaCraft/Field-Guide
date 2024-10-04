@@ -520,7 +520,7 @@ def build_book_html(context: Context):
         for entry_id, entry in cat.sorted_entries:
             util.write_html(context.output_dir, entry_id + '.html', html=TEMPLATE.format(
                 title=context.translate(I18n.TITLE),
-                long_title=entry.name + " | " + cat.name + " | " + context.translate(I18n.SHORT_TITLE),
+                long_title=entry.name + " | " + context.translate(I18n.SHORT_TITLE),
                 short_description=entry.name,
                 preview_image=entry.icon.replace('..\\..\\_images\\', '').replace('../../_images/', ''),
                 text_index=context.translate(I18n.INDEX),
