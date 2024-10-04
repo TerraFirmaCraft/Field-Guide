@@ -407,7 +407,7 @@ def build_book_html(context: Context):
     # Main Page
     util.write_html(context.output_dir, 'index.html', html=TEMPLATE.format(
         title=context.translate(I18n.TITLE),
-        long_title=context.translate(I18n.TITLE),
+        long_title=context.translate(I18n.TITLE) + " | " + versions.MC_VERSION,
         short_description=context.translate(I18n.HOME),
         preview_image=get_splash_location(),
         text_index=context.translate(I18n.INDEX),
