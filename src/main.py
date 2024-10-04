@@ -407,6 +407,9 @@ def build_book_html(context: Context):
     # Main Page
     util.write_html(context.output_dir, 'index.html', html=TEMPLATE.format(
         title=context.translate(I18n.TITLE),
+        long_title=context.translate(I18n.TITLE),
+        short_description=context.translate(I18n.HOME),
+        preview_image=get_splash_location(),
         text_index=context.translate(I18n.INDEX),
         text_contents=context.translate(I18n.CONTENTS),
         text_version=context.translate(I18n.VERSION),
@@ -434,7 +437,7 @@ def build_book_html(context: Context):
         """.format(
             text_home=context.translate(I18n.HOME),
             text_entries=context.translate(I18n.CATEGORIES),
-            splash_image='splash' if versions.MC_VERSION != '1.20.1' else 'splash_120'
+            splash_image=get_splash_location()
         ) + '\n'.join(
             """
             <div class="col">
@@ -458,6 +461,9 @@ def build_book_html(context: Context):
     for category_id, cat in context.sorted_categories:
         util.write_html(context.output_dir, category_id, 'index.html', html=TEMPLATE.format(
             title=context.translate(I18n.TITLE),
+            long_title=cat.name + " | " + context.translate(I18n.TITLE),
+            short_description=cat.name,
+            preview_image=get_splash_location(),
             text_index=context.translate(I18n.INDEX),
             text_contents=context.translate(I18n.CONTENTS),
             text_version=context.translate(I18n.VERSION),
@@ -514,6 +520,9 @@ def build_book_html(context: Context):
         for entry_id, entry in cat.sorted_entries:
             util.write_html(context.output_dir, entry_id + '.html', html=TEMPLATE.format(
                 title=context.translate(I18n.TITLE),
+                long_title=entry.name + " | " + cat.name + " | " + context.translate(I18n.TITLE),
+                short_description=entry.name,
+                preview_image=entry.icon,
                 text_index=context.translate(I18n.INDEX),
                 text_contents=context.translate(I18n.CONTENTS),
                 text_version=context.translate(I18n.VERSION),
@@ -568,6 +577,9 @@ def title_with_optional_icon(text: str, icon_src: str, icon_title: str) -> str:
         )
     else:
         return text
+
+def get_splash_location():
+    return 'splash' if versions.MC_VERSION != '1.20.1' else 'splash_120'
 
 def entry_card_with_default_icon(entry_page: str, entry_title: str, icon_src: str, icon_title: str) -> str:
     if not icon_src:
