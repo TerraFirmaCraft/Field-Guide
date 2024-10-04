@@ -280,9 +280,16 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
     elif page_type == 'patchouli:spotlight':
         # Item Images
         try:
-            item_src, item_name = item_loader.get_item_image(context, data['item'], False)
-            context.format_title_with_icon(buffer, item_src, item_name, data)
-            context.items_passed += 1
+            if isinstance(data['item'], str):
+                item_src, item_name = item_loader.get_item_image(context, data['item'], False)
+                context.format_title_with_icon(buffer, item_src, item_name, data)
+                context.items_passed += 1
+            elif 'tag' in data['item']:
+                item_src, item_name = item_loader.get_item_image(context, '#' + data['item']['tag'], False)
+                context.format_title_with_icon(buffer, item_src, item_name, data)
+                context.items_passed += 1
+            else:
+                util.error('Spotlight page did not have an item or tag key: %s' % data)
         except InternalError as e:
             e.warning()
 

@@ -165,6 +165,10 @@ class Context:
         img = self.loader.load_explicit_texture(image)
 
         width, height = img.size
+        assert width == height
+        if width % 256 != 0:
+            util.error('Image size is not a multiple of 256. Automatically resizing, but there may be losses. (%s x %s): %s' % (width, height, image))
+            img = img.resize((400, 400), Image.NEAREST)
         assert width == height and width % 256 == 0
         size = width * 200 // 256
         img = img.crop((0, 0, size, size))
