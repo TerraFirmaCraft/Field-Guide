@@ -409,7 +409,7 @@ def build_book_html(context: Context):
         title=context.translate(I18n.TITLE),
         long_title=context.translate(I18n.TITLE) + " | " + versions.MC_VERSION,
         short_description=context.translate(I18n.HOME),
-        preview_image=get_splash_location(),
+        preview_image=get_splash_location().replace('..\\..\\_images\\', ''),
         text_index=context.translate(I18n.INDEX),
         text_contents=context.translate(I18n.CONTENTS),
         text_version=context.translate(I18n.VERSION),
@@ -461,9 +461,9 @@ def build_book_html(context: Context):
     for category_id, cat in context.sorted_categories:
         util.write_html(context.output_dir, category_id, 'index.html', html=TEMPLATE.format(
             title=context.translate(I18n.TITLE),
-            long_title=cat.name + " | " + context.translate(I18n.TITLE),
+            long_title=cat.name + " | " + context.translate(I18n.SHORT_TITLE),
             short_description=cat.name,
-            preview_image=get_splash_location(),
+            preview_image=get_splash_location().replace('..\\..\\_images\\', ''),
             text_index=context.translate(I18n.INDEX),
             text_contents=context.translate(I18n.CONTENTS),
             text_version=context.translate(I18n.VERSION),
@@ -520,9 +520,9 @@ def build_book_html(context: Context):
         for entry_id, entry in cat.sorted_entries:
             util.write_html(context.output_dir, entry_id + '.html', html=TEMPLATE.format(
                 title=context.translate(I18n.TITLE),
-                long_title=entry.name + " | " + cat.name + " | " + context.translate(I18n.TITLE),
+                long_title=entry.name + " | " + cat.name + " | " + context.translate(I18n.SHORT_TITLE),
                 short_description=entry.name,
-                preview_image=entry.icon,
+                preview_image=entry.icon.replace('..\\..\\_images\\', ''),
                 text_index=context.translate(I18n.INDEX),
                 text_contents=context.translate(I18n.CONTENTS),
                 text_version=context.translate(I18n.VERSION),

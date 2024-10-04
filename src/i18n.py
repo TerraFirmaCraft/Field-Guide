@@ -6,6 +6,7 @@ def key(text: str) -> str:
 
 class I18n:
     TITLE = key('title')
+    SHORT_TITLE = key('short_title')
     INDEX = key('index')
     CONTENTS = key('contents')
     VERSION = key('version')
