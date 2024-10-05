@@ -98,6 +98,12 @@ def format_ingredient(context: Context, data: Any) -> Tuple[str, str]:
     elif 'type' in data and data['type'] == 'tfc:fluid_item':
         util.require(data['fluid_ingredient']['ingredient'] == 'minecraft:water', 'Unknown `tfc:fluid_item` ingredient: \'%s\'' % data)
         return item_loader.get_item_image(context, 'minecraft:water_bucket')
+    elif isinstance(data, List):
+        csvstring = ''
+        for i in data:
+            if 'item' in i:
+                csvstring += ',' + str(i['item'])
+        return item_loader.get_item_image(context, csvstring)
     else:
         util.error('Unsupported ingredient: %s' % data)
 
