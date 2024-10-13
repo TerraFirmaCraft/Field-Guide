@@ -49,7 +49,7 @@ ADDONS = (
     Addon('eerussianguy', 'firmalife', 'v2.1.8', 'firmalife', 'src/main/resources'),
     Addon('HyperDashPony', 'FirmaCiv', '0.2.5-alpha-1.20.1', 'firmaciv', 'src/main/resources'),
     Addon('eerussianguy', 'beneath', 'v1.0', 'beneath', 'src/main/resources'),
-    Addon('MrHiTech123', 'Artisanal', '1.3.0', 'artisanal', 'src/main/resources'),
+    Addon('MrHiTech123', 'Artisanal', '1.3.1', 'artisanal', 'src/main/resources'),
     Addon('Therighthon', 'ArborFirmaCraft', 'v1.0.13', 'afc', 'src/main/resources'),
     Addon('Therighthon', 'RoadsAndRoofsTFC', 'v0.2.0', 'rnr', 'src/main/resources'),
 )
