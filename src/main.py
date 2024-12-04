@@ -129,27 +129,27 @@ def parse_book(context: Context, use_addons: bool):
     category_dir = context.resource_dir('categories')
 
     for category_file in util.walk(category_dir):
-        parse_category(context, category_dir, category_file)
+        parse_category(context, category_dir, category_file, 'tfc')
 
     if use_addons:
         for addon in versions.ADDONS:
             addon_dir = util.path_join(addon.book_dir(versions.IS_RESOURCE_PACK), context.lang, 'categories')
             for category_file in util.walk(addon_dir):
-                parse_category(context, addon_dir, category_file, is_addon=True)
+                parse_category(context, addon_dir, category_file, addon.mod_id)
 
     entry_dir = context.resource_dir('entries')
 
     for entry_file in util.walk(entry_dir):
-        parse_entry(context, entry_dir, entry_file)
+        parse_entry(context, entry_dir, entry_file, 'tfc')
 
     if use_addons:
         for addon in versions.ADDONS:
             addon_dir = util.path_join(addon.book_dir(versions.IS_RESOURCE_PACK), context.lang, 'entries')
             for entry_file in util.walk(addon_dir):
-                parse_entry(context, addon_dir, entry_file)
+                parse_entry(context, addon_dir, entry_file, addon.mod_id)
 
 
-def parse_category(context: Context, category_dir: str, category_file: str, is_addon: bool = False):
+def parse_category(context: Context, category_dir: str, category_file: str, owner_id: str):
     category: Category = Category()
     category_id: str = os.path.relpath(category_file, category_dir)
     category_id = category_id[:category_id.index('.')]
@@ -164,14 +164,17 @@ def parse_category(context: Context, category_dir: str, category_file: str, is_a
     category.description = ''.join(desc)
     category.sort = data['sortnum']
 
-    if is_addon and not context.debug_i18n:
+    if owner_id != 'tfc':
+        # Translate the category name with '(Addon)', and also mark it as such for the purposes of the sorting later
         category.name = context.translate(I18n.ADDON) % category.name
-        category.sort += 10000  # Addons go LAST
+        category.is_addon = True
+        context.addon_categories[owner_id] = category_id
 
+    context.category_owners[category_id] = owner_id
     context.categories[category_id] = category
 
 
-def parse_entry(context: Context, entry_dir: str, entry_file: str):
+def parse_entry(context: Context, entry_dir: str, entry_file: str, owner_id: str):
     entry_id: str = os.path.relpath(entry_file, entry_dir)
     entry_id = entry_id[:entry_id.index('.')]
 
@@ -182,9 +185,13 @@ def parse_entry(context: Context, entry_dir: str, entry_file: str):
     category_id: str = data['category']
     category_id = category_id[category_id.index(':') + 1:]
 
+    # Prevent overrides, remove the page
+    # Moving it is a pain (w.r.t dealing with conflicts), and for now it's easier to just ignore it
+    if context.category_owners[category_id] != owner_id:
+        LOG.warning('Skipping entry %s as it is an override from %s' % (entry_id, owner_id))
+        return
+
     entry: Entry = Entry()
-    entry_id: str = os.path.relpath(entry_file, entry_dir)
-    entry_id = entry_id[:entry_id.index('.')]
 
     entry.sort = data['sortnum'] if 'sortnum' in data else -1
     entry.name = text_formatter.strip_vanilla_formatting(data['name'])

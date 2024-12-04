@@ -31,6 +31,12 @@ class Context:
         self.entries: Dict[str, Entry] = {}
         self.sorted_categories: List[Tuple[str, Category]] = []
 
+        # In order to avoid conflicts, we prevent any overrides from any addon (including addon -> addon overrides). This is a map
+        # from category ID to addon mod ID (or 'tfc'). Any entries that are present in another category will get moved into the addon
+        # category, if we can find one that does not conflict.
+        self.category_owners: dict[str, str] = {}
+        self.addon_categories: dict[str, str] = {}
+
         self.keybindings: Dict[str, str] = {}
 
         self.lang = None
@@ -100,7 +106,7 @@ class Context:
         """ Initializes sorted lists for all categories and entries. """
         self.sorted_categories = sorted([
             (c, c_id) for c, c_id in self.categories.items()
-        ], key=lambda c: (c[1].sort, c[0]))
+        ], key=lambda c: (c[1].is_addon, c[1].sort, c[0]))
 
         for _, cat in self.sorted_categories:
             sorted_entry_names = sorted(cat.entries, key=lambda e: (self.entries[e].sort, e))
