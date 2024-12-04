@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft Field Guide</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Version 1.18.2 - v2.2.30
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 日本語
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/mechanics\composter.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\composter.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\composter.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\composter.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\composter.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\composter.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\composter.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\composter.html" class="dropdown-item">繁體中文(台灣)</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Contents</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Index</a></li>
+            <li><a href="../the_world/">世界</a></li>
+<li><a href="../getting_started/">はじめに</a></li>
+<li><a href="../mechanics/">高度な加工</a><ul><li><a href="./advanced_building_materials.html">高度な素材</a></li>
+<li><a href="./animal_husbandry.html">牧畜</a></li>
+<li><a href="./anvils.html">金床</a></li>
+<li><a href="./aqueducts.html">用水路</a></li>
+<li><a href="./armor.html">防具</a></li>
+<li><a href="./barrels.html">樽</a></li>
+<li><a href="./bellows.html">ふいご</a></li>
+<li><a href="./blast_furnace.html">高炉</a></li>
+<li><a href="./bloomery.html">塊鉄炉</a></li>
+<li><a href="./bread.html">パン</a></li>
+<li><a href="./charcoal_forge.html">溶鉱炉</a></li>
+<li><a href="./charcoal_pit.html">伏せ焼き</a></li>
+<li><a href="./chisel.html">ノミ</a></li>
+<li><a href="./composter.html">コンポスター</a></li>
+<li><a href="./crops.html">作物</a></li>
+<li><a href="./crucible.html">るつぼ</a></li>
+<li><a href="./dairy.html">乳製品</a></li>
+<li><a href="./damage_types.html">ダメージタイプ</a></li>
+<li><a href="./decay.html">保存</a></li>
+<li><a href="./fertilizers.html">肥料</a></li>
+<li><a href="./fire_clay.html">耐火粘土</a></li>
+<li><a href="./fishing.html">釣り</a></li>
+<li><a href="./flux.html">融剤</a></li>
+<li><a href="./gems.html">宝石</a></li>
+<li><a href="./grill.html">焚き火とグリル</a></li>
+<li><a href="./heating.html">加熱</a></li>
+<li><a href="./hydration.html">潤いを保つ</a></li>
+<li><a href="./lamps.html">ランプ</a></li>
+<li><a href="./leather_making.html">革の作成</a></li>
+<li><a href="./lighting.html">光源</a></li>
+<li><a href="./minecarts.html">トロッコ</a></li>
+<li><a href="./panning.html">パンニング</a></li>
+<li><a href="./papermaking.html">紙の作成</a></li>
+<li><a href="./pets.html">ペット</a></li>
+<li><a href="./pot.html">焚き火とポット</a></li>
+<li><a href="./powderkegs.html">火薬樽</a></li>
+<li><a href="./prospecting.html">探鉱</a></li>
+<li><a href="./quern.html">石臼</a></li>
+<li><a href="./salad.html">サラダ</a></li>
+<li><a href="./sandwiches.html">サンドイッチ</a></li>
+<li><a href="./scribing_table.html">筆記台</a></li>
+<li><a href="./sluices.html">堰</a></li>
+<li><a href="./steel.html">鋼</a></li>
+<li><a href="./support_beams.html">梁</a></li>
+<li><a href="./weaving.html">機織り</a></li>
+<li><a href="./wooden_buckets.html">木のバケツ</a></li></ul></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">高度な加工</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">コンポスター</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\image55.png" alt="コンポスター" title="None" /><span>コンポスター</span>
+        </h1>
+                <p>コンポスターは肥料を作るのに欠かせない道具です。 動作するには、<span style="color:#00AA00;">緑</span> アイテムと <span style="color:#AA0000;">茶</span> アイテムの両方が必要です。 さまざまな品目は、他の品目よりも堆肥の生産量に大きく貢献します。 アイテムを追加するには、<span style="color:#b0b;">Right Click</span> します。 追加できるアイテムについては後のページで説明します。</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #minecraft:dirt" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item10.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #minecraft:dirt" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item10.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="コンポスター" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>コンポスターを作るには <span style="color:#3E8A00;">木材</span> と <span style="color:#3E8A00;">土</span> が必要です。</p>
+<p>コンポスターは特定の条件下でより適切に動作します。 上部に雪のブロックがあるコンポスターは、わずかに速く動作します。 降雨量が 150mm 未満または 350mm を超える地域では、コンポスターの動作が大幅に遅くなり、その影響は最大降雨量と最小降雨量に近づくにつれて大きくなります。 また、他のコンポスターに触れているコンポスターの動作は遅くなります。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>空、稼働、完成段階にあるコンポスター。</p>
+<p>コンポスターは平均的な条件で完成するまでに 12 日かかります。 出来上がると土のような色になり、上から灰色の粒子が出てきます。 その後、<span style="color:#b0b;">Right Click</span> と <span style="color:#b0b;">Shift</span> を使って空手で堆肥を取得できます。 <span style="color:#FF5555;">肉</span> や <span style="color:#FF5555;">骨</span> などを堆肥に加えると堆肥が腐り、赤くなり、ひどい粒子が放出されます。 腐った堆肥は、良質な堆肥と同じ方法で取り除くことができます。 作物に使用すると即座に枯らしてしまいます。</p>
+<h5>腐った堆肥</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>腐ったコンポスター。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this item.">Item: <code>#tfc:compost_greens_low</code></span></p>
+        </div>
+        <p>植物など、一部の <span style="color:#00AA00;">緑</span> アイテムは堆肥化にほとんど寄与しません。 コンポスターの緑アイテムの需要を満たすには、16 個の緑のアイテムが必要です。</p>
+
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:compost_greens">
+                <img src="..\..\_images\item77.gif" alt="Tag: #tfc:compost_greens" />
+            </span>
+            <h5>Tag: #tfc:compost_greens</h5>
+        </div>
+        <p>穀物など、いくつかの <span style="color:#00AA00;">緑</span> アイテムはコンポスターに適度に貢献します。 コンポスターの緑アイテムの需要を満たすには、8 個の緑のアイテムが必要です。</p>
+
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:compost_greens_high">
+                <img src="..\..\_images\item78.gif" alt="Tag: #tfc:compost_greens_high" />
+            </span>
+            <h5>Tag: #tfc:compost_greens_high</h5>
+        </div>
+        <p>果物や野菜など、一部の <span style="color:#00AA00;">緑</span> アイテムは堆肥化装置に多大な貢献をします。 コンポスターの緑アイテムの需要を満たすには、それらが 4 つ必要です。</p>
+
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:compost_browns_low">
+                <img src="..\..\_images\item79.gif" alt="Tag: #tfc:compost_browns_low" />
+            </span>
+            <h5>Tag: #tfc:compost_browns_low</h5>
+        </div>
+        <p><span style="color:#AA0000;">brown</span> アイテムの中には、乾燥したフラムタイト、木生シダ、蔓植物などの背の高い植物や落ち葉など、コンポスターにほとんど寄与しないものもあります。 コンポスターの茶アイテムの需要を満たすには、16 個のアイテムが必要です。</p>
+
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:compost_browns">
+                <img src="..\..\_images\item80.gif" alt="Tag: #tfc:compost_browns" />
+            </span>
+            <h5>Tag: #tfc:compost_browns</h5>
+        </div>
+        <p>木の灰やジュートなど、一部の <span style="color:#AA0000;">茶</span> アイテムはコンポスターに適度に貢献します。 コンポスターの茶アイテムの需要を満たすには、8 個のアイテムが必要です。</p>
+
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:compost_browns_high">
+                <img src="..\..\_images\item81.gif" alt="Tag: #tfc:compost_browns_high" />
+            </span>
+            <h5>Tag: #tfc:compost_browns_high</h5>
+        </div>
+        <p>メロン、カボチャ、枯れ草、松ぼっくり、腐葉土、流木など、一部の <span style="color:#AA0000;">茶</span> アイテムはコンポスターに多大な貢献をします。 コンポスターの茶アイテムの需要を満たすには、それらが 4 つ必要です。</p>
+
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:compost_poisons">
+                <img src="..\..\_images\item82.gif" alt="Tag: #tfc:compost_poisons" />
+            </span>
+            <h5>Tag: #tfc:compost_poisons</h5>
+        </div>
+        <p>一部のアイテムはあなたの堆肥を <span style="color:#FF5555;">毒性化</span> します。 これらには、<span style="color:#FF5555;">肉</span> や <span style="color:#FF5555;">骨</span> が含まれます。 毒堆肥を作物に使用すると、即座に枯れてしまいます。</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'ja_jp';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+  </body>
+</html>
