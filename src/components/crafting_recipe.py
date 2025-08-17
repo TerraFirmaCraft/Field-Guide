@@ -31,7 +31,8 @@ def format_crafting_recipe_from_data(context: Context, buffer: List[str], identi
     elif recipe_type in (
         'tfc:damage_inputs_shaped_crafting',
         'tfc:damage_inputs_shapeless_crafting',
-        'tfc:extra_products_shapeless_crafting'
+        'tfc:extra_products_shapeless_crafting',
+        'tfc:no_remainder_shapeless_crafting'
     ):
         return format_crafting_recipe_from_data(context, buffer, identifier, data['recipe'])
     elif recipe_type == 'tfc:advanced_shaped_crafting':
