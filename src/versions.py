@@ -54,7 +54,7 @@ ADDONS = (
     Addon('Therighthon', 'ArborFirmaCraft', 'v1.0.13', 'afc', 'src/main/resources'),
     Addon('Therighthon', 'RoadsAndRoofsTFC', 'v0.2.0', 'rnr', 'src/main/resources'),
     Addon('redstoneguy10ls', 'lithiccoins', '1.1.1', 'lithiccoins', 'src/main/resources'),
-    Addon('redstoneguy10ls', 'lithicaddon', '1.3.6', 'lithicaddon', 'src/main/resources'),
+    Addon('redstoneguy10ls', 'lithicaddon', 'v1.3.6', 'lithicaddon', 'src/main/resources'),
 )
 
 OLD_VERSIONS = (
