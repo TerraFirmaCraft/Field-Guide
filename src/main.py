@@ -187,6 +187,9 @@ def parse_entry(context: Context, entry_dir: str, entry_file: str, owner_id: str
 
     # Prevent overrides, remove the page
     # Moving it is a pain (w.r.t dealing with conflicts), and for now it's easier to just ignore it
+    if category_id not in context.category_owners:
+        LOG.error('Category %s not found, skipping' % category_id)
+        return
     if context.category_owners[category_id] != owner_id:
         LOG.warning('Skipping entry %s as it is an override from %s' % (entry_id, owner_id))
         return

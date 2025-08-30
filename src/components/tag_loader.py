@@ -21,7 +21,9 @@ def sort_tag_elements(context: Context, identifier: str, load_func):
 def load_tag_elements(context: Context, identifier: str, load_func):
     json = load_func(context.loader, identifier)
     for e in json['values']:
-        if e.startswith('#'):
+        if isinstance(e, dict):
+            yield e['id']
+        elif e.startswith('#'):
             yield from load_tag_elements(context, e[1:], load_func)
         else:
             yield e
