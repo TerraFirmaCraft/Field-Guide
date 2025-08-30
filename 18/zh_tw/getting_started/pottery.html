@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>群巒傳說 手冊</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">群巒傳說 手冊</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> 版本 1.18.2 - v2.2.30
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 繁體中文(台灣)
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/getting_started\pottery.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\pottery.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\pottery.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\pottery.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\pottery.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\pottery.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\pottery.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\pottery.html" class="dropdown-item">繁體中文(台灣)</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>目錄</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">主頁</a></li>
+            <li><a href="../the_world/">這個世界</a></li>
+<li><a href="../getting_started/">新手入門</a><ul><li><a href="./introduction.html">第一天</a></li>
+<li><a href="./firepit.html">生火</a></li>
+<li><a href="./pottery.html">製陶術</a></li>
+<li><a href="./pit_kiln.html">坑窯</a></li>
+<li><a href="./finding_ores.html">礦石、金屬和鑄造</a></li>
+<li><a href="./primitive_alloys.html">原始合金</a></li>
+<li><a href="./primitive_anvils.html">原始砧</a></li>
+<li><a href="./building_materials.html">建築材料</a></li>
+<li><a href="./a_place_to_sleep.html">如何過夜</a></li>
+<li><a href="./size_and_weight.html">體積和重量</a></li>
+<li><a href="./food_and_water.html">食物和水</a></li></ul></li>
+<li><a href="../mechanics/">進階內容</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">新手入門</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">製陶術</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\item25.png" alt="製陶術" title="小缸" /><span>製陶術</span>
+        </h1>
+                <p><span style="color:#3E8A00;">粘土</span>是一種特別有用的材料，你可以用它製作陶器。一開始你可能難以找到粘土，因為它們總是隱藏在草皮之下。但簡而言之，有兩種獲取它們的手段。首先，粘土會在<a href="../the_world/climate.html#rainfall">年降雨量</a>大於 175mm 的區域中成片地大量生成，而且有幾種特殊的<span style="color:#3E8A00;">植物</span>會生長在粘土之上。</p>
+<h5>粘土指示植物</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="請在遊戲中查閱以預覽該多方塊結構。">多方塊結構</span></p>
+        </div>
+        <p>粘土草方塊，其上生長的是粘土指示植物。</p>
+<p>有幾種植物指示了附近可能存在粘土，它們是：<span style="color:#3E8A00;">蹄蓋蕨</span>、<span style="color:#3E8A00;">美人蕉</span>、<span style="color:#3E8A00;">一枝黃花</span>、<span style="color:#3E8A00;">蒲葦</span>、<span style="color:#3E8A00;">分藥花</span>、和<span style="color:#3E8A00;">水生美人蕉</span>。其次，粘土也會在水源附近，比如河流、湖泊、或水池邊，以小塊的形式生成。<br/>
+<br/>
+和石子類似，粘土也可以被塑形成有用的物品。需要手持五個粘土球才能塑形。不同於石子塑形，捏壞了的粘土並不會消失，只要關閉粘土塑形介面重新嘗試即可。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image23.png" alt="tfc:textures/gui/book/gui/clay_knapping.png">
+<div style="text-align: center;"><p>塑形介面。</p>
+</div><a class="anchor" id="vessel"></a><h5>小缸</h5>
+<p>粘土可以用來做成小缸。你捏出來的小缸還需要燒製才能使用。燒製是指將粘土置於 1200°C（<span style="color:#FFFF55;"><strong>黃色</strong></span>）以上的高溫中<a href="../mechanics/heating.html">加熱</a>，直到它變成<span style="color:#3E8A00;">瓷</span>。<br/>
+<br/>
+篝火的溫度並不足以燒製瓷器，你得使用<a href="../getting_started/pit_kiln.html">坑窯</a>才行。</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image24.png" alt="Recipe: tfc:clay_knapping/vessel">
+        </div>
+    </div>
+</div>
+<p>粘土塑形小缸。</p>
+<a class="anchor" id="jug"></a><h5>陶罐</h5>
+<p>另一個很有用的陶器是<span style="color:#3E8A00;">陶罐</span>。你可以用它來盛裝或從中飲用各種液體，比如<span style="color:#3E8A00;">淡水</span>。<br/>
+<br/>
+要使用它，只需拿著壺對著水源方塊按<span style="color:#b0b;">右鍵</span>就行。長按<span style="color:#b0b;">右鍵</span>便可以用它喝水。陶罐一次可以容納 <span style="color:#3E8A00;">100 mB</span> 的液體。</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image9.png" alt="Recipe: tfc:clay_knapping/jug">
+        </div>
+    </div>
+</div>
+<p>粘土塑形陶罐。</p>
+<a class="anchor" id="mold"></a><h5>模具</h5>
+<p>粘土的另一大作用是用來製作<span style="color:#3E8A00;">模具</span>。將熔融金屬澆鑄進模具中並冷卻就能將其製成各種有用的工具或物品。金屬冷卻後，手持模具並按下<span style="color:#b0b;">右鍵</span>就可以將其取出了。<br/>
+<br/>
+最簡單的模具是<span style="color:#3E8A00;">鑄錠模具</span>，可以按右側所示的方法塑形出來。</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image25.png" alt="Recipe: tfc:clay_knapping/ingot_mold">
+        </div>
+    </div>
+</div>
+<p>粘土塑形鑄錠模具</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="未燒製的鑄錠模具" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item26.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="鑄錠模具" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item27.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-yellow">
+            <p>黃白****</p>
+        </div>
+        <p>模具和其他陶器一樣必須在<a href="../getting_started/pit_kiln.html">坑窯</a>中燒製才能使用。<br/>
+<br/>
+將熔融的金屬澆鑄進燒製過後的模具中，等待金屬充分冷卻，就可以獲得模具對應的金屬製品。</p>
+<h5>鑄造</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="請在遊戲中查閱此專案。">物品: <code>tfc:ceramic/ingot_mold{tank:{"Amount":100</code>, <code>"FluidName":"tfc:metal/copper"}}</code></span></p>
+        </div>
+        <p>接下來的幾頁會教你如何將粘土塑形成各種工具的模具。</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image26.png" alt="Recipe: tfc:clay_knapping/propick_head_mold">
+        </div>
+    </div>
+</div>
+<p><a href="../mechanics/prospecting.html#propick">勘礦鎬</a>本身並不能挖掘，但卻是尋找礦脈必不可少的工具。</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image27.png" alt="Recipe: tfc:clay_knapping/pickaxe_head_mold">
+        </div>
+    </div>
+</div>
+<p><span style="color:#3E8A00;">鎬</span>是挖掘必備的工具。</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image28.png" alt="Recipe: tfc:clay_knapping/saw_blade_mold">
+        </div>
+    </div>
+</div>
+<p><span style="color:#3E8A00;">鋸</span>可以將原木切割成木板或<a href="../mechanics/support_beams.html">支撐柱</a>等高階木工物品。只有有了鋸子你才能製作<span style="color:#3E8A00;">工作臺</span>！</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image29.png" alt="Recipe: tfc:clay_knapping/scythe_blade_mold">
+        </div>
+    </div>
+</div>
+<p><span style="color:#3E8A00;">鐮刀</span>可以一次性破壞 3x3x3 區域內的所有植物和樹葉！</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image30.png" alt="Recipe: tfc:clay_knapping/chisel_head_mold">
+        </div>
+    </div>
+</div>
+<p><a href="../mechanics/chisel.html">鑿</a>可以用來將普通方塊轉變為平滑方塊，還可以用來製作多種裝飾性方塊。</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image31.png" alt="Recipe: tfc:clay_knapping/axe_head_mold">
+        </div>
+    </div>
+</div>
+<p><span style="color:#3E8A00;">斧</span>是用來砍樹的。注意！用石斧砍樹掉落的原木數量會比金屬製成的斧要低上不少！</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image32.png" alt="Recipe: tfc:clay_knapping/hammer_head_mold">
+        </div>
+    </div>
+</div>
+<p><span style="color:#3E8A00;">錘</span>是在<a href="../mechanics/anvils.html">砧</a>上製作物品不可或缺的工具。</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image33.png" alt="Recipe: tfc:clay_knapping/knife_blade_mold">
+        </div>
+    </div>
+</div>
+<p><span style="color:#3E8A00;">刀</span>可以當作武器使用，不過主要還是用來破壞植物型別的方塊.</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image34.png" alt="Recipe: tfc:clay_knapping/hoe_head_mold">
+        </div>
+    </div>
+</div>
+<p><span style="color:#3E8A00;">鋤</span>可以用來種植和管理<a href="../mechanics/crops.html">農作物</a>。</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image35.png" alt="Recipe: tfc:clay_knapping/shovel_head_mold">
+        </div>
+    </div>
+</div>
+<p><span style="color:#3E8A00;">鏟</span>可以挖東西。</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'zh_tw';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+  </body>
+</html>
