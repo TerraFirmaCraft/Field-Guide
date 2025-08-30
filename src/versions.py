@@ -46,7 +46,7 @@ FORGE_VERSION = '47.1.3'
 LANGUAGES = ('en_us', 'ja_jp', 'pt_br', 'ko_kr', 'uk_ua', 'zh_cn', 'zh_hk', 'zh_tw', 'ru_ru')
 
 ADDONS = (
-    Addon('eerussianguy', 'firmalife', 'v2.1.8', 'firmalife', 'src/main/resources'),
+    Addon('eerussianguy', 'firmalife', 'v2.1.22', 'firmalife', 'src/main/resources'),
     Addon('HyperDashPony', 'FirmaCiv', '0.2.5-alpha-1.20.1', 'firmaciv', 'src/main/resources'),
     Addon('eerussianguy', 'beneath', 'v1.0', 'beneath', 'src/main/resources'),
     Addon('MrHiTech123', 'Artisanal', '1.7.0', 'artisanal', 'src/main/resources'),
