@@ -6,6 +6,7 @@ from PIL import Image
 import json
 import util
 import versions
+import os
 
 
 class Loader:
@@ -84,6 +85,8 @@ class Loader:
     def load_from_tfc(self, path: str, reader):
         try:
             path = util.path_join(self.tfc_dir, 'src/main/resources', path)
+            if not os.path.exists(path):
+                path = util.path_join(self.tfc_dir, 'src/generated/resources', path)
             if path.endswith('.png'):
                 with open(path, 'rb') as f:
                     return reader(f)
