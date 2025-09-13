@@ -117,7 +117,7 @@ def create_block_model_image(context: Context, block: str, model: Any) -> Image.
         return create_block_model_projection(end, side, side, rotate=True)
     elif parent == 'minecraft:block/template_farmland':
         side = context.loader.load_texture(model['textures']['dirt'])
-        end = context.loader.load_texture(model['textures']['end'])
+        end = context.loader.load_texture(model['textures']['top'])
         return create_block_model_projection(side, side, end)
     elif parent == 'tfc:block/ore':
         texture = context.loader.load_texture(model['textures']['all'])
