@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="生火 | TFC Field Guide" />
+    <meta name="description" content="生火" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="生火 | TFC Field Guide" />
+    <meta property="og:description" content="生火" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/item16.png" />
+
+    <title>生火 | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">群巒傳說 手冊</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> 版本 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 繁體中文(台灣)
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/getting_started\firepit.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\firepit.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\firepit.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\firepit.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\firepit.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\firepit.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\firepit.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\firepit.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/getting_started\firepit.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>目錄</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">主頁</a></li>
+            <li><a href="../the_world/">這個世界</a></li>
+<li><a href="../getting_started/">新手入門</a><ul><li><a href="./introduction.html">第一天</a></li>
+<li><a href="./firepit.html">生火</a></li>
+<li><a href="./pottery.html">製陶術</a></li>
+<li><a href="./pit_kiln.html">坑窯</a></li>
+<li><a href="./finding_ores.html">礦石、金屬和鑄造</a></li>
+<li><a href="./primitive_alloys.html">原始合金</a></li>
+<li><a href="./primitive_anvils.html">原始砧</a></li>
+<li><a href="./building_materials.html">建築材料</a></li>
+<li><a href="./a_place_to_sleep.html">如何過夜</a></li>
+<li><a href="./size_and_weight.html">體積和重量</a></li>
+<li><a href="./food_and_water.html">食物和水</a></li></ul></li>
+<li><a href="../mechanics/">進階內容</a></li>
+<li><a href="../firmalife/">(Addon) Firmalife擴充套件模組</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">新手入門</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">生火</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\item16.png" alt="生火" title="篝火" /><span>生火</span>
+        </h1>
+                <a class="anchor" id="firestarter"></a><p><span style="color:#3E8A00;">火</span>在文明史上是一項重大的技術進步。想要生火，就必須做一個<span style="color:#3E8A00;">起火器</span>。對準需要生火的目標按住<span style="color:#b0b;">右鍵</span>。片刻之後，會產生煙，然後便有機率成功生火。你可能需要多嘗試幾次才能成功點起火來。</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="起火器" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item17.png" />
+                </div>
+            </div>
+        </div>
+        <p>可以用兩根木棍製作起火器。</p>
+<h5>篝火</h5>
+<p>With a firestarter, it is now possible to make a <span style="color:#3E8A00;">Firepit</span>. In order to make one, you will need one <span style="color:#3E8A00;">log</span>, three <span style="color:#3E8A00;">sticks</span>, and optionally up to five pieces of <span style="color:#3E8A00;">kindling</span>. Kindling can be items such as paper products, straw, or pinecones, and will increase the chance of successfully creating a firepit by 10 percent per item used. Throw (<span style="color:#b0b;">Q</span>) all the items on the ground, on the same block. Then use the firestarter on the block with the items floating above it.</p>
+<h5></h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="請在遊戲中查閱以預覽該多方塊結構。">多方塊結構</span></p>
+        </div>
+        <p>如果成功的話，就能建立一個篝火。</p>
+<p>再次與篝火互動就可以開啟篝火介面。螢幕的左側是四個<span style="color:#3E8A00;">燃料</span>槽。將原木、泥炭、或木棍捆之類的可燃物放置在最上面那格就能將它們新增到篝火裡了。篝火會先燃燒最下面那格的燃料。左側的刻度尺對應了篝火目前的<span style="color:#3E8A00;">溫度</span>。螢幕右側的格子則可以放置需要<a href="../mechanics/heating.html">加熱</a>的物品。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image6.png" alt="tfc:textures/gui/book/gui/firepit.png">
+<div style="text-align: center;"><p>篝火介面</p>
+</div>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="../../_images/placeholder_64.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="火把" class="crafting-recipe-item-tooltip"></span>
+                <p class="crafting-recipe-item-count">2</p>
+                <img class="recipe-item" src="..\..\_images\item18.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>暖****</p>
+        </div>
+        <p>許多有用的物品可以在篝火中加熱製作。例如加熱木棍就可以做成兩根<span style="color:#3E8A00;">火把</span>。注意！放置在世界中的火把是會燃盡的，但好在你可以用<span style="color:#3E8A00;">起火器</span>或其他<span style="color:#3E8A00;">火把</span>重新點燃它們。</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="生鱈魚" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item19.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="熟鱈魚" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item20.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>熱****</p>
+        </div>
+        <p>篝火還可以用來<span style="color:#3E8A00;">加熱食物</span>。生肉和麵團之類的東西都可以在篝火中燒製以延長其保質期。有關保質期的知識請參考<a href="../mechanics/decay.html">這一章節</a>。</p>
+<p>篝火可以隨時透過手持<span style="color:#3E8A00;">鏟子</span>點選來熄滅。<br/>
+<br/>
+可以將一些其他物品放置在篝火之上來改變其功能。放置<span style="color:#3E8A00;">鍛鐵烤架</span>可將篝火變成<a href="../mechanics/grill.html">燒烤架</a>，可一次加熱五個物品。放置<span style="color:#3E8A00;">陶鍋</span>則會將篝火變成<a href="../mechanics/pot.html">大鍋</a>，可用來煲湯。要移除篝火上的額外裝置，可以按住<span style="color:#b0b;">Shift</span>並按下<span style="color:#b0b;">右鍵</span>。千萬注意不要移除還未冷卻的烤架和鍋！</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="請在遊戲中查閱以預覽該多方塊結構。">多方塊結構</span></p>
+        </div>
+        <p>一個篝火，添加了烤架或鍋。</p>
+<p>Firepit fuels have different levels of purity. Adding impure fuels to fires makes them more smokey. If the fire burns very impurely, smoke will start to fly very high in the air. The most pure fuels are logs, with pine being the least pure log. Fuels like pinecones and fallen leaves do not hot enough to do much cooking, and are very impure.</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '';
+      window._CURRENT_LANG = 'zh_tw';
+    </script>
+
+    <script src="/static/metadata.js"></script>
+    <script src="/static/tooltips.js"></script>
+    <script src="/static/versions.js"></script>
+  </body>
+</html>

@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="勘探 | TFC Field Guide" />
+    <meta name="description" content="勘探" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="勘探 | TFC Field Guide" />
+    <meta property="og:description" content="勘探" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/item207.png" />
+
+    <title>勘探 | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">群巒傳說 手冊</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> 版本 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 繁體中文(台灣)
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/mechanics\prospecting.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\prospecting.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\prospecting.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\prospecting.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\prospecting.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\prospecting.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\prospecting.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\prospecting.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/mechanics\prospecting.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>目錄</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">主頁</a></li>
+            <li><a href="../the_world/">這個世界</a></li>
+<li><a href="../getting_started/">新手入門</a></li>
+<li><a href="../mechanics/">進階內容</a><ul><li><a href="./advanced_building_materials.html">高階建築材料</a></li>
+<li><a href="./animal_husbandry.html">畜牧業</a></li>
+<li><a href="./anvils.html">砧</a></li>
+<li><a href="./aqueducts.html">水渠</a></li>
+<li><a href="./armor.html">盔甲</a></li>
+<li><a href="./armor_trims.html">Armor Trims</a></li>
+<li><a href="./barrels.html">大桶</a></li>
+<li><a href="./bellows.html">風箱</a></li>
+<li><a href="./blast_furnace.html">建造高爐</a></li>
+<li><a href="./bloomery.html">鍛鐵爐</a></li>
+<li><a href="./bowls.html">Bowls</a></li>
+<li><a href="./bread.html">烤麵包</a></li>
+<li><a href="./charcoal_forge.html">木炭爐</a></li>
+<li><a href="./charcoal_pit.html">木炭坑</a></li>
+<li><a href="./chisel.html">鑿子</a></li>
+<li><a href="./composter.html">Composter</a></li>
+<li><a href="./crankshaft.html">Crankshafts</a></li>
+<li><a href="./crops.html">農作物</a></li>
+<li><a href="./crucible.html">坩堝</a></li>
+<li><a href="./dairy.html">乳製品</a></li>
+<li><a href="./damage_types.html">傷害型別</a></li>
+<li><a href="./decay.html">食物保鮮</a></li>
+<li><a href="./dye.html">Dye</a></li>
+<li><a href="./fertilizers.html">堆肥</a></li>
+<li><a href="./fire_clay.html">耐火粘土</a></li>
+<li><a href="./fishing.html">釣魚</a></li>
+<li><a href="./flux.html">助焊劑</a></li>
+<li><a href="./gems.html">寶石</a></li>
+<li><a href="./glassworking.html">Glassworking</a></li>
+<li><a href="./glassworking_applications.html">Glass Products</a></li>
+<li><a href="./grill.html">篝火燒烤</a></li>
+<li><a href="./heating.html">加熱</a></li>
+<li><a href="./hydration.html">保持土壤溼潤</a></li>
+<li><a href="./jarring.html">Jarring</a></li>
+<li><a href="./lamps.html">燈</a></li>
+<li><a href="./leather_making.html">制皮術</a></li>
+<li><a href="./lighting.html">光源</a></li>
+<li><a href="./mechanical_power.html">Mechanical Power</a></li>
+<li><a href="./minecarts.html">Minecarts</a></li>
+<li><a href="./panning.html">淘金</a></li>
+<li><a href="./papermaking.html">Papermaking</a></li>
+<li><a href="./pets.html">寵物</a></li>
+<li><a href="./pot.html">篝火大鍋</a></li>
+<li><a href="./powderkegs.html">火藥桶</a></li>
+<li><a href="./prospecting.html">勘探</a></li>
+<li><a href="./pumps.html">Pumps</a></li>
+<li><a href="./quern.html">手推磨</a></li>
+<li><a href="./salad.html">沙拉</a></li>
+<li><a href="./sandwiches.html">三明治</a></li>
+<li><a href="./scribing_table.html">命名臺</a></li>
+<li><a href="./sewing_table.html">Sewing Table</a></li>
+<li><a href="./sluices.html">洗礦槽</a></li>
+<li><a href="./steel.html">鍊鋼</a></li>
+<li><a href="./support_beams.html">Support Beams & Collapses</a></li>
+<li><a href="./weaving.html">札札弄機杼</a></li>
+<li><a href="./wooden_buckets.html">木桶</a></li></ul></li>
+<li><a href="../firmalife/">(Addon) Firmalife擴充套件模組</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">進階內容</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">勘探</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\item207.png" alt="勘探" title="鍛鐵勘礦鎬" /><span>勘探</span>
+        </h1>
+                <p>你還記得你是在哪裡撿到那些<a href="../getting_started/finding_ores.html">小礦粒</a>的，對吧？尋找更多礦石需要花費大量精力來勘探和開採。現在，你應該已經通讀<a href="../the_world/ores_and_minerals.html">礦石和礦物</a>這一章節。你應該明白，如果你在尋找特定的礦石，則必須先找到它生成的岩石型別——不論是就在你家門口，或是千里之外。</p>
+<p>當僅靠撿拾小礦粒不能滿足你的發展需要時就應考慮開始勘礦了。<br/>
+</p>
+<ul>
+	<li>小礦粒只會生成在礦脈水平 15 格以內，垂直 35 格以內的地表上。當地表上有一片礦粒時，它們的幾何中心的正下方很可能就有一支礦脈。</li>
+	<li>有些時候，礦石也會暴露在斷崖或水底，這種礦脈就很好發現了。</li>
+</ul>
+<a class="anchor" id="propick"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="銅勘礦鎬">
+                <img src="..\..\_images\item208.png" alt="勘礦鎬" />
+            </span>
+            <h5>勘礦鎬</h5>
+        </div>
+        <p>如果你挖了好久都沒有找到想找的礦石或礦物（礦物不會生成礦粒），那麼就是時候做一把<span style="color:#3E8A00;">勘礦鎬</span>了。勘礦鎬會搜尋點選的塊中心 25x25x25 的區域，並報告所找到礦石的數量和型別。</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image26.png" alt="Recipe: tfc:clay_knapping/propick_head_mold">
+        </div>
+    </div>
+</div>
+<p>你可以用粘土按上圖<a href="../getting_started/pottery.html">塑形</a>成一個未燒製的勘礦鎬頭模具。</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="未燒製的勘礦鎬頭模具" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item209.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="勘礦鎬頭模具" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item210.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-yellow">
+            <p>黃白****</p>
+        </div>
+        <p>模具<a href="../getting_started/pottery.html">塑形</a>完之後還需要<a href="../mechanics/heating.html">燒製</a>。<br/>
+<br/>
+將液態金屬倒入到燒製好的模具中就能<a href="../getting_started/finding_ores.html#casting">鑄造</a>出勘礦鎬了。</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="鍛鐵錠" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item211.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="鍛鐵勘礦鎬頭" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item212.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>第三級</p>
+        </div>
+        <p>勘礦鎬頭也可以在<a href="../mechanics/anvils.html">砧</a>上使用任何可以製造工具的金屬<span style="color:#3E8A00;">錠</span><a href="../mechanics/anvils.html#working">鍛造</a>而成。<br/>
+<br/>
+最後用木棍和工具頭在合成欄合成就能做出勘礦鎬了。</p>
+<p>勘礦鎬說有礦就是有礦，它說沒礦也有可能有礦。更高等級的工具會降低甚至完全消除誤報的機率。<br/>
+<br/>
+用同一把勘礦鎬點選同一個方塊不會改變報告的結果。<br/>
+<br/>
+如果在勘礦鎬的周圍有多種礦物，它只會選擇其中一種報告。</p>
+<p>勘礦鎬會報告以下幾種結果之一：<br/>
+</p>
+<ul>
+	<li>沒發現什麼有意思的。（可能是假陰性）</li>
+	<li>發現痕量</li>
+	<li>發現少量</li>
+	<li>發現中量</li>
+	<li>發現大量</li>
+	<li>發現巨量</li>
+</ul><p><br/>
+發現巨量表明至少有 80 個方塊。</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '';
+      window._CURRENT_LANG = 'zh_tw';
+    </script>
+
+    <script src="/static/metadata.js"></script>
+    <script src="/static/tooltips.js"></script>
+    <script src="/static/versions.js"></script>
+  </body>
+</html>

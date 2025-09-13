@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Строительные материалы | TFC Field Guide" />
+    <meta name="description" content="Строительные материалы" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="Строительные материалы | TFC Field Guide" />
+    <meta property="og:description" content="Строительные материалы" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/" />
+
+    <title>Строительные материалы | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">Справочник TerraFirmaCraft</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Версия 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> Русский
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/getting_started\building_materials.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\building_materials.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\building_materials.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\building_materials.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\building_materials.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\building_materials.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\building_materials.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\building_materials.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/getting_started\building_materials.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Содержание</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Главная</a></li>
+            <li><a href="../the_world/">Мир</a></li>
+<li><a href="../getting_started/">Начало работы</a><ul><li><a href="./introduction.html">Введение</a></li>
+<li><a href="./firepit.html">Ямы с огнём</a></li>
+<li><a href="./pottery.html">Гончарное дело</a></li>
+<li><a href="./pit_kiln.html">Земляные печи</a></li>
+<li><a href="./finding_ores.html">Руды, Металл и литьё</a></li>
+<li><a href="./primitive_alloys.html">Примитивные сплавы</a></li>
+<li><a href="./primitive_anvils.html">Примитивные наковальни</a></li>
+<li><a href="./building_materials.html">Строительные материалы</a></li>
+<li><a href="./a_place_to_sleep.html">Место для сна</a></li>
+<li><a href="./size_and_weight.html">Размер и вес</a></li>
+<li><a href="./food_and_water.html">Еда и вода</a></li></ul></li>
+<li><a href="../mechanics/">Продвинутая механика</a></li>
+<li><a href="../firmalife/">(Дополнение) Firmalife</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">Начало работы</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Строительные материалы</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">Строительные материалы</h1>
+                <p>На ранних этапах игры строительство может быть сложной задачей, поскольку многие прочные строительные блоки требуют металлических инструментов для их получения. Однако, есть несколько строительных блоков, которые можно получить с помощью только каменных инструментов.<br/>
+<br/>
+Больше <a href="../mechanics/advanced_building_materials.html">строительных блоков</a> доступно с металлическими инструментами.</p>
+<h5>Содержание</h5>
+<p></p>
+<ol>
+	<li><a href="../getting_started/building_materials.html#thatch">Соломенная крыша</a></li>
+	<li><a href="../getting_started/building_materials.html#mud_bricks">Глиняные кирпичи</a></li>
+	<li><a href="../getting_started/building_materials.html#wattle_and_daub">Плетень и глина</a></li>
+	<li><a href="../getting_started/building_materials.html#clay_and_peat">Глиняные блоки и торф</a></li>
+</ol><p></p>
+<a class="anchor" id="thatch"></a><h5>Соломенная крыша</h5>
+<p>Имея всего лишь <a href="../getting_started/introduction.html#knife">Каменный нож</a>, вы можете получить <span style="color:#3E8A00;">Солому</span>, разбивая блоки, похожие на растения. Это может быть использовано для создания очень простого строительного материала: <span style="color:#3E8A00;">Соломенная крыша</span>. Соломенная крыша - это легкий блок, который не подвержен гравитации, однако игроки и другие сущности могут проходить сквозь него! Его также можно переработать обратно в <span style="color:#3E8A00;">Солому</span>, если это необходимо.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Солома" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item2.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Солома" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item2.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Солома" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item2.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Солома" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item2.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Сноп соломы" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Сноп соломы" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Солома" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">4</p>
+                    <img class="recipe-item" src="..\..\_images\item2.png" />
+                </div>
+            </div>
+        </div>
+        <a class="anchor" id="mud_bricks"></a><h5>Глиняные кирпичи</h5>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Чернозёмная грязь" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item4.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Солома" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item2.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Чернозёмные грязевые кирпичи" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">4</p>
+                    <img class="recipe-item" src="..\..\_images\item3.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">Глина</span> может быть найдена на земле, под реками и озерами, или в пятнах на низких болотистых высотах. С небольшим количеством <span style="color:#3E8A00;">Соломы</span>, её можно превратить в Мокрые глиняные кирпичи.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Их можно разместить на земле в сухом месте, и через день они затвердеют в <span style="color:#3E8A00;">Глиняные кирпичи</span>.</p>
+<h5> </h5>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Чернозёмный саманный кирпич" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item6.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Чернозёмный саманный кирпич" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item6.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Чернозёмный саманный кирпич" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item6.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Чернозёмный саманный кирпич" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item6.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Чернозёмные саманные кирпичи" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item5.png" />
+                </div>
+            </div>
+        </div>
+        <p>Эти высушенные глиняные кирпичи затем можно собрать в <span style="color:#3E8A00;">Блоки из глиняных кирпичей</span>. Их также можно сделать в виде <span style="color:#3E8A00;">Лестниц</span>, <span style="color:#3E8A00;">Плит</span> или <span style="color:#3E8A00;">Стен</span>, если это желательно.</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block1.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>Все различные виды глиняных кирпичей.</p>
+</div><a class="anchor" id="wattle_and_daub"></a><h5>Плетень и глина</h5>
+<p><span style="color:#3E8A00;">Плетень</span> и <span style="color:#3E8A00;">Глина</span> - это универсальный строительный и декоративный блок.<br/>
+<br/>
+<span style="color:#3E8A00;">Плетень</span> можно изготовить и разместить, однако он ломается и позволяет игрокам и мобам проходить сквозь него. Его можно укрепить с помощью <span style="color:#3E8A00;">Глины</span>, чтобы сделать его твердым.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #minecraft:logs" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item7.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #minecraft:logs" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item7.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Обрешётка" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">6</p>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>Чтобы сделать <span style="color:#3E8A00;">Плетень</span> твердым, сначала его нужно сплести, что требует добавления палок к структуре.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Солома" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item2.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Комок глины" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item9.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #minecraft:dirt" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item10.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Глиняно-соломенная смесь" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">2</p>
+                    <img class="recipe-item" src="..\..\_images\item8.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Комок глины" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item9.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:mud" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item11.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Глиняно-соломенная смесь" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">2</p>
+                    <img class="recipe-item" src="..\..\_images\item8.png" />
+                </div>
+            </div>
+        </div>
+        <p></p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image1.png" alt="tfc:textures/gui/book/tutorial/wattle_weave.png">
+<div style="text-align: center;"><p>Для <span style="color:#3E8A00;">плетения</span> плетня требуется четыре палки.</p>
+</div><p>В любое время палки можно добавлять по диагонали, а также сверху и снизу. Держите одну <span style="color:#3E8A00;">Палку</span> в руке и <span style="color:#b0b;">ПКМ</span> ее, чтобы добавить палку. Измените часть плетня, к которой вы добавляете палку, выбрав другую сторону поверхности.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image2.png" alt="tfc:textures/gui/book/tutorial/wattle_add_stick.png">
+<div style="text-align: center;"><p>Добавление палок к плетню.</p>
+</div>
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image3.png" alt="tfc:textures/gui/book/tutorial/wattle_add_daub.png">
+<div style="text-align: center;"><p>Использование <span style="color:#3E8A00;">Глины</span> на <span style="color:#3E8A00;">Сплетенном плетне</span> создает твердый блок.</p>
+</div>
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image4.png" alt="tfc:textures/gui/book/tutorial/wattle_stained.png">
+<div style="text-align: center;"><p>Затем его можно <span style="color:#3E8A00;">окрасить</span>, используя <a href="../mechanics/dye.html">Краситель</a> на нем.</p>
+</div><a class="anchor" id="clay_and_peat"></a><h5>Глиняные блоки и торф</h5>
+<p>Глина, добытая из земли, может быть превращена в глиняные блоки. Когда они размещены и снова выкопаны, они превращаются обратно в глину. Несмотря на непривлекательный вид, их легко получить.<br/>
+<br/>
+Торф встречается в мире пятнами вдоль водоемов и может быть добыт каменными инструментами. На нем могут расти некоторые растения.<br/>
+<br/>
+Однако, торф очень легко воспламеняется.</p>
+<h5>Глиняные блоки</h5>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Комок глины" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item9.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Комок глины" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item9.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Комок глины" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item9.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Комок глины" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item9.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Глина" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item12.png" />
+                </div>
+            </div>
+        </div>
+        
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> Документация API
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '';
+      window._CURRENT_LANG = 'ru_ru';
+    </script>
+
+    <script src="/static/metadata.js"></script>
+    <script src="/static/tooltips.js"></script>
+    <script src="/static/versions.js"></script>
+  </body>
+</html>

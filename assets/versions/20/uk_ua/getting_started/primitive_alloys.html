@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Примітивні сплави | TFC Field Guide" />
+    <meta name="description" content="Примітивні сплави" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="Примітивні сплави | TFC Field Guide" />
+    <meta property="og:description" content="Примітивні сплави" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/" />
+
+    <title>Примітивні сплави | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">Польовий посібник TerraFirmaCraft</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Версія 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> Українська мова
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/getting_started\primitive_alloys.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\primitive_alloys.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\primitive_alloys.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\primitive_alloys.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\primitive_alloys.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\primitive_alloys.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\primitive_alloys.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\primitive_alloys.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/getting_started\primitive_alloys.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Зміст</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Зміст</a></li>
+            <li><a href="../the_world/">Світ</a></li>
+<li><a href="../getting_started/">Починаємо</a><ul><li><a href="./introduction.html">Вступ</a></li>
+<li><a href="./firepit.html">Вогонь та багаття</a></li>
+<li><a href="./pottery.html">Гончарство</a></li>
+<li><a href="./pit_kiln.html">Ямна піч</a></li>
+<li><a href="./finding_ores.html">Руда, метал, виливка</a></li>
+<li><a href="./primitive_alloys.html">Примітивні сплави</a></li>
+<li><a href="./primitive_anvils.html">Примітивне ковадло</a></li>
+<li><a href="./building_materials.html">Будівельні матеріали</a></li>
+<li><a href="./a_place_to_sleep.html">Місце для відпочинку</a></li>
+<li><a href="./size_and_weight.html">Розмір та вага</a></li>
+<li><a href="./food_and_water.html">Їжа та вода</a></li></ul></li>
+<li><a href="../mechanics/">Розширена механіка</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">Починаємо</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Примітивні сплави</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">Примітивні сплави</h1>
+                <p><span style="color:#3E8A00;">Сплави</span> - це спосіб змішування двох або більше металів разом для створення нового, більш міцного матеріалу. На початку гри - мідь є корисним металом для створення інструменту. Наступний рівень металу є одним із трьох типів <span style="color:#3E8A00;">бронзи</span>. Сплав складається зі складових  <span style="color:#3E8A00;">металів</span>, кожен з яких повинен задовольняти певний відсоток від загального цілого.</p>
+<p>Один метод, за допомогою якого сплави можуть бути виготовлені під час ранньої гри, полягає в використанні <span style="color:#3E8A00;">горщика</span>. Процес дуже схожий на <a href="../getting_started/finding_ores.html#casting">лиття</a>. Однак замість того, щоб використовувати лише один метал, помісти достатню кількість шматків руди всередину горщика в правильному співвідношенні, щоб утворити суміш відомого сплаву.</p>
+<p>Наприклад, щоб створити 1000 mB олов'яної <span style="color:#3E8A00;">бронзи</span> (дивись праворуч), тобі потрібно від 880 до 920 mB <span style="color:#3E8A00;">міді</span>, та від 80 до 120 mB <span style="color:#3E8A00;">олова</span>.<br/>
+На наступних сторінках є рецепти трьох бронзових сплавів. З кожної бронзи можна виготовити інструменти, <a href="../mechanics/armor.html">обладунки</a>, та інші предмети. Вони дещо відрізняються, тому отримані інструменти матимуть різну довговічність, ефективність і шкоду від атаки.</p>
+
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Злиток олов'яної бронзи">
+                <img src="..\..\_images\item27.png" alt="Олов'яна бронза" />
+            </span>
+            <h5>Олов'яна бронза</h5>
+        </div>
+        <p><br/>
+<strong>Вимоги:</strong><br/>
+</p>
+<ul>
+	<li>88 - 92 % : <span style="color:#3E8A00;">мідь</span></li>
+	<li>8 - 12 % : <span style="color:#3E8A00;">олово</span></li>
+</ul><p><br/>
+</p>
+
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Злиток бісмутової бронзи">
+                <img src="..\..\_images\item28.png" alt="Бісмутова бронза" />
+            </span>
+            <h5>Бісмутова бронза</h5>
+        </div>
+        <p><br/>
+<strong>Вимоги:</strong><br/>
+</p>
+<ul>
+	<li>20 - 30 % : <span style="color:#3E8A00;">цинк</span></li>
+	<li>50 - 65 % : <span style="color:#3E8A00;">мідь</span></li>
+	<li>10 - 20 % : <span style="color:#3E8A00;">бісмут</span></li>
+</ul><p><br/>
+</p>
+
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Злиток темної бронзи">
+                <img src="..\..\_images\item29.png" alt="Чорна бронза" />
+            </span>
+            <h5>Чорна бронза</h5>
+        </div>
+        <p><br/>
+<strong>Вимоги:</strong><br/>
+</p>
+<ul>
+	<li>50 - 70 % : <span style="color:#3E8A00;">мідь</span></li>
+	<li>10 - 25 % : <span style="color:#3E8A00;">срібло</span></li>
+	<li>10 - 25 % : <span style="color:#3E8A00;">золото</span></li>
+</ul><p><br/>
+</p>
+<h5>Utility Alloys</h5>
+<p>Other alloys are not suitable for creating tools. These are <span style="color:#3E8A00;">Brass</span>, <span style="color:#3E8A00;">Rose Gold</span>, and <span style="color:#3E8A00;">Sterling Silver</span>.<br/>
+<br/>
+<span style="color:#3E8A00;">Brass</span> is a useful alloy for all sorts of contraptions, including <a href="../mechanics/mechanical_power.html">Mechanical Power</a>.<br/>
+<br/>
+<span style="color:#3E8A00;">Rose Gold</span> and <span style="color:#3E8A00;">Sterling Silver</span> are used for crafting <a href="../mechanics/steel.html#red_steel">Red Steel</a> and <a href="../mechanics/steel.html#blue_steel">Blue Steel</a>.</p>
+<a class="anchor" id="brass"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Злиток латуні">
+                <img src="..\..\_images\item30.png" alt="Brass" />
+            </span>
+            <h5>Brass</h5>
+        </div>
+        <p><br/>
+<strong>Вимоги:</strong><br/>
+</p>
+<ul>
+	<li>88 - 92 % : <span style="color:#3E8A00;">мідь</span></li>
+	<li>8 - 12 % : <span style="color:#3E8A00;">олово</span></li>
+</ul><p><br/>
+</p>
+
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Злиток рожевого золота">
+                <img src="..\..\_images\item31.png" alt="Rose Gold" />
+            </span>
+            <h5>Rose Gold</h5>
+        </div>
+        <p><br/>
+<strong>Requirements:</strong><br/>
+</p>
+<ul>
+	<li>15 - 30 % : <span style="color:#3E8A00;">Copper</span></li>
+	<li>70 - 85 % : <span style="color:#3E8A00;">Gold</span></li>
+</ul><p><br/>
+</p>
+
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Злиток прогрітого срібла">
+                <img src="..\..\_images\item32.png" alt="Sterling Silver" />
+            </span>
+            <h5>Sterling Silver</h5>
+        </div>
+        <p><br/>
+<strong>Requirements:</strong><br/>
+</p>
+<ul>
+	<li>20 - 40 % : <span style="color:#3E8A00;">Copper</span></li>
+	<li>60 - 80 % : <span style="color:#3E8A00;">Silver</span></li>
+</ul><p><br/>
+</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Документація
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '';
+      window._CURRENT_LANG = 'uk_ua';
+    </script>
+
+    <script src="/static/metadata.js"></script>
+    <script src="/static/tooltips.js"></script>
+    <script src="/static/versions.js"></script>
+  </body>
+</html>

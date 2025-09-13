@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="(Addon) Firmalife | TFC Field Guide" />
+    <meta name="description" content="(Addon) Firmalife" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="(Addon) Firmalife | TFC Field Guide" />
+    <meta property="og:description" content="(Addon) Firmalife" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/splash_120.png" />
+
+    <title>(Addon) Firmalife | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft Field Guide</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Version 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 日本語
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/firmalife/" class="dropdown-item">English</a>
+<a href="../../ja_jp/firmalife/" class="dropdown-item">日本語</a>
+<a href="../../pt_br/firmalife/" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/firmalife/" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/firmalife/" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/firmalife/" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/firmalife/" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/firmalife/" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/firmalife/" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Contents</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Index</a></li>
+            <li><a href="../the_world/">世界</a></li>
+<li><a href="../getting_started/">はじめに</a></li>
+<li><a href="../mechanics/">高度な加工</a></li>
+<li><a href="../firmalife/">(Addon) Firmalife</a><ul><li><a href="./differences_from_tfc.html">TFCとの違い</a></li>
+<li><a href="./cheese.html">チーズ</a></li>
+<li><a href="./climate_station.html">空調機</a></li>
+<li><a href="./cellar.html">貯蔵庫</a></li>
+<li><a href="./food_shelves.html">食品棚</a></li>
+<li><a href="./hangers.html">吊るし棚</a></li>
+<li><a href="./jarbnet.html">収納棚</a></li>
+<li><a href="./greenhouse.html">温室</a></li>
+<li><a href="./irrigation.html">温室を潤す</a></li>
+<li><a href="./planters.html">プランター</a></li>
+<li><a href="./beekeeping.html">養蜂</a></li>
+<li><a href="./stainless_steel.html">ステンレス鋼</a></li>
+<li><a href="./drying.html">乾燥</a></li>
+<li><a href="./smoking.html">燻製</a></li>
+<li><a href="./ovens.html">オーブン</a></li>
+<li><a href="./oven_appliances.html">オーブン機器</a></li>
+<li><a href="./bread.html">パン</a></li>
+<li><a href="./more_fertilizer.html">肥料オプション</a></li>
+<li><a href="./mixing_bowl.html">ミキシングボウル</a></li>
+<li><a href="./herbs_and_spices.html">ハーブとスパイス</a></li>
+<li><a href="./fruit_trees.html">Firmalife フルーツ</a></li>
+<li><a href="./berry_bushes.html">ベリーの茂み</a></li>
+<li><a href="./chocolate.html">チョコレート</a></li>
+<li><a href="./wine.html">ワイン作り</a></li>
+<li><a href="./wine_consumption.html">ワインの消費</a></li>
+<li><a href="./pie.html">Pie</a></li>
+<li><a href="./pizza.html">Pizza</a></li>
+<li><a href="./pasta.html">Pasta</a></li>
+<li><a href="./burritos_and_tacos.html">Burritos and Tacos</a></li></ul></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                <li class="breadcrumb-item active" aria-current="page">(Addon) Firmalife</li>
+            
+            </ol>
+          </nav>
+
+          
+                <h1 class="mb-4">(Addon) Firmalife</h1>
+                <p><p>Firmalifeアドオンのすべて</p>
+</p>
+                <div class="row row-cols-1 row-cols-md-3 g-3">
+                    
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image111.png" alt="TFCとの違い" />
+            <a href="differences_from_tfc.html">TFCとの違い</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image109.png" alt="チーズ" />
+            <a href="cheese.html">チーズ</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="空調機" />
+            <a href="climate_station.html">空調機</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="貯蔵庫" />
+            <a href="cellar.html">貯蔵庫</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\placeholder_16.png" alt="食品棚" />
+            <a href="food_shelves.html">食品棚</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\placeholder_16.png" alt="吊るし棚" />
+            <a href="hangers.html">吊るし棚</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\placeholder_16.png" alt="収納棚" />
+            <a href="jarbnet.html">収納棚</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="温室" />
+            <a href="greenhouse.html">温室</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="温室を潤す" />
+            <a href="irrigation.html">温室を潤す</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="プランター" />
+            <a href="planters.html">プランター</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="養蜂" />
+            <a href="beekeeping.html">養蜂</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item338.png" alt="ステンレス鋼" />
+            <a href="stainless_steel.html">ステンレス鋼</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="乾燥" />
+            <a href="drying.html">乾燥</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image118.png" alt="燻製" />
+            <a href="smoking.html">燻製</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\placeholder_16.png" alt="オーブン" />
+            <a href="ovens.html">オーブン</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="オーブン機器" />
+            <a href="oven_appliances.html">オーブン機器</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image50.png" alt="パン" />
+            <a href="bread.html">パン</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="肥料オプション" />
+            <a href="more_fertilizer.html">肥料オプション</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="ミキシングボウル" />
+            <a href="mixing_bowl.html">ミキシングボウル</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item304.png" alt="ハーブとスパイス" />
+            <a href="herbs_and_spices.html">ハーブとスパイス</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item300.png" alt="Firmalife フルーツ" />
+            <a href="fruit_trees.html">Firmalife フルーツ</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\placeholder_16.png" alt="ベリーの茂み" />
+            <a href="berry_bushes.html">ベリーの茂み</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image110.png" alt="チョコレート" />
+            <a href="chocolate.html">チョコレート</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image119.png" alt="ワイン作り" />
+            <a href="wine.html">ワイン作り</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image120.png" alt="ワインの消費" />
+            <a href="wine_consumption.html">ワインの消費</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image116.png" alt="Pie" />
+            <a href="pie.html">Pie</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image117.png" alt="Pizza" />
+            <a href="pizza.html">Pizza</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image115.png" alt="Pasta" />
+            <a href="pasta.html">Pasta</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image108.png" alt="Burritos and Tacos" />
+            <a href="burritos_and_tacos.html">Burritos and Tacos</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+                </div>
+            
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '';
+      window._CURRENT_LANG = 'ja_jp';
+    </script>
+
+    <script src="/static/metadata.js"></script>
+    <script src="/static/tooltips.js"></script>
+    <script src="/static/versions.js"></script>
+  </body>
+</html>

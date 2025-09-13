@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="养蜂 | TFC Field Guide" />
+    <meta name="description" content="养蜂" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="养蜂 | TFC Field Guide" />
+    <meta property="og:description" content="养蜂" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/placeholder_64.png" />
+
+    <title>养蜂 | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">群峦传说 手册</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> 版本 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 简体中文(中国大陆)
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/firmalife\beekeeping.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/firmalife\beekeeping.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/firmalife\beekeeping.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/firmalife\beekeeping.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/firmalife\beekeeping.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/firmalife\beekeeping.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/firmalife\beekeeping.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/firmalife\beekeeping.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/firmalife\beekeeping.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>目录</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">主页</a></li>
+            <li><a href="../the_world/">这个世界</a></li>
+<li><a href="../getting_started/">新手入门</a></li>
+<li><a href="../mechanics/">进阶内容</a></li>
+<li><a href="../firmalife/">(Addon) Firmalife扩展模组</a><ul><li><a href="./differences_from_tfc.html">与群峦传说本体的区别</a></li>
+<li><a href="./cheese.html">奶酪</a></li>
+<li><a href="./climate_station.html">气象站</a></li>
+<li><a href="./cellar.html">地窖</a></li>
+<li><a href="./food_shelves.html">食物橱架</a></li>
+<li><a href="./hangers.html">吊架</a></li>
+<li><a href="./jarbnet.html">罐头柜</a></li>
+<li><a href="./greenhouse.html">温室</a></li>
+<li><a href="./irrigation.html">灌溉</a></li>
+<li><a href="./planters.html">种植盆</a></li>
+<li><a href="./beekeeping.html">养蜂</a></li>
+<li><a href="./stainless_steel.html">不锈钢</a></li>
+<li><a href="./drying.html">烘干</a></li>
+<li><a href="./smoking.html">熏制</a></li>
+<li><a href="./ovens.html">烤炉</a></li>
+<li><a href="./oven_appliances.html">烤箱用具</a></li>
+<li><a href="./bread.html">面包</a></li>
+<li><a href="./more_fertilizer.html">更多的肥料获取途径</a></li>
+<li><a href="./mixing_bowl.html">搅拌碗</a></li>
+<li><a href="./herbs_and_spices.html">草药和香料</a></li>
+<li><a href="./fruit_trees.html">Firmalife中的水果</a></li>
+<li><a href="./berry_bushes.html">浆果丛</a></li>
+<li><a href="./chocolate.html">巧克力</a></li>
+<li><a href="./wine.html">Winemaking</a></li>
+<li><a href="./wine_consumption.html">Wine Consumption</a></li>
+<li><a href="./pie.html">Pie</a></li>
+<li><a href="./pizza.html">Pizza</a></li>
+<li><a href="./pasta.html">Pasta</a></li>
+<li><a href="./burritos_and_tacos.html">Burritos and Tacos</a></li></ul></li>
+<li><a href="../firmaciv/">(Addon) 群峦传说：航海文明</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">(Addon) Firmalife扩展模组</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">养蜂</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="../../_images/placeholder_64.png" alt="养蜂" title="木制蜂箱" /><span>养蜂</span>
+        </h1>
+                <p><span style="color:#3E8A00;">蜂箱</span> 是用来养蜂的地方. 蜂箱需要 <span style="color:#3E8A00;">蜂箱框架</span> 在蜂箱里以让蜜蜂存活. 从活跃的蜂箱中移除框架会导致蜜蜂攻击你，除非是在晚上,或是有一个 <span style="color:#3E8A00;">火堆</span> 在蜂箱下. 蜂箱有传粉的作用. 在作用到60朵花后，增益会减少.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="巢脾" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="干草块" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="巢脾" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="木制蜂箱" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="巢脾" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>蜜蜂对周围五个方块半径内有效. 如果蜂箱周围至少有10朵花, 那就有几率在一个空的框架中有 <span style="color:#3E8A00;">蜂王</span>. 在蜂箱周围的粒子效果会突出这一点。在一个蜂箱中放入4个框架将大大增加蜜蜂进入的机会。</p>
+<p>如果一个蜂箱有两个带蜂王的巢脾, 加上一个空的巢脾, 它们就有可能<span style="color:#3E8A00;">配种</span>并在空的巢脾上产生一个新的蜂王. 新的蜂王会继承它的祖先的<span style="color:#3E8A00;">能力</span>. <span style="color:#3E8A00;">能力</span>是蜜蜂拥有的一些不同特点, 这决定了它们如何影响周围的环境. 这些能力有1-10的等级, 其中10是最大的.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="蜂蜜罐头" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item266.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="生蜂蜜" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item265.png" />
+                </div>
+            </div>
+        </div>
+        <p>蜜蜂还会生产 <span style="color:#3E8A00;">蜂蜜</span>. 使用 <span style="color:#b0b;">右键</span> 带有 <a href="../firmalife/jar.html">Empty Jar</a> 在看上去有蜂蜜的蜂箱上将会给你一个 <span style="color:#3E8A00;">蜂蜜罐</span>. 打开蜂蜜罐后，你将得到 <span style="color:#3E8A00;">生蜂蜜</span>, 一个 <span style="color:#3E8A00;">代糖</span> 品.</p>
+<p>在物品栏有<span style="color:#3E8A00;">刀</span>的情况下, 手持一个满的巢脾按<span style="color:#b0b;">右键</span>可以获得有用的<span style="color:#3E8A00;">蜂蜡</span>. 注意, 这个操作会杀死巢脾中的蜂王!</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="蜂蜡" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item268.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="防腐木材" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">8</p>
+                    <img class="recipe-item" src="..\..\_images\item267.png" />
+                </div>
+            </div>
+        </div>
+        <p>蜂蜡最重要的作用是制作<span style="color:#3E8A00;">防腐木材</span>.</p>
+<h5>养蜂提示</h5>
+<p></p>
+<ul>
+	<li>蜜蜂可以帮种植盆提供营养.</li>
+	<li>注意, 用刀刮蜂脾会牺牲蜂王!</li>
+	<li>把身体弄湿可以防止蜜蜂攻击你.</li>
+</ul>
+<h5>能力列表</h5>
+<p></p>
+<ul>
+	<li><span style="color:#3E8A00;">耐寒性</span>: 可以让蜜蜂在更低的温度下生产蜂蜜. 10级的耐寒性可以忍受-16°C的低温, 而1级的耐寒性可以忍受2°C的低温.</li>
+	<li><span style="color:#3E8A00;">生产力</span>: 提高蜂蜜生产的速度.</li>
+	<li><span style="color:#3E8A00;">突变体</span>: 提高配种时传给下一代的能力值的标准差..</li>
+</ul>
+<p></p>
+<ul>
+	<li><span style="color:#3E8A00;">生育能力</span>: 提高配种的可能性.</li>
+	<li><span style="color:#3E8A00;">作物亲和力</span>: 给农作物传递少量营养物质的可能性.</li>
+	<li><span style="color:#3E8A00;">自然修复</span>: 造成新的花或荷叶在蜂箱附近生成.</li>
+	<li><span style="color:#3E8A00;">冷静度</span>: 降低蜜蜂攻击你的可能性.</li>
+</ul>
+<p>具有高突变能力的蜜蜂将可能会换上 <span style="color:#3E8A00;">遗传疾病</span>. 患有遗传疾病的蜜蜂会将疾病传给后代，他们并不产蜜。</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '';
+      window._CURRENT_LANG = 'zh_cn';
+    </script>
+
+    <script src="/static/metadata.js"></script>
+    <script src="/static/tooltips.js"></script>
+    <script src="/static/versions.js"></script>
+  </body>
+</html>

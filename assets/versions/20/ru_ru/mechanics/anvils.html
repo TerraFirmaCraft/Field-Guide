@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Наковальни | TFC Field Guide" />
+    <meta name="description" content="Наковальни" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="Наковальни | TFC Field Guide" />
+    <meta property="og:description" content="Наковальни" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/placeholder_64.png" />
+
+    <title>Наковальни | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">Справочник TerraFirmaCraft</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Версия 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> Русский
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/mechanics\anvils.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\anvils.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\anvils.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\anvils.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\anvils.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\anvils.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\anvils.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\anvils.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/mechanics\anvils.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Содержание</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Главная</a></li>
+            <li><a href="../the_world/">Мир</a></li>
+<li><a href="../getting_started/">Начало работы</a></li>
+<li><a href="../mechanics/">Продвинутая механика</a><ul><li><a href="./advanced_building_materials.html">Продвинутые материалы</a></li>
+<li><a href="./animal_husbandry.html">Животноводство</a></li>
+<li><a href="./anvils.html">Наковальни</a></li>
+<li><a href="./aqueducts.html">Акведуки</a></li>
+<li><a href="./armor.html">Броня</a></li>
+<li><a href="./armor_trims.html">Отделка брони</a></li>
+<li><a href="./barrels.html">Бочки</a></li>
+<li><a href="./bellows.html">Меха</a></li>
+<li><a href="./blast_furnace.html">Доменная печь</a></li>
+<li><a href="./bloomery.html">Сыродутный горн</a></li>
+<li><a href="./bowls.html">Чаши</a></li>
+<li><a href="./bread.html">Хлеб</a></li>
+<li><a href="./charcoal_forge.html">Угольная кузница</a></li>
+<li><a href="./charcoal_pit.html">Угольная яма</a></li>
+<li><a href="./chisel.html">Долото</a></li>
+<li><a href="./composter.html">Компостер</a></li>
+<li><a href="./crankshaft.html">Коленчатые валы</a></li>
+<li><a href="./crops.html">Культуры</a></li>
+<li><a href="./crucible.html">Тигель</a></li>
+<li><a href="./dairy.html">Молочные продукты</a></li>
+<li><a href="./damage_types.html">Типы урона</a></li>
+<li><a href="./decay.html">Сохранение</a></li>
+<li><a href="./dye.html">Красители</a></li>
+<li><a href="./fertilizers.html">Удобрения</a></li>
+<li><a href="./fire_clay.html">Огнеупорная глина</a></li>
+<li><a href="./fishing.html">Рыбалка</a></li>
+<li><a href="./flux.html">Флюс</a></li>
+<li><a href="./gems.html">Драгоценные камни</a></li>
+<li><a href="./glassworking.html">Стеклоделие</a></li>
+<li><a href="./glassworking_applications.html">Стеклянные изделия</a></li>
+<li><a href="./grill.html">Кострище и гриль</a></li>
+<li><a href="./heating.html">Нагревание</a></li>
+<li><a href="./hydration.html">Поддержание увлажненности</a></li>
+<li><a href="./jarring.html">Заготовка в банках</a></li>
+<li><a href="./lamps.html">Лампы</a></li>
+<li><a href="./leather_making.html">Выделка кожи</a></li>
+<li><a href="./lighting.html">Источники света</a></li>
+<li><a href="./mechanical_power.html">Механическая энергия</a></li>
+<li><a href="./minecarts.html">Вагонетки</a></li>
+<li><a href="./panning.html">Промывка в лотке</a></li>
+<li><a href="./papermaking.html">Производство бумаги</a></li>
+<li><a href="./pets.html">Домашние животные</a></li>
+<li><a href="./pot.html">Кострище и котелок</a></li>
+<li><a href="./powderkegs.html">Пороховые бочки</a></li>
+<li><a href="./prospecting.html">Поиск месторождений</a></li>
+<li><a href="./pumps.html">Насосы</a></li>
+<li><a href="./quern.html">Жернов</a></li>
+<li><a href="./salad.html">Салаты</a></li>
+<li><a href="./sandwiches.html">Бутерброды</a></li>
+<li><a href="./scribing_table.html">Стол для письма</a></li>
+<li><a href="./sewing_table.html">Швейный стол</a></li>
+<li><a href="./sluices.html">Рудопромывочный желоб</a></li>
+<li><a href="./steel.html">Сталь</a></li>
+<li><a href="./support_beams.html">Опоры и обвалы</a></li>
+<li><a href="./weaving.html">Ткачество</a></li>
+<li><a href="./wooden_buckets.html">Деревянные ведра</a></li></ul></li>
+<li><a href="../firmalife/">(Дополнение) Firmalife</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">Продвинутая механика</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Наковальни</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="../../_images/placeholder_64.png" alt="Наковальни" title="Медная наковальня" /><span>Наковальни</span>
+        </h1>
+                <p>Наковальни являются важным инструментом, необходимым для металлообработки, поскольку они позволяют вам обрабатывать и сваривать металлические слитки в различные формы.<br/>
+<br/>
+Наковальни полезны как для <a href="../mechanics/anvils.html#working">Обработки</a>, которая используется для превращения одного куска металла в другой, так и для <a href="../mechanics/anvils.html#welding">сварки</a>, которая используется для слияния двух металлических предметов в один цельный кусок.</p>
+<h5></h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Все типы металлических наковален.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Двойной медный слиток" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item50.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Двойной медный слиток" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item50.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Двойной медный слиток" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item50.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Двойной медный слиток" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item50.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Двойной медный слиток" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item50.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Двойной медный слиток" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item50.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Двойной медный слиток" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item50.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Медная наковальня" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>Наковальни можно изготовить из <span style="color:#3E8A00;">Двойных слитков</span> соответствующего металла. Для вашей первой наковальни вы должны <a href="../mechanics/anvils.html#welding">сварить</a> двойные слитки сначала на <a href="../getting_started/primitive_anvils.html">Каменной наковальне</a>.</p>
+<a class="anchor" id="tiers"></a><p>У каждой наковальни есть <span style="color:#3E8A00;">Уровень</span>, который определяет, с какими типами материалов она может работать и сваривать. Наковальня может обрабатывать металлы своего текущего уровня, и она может сваривать металлы, которые на один уровень выше.<br/>
+</p>
+<ul>
+	<li><strong>Уровень 0</strong>: Каменные наковальни</li>
+	<li><strong>Уровень I</strong>: медь</li>
+	<li><strong>Уровень II</strong>: Висмутовая бронза, Черная бронза, Бронза</li>
+	<li><strong>Уровень III</strong>: Кованое железо</li>
+	<li><strong>Уровень IV</strong>: Сталь</li>
+	<li><strong>Уровень V</strong>: Черная сталь</li>
+	<li><strong>Уровень VI</strong>: Красная сталь, Синяя сталь</li>
+</ul>
+<a class="anchor" id="working"></a><h5>Обработка</h5>
+<p>Для работы с предметом на наковальне вам нужно будет использовать наковальню, чтобы открыть интерфейс наковальни, видимый справа. Слева есть два слота для предметов - для обработки целевой предмет должен находиться в правом слоте. Вам также понадобится молоток при работе, либо в слоте для молотка справа от наковальни, <strong>или</strong> в вашей основной руке. Молоток будет постепенно изнашиваться по мере работы с предметом.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image42.png" alt="tfc:textures/gui/book/gui/anvil_empty.png">
+<div style="text-align: center;"><p>Интерфейс наковальни.</p>
+</div><p>Затем вам нужно будет выбрать <span style="color:#3E8A00;">План</span>, который определяет, какой предмет вы хотите создать. <span style="color:#b0b;">ЛКМ</span> на кнопке прокрутки, а затем выберите один из предметов для создания. Интерфейс наковальни вернется, но теперь вы выбрали план - на прокрутке будет показан предмет, который вы собираетесь создать, и <span style="color:#3E8A00;">Правила</span> и <span style="color:#3E8A00;">Цель</span> теперь будут заполнены.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image43.png" alt="tfc:textures/gui/book/gui/anvil_in_use.png">
+<div style="text-align: center;"><p>После выбора создания кирки.</p>
+</div><h5>Цели</h5>
+<p>В середине экрана наковальни есть полоса с двумя цветными индикаторами. <span style="color:#00AA00;">Зеленый</span> указатель - это ваш текущий прогресс работы. <span style="color:#AA0000;">Красный</span> указатель - это цель. Ваша задача - совместить текущий прогресс с целью.<br/>
+<br/>
+Для этого вы можете использовать <span style="color:#00AA00;">зеленые</span> и <span style="color:#AA0000;">красные</span> кнопки действий, которые перемещают ваш текущий прогресс на определенное количество, в зависимости от предпринятого действия.</p>
+<p><span style="color:#00AA00;">Зеленые</span> действия всегда перемещают вашу цель <strong>вправо</strong>, а <span style="color:#AA0000;">Красные</span> действия всегда перемещают ваш прогресс <strong>влево</strong>. Обратите внимание, что если вы переместите вашу цель за пределы полосы прогресса, вы переработаете ваш предмет - вы потеряете слиток. Однако, во время работы, вы также должны соответствовать <span style="color:#3E8A00;">правилам</span>...</p>
+<h5>Правила обработки</h5>
+<p><span style="color:#3E8A00;">Правила</span>, это два или три значка, показанных в верхней части интерфейса наковальни. Они представляют конкретные действия, которые должны быть выполнены в определенное время, чтобы ваша работа была успешной. Например, правило может быть <span style="color:#00AA00;">Согнуть предпоследним</span>, что означает, что предпоследнее действие, которое вы предпринимаете, <strong>должно</strong> быть действием <span style="color:#00AA00;">Сгибания</span>.</p>
+<p>Ваши последние три действия показаны прямо под правилами. Когда правило удовлетворено, его контур изменится на зеленый. Успех наступает, когда все правила удовлетворены.<br/>
+<br/>
+Наконец, вы должны учитывать <a href="../mechanics/heating.html">температуру</a> вашего предмета. Металлы можно обрабатывать только тогда, когда они нагреты до определенной температуры, когда в подсказке показано "Можно обрабатывать". Вы можете вынуть предмет и снова нагреть его в процессе работы.</p>
+<h5>Бонусы ковки</h5>
+<p>Обработка может быть утомительной и требовать множества шагов для правильного выполнения. Однако за эффективность предусмотрена награда. Некоторые предметы, такие как головки инструментов, при обработке с минимальным или низким количеством шагов, получают бонус ковки в зависимости от того, насколько эффективно они были выкованы. Этот бонус затем применяется к инструментам, для которых используется данный предмет, например, головка кирки, используемая для изготовления кирки.</p>
+<h5>Идеально выковано</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть этот предмет.">Предмет: <code>tfc:metal/pickaxe/wrought_iron{"tfc:forging_bonus":4}</code></span></p>
+        </div>
+        <p>Существует четыре уровня бонуса ковки: </p>
+<ul>
+	<li>Плохо выковано</li>
+	<li>Хорошо выковано</li>
+	<li>Мастерски выковано</li>
+	<li>Идеально выковано</li>
+</ul><p><br/>
+Эти бонусы увеличивают мощность вашего инструмента - делая его менее ломким, добывающим быстрее и/или наносящим больше урона в бою, в зависимости от инструмента.</p>
+<a class="anchor" id="welding"></a><h5>Сварка</h5>
+<p>Сварка - это процесс, при котором два предмета сливаются вместе, создавая новый предмет. Сварка работает одинаково как на <a href="../getting_started/primitive_anvils.html">каменной наковальне</a>, так и на металлической наковальне.<br/>
+<br/>
+Сначала вы должны поместить два предмета, которые хотите сварить, на наковальню. Это можно сделать либо, используя предметы на наковальне, либо открыв интерфейс наковальни и вставив их в два крайних левых слота.</p>
+<p>Вам также понадобится как минимум один <a href="../mechanics/flux.html">флюс</a> на наковальне для помощи в процессе сварки. Затем, когда оба предмета <a href="../mechanics/heating.html">достаточно нагреты</a> для сварки - в подсказке будет сказано "Можно сваривать" - вам нужно будет использовать любой <span style="color:#3E8A00;">Молоток</span> на наковальне. Вы услышите звук молотка, и предметы будут сварены вместе. Затем их можно извлечь, используя <span style="color:#b0b;">ПКМ</span> на наковальне с пустой рукой.</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> Документация API
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '';
+      window._CURRENT_LANG = 'ru_ru';
+    </script>
+
+    <script src="/static/metadata.js"></script>
+    <script src="/static/tooltips.js"></script>
+    <script src="/static/versions.js"></script>
+  </body>
+</html>

@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Руды и минералы | TFC Field Guide" />
+    <meta name="description" content="Руды и минералы" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="Руды и минералы | TFC Field Guide" />
+    <meta property="og:description" content="Руды и минералы" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/item252.png" />
+
+    <title>Руды и минералы | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">Справочник TerraFirmaCraft</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Версия 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> Русский
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/the_world\ores_and_minerals.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world\ores_and_minerals.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world\ores_and_minerals.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world\ores_and_minerals.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world\ores_and_minerals.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world\ores_and_minerals.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world\ores_and_minerals.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world\ores_and_minerals.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/the_world\ores_and_minerals.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Содержание</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Главная</a></li>
+            <li><a href="../the_world/">Мир</a><ul><li><a href="./geology.html">Геология</a></li>
+<li><a href="./ores_and_minerals.html">Руды и минералы</a></li>
+<li><a href="./climate.html">Календарь и климат</a></li>
+<li><a href="./flora.html">Растения</a></li>
+<li><a href="./wild_crops.html">Дикие культуры</a></li>
+<li><a href="./wild_fruits.html">Дикие фрукты</a></li>
+<li><a href="./wild_animals.html">Дикие животные</a></li></ul></li>
+<li><a href="../getting_started/">Начало работы</a></li>
+<li><a href="../mechanics/">Продвинутая механика</a></li>
+<li><a href="../firmalife/">(Дополнение) Firmalife</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">Мир</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Руды и минералы</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\item252.png" alt="Руды и минералы" title="Гематит" /><span>Руды и минералы</span>
+        </h1>
+                <p>Руды и минералы в TFC редки - в отличие от Vanilla, они находятся в огромных, редких, но масштабных жилах, которые требуют <a href="../mechanics/prospecting.html">поиска</a>. Разные руды также появляются в разных типах пород и на разных высотах, что означает, что нахождение правильного типа породы на правильной высоте ключевое для поиска нужной вам руды.</p>
+<p>Кроме того, некоторые руды <span style="color:#3E8A00;">имеют класс</span>. Блоки руд могут быть бедными, обычными или богатыми, и разные жилы будут иметь разные концентрации каждого типа блока. <span style="color:#3E8A00;">Богатые</span> жилы более прибыльны.<br/>
+<br/>
+На следующих нескольких страницах показаны различные типы руд, как они выглядят и где их найти.</p>
+<a class="anchor" id="native_copper"></a><h5>Самородная медь</h5>
+<p>Самородная медь является рудой <span style="color:#3E8A00;">меди</span>. Она может быть найдена в <a href="../the_world/geology.html#igneous_extrusive">экструзивных магматических</a> породах на высотах выше y=40.<br/>
+<br/>
+Также она может быть найдена в отложениях на дне <span style="color:#3E8A00;">рек</span>, которые можно <a href="../mechanics/panning.html">промывать</a>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block20.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>Руды самородной меди в даците.</p>
+</div><a class="anchor" id="native_gold"></a><h5>Самородное золото</h5>
+<p>Самородное золото является рудой <span style="color:#3E8A00;">золота</span>. Оно может быть найдено на высотах ниже y=70, но глубже расположенные жилы крупнее и богаче. Оно может быть найдено в <a href="../the_world/geology.html#igneous_extrusive">экструзивных магматических</a> и <a href="../the_world/geology.html#igneous_intrusive">интрузивных магматических</a> породах.<br/>
+<br/>
+Также оно может быть найдено в отложениях на дне <span style="color:#3E8A00;">рек</span>, которые можно <a href="../mechanics/panning.html">промывать</a>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block21.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>Руды самородного золота в диорите.</p>
+</div><a class="anchor" id="native_silver"></a><h5>Самородное серебро</h5>
+<p>Самородное серебро является рудой <span style="color:#3E8A00;">серебра</span>. Маленькие бедные жилы могут быть найдены в <span style="color:#3E8A00;">граните</span> или <span style="color:#3E8A00;">диорите</span> в районах поднятия, выше y=90. Большие и богатые жилы могут быть найдены в <span style="color:#3E8A00;">граните</span>, <span style="color:#3E8A00;">диорите</span>, <span style="color:#3E8A00;">аспидном сланце</span>, и <span style="color:#3E8A00;">гнейсе</span> глубоко под землей ниже y=20.<br/>
+<br/>
+Также оно может быть найдено в отложениях в <span style="color:#3E8A00;">реках</span>, которые можно <a href="../mechanics/panning.html">промывать</a>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block22.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>Руды самородного серебра в граните.</p>
+</div><a class="anchor" id="tetrahedrite"></a><h5>Тетраэдрит</h5>
+<p>Тетраэдрит является рудой <span style="color:#3E8A00;">меди</span>. Он может быть найден на любой высоте, но глубоко расположенные жилы часто богаче. Он может быть найден в <a href="../the_world/geology.html#metamorphic">метаморфических</a> породах.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block23.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>Руды тетраэдрита в аспидном сланце.</p>
+</div><a class="anchor" id="malachite"></a><h5>Малахит</h5>
+<p>Малахит является рудой <span style="color:#3E8A00;">меди</span>. Его можно найти в основном в <span style="color:#3E8A00;">мраморе</span> или <span style="color:#3E8A00;">известняке</span>, <span style="color:#3E8A00;">меле</span> и <span style="color:#3E8A00;">доломите</span>. Можно найти на большинстве высот, однако более глубокие жилы часто крупнее и богаче.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block24.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>Малахит в мраморе.</p>
+</div><a class="anchor" id="cassiterite"></a><h5>Касситерит</h5>
+<p>Касситерит является рудой <span style="color:#3E8A00;">олова</span>. Его можно найти в <a href="../the_world/geology.html#igneous_intrusive">интрузивных магматических</a> породах на большой высоте, выше y=80 в регионах поднятия или в дайках.<br/>
+<br/>
+Также его можно найти в отложениях в на дне <span style="color:#3E8A00;">рек</span>, которые можно <a href="../mechanics/panning.html">промывать</a>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block25.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>Руды касситерита в диорите.</p>
+</div><a class="anchor" id="bismuthinite"></a><h5>Висмутин</h5>
+<p>Висмутин является рудой <span style="color:#3E8A00;">висмута</span>. Его можно найти в <a href="../the_world/geology.html#sedimentary">осадочных</a> породах у поверхности, или в больших и богатых жилах в <a href="../the_world/geology.html#igneous_intrusive">интрузивных магматических</a> породах глубоко под землей.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Руды висмутина в сланце.</p>
+<a class="anchor" id="garnierite"></a><h5>Гарниерит</h5>
+<p>Гарниерит является рудой <span style="color:#3E8A00;">никеля</span>. Его можно найти на высотах ниже y=0. В основном он встречается в <span style="color:#3E8A00;">габбро</span> глубоко под землей. Меньшие, более редкие жилы также могут встречаться в любой <a href="../the_world/geology.html#igneous_intrusive">интрузивной магматической</a> породе.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block26.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>Руды гарниерита в габбро.</p>
+</div><a class="anchor" id="hematite"></a><h5>Гематит</h5>
+<p>Гематит является рудой <span style="color:#3E8A00;">железа</span>. Его можно найти в больших жилах в любых <a href="../the_world/geology.html#igneous_extrusive">экструзивных магматических</a> породах у поверхности.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block27.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>Руды гематита в андезите.</p>
+</div><a class="anchor" id="magnetite"></a><h5>Магнетит</h5>
+<p>Магнетит является рудой <span style="color:#3E8A00;">железа</span>. Его можно найти в больших жилах в любых <a href="../the_world/geology.html#sedimentary">осадочных</a> породах у поверхности.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block28.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>Руды магнетита в известняке.</p>
+</div><a class="anchor" id="limonite"></a><h5>Лимонит</h5>
+<p>Лимонит является рудой <span style="color:#3E8A00;">железа</span>. Его можно найти в больших жилах в любых <a href="../the_world/geology.html#sedimentary">осадочных</a> породах у поверхности.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block29.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>Руды лимонита в меле.</p>
+</div><a class="anchor" id="sphalerite"></a><h5>Сфалерит</h5>
+<p>Сфалерит является рудой <span style="color:#3E8A00;">цинка</span>. Маленькие, бедные жилы можно найти в <a href="../the_world/geology.html#igneous_extrusive">экструзивных магматических</a> породах у поверхности, и большие, богатые жилы можно найти в <a href="../the_world/geology.html#igneous_intrusive">интрузивных магматических</a> породах глубоко под землей.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block30.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>Руды сфалерита в кварците.</p>
+</div><a class="anchor" id="lignite"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Лигнит">
+                <img src="..\..\_images\item253.png" alt="Лигнит" />
+            </span>
+            <h5>Лигнит</h5>
+        </div>
+        <p>Лигнит - это тип низкосортной <span style="color:#3E8A00;">угольной</span> руды. Его можно найти в очень больших плоских месторождениях у поверхности в <a href="../the_world/geology.html#sedimentary">осадочных</a> породах.</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block31.png" alt="Block Visualization">
+<div style="text-align: center;"><p>Лигнит в доломите.</p>
+</div><a class="anchor" id="bituminous_coal"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Битумный уголь">
+                <img src="..\..\_images\item254.png" alt="Битумный уголь" />
+            </span>
+            <h5>Битумный уголь</h5>
+        </div>
+        <p>Битумный уголь - это тип среднесортной <span style="color:#3E8A00;">угольной</span> руды. Его можно найти в очень больших плоских месторождениях у поверхности в <a href="../the_world/geology.html#sedimentary">осадочных</a> породах.</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block32.png" alt="Block Visualization">
+<div style="text-align: center;"><p>Битумный уголь в кремнистом сланце.</p>
+</div><a class="anchor" id="kaolinite"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Каолинитовая глина">
+                <img src="..\..\_images\item115.png" alt="Каолинит" />
+            </span>
+            <h5>Каолинит</h5>
+        </div>
+        <p>Каолинит - это мягкий <span style="color:#3E8A00;">минерал</span>, который используется в строительстве <a href="../mechanics/fire_clay.html">огнеупорной глины</a>. Его можно найти на больших высотах на плато, древних горах и в высокогорьях, при <a href="../the_world/climate.html#temperature">температуре</a> не менее 18°C и <a href="../the_world/climate.html#rainfall">осадках</a> не менее 300 мм. Цветок <span style="color:#3E8A00;">кровавой лилии</span> растет на каолиновой глине.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Варианты каолиновой глины.</p>
+<a class="anchor" id="graphite"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Графит">
+                <img src="..\..\_images\item255.png" alt="Графит" />
+            </span>
+            <h5>Графит</h5>
+        </div>
+        <p>Графит - это <span style="color:#3E8A00;">минерал</span>, который используется для создания <a href="../mechanics/fire_clay.html">огнеупорной глины</a>. Его можно найти в <span style="color:#3E8A00;">гнейсе</span>, <span style="color:#3E8A00;">мраморе</span>, <span style="color:#3E8A00;">кварците</span>, и <span style="color:#3E8A00;">аспидном сланце</span> на глубинах ниже y=60.</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block33.png" alt="Block Visualization">
+<div style="text-align: center;"><p>Графит в гнейсе.</p>
+</div><a class="anchor" id="cinnabar"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Киноварь">
+                <img src="..\..\_images\item256.png" alt="Киноварь" />
+            </span>
+            <h5>Киноварь</h5>
+        </div>
+        <p>Киноварь - это <span style="color:#3E8A00;">минерал</span>, который может быть измельчен в <a href="../mechanics/quern.html">жернове</a>, чтобы получить <span style="color:#3E8A00;">пыль красного камня</span>. Его можно найти в жилах глубоко под землей, в <span style="color:#3E8A00;">кварците</span>, <span style="color:#3E8A00;">граните</span>, <span style="color:#3E8A00;">филлите</span> и <span style="color:#3E8A00;">аспидном сланце</span>.</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block34.png" alt="Block Visualization">
+<div style="text-align: center;"><p>Киноварь в кварците.</p>
+</div><a class="anchor" id="cryolite"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Криолит">
+                <img src="..\..\_images\item257.png" alt="Криолит" />
+            </span>
+            <h5>Криолит</h5>
+        </div>
+        <p>Криолит - это <span style="color:#3E8A00;">минерал</span>, который может быть измельчен в <a href="../mechanics/quern.html">жернове</a>, чтобы получить <span style="color:#3E8A00;">пыль красного камня</span>. Его можно найти в жилах глубоко под землей, в <span style="color:#3E8A00;">граните</span> и <span style="color:#3E8A00;">диорите</span>.</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block35.png" alt="Block Visualization">
+<div style="text-align: center;"><p>Криолит в граните.</p>
+</div><a class="anchor" id="saltpeter"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Селитра">
+                <img src="..\..\_images\item258.png" alt="Селитра" />
+            </span>
+            <h5>Селитра</h5>
+        </div>
+        <p>Селитра - это <span style="color:#3E8A00;">минерал</span>, который может быть измельчен в <a href="../mechanics/quern.html">жернове</a>, а затем использован в крафте <span style="color:#3E8A00;">пороха</span>. Ее можно найти в очень больших плоских месторождениях у поверхности в <a href="../the_world/geology.html#sedimentary">осадочных</a> породах.</p>
+<h5></h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Селитра в сланце.</p>
+<a class="anchor" id="sulfur"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Сера">
+                <img src="..\..\_images\item215.png" alt="Сера" />
+            </span>
+            <h5>Сера</h5>
+        </div>
+        <p>Сера - это <span style="color:#3E8A00;">минерал</span>, который может быть измельчен в <a href="../mechanics/quern.html">жернове</a>, а затем использован в крафте <span style="color:#3E8A00;">пороха</span>. Она находится у уровня лавы глубоко под землей, в редких, но больших и богатых жилах, в любой <a href="../the_world/geology.html#metamorphic">метаморфической</a> или <a href="../the_world/geology.html#igneous_intrusive">интрузивной магматической</a> породе.</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block36.png" alt="Block Visualization">
+<div style="text-align: center;"><p>Сера в габбро.</p>
+</div><a class="anchor" id="sylvite"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Сильвит">
+                <img src="..\..\_images\item259.png" alt="Сильвит" />
+            </span>
+            <h5>Сильвит</h5>
+        </div>
+        <p>Сильвит - это <span style="color:#3E8A00;">минерал</span>, который может быть измельчен в <a href="../mechanics/quern.html">жернове</a>, а затем использован как <a href="../mechanics/fertilizers.html">удобрение</a>. Его можно найти в очень больших плоских месторождениях у поверхности в <span style="color:#3E8A00;">сланце</span>, <span style="color:#3E8A00;">аргиллите</span> и <span style="color:#3E8A00;">кремнистом сланце</span>.</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block37.png" alt="Block Visualization">
+<div style="text-align: center;"><p>Сильвит в кремнистом сланце.</p>
+</div><a class="anchor" id="borax"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Бура">
+                <img src="..\..\_images\item260.png" alt="Бура" />
+            </span>
+            <h5>Бура</h5>
+        </div>
+        <p>Бура - это <span style="color:#3E8A00;">минерал</span>, который может быть измельчен в <a href="../mechanics/quern.html">жернове</a>, чтобы произвести <a href="../mechanics/flux.html">флюс</a>. Ее можно найти в очень больших плоских месторождениях у поверхности в <span style="color:#3E8A00;">аргиллите</span>, <span style="color:#3E8A00;">известняке</span> и <span style="color:#3E8A00;">сланце</span>.</p>
+<h5></h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Бура в сланце.</p>
+<a class="anchor" id="gypsum"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Гипс">
+                <img src="..\..\_images\item35.png" alt="Гипс" />
+            </span>
+            <h5>Гипс</h5>
+        </div>
+        <p>Гипс - это декоративный <span style="color:#3E8A00;">минерал</span>, который может быть использован для изготовления <a href="../mechanics/advanced_building_materials.html#alabaster">алебастра</a>. Его можно найти в очень больших плоских месторождениях у поверхности в <a href="../the_world/geology.html#sedimentary">осадочных</a> породах.</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block38.png" alt="Block Visualization">
+<div style="text-align: center;"><p>Гипс в меле.</p>
+</div><a class="anchor" id="halite"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Галит">
+                <img src="..\..\_images\item101.png" alt="Галит" />
+            </span>
+            <h5>Галит</h5>
+        </div>
+        <p>Галит - это <span style="color:#3E8A00;">минерал</span>, который может быть измельчен в <a href="../mechanics/quern.html">жернове</a>, чтобы сделать <span style="color:#3E8A00;">соль</span>, которая является важным <a href="../mechanics/decay.html#salting">консервантом</a>. Его можно найти в очень больших плоских месторождениях у поверхности в <a href="../the_world/geology.html#sedimentary">осадочных</a> породах.</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block39.png" alt="Block Visualization">
+<div style="text-align: center;"><p>Галит в меле.</p>
+</div><a class="anchor" id="emerald"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Изумруд">
+                <img src="..\..\_images\item217.png" alt="Изумруд" />
+            </span>
+            <h5>Изумруд</h5>
+        </div>
+        <p>Изумруд - это декоративный <a href="../mechanics/gems.html">драгоценный камень</a>. Он выглядит довольно красиво, возможно, если бы вы могли найти кого-то еще в этом невероятно одиноком мире, вы могли бы торговать им...<br/>
+<br/>
+Он появляется в тонких вертикальных рудных формациях, которые могут достигать высоты в сотню блоков. Его можно найти в <a href="../the_world/geology.html#igneous_intrusive">интрузивных магматические</a> породах.</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block40.png" alt="Block Visualization">
+<div style="text-align: center;"><p>Изумруд в диорите.</p>
+</div><a class="anchor" id="diamond"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Кимберлит">
+                <img src="..\..\_images\item261.png" alt="Кимберлит" />
+            </span>
+            <h5>Кимберлит</h5>
+        </div>
+        <p>Кимберлит - это декоративный и бесценный <a href="../mechanics/gems.html">драгоценный камень</a>. Он появляется в тонких вертикальных рудных формациях, называемых <a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%B8%D0%BC%D0%B1%D0%B5%D1%80%D0%BB%D0%B8%D1%82%D0%BE%D0%B2%D0%B0%D1%8F_%D1%82%D1%80%D1%83%D0%B1%D0%BA%D0%B0">кимберлитовыми трубками</a>, которые могут достигать высоты в сотню блоков. Его можно найти только в <span style="color:#3E8A00;">габбро</span>.</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block41.png" alt="Block Visualization">
+<div style="text-align: center;"><p>Кимберлит в габбро.</p>
+</div><a class="anchor" id="lapis_lazuli"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Лазурит">
+                <img src="..\..\_images\item262.png" alt="Лазурит" />
+            </span>
+            <h5>Лазурит</h5>
+        </div>
+        <p>Лазурит - это декоративный <span style="color:#3E8A00;">минерал</span>, который может быть использован для изготовления <a href="../mechanics/dye.html">синего красителя</a>. Его можно найти в больших, но редких жилах в <span style="color:#3E8A00;">известняке</span> и <span style="color:#3E8A00;">мраморе</span>, между y=-20 и y=80.</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block42.png" alt="Block Visualization">
+<div style="text-align: center;"><p>Лазурит в мраморе.</p>
+</div><a class="anchor" id="amethyst"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Аметист">
+                <img src="..\..\_images\item263.png" alt="Аметист" />
+            </span>
+            <h5>Аметист</h5>
+        </div>
+        <p>Аметист - это декоративный <span style="color:#3E8A00;">минерал</span>, который может быть использован для изготовления <a href="../mechanics/glassworking.html">стекла</a>. Его можно найти в <span style="color:#3E8A00;">осадочных</span> и <span style="color:#3E8A00;">метаморфических</span> породах под реками выше y=40.</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block43.png" alt="Block Visualization">
+<div style="text-align: center;"><p>Аметист в мраморе.</p>
+</div><a class="anchor" id="opal"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Опал">
+                <img src="..\..\_images\item264.png" alt="Опал" />
+            </span>
+            <h5>Опал</h5>
+        </div>
+        <p>Опал - это декоративный <span style="color:#3E8A00;">минерал</span>. Его можно найти в <span style="color:#3E8A00;">осадочных</span> и <span style="color:#3E8A00;">экструзивных магматических</span> породах под реками выше y=40.</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block44.png" alt="Block Visualization">
+<div style="text-align: center;"><p>Опал в базальте.</p>
+</div>
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> Документация API
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '';
+      window._CURRENT_LANG = 'ru_ru';
+    </script>
+
+    <script src="/static/metadata.js"></script>
+    <script src="/static/tooltips.js"></script>
+    <script src="/static/versions.js"></script>
+  </body>
+</html>

@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="オーブン | TFC Field Guide" />
+    <meta name="description" content="オーブン" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="オーブン | TFC Field Guide" />
+    <meta property="og:description" content="オーブン" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/" />
+
+    <title>オーブン | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft Field Guide</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Version 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 日本語
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/firmalife\ovens.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/firmalife\ovens.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/firmalife\ovens.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/firmalife\ovens.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/firmalife\ovens.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/firmalife\ovens.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/firmalife\ovens.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/firmalife\ovens.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/firmalife\ovens.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Contents</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Index</a></li>
+            <li><a href="../the_world/">世界</a></li>
+<li><a href="../getting_started/">はじめに</a></li>
+<li><a href="../mechanics/">高度な加工</a></li>
+<li><a href="../firmalife/">(Addon) Firmalife</a><ul><li><a href="./differences_from_tfc.html">TFCとの違い</a></li>
+<li><a href="./cheese.html">チーズ</a></li>
+<li><a href="./climate_station.html">空調機</a></li>
+<li><a href="./cellar.html">貯蔵庫</a></li>
+<li><a href="./food_shelves.html">食品棚</a></li>
+<li><a href="./hangers.html">吊るし棚</a></li>
+<li><a href="./jarbnet.html">収納棚</a></li>
+<li><a href="./greenhouse.html">温室</a></li>
+<li><a href="./irrigation.html">温室を潤す</a></li>
+<li><a href="./planters.html">プランター</a></li>
+<li><a href="./beekeeping.html">養蜂</a></li>
+<li><a href="./stainless_steel.html">ステンレス鋼</a></li>
+<li><a href="./drying.html">乾燥</a></li>
+<li><a href="./smoking.html">燻製</a></li>
+<li><a href="./ovens.html">オーブン</a></li>
+<li><a href="./oven_appliances.html">オーブン機器</a></li>
+<li><a href="./bread.html">パン</a></li>
+<li><a href="./more_fertilizer.html">肥料オプション</a></li>
+<li><a href="./mixing_bowl.html">ミキシングボウル</a></li>
+<li><a href="./herbs_and_spices.html">ハーブとスパイス</a></li>
+<li><a href="./fruit_trees.html">Firmalife フルーツ</a></li>
+<li><a href="./berry_bushes.html">ベリーの茂み</a></li>
+<li><a href="./chocolate.html">チョコレート</a></li>
+<li><a href="./wine.html">ワイン作り</a></li>
+<li><a href="./wine_consumption.html">ワインの消費</a></li>
+<li><a href="./pie.html">Pie</a></li>
+<li><a href="./pizza.html">Pizza</a></li>
+<li><a href="./pasta.html">Pasta</a></li>
+<li><a href="./burritos_and_tacos.html">Burritos and Tacos</a></li></ul></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">(Addon) Firmalife</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">オーブン</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">オーブン</h1>
+                <p><span style="color:#3E8A00;">オーブンは</span>、食品の保存性を高めるための調理に最適です。オーブンで焼いた食品は通常の90％の割合で腐敗が進行します。オーブンは、<span style="color:#3E8A00;">オーブンかまど</span>、<span style="color:#3E8A00;">オーブン</span>、オプションで<span style="color:#3E8A00;">煙突</span>からなるマルチブロックです。これらのブロックは粘土の状態で設置し、一定の温度まで十分に温度を上げ、<span style="color:#3E8A00;">硬化</span>させる必要があります。<a href="../firmalife/oven_appliances.html">オーブン機器</a>はオーブンの機能を拡張します。</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image112.png" alt="Recipe: firmalife:clay_knapping/oven_top">
+        </div>
+    </div>
+</div>
+<p>オーブンのレシピ</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image113.png" alt="Recipe: firmalife:clay_knapping/oven_bottom">
+        </div>
+    </div>
+</div>
+<p>オーブンかまどのレシピ</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image114.png" alt="Recipe: firmalife:clay_knapping/oven_chimney">
+        </div>
+    </div>
+</div>
+<p>オーブンの煙突のレシピ</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="レンガ" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item313.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="モルタル" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item38.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="レンガ" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item313.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="モルタル" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item38.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="レンガ" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item313.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="モルタル" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item38.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="レンガ" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item313.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="モルタル" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item38.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="レンガ" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item313.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="レンガ" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">2</p>
+                    <img class="recipe-item" src="..\..\_images\item312.png" />
+                </div>
+            </div>
+        </div>
+        <p>オーブンは、<span style="color:#3E8A00;">レンガ</span>や他のオーブンブロックなど、炉を断熱できるものなら何を使っても断熱できます。<br/>
+<br/>
+つまり、様々な石のブロックが使えます！</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="ボウル" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item66.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="ピール" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">ピール</span>はオーブンから熱いものを取り出す安全な方法です。<br/>
+<br/>
+(ピール持ち<span style="color:#b0b;">Right Click</span>を押せばアイテムを取り出せます。そうでなければ、やけどをする恐れがあります！)</p>
+<p>オーブンは、まずオーブンかまどの上にオーブンブロックを置きます。その後、各オーブン部品の前面以外すべての側面を、2ページ前で説明したような断熱ブロックで覆います。<br/>
+<span style="color:#3E8A00;">オーブンの煙突</span>は断熱材としても使えます。<br/>
+オーブンの真後ろに煙突を設置することで、オーブンの煙が上昇し排出されます。そうしないと、すぐに煙が家中に充満してしまい、非常に気が散ってしまいます！</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>オーブン構造の例、未硬化と硬化。</p>
+<p>オーブンかまどには燃料を入れます。<br/>
+<br/>
+<span style="color:#b0b;">Right Click</span>を押すことで、燃料を出し入れできます。<br/>
+<br/>
+オーブンかまどは、<span style="color:#3E8A00;">火おこし器</span>などで点火する部分です。<br/>
+<br/>
+オーブンかまど内の熱をオーブンに伝えます。</p>
+<p>オーブンには調理したいアイテムが入ります。<br/>
+オーブンはオーブンかまどから熱を受け取り、時間をかけてゆっくりと放出します。<br/>
+つまり、燃料がなくなっても、オーブンは少しの間働き続けます。<br/>
+オーブンに調理したいアイテムを追加するには、<span style="color:#b0b;">Right Click</span>を押すだけです。<br/>
+アイテムを入れたら、<span style="color:#3E8A00;">ピールを使って</span>取り出すのを忘れずに。</p>
+<p>オーブンブロックの硬化は簡単ですが、強度が必要です。<br/>
+<br/>
+通常通りにオーブンかまどを稼働させ、待つだけです。<br/>
+<br/>
+オーブンブロックが約80秒間600度以上になると、それ自体が硬化し、周りのオーブンブロックも硬化します。<br/>
+<br/>
+硬化は、近くの煙突の上まで伝わります。</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="錬鉄のプレート" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item55.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="蜜蝋" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item268.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="融剤" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item315.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="オーブン断熱材" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item314.png" />
+                </div>
+            </div>
+        </div>
+        <p>オーブンかまど用の断熱材を作ることで、側面と背面を断熱する必要がなくなります。<br/>
+煙突の必要性がなくなるわけではありません。<br/>
+適用するには<span style="color:#b0b;">Right Click</span>を使用します。</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="レンガ" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item312.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:chisels" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item36.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="レンガのカウンター" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>カウンタートップは、オーブンの断熱材としてカウントされる装飾ブロックであり、オーブンブロックと同じ外観を持ちます。<br/>
+<br/>
+キッチンの見た目を損ないません。</p>
+<p>オーブンには、外観を変えるための<span style="color:#3E8A00;">上塗り</span>もあります。<br/>
+<br/>
+これらの上塗りは、オーブンの基本的なレンガの段階（またはレンガのブロックそのもの）に施されるもので、装飾品です。<br/>
+<br/>
+上塗りは組み合わせが可能です。<span style="color:#b0b;">Right Click</span>で行います。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this recipe.">Recipe: <code>firmalife:crafting/rustic_finish</code></span></p>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="密封レンガ" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="レンガ" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item313.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="石仕上げ" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">16</p>
+                    <img class="recipe-item" src="..\..\_images\item317.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="粘土玉" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item9.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #forge:cobblestone" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item319.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="レンガ" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item313.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="タイル仕上げ" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">16</p>
+                    <img class="recipe-item" src="..\..\_images\item318.png" />
+                </div>
+            </div>
+        </div>
+        
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '';
+      window._CURRENT_LANG = 'ja_jp';
+    </script>
+
+    <script src="/static/metadata.js"></script>
+    <script src="/static/tooltips.js"></script>
+    <script src="/static/versions.js"></script>
+  </body>
+</html>

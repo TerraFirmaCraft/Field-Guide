@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="鉱石とミネラル | TFC Field Guide" />
+    <meta name="description" content="鉱石とミネラル" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="鉱石とミネラル | TFC Field Guide" />
+    <meta property="og:description" content="鉱石とミネラル" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/item252.png" />
+
+    <title>鉱石とミネラル | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft Field Guide</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Version 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 日本語
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/the_world\ores_and_minerals.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world\ores_and_minerals.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world\ores_and_minerals.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world\ores_and_minerals.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world\ores_and_minerals.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world\ores_and_minerals.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world\ores_and_minerals.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world\ores_and_minerals.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/the_world\ores_and_minerals.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Contents</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Index</a></li>
+            <li><a href="../the_world/">世界</a><ul><li><a href="./geology.html">地質</a></li>
+<li><a href="./ores_and_minerals.html">鉱石とミネラル</a></li>
+<li><a href="./climate.html">暦と気候</a></li>
+<li><a href="./flora.html">植物</a></li>
+<li><a href="./wild_crops.html">自生植物</a></li>
+<li><a href="./wild_fruits.html">自生果樹</a></li>
+<li><a href="./wild_animals.html">野生動物</a></li></ul></li>
+<li><a href="../getting_started/">はじめに</a></li>
+<li><a href="../mechanics/">高度な加工</a></li>
+<li><a href="../firmalife/">(Addon) Firmalife</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">世界</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">鉱石とミネラル</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\item252.png" alt="鉱石とミネラル" title="中純度の赤鉄鉱" /><span>鉱石とミネラル</span>
+        </h1>
+                <p>TerraFirmaCraft の鉱石と鉱物は希少です。バニラとは異なり、鉱石が一つ当たり大量に含まれる希少な鉱脈で見つかり、見つけるには <a href="../mechanics/prospecting.html">探鉱</a> が必要です。 異なる鉱石は、異なる種類の岩石や異なる標高にも出現します。つまり、適切な高度で適切な種類の岩石を見つけることが、探している鉱石を見つける鍵となります。</p>
+<p>In addition, some ores are <span style="color:#3E8A00;">Graded</span>. Ore blocks may be Poor, Normal, or Rich, and different veins will have different concentrations of each type of block. Veins that are <span style="color:#3E8A00;">richer</span> are more lucrative.<br/>
+<br/>
+The next several pages show the different types of ores, what they look like, and where to find them.</p>
+<a class="anchor" id="native_copper"></a><h5>自然銅</h5>
+<p>Native Copper is an ore of <span style="color:#3E8A00;">Copper</span> metal. It can be found in <a href="../the_world/geology.html#igneous_extrusive">Igneous Extrusive</a> rocks, at elevations above y=40.<br/>
+<br/>
+It can also be found in deposits in <span style="color:#3E8A00;">rivers</span>, which can be <a href="../mechanics/panning.html">panned</a>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block20.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>Native Copper Ores in Dacite.</p>
+</div><a class="anchor" id="native_gold"></a><h5>自然金</h5>
+<p>Native Gold is an ore of <span style="color:#3E8A00;">Gold</span> metal. It can be found at elevations below y=70, but deeper veins are larger and richer. It can be found in <a href="../the_world/geology.html#igneous_extrusive">Igneous Extrusive</a> and <a href="../the_world/geology.html#igneous_intrusive">Igneous Intrusive</a> rocks.<br/>
+<br/>
+It can also be found in deposits in <span style="color:#3E8A00;">rivers</span>, which can be <a href="../mechanics/panning.html">panned</a>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block21.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>Native Gold Ores in Diorite.</p>
+</div><a class="anchor" id="native_silver"></a><h5>自然銀</h5>
+<p>Native Silver is an ore of <span style="color:#3E8A00;">Silver</span> metal. Small poor veins can be found in <span style="color:#3E8A00;">Granite</span> or <span style="color:#3E8A00;">Diorite</span> in uplift regions, above y=90. Larger and richer veins can be found in <span style="color:#3E8A00;">Granite</span>, <span style="color:#3E8A00;">Diorite</span>, <span style="color:#3E8A00;">Schist</span>, and <span style="color:#3E8A00;">Gneiss</span> deep underground below y=20.<br/>
+<br/>
+It can also be found in deposits in <span style="color:#3E8A00;">rivers</span>, which can be <a href="../mechanics/panning.html">panned</a>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block22.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>Native Silver Ores in Granite.</p>
+</div><a class="anchor" id="tetrahedrite"></a><h5>安四面銅鉱</h5>
+<p>Tetrahedrite is an ore of <span style="color:#3E8A00;">Copper</span> metal. It can be found at any elevation, but deeper veins are often richer. It can be found in <a href="../the_world/geology.html#metamorphic">Metamorphic</a> rocks.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block23.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>Tetrahedrite Ores in Schist.</p>
+</div><a class="anchor" id="malachite"></a><h5>孔雀石</h5>
+<p>Malachite is an ore of <span style="color:#3E8A00;">Copper</span> metal. It can be found primarily in <span style="color:#3E8A00;">Marble</span> or <span style="color:#3E8A00;">Limestone</span>, <span style="color:#3E8A00;">Chalk</span>, and <span style="color:#3E8A00;">Dolomite</span>. It can be found at most elevations, however deeper veins are often larger and richer.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block24.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>Malachite Ores in Marble.</p>
+</div><a class="anchor" id="cassiterite"></a><h5>錫石</h5>
+<p>Cassiterite is an ore of <span style="color:#3E8A00;">Tin</span> metal. It can be found in <a href="../the_world/geology.html#igneous_intrusive">Igneous Intrusive</a> rocks at high elevation, above y=80 in uplift regions or in dikes.<br/>
+<br/>
+It can also be found in deposits in <span style="color:#3E8A00;">rivers</span>, which can be <a href="../mechanics/panning.html">panned</a>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block25.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>Cassiterite Ores in Diorite.</p>
+</div><a class="anchor" id="bismuthinite"></a><h5>輝蒼鉛鉱</h5>
+<p>Bismuthinite is an ore of <span style="color:#3E8A00;">Bismuth</span> metal. It can be found in <a href="../the_world/geology.html#sedimentary">Sedimentary</a> rocks near the surface, or larger and richer veins in <a href="../the_world/geology.html#igneous_intrusive">Igneous Intrusive</a> rocks deep underground.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Bismuthinite Ores in Shale.</p>
+<a class="anchor" id="garnierite"></a><h5>珪ニッケル鉱</h5>
+<p>Garnierite is an ore of <span style="color:#3E8A00;">Nickel</span> metal. It can be found at elevations below y=0. It can be found primarily in <span style="color:#3E8A00;">Gabbro</span> deep underground. Smaller, rarer veins can also be found in any <a href="../the_world/geology.html#igneous_intrusive">Igneous Intrusive</a> rock.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block26.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>Garnierite Ores in Gabbro.</p>
+</div><a class="anchor" id="hematite"></a><h5>赤鉄鉱</h5>
+<p>Hematite is an ore of <span style="color:#3E8A00;">Iron</span> metal. It can be found in large veins in any <a href="../the_world/geology.html#igneous_extrusive">Igneous Extrusive</a> rocks near the surface.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block27.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>Hematite Ores in Andesite.</p>
+</div><a class="anchor" id="magnetite"></a><h5>磁鉄鉱</h5>
+<p>Magnetite is an ore of <span style="color:#3E8A00;">Iron</span> metal. It can be found in large veins in any <a href="../the_world/geology.html#sedimentary">Sedimentary</a> rocks near the surface.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block28.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>Magnetite Ores in Limestone.</p>
+</div><a class="anchor" id="limonite"></a><h5>褐鉄鉱</h5>
+<p>Limonite is an ore of <span style="color:#3E8A00;">Iron</span> metal. It can be found in large veins in any <a href="../the_world/geology.html#sedimentary">Sedimentary</a> rocks near the surface.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block29.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>Limonite Ores in Chalk.</p>
+</div><a class="anchor" id="sphalerite"></a><h5>閃亜鉛鉱</h5>
+<p>Sphalerite is an ore of <span style="color:#3E8A00;">Zinc</span> metal. Small, poor veins can be found in <a href="../the_world/geology.html#igneous_extrusive">Igneous Extrusive</a> rocks near the surface, and large richer veins can be found in <a href="../the_world/geology.html#igneous_intrusive">Igneous Intrusive</a> rocks deep underground.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block30.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>Sphalerite Ores in Quartzite.</p>
+</div><a class="anchor" id="lignite"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="褐炭">
+                <img src="..\..\_images\item253.png" alt="褐炭" />
+            </span>
+            <h5>褐炭</h5>
+        </div>
+        <p>Lignite is a type of low-grade <span style="color:#3E8A00;">Coal</span> ore. It can be found in very large flat deposits near the surface in <a href="../the_world/geology.html#sedimentary">Sedimentary</a> rocks.</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block31.png" alt="Block Visualization">
+<div style="text-align: center;"><p>Lignite in Dolomite.</p>
+</div><a class="anchor" id="bituminous_coal"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="歴青炭">
+                <img src="..\..\_images\item254.png" alt="瀝青炭" />
+            </span>
+            <h5>瀝青炭</h5>
+        </div>
+        <p>Bituminous Coal is a type of mid-grade <span style="color:#3E8A00;">Coal</span> ore. It can be found in very large flat deposits near the surface in <a href="../the_world/geology.html#sedimentary">Sedimentary</a> rocks.</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block32.png" alt="Block Visualization">
+<div style="text-align: center;"><p>Bituminous Coal in Chert.</p>
+</div><a class="anchor" id="kaolinite"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Kaolin Clay">
+                <img src="..\..\_images\item115.png" alt="カオリナイト" />
+            </span>
+            <h5>カオリナイト</h5>
+        </div>
+        <p>Kaolinite is a soft <span style="color:#3E8A00;">Mineral</span> which is used in the construction of <a href="../mechanics/fire_clay.html">Fire Clay</a>. It can be found spawning at high altitudes in Plateaus, Old Mountains, and Highlands, at a <a href="../the_world/climate.html#temperature">temperature</a> of at least 18°C, with a <a href="../the_world/climate.html#rainfall">rainfall</a> of at least 300mm. The <span style="color:#3E8A00;">Blood Lily</span> flower grows on Kaolin clay.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Variants of kaolin clay.</p>
+<a class="anchor" id="graphite"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="黒鉛">
+                <img src="..\..\_images\item255.png" alt="黒鉛" />
+            </span>
+            <h5>黒鉛</h5>
+        </div>
+        <p>Graphite is a <span style="color:#3E8A00;">Mineral</span> which is used in the construction of <a href="../mechanics/fire_clay.html">Fire Clay</a>. It can be found in <span style="color:#3E8A00;">Gneiss</span>, <span style="color:#3E8A00;">Marble</span>, <span style="color:#3E8A00;">Quartzite</span>, and <span style="color:#3E8A00;">Schist</span> rocks, in elevations below y=60.</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block33.png" alt="Block Visualization">
+<div style="text-align: center;"><p>Graphite in Gneiss.</p>
+</div><a class="anchor" id="cinnabar"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="辰砂">
+                <img src="..\..\_images\item256.png" alt="辰砂" />
+            </span>
+            <h5>辰砂</h5>
+        </div>
+        <p>Cinnabar is a <span style="color:#3E8A00;">Mineral</span> which can be ground in the <a href="../mechanics/quern.html">Quern</a> to obtain <span style="color:#3E8A00;">Redstone Dust</span>. It can be found in veins deep underground, in <span style="color:#3E8A00;">Quartzite</span>, <span style="color:#3E8A00;">Granite</span>, <span style="color:#3E8A00;">Phyllite</span>, and <span style="color:#3E8A00;">Schist</span>.</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block34.png" alt="Block Visualization">
+<div style="text-align: center;"><p>Cinnabar in Quartzite.</p>
+</div><a class="anchor" id="cryolite"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="氷晶石">
+                <img src="..\..\_images\item257.png" alt="氷晶石" />
+            </span>
+            <h5>氷晶石</h5>
+        </div>
+        <p>Cryolite is a <span style="color:#3E8A00;">Mineral</span> which can be ground in the <a href="../mechanics/quern.html">Quern</a> to obtain <span style="color:#3E8A00;">Redstone Dust</span>. It can be found in veins deep underground, in <span style="color:#3E8A00;">Granite</span>, and <span style="color:#3E8A00;">Diorite</span>.</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block35.png" alt="Block Visualization">
+<div style="text-align: center;"><p>Cryolite in Granite.</p>
+</div><a class="anchor" id="saltpeter"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="硝石">
+                <img src="..\..\_images\item258.png" alt="硝石" />
+            </span>
+            <h5>硝石</h5>
+        </div>
+        <p>Saltpeter is a <span style="color:#3E8A00;">Mineral</span> which can be ground in the <a href="../mechanics/quern.html">Quern</a>, and then used in the crafting of <span style="color:#3E8A00;">Gunpowder</span>. It can be found in very large flat deposits near the surface in <a href="../the_world/geology.html#sedimentary">Sedimentary</a> rocks.</p>
+<h5></h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Saltpeter in Shale.</p>
+<a class="anchor" id="sulfur"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="硫黄">
+                <img src="..\..\_images\item215.png" alt="硫黄" />
+            </span>
+            <h5>硫黄</h5>
+        </div>
+        <p>Sulfur is a <span style="color:#3E8A00;">Mineral</span> which can be ground in the <a href="../mechanics/quern.html">Quern</a>, and then used in the crafting of <span style="color:#3E8A00;">Gunpowder</span>. It is found near lava level deep underground, in sparse but large and plentiful veins, in any <a href="../the_world/geology.html#metamorphic">Metamorphic</a> or <a href="../the_world/geology.html#igneous_intrusive">Igneous Intrusive</a> rock.</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block36.png" alt="Block Visualization">
+<div style="text-align: center;"><p>Sulfur in Gabbro.</p>
+</div><a class="anchor" id="sylvite"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="カリ岩塩">
+                <img src="..\..\_images\item259.png" alt="カリ岩塩" />
+            </span>
+            <h5>カリ岩塩</h5>
+        </div>
+        <p>Sylvite is a <span style="color:#3E8A00;">Mineral</span> which can be ground in the <a href="../mechanics/quern.html">Quern</a>, and then used as a <a href="../mechanics/fertilizers.html">Fertilizer</a>. It can be found in very large flat deposits near the surface in <span style="color:#3E8A00;">Shale</span>, <span style="color:#3E8A00;">Claystone</span> and <span style="color:#3E8A00;">Chert</span>.</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block37.png" alt="Block Visualization">
+<div style="text-align: center;"><p>Sylvite in Chert.</p>
+</div><a class="anchor" id="borax"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="ホウ砂">
+                <img src="..\..\_images\item260.png" alt="ホウ砂" />
+            </span>
+            <h5>ホウ砂</h5>
+        </div>
+        <p>Borax is a <span style="color:#3E8A00;">Mineral</span> which can be ground in the <a href="../mechanics/quern.html">Quern</a> to produce <a href="../mechanics/flux.html">Flux</a>. It can be found in very large flat deposits near the surface in <span style="color:#3E8A00;">Claystone</span>, <span style="color:#3E8A00;">Limestone</span>, and <span style="color:#3E8A00;">Shale</span>.</p>
+<h5></h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Borax in Shale.</p>
+<a class="anchor" id="gypsum"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="石膏">
+                <img src="..\..\_images\item35.png" alt="石膏" />
+            </span>
+            <h5>石膏</h5>
+        </div>
+        <p>Gypsum is a decorative <span style="color:#3E8A00;">Mineral</span> which can be used to make <a href="../mechanics/advanced_building_materials.html#alabaster">Alabaster</a>. It can be found in very large flat deposits near the surface in <a href="../the_world/geology.html#sedimentary">Sedimentary</a> rocks.</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block38.png" alt="Block Visualization">
+<div style="text-align: center;"><p>Gypsum in Chalk.</p>
+</div><a class="anchor" id="halite"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="岩塩">
+                <img src="..\..\_images\item101.png" alt="岩塩" />
+            </span>
+            <h5>岩塩</h5>
+        </div>
+        <p>Halite is a <span style="color:#3E8A00;">Mineral</span> which can be ground in the <a href="../mechanics/quern.html">Quern</a> to make <span style="color:#3E8A00;">Salt</span>, which is an important <a href="../mechanics/decay.html#salting">Preservative</a>. It can be found in very large flat deposits near the surface in <a href="../the_world/geology.html#sedimentary">Sedimentary</a> rocks.</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block39.png" alt="Block Visualization">
+<div style="text-align: center;"><p>Halite in Chalk.</p>
+</div><a class="anchor" id="emerald"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="エメラルド">
+                <img src="..\..\_images\item217.png" alt="エメラルド" />
+            </span>
+            <h5>エメラルド</h5>
+        </div>
+        <p>Emerald is a decorative <a href="../mechanics/gems.html">Gemstone</a>. It looks quite pretty, maybe if you could find someone else in this incredibly lonely world you could trade it with them...<br/>
+<br/>
+It appears in thin vertical ore formations which can be up to a hundred blocks tall. It can be found in <a href="../the_world/geology.html#igneous_intrusive">Igneous Intrusive</a> rocks.</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block40.png" alt="Block Visualization">
+<div style="text-align: center;"><p>Emerald in Diorite.</p>
+</div><a class="anchor" id="diamond"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="キンバーライト">
+                <img src="..\..\_images\item261.png" alt="キンバーライト" />
+            </span>
+            <h5>キンバーライト</h5>
+        </div>
+        <p>Kimberlite is a decorative and priceless <a href="../mechanics/gems.html">Gemstone</a>. It appears in thin vertical ore formations called <a href="https://en.wikipedia.org/wiki/Volcanic_pipe">Kimberlite Pipes</a> which can be up to a hundred blocks tall. It can only be found in <span style="color:#3E8A00;">Gabbro</span>.</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block41.png" alt="Block Visualization">
+<div style="text-align: center;"><p>Kimberlite in Gabbro.</p>
+</div><a class="anchor" id="lapis_lazuli"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="ラピスラズリ">
+                <img src="..\..\_images\item262.png" alt="ラピスラズリ" />
+            </span>
+            <h5>ラピスラズリ</h5>
+        </div>
+        <p>Lapis Lazuli is a decorative <span style="color:#3E8A00;">Mineral</span> which can be used to make <a href="../mechanics/dye.html">Blue Dye</a>. It can be found in large, but sparse veins in <span style="color:#3E8A00;">Limestone</span> and <span style="color:#3E8A00;">Marble</span>, between y=-20 and y=80.</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block42.png" alt="Block Visualization">
+<div style="text-align: center;"><p>Lapis Lazuli in Marble.</p>
+</div><a class="anchor" id="amethyst"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="アメジスト">
+                <img src="..\..\_images\item263.png" alt="Amethyst" />
+            </span>
+            <h5>Amethyst</h5>
+        </div>
+        <p>Amethyst is a decorative <span style="color:#3E8A00;">Mineral</span> which can be used to make <a href="../mechanics/glassworking.html">Glass</a>. It can be found in <span style="color:#3E8A00;">Sedimentary</span> and <span style="color:#3E8A00;">Metamorphic</span> rock beneath rivers above y=40.</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block43.png" alt="Block Visualization">
+<div style="text-align: center;"><p>Amethyst in Marble.</p>
+</div><a class="anchor" id="opal"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="オパール">
+                <img src="..\..\_images\item264.png" alt="Opal" />
+            </span>
+            <h5>Opal</h5>
+        </div>
+        <p>Opal is a decorative <span style="color:#3E8A00;">Mineral</span>. It can be found in <span style="color:#3E8A00;">Sedimentary) and <span style="color:#3E8A00;">Igneous Extrusive</span></span> rock beneath rivers above y=40.</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block44.png" alt="Block Visualization">
+<div style="text-align: center;"><p>Opal in Basalt.</p>
+</div>
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '';
+      window._CURRENT_LANG = 'ja_jp';
+    </script>
+
+    <script src="/static/metadata.js"></script>
+    <script src="/static/tooltips.js"></script>
+    <script src="/static/versions.js"></script>
+  </body>
+</html>

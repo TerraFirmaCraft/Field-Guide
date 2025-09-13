@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Minecarts | TFC Field Guide" />
+    <meta name="description" content="Minecarts" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="Minecarts | TFC Field Guide" />
+    <meta property="og:description" content="Minecarts" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/item175.png" />
+
+    <title>Minecarts | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">群巒傳說 手冊</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> 版本 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 繁體中文(台灣)
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/mechanics\minecarts.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\minecarts.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\minecarts.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\minecarts.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\minecarts.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\minecarts.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\minecarts.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\minecarts.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/mechanics\minecarts.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>目錄</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">主頁</a></li>
+            <li><a href="../the_world/">這個世界</a></li>
+<li><a href="../getting_started/">新手入門</a></li>
+<li><a href="../mechanics/">進階內容</a><ul><li><a href="./advanced_building_materials.html">高階建築材料</a></li>
+<li><a href="./animal_husbandry.html">畜牧業</a></li>
+<li><a href="./anvils.html">砧</a></li>
+<li><a href="./aqueducts.html">水渠</a></li>
+<li><a href="./armor.html">盔甲</a></li>
+<li><a href="./armor_trims.html">Armor Trims</a></li>
+<li><a href="./barrels.html">大桶</a></li>
+<li><a href="./bellows.html">風箱</a></li>
+<li><a href="./blast_furnace.html">建造高爐</a></li>
+<li><a href="./bloomery.html">鍛鐵爐</a></li>
+<li><a href="./bowls.html">Bowls</a></li>
+<li><a href="./bread.html">烤麵包</a></li>
+<li><a href="./charcoal_forge.html">木炭爐</a></li>
+<li><a href="./charcoal_pit.html">木炭坑</a></li>
+<li><a href="./chisel.html">鑿子</a></li>
+<li><a href="./composter.html">Composter</a></li>
+<li><a href="./crankshaft.html">Crankshafts</a></li>
+<li><a href="./crops.html">農作物</a></li>
+<li><a href="./crucible.html">坩堝</a></li>
+<li><a href="./dairy.html">乳製品</a></li>
+<li><a href="./damage_types.html">傷害型別</a></li>
+<li><a href="./decay.html">食物保鮮</a></li>
+<li><a href="./dye.html">Dye</a></li>
+<li><a href="./fertilizers.html">堆肥</a></li>
+<li><a href="./fire_clay.html">耐火粘土</a></li>
+<li><a href="./fishing.html">釣魚</a></li>
+<li><a href="./flux.html">助焊劑</a></li>
+<li><a href="./gems.html">寶石</a></li>
+<li><a href="./glassworking.html">Glassworking</a></li>
+<li><a href="./glassworking_applications.html">Glass Products</a></li>
+<li><a href="./grill.html">篝火燒烤</a></li>
+<li><a href="./heating.html">加熱</a></li>
+<li><a href="./hydration.html">保持土壤溼潤</a></li>
+<li><a href="./jarring.html">Jarring</a></li>
+<li><a href="./lamps.html">燈</a></li>
+<li><a href="./leather_making.html">制皮術</a></li>
+<li><a href="./lighting.html">光源</a></li>
+<li><a href="./mechanical_power.html">Mechanical Power</a></li>
+<li><a href="./minecarts.html">Minecarts</a></li>
+<li><a href="./panning.html">淘金</a></li>
+<li><a href="./papermaking.html">Papermaking</a></li>
+<li><a href="./pets.html">寵物</a></li>
+<li><a href="./pot.html">篝火大鍋</a></li>
+<li><a href="./powderkegs.html">火藥桶</a></li>
+<li><a href="./prospecting.html">勘探</a></li>
+<li><a href="./pumps.html">Pumps</a></li>
+<li><a href="./quern.html">手推磨</a></li>
+<li><a href="./salad.html">沙拉</a></li>
+<li><a href="./sandwiches.html">三明治</a></li>
+<li><a href="./scribing_table.html">命名臺</a></li>
+<li><a href="./sewing_table.html">Sewing Table</a></li>
+<li><a href="./sluices.html">洗礦槽</a></li>
+<li><a href="./steel.html">鍊鋼</a></li>
+<li><a href="./support_beams.html">Support Beams & Collapses</a></li>
+<li><a href="./weaving.html">札札弄機杼</a></li>
+<li><a href="./wooden_buckets.html">木桶</a></li></ul></li>
+<li><a href="../firmalife/">(Addon) Firmalife擴充套件模組</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">進階內容</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Minecarts</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\item175.png" alt="Minecarts" title="木棉木運輸礦車" /><span>Minecarts</span>
+        </h1>
+                <p><span style="color:#3E8A00;">Minecarts</span> are a means of transporting players, entities, and large blocks. Blocks that would normally <a href="../getting_started/size_and_weight.html#overburdening">overburden</a> the player can be transported in minecarts. <a href="../mechanics/decay.html#large_vessels">Large Vessels</a>, <a href="../mechanics/barrels.html">Barrels</a>, <a href="../mechanics/powderkegs.html">Powderkegs</a>, <a href="../mechanics/anvils.html">Anvils</a>, and <a href="../mechanics/crucible.html">Crucibles</a> can be added to carts by pressing both <span style="color:#b0b;">右鍵</span> and <span style="color:#b0b;">Shift</span>. Using <span style="color:#b0b;">Shift</span> with an empty hand removes the block. Crafting recipes for minecart items can either be done with <span style="color:#3E8A00;">Iron</span> or <span style="color:#3E8A00;">Steel</span>, with the steel-based recipes being more productive.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="鍛鐵棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item177.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="鍛鐵棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item177.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="鍛鐵棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item177.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="紅石火把" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item178.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="鍛鐵棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item177.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="鍛鐵棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item177.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="鍛鐵棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item177.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="觸發鐵軌" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">4</p>
+                    <img class="recipe-item" src="..\..\_images\item176.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="鋼棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item174.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="鋼棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item174.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="鋼棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item174.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="紅石火把" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item178.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="鋼棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item174.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="鋼棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item174.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="鋼棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item174.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="觸發鐵軌" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">8</p>
+                    <img class="recipe-item" src="..\..\_images\item176.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="鍛鐵棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item177.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="鍛鐵棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item177.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="鍛鐵棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item177.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #minecraft:stone_pressure_plates" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="鍛鐵棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item177.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="鍛鐵棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item177.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="紅石粉" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item171.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="鍛鐵棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item177.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="感測鐵軌" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">4</p>
+                    <img class="recipe-item" src="..\..\_images\item179.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="鋼棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item174.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="鋼棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item174.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="鋼棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item174.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #minecraft:stone_pressure_plates" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="鋼棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item174.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="鋼棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item174.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="紅石粉" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item171.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="鋼棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item174.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="感測鐵軌" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">8</p>
+                    <img class="recipe-item" src="..\..\_images\item179.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="鍛鐵薄板" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item55.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="鍛鐵薄板" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item55.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="鍛鐵薄板" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item55.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="鍛鐵薄板" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item55.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="鍛鐵薄板" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item55.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="礦車" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item180.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="鋼薄板" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item173.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="鋼薄板" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item173.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="鋼薄板" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item173.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="鋼薄板" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item173.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="鋼薄板" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item173.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="礦車" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">2</p>
+                    <img class="recipe-item" src="..\..\_images\item180.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="鍛鐵棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item177.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="鍛鐵棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item177.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="鍛鐵棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item177.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="鍛鐵棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item177.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="鍛鐵棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item177.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="鍛鐵棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item177.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="鐵軌" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">32</p>
+                    <img class="recipe-item" src="..\..\_images\item181.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="鋼棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item174.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="鋼棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item174.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="鋼棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item174.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="鋼棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item174.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="鋼棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item174.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="鋼棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item174.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="鐵軌" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">64</p>
+                    <img class="recipe-item" src="..\..\_images\item181.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="金棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item183.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="金棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item183.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="金棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item183.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="紅石粉" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item171.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="金棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item183.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="金棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item183.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="金棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item183.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="動力鐵軌" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">16</p>
+                    <img class="recipe-item" src="..\..\_images\item182.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="木棉木箱子" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="礦車" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item180.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="木棉木運輸礦車" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item175.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">Chest minecarts</span> operate the same as regular TFC chests, in that they only have 18 slots and cannot hold very large items like logs.</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '';
+      window._CURRENT_LANG = 'zh_tw';
+    </script>
+
+    <script src="/static/metadata.js"></script>
+    <script src="/static/tooltips.js"></script>
+    <script src="/static/versions.js"></script>
+  </body>
+</html>

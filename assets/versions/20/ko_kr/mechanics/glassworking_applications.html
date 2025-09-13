@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Glass Products | TFC Field Guide" />
+    <meta name="description" content="Glass Products" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="Glass Products | TFC Field Guide" />
+    <meta property="og:description" content="Glass Products" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/item137.png" />
+
+    <title>Glass Products | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft 도감</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> 버전 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 한국어
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/mechanics\glassworking_applications.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\glassworking_applications.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\glassworking_applications.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\glassworking_applications.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\glassworking_applications.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\glassworking_applications.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\glassworking_applications.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\glassworking_applications.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/mechanics\glassworking_applications.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>목차</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">색인</a></li>
+            <li><a href="../the_world/">세계</a></li>
+<li><a href="../getting_started/">시작하기</a></li>
+<li><a href="../mechanics/">심화 기술</a><ul><li><a href="./advanced_building_materials.html">발전된 재료</a></li>
+<li><a href="./animal_husbandry.html">축산업</a></li>
+<li><a href="./anvils.html">모루</a></li>
+<li><a href="./aqueducts.html">수로</a></li>
+<li><a href="./armor.html">갑옷</a></li>
+<li><a href="./armor_trims.html">Armor Trims</a></li>
+<li><a href="./barrels.html">통</a></li>
+<li><a href="./bellows.html">풀무</a></li>
+<li><a href="./blast_furnace.html">용광로</a></li>
+<li><a href="./bloomery.html">괴철로</a></li>
+<li><a href="./bowls.html">Bowls</a></li>
+<li><a href="./bread.html">빵</a></li>
+<li><a href="./charcoal_forge.html">숯불 노</a></li>
+<li><a href="./charcoal_pit.html">숯 구덩이</a></li>
+<li><a href="./chisel.html">끌</a></li>
+<li><a href="./composter.html">Composter</a></li>
+<li><a href="./crankshaft.html">Crankshafts</a></li>
+<li><a href="./crops.html">작물</a></li>
+<li><a href="./crucible.html">도가니</a></li>
+<li><a href="./dairy.html">유제품</a></li>
+<li><a href="./damage_types.html">피해 종류</a></li>
+<li><a href="./decay.html">음식 보존</a></li>
+<li><a href="./dye.html">Dye</a></li>
+<li><a href="./fertilizers.html">비료</a></li>
+<li><a href="./fire_clay.html">내화점토</a></li>
+<li><a href="./fishing.html">낚시</a></li>
+<li><a href="./flux.html">플럭스</a></li>
+<li><a href="./gems.html">보석</a></li>
+<li><a href="./glassworking.html">Glassworking</a></li>
+<li><a href="./glassworking_applications.html">Glass Products</a></li>
+<li><a href="./grill.html">모닥불과 석쇠</a></li>
+<li><a href="./heating.html">가열하기</a></li>
+<li><a href="./hydration.html">작물 수화</a></li>
+<li><a href="./jarring.html">Jarring</a></li>
+<li><a href="./lamps.html">램프</a></li>
+<li><a href="./leather_making.html">가죽 제작</a></li>
+<li><a href="./lighting.html">광원</a></li>
+<li><a href="./mechanical_power.html">Mechanical Power</a></li>
+<li><a href="./minecarts.html">Minecarts</a></li>
+<li><a href="./panning.html">사금질</a></li>
+<li><a href="./papermaking.html">Papermaking</a></li>
+<li><a href="./pets.html">반려동물</a></li>
+<li><a href="./pot.html">모닥불과 냄비</a></li>
+<li><a href="./powderkegs.html">화약통</a></li>
+<li><a href="./prospecting.html">광물 탐색</a></li>
+<li><a href="./pumps.html">Pumps</a></li>
+<li><a href="./quern.html">맷돌</a></li>
+<li><a href="./salad.html">샐러드</a></li>
+<li><a href="./sandwiches.html">샌드위치</a></li>
+<li><a href="./scribing_table.html">필기대</a></li>
+<li><a href="./sewing_table.html">Sewing Table</a></li>
+<li><a href="./sluices.html">세광통</a></li>
+<li><a href="./steel.html">강철</a></li>
+<li><a href="./support_beams.html">Support Beams & Collapses</a></li>
+<li><a href="./weaving.html">직조</a></li>
+<li><a href="./wooden_buckets.html">나무 양동이</a></li></ul></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">심화 기술</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Glass Products</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\item137.png" alt="Glass Products" title="유리" /><span>Glass Products</span>
+        </h1>
+                <p>The most simple glass products are <span style="color:#3E8A00;">Glass Panes</span> and <span style="color:#3E8A00;">Glass Blocks</span>. In order to craft them, you must start with a <a href="../mechanics/glassworking.html#blowpipe">Blowpipe</a> with a <span style="color:#3E8A00;">Glass Batch</span>, and then perform a <span style="color:#3E8A00;">Pour</span>.<br/>
+</p>
+<ul>
+	<li><strong>Table Pours</strong> are used to create <span style="color:#3E8A00;">Glass Panes</span></li>
+	<li><strong>Basin Pours</strong> are used to create <span style="color:#3E8A00;">Glass Blocks</span></li>
+</ul>
+<p>Glass can also be <span style="color:#3E8A00;">dyed</span> before it is poured to create colored glass. The color is dependent on the type of glass batch, and any powders that have been added.<br/>
+<br/>
+Each type of <span style="color:#3E8A00;">Glass Batch</span> has a different natural color of glass that they will create. <span style="color:#3E8A00;">Silica</span> glass batches can be made into many colors, <span style="color:#3E8A00;">Olivine</span>, and <span style="color:#3E8A00;">Volcanic</span> glass can be made into relatively few colors.</p>
+<h5>Table Pour</h5>
+<p><span style="color:#3E8A00;">Glass Panes</span> are made with a <span style="color:#3E8A00;">Table Pour</span>. A pouring table is made by placing up to sixteen <span style="color:#3E8A00;">Brass Plated Blocks</span> in a continuous area.<br/>
+<br/>
+ 1. Add a <a href="../mechanics/glassworking.html">Glass Batch</a> to a <span style="color:#3E8A00;">Blowpipe</span>.<br/>
+ 2. Heat the blowpipe to <span style="color:#AA0000;"><strong>Faint Red</strong></span>.<br/>
+ 3. <span style="color:#b0b;">오른쪽 버튼</span> the <span style="color:#3E8A00;">Blowpipe</span> on the top of the table.<br/>
+ 4. Finally <span style="color:#b0b;">오른쪽 버튼</span> with a <a href="../mechanics/glassworking.html#paddle">Paddle</a> to flatten the glass.</p>
+
+<div id="content24" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#content24" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        
+<button type="button" data-bs-target="#content24" data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+<button type="button" data-bs-target="#content24" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+    </div>
+    <div class="carousel-inner">
+        
+<div class="carousel-item active">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image65.png" alt="tfc:textures/gui/book/tutorial/glass_panes_1.png">
+</div>
+
+<div class="carousel-item ">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image66.png" alt="tfc:textures/gui/book/tutorial/glass_panes_2.png">
+</div>
+
+<div class="carousel-item ">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image67.png" alt="tfc:textures/gui/book/tutorial/glass_panes_3.png">
+</div>
+
+    </div>
+    <button type="button" class="carousel-control-prev" data-bs-target="#content24" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button type="button" class="carousel-control-next" data-bs-target="#content24" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<div style="text-align: center;"><p>Once the glass is cooled, it can be broken with a <a href="../mechanics/glassworking.html#saw">Gem Saw</a> to obtain.</p>
+</div><h5>Basin Pour</h5>
+<p><span style="color:#3E8A00;">Glass Blocks</span> are made with a <span style="color:#3E8A00;">Basin Pour</span>. A basin is made by surrounding all sides of an air block except the top with <span style="color:#3E8A00;">Brass Plated Blocks</span>.<br/>
+<br/>
+ 1. Add a <a href="../mechanics/glassworking.html">Glass Batch</a> to a <span style="color:#3E8A00;">Blowpipe</span>.<br/>
+ 2. Heat the blowpipe to <span style="color:#AA0000;"><strong>Faint Red</strong></span>.<br/>
+ 3. <span style="color:#b0b;">오른쪽 버튼</span> the <span style="color:#3E8A00;">Blowpipe</span> on the top of the table.</p>
+
+<div id="content25" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#content25" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        
+<button type="button" data-bs-target="#content25" data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+<button type="button" data-bs-target="#content25" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+    </div>
+    <div class="carousel-inner">
+        
+<div class="carousel-item active">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image68.png" alt="tfc:textures/gui/book/tutorial/glass_block_1.png">
+</div>
+
+<div class="carousel-item ">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image69.png" alt="tfc:textures/gui/book/tutorial/glass_block_2.png">
+</div>
+
+<div class="carousel-item ">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image70.png" alt="tfc:textures/gui/book/tutorial/glass_block_3.png">
+</div>
+
+    </div>
+    <button type="button" class="carousel-control-prev" data-bs-target="#content25" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button type="button" class="carousel-control-next" data-bs-target="#content25" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<div style="text-align: center;"><p>Once the glass is cooled, it can be broken with a <a href="../mechanics/glassworking.html#saw">Gem Saw</a> to obtain.</p>
+</div><a class="anchor" id="coloring"></a><h5>Coloring Glass</h5>
+<p>Glass has a natural color based on the type of <a href="../mechanics/glassworking.html">Glass Batch</a> that was used. Other colors can be made using a <a href="../mechanics/bowls.html">Bowl</a>.<br/>
+<br/>
+To use, place the <a href="../mechanics/bowls.html">Bowl</a> on the ground, then <span style="color:#b0b;">오른쪽 버튼</span> the required <span style="color:#3E8A00;">Powder</span>. Before <span style="color:#3E8A00;">Pouring</span>, use the <span style="color:#3E8A00;">Blowpipe</span> on the bowl to add the powder to the batch.</p>
+<p><br/>
+<br/>
+The next pages show the different combinations of glass types and powder materials to create each color.</p>
+<h5>Dye Colors</h5>
+<p></p>
+<ul>
+	<li><strong><span style="color:#AAAAAA;">White</span></strong>: Silica or Hematitic Glass + <span style="color:#3E8A00;">Soda Ash</span></li>
+	<li><strong><span style="color:#000000;">Black</span></strong>: Any Glass + <span style="color:#3E8A00;">Graphite</span></li>
+	<li><strong><span style="color:#555555;">Gray</span></strong>: Any + <span style="color:#3E8A00;">Graphite</span> + <span style="color:#3E8A00;">Soda Ash</span></li>
+	<li><strong><span style="color:#AAAAAA;">Light Gray</span></strong>: Any + <span style="color:#3E8A00;">Graphite</span> + 2x <span style="color:#3E8A00;">Soda Ash</span></li>
+	<li><strong><span style="color:#AA00AA;">Purple</span></strong>: Any + <span style="color:#3E8A00;">Iron</span> + <span style="color:#3E8A00;">Copper</span></li>
+	<li><strong><span style="color:#964b00;">Brown</span></strong>: Any + <span style="color:#3E8A00;">Nickel</span></li>
+	<li><strong><span style="color:#00AAAA;">Cyan</span></strong>: Non-Volcanic Glass + <span style="color:#3E8A00;">Copper</span> + <span style="color:#3E8A00;">Sapphire</span></li>
+	<li><strong><span style="color:#00AA00;">Green</span></strong>: Silica or Hematitic Glass + <span style="color:#3E8A00;">Iron</span></li>
+</ul>
+<p></p>
+<ul>
+	<li><strong><span style="color:#55FF55;">Lime</span></strong>: Silica or Hematitic Glass + <span style="color:#3E8A00;">Iron</span> + <span style="color:#3E8A00;">Soda Ash</span></li>
+	<li><strong><span style="color:#55FFFF;">Light Blue</span></strong>: Silica Glass + <span style="color:#3E8A00;">Lapis Lazuli</span></li>
+	<li><strong><span style="color:#0000AA;">Blue</span></strong>: Silica Glass + <span style="color:#3E8A00;">Copper</span></li>
+	<li><strong><span style="color:#AA0000;">Red</span></strong>: Silica or Hematitic Glass + <span style="color:#3E8A00;">Tin</span></li>
+	<li><strong><span style="color:#FFAA00;">Yellow</span></strong>: Silica or Hematitic Glass + <span style="color:#3E8A00;">Silver</span></li>
+	<li><strong><span style="color:#ef8e38;">Orange</span></strong>: Silica Glass + <span style="color:#3E8A00;">Pyrite</span></li>
+	<li><strong><span style="color:#AA00AA;">Magenta</span></strong>: Silica or Hematitic Glass + <span style="color:#3E8A00;">Ruby</span></li>
+	<li><strong><span style="color:#FF55FF;">Pink</span></strong>: Silica Glass + <span style="color:#3E8A00;">Gold</span></li>
+	<li><strong><span style="color:#000000;">Tinted</span></strong>: Non-Silica Glass + <span style="color:#3E8A00;">Amethyst</span></li>
+</ul>
+<hr><a class="anchor" id="lamp_glass"></a>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:glass_batches" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item138.gif" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="램프 유리" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item139.png" />
+            </div>
+        </div>
+    </div>
+    <h4>Steps</h4><ol><li><p>불기</p></li><li>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="꼬집기">
+                <img src="..\..\_images\item140.png" alt="잭스" />
+            </span>
+            <p>꼬집기</p>
+        </div>
+        </li><li>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="평평하게">
+                <img src="..\..\_images\item135.png" alt="패들" />
+            </span>
+            <p>평평하게</p>
+        </div>
+        </li><li><p>불기</p></li><li>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="절삭">
+                <img src="..\..\_images\item136.png" alt="보석 톱" />
+            </span>
+            <p>절삭</p>
+        </div>
+        </li></ol><p><span style="color:#3E8A00;">Lamp Glass</span> is a necessary component to craft <a href="../mechanics/lamps.html">Lamps</a>.</p>
+<a class="anchor" id="jar"></a>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:glass_batches_tier_2" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item141.gif" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="빈 병" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item142.png" />
+            </div>
+        </div>
+    </div>
+    <h4>Steps</h4><ol><li><p>불기</p></li><li>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="꼬집기">
+                <img src="..\..\_images\item140.png" alt="잭스" />
+            </span>
+            <p>꼬집기</p>
+        </div>
+        </li><li>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="말기">
+                <img src="..\..\_images\item143.png" alt="양털 천" />
+            </span>
+            <p>말기</p>
+        </div>
+        </li><li>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="절삭">
+                <img src="..\..\_images\item136.png" alt="보석 톱" />
+            </span>
+            <p>절삭</p>
+        </div>
+        </li></ol><p><a href="../mechanics/jarring.html">Jars</a> are also made from blown glass, but only silica or hematitic glass.</p>
+<a class="anchor" id="glass_bottle"></a>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="석영 유리 덩어리" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item128.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="유리 병" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item127.png" />
+            </div>
+        </div>
+    </div>
+    <h4>Steps</h4><ol><li><p>불기</p></li><li>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="꼬집기">
+                <img src="..\..\_images\item140.png" alt="잭스" />
+            </span>
+            <p>꼬집기</p>
+        </div>
+        </li><li>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="절삭">
+                <img src="..\..\_images\item136.png" alt="보석 톱" />
+            </span>
+            <p>절삭</p>
+        </div>
+        </li></ol><p><span style="color:#3E8A00;">Glass Bottles</span> can also be made. The quality of the glass bottle depends on the type of glass used to make it.</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="석영 유리 덩어리" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item128.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="렌즈" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item144.png" />
+            </div>
+        </div>
+    </div>
+    <h4>Steps</h4><ol><li><p>불기</p></li><li><p>늘이기</p></li><li>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="말기">
+                <img src="..\..\_images\item143.png" alt="양털 천" />
+            </span>
+            <p>말기</p>
+        </div>
+        </li><li>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="절삭">
+                <img src="..\..\_images\item136.png" alt="보석 톱" />
+            </span>
+            <p>절삭</p>
+        </div>
+        </li></ol><p>The <span style="color:#3E8A00;">Lens</span> is used for crafting the spyglass, compasses, and daylight sensors.</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API 뮨서
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '';
+      window._CURRENT_LANG = 'ko_kr';
+    </script>
+
+    <script src="/static/metadata.js"></script>
+    <script src="/static/tooltips.js"></script>
+    <script src="/static/versions.js"></script>
+  </body>
+</html>

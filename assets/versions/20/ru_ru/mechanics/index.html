@@ -1,0 +1,910 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Продвинутая механика | TFC Field Guide" />
+    <meta name="description" content="Продвинутая механика" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="Продвинутая механика | TFC Field Guide" />
+    <meta property="og:description" content="Продвинутая механика" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/splash_120.png" />
+
+    <title>Продвинутая механика | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">Справочник TerraFirmaCraft</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Версия 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> Русский
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/mechanics/" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics/" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics/" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics/" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics/" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics/" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics/" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics/" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/mechanics/" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Содержание</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Главная</a></li>
+            <li><a href="../the_world/">Мир</a></li>
+<li><a href="../getting_started/">Начало работы</a></li>
+<li><a href="../mechanics/">Продвинутая механика</a><ul><li><a href="./advanced_building_materials.html">Продвинутые материалы</a></li>
+<li><a href="./animal_husbandry.html">Животноводство</a></li>
+<li><a href="./anvils.html">Наковальни</a></li>
+<li><a href="./aqueducts.html">Акведуки</a></li>
+<li><a href="./armor.html">Броня</a></li>
+<li><a href="./armor_trims.html">Отделка брони</a></li>
+<li><a href="./barrels.html">Бочки</a></li>
+<li><a href="./bellows.html">Меха</a></li>
+<li><a href="./blast_furnace.html">Доменная печь</a></li>
+<li><a href="./bloomery.html">Сыродутный горн</a></li>
+<li><a href="./bowls.html">Чаши</a></li>
+<li><a href="./bread.html">Хлеб</a></li>
+<li><a href="./charcoal_forge.html">Угольная кузница</a></li>
+<li><a href="./charcoal_pit.html">Угольная яма</a></li>
+<li><a href="./chisel.html">Долото</a></li>
+<li><a href="./composter.html">Компостер</a></li>
+<li><a href="./crankshaft.html">Коленчатые валы</a></li>
+<li><a href="./crops.html">Культуры</a></li>
+<li><a href="./crucible.html">Тигель</a></li>
+<li><a href="./dairy.html">Молочные продукты</a></li>
+<li><a href="./damage_types.html">Типы урона</a></li>
+<li><a href="./decay.html">Сохранение</a></li>
+<li><a href="./dye.html">Красители</a></li>
+<li><a href="./fertilizers.html">Удобрения</a></li>
+<li><a href="./fire_clay.html">Огнеупорная глина</a></li>
+<li><a href="./fishing.html">Рыбалка</a></li>
+<li><a href="./flux.html">Флюс</a></li>
+<li><a href="./gems.html">Драгоценные камни</a></li>
+<li><a href="./glassworking.html">Стеклоделие</a></li>
+<li><a href="./glassworking_applications.html">Стеклянные изделия</a></li>
+<li><a href="./grill.html">Кострище и гриль</a></li>
+<li><a href="./heating.html">Нагревание</a></li>
+<li><a href="./hydration.html">Поддержание увлажненности</a></li>
+<li><a href="./jarring.html">Заготовка в банках</a></li>
+<li><a href="./lamps.html">Лампы</a></li>
+<li><a href="./leather_making.html">Выделка кожи</a></li>
+<li><a href="./lighting.html">Источники света</a></li>
+<li><a href="./mechanical_power.html">Механическая энергия</a></li>
+<li><a href="./minecarts.html">Вагонетки</a></li>
+<li><a href="./panning.html">Промывка в лотке</a></li>
+<li><a href="./papermaking.html">Производство бумаги</a></li>
+<li><a href="./pets.html">Домашние животные</a></li>
+<li><a href="./pot.html">Кострище и котелок</a></li>
+<li><a href="./powderkegs.html">Пороховые бочки</a></li>
+<li><a href="./prospecting.html">Поиск месторождений</a></li>
+<li><a href="./pumps.html">Насосы</a></li>
+<li><a href="./quern.html">Жернов</a></li>
+<li><a href="./salad.html">Салаты</a></li>
+<li><a href="./sandwiches.html">Бутерброды</a></li>
+<li><a href="./scribing_table.html">Стол для письма</a></li>
+<li><a href="./sewing_table.html">Швейный стол</a></li>
+<li><a href="./sluices.html">Рудопромывочный желоб</a></li>
+<li><a href="./steel.html">Сталь</a></li>
+<li><a href="./support_beams.html">Опоры и обвалы</a></li>
+<li><a href="./weaving.html">Ткачество</a></li>
+<li><a href="./wooden_buckets.html">Деревянные ведра</a></li></ul></li>
+<li><a href="../firmalife/">(Дополнение) Firmalife</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                <li class="breadcrumb-item active" aria-current="page">Продвинутая механика</li>
+            
+            </ol>
+          </nav>
+
+          
+                <h1 class="mb-4">Продвинутая механика</h1>
+                <p><p>Продвинутые разделы технологического дерева, от первой кирки и до цветной стали.<br/>
+<br/>
+<br/>
+<strong>Примечание: </strong> вы можете искать записи, просто начав печатать в любом месте!</p>
+</p>
+                <div class="row row-cols-1 row-cols-md-3 g-3">
+                    
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item33.png" alt="Продвинутые материалы" />
+            <a href="advanced_building_materials.html">Продвинутые материалы</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item48.png" alt="Животноводство" />
+            <a href="animal_husbandry.html">Животноводство</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="Наковальни" />
+            <a href="anvils.html">Наковальни</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="Акведуки" />
+            <a href="aqueducts.html">Акведуки</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\placeholder_16.png" alt="Броня" />
+            <a href="armor.html">Броня</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item513.png" alt="Отделка брони" />
+            <a href="armor_trims.html">Отделка брони</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\placeholder_16.png" alt="Бочки" />
+            <a href="barrels.html">Бочки</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="Меха" />
+            <a href="bellows.html">Меха</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item59.png" alt="Доменная печь" />
+            <a href="blast_furnace.html">Доменная печь</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="Сыродутный горн" />
+            <a href="bloomery.html">Сыродутный горн</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item65.png" alt="Чаши" />
+            <a href="bowls.html">Чаши</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image50.png" alt="Хлеб" />
+            <a href="bread.html">Хлеб</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image51.png" alt="Угольная кузница" />
+            <a href="charcoal_forge.html">Угольная кузница</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item81.png" alt="Угольная яма" />
+            <a href="charcoal_pit.html">Угольная яма</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item82.png" alt="Долото" />
+            <a href="chisel.html">Долото</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image56.png" alt="Компостер" />
+            <a href="composter.html">Компостер</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="Коленчатые валы" />
+            <a href="crankshaft.html">Коленчатые валы</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image57.png" alt="Культуры" />
+            <a href="crops.html">Культуры</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="Тигель" />
+            <a href="crucible.html">Тигель</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image60.png" alt="Молочные продукты" />
+            <a href="dairy.html">Молочные продукты</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item97.png" alt="Типы урона" />
+            <a href="damage_types.html">Типы урона</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item98.png" alt="Сохранение" />
+            <a href="decay.html">Сохранение</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item102.png" alt="Красители" />
+            <a href="dye.html">Красители</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item107.png" alt="Удобрения" />
+            <a href="fertilizers.html">Удобрения</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item112.png" alt="Огнеупорная глина" />
+            <a href="fire_clay.html">Огнеупорная глина</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item116.png" alt="Рыбалка" />
+            <a href="fishing.html">Рыбалка</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item56.png" alt="Флюс" />
+            <a href="flux.html">Флюс</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item122.png" alt="Драгоценные камни" />
+            <a href="gems.html">Драгоценные камни</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item127.png" alt="Стеклоделие" />
+            <a href="glassworking.html">Стеклоделие</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item137.png" alt="Стеклянные изделия" />
+            <a href="glassworking_applications.html">Стеклянные изделия</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item145.png" alt="Кострище и гриль" />
+            <a href="grill.html">Кострище и гриль</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image72.png" alt="Нагревание" />
+            <a href="heating.html">Нагревание</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image73.png" alt="Поддержание увлажненности" />
+            <a href="hydration.html">Поддержание увлажненности</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item148.png" alt="Заготовка в банках" />
+            <a href="jarring.html">Заготовка в банках</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item154.png" alt="Лампы" />
+            <a href="lamps.html">Лампы</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item163.png" alt="Выделка кожи" />
+            <a href="leather_making.html">Выделка кожи</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="Источники света" />
+            <a href="lighting.html">Источники света</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="Механическая энергия" />
+            <a href="mechanical_power.html">Механическая энергия</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item175.png" alt="Вагонетки" />
+            <a href="minecarts.html">Вагонетки</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image78.png" alt="Промывка в лотке" />
+            <a href="panning.html">Промывка в лотке</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item185.png" alt="Производство бумаги" />
+            <a href="papermaking.html">Производство бумаги</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item199.png" alt="Домашние животные" />
+            <a href="pets.html">Домашние животные</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item200.png" alt="Кострище и котелок" />
+            <a href="pot.html">Кострище и котелок</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="Пороховые бочки" />
+            <a href="powderkegs.html">Пороховые бочки</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item207.png" alt="Поиск месторождений" />
+            <a href="prospecting.html">Поиск месторождений</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="Насосы" />
+            <a href="pumps.html">Насосы</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="Жернов" />
+            <a href="quern.html">Жернов</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image87.png" alt="Салаты" />
+            <a href="salad.html">Салаты</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image88.png" alt="Бутерброды" />
+            <a href="sandwiches.html">Бутерброды</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item54.png" alt="Стол для письма" />
+            <a href="scribing_table.html">Стол для письма</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="Швейный стол" />
+            <a href="sewing_table.html">Швейный стол</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image91.png" alt="Рудопромывочный желоб" />
+            <a href="sluices.html">Рудопромывочный желоб</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item230.png" alt="Сталь" />
+            <a href="steel.html">Сталь</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="Опоры и обвалы" />
+            <a href="support_beams.html">Опоры и обвалы</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item238.png" alt="Ткачество" />
+            <a href="weaving.html">Ткачество</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item249.png" alt="Деревянные ведра" />
+            <a href="wooden_buckets.html">Деревянные ведра</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+                </div>
+            
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> Документация API
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '';
+      window._CURRENT_LANG = 'ru_ru';
+    </script>
+
+    <script src="/static/metadata.js"></script>
+    <script src="/static/tooltips.js"></script>
+    <script src="/static/versions.js"></script>
+  </body>
+</html>

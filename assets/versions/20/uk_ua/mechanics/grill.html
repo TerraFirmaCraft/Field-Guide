@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Багаття та гриль | TFC Field Guide" />
+    <meta name="description" content="Багаття та гриль" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="Багаття та гриль | TFC Field Guide" />
+    <meta property="og:description" content="Багаття та гриль" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/item145.png" />
+
+    <title>Багаття та гриль | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">Польовий посібник TerraFirmaCraft</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Версія 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> Українська мова
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/mechanics\grill.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\grill.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\grill.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\grill.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\grill.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\grill.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\grill.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\grill.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/mechanics\grill.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Зміст</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Зміст</a></li>
+            <li><a href="../the_world/">Світ</a></li>
+<li><a href="../getting_started/">Починаємо</a></li>
+<li><a href="../mechanics/">Розширена механіка</a><ul><li><a href="./advanced_building_materials.html">Передові матеріали</a></li>
+<li><a href="./animal_husbandry.html">Тваринництво</a></li>
+<li><a href="./anvils.html">Ковадло</a></li>
+<li><a href="./aqueducts.html">Акведук</a></li>
+<li><a href="./armor.html">Броня (обладунки)</a></li>
+<li><a href="./armor_trims.html">Armor Trims</a></li>
+<li><a href="./barrels.html">Діжки</a></li>
+<li><a href="./bellows.html">Міхи</a></li>
+<li><a href="./blast_furnace.html">Доменна піч</a></li>
+<li><a href="./bloomery.html">Сиродутне горно</a></li>
+<li><a href="./bowls.html">Bowls</a></li>
+<li><a href="./bread.html">Хліб</a></li>
+<li><a href="./charcoal_forge.html">Ковальське горно</a></li>
+<li><a href="./charcoal_pit.html">Вуглярка</a></li>
+<li><a href="./chisel.html">Долото</a></li>
+<li><a href="./composter.html">Компостер</a></li>
+<li><a href="./crankshaft.html">Crankshafts</a></li>
+<li><a href="./crops.html">Городина</a></li>
+<li><a href="./crucible.html">Тигель</a></li>
+<li><a href="./dairy.html">Молочні продукти</a></li>
+<li><a href="./damage_types.html">Види пошкоджень</a></li>
+<li><a href="./decay.html">Консервація</a></li>
+<li><a href="./dye.html">Dye</a></li>
+<li><a href="./fertilizers.html">Добрива</a></li>
+<li><a href="./fire_clay.html">Вогнетривка глина</a></li>
+<li><a href="./fishing.html">Рибальство</a></li>
+<li><a href="./flux.html">Флюс</a></li>
+<li><a href="./gems.html">Дорогоцінне каміння</a></li>
+<li><a href="./glassworking.html">Glassworking</a></li>
+<li><a href="./glassworking_applications.html">Glass Products</a></li>
+<li><a href="./grill.html">Багаття та гриль</a></li>
+<li><a href="./heating.html">Нагрівання</a></li>
+<li><a href="./hydration.html">Зрошування</a></li>
+<li><a href="./jarring.html">Jarring</a></li>
+<li><a href="./lamps.html">Ліхтарі</a></li>
+<li><a href="./leather_making.html">Обробка шкіри</a></li>
+<li><a href="./lighting.html">Освітлення</a></li>
+<li><a href="./mechanical_power.html">Mechanical Power</a></li>
+<li><a href="./minecarts.html">Вагонетка</a></li>
+<li><a href="./panning.html">Промивання</a></li>
+<li><a href="./papermaking.html">Виготовлення паперу</a></li>
+<li><a href="./pets.html">Улюбленці</a></li>
+<li><a href="./pot.html">Багаття та казан</a></li>
+<li><a href="./powderkegs.html">Порохова бочка</a></li>
+<li><a href="./prospecting.html">Геологорозвідка</a></li>
+<li><a href="./pumps.html">Pumps</a></li>
+<li><a href="./quern.html">Млин</a></li>
+<li><a href="./salad.html">Салати</a></li>
+<li><a href="./sandwiches.html">Бутерброди</a></li>
+<li><a href="./scribing_table.html">Стіл писаря</a></li>
+<li><a href="./sewing_table.html">Sewing Table</a></li>
+<li><a href="./sluices.html">Мийний жолоб</a></li>
+<li><a href="./steel.html">Сталь</a></li>
+<li><a href="./support_beams.html">Support Beams & Collapses</a></li>
+<li><a href="./weaving.html">Ткацтво</a></li>
+<li><a href="./wooden_buckets.html">Дерев'яні відра</a></li></ul></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">Розширена механіка</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Багаття та гриль</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\item145.png" alt="Багаття та гриль" title="Гриль на багатті" /><span>Багаття та гриль</span>
+        </h1>
+                <p><span style="color:#3E8A00;">Гриль</span> - це предмет, який можна додати до багаття для більш ефективного приготування їжі . Гриль здатний готувати п’ять страв одночасно, а також надає цим стравам <span style="color:#3E8A00;">смажено на деревному вугіллі</span>, що незначно, але підвищує <a href="../mechanics/decay.html">термін придатності</a>. Щоб створити багаття з грилем, треба спочатку створити саме <a href="../getting_started/firepit.html">багаття</a>, а потім вже на нього встановити <span style="color:#3E8A00;">гриль з кованого заліза</span>.</p>
+<h5>Гриль на багатті</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Перегляньте польовий посібник у Minecraft, щоб побачити цей мультиблок.">Mультиблок</span></p>
+        </div>
+        <p></p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="Подвійний лист ковкого заліза" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item146.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="Решітка з ковкого заліза" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item147.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>Рівень III</p>
+        </div>
+        <p>Гриль створюється шляхом обробки <span style="color:#3E8A00;">подвійного листа ковкого заліза</span> на <a href="../mechanics/anvils.html">ковадлі</a>.<br/>
+<br/>
+На наступній сторінці показано інтерфейс гриля. Як і звичайне багаття, він має чотири слоти для палива, яке потрібно додати у верхній слот. Є індикатор температури та п’ять слотів для нагрівання предметів замість одного.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image71.png" alt="tfc:textures/gui/book/gui/grill.png">
+<div style="text-align: center;"><p>Інтерфейс гриля</p>
+</div>
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Документація
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '';
+      window._CURRENT_LANG = 'uk_ua';
+    </script>
+
+    <script src="/static/metadata.js"></script>
+    <script src="/static/tooltips.js"></script>
+    <script src="/static/versions.js"></script>
+  </body>
+</html>

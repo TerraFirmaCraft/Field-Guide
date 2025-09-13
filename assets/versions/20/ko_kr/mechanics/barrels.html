@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="통 | TFC Field Guide" />
+    <meta name="description" content="통" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="통 | TFC Field Guide" />
+    <meta property="og:description" content="통" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/" />
+
+    <title>통 | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft 도감</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> 버전 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 한국어
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/mechanics\barrels.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\barrels.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\barrels.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\barrels.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\barrels.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\barrels.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\barrels.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\barrels.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/mechanics\barrels.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>목차</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">색인</a></li>
+            <li><a href="../the_world/">세계</a></li>
+<li><a href="../getting_started/">시작하기</a></li>
+<li><a href="../mechanics/">심화 기술</a><ul><li><a href="./advanced_building_materials.html">발전된 재료</a></li>
+<li><a href="./animal_husbandry.html">축산업</a></li>
+<li><a href="./anvils.html">모루</a></li>
+<li><a href="./aqueducts.html">수로</a></li>
+<li><a href="./armor.html">갑옷</a></li>
+<li><a href="./armor_trims.html">Armor Trims</a></li>
+<li><a href="./barrels.html">통</a></li>
+<li><a href="./bellows.html">풀무</a></li>
+<li><a href="./blast_furnace.html">용광로</a></li>
+<li><a href="./bloomery.html">괴철로</a></li>
+<li><a href="./bowls.html">Bowls</a></li>
+<li><a href="./bread.html">빵</a></li>
+<li><a href="./charcoal_forge.html">숯불 노</a></li>
+<li><a href="./charcoal_pit.html">숯 구덩이</a></li>
+<li><a href="./chisel.html">끌</a></li>
+<li><a href="./composter.html">Composter</a></li>
+<li><a href="./crankshaft.html">Crankshafts</a></li>
+<li><a href="./crops.html">작물</a></li>
+<li><a href="./crucible.html">도가니</a></li>
+<li><a href="./dairy.html">유제품</a></li>
+<li><a href="./damage_types.html">피해 종류</a></li>
+<li><a href="./decay.html">음식 보존</a></li>
+<li><a href="./dye.html">Dye</a></li>
+<li><a href="./fertilizers.html">비료</a></li>
+<li><a href="./fire_clay.html">내화점토</a></li>
+<li><a href="./fishing.html">낚시</a></li>
+<li><a href="./flux.html">플럭스</a></li>
+<li><a href="./gems.html">보석</a></li>
+<li><a href="./glassworking.html">Glassworking</a></li>
+<li><a href="./glassworking_applications.html">Glass Products</a></li>
+<li><a href="./grill.html">모닥불과 석쇠</a></li>
+<li><a href="./heating.html">가열하기</a></li>
+<li><a href="./hydration.html">작물 수화</a></li>
+<li><a href="./jarring.html">Jarring</a></li>
+<li><a href="./lamps.html">램프</a></li>
+<li><a href="./leather_making.html">가죽 제작</a></li>
+<li><a href="./lighting.html">광원</a></li>
+<li><a href="./mechanical_power.html">Mechanical Power</a></li>
+<li><a href="./minecarts.html">Minecarts</a></li>
+<li><a href="./panning.html">사금질</a></li>
+<li><a href="./papermaking.html">Papermaking</a></li>
+<li><a href="./pets.html">반려동물</a></li>
+<li><a href="./pot.html">모닥불과 냄비</a></li>
+<li><a href="./powderkegs.html">화약통</a></li>
+<li><a href="./prospecting.html">광물 탐색</a></li>
+<li><a href="./pumps.html">Pumps</a></li>
+<li><a href="./quern.html">맷돌</a></li>
+<li><a href="./salad.html">샐러드</a></li>
+<li><a href="./sandwiches.html">샌드위치</a></li>
+<li><a href="./scribing_table.html">필기대</a></li>
+<li><a href="./sewing_table.html">Sewing Table</a></li>
+<li><a href="./sluices.html">세광통</a></li>
+<li><a href="./steel.html">강철</a></li>
+<li><a href="./support_beams.html">Support Beams & Collapses</a></li>
+<li><a href="./weaving.html">직조</a></li>
+<li><a href="./wooden_buckets.html">나무 양동이</a></li></ul></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">심화 기술</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">통</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">통</h1>
+                <p><span style="color:#3E8A00;">통</span>은 아이템과 액체를 보관할 수 있는 장치입니다. 중앙 슬롯에는 아이템을 넣을 수 있습니다. 액체는 왼쪽에 있는 칸에 보여지며, <span style="color:#3E8A00;">양동이</span>나 <span style="color:#3E8A00;">주전자</span>를 왼쪽 위 슬롯에 넣어 추가할 수 있습니다. 같은 슬롯에 빈 양동이나 주전자를 넣으면 액체를 제거할 수 있습니다. 아니면 양동이를 들고 통에 <span style="color:#b0b;">오른쪽 버튼</span>을 눌러도 됩니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image45.png" alt="tfc:textures/gui/book/gui/barrel.png">
+<div style="text-align: center;"><p>통 인터페이스.</p>
+</div><p>통은 <span style="color:#3E8A00;">밀봉</span>될 수 있습니다. 통을 밀봉하면 부숴도 내용물이 보존됩니다. 통으로는 또한 여러 가지 아이템을 제작할 수 있습니다. 인터페이스에서 오른쪽의 회색 버튼으로 밀봉 상태를 조절할 수 있습니다. 웅크린 채로 통을 클릭해도 밀봉 상태를 조절할 수 있습니다.</p>
+<h5>통 관련 팁</h5>
+<p></p>
+<ul>
+	<li>통을 들고 액체 블록을 클릭하면 통을 채울 수 있습니다.</li>
+	<li>비가 올 때는 통이 서서히 물로 채워집니다</li>
+	<li>통 위에서 고드름이 녹으면 물이 통에 채워집니다</li>
+	<li>통을 밀봉하면 중앙 슬롯을 제외한 다른 슬롯에 있는 아이템들이 빠져나옵니다.</li>
+</ul>
+<h5>제작</h5>
+<p>통은 여러 액체들과 아이템을 섞기 위한 중요한 장치입니다. <span style="color:#3E8A00;">통</span> 제작법으로 제작하기 위해서는 통이 올바른 비율의 액체와 아이템으로 채워져야 합니다. 어떤 제작법은 통을 <span style="color:#3E8A00;">밀봉</span>하고 기다려야 완성할 수 있습니다.</p>
+<p>통에 있는 아이템과 액체의 비율이 조합법과 맞지 않다면, 초과된 액체나 아이템은 소멸됩니다. 그러나 제작법이.</p>
+<a class="anchor" id="limewater"></a>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/2to2.png" />
+            
+        <div class="crafting-recipe-item two-recipe-pos-1">
+            <span href="#" data-bs-toggle="tooltip" title="플럭스" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\item56.png" />
+            
+        </div>
+        
+            
+        <div class="crafting-recipe-item two-recipe-pos-2">
+            <span href="#" data-bs-toggle="tooltip" title="물" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\fluid1.png" />
+            
+        </div>
+        
+            
+            
+        <div class="crafting-recipe-item two-recipe-pos-4">
+            <span href="#" data-bs-toggle="tooltip" title="석회수" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\fluid2.png" />
+            
+        </div>
+        
+            
+        </div>
+    </div>
+    <a class="anchor" id="tannin"></a>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/2to2.png" />
+            
+        <div class="crafting-recipe-item two-recipe-pos-1">
+            <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:makes_tannin" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\item57.gif" />
+            
+        </div>
+        
+            
+        <div class="crafting-recipe-item two-recipe-pos-2">
+            <span href="#" data-bs-toggle="tooltip" title="물" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\fluid1.png" />
+            
+        </div>
+        
+            
+            
+        <div class="crafting-recipe-item two-recipe-pos-4">
+            <span href="#" data-bs-toggle="tooltip" title="탄닌" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\fluid3.png" />
+            
+        </div>
+        
+            
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>8000 Ticks</p>
+        </div>
+        
+        </div>
+    </div>
+    <p>어떤 통 제작법은 두 개의 액체를 섞어서 제작됩니다. 이 작업은 하나의 재료로 채워진 통에 다른 재료로 채운 양동이를 액체 추가 슬롯에 넣어서 진행할 수 있습니다. 이런 방식의 제작법에는 <span style="color:#3E8A00;">식초</span>를 <span style="color:#3E8A00;">우유</span>가 담긴 통에 9:1 비율로 추가해서 만드는 <span style="color:#3E8A00;">버터밀크</span> 등이 있습니다. 식초를 같은 비율로 <span style="color:#3E8A00;">바닷물</span>에 추가하면 <span style="color:#3E8A00;">염수</span>가 됩니다.</p>
+<p>통은 또한 <a href="../mechanics/heating.html">뜨거운</a> 아이템들을 식힐 수 있습니다. <span style="color:#3E8A00;">물</span>, <span style="color:#3E8A00;">올리브유</span>, 또는 <span style="color:#3E8A00;">바닷물</span>이 담긴 통에 뜨거운 아이템을 넣으면 아이템의 온도가 빠르게 낮아집니다.</p>
+<p>Barrels have the ability to <a href="../mechanics/dye.html">Dye</a> and <a href="../mechanics/dye.html#lye">Bleach</a> items. Most color-able things, like carpet, candles, and <a href="../mechanics/advanced_building_materials.html#alabaster">Alabaster</a> can be dyed by sealing them in a barrel of dye or bleached by sealing them in a barrel of lye. See the dye chapter for more information.</p>
+<p>통은 <span style="color:#3E8A00;">식초</span>로 음식을 보존할 수 있습니다. 식초는 <span style="color:#3E8A00;">과일</span>을 <span style="color:#3E8A00;">술</span>이 담긴 통에 밀봉하여 만들 수 있습니다. 자세한 내용은 <a href="../mechanics/decay.html#vinegar">여기</a>에서 확인할 수 있습니다.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="비계" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="통 걸이" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>Barrels placed against the side of a block work the same as vertical barrels, but have restrictions on placement. For example, they must have a <span style="color:#3E8A00;">Barrel Rack</span> added to them with <span style="color:#b0b;">오른쪽 버튼</span> in order to have another sideways barrel above them.</p>
+<h5>Sideways Barrels</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p>Sideways barrels show their sealed state using the <span style="color:#3E8A00;">Tap</span>. If the tap is sideways, it is sealed.</p>
+<p>Unsealed sideways barrels automatically drain their fluid into open barrels (and other fluid containers) placed below the tap. The block the tap extends into must be a free air block in order for fluid to be able to drain.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image46.png" alt="tfc:textures/gui/book/tutorial/barrel_drip.png">
+<div style="text-align: center;"><p>A barrel dripping.</p>
+</div>
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API 뮨서
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '';
+      window._CURRENT_LANG = 'ko_kr';
+    </script>
+
+    <script src="/static/metadata.js"></script>
+    <script src="/static/tooltips.js"></script>
+    <script src="/static/versions.js"></script>
+  </body>
+</html>

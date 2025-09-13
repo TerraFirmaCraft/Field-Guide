@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Primitive Alloys | TFC Field Guide" />
+    <meta name="description" content="Primitive Alloys" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="Primitive Alloys | TFC Field Guide" />
+    <meta property="og:description" content="Primitive Alloys" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/" />
+
+    <title>Primitive Alloys | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft Field Guide</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Version 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> English
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/getting_started\primitive_alloys.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\primitive_alloys.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\primitive_alloys.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\primitive_alloys.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\primitive_alloys.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\primitive_alloys.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\primitive_alloys.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\primitive_alloys.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/getting_started\primitive_alloys.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Contents</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Index</a></li>
+            <li><a href="../the_world/">The World</a></li>
+<li><a href="../getting_started/">Getting Started</a><ul><li><a href="./introduction.html">Introduction</a></li>
+<li><a href="./firepit.html">Pits of Fire</a></li>
+<li><a href="./pottery.html">Pottery</a></li>
+<li><a href="./pit_kiln.html">Pit Kilns</a></li>
+<li><a href="./finding_ores.html">Ores, Metal, and Casting</a></li>
+<li><a href="./primitive_alloys.html">Primitive Alloys</a></li>
+<li><a href="./primitive_anvils.html">Primitive Anvils</a></li>
+<li><a href="./building_materials.html">Building Materials</a></li>
+<li><a href="./a_place_to_sleep.html">A Place to Sleep</a></li>
+<li><a href="./size_and_weight.html">Size and Weight</a></li>
+<li><a href="./food_and_water.html">Food and Water</a></li></ul></li>
+<li><a href="../mechanics/">Advanced Mechanics</a></li>
+<li><a href="../bsa/">(Addon) Better Stone Age</a></li>
+<li><a href="../artisanal/">(Addon) Artisanal</a></li>
+<li><a href="../beneath/">(Addon) Beneath</a></li>
+<li><a href="../firmalife/">(Addon) Firmalife</a></li>
+<li><a href="../lithicaddon/">(Addon) Lithic Addon</a></li>
+<li><a href="../lithiccoins/">(Addon) Lithic Coins</a></li>
+<li><a href="../roadsandroofs/">(Addon) Roads and Roofs</a></li>
+<li><a href="../arborfirmacraft/">(Addon) ArborFirmaCraft</a></li>
+<li><a href="../firmaciv/">(Addon) Firma: Civilization</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">Getting Started</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Primitive Alloys</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">Primitive Alloys</h1>
+                <p><span style="color:#3E8A00;">Alloys</span> are a method of mixing two or more metals together, to create a new, stronger metal. During the early game, while copper is a useful metal for creating tools, the next tier of metal is one of three types of <span style="color:#3E8A00;">Bronze</span>. An alloy is made up of component <span style="color:#3E8A00;">metals</span> which must each satisfy a specific percentage of the overall whole.</p>
+<p>One method through which alloys can be made during the early game is through the usage of a <span style="color:#3E8A00;">Small Vessel</span>. The process is very similar to <a href="../getting_started/finding_ores.html#casting">Casting</a>. However, instead of using just a single metal, place enough ore pieces inside the vessel in the correct ratio to form a known alloy mix.</p>
+<p>For example, to create 1000 mB of <span style="color:#3E8A00;">Bronze</span> (shown to the right), you would need between 880 and 920 mB of <span style="color:#3E8A00;">Copper</span>, and between 80 and 120 mB of <span style="color:#3E8A00;">Tin</span>.<br/>
+<br/>
+The next three pages show the recipes of the three bronzes. Each type of bronze can be used to make tools, <a href="../mechanics/armor.html">Armor</a>, and other metal items. They are slightly different so resulting tools will have different durability, efficiency, and attack damage.</p>
+
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Bronze Ingot">
+                <img src="..\..\_images\item27.png" alt="Bronze" />
+            </span>
+            <h5>Bronze</h5>
+        </div>
+        <p><br/>
+<strong>Requirements:</strong><br/>
+</p>
+<ul>
+	<li>88 - 92 % : <span style="color:#3E8A00;">Copper</span></li>
+	<li>8 - 12 % : <span style="color:#3E8A00;">Tin</span></li>
+</ul><p><br/>
+</p>
+
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Bismuth Bronze Ingot">
+                <img src="..\..\_images\item28.png" alt="Bismuth Bronze" />
+            </span>
+            <h5>Bismuth Bronze</h5>
+        </div>
+        <p><br/>
+<strong>Requirements:</strong><br/>
+</p>
+<ul>
+	<li>20 - 30 % : <span style="color:#3E8A00;">Zinc</span></li>
+	<li>50 - 65 % : <span style="color:#3E8A00;">Copper</span></li>
+	<li>10 - 20 % : <span style="color:#3E8A00;">Bismuth</span></li>
+</ul><p><br/>
+</p>
+
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Black Bronze Ingot">
+                <img src="..\..\_images\item29.png" alt="Black Bronze" />
+            </span>
+            <h5>Black Bronze</h5>
+        </div>
+        <p><br/>
+<strong>Requirements:</strong><br/>
+</p>
+<ul>
+	<li>50 - 70 % : <span style="color:#3E8A00;">Copper</span></li>
+	<li>10 - 25 % : <span style="color:#3E8A00;">Silver</span></li>
+	<li>10 - 25 % : <span style="color:#3E8A00;">Gold</span></li>
+</ul><p><br/>
+</p>
+<h5>Utility Alloys</h5>
+<p>Other alloys are not suitable for creating tools. These are <span style="color:#3E8A00;">Brass</span>, <span style="color:#3E8A00;">Rose Gold</span>, and <span style="color:#3E8A00;">Sterling Silver</span>.<br/>
+<br/>
+<span style="color:#3E8A00;">Brass</span> is a useful alloy for all sorts of contraptions, including <a href="../mechanics/mechanical_power.html">Mechanical Power</a>.<br/>
+<br/>
+<span style="color:#3E8A00;">Rose Gold</span> and <span style="color:#3E8A00;">Sterling Silver</span> are used for crafting <a href="../mechanics/steel.html#red_steel">Red Steel</a> and <a href="../mechanics/steel.html#blue_steel">Blue Steel</a>.</p>
+<a class="anchor" id="brass"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Brass Ingot">
+                <img src="..\..\_images\item30.png" alt="Brass" />
+            </span>
+            <h5>Brass</h5>
+        </div>
+        <p><br/>
+<strong>Requirements:</strong><br/>
+</p>
+<ul>
+	<li>88 - 92 % : <span style="color:#3E8A00;">Copper</span></li>
+	<li>8 - 12 % : <span style="color:#3E8A00;">Zinc</span></li>
+</ul><p><br/>
+</p>
+
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Rose Gold Ingot">
+                <img src="..\..\_images\item31.png" alt="Rose Gold" />
+            </span>
+            <h5>Rose Gold</h5>
+        </div>
+        <p><br/>
+<strong>Requirements:</strong><br/>
+</p>
+<ul>
+	<li>15 - 30 % : <span style="color:#3E8A00;">Copper</span></li>
+	<li>70 - 85 % : <span style="color:#3E8A00;">Gold</span></li>
+</ul><p><br/>
+</p>
+
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Sterling Silver Ingot">
+                <img src="..\..\_images\item32.png" alt="Sterling Silver" />
+            </span>
+            <h5>Sterling Silver</h5>
+        </div>
+        <p><br/>
+<strong>Requirements:</strong><br/>
+</p>
+<ul>
+	<li>20 - 40 % : <span style="color:#3E8A00;">Copper</span></li>
+	<li>60 - 80 % : <span style="color:#3E8A00;">Silver</span></li>
+</ul><p><br/>
+</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '';
+      window._CURRENT_LANG = 'en_us';
+    </script>
+
+    <script src="/static/metadata.js"></script>
+    <script src="/static/tooltips.js"></script>
+    <script src="/static/versions.js"></script>
+  </body>
+</html>

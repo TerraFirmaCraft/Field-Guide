@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Sloops | TFC Field Guide" />
+    <meta name="description" content="Sloops" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="Sloops | TFC Field Guide" />
+    <meta property="og:description" content="Sloops" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/item363.png" />
+
+    <title>Sloops | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft Field Guide</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Version 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> English
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/firmaciv\sloop.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/firmaciv\sloop.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/firmaciv\sloop.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/firmaciv\sloop.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/firmaciv\sloop.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/firmaciv\sloop.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/firmaciv\sloop.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/firmaciv\sloop.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/firmaciv\sloop.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Contents</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Index</a></li>
+            <li><a href="../the_world/">The World</a></li>
+<li><a href="../getting_started/">Getting Started</a></li>
+<li><a href="../mechanics/">Advanced Mechanics</a></li>
+<li><a href="../bsa/">(Addon) Better Stone Age</a></li>
+<li><a href="../artisanal/">(Addon) Artisanal</a></li>
+<li><a href="../beneath/">(Addon) Beneath</a></li>
+<li><a href="../firmalife/">(Addon) Firmalife</a></li>
+<li><a href="../lithicaddon/">(Addon) Lithic Addon</a></li>
+<li><a href="../lithiccoins/">(Addon) Lithic Coins</a></li>
+<li><a href="../roadsandroofs/">(Addon) Roads and Roofs</a></li>
+<li><a href="../arborfirmacraft/">(Addon) ArborFirmaCraft</a></li>
+<li><a href="../firmaciv/">(Addon) Firma: Civilization</a><ul><li><a href="./watercraft.html">Getting Started: Boats</a></li>
+<li><a href="./canoe.html">Dugout Canoes</a></li>
+<li><a href="./kayak.html">Kayaks</a></li>
+<li><a href="./rowboat.html">Rowboats</a></li>
+<li><a href="./sloop.html">Sloops</a></li>
+<li><a href="./cannon.html">Cannons</a></li>
+<li><a href="./navigation.html">Navigation</a></li></ul></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">(Addon) Firma: Civilization</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Sloops</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\item363.png" alt="Sloops" title="ICON ONLY" /><span>Sloops</span>
+        </h1>
+                <p>Steel Age already? Well, I guess it's high time you built yourself a proper ship. The sloop is 4 blocks wide and over 8 blocks long, an impressive upgrade from the rowboat! It holds up to 13 containers and up to 7 passengers, and, depending on the wind, can sail extremely fast. It can also carry up to 6 cannons!</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image127.png" alt="firmaciv:textures/gui/book/sloop_isometric.png">
+<div style="text-align: center;"></div><p>The sloop is expensive, however, requiring a wealth of steel, copper, wool, and other materials. But materials aren't the only cost! You'll have to learn how to sail, as well, and it can take some practice! You'll also likely want to build docks and other infrastructure if you plan on bringing your ship in close to shore.</p>
+<p>Here is bill of materials for constructing the sloop:<br/>
+<br/>
+12 Steel Ingots<br/>
+24 Copper Ingots<br/>
+648 Lumber<br/>
+34 Logs<br/>
+24 Wool Cloth<br/>
+6 String<br/>
+72 Jute Fiber</p>
+<h5>Scaffolding</h5>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Shipwright's Scaffolding" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Shipwright's Scaffolding" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Flat Shipwright's Scaffolding" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">2</p>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>Much like a rowboat, you'll start with Shipwright's Scaffolding. However, you'll also need a new flat variant for larger ships.</p>
+<h5>Sloop Scaffolding</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Shipwright's Scaffolding arranged in order to construct a sloop hull.</p>
+<p>Next, you'll need to add planks of suitably a strong hardwood:<br/>
+<br/>
+Acacia<br/>
+Ash<br/>
+Aspen<br/>
+Birch<br/>
+Blackwood<br/>
+Chestnut<br/>
+Hickory<br/>
+Maple<br/>
+Oak<br/>
+Rosewood<br/>
+Sycamore</p>
+<h5>Sloop Scaffolding</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Four planks have been added to each scaffold.</p>
+<h5>Sloop Scaffolding</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Using a hammer in your offhand, add four copper bolts to each scaffold. Copper bolts are smithed from copper ingots.</p>
+<h5>Sloop Scaffolding</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Finally, add the cleats to the hull. These are smithed from steel double ingots.</p>
+<p>Building the hull is only the first step of sloop construction, however! After the hull is complete, look for the blue hammer icon and use <span style="color:#b0b;">Right Click</span> to add the items that show next to your crosshair, building out the rest of the ship.<br/>
+<br/>
+The following pages contain recipes for unique items you'll need to complete the construction.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Wool Cloth" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item143.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Wool Yarn" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item120.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Wool Yarn" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item120.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Wool Cloth" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item143.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Wool Cloth" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item143.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Wool Yarn" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item120.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Wool Cloth" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item143.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Wool Cloth" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item143.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Wool Cloth" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item143.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Small Sail" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item364.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Wool Yarn" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item120.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Small Sail" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item364.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Wool Yarn" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item120.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Small Sail" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item364.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Small Sail" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item364.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Wool Yarn" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item120.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Medium Sail" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item365.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Jute Fiber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item160.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Jute Fiber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item160.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Jute Fiber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item160.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Jute Fiber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item160.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Jute Fiber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item160.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Jute Fiber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item160.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Jute Fiber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item160.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Jute Fiber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item160.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Jute Fiber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item160.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Jute Rope" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item366.png" />
+                </div>
+            </div>
+        </div>
+        <p>You'll also need to add an anchor, which is smithed from a Steel Double Sheet.</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '';
+      window._CURRENT_LANG = 'en_us';
+    </script>
+
+    <script src="/static/metadata.js"></script>
+    <script src="/static/tooltips.js"></script>
+    <script src="/static/versions.js"></script>
+  </body>
+</html>

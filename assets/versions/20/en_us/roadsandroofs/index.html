@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="(Addon) Roads and Roofs | TFC Field Guide" />
+    <meta name="description" content="(Addon) Roads and Roofs" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="(Addon) Roads and Roofs | TFC Field Guide" />
+    <meta property="og:description" content="(Addon) Roads and Roofs" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/splash_120.png" />
+
+    <title>(Addon) Roads and Roofs | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft Field Guide</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Version 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> English
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/roadsandroofs/" class="dropdown-item">English</a>
+<a href="../../ja_jp/roadsandroofs/" class="dropdown-item">日本語</a>
+<a href="../../pt_br/roadsandroofs/" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/roadsandroofs/" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/roadsandroofs/" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/roadsandroofs/" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/roadsandroofs/" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/roadsandroofs/" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/roadsandroofs/" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Contents</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Index</a></li>
+            <li><a href="../the_world/">The World</a></li>
+<li><a href="../getting_started/">Getting Started</a></li>
+<li><a href="../mechanics/">Advanced Mechanics</a></li>
+<li><a href="../bsa/">(Addon) Better Stone Age</a></li>
+<li><a href="../artisanal/">(Addon) Artisanal</a></li>
+<li><a href="../beneath/">(Addon) Beneath</a></li>
+<li><a href="../firmalife/">(Addon) Firmalife</a></li>
+<li><a href="../lithicaddon/">(Addon) Lithic Addon</a></li>
+<li><a href="../lithiccoins/">(Addon) Lithic Coins</a></li>
+<li><a href="../roadsandroofs/">(Addon) Roads and Roofs</a><ul><li><a href="./making_a_road.html">Making a Road</a></li>
+<li><a href="./hoggin.html">Hoggin Paths</a></li>
+<li><a href="./gravel_roads.html">Gravel and Macadam Roads</a></li>
+<li><a href="./stone_roads.html">Stone Roads</a></li>
+<li><a href="./concrete_roads.html">Concrete Roads</a></li>
+<li><a href="./making_a_roof.html">Making a Roof</a></li></ul></li>
+<li><a href="../arborfirmacraft/">(Addon) ArborFirmaCraft</a></li>
+<li><a href="../firmaciv/">(Addon) Firma: Civilization</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                <li class="breadcrumb-item active" aria-current="page">(Addon) Roads and Roofs</li>
+            
+            </ol>
+          </nav>
+
+          
+                <h1 class="mb-4">(Addon) Roads and Roofs</h1>
+                <p><p>Using the Roads and Roofs Addon</p>
+</p>
+                <div class="row row-cols-1 row-cols-md-3 g-3">
+                    
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item494.png" alt="Making a Road" />
+            <a href="making_a_road.html">Making a Road</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\placeholder_16.png" alt="Hoggin Paths" />
+            <a href="hoggin.html">Hoggin Paths</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\placeholder_16.png" alt="Gravel and Macadam Roads" />
+            <a href="gravel_roads.html">Gravel and Macadam Roads</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\placeholder_16.png" alt="Stone Roads" />
+            <a href="stone_roads.html">Stone Roads</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\placeholder_16.png" alt="Concrete Roads" />
+            <a href="concrete_roads.html">Concrete Roads</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\placeholder_16.png" alt="Making a Roof" />
+            <a href="making_a_roof.html">Making a Roof</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+                </div>
+            
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '';
+      window._CURRENT_LANG = 'en_us';
+    </script>
+
+    <script src="/static/metadata.js"></script>
+    <script src="/static/tooltips.js"></script>
+    <script src="/static/versions.js"></script>
+  </body>
+</html>

@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Печи | TFC Field Guide" />
+    <meta name="description" content="Печи" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="Печи | TFC Field Guide" />
+    <meta property="og:description" content="Печи" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/" />
+
+    <title>Печи | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">Справочник TerraFirmaCraft</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Версия 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> Русский
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/firmalife\ovens.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/firmalife\ovens.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/firmalife\ovens.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/firmalife\ovens.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/firmalife\ovens.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/firmalife\ovens.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/firmalife\ovens.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/firmalife\ovens.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/firmalife\ovens.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Содержание</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Главная</a></li>
+            <li><a href="../the_world/">Мир</a></li>
+<li><a href="../getting_started/">Начало работы</a></li>
+<li><a href="../mechanics/">Продвинутая механика</a></li>
+<li><a href="../firmalife/">(Дополнение) Firmalife</a><ul><li><a href="./differences_from_tfc.html">Отличия от TFC</a></li>
+<li><a href="./cheese.html">Сыр</a></li>
+<li><a href="./climate_station.html">Климатическая станция</a></li>
+<li><a href="./cellar.html">Погреба</a></li>
+<li><a href="./food_shelves.html">Полки для продуктов</a></li>
+<li><a href="./hangers.html">Вешалки</a></li>
+<li><a href="./jarbnet.html">Стеллажи для банок</a></li>
+<li><a href="./greenhouse.html">Теплица</a></li>
+<li><a href="./irrigation.html">Орошение</a></li>
+<li><a href="./planters.html">Лотки для рассады</a></li>
+<li><a href="./beekeeping.html">Пчеловодство</a></li>
+<li><a href="./stainless_steel.html">Нержавеющая сталь</a></li>
+<li><a href="./drying.html">Сушка</a></li>
+<li><a href="./smoking.html">Копчение</a></li>
+<li><a href="./ovens.html">Печи</a></li>
+<li><a href="./oven_appliances.html">Устройства для печей</a></li>
+<li><a href="./bread.html">Хлеб</a></li>
+<li><a href="./more_fertilizer.html">Дополнительные варианты удобрений</a></li>
+<li><a href="./mixing_bowl.html">Смесительная чаша</a></li>
+<li><a href="./herbs_and_spices.html">Травы и специи</a></li>
+<li><a href="./fruit_trees.html">Фрукты Firmalife</a></li>
+<li><a href="./berry_bushes.html">Ягодные кусты</a></li>
+<li><a href="./chocolate.html">Шоколад</a></li>
+<li><a href="./wine.html">Виноделие</a></li>
+<li><a href="./wine_consumption.html">Потребление вина</a></li>
+<li><a href="./pie.html">Пирог</a></li>
+<li><a href="./pizza.html">Пицца</a></li>
+<li><a href="./pasta.html">Паста</a></li>
+<li><a href="./burritos_and_tacos.html">Буррито и Тако</a></li></ul></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">(Дополнение) Firmalife</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Печи</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">Печи</h1>
+                <p><span style="color:#3E8A00;">Печи</span> — отличный способ приготовить много еды, увеличив срок ее хранения. Еда, приготовленная в печи, портится на 90% медленнее, чем обычная еда. Печи представляют собой многоблочную конструкцию, состоящую из <span style="color:#3E8A00;">Нижней части печи</span>, <span style="color:#3E8A00;">Верхней части печи</span> и, необязательно, <span style="color:#3E8A00;">Дымоходов</span>. Эти блоки изначально представляют собой глину и должны быть <span style="color:#3E8A00;">Закалены</span> путем повышения их температуры до определенного уровня в течение достаточно длительного времени.<br/>
+<a href="../firmalife/oven_appliances.html">Принадлежности для печей</a> расширяют функциональность печей.</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image112.png" alt="Recipe: firmalife:clay_knapping/oven_top">
+        </div>
+    </div>
+</div>
+<p>Рецепт для верхней части печи.</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image113.png" alt="Recipe: firmalife:clay_knapping/oven_bottom">
+        </div>
+    </div>
+</div>
+<p>Рецепт для нижней части печи.</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image114.png" alt="Recipe: firmalife:clay_knapping/oven_chimney">
+        </div>
+    </div>
+</div>
+<p>Рецепт для дымохода печи.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Кирпич" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item313.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Строительный раствор" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item38.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Кирпич" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item313.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Строительный раствор" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item38.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Кирпич" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item313.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Строительный раствор" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item38.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Кирпич" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item313.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Строительный раствор" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item38.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Кирпич" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item313.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Кирпичи" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">2</p>
+                    <img class="recipe-item" src="..\..\_images\item312.png" />
+                </div>
+            </div>
+        </div>
+        <p>Печи изолированы с помощью <span style="color:#3E8A00;">Кирпичей</span>, других блоков печи или любых материалов, которые могут изолировать кузницу. Это означает, что вы можете использовать каменные блоки, если хотите!</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Миска" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item66.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Лопатка пекаря" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">Лопатка</span> — единственный безопасный способ извлечь горячие предметы из печи. Просто <span style="color:#b0b;">ПКМ</span> на ней, держа ее в руках, чтобы забрать предметы. Иначе вы можете обжечься!</p>
+<p>Сначала печь состоит из верхней части печи, установленной поверх нижней части. Все стороны каждой части печи, кроме передней, должны быть покрыты изоляционными блоками печи, как описано на двух предыдущих страницах. Вы можете использовать <span style="color:#3E8A00;">Дымоходы</span> в качестве изоляции. Установка стопки дымоходов непосредственно за печью позволяет дыму из печи подниматься и выходить из нее. Если вы этого не сделаете, дым быстро заполнит ваш дом, что очень отвлекает!</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Пример конструкции печи, не закалённой и закалённой.</p>
+<p>Нижняя часть печи используется для топлива, которым могут быть только поленья. Нажмите <span style="color:#b0b;">ПКМ</span>, чтобы добавить или удалить их. Нижняя часть печи также является той частью, которую можно зажечь с помощью <span style="color:#3E8A00;">Кресала</span> или другого инструмента. Она передает содержащееся в ней тепло в верхнюю часть печи.</p>
+<p>В верхней части печи находятся предметы, которые готовятся. Она будет забирать тепло от нижней части печи и медленно отдавать его с течением времени. Это означает, что даже если ваше топливо закончится, верхняя часть печи может продолжать работать некоторое время. Добавление предметов в нее так же просто, как нажатие <span style="color:#b0b;">ПКМ</span>. Не забудьте использовать <span style="color:#3E8A00;">Лопатку</span> для извлечения предметов после приготовления.</p>
+<p>Закалка печных блоков проста, но требует терпения. Просто запустите нижнюю часть печи, как обычно, и подождите. Если печной блок находится выше 600 градусов в течение примерно 80 секунд, он закалится сам и все окружающие его печные блоки. Эффект закалки будет распространяться по всем близлежащим дымоходам.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Лист кованого железа" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item55.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Воск" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item268.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Флюс" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item315.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Изоляция печи" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item314.png" />
+                </div>
+            </div>
+        </div>
+        <p>Изготовление теплоизоляции для нижней части печи позволяет вам устранить необходимость в ее теплоизоляции с боковых и задней сторон. Это не устраняет необходимость в дымоходе. Используйте <span style="color:#b0b;">ПКМ</span> для ее применения.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Кирпичи" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item312.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:chisels" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item36.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Столешница кирпичная" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>Столешницы — это декоративные блоки, которые считаются теплоизоляцией печи и имеют внешний вид, соответствующий печным блокам. Они являются приятным эстетическим выбором для вашей кухни.</p>
+<p>Печи также имеют <span style="color:#3E8A00;">Отделки</span>, которые можно использовать для изменения их внешнего вида. Эти отделки наносятся на основной кирпичный этап печи (или сами кирпичные блоки) и являются косметическими. Отделки можно комбинировать. Они наносятся с помощью <span style="color:#b0b;">ПКМ</span>.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть этот рецепт.">Рецепт: <code>firmalife:crafting/rustic_finish</code></span></p>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Вощёные каменные кирпичи" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Кирпич" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item313.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Отделка каменная" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">16</p>
+                    <img class="recipe-item" src="..\..\_images\item317.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Комок глины" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item9.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #forge:cobblestone" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item319.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Кирпич" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item313.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Отделка терраццо" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">16</p>
+                    <img class="recipe-item" src="..\..\_images\item318.png" />
+                </div>
+            </div>
+        </div>
+        
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> Документация API
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '';
+      window._CURRENT_LANG = 'ru_ru';
+    </script>
+
+    <script src="/static/metadata.js"></script>
+    <script src="/static/tooltips.js"></script>
+    <script src="/static/versions.js"></script>
+  </body>
+</html>

@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Moths and Silk Worms | TFC Field Guide" />
+    <meta name="description" content="Moths and Silk Worms" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="Moths and Silk Worms | TFC Field Guide" />
+    <meta property="og:description" content="Moths and Silk Worms" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/" />
+
+    <title>Moths and Silk Worms | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft Field Guide</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Version 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> English
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/lithicaddon\moths.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/lithicaddon\moths.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/lithicaddon\moths.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/lithicaddon\moths.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/lithicaddon\moths.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/lithicaddon\moths.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/lithicaddon\moths.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/lithicaddon\moths.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/lithicaddon\moths.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Contents</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Index</a></li>
+            <li><a href="../the_world/">The World</a></li>
+<li><a href="../getting_started/">Getting Started</a></li>
+<li><a href="../mechanics/">Advanced Mechanics</a></li>
+<li><a href="../bsa/">(Addon) Better Stone Age</a></li>
+<li><a href="../artisanal/">(Addon) Artisanal</a></li>
+<li><a href="../beneath/">(Addon) Beneath</a></li>
+<li><a href="../firmalife/">(Addon) Firmalife</a></li>
+<li><a href="../lithicaddon/">(Addon) Lithic Addon</a><ul><li><a href="./changes.html">Changes</a></li>
+<li><a href="./moths.html">Moths and Silk Worms</a></li>
+<li><a href="./jam.html">Jar and Jam changes</a></li>
+<li><a href="./spindles.html">Spindles</a></li>
+<li><a href="./fruitbaskets.html">Fruit baskets</a></li></ul></li>
+<li><a href="../lithiccoins/">(Addon) Lithic Coins</a></li>
+<li><a href="../roadsandroofs/">(Addon) Roads and Roofs</a></li>
+<li><a href="../arborfirmacraft/">(Addon) ArborFirmaCraft</a></li>
+<li><a href="../firmaciv/">(Addon) Firma: Civilization</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">(Addon) Lithic Addon</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Moths and Silk Worms</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">Moths and Silk Worms</h1>
+                <p>Moths are much like the <a href="../firmalife/beekeeping.html">bees</a> from <a href="../firmalife.html">firmalife</a>, with a couple of key differences. <br/>
+Before you can even start a silk worm farm you first must find a climate suitable for them. By default silk worms need a <a href="../the_world/climate.html#temperature">temperature</a>: of 19 - 29 °C and <a href="../mechanics/hydration.html">rainfall</a>: of 300 - 400mm. While there look for a mulberry tree, it's leaves are a silk worms favourite snack.</p>
+<a class="anchor" id="mulberry"></a>
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>Mulberry trees require 19 - 35 °C for <a href="../the_world/climate.html#temperature">temperature</a> and 300 - 500mm for <a href="../mechanics/hydration.html">rainfall</a>.</p>
+<p>Now you'll need to craft a <span style="color:#b0b;">mothbox</span> as well as some <span style="color:#b0b;">larvae lattices</span>. Wild moths will come and lay their larvae on lattices housed in mothboxes. In order to attract wild moths the mothbox needs light sources around it. About 10 torches is enough to attract moths, with the benefit falling off around 60. Mothboxes can share light sources</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Larva Lattice" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Mulberry Leaves" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Larva Lattice" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Mothbox" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Stick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item241.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Stick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item241.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Stick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item241.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Stick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item241.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Stick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item241.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Larva Lattice" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this item.">Item: <code>lithicaddon:mulberry_leaflets</code></span></p>
+        </div>
+        <p>Getting a wild moth to lay larvae isn't the end of you job however. You remember those <a href="../lithicaddon/moths.html#mulberry">mulberry trees</a>? Well you'll need to cut them down in hopes of getting <span style="color:#b0b;">mulberry leaflets</span> the primary source of food for silk worms. Silkworms have a 50% chance to eat leaves every day.</p>
+<p>Regardless of if leaves are consumed or not leaves still must be present for the mothbox to function and for the silk worms to grow. After about 22 days of developing the silk worm will cocoon.<br/>
+<br/>
+From there you may choose to pluck the cocoons right off using <span style="color:#b0b;">Right Click</span>. Or you can let them develop into <a href="../lithicaddon/moths.html#note">moths</a> to allow for their traits to pass on to new silk worms.</p>
+<p>Once you have a <span style="color:#3E8A00;">cocoon</span> you must boil it. Doing so will give you a <span style="color:#b0b;">Boiled Silk Worm Cocoon</span> which you cut open with a knife to get a <span style="color:#b0b;">Boiled Silk Worm</span> and a <span style="color:#b0b;">Bundle of String</span>.<br/>
+From there you can eat the <span style="color:#b0b;">Boiled Silk Worm Cocoon</span> and put the <span style="color:#b0b;">Bundle of String</span> in with a <a href="../lithicaddon/spindles.html">spindles</a> in a crafting table.</p>
+
+<div id="content9" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#content9" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        
+<button type="button" data-bs-target="#content9" data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+    </div>
+    <div class="carousel-inner">
+        
+<div class="carousel-item active">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image171.png" alt="lithicaddon:textures/gui/book/boiling_moth.png">
+</div>
+
+<div class="carousel-item ">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image172.png" alt="lithicaddon:textures/gui/book/boiled_moth.png">
+</div>
+
+    </div>
+    <button type="button" class="carousel-control-prev" data-bs-target="#content9" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button type="button" class="carousel-control-next" data-bs-target="#content9" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<div style="text-align: center;"></div>
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #lithicaddon:spindles" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item508.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Bundle of String" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item509.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Spider Silk" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">8</p>
+                    <img class="recipe-item" src="..\..\_images\item243.png" />
+                </div>
+            </div>
+        </div>
+        
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image173.png" alt="lithicaddon:textures/gui/book/steps.png">
+<div style="text-align: center;"><p>Thank you Jothbot for this image</p>
+</div><h5>List of Abilities</h5>
+<p></p>
+<ul>
+	<li><span style="color:#3E8A00;">Hardiness</span>: Allows silkworms to grow at more extreme temperatures and humidity. Hardiness increases temperature tolerance by 1°C in each direction per level and humidity tolerance by 5mm in each direction per level. </li>
+	<li><span style="color:#3E8A00;">Size</span>: Makes silk worms eat more leaves but they grow into bigger cocoons.</li>
+	<li><span style="color:#3E8A00;">Fertility</span>: Lets moth breed with less lights around.</li>
+</ul>
+<p></p>
+<ul>
+	<li><span style="color:#3E8A00;">Fasting</span>: Decreases the chances a silk worm will eat. <span style="color:#3E8A00;">By 10% per level</span>. Fasting also increases the time it takes for a silk worm to develop </li>
+	<li><span style="color:#3E8A00;">Hunger</span>: The opposite of Fasting, decreasing the time for silk worms to develop, but increasing the chances they eat<strong><span style="color:#f00;">FASTING AND HUNGER CANCEL EACH-OTHER OUT</span></strong></li>
+</ul>
+<a class="anchor" id="note"></a><h5>Extras</h5>
+<p></p>
+<ul>
+	<li>When a moth hatches from a cocoon there is a small chance for a <span style="color:#b0b;">Bundle of String</span> to appear in the bottom slot.</li>
+	<li>Grown moths are good for breeding but still require food.</li>
+	<li>Taking a <span style="color:#b0b;">Larvae lattice</span> with moths on it out of the <span style="color:#b0b;">mothbox</span> will kill the moth. This only applies to fully grown moths</li>
+</ul>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '';
+      window._CURRENT_LANG = 'en_us';
+    </script>
+
+    <script src="/static/metadata.js"></script>
+    <script src="/static/tooltips.js"></script>
+    <script src="/static/versions.js"></script>
+  </body>
+</html>

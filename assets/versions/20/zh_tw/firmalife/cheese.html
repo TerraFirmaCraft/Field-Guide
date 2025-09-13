@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="乳酪 | TFC Field Guide" />
+    <meta name="description" content="乳酪" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="乳酪 | TFC Field Guide" />
+    <meta property="og:description" content="乳酪" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/image109.png" />
+
+    <title>乳酪 | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">群巒傳說 手冊</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> 版本 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 繁體中文(台灣)
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/firmalife\cheese.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/firmalife\cheese.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/firmalife\cheese.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/firmalife\cheese.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/firmalife\cheese.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/firmalife\cheese.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/firmalife\cheese.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/firmalife\cheese.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/firmalife\cheese.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>目錄</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">主頁</a></li>
+            <li><a href="../the_world/">這個世界</a></li>
+<li><a href="../getting_started/">新手入門</a></li>
+<li><a href="../mechanics/">進階內容</a></li>
+<li><a href="../firmalife/">(Addon) Firmalife擴充套件模組</a><ul><li><a href="./differences_from_tfc.html">Differences from TFC</a></li>
+<li><a href="./cheese.html">乳酪</a></li>
+<li><a href="./climate_station.html">氣象站</a></li>
+<li><a href="./cellar.html">地窖</a></li>
+<li><a href="./food_shelves.html">Food Shelves</a></li>
+<li><a href="./hangers.html">Hangers</a></li>
+<li><a href="./jarbnet.html">Jarbnets</a></li>
+<li><a href="./greenhouse.html">溫室</a></li>
+<li><a href="./irrigation.html">Irrigation</a></li>
+<li><a href="./planters.html">種植盆</a></li>
+<li><a href="./beekeeping.html">養蜂</a></li>
+<li><a href="./stainless_steel.html">不鏽鋼</a></li>
+<li><a href="./drying.html">烘乾</a></li>
+<li><a href="./smoking.html">熏製</a></li>
+<li><a href="./ovens.html">烤爐</a></li>
+<li><a href="./oven_appliances.html">Oven Appliances</a></li>
+<li><a href="./bread.html">麵包</a></li>
+<li><a href="./more_fertilizer.html">更多的肥料獲取途徑</a></li>
+<li><a href="./mixing_bowl.html">攪拌碗</a></li>
+<li><a href="./herbs_and_spices.html">草藥和香料</a></li>
+<li><a href="./fruit_trees.html">Firmalife Fruits</a></li>
+<li><a href="./berry_bushes.html">Berry Bushes</a></li>
+<li><a href="./chocolate.html">Chocolate</a></li>
+<li><a href="./wine.html">Winemaking</a></li>
+<li><a href="./wine_consumption.html">Wine Consumption</a></li>
+<li><a href="./pie.html">Pie</a></li>
+<li><a href="./pizza.html">Pizza</a></li>
+<li><a href="./pasta.html">Pasta</a></li>
+<li><a href="./burritos_and_tacos.html">Burritos and Tacos</a></li></ul></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">(Addon) Firmalife擴充套件模組</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">乳酪</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\image109.png" alt="乳酪" title="None" /><span>乳酪</span>
+        </h1>
+                <p>在Firmalife中製造<span style="color:#3E8A00;">乳酪</span>要稍微複雜一點. 一共有兩種奶: <span style="color:#3E8A00;">犛牛奶</span>和<span style="color:#3E8A00;">山羊奶</span>. 給<a href="../mechanics/animal_husbandry.html#yak">犛牛</a>和<a href="../mechanics/animal_husbandry.html#goat">山羊</a>擠奶可以得到它們. 當然, 給<a href="../mechanics/animal_husbandry.html#cow">奶牛</a>擠奶仍然可以獲得傳統的牛奶.</p>
+<p>牛奶首先要用<span style="color:#3E8A00;">凝乳酶</span>製成<span style="color:#3E8A00;">凝固的牛奶</span>. 凝乳酶可以從<span style="color:#3E8A00;">反芻</span>動物的胃獲得. 這些動物包括<a href="../mechanics/animal_husbandry.html#yak">犛牛</a>, <a href="../mechanics/animal_husbandry.html#cow">奶牛</a>, <a href="../mechanics/animal_husbandry.html#sheep">綿羊</a>, <a href="../mechanics/animal_husbandry.html#goat">山羊</a>, 和<a href="../mechanics/animal_husbandry.html#musk_ox">麝牛</a>. 把牛奶和凝乳酶一起密封在<a href="../mechanics/barrels.html">大桶</a>4小時就可以凝固.</p>
+<a class="anchor" id="cheesecloth"></a>
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:high_quality_cloth" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item247.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:high_quality_cloth" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item247.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="乳酪布" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">8</p>
+                    <img class="recipe-item" src="..\..\_images\item293.png" />
+                </div>
+            </div>
+        </div>
+        <p>凝固的牛奶和<span style="color:#3E8A00;">乳酪布</span>一起密封在大桶中就可以製成<span style="color:#3E8A00;">凝乳</span>. 乳酪布是不能重複使用的.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="鹽" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item70.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="鹽" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item70.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="鹽" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item70.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="牛奶凝乳" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item294.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="牛奶凝乳" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item294.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="牛奶凝乳" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item294.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="鹽" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item70.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="鹽" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item70.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="鹽" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item70.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Cheddar 乳酪輪" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>現在你可以製造<span style="color:#3E8A00;">幹乳酪</span>了. 你可以用<span style="color:#3E8A00;">犛牛奶凝乳</span>製作<span style="color:#3E8A00;">Rajya Metok乳酪</span>, 可以用<span style="color:#3E8A00;">山羊奶凝乳</span>製作<span style="color:#3E8A00;">Chevre乳酪</span>, 以及用<span style="color:#3E8A00;">牛奶凝乳</span>製造<span style="color:#3E8A00;">Cheddar乳酪</span>.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="鹽" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item70.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="鹽" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item70.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="鹽" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item70.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="山羊奶凝乳" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item295.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="山羊奶凝乳" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item295.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="山羊奶凝乳" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item295.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="鹽" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item70.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="鹽" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item70.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="鹽" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item70.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Chevre 乳酪輪" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="鹽" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item70.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="鹽" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item70.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="鹽" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item70.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="犛牛奶凝乳" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item296.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="犛牛奶凝乳" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item296.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="犛牛奶凝乳" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item296.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="鹽" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item70.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="鹽" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item70.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="鹽" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item70.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Rajya Metok 乳酪輪" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>你也可以選擇製作<span style="color:#3E8A00;">溼乳酪</span>. 把凝乳密封在裝有<span style="color:#3E8A00;">鹹水</span>的大桶中即可. 你可以用<span style="color:#3E8A00;">犛牛奶凝乳</span>製作<span style="color:#3E8A00;">Shosha乳酪</span>, 可以用<span style="color:#3E8A00;">山羊奶凝乳</span>製作<span style="color:#3E8A00;">Feta乳酪</span>, 以及用<span style="color:#3E8A00;">牛奶凝乳</span>製造<span style="color:#3E8A00;">Gouda乳酪</span>.</p>
+<a class="anchor" id="aging"></a><p>Cheese wheels are blocks that should be placed in order to help them last. To improve their quality and shelf life, cheese wheels should be <span style="color:#3E8A00;">Aged</span> in a <a href="../firmalife/cellar.html">Cellar</a>. In order to obtain edible cheese from a cheese wheel, it should be sliced off the wheel by clicking <span style="color:#b0b;">右鍵</span> with a <span style="color:#3E8A00;">Knife</span>. If the block is simply broken, the aging is lost!</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="請在遊戲中查閱以預覽該多方塊結構。">多方塊結構</span></p>
+        </div>
+        <p>Gouda乳酪輪的老化順序: <span style="color:#3E8A00;">新鮮</span>, <span style="color:#3E8A00;">老化</span>, 以及<span style="color:#3E8A00;">Vintage</span>.</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '';
+      window._CURRENT_LANG = 'zh_tw';
+    </script>
+
+    <script src="/static/metadata.js"></script>
+    <script src="/static/tooltips.js"></script>
+    <script src="/static/versions.js"></script>
+  </body>
+</html>

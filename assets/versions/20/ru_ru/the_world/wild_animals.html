@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Дикие животные | TFC Field Guide" />
+    <meta name="description" content="Дикие животные" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="Дикие животные | TFC Field Guide" />
+    <meta property="og:description" content="Дикие животные" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/item1.png" />
+
+    <title>Дикие животные | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">Справочник TerraFirmaCraft</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Версия 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> Русский
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/the_world\wild_animals.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world\wild_animals.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world\wild_animals.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world\wild_animals.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world\wild_animals.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world\wild_animals.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world\wild_animals.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world\wild_animals.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/the_world\wild_animals.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Содержание</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Главная</a></li>
+            <li><a href="../the_world/">Мир</a><ul><li><a href="./geology.html">Геология</a></li>
+<li><a href="./ores_and_minerals.html">Руды и минералы</a></li>
+<li><a href="./climate.html">Календарь и климат</a></li>
+<li><a href="./flora.html">Растения</a></li>
+<li><a href="./wild_crops.html">Дикие культуры</a></li>
+<li><a href="./wild_fruits.html">Дикие фрукты</a></li>
+<li><a href="./wild_animals.html">Дикие животные</a></li></ul></li>
+<li><a href="../getting_started/">Начало работы</a></li>
+<li><a href="../mechanics/">Продвинутая механика</a></li>
+<li><a href="../firmalife/">(Дополнение) Firmalife</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">Мир</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Дикие животные</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\item1.png" alt="Дикие животные" title="Свежая шкура" /><span>Дикие животные</span>
+        </h1>
+                <p>Мир TFC полон животной жизни. Некоторые животные здесь, чтобы помогать, а некоторые чрезвычайно опасны. Этот раздел о диких животных. Для информации о домашнем скоте, животных, которые могут дать вам необходимые предметы, смотрите страницу <a href="../mechanics/animal_husbandry.html">Разведение животных</a>.</p>
+<p>Животных можно разделить на несколько разных категорий: <a href="../the_world/wild_animals.html#predators">Хищники</a>, <a href="../the_world/wild_animals.html#prey">Жертвы</a>, и <a href="../the_world/wild_animals.html#aquatic">Водные</a> животные.<br/>
+<br/>
+На следующих нескольких страницах будут подробно описаны каждая из этих категорий животных.</p>
+<a class="anchor" id="predators"></a><h5>Хищники</h5>
+<p><span style="color:#3E8A00;">Хищники</span> - это животные, которые могут атаковать игрока. Они могут быть <span style="color:#3E8A00;">Ночными</span>, охотящимися только ночью, или <span style="color:#3E8A00;">Дневными</span>, охотящимися только днем. Хищники могут быть нейтральными или враждебными, в зависимости от того, убили ли они цель недавно. Хищники имеют домашнюю территорию, которую они будут защищать - если вы убежите достаточно далеко, хищник прекратит погоню и вернется домой.</p>
+<h5>Белый медведь</h5>
+<p>Белый медведь появляется только в самых холодных регионах, <a href="../the_world/climate.html#temperature">температура</a> максимум 10°C, с <a href="../the_world/climate.html#rainfall">осадками</a> не менее 100мм.</p>
+<h5>Гризли</h5>
+<p>Гризли обитает в лесах умеренного климата, с диапазоном <a href="../the_world/climate.html#temperature">температуры</a> от -15 до 15°C и не менее 200мм <a href="../the_world/climate.html#rainfall">осадков</a>.</p>
+<h5>Черный медведь</h5>
+<p>Черный медведь обитает в лесах более теплого, влажного климата, с <a href="../the_world/climate.html#temperature">температурой</a> от 5 до 20°C и не менее 250мм <a href="../the_world/climate.html#rainfall">осадков</a>.</p>
+<h5>Пума</h5>
+<p>Пума предпочитает умеренный климат, с <a href="../the_world/climate.html#temperature">температурой</a> от -10 до 21°C и не менее 150мм <a href="../the_world/climate.html#rainfall">осадков</a>.</p>
+<h5>Пантера</h5>
+<p>Пантера предпочитает умеренный климат, с <a href="../the_world/climate.html#temperature">температурой</a> от -10 до 21°C и не менее 150мм <a href="../the_world/climate.html#rainfall">осадков</a>.</p>
+<h5>Лев</h5>
+<p>Лев появляется на равнинах со средней <a href="../the_world/climate.html#temperature">температурой</a> от 16°C и <a href="../the_world/climate.html#rainfall">осадками</a> от 50 до 300мм.</p>
+<h5>Тигр</h5>
+<p>Тигр обитает в лесах со средней <a href="../the_world/climate.html#temperature">температурой</a> не менее 13°C и <a href="../the_world/climate.html#rainfall">осадками</a> свыше 100мм.</p>
+<h5>Саблезуб</h5>
+<p>Саблезуб появляется при любой <a href="../the_world/climate.html#temperature">температуре</a> выше 0°C и любых <a href="../the_world/climate.html#rainfall">осадках</a> свыше 250мм.</p>
+<p>Волк появляется при любой <a href="../the_world/climate.html#temperature">температуре</a> ниже 22°C и <a href="../the_world/climate.html#rainfall">осадках</a> от 150 до 420мм. Они охотятся стаями. Кормление волка достаточное количество раз приручит его в <a href="../mechanics/pets.html">Собаку</a>.</p>
+<p>Дирволф появляется при любой <a href="../the_world/climate.html#temperature">температуре</a> ниже точки замерзания и <a href="../the_world/climate.html#rainfall">осадках</a> от 150 до 420мм. Они охотятся стаями. Они крупнее обычных волков и не могут быть приручены.</p>
+<p>Гиена появляется при любой <a href="../the_world/climate.html#temperature">температуре</a> выше 15°C и <a href="../the_world/climate.html#rainfall">осадках</a> от 80 до 380мм. Они охотятся стаями. Они не могут быть приручены.</p>
+<h5>Крокодил</h5>
+<p>Крокодил обитает возле рек, озер и болот при любой <a href="../the_world/climate.html#temperature">температуре</a> выше 15°C и при любых <a href="../the_world/climate.html#rainfall">осадках</a>. Они ведут ночной образ жизни и наиболее опасны в воде.</p>
+<p>Оцелот нападает на мелких животных. Он появляется при любой <a href="../the_world/climate.html#temperature">температуре</a> от 15 до 30°C и <a href="../the_world/climate.html#rainfall">осадках</a> от 300 до 500мм, в лесах. Кормление оцелота достаточное количество раз приручит его в <a href="../mechanics/pets.html">Кота</a>. Оцелоты могут есть сырую рыбу.</p>
+<a class="anchor" id="ramming_prey"></a><h5>Таранщики</h5>
+<p><span style="color:#3E8A00;">Животные-таранщики</span> иногда пытаются атаковать ближайших существ, включая игрока. Их атаки мощные, но их можно уклониться. Они будут чаще атаковать, если их атаковать.</p>
+<h5>Кабан</h5>
+<p>Кабан появляется при <a href="../the_world/climate.html#temperature">температуре</a> ниже 25°C и выше -5°C, и <a href="../the_world/climate.html#rainfall">осадках</a> от 130 до 400мм.</p>
+<p>Лось обитает в лесах при <a href="../the_world/climate.html#temperature">температуре</a> ниже 10°C и выше -15°C, и <a href="../the_world/climate.html#rainfall">осадках</a> от 150 до 300мм.</p>
+<p>Гну появляется на открытых равнинах при любой <a href="../the_world/climate.html#temperature">температуре</a> выше 13°C и <a href="../the_world/climate.html#rainfall">осадках</a> от 90 до 380мм.</p>
+<a class="anchor" id="prey"></a><h5>Жертвы</h5>
+<p><span style="color:#3E8A00;">Жертвы</span> боятся игроков и хищников. Они искусны в бегстве от опасности, но в целом не могут сражаться. Некоторые животные-жертвы любят перекусывать культурами.</p>
+<h5>Кролик</h5>
+<p>Кролик известен тем, что грызет морковь и капусту. Они повсеместно в мире, меняя свой мех в зависимости от климата. Для их появления достаточно всего 15мм <a href="../the_world/climate.html#rainfall">осадков</a>.</p>
+<h5>Лиса</h5>
+<p>Лиса любит есть ягоды с кустов. Она может быть найдена в лесах при <a href="../the_world/climate.html#temperature">температуре</a> ниже 25°C и <a href="../the_world/climate.html#rainfall">осадках</a> от 130 до 400мм.</p>
+<p>Олень обитает в лесах при любой <a href="../the_world/climate.html#temperature">температуре</a> ниже 25°C и выше -15°C, и <a href="../the_world/climate.html#rainfall">осадках</a> от 130 до 400мм.</p>
+<h5>Карибу</h5>
+<p>Карибу появляется при любой <a href="../the_world/climate.html#temperature">температуре</a> ниже -9°C и <a href="../the_world/climate.html#rainfall">осадках</a> от 110 до 500мм.</p>
+<p>Газель появляется на открытых равнинах при любой <a href="../the_world/climate.html#temperature">температуре</a> выше 12°C и <a href="../the_world/climate.html#rainfall">осадках</a> от 90 до 380мм.</p>
+<h5>Бонго</h5>
+<p>Бонго обитает в лесах при любой <a href="../the_world/climate.html#temperature">температуре</a> выше 15°C и <a href="../the_world/climate.html#rainfall">осадках</a> от 230 до 500мм.</p>
+<p>Тетерев появляется при любой <a href="../the_world/climate.html#temperature">температуре</a> ниже 13°C и выше -12°C, и <a href="../the_world/climate.html#rainfall">осадках</a> от 150 до 400мм.</p>
+<p>Фазан обитает в лесах при любой <a href="../the_world/climate.html#temperature">температуре</a> ниже 17°C и выше -5°C, и <a href="../the_world/climate.html#rainfall">осадках</a> от 100 до 300мм.</p>
+<p>Индейка обитает в лесах при любой <a href="../the_world/climate.html#temperature">температуре</a> ниже 17°C и выше 0°C, и <a href="../the_world/climate.html#rainfall">осадках</a> от 250 до 450мм.</p>
+<h5>Павлин</h5>
+<p>Павлин обитает в лесах при любой <a href="../the_world/climate.html#temperature">температуре</a> выше 14°C, и <a href="../the_world/climate.html#rainfall">осадках</a> от 190 до 500мм.</p>
+<hr><a class="anchor" id="aquatic"></a><h5>Водные животные</h5>
+<p><span style="color:#3E8A00;">Водные животные</span> - это широкая категория, которая охватывает множество различных поведений. Они могут быть <span style="color:#3E8A00;">Береговыми жителями</span>, <span style="color:#3E8A00;">Рыбами</span>, <span style="color:#3E8A00;">Ракообразными</span>, или <span style="color:#3E8A00;">Крупными водными существами</span></p>
+<p><span style="color:#3E8A00;">Береговые животные</span> появляются только на морских берегах и проводят часть дня, плавая, а часть - гуляя по пляжу. Они любопытные существа и будут следовать за игроком, но их нельзя приручить.</p>
+<h5>Пингвин</h5>
+<p>Пингвин появляется только на самых холодных пляжах, с <a href="../the_world/climate.html#temperature">температурой</a> максимум -14°C и <a href="../the_world/climate.html#rainfall">осадками</a> не менее 75мм.</p>
+<h5>Морская черепаха</h5>
+<p>Морская черепаха любит теплую воду. Она появляется при <a href="../the_world/climate.html#temperature">температуре</a> не менее 21°C и <a href="../the_world/climate.html#rainfall">осадках</a> не менее 250мм.</p>
+<h5>Рыбы</h5>
+<p><span style="color:#3E8A00;">Рыбы</span> - это маленькие существа, плавающие в воде. Большинство из них можно <a href="../mechanics/fishing.html">ловить</a>. Некоторые предпочитают океаны, реки или озера.</p>
+<h5>Треска</h5>
+<p>Треска предпочитает холодные океаны, <a href="../the_world/climate.html#temperature">температура</a> максимум 18°C. Их можно ловить.</p>
+<h5>Иглобрюх</h5>
+<p>Иглобрюхи живут в любом океане с <a href="../the_world/climate.html#temperature">температурой</a> не менее 10°C.</p>
+<h5>Медуза</h5>
+<p>Медузы живут в теплых океанах, с <a href="../the_world/climate.html#temperature">температурой</a> не менее 18°C.</p>
+<h5>Тропическая рыба</h5>
+<p>Тропические рыбы предпочитают теплые океаны, с <a href="../the_world/climate.html#temperature">температурой</a> не менее 18°C.</p>
+<h5>Лосось</h5>
+<p>Лосось обитает в любой реке или озере с <a href="../the_world/climate.html#temperature">температурой</a> не менее -5°C.</p>
+<h5>Синежаберник</h5>
+<p>Синежаберники обитают в любой реке или озере с <a href="../the_world/climate.html#temperature">температурой</a> не менее -10°C и не более 26°C.</p>
+<a class="anchor" id="shellfish"></a><h5>Ракообразные</h5>
+<p><span style="color:#3E8A00;">Ракообразные</span> - это маленькие животные, живущие на дне водоемов. Их нельзя ловить, но они дают раковины, которые можно есть или использовать для получения <a href="../mechanics/flux.html">флюса</a>. Ракообразные могут быть <a href="../mechanics/fishing.html">приманкой</a> для рыб.</p>
+<h5>Изопод</h5>
+<p>Изоподы обитают в глубоких участках океанов с <a href="../the_world/climate.html#temperature">температурой</a> максимум 14°C.</p>
+<h5>Лобстер</h5>
+<p>Лобстеры обитают в любом океане с <a href="../the_world/climate.html#temperature">температурой</a> максимум 21°C.</p>
+<h5>Рак</h5>
+<p>Раки похожи на лобстеров, но обитают в реках и озерах. Им нужна <a href="../the_world/climate.html#temperature">температура</a> не менее 5°C и <a href="../the_world/climate.html#rainfall">осадки</a> не менее 125мм.</p>
+<h5>Мечехвост</h5>
+<p>Мечехвосты обитают в океанах умеренного климата, <a href="../the_world/climate.html#temperature">температура</a> от 10 до 21°C и с <a href="../the_world/climate.html#rainfall">осадками</a> максимум 400мм.</p>
+<h5>Крупные водные существа</h5>
+<p><span style="color:#3E8A00;">Крупные водные существа</span> - это крупные животные, живущие в больших водоемах. Некоторые из них охотятся на рыб. Они дают <a href="../mechanics/lamps.html#tallow">жир</a>, который можно использовать в качестве топлива для ламп.</p>
+<h5>Косатка</h5>
+<p>Косатки живут в глубоких океанах с <a href="../the_world/climate.html#temperature">температурой</a> максимум 19°C и <a href="../the_world/climate.html#rainfall">осадками</a> не менее 100мм.</p>
+<h5>Дельфин</h5>
+<p>Дельфины живут в глубоких океанах с <a href="../the_world/climate.html#temperature">температурой</a> не менее 10°C и <a href="../the_world/climate.html#rainfall">осадками</a> не менее 200мм.</p>
+<h5>Ламантин</h5>
+<p>Ламантины живут в любом теплом озере, с <a href="../the_world/climate.html#temperature">температурой</a> не менее 20°C и <a href="../the_world/climate.html#rainfall">осадками</a> максимум 300мм.</p>
+<h5>Кальмар</h5>
+<p>Кальмар может появляться в любом глубоком океане. Они дают <span style="color:#3E8A00;">Мешки с чернилами</span>, и окрашивают в черный цвет любого игрока, который подходит слишком близко. Некоторые говорят, что кальмары в глубоких, неисследованных пещерах обладают странными свойствами.</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> Документация API
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '';
+      window._CURRENT_LANG = 'ru_ru';
+    </script>
+
+    <script src="/static/metadata.js"></script>
+    <script src="/static/tooltips.js"></script>
+    <script src="/static/versions.js"></script>
+  </body>
+</html>

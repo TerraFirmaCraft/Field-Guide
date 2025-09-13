@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Aqueducts | TFC Field Guide" />
+    <meta name="description" content="Aqueducts" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="Aqueducts | TFC Field Guide" />
+    <meta property="og:description" content="Aqueducts" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/" />
+
+    <title>Aqueducts | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft Field Guide</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Version 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> English
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/mechanics\aqueducts.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\aqueducts.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\aqueducts.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\aqueducts.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\aqueducts.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\aqueducts.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\aqueducts.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\aqueducts.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/mechanics\aqueducts.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Contents</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Index</a></li>
+            <li><a href="../the_world/">The World</a></li>
+<li><a href="../getting_started/">Getting Started</a></li>
+<li><a href="../mechanics/">Advanced Mechanics</a><ul><li><a href="./advanced_building_materials.html">Advanced Materials</a></li>
+<li><a href="./animal_husbandry.html">Animal Husbandry</a></li>
+<li><a href="./anvils.html">Anvils</a></li>
+<li><a href="./aqueducts.html">Aqueducts</a></li>
+<li><a href="./armor.html">Armor</a></li>
+<li><a href="./armor_trims.html">Armor Trims</a></li>
+<li><a href="./barrels.html">Barrels</a></li>
+<li><a href="./bellows.html">Bellows</a></li>
+<li><a href="./blast_furnace.html">Blast Furnace</a></li>
+<li><a href="./bloomery.html">Bloomery</a></li>
+<li><a href="./bowls.html">Bowls</a></li>
+<li><a href="./bread.html">Bread</a></li>
+<li><a href="./charcoal_forge.html">Charcoal Forge</a></li>
+<li><a href="./charcoal_pit.html">Charcoal Pit</a></li>
+<li><a href="./chisel.html">Chisel</a></li>
+<li><a href="./composter.html">Composter</a></li>
+<li><a href="./crankshaft.html">Crankshafts</a></li>
+<li><a href="./crops.html">Crops</a></li>
+<li><a href="./crucible.html">Crucible</a></li>
+<li><a href="./dairy.html">Dairy Products</a></li>
+<li><a href="./damage_types.html">Damage Types</a></li>
+<li><a href="./decay.html">Preservation</a></li>
+<li><a href="./dye.html">Dye</a></li>
+<li><a href="./fertilizers.html">Fertilizers</a></li>
+<li><a href="./fire_clay.html">Fire Clay</a></li>
+<li><a href="./fishing.html">Fishing</a></li>
+<li><a href="./flux.html">Flux</a></li>
+<li><a href="./gems.html">Gems</a></li>
+<li><a href="./glassworking.html">Glassworking</a></li>
+<li><a href="./glassworking_applications.html">Glass Products</a></li>
+<li><a href="./grill.html">Firepit And Grill</a></li>
+<li><a href="./heating.html">Heating</a></li>
+<li><a href="./hydration.html">Keeping Hydrated</a></li>
+<li><a href="./jarring.html">Jarring</a></li>
+<li><a href="./lamps.html">Lamps</a></li>
+<li><a href="./leather_making.html">Leather Making</a></li>
+<li><a href="./lighting.html">Light Sources</a></li>
+<li><a href="./mechanical_power.html">Mechanical Power</a></li>
+<li><a href="./minecarts.html">Minecarts</a></li>
+<li><a href="./panning.html">Panning</a></li>
+<li><a href="./papermaking.html">Papermaking</a></li>
+<li><a href="./pets.html">Pets</a></li>
+<li><a href="./pot.html">Firepit And Pot</a></li>
+<li><a href="./powderkegs.html">Powderkegs</a></li>
+<li><a href="./prospecting.html">Prospecting</a></li>
+<li><a href="./pumps.html">Pumps</a></li>
+<li><a href="./quern.html">Quern</a></li>
+<li><a href="./salad.html">Salads</a></li>
+<li><a href="./sandwiches.html">Sandwiches</a></li>
+<li><a href="./scribing_table.html">Scribing Table</a></li>
+<li><a href="./sewing_table.html">Sewing Table</a></li>
+<li><a href="./sluices.html">Sluices</a></li>
+<li><a href="./steel.html">Steel</a></li>
+<li><a href="./support_beams.html">Support Beams & Collapses</a></li>
+<li><a href="./weaving.html">Weaving</a></li>
+<li><a href="./wooden_buckets.html">Wooden Buckets</a></li></ul></li>
+<li><a href="../bsa/">(Addon) Better Stone Age</a></li>
+<li><a href="../artisanal/">(Addon) Artisanal</a></li>
+<li><a href="../beneath/">(Addon) Beneath</a></li>
+<li><a href="../firmalife/">(Addon) Firmalife</a></li>
+<li><a href="../lithicaddon/">(Addon) Lithic Addon</a></li>
+<li><a href="../lithiccoins/">(Addon) Lithic Coins</a></li>
+<li><a href="../roadsandroofs/">(Addon) Roads and Roofs</a></li>
+<li><a href="../arborfirmacraft/">(Addon) ArborFirmaCraft</a></li>
+<li><a href="../firmaciv/">(Addon) Firma: Civilization</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">Advanced Mechanics</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Aqueducts</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">Aqueducts</h1>
+                <p><span style="color:#3E8A00;">Aqueducts</span> are a tool used for moving <span style="color:#3E8A00;">Water</span> around. Unlike <a href="../mechanics/wooden_buckets.html">Wooden Buckets</a>, which are not able to transport water sources, <span style="color:#3E8A00;">Aqueducts</span> are able to move source blocks horizontally any distance to their destination. They can be used to transport any type of water, including <span style="color:#3E8A00;">Fresh Water</span>, <span style="color:#3E8A00;">Salt Water</span>, and even Hot Spring Water.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Shale Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item51.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Shale Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item51.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Mortar" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item38.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Shale Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item51.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Mortar" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item38.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Shale Aqueduct" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>A singe aqueduct block can be crafted with some <a href="../mechanics/advanced_building_materials.html#bricks_and_mortar">Bricks and Mortar</a>.</p>
+<p>In order to use an <span style="color:#3E8A00;">Aqueduct</span>, you must simply connect them in a horizontal pattern, and place one end adjacent to either a <span style="color:#3E8A00;">Source</span> or <span style="color:#3E8A00;">Falling</span> water. After waiting a short while, water will begin to flow through the aqueduct network, and out the other end.<br/>
+<br/>
+Note if aqueducts are removed, water will cease flowing, and <span style="color:#3E8A00;">Aqueducts</span> will not create permanent source blocks - any water will disappear after the aqueducts are removed.</p>
+<h5>An Aqueduct Network</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p></p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '';
+      window._CURRENT_LANG = 'en_us';
+    </script>
+
+    <script src="/static/metadata.js"></script>
+    <script src="/static/tooltips.js"></script>
+    <script src="/static/versions.js"></script>
+  </body>
+</html>

@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="体积和重量 | TFC Field Guide" />
+    <meta name="description" content="体积和重量" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="体积和重量 | TFC Field Guide" />
+    <meta property="og:description" content="体积和重量" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/image36.png" />
+
+    <title>体积和重量 | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">群峦传说 手册</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> 版本 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 简体中文(中国大陆)
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/getting_started\size_and_weight.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\size_and_weight.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\size_and_weight.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\size_and_weight.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\size_and_weight.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\size_and_weight.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\size_and_weight.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\size_and_weight.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/getting_started\size_and_weight.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>目录</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">主页</a></li>
+            <li><a href="../the_world/">这个世界</a></li>
+<li><a href="../getting_started/">新手入门</a><ul><li><a href="./introduction.html">第一天</a></li>
+<li><a href="./firepit.html">生火</a></li>
+<li><a href="./pottery.html">制陶术</a></li>
+<li><a href="./pit_kiln.html">坑窑</a></li>
+<li><a href="./finding_ores.html">矿石、金属和铸造</a></li>
+<li><a href="./primitive_alloys.html">原始合金</a></li>
+<li><a href="./primitive_anvils.html">原始砧</a></li>
+<li><a href="./building_materials.html">建筑材料</a></li>
+<li><a href="./a_place_to_sleep.html">如何过夜</a></li>
+<li><a href="./size_and_weight.html">体积和重量</a></li>
+<li><a href="./food_and_water.html">食物和水</a></li></ul></li>
+<li><a href="../mechanics/">进阶内容</a></li>
+<li><a href="../firmalife/">(Addon) Firmalife扩展模组</a></li>
+<li><a href="../firmaciv/">(Addon) 群峦传说：航海文明</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">新手入门</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">体积和重量</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\image36.png" alt="体积和重量" title="None" /><span>体积和重量</span>
+        </h1>
+                <p>每种物品都有其<span style="color:#3E8A00;">体积 ⇲ </span>和<span style="color:#3E8A00;">重量 ⚖</span> 。物品的体积和重量会显示在其<span style="color:#3E8A00;">工具提示</span>中，将鼠标悬停在物品上就能查看。</p>
+<h5>体积 ⇲</h5>
+<p>物品的体积决定了何种容器可以装得下这种物品。<br/>
+</p>
+<ul>
+	<li><span style="color:#3E8A00;">极小</span>的物品可以装在任何容器里。</li>
+	<li><span style="color:#3E8A00;">非常小</span>的物品可以装在任何容器里。</li>
+	<li>只有<span style="color:#3E8A00;">小</span>及以下的物品可以装在<a href="../mechanics/decay.html#small_vessels">小缸</a>里。</li>
+	<li>只有<span style="color:#3E8A00;">普通</span>及以下的物品可以装在<a href="../mechanics/decay.html#small_vessels">大缸</a>里。</li>
+</ul>
+<p></p>
+<ul>
+	<li>只有<span style="color:#3E8A00;">大</span>及以下的物品可以装在箱子里。</li>
+	<li><span style="color:#3E8A00;">非常大</span>的物品只能单独在<a href="../getting_started/pit_kiln.html">坑窑</a>中烧制。</li>
+	<li><span style="color:#3E8A00;">极大</span>的物品不能装进任何普通容器中，而且携带它们会导致你负担过重。</li>
+</ul>
+<h5>重量 ⚖</h5>
+<p>物品的重量决定了它一组可堆叠的上限。<br/>
+</p>
+<ul>
+	<li><span style="color:#3E8A00;">非常轻</span>：64</li>
+	<li><span style="color:#3E8A00;">轻</span>：32</li>
+	<li><span style="color:#3E8A00;">中等</span>：16</li>
+	<li><span style="color:#3E8A00;">重</span>：4</li>
+	<li><span style="color:#3E8A00;">非常重</span>：1</li>
+</ul><p><br/>
+大部分物品都属于<span style="color:#3E8A00;">非常轻</span>的类别。方块一般都是<span style="color:#3E8A00;">中等</span>重量。</p>
+<p>物品栏中存在<span style="color:#3E8A00;">极大</span>且<span style="color:#3E8A00;">非常重</span>的物品会使你<span style="color:#3E8A00;">负担过重</span>。只要携带一件<span style="color:#3E8A00;">极大、非常重</span>的物品就会导致你变得疲惫，饥饿值也会消耗得更快。携带两件以上就会使你进入<span style="color:#3E8A00;">负担过重</span>状态，行动也会变得极其缓慢。</p>
+<a class="anchor" id="overburdening"></a><h5>负担过重</h5>
+<p>会导致负担过重的物品有<span style="color:#3E8A00;">砧</span>、<span style="color:#3E8A00;">密封的大桶</span>、装有物品的<span style="color:#3E8A00;">坩埚等。</span><br/>
+<br/>
+提示: <a href="../mechanics/animal_husbandry.html#horses">马</a>也会负担过重。</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '';
+      window._CURRENT_LANG = 'zh_cn';
+    </script>
+
+    <script src="/static/metadata.js"></script>
+    <script src="/static/tooltips.js"></script>
+    <script src="/static/versions.js"></script>
+  </body>
+</html>

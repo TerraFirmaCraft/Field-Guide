@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Виноделие | TFC Field Guide" />
+    <meta name="description" content="Виноделие" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="Виноделие | TFC Field Guide" />
+    <meta property="og:description" content="Виноделие" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/image119.png" />
+
+    <title>Виноделие | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">Справочник TerraFirmaCraft</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Версия 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> Русский
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/firmalife\wine.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/firmalife\wine.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/firmalife\wine.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/firmalife\wine.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/firmalife\wine.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/firmalife\wine.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/firmalife\wine.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/firmalife\wine.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/firmalife\wine.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Содержание</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Главная</a></li>
+            <li><a href="../the_world/">Мир</a></li>
+<li><a href="../getting_started/">Начало работы</a></li>
+<li><a href="../mechanics/">Продвинутая механика</a></li>
+<li><a href="../firmalife/">(Дополнение) Firmalife</a><ul><li><a href="./differences_from_tfc.html">Отличия от TFC</a></li>
+<li><a href="./cheese.html">Сыр</a></li>
+<li><a href="./climate_station.html">Климатическая станция</a></li>
+<li><a href="./cellar.html">Погреба</a></li>
+<li><a href="./food_shelves.html">Полки для продуктов</a></li>
+<li><a href="./hangers.html">Вешалки</a></li>
+<li><a href="./jarbnet.html">Стеллажи для банок</a></li>
+<li><a href="./greenhouse.html">Теплица</a></li>
+<li><a href="./irrigation.html">Орошение</a></li>
+<li><a href="./planters.html">Лотки для рассады</a></li>
+<li><a href="./beekeeping.html">Пчеловодство</a></li>
+<li><a href="./stainless_steel.html">Нержавеющая сталь</a></li>
+<li><a href="./drying.html">Сушка</a></li>
+<li><a href="./smoking.html">Копчение</a></li>
+<li><a href="./ovens.html">Печи</a></li>
+<li><a href="./oven_appliances.html">Устройства для печей</a></li>
+<li><a href="./bread.html">Хлеб</a></li>
+<li><a href="./more_fertilizer.html">Дополнительные варианты удобрений</a></li>
+<li><a href="./mixing_bowl.html">Смесительная чаша</a></li>
+<li><a href="./herbs_and_spices.html">Травы и специи</a></li>
+<li><a href="./fruit_trees.html">Фрукты Firmalife</a></li>
+<li><a href="./berry_bushes.html">Ягодные кусты</a></li>
+<li><a href="./chocolate.html">Шоколад</a></li>
+<li><a href="./wine.html">Виноделие</a></li>
+<li><a href="./wine_consumption.html">Потребление вина</a></li>
+<li><a href="./pie.html">Пирог</a></li>
+<li><a href="./pizza.html">Пицца</a></li>
+<li><a href="./pasta.html">Паста</a></li>
+<li><a href="./burritos_and_tacos.html">Буррито и Тако</a></li></ul></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">(Дополнение) Firmalife</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Виноделие</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\image119.png" alt="Виноделие" title="None" /><span>Виноделие</span>
+        </h1>
+                <p><span style="color:#3E8A00;">Виноделие</span> — это наука превращения винограда в алкоголь.  Требуется время на сбор ресурсов, их обработку, а также на <span style="color:#3E8A00;">наслаждение</span> результатом. Обратите внимание, что вино в Firmalife (само по себе) не имеет особого применения помимо обычного алкоголя TFC. Вы должны делать его только если хотите <span style="color:#3E8A00;">повеселиться</span>.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть этот предмет.">Предмет: <code>firmalife:plant/wild_red_grapes</code></span></p>
+        </div>
+        <p>Красный виноград произрастает при температуре 0-30°C и количестве осадков 125-500, то есть почти на всей обитаемой территории.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть этот предмет.">Предмет: <code>firmalife:plant/wild_white_grapes</code></span></p>
+        </div>
+        <p>Белый виноград произрастает при температуре 0-30°C и количестве осадков 125-500, то есть почти на всей обитаемой территории.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Обработанная доска" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item267.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Обработанная доска" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item267.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Обработанная доска" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item267.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Столб для виноградной решетки" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>Виноград должен выращиваться на шпалерах, построенных из этих специальных столбов и джутового волокна.</p>
+<p>Чтобы построить шпалеру, установите два столба друг на друга. Переместитесь на два блока влево или вправо и повторите действие. Затем, <span style="color:#b0b;">ПКМ</span> боковую сторону одного из верхних и нижних столбов с помощью <span style="color:#3E8A00;">джутового волокна</span>, чтобы натянуть между столбами линии. Виноградные шпалеры могут быть соединены горизонтально, чтобы создать ряды винограда.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Виноградная шпалера.</p>
+<p>При соблюдении климатических требований виноград будет расти и оплетать шпалеру в течение нескольких месяцев. Он будет плодоносить в июле, цветя в предыдущем месяце. Затем виноград можно собирать. Виноград также можно выращивать в теплицах на шпалерах.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Акациевая доска" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Клей" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item67.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Акациевая доска" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Акациевая доска" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Акациевая доска" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Акациевая доска" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Клей" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item67.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Клей" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item67.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Клей" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item67.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Бочка для топки из акации" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>Топчальная бочка используется для раздавливания винограда. Можно также использовать жернова.</p>
+<p>Чтобы использовать топчальную бочку, <span style="color:#b0b;">ПКМ</span> со свежим виноградом. Затем подпрыгивайте на бочке 16 раз. <span style="color:#b0b;">ПКМ</span> пустой рукой, чтобы забрать предметы.<br/>
+<br/>
+Затем запечатайте виноград в бочке на 5 дней, чтобы <span style="color:#3E8A00;">сбродить</span> его.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Бочка для топки из акации" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Стержень из кованого железа" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item177.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Лист кованого железа" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item55.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Латунная шестерня" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item91.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Бочка с прессом из акации" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>Пресс для бочек — это последний этап обработки винограда.</p>
+<p>The leftmost slot can contain up to 16 grapes. Four grape items are needed for a bottle of wine. The four central slots are for mixing the grapes with other ingredients, but this is optional. Using only red or white grapes yields red or white wine. Adding at least one red grape to white wine makes Rose. Adding sugar to white wine makes dessert wine. Adding tirage mixture (yeast and sweetener in a barrel) makes sparkling wine.</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="Смесь для оливинового стекла" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item340.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="Пустая бутылка вина (Оливиновое стекло)" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item341.png" />
+            </div>
+        </div>
+    </div>
+    <h4>Steps</h4><ol><li><p>Выдуть</p></li><li><p>Выдуть</p></li><li>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Ужать">
+                <img src="..\..\_images\item140.png" alt="Щипцы" />
+            </span>
+            <p>Ужать</p>
+        </div>
+        </li><li>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Отпилить">
+                <img src="..\..\_images\item136.png" alt="Пилка с напылением" />
+            </span>
+            <p>Отпилить</p>
+        </div>
+        </li></ol><p>Wine must be bottled in a proper wine bottle, made of non-silica glass.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Бумага" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item125.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:knives" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item73.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Воск" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item268.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Этикетка для бутылки" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">16</p>
+                    <img class="recipe-item" src="..\..\_images\item342.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">Bottle labels</span> can be renamed in a scribing station, and will add their name to the wine's tooltip.</p>
+<p>Wine must be provided with a <span style="color:#3E8A00;">Cork</span>, made by soaking <span style="color:#3E8A00;">Treated Lumber</span> in <span style="color:#3E8A00;">Limewater</span> for a day. When all is complete, use the bottle slot to fill the wine, or by pressing <span style="color:#b0b;">ПКМ</span> with a bottle in hand.</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> Документация API
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '';
+      window._CURRENT_LANG = 'ru_ru';
+    </script>
+
+    <script src="/static/metadata.js"></script>
+    <script src="/static/tooltips.js"></script>
+    <script src="/static/versions.js"></script>
+  </body>
+</html>

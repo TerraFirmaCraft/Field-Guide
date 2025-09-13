@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Дикоростучі фрукти | TFC Field Guide" />
+    <meta name="description" content="Дикоростучі фрукти" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="Дикоростучі фрукти | TFC Field Guide" />
+    <meta property="og:description" content="Дикоростучі фрукти" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/image105.png" />
+
+    <title>Дикоростучі фрукти | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">Польовий посібник TerraFirmaCraft</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Версія 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> Українська мова
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/the_world\wild_fruits.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world\wild_fruits.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world\wild_fruits.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world\wild_fruits.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world\wild_fruits.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world\wild_fruits.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world\wild_fruits.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world\wild_fruits.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/the_world\wild_fruits.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Зміст</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Зміст</a></li>
+            <li><a href="../the_world/">Світ</a><ul><li><a href="./geology.html">Геологія</a></li>
+<li><a href="./ores_and_minerals.html">Руди та мінерали</a></li>
+<li><a href="./climate.html">Календар та клімат</a></li>
+<li><a href="./flora.html">Флора</a></li>
+<li><a href="./wild_crops.html">Дикі культури</a></li>
+<li><a href="./wild_fruits.html">Дикоростучі фрукти</a></li>
+<li><a href="./wild_animals.html">Дикі тварини</a></li></ul></li>
+<li><a href="../getting_started/">Починаємо</a></li>
+<li><a href="../mechanics/">Розширена механіка</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">Світ</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Дикоростучі фрукти</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\image105.png" alt="Дикоростучі фрукти" title="None" /><span>Дикоростучі фрукти</span>
+        </h1>
+                <p>У світі росте багато різних сортів дикоростучіх фруктів. Їх можна збирати, щоб їсти, або вирощувати.  Плоди та ягоди можна знайти на трьох видах рослин: <a href="../the_world/wild_fruits.html#fruit_trees">фруктові дерева</a>, <a href="../the_world/wild_fruits.html#tall_bushes">високі</a> та <a href="../the_world/wild_fruits.html#small_bushes">низькі кущі</a>.<br/>
+<br/>
+Усі плодові рослини мають загальний життєвий цикл. Вони будуть рости, квітнути, давати плоди, а потім залишатися в стані спокою протягом річного циклу.</p>
+<p>Плодові рослини є сезонними. У холодну пору року ці рослини виглядатимуть сірими та млявими. Навесні вони стають зеленими і здоровими, готуються до плодоношення і ростуть. Точний час, коли це відбувається, залежить від плоду. Плодові рослини можуть загинути і від старості, і від невідповідних кліматичних умов.</p>
+<a class="anchor" id="fruit_trees"></a><h5>Фруктові дерева</h5>
+<p><span style="color:#3E8A00;">Фруктові дерева</span> виростають із крихітних саджанців у великі квітучі дерева. Гілки фруктових дерев — це їхнє серце, і вони будуть рости, поки існують сприятливі кліматичні умови. <span style="color:#3E8A00;">Листя</span> згодом виростає з гілок. Потім з'являються квіти і, нарешті плоди.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image106.png" alt="tfc:textures/gui/book/tutorial/fruit_tree.png">
+<div style="text-align: center;"><p>Звичайне фруктове дерево</p>
+</div><p>Плодове дерево починається з <span style="color:#3E8A00;">саджанця</span>. Саджанці почнуть рости, як тільки встановлено першу частину дерева, але згідно сезону. Розмір готового дерева приблизно визначається кількістю саджанців у вихідному блоці. Більше саджанців — більше дерево. <br/>
+До одного блоку можна додати більше саджанців <span style="color:#3E8A00;">щепленням</span>. Щоб з'єднати саджанці у одному блоці треба <span style="color:#b0b;">ПКМ</span> на ньому, тримаючи саджанець та <span style="color:#3E8A00;">ніж</span> у руках.</p>
+<p>Щоб отримати саджанці фруктового дерева, зрубай <span style="color:#3E8A00;">сокирою</span> 'ліктьові' блоки (блоки гілок, які прикріплені до блоку з одного боку і зверху). Саджанці також можна розмістити на цих 'ліктях', якщо вони не надто високо в дереві. Це дозволяє на одному плодовому дереві вирощувати кілька різних плодів. Щоб зібрати плоди використовуй <span style="color:#b0b;">ПКМ</span> по листю, коли плоди зрілі. Це дасть один плід і поверне рослину до стадії росту, поки вона не перейде в сплячку на зиму.</p>
+<a class="anchor" id="cherry"></a><h5>Вишня</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 5 - 25 °C<br/>
+<strong><a href="../mechanics/hydration.html">Опади</a></strong>: 100 - 350мм<br/>
+<br/>
+Вишневі дерева ростуть з січня по березень, починають цвісти в квітні-травні, а плодоносять у червні.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Перегляньте польовий посібник у Minecraft, щоб побачити цей мультиблок.">Mультиблок</span></p>
+        </div>
+        <p>Вишневе дерево</p>
+<a class="anchor" id="green_apple"></a><h5>Яблуня зеленоплідна</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 1 - 25 °C<br/>
+<strong><a href="../mechanics/hydration.html">Опади</a></strong>: 110 - 280мм<br/>
+<br/>
+Зеленоплідні яблуні ростуть з березня по липень, цвітуть у серпні-вересні, плодоносять у жовтні.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Перегляньте польовий посібник у Minecraft, щоб побачити цей мультиблок.">Mультиблок</span></p>
+        </div>
+        <p>Зеленоплідна яблуня</p>
+<a class="anchor" id="lemon"></a><h5>Лимон</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 10 - 30 °C<br/>
+<strong><a href="../mechanics/hydration.html">Опади</a></strong>: 180 - 470мм<br/>
+<br/>
+Лимонні дерева ростуть з лютого по травень, починають цвісти в червні-липні, плодоносять у серпні.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Перегляньте польовий посібник у Minecraft, щоб побачити цей мультиблок.">Mультиблок</span></p>
+        </div>
+        <p>Лимонне дерево</p>
+<a class="anchor" id="olive"></a><h5>Оливкове дерево</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 5 - 30 °C<br/>
+<strong><a href="../mechanics/hydration.html">Опади</a></strong>: 150 - 500мм<br/>
+<br/>
+Оливкові дерева ростуть з березня по липень, починають цвісти в серпні-вересні, плодоносять у жовтні.<br/>
+<br/>
+Зрілі плоди можна використовувати для виробництва <a href="../mechanics/lamps.html#olives">оливкової олії</a>, що використовується як паливо для ламп.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Перегляньте польовий посібник у Minecraft, щоб побачити цей мультиблок.">Mультиблок</span></p>
+        </div>
+        <p>Оливкове дерево</p>
+<a class="anchor" id="orange"></a><h5>Апельсин</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 15 - 36 °C<br/>
+<strong><a href="../mechanics/hydration.html">Опади</a></strong>: 250 - 500mm<br/>
+<br/>
+Апельсинові дерева ростуть з березня по червень, починають цвісти в липні-серпні, плодоносять у вересні.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Перегляньте польовий посібник у Minecraft, щоб побачити цей мультиблок.">Mультиблок</span></p>
+        </div>
+        <p>Апельсинове дерево</p>
+<a class="anchor" id="peach"></a><h5>Персик</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 4 - 27 °C<br/>
+<strong><a href="../mechanics/hydration.html">Опади</a></strong>: 60 - 230мм<br/>
+<br/>
+Персикові дерева ростуть з грудня по березень, цвітуть у квітні-травні, плодоносять у червні.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Перегляньте польовий посібник у Minecraft, щоб побачити цей мультиблок.">Mультиблок</span></p>
+        </div>
+        <p>Персикове дерево</p>
+<a class="anchor" id="plum"></a><h5>Слива</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 15 - 31 °C<br/>
+<strong><a href="../mechanics/hydration.html">Опади</a></strong>: 250 - 400мм<br/>
+<br/>
+Слива росте з січня по квітень, цвіте в травні-червні, плодоносить у липні.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Перегляньте польовий посібник у Minecraft, щоб побачити цей мультиблок.">Mультиблок</span></p>
+        </div>
+        <p>Сливове дерево</p>
+<a class="anchor" id="red_apple"></a><h5>Яблуня червоноплідна</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 1 - 25 °C<br/>
+<strong><a href="../mechanics/hydration.html">Опади</a></strong>: 100 - 280мм<br/>
+<br/>
+Червоноплідні яблуні ростуть з березня по липень, починають цвісти в серпні-вересні, плодоносять у жовтні.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Перегляньте польовий посібник у Minecraft, щоб побачити цей мультиблок.">Mультиблок</span></p>
+        </div>
+        <p>Червоноплідна яблуня</p>
+<a class="anchor" id="banana"></a><h5>Банан</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 17 - 35 °C<br/>
+<strong><a href="../mechanics/hydration.html">Опади</a></strong>: 280 - 500мм<br/>
+<br/>
+Банани - це особливий вид фруктів. Вони ростуть лише вертикально, у них немає листя, а плоди лише на самому верхньому блоці. Саджанці висаджують з квітучої частини рослини. Після збору плодів сама рослина гине і більше не дає плодів. Навесні її необхідно пересадити.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Перегляньте польовий посібник у Minecraft, щоб побачити цей мультиблок.">Mультиблок</span></p>
+        </div>
+        <p>Банан</p>
+<h5>Фруктові дерева</h5>
+<p>The fruiting calendar for fruit trees.</p>
+<div class="row"><div class="col-md-9"><figure class="table-figure"><table><thead><tr><th></th><th><p>Jan</p></th><th><p>Feb</p></th><th><p>Mar</p></th><th><p>Apr</p></th><th><p>May</p></th><th><p>Jun</p></th><th><p>Jul</p></th><th><p>Aug</p></th><th><p>Sep</p></th><th><p>Oct</p></th><th><p>Nov</p></th><th><p>Dec</p></th></tr></thead><tbody><tr><td><p>Cherry</p></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Apple</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Lemon</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Olive</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Orange</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Peach</p></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td></tr><tr><td><p>Plum</p></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Banana</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr></tbody></table></figure></div><div class="col-md-3"><h4>Legend</h4>
+            <div class="item-header">
+                <span style="background-color:#a8986a"></span>
+                <p>Dormant</p>
+            </div>
+            
+            <div class="item-header">
+                <span style="background-color:#6ab553"></span>
+                <p>Healthy</p>
+            </div>
+            
+            <div class="item-header">
+                <span style="background-color:#cca0db"></span>
+                <p>Flowering</p>
+            </div>
+            
+            <div class="item-header">
+                <span style="background-color:#a217ff"></span>
+                <p>Fruiting</p>
+            </div>
+            </div></div><hr><a class="anchor" id="tall_bushes"></a><h5>Високі кущі</h5>
+<p><span style="color:#3E8A00;">Високі кущі</span> - це фруктові блоки, які здатні рости в усіх напрямках і поширюватися. Вони або ростуть вгору до трьох блоків, або розміщують <span style="color:#3E8A00;">пагони</span> з боків, які можуть вирости у новий кущ. Через деякий час кущі перестануть розростатися і досягнуть зрілості. Зрізання цих кущів гострим інструментом має шанс скинути новий кущ. Повністю дозрілі кущі завжди опадають самі.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image107.png" alt="tfc:textures/gui/book/tutorial/berry_bush.png">
+<div style="text-align: center;"><p>Високий дикий кущ</p>
+</div><p>Високі кущі здатні розростатися, коли їхнім пагонам є де прижитися. На практиці це означає, що для розміщення пагону потрібен міцний блок під ним. Забезпечення рівної відкритої ділянки, вільної від трави чи іншого сміття, дає їм найкращі шанси для росту.</p>
+<p>Кущі, на відміну від фруктових дерев, враховують навколишні водні блоки, щоб визначити <a href="../mechanics/hydration.html">вологість</a> блоку під собою. Фруктові ж дерева враховують лиш кількість опадів.<br/>
+Будь-який повний блок куща може формувати ягоди. Ягоди можна збирати, клацнувши <span style="color:#b0b;">ПКМ</span>.</p>
+<a class="anchor" id="blackberry"></a><h5>Кущ ожини</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 7 - 24 °C<br/>
+<strong><a href="../mechanics/hydration.html">Опади</a></strong>: 24 - 100мм<br/>
+<br/>
+Кущі ожини ростуть з лютого по травень, починають цвісти в червні та липні, а плодоносять у серпні.<br/>
+<br/>
+Їх можна знайти в місцях з невеликою кількістю дерев.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Перегляньте польовий посібник у Minecraft, щоб побачити цей мультиблок.">Mультиблок</span></p>
+        </div>
+        <p>Кущ ожини</p>
+<a class="anchor" id="raspberry"></a><h5>Кущ малини</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 5 - 25 °C<br/>
+<strong><a href="../mechanics/hydration.html">Опади</a></strong>: 24 - 100мм<br/>
+<br/>
+Кущі малини ростуть з квітня по липень, цвітуть у серпні-вересні, плодоносять у жовтні.<br/>
+<br/>
+Їх можна зустріти в місцях з невеликою кількістю дерев.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Перегляньте польовий посібник у Minecraft, щоб побачити цей мультиблок.">Mультиблок</span></p>
+        </div>
+        <p>Кущ малини</p>
+<a class="anchor" id="blueberry"></a><h5>Кущ чорниці</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 7 - 29 °C<br/>
+<strong><a href="../mechanics/hydration.html">Опади</a></strong>: 12 - 100мм<br/>
+<br/>
+Кущі чорниці ростуть з лютого по травень, цвітуть у червні-липні, плодоносять у серпні.<br/>
+<br/>
+Їх можна зустріти в місцях з невеликою кількістю дерев.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Перегляньте польовий посібник у Minecraft, щоб побачити цей мультиблок.">Mультиблок</span></p>
+        </div>
+        <p>Кущ чорниці</p>
+<a class="anchor" id="elderberry"></a><h5>Кущ бузини</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 10 - 33 °C<br/>
+<strong><a href="../mechanics/hydration.html">Опади</a></strong>: 12 - 100мм<br/>
+<br/>
+Кущі бузини ростуть з лютого по травень, цвітуть у червні-липні, плодоносять у серпні.<br/>
+<br/>
+Їх можна зустріти в місцях з невеликою кількістю дерев.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Перегляньте польовий посібник у Minecraft, щоб побачити цей мультиблок.">Mультиблок</span></p>
+        </div>
+        <p>Кущ бузини</p>
+<a class="anchor" id="small_bushes"></a><h5>Малі кущі</h5>
+<p><span style="color:#3E8A00;">Малі кущі</span> є різновидом низьких фруктових блоків, які з'являються в лісах. Невеликі кущі час від часу поширюються на навколишні блоки, якщо поруч не надто багато інших кущів.<br/>
+<br/>
+Маленькі кущі пройдуть три стадії росту до появи ягід. Ягоди збирають просто, натисни на стиглій ягоді <span style="color:#b0b;">ПКМ</span>.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Перегляньте польовий посібник у Minecraft, щоб побачити цей мультиблок.">Mультиблок</span></p>
+        </div>
+        <p>Три різні розміри малих кущів</p>
+<a class="anchor" id="bunchberry"></a><h5>Кущ кизилу</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 15 - 35 °C<br/>
+<strong><a href="../mechanics/hydration.html">Вологість</a></strong>: 24 - 100 %<br/>
+<br/>
+Кущі кизилу ростуть з травня по липень, цвітуть у серпні-вересні, плодоносять у жовтні.<br/>
+<br/>
+Їх можна зустріти в лісах.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Перегляньте польовий посібник у Minecraft, щоб побачити цей мультиблок.">Mультиблок</span></p>
+        </div>
+        <p>Помісячні стадії росту куща кизилу</p>
+<a class="anchor" id="gooseberry"></a><h5>Кущ аґрусу</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 5 - 27 °C<br/>
+<strong><a href="../mechanics/hydration.html">Вологість</a></strong>: 24 - 100 %<br/>
+<br/>
+Кущі аґрусу ростуть з квітня по липень, цвітуть у серпні-вересні, плодоносять у жовтні.<br/>
+<br/>
+Їх можна зустріти в лісах.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Перегляньте польовий посібник у Minecraft, щоб побачити цей мультиблок.">Mультиблок</span></p>
+        </div>
+        <p>Помісячні стадії росту куща аґрусу</p>
+<a class="anchor" id="snowberry"></a><h5>Кущ сніжноягідника</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -7 - 18 °C<br/>
+<strong><a href="../mechanics/hydration.html">Вологість</a></strong>: 24 - 100 %<br/>
+<br/>
+Кущі сніжноягідника ростуть з березня по червень, цвітуть у липні-серпні, плодоносять у вересні.<br/>
+<br/>
+Їх можна зустріти в лісах.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Перегляньте польовий посібник у Minecraft, щоб побачити цей мультиблок.">Mультиблок</span></p>
+        </div>
+        <p>Помісячні стадії росту куща сніжноягідника</p>
+<a class="anchor" id="cloudberry"></a><h5>Кущ морошки</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -2 - 17 °C<br/>
+<strong><a href="../mechanics/hydration.html">Вологість</a></strong>: 9 - 100 %<br/>
+<br/>
+Кущі морошки ростуть з лютого по травень, цвітуть у червні-серпні, плодоносять у вересні.<br/>
+<br/>
+Їх можна зустріти в лісах.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Перегляньте польовий посібник у Minecraft, щоб побачити цей мультиблок.">Mультиблок</span></p>
+        </div>
+        <p>Помісячні стадії росту куща морошки</p>
+<a class="anchor" id="strawberry"></a><h5>Кущ полуниці</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 5 - 28 °C<br/>
+<strong><a href="../mechanics/hydration.html">Вологість</a></strong>: 12 - 100 %<br/>
+<br/>
+Кущі полуниці ростуть з жовтня по грудень, цвітуть у січні-лютому, плодоносять у березні.<br/>
+<br/>
+Їх можна зустріти в лісах.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Перегляньте польовий посібник у Minecraft, щоб побачити цей мультиблок.">Mультиблок</span></p>
+        </div>
+        <p>Помісячні стадії росту куща полуниці</p>
+<a class="anchor" id="wintergreen_berry"></a><h5>Кущ брусниці</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -6 - 17 °C<br/>
+<strong><a href="../mechanics/hydration.html">Вологість</a></strong>: 12 - 100 %<br/>
+<br/>
+Кущі брусниці ростуть з травня по вересень, починають цвісти в жовтні-листопаді, плодоносять в грудні.<br/>
+<br/>
+Їх можна зустріти в лісах.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Перегляньте польовий посібник у Minecraft, щоб побачити цей мультиблок.">Mультиблок</span></p>
+        </div>
+        <p>Помісячні стадії росту куща брусниці</p>
+<a class="anchor" id="cranberry"></a><h5>Кущ журавлини</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -5 - 17 °C<br/>
+<strong><a href="../mechanics/hydration.html">Вологість</a></strong>: 30 - 100 %<br/>
+<br/>
+Кущі журавлини ростуть з березня по червень, цвітуть у липні-серпні, плодоносять у вересні.<br/>
+<br/>
+Їх можна зустріти в лісах. На відміну від більшості маленьких кущів, журавлину вирощують під водою.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Перегляньте польовий посібник у Minecraft, щоб побачити цей мультиблок.">Mультиблок</span></p>
+        </div>
+        <p>Помісячні стадії росту куща журавлини</p>
+<h5>Berry Bushes</h5>
+<p>The fruiting calendar for berry bushes.</p>
+<div class="row"><div class="col-md-9"><figure class="table-figure"><table><thead><tr><th></th><th><p>Jan</p></th><th><p>Feb</p></th><th><p>Mar</p></th><th><p>Apr</p></th><th><p>May</p></th><th><p>Jun</p></th><th><p>Jul</p></th><th><p>Aug</p></th><th><p>Sep</p></th><th><p>Oct</p></th><th><p>Nov</p></th><th><p>Dec</p></th></tr></thead><tbody><tr><td><p>Snowberry</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Bunchberry</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Gooseberry</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Cloudberry</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Strawberry</p></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td></tr><tr><td><p>Wintergreen</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Cranberry</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr></tbody></table></figure></div><div class="col-md-3"><h4>Legend</h4>
+            <div class="item-header">
+                <span style="background-color:#a8986a"></span>
+                <p>Dormant</p>
+            </div>
+            
+            <div class="item-header">
+                <span style="background-color:#6ab553"></span>
+                <p>Healthy</p>
+            </div>
+            
+            <div class="item-header">
+                <span style="background-color:#cca0db"></span>
+                <p>Flowering</p>
+            </div>
+            
+            <div class="item-header">
+                <span style="background-color:#a217ff"></span>
+                <p>Fruiting</p>
+            </div>
+            </div></div><hr>
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Документація
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '';
+      window._CURRENT_LANG = 'uk_ua';
+    </script>
+
+    <script src="/static/metadata.js"></script>
+    <script src="/static/tooltips.js"></script>
+    <script src="/static/versions.js"></script>
+  </body>
+</html>

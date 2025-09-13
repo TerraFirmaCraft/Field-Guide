@@ -1,0 +1,909 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="進階內容 | TFC Field Guide" />
+    <meta name="description" content="進階內容" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="進階內容 | TFC Field Guide" />
+    <meta property="og:description" content="進階內容" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/splash_120.png" />
+
+    <title>進階內容 | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft Field Guide</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Version 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 繁體中文（香港特別行政區)
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/mechanics/" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics/" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics/" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics/" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics/" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics/" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics/" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics/" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/mechanics/" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Contents</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Index</a></li>
+            <li><a href="../the_world/">這個世界</a></li>
+<li><a href="../getting_started/">新手入門</a></li>
+<li><a href="../mechanics/">進階內容</a><ul><li><a href="./advanced_building_materials.html">高級建築材料</a></li>
+<li><a href="./animal_husbandry.html">畜牧業</a></li>
+<li><a href="./anvils.html">砧</a></li>
+<li><a href="./aqueducts.html">引水橋</a></li>
+<li><a href="./armor.html">盔甲</a></li>
+<li><a href="./armor_trims.html">Armor Trims</a></li>
+<li><a href="./barrels.html">大桶</a></li>
+<li><a href="./bellows.html">風箱</a></li>
+<li><a href="./blast_furnace.html">建造高爐</a></li>
+<li><a href="./bloomery.html">鍛鐵爐</a></li>
+<li><a href="./bowls.html">Bowls</a></li>
+<li><a href="./bread.html">烤麪包</a></li>
+<li><a href="./charcoal_forge.html">木炭爐</a></li>
+<li><a href="./charcoal_pit.html">木炭坑</a></li>
+<li><a href="./chisel.html">鑿子</a></li>
+<li><a href="./composter.html">堆肥桶</a></li>
+<li><a href="./crankshaft.html">Crankshafts</a></li>
+<li><a href="./crops.html">農作物</a></li>
+<li><a href="./crucible.html">坩堝</a></li>
+<li><a href="./dairy.html">乳製品</a></li>
+<li><a href="./damage_types.html">傷害類型</a></li>
+<li><a href="./decay.html">食物保鮮</a></li>
+<li><a href="./dye.html">Dye</a></li>
+<li><a href="./fertilizers.html">肥料</a></li>
+<li><a href="./fire_clay.html">耐火黏土</a></li>
+<li><a href="./fishing.html">釣魚</a></li>
+<li><a href="./flux.html">助焊劑</a></li>
+<li><a href="./gems.html">寶石</a></li>
+<li><a href="./glassworking.html">Glassworking</a></li>
+<li><a href="./glassworking_applications.html">Glass Products</a></li>
+<li><a href="./grill.html">篝火燒烤</a></li>
+<li><a href="./heating.html">加熱</a></li>
+<li><a href="./hydration.html">保持土壤濕潤</a></li>
+<li><a href="./jarring.html">Jarring</a></li>
+<li><a href="./lamps.html">燈</a></li>
+<li><a href="./leather_making.html">制皮術</a></li>
+<li><a href="./lighting.html">光源</a></li>
+<li><a href="./mechanical_power.html">Mechanical Power</a></li>
+<li><a href="./minecarts.html">礦車</a></li>
+<li><a href="./panning.html">淘金</a></li>
+<li><a href="./papermaking.html">造紙術</a></li>
+<li><a href="./pets.html">寵物</a></li>
+<li><a href="./pot.html">篝火大鍋</a></li>
+<li><a href="./powderkegs.html">火藥桶</a></li>
+<li><a href="./prospecting.html">勘探</a></li>
+<li><a href="./pumps.html">Pumps</a></li>
+<li><a href="./quern.html">手推磨</a></li>
+<li><a href="./salad.html">沙拉</a></li>
+<li><a href="./sandwiches.html">三明治</a></li>
+<li><a href="./scribing_table.html">命名台</a></li>
+<li><a href="./sewing_table.html">Sewing Table</a></li>
+<li><a href="./sluices.html">洗礦槽</a></li>
+<li><a href="./steel.html">鍊鋼</a></li>
+<li><a href="./support_beams.html">Support Beams & Collapses</a></li>
+<li><a href="./weaving.html">札札弄機杼</a></li>
+<li><a href="./wooden_buckets.html">木桶</a></li></ul></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                <li class="breadcrumb-item active" aria-current="page">進階內容</li>
+            
+            </ol>
+          </nav>
+
+          
+                <h1 class="mb-4">進階內容</h1>
+                <p><p>Advanced sections of the tech tree, from the first pickaxe, all the way to colored steel.<br/>
+<br/>
+<br/>
+<strong>Note:</strong> you can search entries simply by starting to type anywhere!</p>
+</p>
+                <div class="row row-cols-1 row-cols-md-3 g-3">
+                    
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item33.png" alt="高級建築材料" />
+            <a href="advanced_building_materials.html">高級建築材料</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item48.png" alt="畜牧業" />
+            <a href="animal_husbandry.html">畜牧業</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="砧" />
+            <a href="anvils.html">砧</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="引水橋" />
+            <a href="aqueducts.html">引水橋</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\placeholder_16.png" alt="盔甲" />
+            <a href="armor.html">盔甲</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item513.png" alt="Armor Trims" />
+            <a href="armor_trims.html">Armor Trims</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\placeholder_16.png" alt="大桶" />
+            <a href="barrels.html">大桶</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="風箱" />
+            <a href="bellows.html">風箱</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item59.png" alt="建造高爐" />
+            <a href="blast_furnace.html">建造高爐</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="鍛鐵爐" />
+            <a href="bloomery.html">鍛鐵爐</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item65.png" alt="Bowls" />
+            <a href="bowls.html">Bowls</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image50.png" alt="烤麪包" />
+            <a href="bread.html">烤麪包</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image51.png" alt="木炭爐" />
+            <a href="charcoal_forge.html">木炭爐</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item81.png" alt="木炭坑" />
+            <a href="charcoal_pit.html">木炭坑</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item82.png" alt="鑿子" />
+            <a href="chisel.html">鑿子</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image56.png" alt="堆肥桶" />
+            <a href="composter.html">堆肥桶</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="Crankshafts" />
+            <a href="crankshaft.html">Crankshafts</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image57.png" alt="農作物" />
+            <a href="crops.html">農作物</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="坩堝" />
+            <a href="crucible.html">坩堝</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image60.png" alt="乳製品" />
+            <a href="dairy.html">乳製品</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item97.png" alt="傷害類型" />
+            <a href="damage_types.html">傷害類型</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item98.png" alt="食物保鮮" />
+            <a href="decay.html">食物保鮮</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item102.png" alt="Dye" />
+            <a href="dye.html">Dye</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item107.png" alt="肥料" />
+            <a href="fertilizers.html">肥料</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item112.png" alt="耐火黏土" />
+            <a href="fire_clay.html">耐火黏土</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item116.png" alt="釣魚" />
+            <a href="fishing.html">釣魚</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item56.png" alt="助焊劑" />
+            <a href="flux.html">助焊劑</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item122.png" alt="寶石" />
+            <a href="gems.html">寶石</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item127.png" alt="Glassworking" />
+            <a href="glassworking.html">Glassworking</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item137.png" alt="Glass Products" />
+            <a href="glassworking_applications.html">Glass Products</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item145.png" alt="篝火燒烤" />
+            <a href="grill.html">篝火燒烤</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image72.png" alt="加熱" />
+            <a href="heating.html">加熱</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image73.png" alt="保持土壤濕潤" />
+            <a href="hydration.html">保持土壤濕潤</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item148.png" alt="Jarring" />
+            <a href="jarring.html">Jarring</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item154.png" alt="燈" />
+            <a href="lamps.html">燈</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item163.png" alt="制皮術" />
+            <a href="leather_making.html">制皮術</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="光源" />
+            <a href="lighting.html">光源</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="Mechanical Power" />
+            <a href="mechanical_power.html">Mechanical Power</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item175.png" alt="礦車" />
+            <a href="minecarts.html">礦車</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image78.png" alt="淘金" />
+            <a href="panning.html">淘金</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item185.png" alt="造紙術" />
+            <a href="papermaking.html">造紙術</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item199.png" alt="寵物" />
+            <a href="pets.html">寵物</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item200.png" alt="篝火大鍋" />
+            <a href="pot.html">篝火大鍋</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="火藥桶" />
+            <a href="powderkegs.html">火藥桶</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item207.png" alt="勘探" />
+            <a href="prospecting.html">勘探</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="Pumps" />
+            <a href="pumps.html">Pumps</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="手推磨" />
+            <a href="quern.html">手推磨</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image87.png" alt="沙拉" />
+            <a href="salad.html">沙拉</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image88.png" alt="三明治" />
+            <a href="sandwiches.html">三明治</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item54.png" alt="命名台" />
+            <a href="scribing_table.html">命名台</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="Sewing Table" />
+            <a href="sewing_table.html">Sewing Table</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\image91.png" alt="洗礦槽" />
+            <a href="sluices.html">洗礦槽</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item230.png" alt="鍊鋼" />
+            <a href="steel.html">鍊鋼</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="../../_images/placeholder_64.png" alt="Support Beams & Collapses" />
+            <a href="support_beams.html">Support Beams & Collapses</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item238.png" alt="札札弄機杼" />
+            <a href="weaving.html">札札弄機杼</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+
+                    <div class="col">
+                        <div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img class="entry-card-icon me-2" src="..\..\_images\item249.png" alt="木桶" />
+            <a href="wooden_buckets.html">木桶</a>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
+                </div>
+            
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '';
+      window._CURRENT_LANG = 'zh_hk';
+    </script>
+
+    <script src="/static/metadata.js"></script>
+    <script src="/static/tooltips.js"></script>
+    <script src="/static/versions.js"></script>
+  </body>
+</html>

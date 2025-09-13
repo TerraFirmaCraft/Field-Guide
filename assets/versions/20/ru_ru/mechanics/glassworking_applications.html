@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Стеклянные изделия | TFC Field Guide" />
+    <meta name="description" content="Стеклянные изделия" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="Стеклянные изделия | TFC Field Guide" />
+    <meta property="og:description" content="Стеклянные изделия" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/item137.png" />
+
+    <title>Стеклянные изделия | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">Справочник TerraFirmaCraft</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Версия 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> Русский
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/mechanics\glassworking_applications.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\glassworking_applications.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\glassworking_applications.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\glassworking_applications.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\glassworking_applications.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\glassworking_applications.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\glassworking_applications.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\glassworking_applications.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/mechanics\glassworking_applications.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Содержание</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Главная</a></li>
+            <li><a href="../the_world/">Мир</a></li>
+<li><a href="../getting_started/">Начало работы</a></li>
+<li><a href="../mechanics/">Продвинутая механика</a><ul><li><a href="./advanced_building_materials.html">Продвинутые материалы</a></li>
+<li><a href="./animal_husbandry.html">Животноводство</a></li>
+<li><a href="./anvils.html">Наковальни</a></li>
+<li><a href="./aqueducts.html">Акведуки</a></li>
+<li><a href="./armor.html">Броня</a></li>
+<li><a href="./armor_trims.html">Отделка брони</a></li>
+<li><a href="./barrels.html">Бочки</a></li>
+<li><a href="./bellows.html">Меха</a></li>
+<li><a href="./blast_furnace.html">Доменная печь</a></li>
+<li><a href="./bloomery.html">Сыродутный горн</a></li>
+<li><a href="./bowls.html">Чаши</a></li>
+<li><a href="./bread.html">Хлеб</a></li>
+<li><a href="./charcoal_forge.html">Угольная кузница</a></li>
+<li><a href="./charcoal_pit.html">Угольная яма</a></li>
+<li><a href="./chisel.html">Долото</a></li>
+<li><a href="./composter.html">Компостер</a></li>
+<li><a href="./crankshaft.html">Коленчатые валы</a></li>
+<li><a href="./crops.html">Культуры</a></li>
+<li><a href="./crucible.html">Тигель</a></li>
+<li><a href="./dairy.html">Молочные продукты</a></li>
+<li><a href="./damage_types.html">Типы урона</a></li>
+<li><a href="./decay.html">Сохранение</a></li>
+<li><a href="./dye.html">Красители</a></li>
+<li><a href="./fertilizers.html">Удобрения</a></li>
+<li><a href="./fire_clay.html">Огнеупорная глина</a></li>
+<li><a href="./fishing.html">Рыбалка</a></li>
+<li><a href="./flux.html">Флюс</a></li>
+<li><a href="./gems.html">Драгоценные камни</a></li>
+<li><a href="./glassworking.html">Стеклоделие</a></li>
+<li><a href="./glassworking_applications.html">Стеклянные изделия</a></li>
+<li><a href="./grill.html">Кострище и гриль</a></li>
+<li><a href="./heating.html">Нагревание</a></li>
+<li><a href="./hydration.html">Поддержание увлажненности</a></li>
+<li><a href="./jarring.html">Заготовка в банках</a></li>
+<li><a href="./lamps.html">Лампы</a></li>
+<li><a href="./leather_making.html">Выделка кожи</a></li>
+<li><a href="./lighting.html">Источники света</a></li>
+<li><a href="./mechanical_power.html">Механическая энергия</a></li>
+<li><a href="./minecarts.html">Вагонетки</a></li>
+<li><a href="./panning.html">Промывка в лотке</a></li>
+<li><a href="./papermaking.html">Производство бумаги</a></li>
+<li><a href="./pets.html">Домашние животные</a></li>
+<li><a href="./pot.html">Кострище и котелок</a></li>
+<li><a href="./powderkegs.html">Пороховые бочки</a></li>
+<li><a href="./prospecting.html">Поиск месторождений</a></li>
+<li><a href="./pumps.html">Насосы</a></li>
+<li><a href="./quern.html">Жернов</a></li>
+<li><a href="./salad.html">Салаты</a></li>
+<li><a href="./sandwiches.html">Бутерброды</a></li>
+<li><a href="./scribing_table.html">Стол для письма</a></li>
+<li><a href="./sewing_table.html">Швейный стол</a></li>
+<li><a href="./sluices.html">Рудопромывочный желоб</a></li>
+<li><a href="./steel.html">Сталь</a></li>
+<li><a href="./support_beams.html">Опоры и обвалы</a></li>
+<li><a href="./weaving.html">Ткачество</a></li>
+<li><a href="./wooden_buckets.html">Деревянные ведра</a></li></ul></li>
+<li><a href="../firmalife/">(Дополнение) Firmalife</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">Продвинутая механика</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Стеклянные изделия</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\item137.png" alt="Стеклянные изделия" title="Стекло" /><span>Стеклянные изделия</span>
+        </h1>
+                <p>Самые простые стеклянные изделия - это <span style="color:#3E8A00;">Стеклянные панели</span> и <span style="color:#3E8A00;">Стеклянные блоки</span>. Чтобы их создать, вы должны начать с <a href="../mechanics/glassworking.html#blowpipe">Духовой трубки</a> с <span style="color:#3E8A00;">Партией стекла</span>, а затем выполнить <span style="color:#3E8A00;">Литье</span>.<br/>
+</p>
+<ul>
+	<li><strong>Литье на стол</strong> используется для создания <span style="color:#3E8A00;">Стеклянных панелей</span></li>
+	<li><strong>Литье в бассейн</strong> используется для создания <span style="color:#3E8A00;">Стеклянных блоков</span></li>
+</ul>
+<p>Стекло также может быть <span style="color:#3E8A00;">окрашено</span> перед его заливкой для создания цветного стекла. Цвет зависит от типа партии стекла и любых добавленных порошков.<br/>
+<br/>
+Каждый тип <span style="color:#3E8A00;">Партии стекла</span> создает стекло разного естественного цвета. <span style="color:#3E8A00;">Силикатные</span> партии стекла могут быть окрашены во множество цветов, <span style="color:#3E8A00;">Оливиновое</span> и <span style="color:#3E8A00;">Вулканическое</span> стекло могут быть окрашены в относительно небольшое количество цветов.</p>
+<h5>Литье на стол</h5>
+<p><span style="color:#3E8A00;">Стеклянные панели</span> делаются с помощью <span style="color:#3E8A00;">Литья на стол</span>. Стол для литья делается путем размещения до шестнадцати <span style="color:#3E8A00;">Блоков с латунным покрытием</span> в непрерывной области.<br/>
+<br/>
+ 1. Добавьте <a href="../mechanics/glassworking.html">Партию стекла</a> в <span style="color:#3E8A00;">Духовую трубку</span>.<br/>
+ 2. Нагрейте духовую трубку до <span style="color:#AA0000;"><strong>Начинает краснеть</strong></span>.<br/>
+ 3. <span style="color:#b0b;">ПКМ</span> <span style="color:#3E8A00;">Духовую трубку</span> на верхней части стола.<br/>
+ 4. Наконец <span style="color:#b0b;">ПКМ</span> с <a href="../mechanics/glassworking.html#paddle">Лопаткой</a>, чтобы выпрямить стекло.</p>
+
+<div id="content54" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#content54" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        
+<button type="button" data-bs-target="#content54" data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+<button type="button" data-bs-target="#content54" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+    </div>
+    <div class="carousel-inner">
+        
+<div class="carousel-item active">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image65.png" alt="tfc:textures/gui/book/tutorial/glass_panes_1.png">
+</div>
+
+<div class="carousel-item ">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image66.png" alt="tfc:textures/gui/book/tutorial/glass_panes_2.png">
+</div>
+
+<div class="carousel-item ">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image67.png" alt="tfc:textures/gui/book/tutorial/glass_panes_3.png">
+</div>
+
+    </div>
+    <button type="button" class="carousel-control-prev" data-bs-target="#content54" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button type="button" class="carousel-control-next" data-bs-target="#content54" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<div style="text-align: center;"><p>После охлаждения стекло можно разбить с помощью <a href="../mechanics/glassworking.html#saw">Алмазной пилы</a>, чтобы получить.</p>
+</div><h5>Литье в бассейн</h5>
+<p><span style="color:#3E8A00;">Стеклянные блоки</span> делаются с помощью <span style="color:#3E8A00;">Литья в бассейн</span>. Бассейн делается путем окружения всех сторон воздушного блока, кроме верхней, <span style="color:#3E8A00;">Блоками с латунным покрытием</span>.<br/>
+<br/>
+ 1. Добавьте <a href="../mechanics/glassworking.html">Партию стекла</a> в <span style="color:#3E8A00;">Духовую трубку</span>.<br/>
+ 2. Нагрейте духовую трубку до <span style="color:#AA0000;"><strong>Начинает краснеть</strong></span>.<br/>
+ 3. <span style="color:#b0b;">ПКМ</span> <span style="color:#3E8A00;">Духовую трубку</span> на верхней части стола.</p>
+
+<div id="content55" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#content55" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        
+<button type="button" data-bs-target="#content55" data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+<button type="button" data-bs-target="#content55" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+    </div>
+    <div class="carousel-inner">
+        
+<div class="carousel-item active">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image68.png" alt="tfc:textures/gui/book/tutorial/glass_block_1.png">
+</div>
+
+<div class="carousel-item ">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image69.png" alt="tfc:textures/gui/book/tutorial/glass_block_2.png">
+</div>
+
+<div class="carousel-item ">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image70.png" alt="tfc:textures/gui/book/tutorial/glass_block_3.png">
+</div>
+
+    </div>
+    <button type="button" class="carousel-control-prev" data-bs-target="#content55" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button type="button" class="carousel-control-next" data-bs-target="#content55" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<div style="text-align: center;"><p>После охлаждения стекло можно разбить с помощью <a href="../mechanics/glassworking.html#saw">Алмазной пилы</a>, чтобы получить.</p>
+</div><a class="anchor" id="coloring"></a><h5>Окрашивание стекла</h5>
+<p>Стекло имеет естественный цвет на основе типа <a href="../mechanics/glassworking.html">Партии стекла</a>, которая была использована. Другие цвета могут быть получены с использованием <a href="../mechanics/bowls.html">Чаши</a>.<br/>
+<br/>
+Для использования, поместите <a href="../mechanics/bowls.html">Чашу</a> на землю, затем <span style="color:#b0b;">ПКМ</span> необходимый <span style="color:#3E8A00;">Порошок</span>. Перед <span style="color:#3E8A00;">Литьем</span>, используйте <span style="color:#3E8A00;">Духовую трубку</span> на чаше, чтобы добавить порошок в партию.</p>
+<p><br/>
+<br/>
+На следующих страницах показаны различные комбинации типов стекла и материалов порошка для создания каждого цвета.</p>
+<h5>Цвета красителей</h5>
+<p></p>
+<ul>
+	<li><strong><span style="color:#AAAAAA;">Белый</span></strong>: силикатное или гематитовое стекло + <span style="color:#3E8A00;">сода</span></li>
+	<li><strong><span style="color:#000000;">Черный</span></strong>: любое стекло + <span style="color:#3E8A00;">графит</span></li>
+	<li><strong><span style="color:#555555;">Серый</span></strong>: любое + <span style="color:#3E8A00;">графит</span> + <span style="color:#3E8A00;">сода</span></li>
+	<li><strong><span style="color:#AAAAAA;">Светло-Серый</span></strong>: любое стекло + <span style="color:#3E8A00;">графит</span> + 2x <span style="color:#3E8A00;">сода</span></li>
+	<li><strong><span style="color:#AA00AA;">Пурпурный</span></strong>: любое стекло + <span style="color:#3E8A00;">железо</span> + <span style="color:#3E8A00;">медь</span></li>
+	<li><strong><span style="color:#964b00;">Коричневый</span></strong>: любое стекло + <span style="color:#3E8A00;">никель</span></li>
+	<li><strong><span style="color:#00AAAA;">Бирюзовый</span></strong>: невулканическое стекло + <span style="color:#3E8A00;">медь</span> + <span style="color:#3E8A00;">сапфир</span></li>
+	<li><strong><span style="color:#00AA00;">Зеленый</span></strong>: силикатное или гематитовое стекло + <span style="color:#3E8A00;">железо</span></li>
+</ul>
+<p></p>
+<ul>
+	<li><strong><span style="color:#55FF55;">Лайм</span></strong>: Силикатное или гематитовое стекло + <span style="color:#3E8A00;">Железо</span> + <span style="color:#3E8A00;">Сода</span></li>
+	<li><strong><span style="color:#55FFFF;">Светло-Голубой</span></strong>: Силикатное стекло + <span style="color:#3E8A00;">лазурит</span></li>
+	<li><strong><span style="color:#0000AA;">Синий</span></strong>: Силикатное стекло + <span style="color:#3E8A00;">медь</span></li>
+	<li><strong><span style="color:#AA0000;">Красный</span></strong>: Силикатное или гематитовое стекло + <span style="color:#3E8A00;">Олово</span></li>
+	<li><strong><span style="color:#FFAA00;">Желтый</span></strong>: Силикатное или гематитовое стекло + <span style="color:#3E8A00;">Серебро</span></li>
+	<li><strong><span style="color:#ef8e38;">Оранжевый</span></strong>: Силикатное стекло + <span style="color:#3E8A00;">Пирит</span></li>
+	<li><strong><span style="color:#AA00AA;">Маджента</span></strong>: Силикатное или гематитовое стекло + <span style="color:#3E8A00;">Рубин</span></li>
+	<li><strong><span style="color:#FF55FF;">Розовый</span></strong>: Силикатное стекло + <span style="color:#3E8A00;">Золото</span></li>
+	<li><strong><span style="color:#000000;">Тонированный</span></strong>: несиликатное стекло + <span style="color:#3E8A00;">аметист</span></li>
+</ul>
+<hr><a class="anchor" id="lamp_glass"></a>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:glass_batches" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item138.gif" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="Стекло для лампы" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item139.png" />
+            </div>
+        </div>
+    </div>
+    <h4>Steps</h4><ol><li><p>Выдуть</p></li><li>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Ужать">
+                <img src="..\..\_images\item140.png" alt="Щипцы" />
+            </span>
+            <p>Ужать</p>
+        </div>
+        </li><li>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Разгладить">
+                <img src="..\..\_images\item135.png" alt="Лопатка" />
+            </span>
+            <p>Разгладить</p>
+        </div>
+        </li><li><p>Выдуть</p></li><li>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Отпилить">
+                <img src="..\..\_images\item136.png" alt="Пилка с напылением" />
+            </span>
+            <p>Отпилить</p>
+        </div>
+        </li></ol><p><span style="color:#3E8A00;">Стекло для ламп</span> является необходимым компонентом для создания <a href="../mechanics/lamps.html">Ламп</a>.</p>
+<a class="anchor" id="jar"></a>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:glass_batches_tier_2" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item141.gif" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="Банка" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item142.png" />
+            </div>
+        </div>
+    </div>
+    <h4>Steps</h4><ol><li><p>Выдуть</p></li><li>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Ужать">
+                <img src="..\..\_images\item140.png" alt="Щипцы" />
+            </span>
+            <p>Ужать</p>
+        </div>
+        </li><li>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Покрутить">
+                <img src="..\..\_images\item143.png" alt="Шерстяная ткань" />
+            </span>
+            <p>Покрутить</p>
+        </div>
+        </li><li>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Отпилить">
+                <img src="..\..\_images\item136.png" alt="Пилка с напылением" />
+            </span>
+            <p>Отпилить</p>
+        </div>
+        </li></ol><p><a href="../mechanics/jarring.html">Банки</a> также делаются из дутого стекла, но только из силикатного или гематитового стекла.</p>
+<a class="anchor" id="glass_bottle"></a>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="Смесь для силикатного стекла" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item128.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="Пузырёк" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item127.png" />
+            </div>
+        </div>
+    </div>
+    <h4>Steps</h4><ol><li><p>Выдуть</p></li><li>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Ужать">
+                <img src="..\..\_images\item140.png" alt="Щипцы" />
+            </span>
+            <p>Ужать</p>
+        </div>
+        </li><li>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Отпилить">
+                <img src="..\..\_images\item136.png" alt="Пилка с напылением" />
+            </span>
+            <p>Отпилить</p>
+        </div>
+        </li></ol><p><span style="color:#3E8A00;">Стеклянные бутылки</span> также могут быть сделаны. Качество стеклянной бутылки зависит от типа используемого стекла.</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="Смесь для силикатного стекла" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item128.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="Линза" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item144.png" />
+            </div>
+        </div>
+    </div>
+    <h4>Steps</h4><ol><li><p>Выдуть</p></li><li><p>Вытянуть</p></li><li>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Покрутить">
+                <img src="..\..\_images\item143.png" alt="Шерстяная ткань" />
+            </span>
+            <p>Покрутить</p>
+        </div>
+        </li><li>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Отпилить">
+                <img src="..\..\_images\item136.png" alt="Пилка с напылением" />
+            </span>
+            <p>Отпилить</p>
+        </div>
+        </li></ol><p><span style="color:#3E8A00;">Линза</span> используется для создания подзорной трубы, компасов и датчиков дневного света.</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> Документация API
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '';
+      window._CURRENT_LANG = 'ru_ru';
+    </script>
+
+    <script src="/static/metadata.js"></script>
+    <script src="/static/tooltips.js"></script>
+    <script src="/static/versions.js"></script>
+  </body>
+</html>

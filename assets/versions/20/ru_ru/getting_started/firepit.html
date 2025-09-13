@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Ямы с огнём | TFC Field Guide" />
+    <meta name="description" content="Ямы с огнём" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="Ямы с огнём | TFC Field Guide" />
+    <meta property="og:description" content="Ямы с огнём" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/item16.png" />
+
+    <title>Ямы с огнём | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">Справочник TerraFirmaCraft</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Версия 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> Русский
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/getting_started\firepit.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\firepit.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\firepit.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\firepit.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\firepit.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\firepit.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\firepit.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\firepit.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/getting_started\firepit.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Содержание</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Главная</a></li>
+            <li><a href="../the_world/">Мир</a></li>
+<li><a href="../getting_started/">Начало работы</a><ul><li><a href="./introduction.html">Введение</a></li>
+<li><a href="./firepit.html">Ямы с огнём</a></li>
+<li><a href="./pottery.html">Гончарное дело</a></li>
+<li><a href="./pit_kiln.html">Земляные печи</a></li>
+<li><a href="./finding_ores.html">Руды, Металл и литьё</a></li>
+<li><a href="./primitive_alloys.html">Примитивные сплавы</a></li>
+<li><a href="./primitive_anvils.html">Примитивные наковальни</a></li>
+<li><a href="./building_materials.html">Строительные материалы</a></li>
+<li><a href="./a_place_to_sleep.html">Место для сна</a></li>
+<li><a href="./size_and_weight.html">Размер и вес</a></li>
+<li><a href="./food_and_water.html">Еда и вода</a></li></ul></li>
+<li><a href="../mechanics/">Продвинутая механика</a></li>
+<li><a href="../firmalife/">(Дополнение) Firmalife</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">Начало работы</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Ямы с огнём</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\item16.png" alt="Ямы с огнём" title="Костёр" /><span>Ямы с огнём</span>
+        </h1>
+                <a class="anchor" id="firestarter"></a><p><span style="color:#3E8A00;">Огонь</span> - важное технологическое достижение. Чтобы создать огонь, вам понадобится <span style="color:#3E8A00;">Разжигатель</span>. Для использования просто удерживайте <span style="color:#b0b;">ПКМ</span> на земле. Через несколько моментов появится дым, а затем огонь. Может потребоваться несколько попыток для успешного зажигания.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Примитивное огниво" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item17.png" />
+                </div>
+            </div>
+        </div>
+        <p>Создать разжигатель можно из двух палок.</p>
+<h5>Кострище</h5>
+<p>С разжигателем теперь можно сделать <span style="color:#3E8A00;">Кострище</span>. Чтобы сделать его, вам понадобится одно <span style="color:#3E8A00;">бревно</span>, три <span style="color:#3E8A00;">палки</span>, и по желанию до пяти кусков <span style="color:#3E8A00;">трут</span>. Трутом могут быть предметы, такие как бумажные изделия, солома или шишки, и они увеличивают шанс успешного создания кострища на 10 процентов за каждый использованный предмет. Бросьте (<span style="color:#b0b;">Q</span>) все предметы на землю, на один и тот же блок. Затем используйте разжигатель на блоке с предметами, парящими над ним.</p>
+<h5></h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Если у вас получилось, кострище будет создано.</p>
+<p>Использование кострища теперь откроет экран кострища. Слева четыре <span style="color:#3E8A00;">слота для топлива</span>. Бревна, Торф и связки палок могут быть использованы в качестве топлива для кострища, помещая их в верхний слот. Топливо будет потребляться из нижнего слота. Есть шкала, которая показывает текущую <span style="color:#3E8A00;">температуру</span> кострища, и справа слот для предметов, которые нужно <a href="../mechanics/heating.html">нагревать</a>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image6.png" alt="tfc:textures/gui/book/gui/firepit.png">
+<div style="text-align: center;"><p>Экран кострища</p>
+</div>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="../../_images/placeholder_64.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="Факел" class="crafting-recipe-item-tooltip"></span>
+                <p class="crafting-recipe-item-count">2</p>
+                <img class="recipe-item" src="..\..\_images\item18.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>Нагревается****</p>
+        </div>
+        <p>Множество полезных предметов можно сделать в кострище, нагревая их. Палки можно нагревать, при этом они дадут два <span style="color:#3E8A00;">Факела</span>. Обратите внимание, что факелы в конечном итоге потухнут и их нужно будет зажечь снова, используя <span style="color:#3E8A00;">Разжигатель</span>, или используя другой <span style="color:#3E8A00;">Факел</span> на них.</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="Сырая треска" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item19.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="Жареная треска" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item20.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>Горячо****</p>
+        </div>
+        <p>Кострище также хорошо подходит для <span style="color:#3E8A00;">приготовления пищи</span>. Все сырые мяса и тесто можно готовить в кострище, что увеличит их срок годности. (Подробнее об этом <a href="../mechanics/decay.html">здесь</a>)</p>
+<p>Кострище можно потушить в любое время, используя <span style="color:#3E8A00;">Лопату</span> на нём.<br/>
+<br/>
+К кострищу также можно добавить другие устройства, чтобы расширить его функциональность. Использование <span style="color:#3E8A00;">Жаровни из кованого железа</span> превратит кострище в <a href="../mechanics/grill.html">Гриль</a>, а использование <span style="color:#3E8A00;">Керамического горшка</span> превратит кострище в <a href="../mechanics/pot.html">Горшок</a>. Чтобы удалить любое устройство, <span style="color:#b0b;">ПКМ</span> при удержании <span style="color:#b0b;">Shift</span>. Будьте осторожны, чтобы не пытаться удалить горячий гриль или горшок!</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Кострище, с добавленным грилем или горшком.</p>
+<p>Топливо для кострища имеет разные уровни чистоты. Добавление нечистого топлива в огонь делает его более дымным. Если огонь горит очень нечисто, дым начнет подниматься очень высоко в воздух. Самыми чистыми топливами являются бревна, при этом сосна является наименее чистым бревном. Топлива, такие как шишки и опавшие листья, не горят достаточно горячо, чтобы много готовить, и являются очень нечистыми.</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> Документация API
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '';
+      window._CURRENT_LANG = 'ru_ru';
+    </script>
+
+    <script src="/static/metadata.js"></script>
+    <script src="/static/tooltips.js"></script>
+    <script src="/static/versions.js"></script>
+  </body>
+</html>

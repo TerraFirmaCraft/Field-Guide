@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="구덩이 가마 | TFC Field Guide" />
+    <meta name="description" content="구덩이 가마" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="구덩이 가마 | TFC Field Guide" />
+    <meta property="og:description" content="구덩이 가마" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/image17.png" />
+
+    <title>구덩이 가마 | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft 도감</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> 버전 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 한국어
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/getting_started\pit_kiln.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\pit_kiln.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\pit_kiln.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\pit_kiln.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\pit_kiln.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\pit_kiln.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\pit_kiln.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\pit_kiln.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/getting_started\pit_kiln.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>목차</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">색인</a></li>
+            <li><a href="../the_world/">세계</a></li>
+<li><a href="../getting_started/">시작하기</a><ul><li><a href="./introduction.html">소개</a></li>
+<li><a href="./firepit.html">최초의 불</a></li>
+<li><a href="./pottery.html">도자기</a></li>
+<li><a href="./pit_kiln.html">구덩이 가마</a></li>
+<li><a href="./finding_ores.html">광석, 금속 그리고 주조</a></li>
+<li><a href="./primitive_alloys.html">기초 합금</a></li>
+<li><a href="./primitive_anvils.html">기초적인 모루</a></li>
+<li><a href="./building_materials.html">건축 블록</a></li>
+<li><a href="./a_place_to_sleep.html">잠자리</a></li>
+<li><a href="./size_and_weight.html">크기와 무게</a></li>
+<li><a href="./food_and_water.html">음식과 물</a></li></ul></li>
+<li><a href="../mechanics/">심화 기술</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">시작하기</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">구덩이 가마</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\image17.png" alt="구덩이 가마" title="None" /><span>구덩이 가마</span>
+        </h1>
+                <p>A pit kiln is an early game method of <a href="../mechanics/heating.html">heating</a> items up. It can be used to <span style="color:#3E8A00;">fire</span> clay into ceramic, for example. The pit kiln, over the time period of about eight hours, will heat its contents up to 1400 °C, or <strong><span style="color:#FFFF55;">Yellow White</span></strong>.</p>
+<p>구덩이 가마를 만들기 위해서 필요한 것:<br/>
+</p>
+<ul>
+	<li>가열할 아이템 (최대 4개)</li>
+	<li>8개의 <span style="color:#3E8A00;">짚</span></li>
+	<li>8개의 <span style="color:#3E8A00;">원목</span></li>
+	<li><a href="../getting_started/firepit.html#firestarter">불피우개</a>나 <span style="color:#3E8A00;">횃불</span>과 같은 불을 피우기 위한 아이템</li>
+</ul><p><br/>
+<strong>참고:</strong> 횃불로 구덩이 가마에 불을 피우기 위해서는 간단히 횃불을 위에 던져 두고 몇 초간 기다리면 됩니다.</p>
+<p>구덩이 가마를 만드는 방법:<br/>
+<br/>
+<strong>1.</strong> 한 블록짜리 구멍에 <span style="color:#b0b;">V</span> 키를 눌러 아이템을 배치합니다.<br/>
+<strong>2.</strong> 8개의 <span style="color:#3E8A00;">짚</span>을 아이템이 모두 덮일 때까지 추가합니다.<br/>
+<strong>3.</strong> 8개의 <span style="color:#3E8A00;">원목</span>을 가득 찰 때까지 추가합니다.<br/>
+<strong>4.</strong> 가마 위에 불을 지피세요!<br/>
+<br/>
+구덩이 가마는 느리게 아이템을 <a href="../mechanics/heating.html">가열하면서</a> 8시간동안 불탑니다.</p>
+
+<div id="content22" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#content22" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        
+<button type="button" data-bs-target="#content22" data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+<button type="button" data-bs-target="#content22" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+<button type="button" data-bs-target="#content22" data-bs-slide-to="3" aria-label="Slide 4"></button>
+
+<button type="button" data-bs-target="#content22" data-bs-slide-to="4" aria-label="Slide 5"></button>
+
+    </div>
+    <div class="carousel-inner">
+        
+<div class="carousel-item active">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image18.png" alt="tfc:textures/gui/book/tutorial/pit_kiln_1.png">
+</div>
+
+<div class="carousel-item ">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image19.png" alt="tfc:textures/gui/book/tutorial/pit_kiln_2.png">
+</div>
+
+<div class="carousel-item ">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image20.png" alt="tfc:textures/gui/book/tutorial/pit_kiln_3.png">
+</div>
+
+<div class="carousel-item ">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image21.png" alt="tfc:textures/gui/book/tutorial/pit_kiln_4.png">
+</div>
+
+<div class="carousel-item ">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image22.png" alt="tfc:textures/gui/book/tutorial/pit_kiln_5.png">
+</div>
+
+    </div>
+    <button type="button" class="carousel-control-prev" data-bs-target="#content22" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button type="button" class="carousel-control-next" data-bs-target="#content22" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<div style="text-align: center;"><p>튜토리얼: 구덩이 가마 만들기.</p>
+</div>
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API 뮨서
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '';
+      window._CURRENT_LANG = 'ko_kr';
+    </script>
+
+    <script src="/static/metadata.js"></script>
+    <script src="/static/tooltips.js"></script>
+    <script src="/static/versions.js"></script>
+  </body>
+</html>

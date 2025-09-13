@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="직조 | TFC Field Guide" />
+    <meta name="description" content="직조" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="직조 | TFC Field Guide" />
+    <meta property="og:description" content="직조" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/item238.png" />
+
+    <title>직조 | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft 도감</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> 버전 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 한국어
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/mechanics\weaving.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\weaving.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\weaving.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\weaving.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\weaving.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\weaving.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\weaving.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\weaving.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/mechanics\weaving.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>목차</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">색인</a></li>
+            <li><a href="../the_world/">세계</a></li>
+<li><a href="../getting_started/">시작하기</a></li>
+<li><a href="../mechanics/">심화 기술</a><ul><li><a href="./advanced_building_materials.html">발전된 재료</a></li>
+<li><a href="./animal_husbandry.html">축산업</a></li>
+<li><a href="./anvils.html">모루</a></li>
+<li><a href="./aqueducts.html">수로</a></li>
+<li><a href="./armor.html">갑옷</a></li>
+<li><a href="./armor_trims.html">Armor Trims</a></li>
+<li><a href="./barrels.html">통</a></li>
+<li><a href="./bellows.html">풀무</a></li>
+<li><a href="./blast_furnace.html">용광로</a></li>
+<li><a href="./bloomery.html">괴철로</a></li>
+<li><a href="./bowls.html">Bowls</a></li>
+<li><a href="./bread.html">빵</a></li>
+<li><a href="./charcoal_forge.html">숯불 노</a></li>
+<li><a href="./charcoal_pit.html">숯 구덩이</a></li>
+<li><a href="./chisel.html">끌</a></li>
+<li><a href="./composter.html">Composter</a></li>
+<li><a href="./crankshaft.html">Crankshafts</a></li>
+<li><a href="./crops.html">작물</a></li>
+<li><a href="./crucible.html">도가니</a></li>
+<li><a href="./dairy.html">유제품</a></li>
+<li><a href="./damage_types.html">피해 종류</a></li>
+<li><a href="./decay.html">음식 보존</a></li>
+<li><a href="./dye.html">Dye</a></li>
+<li><a href="./fertilizers.html">비료</a></li>
+<li><a href="./fire_clay.html">내화점토</a></li>
+<li><a href="./fishing.html">낚시</a></li>
+<li><a href="./flux.html">플럭스</a></li>
+<li><a href="./gems.html">보석</a></li>
+<li><a href="./glassworking.html">Glassworking</a></li>
+<li><a href="./glassworking_applications.html">Glass Products</a></li>
+<li><a href="./grill.html">모닥불과 석쇠</a></li>
+<li><a href="./heating.html">가열하기</a></li>
+<li><a href="./hydration.html">작물 수화</a></li>
+<li><a href="./jarring.html">Jarring</a></li>
+<li><a href="./lamps.html">램프</a></li>
+<li><a href="./leather_making.html">가죽 제작</a></li>
+<li><a href="./lighting.html">광원</a></li>
+<li><a href="./mechanical_power.html">Mechanical Power</a></li>
+<li><a href="./minecarts.html">Minecarts</a></li>
+<li><a href="./panning.html">사금질</a></li>
+<li><a href="./papermaking.html">Papermaking</a></li>
+<li><a href="./pets.html">반려동물</a></li>
+<li><a href="./pot.html">모닥불과 냄비</a></li>
+<li><a href="./powderkegs.html">화약통</a></li>
+<li><a href="./prospecting.html">광물 탐색</a></li>
+<li><a href="./pumps.html">Pumps</a></li>
+<li><a href="./quern.html">맷돌</a></li>
+<li><a href="./salad.html">샐러드</a></li>
+<li><a href="./sandwiches.html">샌드위치</a></li>
+<li><a href="./scribing_table.html">필기대</a></li>
+<li><a href="./sewing_table.html">Sewing Table</a></li>
+<li><a href="./sluices.html">세광통</a></li>
+<li><a href="./steel.html">강철</a></li>
+<li><a href="./support_beams.html">Support Beams & Collapses</a></li>
+<li><a href="./weaving.html">직조</a></li>
+<li><a href="./wooden_buckets.html">나무 양동이</a></li></ul></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">심화 기술</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">직조</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\item238.png" alt="직조" title="물레가락" /><span>직조</span>
+        </h1>
+                <p><span style="color:#3E8A00;">직조</span>는 다양한 종류의 실들을 <span style="color:#3E8A00;">천</span>으로 만드는 과정입니다. 직조의 최종 과정은 <span style="color:#3E8A00;">베틀</span>에서 진행되지만, <span style="color:#3E8A00;">양털</span>과 같은 일부 직물들은 <a href="../mechanics/animal_husbandry.html#wooly_animals">털</a>을 깎을 수 있는 동물로부터 얻어지므로 직조하기 위해서 <span style="color:#3E8A00;">물레가락</span>으로 <span style="color:#3E8A00;">털실</span>을 얻어야 합니다.</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image94.png" alt="Recipe: tfc:clay_knapping/spindle_head">
+        </div>
+    </div>
+</div>
+<p><span style="color:#3E8A00;">굽지 않은 물레가락 머리</span>는 점토로 만들어집니다. <span style="color:#3E8A00;">물레가락 머리</span>를 만들기 위해서는 <a href="../mechanics/heating.html">구워</a>야 합니다. 물레가락을 완성하기 위해서는 <span style="color:#3E8A00;">막대기</span>와 조합해야 합니다.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="물레가락" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item238.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="양털" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item240.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="털실" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">8</p>
+                    <img class="recipe-item" src="..\..\_images\item239.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">양털</span>과 물레가락을 조합하면 <span style="color:#3E8A00;">털실</span>을 만들 수 있습니다.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="아카시아나무 목재" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="아카시아나무 목재" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="아카시아나무 목재" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="아카시아나무 목재" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="막대기" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item241.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="아카시아나무 목재" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="아카시아나무 목재" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="아카시아나무 목재" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="아카시아나무 베틀" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>베틀은 <span style="color:#3E8A00;">목재</span>와 <span style="color:#3E8A00;">나무</span>로 만들 수 있습니다.</p>
+<a class="anchor" id="wool_cloth"></a>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="털실" class="crafting-recipe-item-tooltip"></span>
+                <p class="crafting-recipe-item-count">16</p>
+                <img class="recipe-item" src="..\..\_images\item239.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="양털 천" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item143.png" />
+            </div>
+        </div>
+    </div>
+    <p><span style="color:#3E8A00;">양털 천</span>을 만들려면 16개의 <span style="color:#3E8A00;">털실</span>이 필요합니다. 베틀에 <span style="color:#b0b;">오른쪽 버튼</span>을 클릭하여 털실을 추가한 후, <span style="color:#b0b;">오른쪽 버튼</span>을 꾹 눌러 베틀을 작동시킬 수 있습니다. 완성된 후, <span style="color:#b0b;">오른쪽 버튼</span>을 누르면 아이템을 꺼낼 수 있습니다.</p>
+
+<div id="content27" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#content27" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        
+<button type="button" data-bs-target="#content27" data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+<button type="button" data-bs-target="#content27" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+<button type="button" data-bs-target="#content27" data-bs-slide-to="3" aria-label="Slide 4"></button>
+
+    </div>
+    <div class="carousel-inner">
+        
+<div class="carousel-item active">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image95.png" alt="tfc:textures/gui/book/tutorial/loom_empty.png">
+</div>
+
+<div class="carousel-item ">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image96.png" alt="tfc:textures/gui/book/tutorial/loom_full.png">
+</div>
+
+<div class="carousel-item ">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image97.png" alt="tfc:textures/gui/book/tutorial/loom_working.png">
+</div>
+
+<div class="carousel-item ">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image98.png" alt="tfc:textures/gui/book/tutorial/loom_done.png">
+</div>
+
+    </div>
+    <button type="button" class="carousel-control-prev" data-bs-target="#content27" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button type="button" class="carousel-control-next" data-bs-target="#content27" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<div style="text-align: center;"><p>베틀 작업의 단계.</p>
+</div>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="양털 천" class="crafting-recipe-item-tooltip"></span>
+                <p class="crafting-recipe-item-count">4</p>
+                <img class="recipe-item" src="..\..\_images\item143.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="하얀색 양털" class="crafting-recipe-item-tooltip"></span>
+                <p class="crafting-recipe-item-count">8</p>
+                <img class="recipe-item" src="..\..\_images\item242.png" />
+            </div>
+        </div>
+    </div>
+    <p><span style="color:#3E8A00;">Wool Cloth</span> can be re-woven into <span style="color:#3E8A00;">Wool Blocks</span>. Wool blocks can be <a href="../mechanics/dye.html">dyed</a>.</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="실" class="crafting-recipe-item-tooltip"></span>
+                <p class="crafting-recipe-item-count">24</p>
+                <img class="recipe-item" src="..\..\_images\item243.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="비단 천" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item244.png" />
+            </div>
+        </div>
+    </div>
+    <p><span style="color:#3E8A00;">비단 천</span>은 <span style="color:#3E8A00;">실</span>을 베틀에서 직조하여 만들 수 있습니다. 비단은 특정 상황에서는 양털 대신 쓰일 수 있습니다.</p>
+<a class="anchor" id="burlap_cloth"></a>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="황마 섬유" class="crafting-recipe-item-tooltip"></span>
+                <p class="crafting-recipe-item-count">12</p>
+                <img class="recipe-item" src="..\..\_images\item160.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="삼베 천" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item245.png" />
+            </div>
+        </div>
+    </div>
+    <p><span style="color:#3E8A00;">삼베 천</span>은 쓰임새가 없지만, <a href="../mechanics/crops.html#jute">황마 섬유</a>로 만들 수는 있습니다.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="하늘색 염료" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item246.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="하늘색 염료" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item246.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="하늘색 염료" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item246.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:high_quality_cloth" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item247.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:high_quality_cloth" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item247.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:high_quality_cloth" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item247.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="하늘색 침대" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:high_quality_cloth" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item247.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="그림" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item248.png" />
+                </div>
+            </div>
+        </div>
+        
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API 뮨서
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '';
+      window._CURRENT_LANG = 'ko_kr';
+    </script>
+
+    <script src="/static/metadata.js"></script>
+    <script src="/static/tooltips.js"></script>
+    <script src="/static/versions.js"></script>
+  </body>
+</html>

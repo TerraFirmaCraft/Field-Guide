@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Preservation | TFC Field Guide" />
+    <meta name="description" content="Preservation" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="Preservation | TFC Field Guide" />
+    <meta property="og:description" content="Preservation" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/item383.png" />
+
+    <title>Preservation | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft Field Guide</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Version 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> English
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/artisanal\decay.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/artisanal\decay.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/artisanal\decay.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/artisanal\decay.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/artisanal\decay.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/artisanal\decay.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/artisanal\decay.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/artisanal\decay.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/artisanal\decay.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Contents</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Index</a></li>
+            <li><a href="../the_world/">The World</a></li>
+<li><a href="../getting_started/">Getting Started</a></li>
+<li><a href="../mechanics/">Advanced Mechanics</a></li>
+<li><a href="../bsa/">(Addon) Better Stone Age</a></li>
+<li><a href="../artisanal/">(Addon) Artisanal</a><ul><li><a href="./changes_from_tfc.html">Changes From TFC</a></li>
+<li><a href="./decay.html">Preservation</a></li>
+<li><a href="./distillation.html">Distillation</a></li>
+<li><a href="./drums.html">Drums</a></li>
+<li><a href="./juicing.html">Juicing</a></li>
+<li><a href="./magnifying_glass.html">Magnifying Glass</a></li>
+<li><a href="./oil_refining.html">Oil Refining</a></li>
+<li><a href="./powdered_milk.html">Powdered Milk</a></li>
+<li><a href="./quillmaking.html">Quillmaking</a></li>
+<li><a href="./salt_boiling.html">Salt Production</a></li>
+<li><a href="./soap.html">Soap</a></li>
+<li><a href="./sugar_production.html">Sugar Production</a></li>
+<li><a href="./sulfuric_acid.html">Sulfuric Acid</a></li></ul></li>
+<li><a href="../beneath/">(Addon) Beneath</a></li>
+<li><a href="../firmalife/">(Addon) Firmalife</a></li>
+<li><a href="../lithicaddon/">(Addon) Lithic Addon</a></li>
+<li><a href="../lithiccoins/">(Addon) Lithic Coins</a></li>
+<li><a href="../roadsandroofs/">(Addon) Roads and Roofs</a></li>
+<li><a href="../arborfirmacraft/">(Addon) ArborFirmaCraft</a></li>
+<li><a href="../firmaciv/">(Addon) Firma: Civilization</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">(Addon) Artisanal</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Preservation</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\item383.png" alt="Preservation" title="Sealed Tin Can" /><span>Preservation</span>
+        </h1>
+                <p>Various ways to preserve food past its normal expiration date.<br/>
+<br/>
+<strong>Contents</strong><br/>
+</p>
+<ul>
+	<li><a href="../artisanal/decay.html#potted_food">Potted food</li>
+	<li><a href="../artisanal/decay.html#canned_food">Canned food</a></a></li>
+</ul>
+<a class="anchor" id="potted_food"></a>
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image138.png" alt="Recipe: artisanal:clay_knapping/unfired_small_pot">
+        </div>
+    </div>
+</div>
+<p>One way to preserve food is to pot it, a process in which the food is isolated in liquid fat and kept inside a pot.</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="Unfired Small Pot" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item384.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="Small Pot" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item385.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-yellow">
+            <p>Yellow White****</p>
+        </div>
+        <p>The first step for this process is to knap a small pot from clay and fire it in a <a href="../getting_started/pit_kiln.html">Pit Kiln</a>.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this recipe.">Recipe: <code>artisanal:crafting/pot/1_rendered_fat</code></span></p>
+        </div>
+        <p>Then, craft the fired small pot with <a href="../artisanal/soap.html#rendered_fats">Rendered Fat</a>, <a href="../the_world/ores_and_minerals.html#saltpeter">Saltpeter</a>, and up to six <span style="color:#3E8A00;">meats</span> or <span style="color:#3E8A00;">vegetables</span> that you wish to pot. Pots can hold only one type of food at a time.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this recipe.">Recipe: <code>artisanal:crafting/pot/2_rendered_fat</code></span></p>
+        </div>
+        
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this recipe.">Recipe: <code>artisanal:crafting/pot/6_rendered_fat</code></span></p>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Small Pot" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item385.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Butter" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item277.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Saltpeter" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item109.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #artisanal:foods/can_be_potted" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item387.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #artisanal:foods/can_be_potted" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item387.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #artisanal:foods/can_be_potted" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item387.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #artisanal:foods/can_be_potted" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item387.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Closed Small Pot" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item386.png" />
+                </div>
+            </div>
+        </div>
+        <p>If you have the Firmalife addon installed, you can also use <span style="color:#3E8A00;">Butter</span> in place of the Rendered Fat.</p>
+<a class="anchor" id="canned_food"></a><p>Other forms of preservation are useful, but the ultimate form of preservation is <span style="color:#3E8A00;">canning</span>. This process involves sealing food in an airtight container, so that no microbes can reach it, and then heating the container to kill all of the microbes that are already on the food.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this recipe.">Recipe: <code>artisanal:welding/metal/tinplate_from_steel</code></span></p>
+        </div>
+        <p>The raw material that cans are made from is called <span style="color:#3E8A00;">Tinplate</span>. It is made by welding a Tin Sheet to a Steel Double Sheet.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this recipe.">Recipe: <code>artisanal:welding/metal/tinplate_from_iron</code></span></p>
+        </div>
+        <p>A Wrought Iron Double Sheet can be used instead of a Steel one, at reduced efficiency.</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/2to2.png" />
+            
+        <div class="crafting-recipe-item two-recipe-pos-1">
+            <span href="#" data-bs-toggle="tooltip" title="Steel Double Sheet" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\item388.png" />
+            
+        </div>
+        
+            
+        <div class="crafting-recipe-item two-recipe-pos-2">
+            <span href="#" data-bs-toggle="tooltip" title="100 mB Tag: #artisanal:acids" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\fluid11.gif" />
+            
+        </div>
+        
+            
+        <div class="crafting-recipe-item two-recipe-pos-3">
+            <span href="#" data-bs-toggle="tooltip" title="Pickled Steel Double Sheet" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\item389.png" />
+            
+        </div>
+        
+            
+            
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>1000 Ticks</p>
+        </div>
+        
+        </div>
+    </div>
+    
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="Tinplate" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item390.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="Tin Can" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item391.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>Tier I</p>
+        </div>
+        <p>Once welded, Tinplate can then be forged into an empty Tin Can.</p>
+<p>Placeholder; talk about stainless steelplate</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this recipe.">Recipe: <code>artisanal:crafting/metal/can/tin_1</code></span></p>
+        </div>
+        
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this recipe.">Recipe: <code>artisanal:crafting/metal/can/tin_2</code></span></p>
+        </div>
+        
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this recipe.">Recipe: <code>artisanal:crafting/metal/can/tin_6</code></span></p>
+        </div>
+        <p>A heated can can be crafted with a <span style="color:#3E8A00;">Hammer</span>, <span style="color:#3E8A00;">Flux</span>, and up to 6 <span style="color:#3E8A00;">Cannable Foods</span> to create a Sealed Can. Only one type of food may be kept in a given can.</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="Sealed Tin Can" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item383.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="Sterilized Tin Can" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item392.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>Hot****</p>
+        </div>
+        <p>The can is then heated to kill the microbes inside, resulting in a <span style="color:#3E8A00;">Sterilized Can</span>. The food inside the can will last forever, until the can is opened, at which point its expiration date will start anew.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this recipe.">Recipe: <code>artisanal:crafting/metal/open_can/tin_sterilized_can_opener</code></span></p>
+        </div>
+        <p>To open a can, craft it with a <span style="color:#3E8A00;">Can Opener</span>. This recipe will output the food that was in the can.</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/2to2.png" />
+            
+        <div class="crafting-recipe-item two-recipe-pos-1">
+            <span href="#" data-bs-toggle="tooltip" title="Dirty Tin Can" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\item393.png" />
+            
+        </div>
+        
+            
+        <div class="crafting-recipe-item two-recipe-pos-2">
+            <span href="#" data-bs-toggle="tooltip" title="Soapy Water" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\fluid10.png" />
+            
+        </div>
+        
+            
+        <div class="crafting-recipe-item two-recipe-pos-3">
+            <span href="#" data-bs-toggle="tooltip" title="Tin Can" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\item391.png" />
+            
+        </div>
+        
+            
+            
+        </div>
+    </div>
+    
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Brass Mechanisms" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item91.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Steel Circle Blade" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item395.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #artisanal:rods/metal" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item396.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Steel Circle Blade" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item395.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #artisanal:rods/metal" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item396.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Steel Can Opener" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item394.png" />
+                </div>
+            </div>
+        </div>
+        <p>Can openers are crafted using one <span style="color:#3E8A00;">Brass Mechanisms</span>, two <span style="color:#3E8A00;">Rods</span> made of any tool metal, and two <span style="color:#3E8A00;">Circle Blades</span>.</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="Black Bronze Ingot" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item29.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="Black Bronze Circle Blade" class="crafting-recipe-item-tooltip"></span>
+                <p class="crafting-recipe-item-count">2</p>
+                <img class="recipe-item" src="..\..\_images\item397.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>Tier II</p>
+        </div>
+        <p>Circle blades are <a href="../mechanics/anvils.html">forged</a> from metal ingots.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this recipe.">Recipe: <code>artisanal:crafting/metal/open_can/tin_sterilized_hammer</code></span></p>
+        </div>
+        <p>If you don't have a Can Opener on you, you can also open a can with a Hammer. This results in a <span style="color:#3E8A00;">Dirty Dented Can</span>.</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="Dented Tin Can" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item398.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="Tin Can" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item391.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>Tier I</p>
+        </div>
+        <p>This can must be cleaned first, like normal Dirty Can. Then it can be repaired on an <span style="color:#3E8A00;">Anvil</span>.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Sterilized Tin Can" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item392.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Sterilized Tin Can" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item392.png" />
+                </div>
+            </div>
+        </div>
+        <p>Since cans are sterilized by heating, they can sometimes gain food traits, such as <span style="color:#3E8A00;">Charcoal Grilled</span> or <span style="color:#3E8A00;">Wood Grilled</span>. These traits have no effect, since sterilized cans don't expire, but can be removed for cosmetic or stacking purposes by placing the can in your crafting grid.</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '';
+      window._CURRENT_LANG = 'en_us';
+    </script>
+
+    <script src="/static/metadata.js"></script>
+    <script src="/static/tooltips.js"></script>
+    <script src="/static/versions.js"></script>
+  </body>
+</html>
