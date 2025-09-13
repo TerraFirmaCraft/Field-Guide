@@ -592,7 +592,12 @@ def title_with_optional_icon(text: str, icon_src: str, icon_title: str) -> str:
         return text
 
 def get_splash_location():
-    return 'splash' if versions.MC_VERSION != '1.20.1' else 'splash_120'
+    if versions.MC_VERSION == '1.21.1':
+        return 'splash_121'
+    elif versions.MC_VERSION == '1.20.1':
+        return 'splash_120'
+    else:
+        return 'splash'
 
 def entry_card_with_default_icon(entry_page: str, entry_title: str, icon_src: str, icon_title: str) -> str:
     if not icon_src:

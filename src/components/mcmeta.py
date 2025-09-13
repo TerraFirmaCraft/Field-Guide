@@ -22,8 +22,13 @@ FORGE_JAR = 'forge-{forge_version}.zip'.format(forge_version=FORGE_VERSION)
 VERSION_MANIFEST_URL = 'https://piston-meta.mojang.com/mc/game/version_manifest.json'
 RESOURCES_URL = 'https://resources.download.minecraft.net/'
 FORGE_JAR_URL = 'https://maven.creeperhost.net/net/minecraftforge/forge/{mc_version}-{forge_version}/forge-{mc_version}-{forge_version}-universal.jar'.format(mc_version=MC_VERSION, forge_version=FORGE_VERSION)
+NEOFORGE_JAR_URL = 'https://maven.neoforged.net/#/releases/net/neoforged/neoforge/{forge_version}/neoforge-{forge_version}-universal.jar'.format(forge_version=FORGE_VERSION)
 
-
+def getForgeURL():
+    if MC_VERSION == '1.20.1' or MC_VERSION == '1.18.2':
+        return FORGE_JAR_URL
+    else:
+        return NEOFORGE_JAR_URL
 
 def load_from_mc(path: str, reader) -> Any:
     try:
@@ -98,7 +103,7 @@ def load_cache():
     
     forge_jar_dir = util.path_join(CACHE, FORGE_JAR)
     if not os.path.isfile(forge_jar_dir):
-        forge_jar = download(FORGE_JAR_URL)
+        forge_jar = download(getForgeURL())
 
         with open(forge_jar_dir, 'wb') as f:
             f.write(forge_jar)
