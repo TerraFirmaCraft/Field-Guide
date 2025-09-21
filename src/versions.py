@@ -65,6 +65,7 @@ FORGE_VERSION = '21.1.197'
 LANGUAGES = ('en_us', 'ja_jp', 'pt_br', 'ko_kr', 'uk_ua', 'zh_cn', 'zh_hk', 'zh_tw', 'ru_ru')
 
 ADDONS = (
+    Addon('Notenoughmail', 'precision-prospecting', 'v2.0', 'precisionprospecting', 'src/generated/resources')
 )
 
 OLD_VERSIONS = (
