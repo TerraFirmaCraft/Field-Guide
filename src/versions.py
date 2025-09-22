@@ -6,15 +6,18 @@ class Addon(NamedTuple):
     repo: str  # Repository name
     version: str  # Addon version - this must be a tag, or commit hash (it will be passed to `git -b <version> clone`)
     mod_id: str  # Mod ID of the addon
-    resource_path: str  # Directory path within the repository of a `resources` folder (where `data` and `assets` might be loaded from)
+    resource_path: str | list[str]  # Directory path or paths within the repository of a `resources` folder (where `data` and `assets` might be loaded from). If a list, the first path must contain patchouli pages
 
     def book_dir(self, resource_pack: bool) -> str:
         return 'addons/%s-%s/%s/%s/tfc/patchouli_books/field_guide/' % (
             self.mod_id,
             self.version,
-            self.resource_path,
+            self.resource_paths()[0],
             ('assets' if resource_pack else 'data'),
         )
+    
+    def resource_paths(self) -> list[str]:
+        return self.resource_path if type(self.resource_path) == list else [self.resource_path]
 
 
 class OldVersion(NamedTuple):
@@ -65,7 +68,7 @@ FORGE_VERSION = '21.1.197'
 LANGUAGES = ('en_us', 'ja_jp', 'pt_br', 'ko_kr', 'uk_ua', 'zh_cn', 'zh_hk', 'zh_tw', 'ru_ru')
 
 ADDONS = (
-    Addon('Notenoughmail', 'precision-prospecting', 'v2.0', 'precisionprospecting', 'src/generated/resources')
+    Addon('Notenoughmail', 'precision-prospecting', 'v2.0', 'precisionprospecting', ['src/generated/resources', 'src/main/resources']),
 )
 
 OLD_VERSIONS = (
@@ -77,6 +80,13 @@ TFC_VERSION = '%s - %s' % (MC_VERSION, VERSION)
 
 IS_RESOURCE_PACK = MC_VERSION != '1.18.2'
 
+IS_PLURAL_REGISTRIES = MC_VERSION == '1.18.2' or MC_VERSION == '1.20.1'
+
+def registry(path: str) -> str:
+    if IS_PLURAL_REGISTRIES:
+        return path + 's'
+    else:
+        return path
 
 if __name__ == '__main__':
     print(VERSION)
