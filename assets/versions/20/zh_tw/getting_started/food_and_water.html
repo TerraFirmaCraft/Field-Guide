@@ -15,11 +15,11 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
   </head>
   <body>
     <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
-    <script src="/static/theme-switcher.js"></script>
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
 
     <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
       <div class="container">
@@ -142,24 +142,22 @@
                 <h1 class="d-flex align-items-center mb-4">
         <img class="icon-title me-3" src="..\..\_images\image7.png" alt="食物和水" title="None" /><span>食物和水</span>
         </h1>
-                <p>在TerraFirmaCraft中, 你不但要留意你的飢餓程度, 還要留意你的口渴程度. 飢餓和傳統Minecraft很類似, 大多數的食物會回覆大概五分之一的飢餓條, 有一些食物回覆的更少些, 例如<span style="color:#3E8A00;">闊葉香蒲的根</span>. 吃東西也會回覆你的<span style="color:#3E8A00;">飽和度</span>, 這可以理解為你吃的有多飽.</p>
-<p>有些食物非常的佔肚子, 會讓你更長時間不會飢餓. 而一些食物也可能有短暫的特殊效果.<br/>
-<br/>
-你在遊玩遊戲的過程中會失去飢餓值, 如果你快跑, 游泳, 或者<a href="../getting_started/size_and_weight.html#overburdening">負擔過重</a>, 就會讓飢餓值減少的更快. 把滑鼠懸停在食物上就能看到食物的<span style="color:#3E8A00;">飽和度</span>, <span style="color:#3E8A00;">含水量</span>, 以及<span style="color:#3E8A00;">營養成分</span>. 按住<span style="color:#b0b;">Shift</span>就可以看到完整的工具提示.</p>
+                <p>在群巒傳說中，你不僅需要注意你的飢餓度，還需要管理你的口渴度。飢餓度的機制和原版類似。大部分的食物會為你回覆五分之一飢餓條，其他一些食物（比如<span style="color:#3E8A00;">香蒲根</span>）則會少回覆些。進食還會使你回覆一些<span style="color:#3E8A00;">飽和度</span>，也就是飽腹感。</p>
+<p>幾乎任何動作都會消耗飢餓度。疾跑、游泳、或<a href="../getting_started/size_and_weight.html#overburdening">負擔過重</a>都會更快消耗飢餓度。有關某樣食物可以為你回覆的<span style="color:#3E8A00;">飽和度</span>、<span style="color:#3E8A00;">口渴度</span>、和<span style="color:#3E8A00;">營養元素</span>可以透過在物品欄中將滑鼠放置在其上並按住<span style="color:#b0b;">Shift</span>檢視。</p>
 <p>所有食物都可以用這種方法展開詳細的工具提示。食物的<a href="../mechanics/decay.html">保質期</a>也會在此顯示。需要注意的是，不是所有能吃的東西都有營養價值。比如<a href="../mechanics/bread.html">麵糰</a>可以吃，但毫無營養，而且也不會回覆飽和度或口渴度。這樣的食物吃了也沒多少好處。</p>
-<p>食物的工具提示一般看起來像這樣:<br/>
+<p>以下是一個食物的工具提示的示例：<br/>
 <br/>
-<strong>橙子</strong><br/>
-  <span style="color:#00AA00;"><strong>保質期: 1000年 六月4日 11:59 (約 1月 2天)</strong></span><br/>
-  <span style="color:#555555;">營養:<br/>
-  - 飽和度: 2%<br/>
-  - 口渴值: 10%<br/>
-<span style="color:#55FF55;">  - 水果: 0.5</span></span></p>
+橙子<br/>
+<span style="color:#00AA00;">保質期：1004年 七月6日 11:59（約1月1天）</span><br/>
+營養：<br/>
+- 飽和度：2%<br/>
+- 口渴值：2%<br/>
+<span style="color:#55FF55;">- 水果：0.5</span></p>
 
 <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image8.png" alt="tfc:textures/gui/book/gui/nutrition.png">
 <div style="text-align: center;"><p>這是營養介面。每個狀態條顯示了你目前的營養水平。</p>
 </div><a class="anchor" id="nutrients"></a><h5>營養元素</h5>
-<p>群巒傳說中有五種營養元素。它們都可以透過吃東西攝入：<strong><span style="color:#55FF55;">水果</span></strong>、<strong><span style="color:#00AA00;">蔬菜</span></strong>、<strong><span style="color:#FF5555;">蛋白質</span></strong>、<strong><span style="color:#FFAA00;">穀物</span></strong>、和<strong><span style="color:#AA00AA;">乳製品</span></strong>。保持每種營養元素都處於較高水平會增加你的最大生命值，反之則會降低生命值。食用食物就能攝入它所蘊含的營養元素了。透過製作<a href="../mechanics/pot.html#soup">湯</a>之類的<span style="color:#3E8A00;">餐點</span>可以將多種食材組合成為一頓食物。<span style="color:#3E8A00;">用餐</span>比分開吃烹飪材料更好，因為你的營養元素水平是根據你吃的最後幾個食物決定的。</p>
+<p>群巒傳說中有五種營養元素。它們都可以透過吃東西攝入：<strong><span style="color:#55FF55;">水果</span></strong>、<strong><span style="color:#00AA00;">蔬菜</span></strong>、<strong><span style="color:#FF5555;">蛋白質</span></strong>、<strong><span style="color:#FFAA00;">穀物</span></strong>、和<strong><span style="color:#AA00AA;">乳製品</span></strong>。保持每種營養元素都處於較高水平會增加你的最大生命值，反之則會降低生命值。食用食物就能攝入它所蘊含的營養元素。透過製作<a href="../mechanics/pot.html#soup">湯</a>之類的<span style="color:#3E8A00;">餐點</span>可以將多種食材組合成為一頓食物。<span style="color:#3E8A00;">用餐</span>比分開吃烹飪材料更好，因為你的營養元素水平是根據你吃的最後幾個食物決定的。</p>
 <p><strong><span style="color:#55FF55;">水果</span></strong>：水果元素的主要來源於<a href="../the_world/wild_fruits.html">果木</a>。比如灌木和果樹。兩個值得注意的特例是<a href="../mechanics/crops.html#pumpkin">南瓜</a>和<a href="../mechanics/crops.html#pumpkin">西瓜</a>。這兩種植物也被算作是水果。<br/>
 <br/>
 <strong><span style="color:#00AA00;">蔬菜</span></strong>：大部分<a href="../mechanics/crops.html">農作物</a>都蘊含這種營養元素。<br/>
@@ -167,7 +165,7 @@
 <strong><span style="color:#FF5555;">蛋白質</span></strong>：<a href="../the_world/wild_animals.html">動物</a>肉都含有蛋白質。對於不想殺生的玩家來說，一個肉食的替代品則是<a href="../mechanics/crops.html#soybean">大豆</a>。大豆同時擁有蛋白質和蔬菜元素。</p>
 <p><strong><span style="color:#FFAA00;">穀物</span></strong>：穀物元素是由……呃，穀物提供的。比如<a href="../mechanics/crops.html#barley">大麥</a>。如何將穀物變成有用的食物主要寫在<a href="../mechanics/bread.html">烤麵包</a>章節。<span style="color:#3E8A00;">香蒲根</span>和<span style="color:#3E8A00;">芋頭根</span>也算穀物。<br/>
 <br/>
-<strong><span style="color:#AA00AA;">乳製品</span></strong>：所有乳製品都是用<span style="color:#3E8A00;">奶</span>製成的。想要獲得奶，就必須繁殖<a href="../mechanics/animal_husbandry.html#dairy_animals">產奶動物</a>。如何將生奶變成有用的食物主要寫在<a href="../mechanics/dairy.html">奶製品</a>章節。<br/>
+<strong><span style="color:#AA00AA;">乳製品</span></strong>：所有乳製品都是用<span style="color:#3E8A00;">奶</span>製成的。想要獲得奶，就必須繁殖<a href="../mechanics/animal_husbandry.html#dairy_animals">產奶動物</a>。如何將生奶變成有用的食物主要寫在<a href="../mechanics/dairy.html">乳製品</a>章節。<br/>
 <br/>
 食物一旦腐敗便完全不能吃了。關於防止食物腐敗的知識，請閱讀<a href="../mechanics/decay.html">食物保鮮</a>章節。</p>
 <a class="anchor" id="thirst"></a><h5>口渴度</h5>
@@ -187,7 +185,7 @@
         </div>
     </div>
 </div>
-<p>將粘土<a href="../getting_started/pottery.html">塑形</a>並燒製成一隻<a href="../getting_started/pottery.html#jug">罐</a>便能將水帶在身邊了。手持空罐用<span style="color:#b0b;">右鍵</span>點選水源就能盛水。按住<span style="color:#b0b;">右鍵</span>便能從中喝水。</p>
+<p>將粘土<a href="../getting_started/pottery.html">塑形</a>並燒製成一隻<a href="../getting_started/pottery.html#jug">壺</a>便能將水帶在身邊了。手持空壺用<span style="color:#b0b;">右鍵</span>點選水源就能盛水。按住<span style="color:#b0b;">右鍵</span>便能從中喝水。</p>
 <p>當你的飢餓度或口渴度太低時，你的移動和挖掘速度都會變得很緩慢，還會不斷受到傷害。你的營養元素會在死亡後重置。</p>
 
                 
@@ -223,15 +221,15 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="/static/icons.min.js"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
 
     <script>
-      window._CURRENT_ROOT = '';
+      window._CURRENT_ROOT = '/Field-Guide';
       window._CURRENT_LANG = 'zh_tw';
     </script>
 
-    <script src="/static/metadata.js"></script>
-    <script src="/static/tooltips.js"></script>
-    <script src="/static/versions.js"></script>
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
   </body>
 </html>
