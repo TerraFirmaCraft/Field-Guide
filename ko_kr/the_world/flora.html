@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="식물 | TFC Field Guide" />
+    <meta name="description" content="식물" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="식물 | TFC Field Guide" />
+    <meta property="og:description" content="식물" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/item76.png" />
+
+    <title>식물 | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft 도감</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> 버전 1.21.1 - v4.0.0-beta
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 한국어
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/the_world/flora.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world/flora.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world/flora.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world/flora.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world/flora.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world/flora.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world/flora.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world/flora.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/the_world/flora.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>목차</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">색인</a></li>
+            <li><a href="../the_world/">세계</a><ul><li><a href="./geology.html">지질학</a></li>
+<li><a href="./ores_and_minerals.html">광석과 광물</a></li>
+<li><a href="./climate.html">달력과 기후</a></li>
+<li><a href="./flora.html">식물</a></li>
+<li><a href="./wild_crops.html">야생 작물</a></li>
+<li><a href="./wild_fruits.html">야생 과일</a></li>
+<li><a href="./wild_animals.html">야생동물</a></li></ul></li>
+<li><a href="../getting_started/">시작하기</a></li>
+<li><a href="../mechanics/">심화 기술</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">세계</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">식물</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="../../_images/item76.png" alt="식물" title="미역취" /><span>식물</span>
+        </h1>
+                <p>There are many, many, <em>many</em> different types of plants in TerraFirmaCraft.<br/>
+<br/>
+Different plants appear in different <a href="../the_world/climate.html">Climates</a>, and their appearance may change over the current season - going through cycles of flowering and laying dormant, or changing color as the local temperature changes. Colorful flowers can typically be crushed in a <a href="../mechanics/quern.html">Quern</a> for <a href="../mechanics/dye.html">Dye</a>.</p>
+<h5>일반</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p>일반적인 식물들은 작은 꽃 등이 있습니다. 잔디나 흙, 경작지에서 자랍니다.</p>
+<h5>건조</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p>건조한 식물들은 일반적인 식물들과 비슷하지만, 모래에서 자랄 수 있습니다. 일반적으로 강수량이 적은 지역에서 나타납니다.</p>
+<a class="anchor" id="cacti"></a><h5>선인장</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p>선인장은 2블록 높이로 자라고, 당신에게 피해를 줍니다!</p>
+<h5>이끼</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p>이끼들은 붙어 있는 블록의 형태를 취합니다. 대체로 땅에서 한데 뭉쳐 생성됩니다.</p>
+<h5>착생식물</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p>착생식물들은 원목의 옆면에서만 삽니다.</p>
+<h5>짧은 잔디</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p>짧은 잔디는 자라면서 점차 커집니다. 이탄이나 진흙에서도 자랄 수 있습니다.</p>
+<h5>큰 잔디</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p>큰 잔디는 당신의 시야를 가릴만큼 큽니다.</p>
+<h5>덩굴</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p>덩굴 블록들은 충분히 따뜻하다면, 스스로 주위로 퍼집니다.</p>
+<h5>늘어진 덩굴</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p>늘어진 덩굴은 기준 블록에서 아래쪽으로 자랍니다.</p>
+<h5>휘어진 덩굴</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p>휘어진 덩굴들은 땅에서 위쪽으로 자랍니다. 딱딱한 종류도 존재합니다.</p>
+<h5>수생 식물</h5>
+<p>수생 식물들은 민물이나 바닷물 둘 중 하나에서만 자랍니다. 그 외에는 육지 식물들과 같이 자라고 행동합니다. 몇몇 수생 식물들은 요리하여 먹을 수 있습니다.</p>
+<h5>일반</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p>일반 수생 식물은 <span style="color:#3E8A00;"></span>칼로 잘라 <span style="color:#3E8A00;">해초</span>를 얻을 수 있습니다.</p>
+<h5>수중 잔디</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p>수중 잔디는 물 속에서 자라는 잔디입니다.</p>
+<h5>큰 수생 식물</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p>큰 수생 식물은 물 속의 바닥 블록부터 자랄 수 있습니다. <span style="color:#3E8A00;">물토란</span>과 부들은 <span style="color:#3E8A00;">칼</span>로 잘라 <span style="color:#3E8A00;">뿌리</span>를 얻을 수 있습니다.</p>
+<h5>부유</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p>부유 식물은 물 위로 떠 있습니다. 보트와 부딪히면 부서집니다.</p>
+<h5>켈프</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p>켈프는 물 속에서 자라는 휘어진 덩굴입니다.</p>
+<h5>나무 켈프</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p>나무 켈프들은 물 속에서 복잡하게 나무로 자랍니다. <span style="color:#3E8A00;">칼</span>로 꽃을 수확할 수 있습니다.</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API 뮨서
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'ko_kr';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+  </body>
+</html>

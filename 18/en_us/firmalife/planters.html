@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'en_us';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/firmalife\planters.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/firmalife\planters.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/firmalife\planters.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/firmalife\planters.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/firmalife\planters.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/firmalife\planters.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/firmalife\planters.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/firmalife\planters.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">The World</a></li>
+<li><a class="text-muted" href="../getting_started/">Getting Started</a></li>
+<li><a class="text-muted" href="../mechanics/">Advanced Mechanics</a></li>
+<li><a class="text-muted" href="../tfcgyres_orehints/">(Addon) Ore Hints and Spawning</a></li>
+<li><a class="text-muted" href="../waterflasks/">(Addon) Water Flasks</a></li>
+<li><a class="text-muted" href="../firmalife/">(Addon) Firmalife</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./differences_from_tfc.html">Differences from TFC</a></li>
+<li><a class="text-muted" href="./cheese.html">Cheese</a></li>
+<li><a class="text-muted" href="./climate_station.html">Climate Station</a></li>
+<li><a class="text-muted" href="./cellar.html">Cellars</a></li>
+<li><a class="text-muted" href="./food_shelves.html">Food Shelves</a></li>
+<li><a class="text-muted" href="./hangers.html">Hangers</a></li>
+<li><a class="text-muted" href="./jarbnet.html">Jarbnets</a></li>
+<li><a class="text-muted" href="./greenhouse.html">Greenhouse</a></li>
+<li><a class="text-muted" href="./sprinklers.html">Sprinklers</a></li>
+<li><a class="text-muted" href="./planters.html">Planters</a></li>
+<li><a class="text-muted" href="./beekeeping.html">Beekeeping</a></li>
+<li><a class="text-muted" href="./jar.html">Jars</a></li>
+<li><a class="text-muted" href="./stainless_steel.html">Stainless Steel</a></li>
+<li><a class="text-muted" href="./drying.html">Drying</a></li>
+<li><a class="text-muted" href="./smoking.html">Smoking</a></li>
+<li><a class="text-muted" href="./ovens.html">Ovens</a></li>
+<li><a class="text-muted" href="./oven_appliances.html">Oven Appliances</a></li>
+<li><a class="text-muted" href="./bread.html">Bread</a></li>
+<li><a class="text-muted" href="./more_fertilizer.html">More Fertilizer Options</a></li>
+<li><a class="text-muted" href="./mixing_bowl.html">Mixing Bowl</a></li>
+<li><a class="text-muted" href="./herbs_and_spices.html">Herbs and Spices</a></li>
+<li><a class="text-muted" href="./fruit_trees.html">Firmalife Fruits</a></li>
+<li><a class="text-muted" href="./berry_bushes.html">Berry Bushes</a></li>
+<li><a class="text-muted" href="./chocolate.html">Chocolate</a></li></ul></li>
+<li><a class="text-muted" href="../firmaciv/">(Addon) Firma: Civilization</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">(Addon) Firmalife</a> / <a class="text-muted" href="#">Planters</a></em></p>
+            
+                <h4><h4>Planters</h4></h4>
+                <hr>
+                <a class="anchor" id="planters"></a><p><span style="color:#3E8A00;">Planters</span> are used to grow crops inside a <a href="../firmalife/greenhouse.html">Greenhouse</a>. To see the status of a planter, you can look at it while holding a <span style="color:#3E8A00;">Hoe</span>. Crops in planters consume <a href="../mechanics/fertilizers.html">Nutrients</a> in a similar way to <a href="../mechanics/crops.html">Crops</a>. Planters should be placed inside a valid Greenhouse and activated with a <a href="../firmalife/climate_station.html">Climate Station</a>. Planters need at least some natural sunlight to work.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="Water Bucket" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item70.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="Wooden Bucket" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item209.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Watering Can" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item274.png" />
+                </div>
+            </div>
+        </div>
+        <p>Planters must be <span style="color:#3E8A00;">Watered</span> to grow. This is done with a <span style="color:#3E8A00;">Watering Can</span>, crafted from a <span style="color:#3E8A00;">Wooden Bucket</span>, a container of <span style="color:#3E8A00;">Water</span> and <span style="color:#3E8A00;">Lumber</span>. Press <span style="color:#b0b;">Right Click</span> with it to water nearby planters. Refill it by pressing <span style="color:#b0b;">Right Click</span> on a water source.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item265.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="Compost" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item94.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-toggle="tooltip" title="Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item265.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item265.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-toggle="tooltip" title="Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item265.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-toggle="tooltip" title="Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item265.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Large Planter" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">Large Planters</span> are the most simple kind of planter. They grow a single crop from seed, and are harvested with <span style="color:#b0b;">Right Click</span> when mature.</p>
+<p>Large Planters can grow <span style="color:#3E8A00;">Green Beans</span>, <span style="color:#3E8A00;">Tomatoes</span>, <span style="color:#3E8A00;">Sugarcane</span>, <span style="color:#3E8A00;">Jute</span>, and <span style="color:#3E8A00;">Grains</span>. However, to grow Grains, you need a <span style="color:#3E8A00;">Copper</span> or better Greenhouse.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="Compost" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item94.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="Compost" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item94.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item265.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-toggle="tooltip" title="Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item265.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-toggle="tooltip" title="Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item265.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-toggle="tooltip" title="Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item265.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Quad Planter" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">Quad Planters</span> grow four individual crops at once. These crops all draw from the same nutrient pool, and can be harvested individually with <span style="color:#b0b;">Right Click</span> when mature.</p>
+<p>Quad Planters can grow <span style="color:#3E8A00;">Beets</span>, <span style="color:#3E8A00;">Cabbage</span>, <span style="color:#3E8A00;">Carrots</span>, <span style="color:#3E8A00;">Garlic</span>, <span style="color:#3E8A00;">Onions</span>, <span style="color:#3E8A00;">Potatoes</span>, and <span style="color:#3E8A00;">Soybeans</span>. These crops can be grown in any greenhouse type.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item265.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-toggle="tooltip" title="Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item265.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item265.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-toggle="tooltip" title="Compost" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item94.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-toggle="tooltip" title="Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item265.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-toggle="tooltip" title="Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item265.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-toggle="tooltip" title="Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item265.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-toggle="tooltip" title="Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item265.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Bonsai Planter" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">Bonsai Planters</span> grow small fruit trees from their saplings. The fruit can be picked with <span style="color:#b0b;">Right Click</span>.</p>
+<p>Bonsai Planters can grow any fruit tree type, except <span style="color:#3E8A00;">Bananas</span>, which need a <span style="color:#3E8A00;">Hanging Planter</span>. They all consume Nitrogen as their main nutrient. They need an <span style="color:#3E8A00;">Iron</span> or better greenhouse to grow.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item265.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item265.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-toggle="tooltip" title="Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item265.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item265.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-toggle="tooltip" title="Compost" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item94.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-toggle="tooltip" title="Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item265.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Hanging Planter" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">Hanging Planters</span> grow crops upside down. When mature, they can be harvested with <span style="color:#b0b;">Right Click</span>.</p>
+<p>Hanging Planters grow <span style="color:#3E8A00;">Squash</span>, from their seeds, and <span style="color:#3E8A00;">Bananas</span>, from their saplings. Squash can be grown in any greenhouse, but Bananas require an <span style="color:#3E8A00;">Iron</span> or better greenhouse to grow. Hanging planters need to anchor to a solid block above them.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item265.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-toggle="tooltip" title="Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item265.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item265.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-toggle="tooltip" title="Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item265.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-toggle="tooltip" title="Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item265.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-toggle="tooltip" title="Compost" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item94.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-toggle="tooltip" title="Brick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item265.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Trellis Planter" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">Trellis Planters</span> grow berry bushes. Berries can be picked with <span style="color:#b0b;">Right Click</span>.</p>
+<p>Trellis Planters have the unique property of <span style="color:#3E8A00;">propagating</span> berry bushes. If a trellis planter is placed on top of another, and the one below has a mature berry bush, it has a chance to grow upwards into the next one. Trellis planters can grow any berry bush except <span style="color:#3E8A00;">Cranberries</span>, but require an <span style="color:#3E8A00;">Iron</span> or better greenhouse to work. Bushes prefer Nitrogen.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="Compost" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item94.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="Compost" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item94.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Treated Lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item227.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-toggle="tooltip" title="Treated Lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item227.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-toggle="tooltip" title="Wrought Iron Ingot" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item171.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Hydroponic Planter" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">2</p>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">Hydroponic Planters</span> grow rice and cranberry bushes. They work the same as a quad planter, except that they do not need to be watered. Instead, a <span style="color:#3E8A00;">Nutritive Vat</span> must be placed below them. Without the vat they will not grow.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this recipe.">Recipe: <code>firmalife:crafting/nutritive_basin</code></span></p>
+        </div>
+        <p>Nutritive basins must be filled with water, using <span style="color:#b0b;">Right Click</span>.</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="暦と気候 | TFC Field Guide" />
+    <meta name="description" content="暦と気候" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="暦と気候 | TFC Field Guide" />
+    <meta property="og:description" content="暦と気候" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/image70.png" />
+
+    <title>暦と気候 | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft Field Guide</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Version 1.21.1 - v4.0.0-beta
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 日本語
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/the_world/climate.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world/climate.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world/climate.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world/climate.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world/climate.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world/climate.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world/climate.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world/climate.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/the_world/climate.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Contents</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Index</a></li>
+            <li><a href="../the_world/">世界</a><ul><li><a href="./geology.html">地質</a></li>
+<li><a href="./ores_and_minerals.html">鉱石とミネラル</a></li>
+<li><a href="./climate.html">暦と気候</a></li>
+<li><a href="./flora.html">植物</a></li>
+<li><a href="./wild_crops.html">自生植物</a></li>
+<li><a href="./wild_fruits.html">自生果樹</a></li>
+<li><a href="./wild_animals.html">野生動物</a></li></ul></li>
+<li><a href="../getting_started/">はじめに</a></li>
+<li><a href="../mechanics/">高度な加工</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">世界</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">暦と気候</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="../../_images/image70.png" alt="暦と気候" title="None" /><span>暦と気候</span>
+        </h1>
+                <a class="anchor" id="calendar"></a><p>TerraFirmaCraft では、気候と時間の両方が非常に重要な要素です。 <span style="color:#3E8A00;">暦</span> から始めましょう。<br/>
+<br/>
+<span style="color:#b0b;">E</span> を押して、[カレンダー] タブをクリックすると、いつでもカレンダーを表示できます。 これにより、<span style="color:#3E8A00;">季節</span>、<span style="color:#3E8A00;">曜日</span>、および <span style="color:#3E8A00;">日付</span> が表示されます。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/image71.png" alt="tfc:textures/gui/book/gui/calendar.png">
+<div style="text-align: center;"><p>カレンダーGUI</p>
+</div><p>季節があり、それに合わせて天気や気候も変化します。 TerraFirmaCraft には 4 つのシーズンがあり、それぞれが <span style="color:#3E8A00;">上旬</span>、<span style="color:#3E8A00;">中旬</span>、<span style="color:#3E8A00;">下旬</span> に分かれています。 四季は次のとおりです:<br/>
+</p>
+<ul>
+	<li><strong>春</strong>: 3 月～5 月</li>
+	<li><strong>夏</strong>: 6 月～8 月</li>
+	<li><strong>秋 </strong>: 9 月 - 11 月</li>
+	<li>冬: 12 月 - 2 月</li>
+</ul>
+<p>現在の季節は、その地域の気温、降水量 (雨や雪が降るかどうか) などに影響を与える可能性があります。 便利なカレンダー タブに注目してください!<br/>
+<br/>
+さて、気候についてです...</p>
+<a class="anchor" id="climate"></a><h5>気候</h5>
+<p>Another tab on the main inventory screen is the <span style="color:#3E8A00;">Climate</span> screen. This one shows information about the current location<br/>
+<br/>
+From top to bottom, the screen displays the <a href="https://en.wikipedia.org/wiki/K%C3%B6ppen_climate_classification">Local Climate</a>, the <span style="color:#3E8A00;">Average Annual Temperature</span>, the <span style="color:#3E8A00;">Average Annual Rainfall</span>, the peak rainfall, the season when the peak occurs, and the current temperature.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/image72.png" alt="tfc:textures/gui/book/gui/climate.png">
+<div style="text-align: center;"><p>気候GUI</p>
+</div><a class="anchor" id="temperature"></a><p>TerraFirmaCraft の気温はさまざまな要因によって影響されます。<br/>
+</p>
+<ul>
+	<li>まず、地域、特に緯度 (Z 座標) が最も大きな役割を果たします。</li>
+	<li>次に、現在の季節が気温に影響します。 - 夏の間は最も暑く、冬の間は最も寒くなります。</li>
+	<li>最後に、気温は日ごとに異なる可能性があり、時間ごとに異なる可能性があります。</li>
+</ul>
+<p>最後の行は、前述のすべての要素を含む現在の気温を示しています。<br/>
+<br/>
+気温は、作物や植物が成長するかどうか、雪や氷が形成されるか溶けるかなど、多くのことに影響を与える可能性があります。</p>
+<a class="anchor" id="rainfall"></a><h5>降水量</h5>
+<p>Rainfall is another climate value that can vary depending on where you are in the world and the time of year. The annual rainfall is measured in millimeters (mm) and can be between 0mm - 500mm. Rainfall affects the types of flora that are found in an area, and also the types of soil.<br/>
+Depending on the local climate, rainfall may vary throughout the year to a peak of up to twice the local average.</p>
+<p>降水量はその地域で何を栽培できるかに影響するため、非常に重要です。 降水量は、<a href="../mechanics/Hydration.html">水分量</a> に寄与する主な要因の 1 つです。これは、特定の場所の土壌の湿り具合を正確に測定するもので、<a href="../mechanics/crops.html">作物</a>、<a href="../the_world/wild_fruits.html#fruit_trees">果樹</a> によって使用されます。 これらをを調べて、成長できるかどうかを判断します。</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'ja_jp';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+  </body>
+</html>

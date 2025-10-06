@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="ガラスの精製 | TFC Field Guide" />
+    <meta name="description" content="ガラスの精製" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="ガラスの精製 | TFC Field Guide" />
+    <meta property="og:description" content="ガラスの精製" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/item127.png" />
+
+    <title>ガラスの精製 | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft Field Guide</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Version 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 日本語
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/mechanics\glassworking.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\glassworking.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\glassworking.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\glassworking.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\glassworking.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\glassworking.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\glassworking.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\glassworking.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/mechanics\glassworking.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Contents</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Index</a></li>
+            <li><a href="../the_world/">世界</a></li>
+<li><a href="../getting_started/">はじめに</a></li>
+<li><a href="../mechanics/">高度な加工</a><ul><li><a href="./advanced_building_materials.html">高度な建材</a></li>
+<li><a href="./animal_husbandry.html">牧畜</a></li>
+<li><a href="./anvils.html">金床</a></li>
+<li><a href="./aqueducts.html">用水路</a></li>
+<li><a href="./armor.html">防具</a></li>
+<li><a href="./armor_trims.html">防具の装飾</a></li>
+<li><a href="./barrels.html">樽</a></li>
+<li><a href="./bellows.html">ふいご</a></li>
+<li><a href="./blast_furnace.html">高炉</a></li>
+<li><a href="./bloomery.html">塊鉄炉</a></li>
+<li><a href="./bowls.html">ボウル</a></li>
+<li><a href="./bread.html">パン</a></li>
+<li><a href="./charcoal_forge.html">炉</a></li>
+<li><a href="./charcoal_pit.html">伏せ焼き</a></li>
+<li><a href="./chisel.html">ノミ</a></li>
+<li><a href="./composter.html">コンポスター</a></li>
+<li><a href="./crankshaft.html">クランクシャフト</a></li>
+<li><a href="./crops.html">作物</a></li>
+<li><a href="./crucible.html">るつぼ</a></li>
+<li><a href="./dairy.html">乳製品</a></li>
+<li><a href="./damage_types.html">ダメージタイプ</a></li>
+<li><a href="./decay.html">保存</a></li>
+<li><a href="./dye.html">染料</a></li>
+<li><a href="./fertilizers.html">肥料</a></li>
+<li><a href="./fire_clay.html">耐火粘土</a></li>
+<li><a href="./fishing.html">釣り</a></li>
+<li><a href="./flux.html">融剤</a></li>
+<li><a href="./gems.html">宝石</a></li>
+<li><a href="./glassworking.html">ガラスの精製</a></li>
+<li><a href="./glassworking_applications.html">ガラス製品</a></li>
+<li><a href="./grill.html">焚き火とグリル</a></li>
+<li><a href="./heating.html">加熱</a></li>
+<li><a href="./hydration.html">潤いを保つ</a></li>
+<li><a href="./jarring.html">瓶詰め</a></li>
+<li><a href="./lamps.html">ランタン</a></li>
+<li><a href="./leather_making.html">革の作成</a></li>
+<li><a href="./lighting.html">光源</a></li>
+<li><a href="./mechanical_power.html">機械的な動力</a></li>
+<li><a href="./minecarts.html">トロッコ</a></li>
+<li><a href="./panning.html">ふるい</a></li>
+<li><a href="./papermaking.html">紙の作成</a></li>
+<li><a href="./pets.html">ペット</a></li>
+<li><a href="./pot.html">焚き火と鍋</a></li>
+<li><a href="./powderkegs.html">火薬樽</a></li>
+<li><a href="./prospecting.html">探鉱</a></li>
+<li><a href="./pumps.html">ポンプ</a></li>
+<li><a href="./quern.html">石臼</a></li>
+<li><a href="./salad.html">サラダ</a></li>
+<li><a href="./sandwiches.html">サンドイッチ</a></li>
+<li><a href="./scribing_table.html">筆記台</a></li>
+<li><a href="./sewing_table.html">裁縫テーブル</a></li>
+<li><a href="./sluices.html">流し樋</a></li>
+<li><a href="./steel.html">鋼</a></li>
+<li><a href="./support_beams.html">梁と崩落</a></li>
+<li><a href="./weaving.html">機織り</a></li>
+<li><a href="./wooden_buckets.html">木のバケツ</a></li></ul></li>
+<li><a href="../firmalife/">(Addon) Firmalife</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">高度な加工</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">ガラスの精製</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\item127.png" alt="ガラスの精製" title="ガラス瓶" /><span>ガラスの精製</span>
+        </h1>
+                <p>ガラスの精製は砂をガラスに変えるプロセスです。最初に、<span style="color:#3E8A00;">ガラスバッチ</span>を作成する必要があります。これには4つのタイプがあります:<br/>
+<br/>
+1. <span style="color:#3E8A00;">シリカ</span>: 白い砂<br/>
+2. <span style="color:#3E8A00;">赤鉄鉱</span>: 黄色、赤、桃色の砂<br/>
+3. <span style="color:#3E8A00;">かんらん</span>: 緑、茶色の砂.<br/>
+4. <span style="color:#3E8A00;">火山</span>: 黒い砂</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="白い砂" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item129.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="白い砂" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item129.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="白い砂" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item129.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="白い砂" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item129.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:glassworking_potash" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item130.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="石灰の粉" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item131.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="シリカガラスバッチ" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">4</p>
+                    <img class="recipe-item" src="..\..\_images\item128.png" />
+                </div>
+            </div>
+        </div>
+        <p>ガラスバッチは、上述の色の砂のいずれかと、<a href="../mechanics/glassworking.html#lime">石灰の粉</a>、そして<a href="../mechanics/glassworking.html#potash">炭酸カリウム</a>の一種を使って作成できます。</p>
+<a class="anchor" id="lime"></a>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="融剤" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item56.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="石灰の粉" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item131.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-red">
+            <p>明るい赤色****</p>
+        </div>
+        <p><span style="color:#3E8A00;">石灰の粉</span>はガラスバッチを作るために必要な材料の一つです。これは<a href="../mechanics/flux.html">融剤</a>を<a href="../mechanics/heating.html">加熱</a>することによって得られる粉末です。</p>
+<a class="anchor" id="potash"></a>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="乾燥したワカメ" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item132.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="ソーダ灰" class="crafting-recipe-item-tooltip"></span>
+                <p class="crafting-recipe-item-count">3</p>
+                <img class="recipe-item" src="..\..\_images\item133.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-dark-red">
+            <p>ぼんやりした赤色****</p>
+        </div>
+        <p>ガラスバッチには、<span style="color:#3E8A00;">炭酸カリウム</span>または同等のものも必要です。<span style="color:#3E8A00;">ソーダ灰</span>は対象のアイテムとして使用でき、<span style="color:#3E8A00;">乾燥したワカメ</span>や<span style="color:#3E8A00;">昆布</span>を加熱して得られる粉末です。<a href="../the_world/ores_and_minerals.html#saltpeter">硝石</a>も使用できます。</p>
+<h5>重要な道具</h5>
+<p>ガラスの精製はガラスバッチから始め、一連のステップを完了することで行われます。これらのステップには特定のツールが必要になる場合があります：<br/>
+</p>
+<ul>
+	<li><span style="color:#3E8A00;">吹きこみ</span>と<span style="color:#3E8A00;">伸ばす</span>ための<a href="../mechanics/glassworking.html#blowpipe">吹き竿</a>、<span style="color:#3E8A00;">平らにする</span>ための</li>
+	<li><a href="../mechanics/glassworking.html#paddle">木ごて</a>、<span style="color:#3E8A00;">つまむ</span>ための</li>
+	<li><a href="../mechanics/glassworking.html#jacks">ジャックス</a>、<span style="color:#3E8A00;">切り離す</span>ための</li>
+	<li><a href="../mechanics/glassworking.html#saw">宝石ノコギリ</a></li>
+</ul>
+<a class="anchor" id="blowpipe"></a>
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image64.png" alt="Recipe: tfc:clay_knapping/blowpipe">
+        </div>
+    </div>
+</div>
+<p>最も重要な道具は<span style="color:#3E8A00;">吹き竿</span>です。これは粘土を<span style="color:#3E8A00;">加工</span>することで作成し、その後<span style="color:#3E8A00;">陶器の吹き竿</span>に焼き上げることができます。</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="真鍮の棒" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item134.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="吹き竿" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="../../_images/placeholder_64.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>等級 2</p>
+        </div>
+        <p>陶器の吹き竿は脆く、使用時に壊れる可能性があります。より頑丈な吹き竿は<a href="../mechanics/anvils.html#working">金床で<span style="color:#3E8A00;">真鍮の棒</span></a>から作ることができます。</p>
+<a class="anchor" id="paddle"></a>
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="木ごて" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item135.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">平らにする</span>工程は<span style="color:#3E8A00;">木ごて</span>を使って行います。</p>
+<a class="anchor" id="jacks"></a>
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this recipe.">Recipe: <code>tfc:welding/jacks</code></span></p>
+        </div>
+        <p><span style="color:#3E8A00;">つまむ</span>工程は、<span style="color:#3E8A00;">ジャックス</span>を使って行います。ジャックは真鍮の棒2本を溶接して作られます。</p>
+<a class="anchor" id="saw"></a>
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="真鍮の棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item134.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:gem_powders" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item123.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="宝石ノコギリ" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item136.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">切り離す</span>工程は<span style="color:#3E8A00;">宝石ノコギリ</span>を使って行います。宝石ノコギリは<span style="color:#3E8A00;">ガラスブロック</span>と<span style="color:#3E8A00;">ガラス板</span>の両方を壊して、それらを取得するためにも使用されます。</p>
+<h5>ガラスの作り方</h5>
+<p>まず、吹き竿のガラスを<span style="color:#AA0000;"><strong>ぼんやりした赤色</strong></span>に加熱します。その後、吹き竿を持ち、<span style="color:#b0b;">Right Click</span>を押して各ステップを行います。<br/>
+<br/>
+<strong>吹く</strong><br/>
+正面を向いたまま<span style="color:#3E8A00;">吹き竿</span>を使用します。<br/>
+<br/>
+<strong>伸ばす</strong><br/>
+真下を向いたまま<span style="color:#3E8A00;">吹き竿</span>を使用します。</p>
+<p><strong>平らにする</strong><br/>
+<span style="color:#3E8A00;">吹き竿</span>を使用し、オフハンドに<a href="../mechanics/glassworking.html#paddle">木ごて</a>を持つ。<br/>
+<br/>
+<strong>つまむ</strong><br/>
+<span style="color:#3E8A00;">吹き竿</span>を使用し、オフハンドに<a href="../mechanics/glassworking.html#jacks">ジャックス</a>を持つ。<br/>
+<br/>
+<strong>切り離す</strong><br/>
+<span style="color:#3E8A00;">吹き竿</span>を使用し、オフハンドに<a href="../mechanics/glassworking.html#saw">宝石ノコギリ</a>を持つ。<br/>
+<br/>
+<strong>転がす</strong><br/>
+<span style="color:#3E8A00;">吹き竿</span>を使用し、オフハンドに<a href="../mechanics/weaving.html#wool_cloth">羊毛の布</a>を持つ</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'ja_jp';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+  </body>
+</html>
