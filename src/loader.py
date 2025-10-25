@@ -55,11 +55,11 @@ class Loader:
     def load_block_model(self, path: str) -> Any: return self.load_resource(path, 'models/block', 'assets', '.json', json_reader)
     def load_item_model(self, path: str) -> Any: return self.load_resource(path, 'models/item', 'assets', '.json', json_reader)
     def load_model(self, path: str) -> Any: return self.load_resource(path, 'models', 'assets', '.json', json_reader)
-    def load_recipe(self, path: str) -> Any: return self.load_resource(path, 'recipes', 'data', '.json', json_reader)
+    def load_recipe(self, path: str) -> Any: return self.load_resource(path, versions.registry('recipe'), 'data', '.json', json_reader)
 
-    def load_block_tag(self, path: str) -> Any: return self.load_resource(path, 'tags/blocks', 'data', '.json', json_reader)
-    def load_item_tag(self, path: str) -> Any: return self.load_resource(path, 'tags/items', 'data', '.json', json_reader)
-    def load_fluid_tag(self, path: str) -> Any: return self.load_resource(path, 'tags/fluids', 'data', '.json', json_reader)
+    def load_block_tag(self, path: str) -> Any: return self.load_resource(path, versions.registry('tags/block'), 'data', '.json', json_reader)
+    def load_item_tag(self, path: str) -> Any: return self.load_resource(path, versions.registry('tags/item'), 'data', '.json', json_reader)
+    def load_fluid_tag(self, path: str) -> Any: return self.load_resource(path, versions.registry('tags/fluid'), 'data', '.json', json_reader)
 
     def load_lang(self, path: str, source: str) -> Any: return self.load_resource(source + ':' + path, 'lang', 'assets', '.json', json_reader, source)
 
@@ -110,15 +110,20 @@ def json_reader(f):
     return json.load(f)
 
 def make_load_from_addon(addon: versions.Addon):
-    def load_from_addon(path: str, reader):
+    resource_paths = addon.resource_paths()
+    def load_from_addon(path_in: str, reader):
         try:
-            path = util.path_join('addons', '%s-%s' % (addon.mod_id, addon.version), addon.resource_path, path)
-            if path.endswith('.png'):
+            count = 0
+            path = util.path_join('addons', '%s-%s' % (addon.mod_id, addon.version), resource_paths[count], path_in)
+            while not os.path.exists(path):
+                count += 1
+                path = util.path_join('addons', '%s-%s' % (addon.mod_id, addon.version), resource_paths[count], path_in)
+            if path.endswith('png'):
                 with open(path, 'rb') as f:
                     return reader(f)
             else:
                 with open(path, 'r', encoding='utf-8') as f:
                     return reader(f)
-        except OSError:
-            util.error('Reading \'%s\' from addon \'%s\'' % (path, addon.mod_id))
+        except (OSError, IndexError):
+            util.error('Reading \'%s\' from addon \'%s\'' % (path_in, addon.mod_id))
     return load_from_addon
