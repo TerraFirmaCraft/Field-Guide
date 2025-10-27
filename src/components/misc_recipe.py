@@ -23,8 +23,10 @@ def format_misc_recipe(context: Context, buffer: List[str], identifier: str):
     elif recipe_type == 'tfc:loom':
         # 1.18 uses an ingredient with 'input_count' parameter
         # 1.20 uses an item stack ingredient with 'ingredient' and 'count' fields
-        if 'ingredient' in data and 'input_count' in data:
-            format_misc_recipe_from_data(context, buffer, identifier, data, in_count=data['input_count'])
+        # 1.21 changed the 'ingredient' field to 'item'
+        if 'ingredient' in data:
+            count = data['input_count'] if 'input_count' in data else data['ingredient']['count'] if 'count' in data['ingredient'] else 1
+            format_misc_recipe_from_data(context, buffer, identifier, data, in_count=count)
         elif 'ingredient' in data and 'ingredient' in data['ingredient'] and 'count' in data['ingredient']:
             ing = data['ingredient']
             format_misc_recipe_from_data(context, buffer, identifier, data, ingredient=ing['ingredient'], in_count=ing['count'])

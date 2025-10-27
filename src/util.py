@@ -14,6 +14,13 @@ def resource_location(path: str) -> str:
         return 'minecraft:%s' % path
     return path
 
+def anyof(dict, *args):
+    for arg in args:
+        if arg in dict:
+            return dict[arg]
+    error('None of %s in %s' % (str(args), str(dict)))
+    return None
+
 def walk(path: str):
     if os.path.isfile(path):
         yield path

@@ -15,11 +15,11 @@ class Loader:
         self.tfc_dir = tfc_dir
         self.output_dir = output_dir
 
-        self.loaders = [('tfc', ('tfc', 'forge', 'minecraft'), self.load_from_tfc)]
+        self.loaders = [('tfc', ('tfc', 'forge', 'minecraft', 'c'), self.load_from_tfc)]
         self.domains = ['tfc']
         if use_mcmeta:
             self.loaders += [
-                ('forge', ('forge', 'minecraft'), mcmeta.load_from_forge),
+                ('forge', ('forge', 'minecraft', 'c'), mcmeta.load_from_forge),
                 ('minecraft', ('minecraft',), mcmeta.load_from_mc)
             ]
             self.domains += ['forge', 'minecraft']
@@ -84,9 +84,10 @@ class Loader:
     
     def load_from_tfc(self, path: str, reader):
         try:
-            path = util.path_join(self.tfc_dir, 'src/main/resources', path)
+            base_path = path
+            path = util.path_join(self.tfc_dir, 'src/main/resources', base_path)
             if not os.path.exists(path):
-                path = util.path_join(self.tfc_dir, 'src/generated/resources', path)
+                path = util.path_join(self.tfc_dir, 'src/generated/resources', base_path)
             if path.endswith('.png'):
                 with open(path, 'rb') as f:
                     return reader(f)

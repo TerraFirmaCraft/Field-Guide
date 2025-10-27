@@ -37,13 +37,15 @@ def format_crafting_recipe_from_data(context: Context, buffer: List[str], identi
         return format_crafting_recipe_from_data(context, buffer, identifier, data['recipe'])
     elif recipe_type == 'tfc:advanced_shaped_crafting':
         data['type'] = 'minecraft:crafting_shaped'
-        util.require('stack' in data['result'], 'Advanced shaped crafting with complex modifiers: \'%s\'' % data['result'])
-        data['result'] = data['result']['stack']  # Discard modifiers
+        stack = util.anyof(data['result'], 'stack', 'id')
+        util.require(stack is not None, 'Advanced shaped crafting with complex modifiers: \'%s\'' % data['result'])
+        data['result'] = stack  # Discard modifiers
         return format_crafting_recipe_from_data(context, buffer, identifier, data)
     elif recipe_type == 'tfc:advanced_shapeless_crafting':
         data['type'] = 'minecraft:crafting_shapeless'
-        util.require('stack' in data['result'], 'Advanced shapeless crafting with complex modifiers: \'%s\'' % data['result'])
-        data['result'] = data['result']['stack']  # Discard modifiers
+        stack = util.anyof(data['result'], 'stack', 'id')
+        util.require(stack is not None, 'Advanced shapeless crafting with complex modifiers: \'%s\'' % data['result'])
+        data['result'] = stack  # Discard modifiers
         return format_crafting_recipe_from_data(context, buffer, identifier, data)
     else:
         raise util.error('Unknown crafting recipe type: %s for recipe %s' % (recipe_type, identifier))
@@ -87,7 +89,7 @@ def format_crafting_recipe_from_data(context: Context, buffer: List[str], identi
         ))
 
 
-def format_ingredient(context: Context, data: Any) -> Tuple[str, str]:
+def format_ingredient(context: Context, data: Any) -> Tuple[str, str | None]:
     if 'item' in data:
         return item_loader.get_item_image(context, data['item'])
     elif 'tag' in data:
@@ -99,6 +101,15 @@ def format_ingredient(context: Context, data: Any) -> Tuple[str, str]:
     elif 'type' in data and data['type'] == 'tfc:fluid_item':
         util.require(data['fluid_ingredient']['ingredient'] == 'minecraft:water', 'Unknown `tfc:fluid_item` ingredient: \'%s\'' % data)
         return item_loader.get_item_image(context, 'minecraft:water_bucket')
+    elif 'type' in data and data['type'] == 'tfc:fluid_content':
+        util.require(data['fluid']['fluid'] == 'minecraft:water', 'Unknown `tfc:fluid_content` ingredient: \'%s\'' % data)
+        return item_loader.get_item_image(context, 'minecraft:water_bucket')
+    elif 'type' in data and data['type'] == 'tfc:and':
+        csvstring = ''
+        for i in data['children']:
+            if 'item' in i:
+                csvstring += ',' + str(i['item'])
+        return item_loader.get_item_image(context, csvstring)
     elif isinstance(data, List):
         csvstring = ''
         for i in data:
@@ -106,7 +117,11 @@ def format_ingredient(context: Context, data: Any) -> Tuple[str, str]:
                 csvstring += ',' + str(i['item'])
         return item_loader.get_item_image(context, csvstring)
     else:
-        util.error('Unsupported ingredient: %s' % data)
+        util.error('Unsupported ingredient: %s' % str(data))
+
+def format_sized_ingredient(context: Context, data: Any) -> Tuple[Tuple[str, str | Any], int]:
+    ing = format_ingredient(context, data)
+    return ing, 1 if 'count' not in data else data['count']
 
 def format_item_stack(context: Context, data: Any) -> Tuple[str, str, int]:
     if 'modifiers' in data and 'stack' in data:
