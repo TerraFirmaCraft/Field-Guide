@@ -126,8 +126,10 @@ def format_sized_ingredient(context: Context, data: Any) -> Tuple[Tuple[str, str
 def format_item_stack(context: Context, data: Any) -> Tuple[str, str, int]:
     if 'modifiers' in data and 'stack' in data:
         return format_item_stack(context, data['stack'])  # Discard modifiers
-    if 'item' in data:
+    if 'item' in data and isinstance(data, dict):
         path, name = item_loader.get_item_image(context, data['item'])
+    elif 'id' in data and isinstance(data, dict):
+        path, name = item_loader.get_item_image(context, data['id'])
     else:
         path =  '../../_images/placeholder_64.png'
         name = None
