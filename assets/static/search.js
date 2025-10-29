@@ -1,6 +1,6 @@
 
 async function loadIndex() {
-    const response = await fetch(`/${getLang()}/search_index.json`);
+    const response = await fetch(`${getBaseUrl()}/${getLang()}/search_index.json`);
     return response.json();
 }
 
@@ -12,6 +12,12 @@ function getQuery() {
 function getLang() {
     const pathParts = window.location.pathname.split('/').filter(Boolean);
     return pathParts.length > 0 ? pathParts[0] : '';
+}
+
+function getBaseUrl() {
+    // Detect if we're on GitHub Pages (production) or localhost (dev)
+    const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    return isLocal ? '' : '/Field-Guide';
 }
 
 function boldQuery(text, query) {
@@ -56,7 +62,7 @@ document.getElementById('search-box').addEventListener('keydown', function (e) {
       const query = encodeURIComponent(this.value.trim());
       if (!query) return;
 
-      const target = `/${getLang()}/search.html?q=${query}`;
+      const target = `${getBaseUrl()}/${getLang()}/search.html?q=${query}`;
 
       window.location.href = target;
     }
@@ -66,6 +72,6 @@ function handleSearch(e) {
     e.preventDefault(); // Prevent page reload
     const query = document.getElementById('search-box').value.trim();
     if (!query) return;
-    const target = `/${getLang()}/search.html?q=${query}`;
+    const target = `${getBaseUrl()}/${getLang()}/search.html?q=${query}`;
     window.location.href = target;
 }
