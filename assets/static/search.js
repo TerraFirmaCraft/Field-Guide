@@ -1,6 +1,6 @@
 
 async function loadIndex() {
-    const response = await fetch(`${getBaseUrl()}/${getLang()}/search_index.json`);
+    const response = await fetch(buildUrl(`/${getLang()}/search_index.json`));
     return response.json();
 }
 
@@ -20,7 +20,12 @@ function isLocal() {
 }
 
 function getBaseUrl() {
-    return isLocal() ? '' : 'Field-Guide';
+    return isLocal() ? '' : '/Field-Guide';
+}
+
+function buildUrl(path) {
+    const baseUrl = getBaseUrl();
+    return baseUrl ? `${baseUrl}${path}` : path;
 }
 
 function boldQuery(text, query) {
@@ -65,9 +70,7 @@ document.getElementById('search-box').addEventListener('keydown', function (e) {
       const query = encodeURIComponent(this.value.trim());
       if (!query) return;
 
-      const target = `${getBaseUrl()}/${getLang()}/search.html?q=${query}`;
-
-      window.location.href = target;
+      window.location.href = buildUrl(`/${getLang()}/search.html?q=${query}`);
     }
 });
 
@@ -75,6 +78,5 @@ function handleSearch(e) {
     e.preventDefault(); // Prevent page reload
     const query = document.getElementById('search-box').value.trim();
     if (!query) return;
-    const target = `${getBaseUrl()}/${getLang()}/search.html?q=${query}`;
-    window.location.href = target;
+    window.location.href = buildUrl(`/${getLang()}/search.html?q=${query}`);
 }
