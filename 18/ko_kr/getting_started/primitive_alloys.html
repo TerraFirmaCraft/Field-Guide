@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TerraFirmaCraft 도감</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft 도감</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> 버전 1.18.2 - v2.2.30
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 한국어
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/getting_started\primitive_alloys.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\primitive_alloys.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\primitive_alloys.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\primitive_alloys.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\primitive_alloys.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\primitive_alloys.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\primitive_alloys.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\primitive_alloys.html" class="dropdown-item">繁體中文(台灣)</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>목차</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">색인</a></li>
+            <li><a href="../the_world/">세계</a></li>
+<li><a href="../getting_started/">시작하기</a><ul><li><a href="./introduction.html">소개</a></li>
+<li><a href="./firepit.html">최초의 불</a></li>
+<li><a href="./pottery.html">도자기</a></li>
+<li><a href="./pit_kiln.html">구덩이 가마</a></li>
+<li><a href="./finding_ores.html">광석, 금속 그리고 주조</a></li>
+<li><a href="./primitive_alloys.html">기초 합금</a></li>
+<li><a href="./primitive_anvils.html">기초적인 모루</a></li>
+<li><a href="./building_materials.html">건축 블록</a></li>
+<li><a href="./a_place_to_sleep.html">잠자리</a></li>
+<li><a href="./size_and_weight.html">크기와 무게</a></li>
+<li><a href="./food_and_water.html">음식과 물</a></li></ul></li>
+<li><a href="../mechanics/">심화 기술</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">시작하기</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">기초 합금</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">기초 합금</h1>
+                <p><span style="color:#3E8A00;">합금</span>은 2개 이상의 금속을 섞어서 더 강한 새로운 금속을 만드는 방법입니다. 구리는 게임 초반에 유용한 금속이었지만, 다음 티어의 금속은 3가지 종류의 <span style="color:#3E8A00;">구리 합금</span>입니다. 합금은 여러 <span style="color:#3E8A00;">금속</span>들로 구성되고, 각각의 금속의 비율은 전체 중 특정 비율을 만족해야 합니다.</p>
+<p>게임 초반에 합금을 제작하는 법 중 하나는 <span style="color:#3E8A00;">작은 항아리</span>를 이용하는 것입니다. 이 과정은 <a href="../getting_started/finding_ores.html#casting">주조</a>와 유사합니다. 다만 한 종류의 금속만을 사용하는 게 아닌, 비율을 맞춰 충분한 양의 금속 광석들을 작은 항아리 안에 넣음으로써 합금을 제작할 수 있습니다.</p>
+<p>예를 들어서, <span style="color:#3E8A00;">청동</span> 1000mB를 만들려면, (우측에 보이듯이) <span style="color:#3E8A00;">구리</span> 880mB에서 920mB과 <span style="color:#3E8A00;">주석</span> 80mB에서 120mB가 필요합니다.<br/>
+<br/>
+다음 3장에는 2티어 금속들의 제작법이 있습니다. 각 종류의 금속들로는 도구, <a href="../mechanics/armor.html">갑옷</a>, 다른 금속 아이템들을 만들 수 있습니다. 같은 티어의 금속이어도 내구도, 효율성, 공격 피해 등의 성질이 약간씩 다릅니다.</p>
+
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="청동 주괴">
+                <img src="..\..\_images\item28.png" alt="청동" />
+            </span>
+            <h5>청동</h5>
+        </div>
+        <p><br/>
+<strong>합금 비율:</strong><br/>
+</p>
+<ul>
+	<li>88 - 92% : <span style="color:#3E8A00;">구리</span></li>
+	<li>8 - 12% : <span style="color:#3E8A00;">주석</span></li>
+</ul><p><br/>
+</p>
+
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="창연청동 주괴">
+                <img src="..\..\_images\item29.png" alt="비스무트 청동" />
+            </span>
+            <h5>비스무트 청동</h5>
+        </div>
+        <p><br/>
+<strong>합금 비율:</strong><br/>
+</p>
+<ul>
+	<li>20 - 30% : <span style="color:#3E8A00;">아연</span></li>
+	<li>50 - 65% : <span style="color:#3E8A00;">구리</span></li>
+	<li>10 - 20% : <span style="color:#3E8A00;">비스무트</span></li>
+</ul><p><br/>
+</p>
+
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="흑청동 주괴">
+                <img src="..\..\_images\item30.png" alt="헤파티존" />
+            </span>
+            <h5>헤파티존</h5>
+        </div>
+        <p><br/>
+<strong>합금 비율:</strong><br/>
+</p>
+<ul>
+	<li>50 - 70% : <span style="color:#3E8A00;">구리</span></li>
+	<li>10 - 25% : <span style="color:#3E8A00;">은</span></li>
+	<li>10 - 25% : <span style="color:#3E8A00;">금</span></li>
+</ul><p><br/>
+</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API 뮨서
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'ko_kr';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+  </body>
+</html>

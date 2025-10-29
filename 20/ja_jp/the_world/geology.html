@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="地質 | TFC Field Guide" />
+    <meta name="description" content="地質" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="地質 | TFC Field Guide" />
+    <meta property="og:description" content="地質" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/item251.png" />
+
+    <title>地質 | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft Field Guide</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Version 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 日本語
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/the_world\geology.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world\geology.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world\geology.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world\geology.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world\geology.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world\geology.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world\geology.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world\geology.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/the_world\geology.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Contents</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Index</a></li>
+            <li><a href="../the_world/">世界</a><ul><li><a href="./geology.html">地質</a></li>
+<li><a href="./ores_and_minerals.html">鉱石と鉱物</a></li>
+<li><a href="./climate.html">暦と気候</a></li>
+<li><a href="./flora.html">植物</a></li>
+<li><a href="./wild_crops.html">野生の作物</a></li>
+<li><a href="./wild_fruits.html">野生の果物</a></li>
+<li><a href="./wild_animals.html">野生の動物</a></li></ul></li>
+<li><a href="../getting_started/">はじめに</a></li>
+<li><a href="../mechanics/">高度な加工</a></li>
+<li><a href="../firmalife/">(Addon) Firmalife</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">世界</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">地質</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\item251.png" alt="地質" title="頁岩" /><span>地質</span>
+        </h1>
+                <p>TerraFirmaCraftの世界は、大陸と呼ばれる数キロメートルに渡る広大な陸地が海によって分けられています。その中には山脈、川、そして多くの異なる環境が見られます。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image102.png" alt="tfc:textures/gui/book/biomes/regions.png">
+<div style="text-align: center;"><p>大規模な視点で見た典型的なTFCの世界。</p>
+</div><a class="anchor" id="rocks"></a><h5>岩層</h5>
+<p>世界はまた、さまざまな種類の<span style="color:#3E8A00;">岩</span>に分かれています。岩の地域は1キロメートル以上にわたることがあり、常に2層または3層の異なる岩層が足元に広がっています。<a href="../the_world/ores_and_minerals.html">鉱石</a>のような資源は特定の岩の種類でしか出現しないことがよくあるため、特定の岩の種類を見つけることは非常に重要です。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image103.png" alt="tfc:textures/gui/book/biomes/rock_layers.png">
+<div style="text-align: center;"><p>TFCの世界の断面図。</p>
+</div><h5>海底</h5>
+<p>海底は<a href="../the_world/geology.html#igneous_extrusive">火成噴出岩</a>で構成されています。火成噴出岩はマグマが急速に冷却されることで形成されます。火成噴出岩の下には、同じ<span style="color:#b0b;">品位</span>の<a href="../the_world/geology.html">火成貫入岩</a>が存在する可能性があります。例えば、<span style="color:#3E8A00;">玄武岩</span>(苦鉄質/火成噴出岩)の下には、<span style="color:#3E8A00;">斑れい岩</span>(苦鉄質/火成貫入岩)が存在する可能性があります。</p>
+<h5>火成岩の等級</h5>
+<p></p>
+<ul>
+	<li><a href="https://ja.wikipedia.org/wiki/珪長質岩">珪長質</a>の岩石は<span style="color:#3E8A00;">花崗岩</span>と<span style="color:#3E8A00;">流紋岩</span>です。</li>
+	<li><a href="https://en.wikipedia.org/wiki/Intermediate_composition">中間質</a>の岩石は<span style="color:#3E8A00;">安山岩</span>、<span style="color:#3E8A00;">デイサイト</span>、および<span style="color:#3E8A00;">閃緑岩</span>です。</li>
+	<li><a href="https://ja.wikipedia.org/wiki/苦鉄質岩">苦鉄質</a>の岩石は<span style="color:#3E8A00;">玄武岩</span>と<span style="color:#3E8A00;">斑れい岩</span>です。</li>
+</ul>
+<p>大陸の最上層の岩は火成噴出岩または<a href="../the_world/geology.html#sedimentary">堆積岩</a>のいずれかになります。堆積岩の下には、その上にある岩石の<a href="../the_world/geology.html#metamorphic">変成</a>形態が存在する可能性が高いです。例えば、<span style="color:#3E8A00;">大理石</span>(変成岩)は、<span style="color:#3E8A00;">石灰岩</span>や<span style="color:#3E8A00;">白亜</span>の下に見られることがよくあります。高品位の変成岩は、他の変成岩や火成岩の地下深くに見つかります。</p>
+<h5>変成岩</h5>
+<p></p>
+<ul>
+	<li><span style="color:#3E8A00;">粘板岩</span>は<span style="color:#3E8A00;">頁岩</span>、<span style="color:#3E8A00;">粘土岩</span>、および<span style="color:#3E8A00;">礫岩</span>の下に形成されます。</li>
+	<li><span style="color:#3E8A00;">大理石</span>は<span style="color:#3E8A00;">石灰岩</span>、<span style="color:#3E8A00;">苦灰岩</span>、および<span style="color:#3E8A00;">白亜</span>の下に形成されます。</li>
+	<li><span style="color:#3E8A00;">珪岩</span>は<span style="color:#3E8A00;">角岩</span>の下に形成されます。</li>
+	<li><span style="color:#3E8A00;">千枚岩</span>は<span style="color:#3E8A00;">粘板岩</span>の下に形成されます。</li>
+	<li><span style="color:#3E8A00;">片岩</span>と<span style="color:#3E8A00;">片麻岩</span>は<span style="color:#3E8A00;">千枚岩</span>、または他の火成貫入岩の下に形成されます。</li>
+</ul>
+<h5>隆起地域</h5>
+<p>最後に、山岳地帯では、変成岩や貫入火成岩が地表に見られる<span style="color:#3E8A00;">隆起岩</span>も見られることがあります。隆起岩は、他の大陸の堆積岩や高変成岩の上に見られることがあります。また、<a href="https://ja.wikipedia.org/wiki/岩脈">岩脈</a>(火成貫入岩の小さな垂直スライス)が、岩の上層を突き抜けて世界中に散在していることがあります。</p>
+<p><br/>
+<br/>
+それを踏まえて、次の数ページでは、<span style="color:#3E8A00;">堆積岩</span>、<span style="color:#3E8A00;">変成岩</span>、<span style="color:#3E8A00;">火成噴出岩</span>、および<span style="color:#3E8A00;">火成貫入岩</span>の4つのカテゴリーの岩をリストアップしています。これらのカテゴリーは、岩の生成場所(前のページを参照)やその岩の中で発生する鉱石の種類を決定します。</p>
+<a class="anchor" id="sedimentary"></a><h5>堆積岩</h5>
+<p><a href="https://ja.wikipedia.org/wiki/堆積岩">堆積岩</a>は、鉱物や有機粒子の堆積や沈殿によって形成されます。これらは通常、大陸の岩の最上層で見られます。堆積岩の種類は以下の通りです：<br/>
+</p>
+<ul>
+	<li>頁岩</li>
+	<li>粘土岩</li>
+	<li>石灰岩</li>
+	<li>礫岩</li>
+	<li>苦灰岩</li>
+	<li>角岩</li>
+	<li>白亜</li>
+</ul>
+<a class="anchor" id="metamorphic"></a><h5>変成岩</h5>
+<p><a href="https://ja.wikipedia.org/wiki/変成岩">変成岩</a>は、変成作用と呼ばれるプロセスによって生成されます。対応する堆積岩や火成岩の下、または隆起した地域で見つかります。変成岩には以下のものがあります:<br/>
+</p>
+<ul>
+	<li>珪岩</li>
+	<li>粘板岩</li>
+	<li>千枚岩</li>
+	<li>片岩</li>
+	<li>片麻岩</li>
+	<li>大理石</li>
+</ul>
+<a class="anchor" id="igneous_extrusive"></a><h5>火成噴出岩</h5>
+<p><a href="https://en.wikipedia.org/wiki/Igneous_rock#Extrusive">火成噴出岩</a>は、マグマが地表で冷却されることによって形成されます。大陸部の岩石の最上層または海底で見つかります。以下の種類があります:<br/>
+</p>
+<ul>
+	<li>流紋岩</li>
+	<li>玄武岩</li>
+	<li>安山岩</li>
+	<li>デイサイト</li>
+</ul>
+<a class="anchor" id="igneous_intrusive"></a><h5>火成貫入岩</h5>
+<p><a href="https://en.wikipedia.org/wiki/Igneous_rock#Intrusive">火成貫入岩</a>は、地殻の下で冷えたマグマから形成されます。地下深く、またはまれに岩脈や隆起地帯で見つかります。次のような岩石があります：<br/>
+</p>
+<ul>
+	<li>花崗岩</li>
+	<li>閃緑岩</li>
+	<li>斑れい岩</li>
+</ul>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'ja_jp';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+  </body>
+</html>

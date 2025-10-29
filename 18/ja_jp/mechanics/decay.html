@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft Field Guide</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Version 1.18.2 - v2.2.30
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 日本語
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/mechanics\decay.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\decay.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\decay.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\decay.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\decay.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\decay.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\decay.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\decay.html" class="dropdown-item">繁體中文(台灣)</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Contents</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Index</a></li>
+            <li><a href="../the_world/">世界</a></li>
+<li><a href="../getting_started/">はじめに</a></li>
+<li><a href="../mechanics/">高度な加工</a><ul><li><a href="./advanced_building_materials.html">高度な素材</a></li>
+<li><a href="./animal_husbandry.html">牧畜</a></li>
+<li><a href="./anvils.html">金床</a></li>
+<li><a href="./aqueducts.html">用水路</a></li>
+<li><a href="./armor.html">防具</a></li>
+<li><a href="./barrels.html">樽</a></li>
+<li><a href="./bellows.html">ふいご</a></li>
+<li><a href="./blast_furnace.html">高炉</a></li>
+<li><a href="./bloomery.html">塊鉄炉</a></li>
+<li><a href="./bread.html">パン</a></li>
+<li><a href="./charcoal_forge.html">溶鉱炉</a></li>
+<li><a href="./charcoal_pit.html">伏せ焼き</a></li>
+<li><a href="./chisel.html">ノミ</a></li>
+<li><a href="./composter.html">コンポスター</a></li>
+<li><a href="./crops.html">作物</a></li>
+<li><a href="./crucible.html">るつぼ</a></li>
+<li><a href="./dairy.html">乳製品</a></li>
+<li><a href="./damage_types.html">ダメージタイプ</a></li>
+<li><a href="./decay.html">保存</a></li>
+<li><a href="./fertilizers.html">肥料</a></li>
+<li><a href="./fire_clay.html">耐火粘土</a></li>
+<li><a href="./fishing.html">釣り</a></li>
+<li><a href="./flux.html">融剤</a></li>
+<li><a href="./gems.html">宝石</a></li>
+<li><a href="./grill.html">焚き火とグリル</a></li>
+<li><a href="./heating.html">加熱</a></li>
+<li><a href="./hydration.html">潤いを保つ</a></li>
+<li><a href="./lamps.html">ランプ</a></li>
+<li><a href="./leather_making.html">革の作成</a></li>
+<li><a href="./lighting.html">光源</a></li>
+<li><a href="./minecarts.html">トロッコ</a></li>
+<li><a href="./panning.html">パンニング</a></li>
+<li><a href="./papermaking.html">紙の作成</a></li>
+<li><a href="./pets.html">ペット</a></li>
+<li><a href="./pot.html">焚き火とポット</a></li>
+<li><a href="./powderkegs.html">火薬樽</a></li>
+<li><a href="./prospecting.html">探鉱</a></li>
+<li><a href="./quern.html">石臼</a></li>
+<li><a href="./salad.html">サラダ</a></li>
+<li><a href="./sandwiches.html">サンドイッチ</a></li>
+<li><a href="./scribing_table.html">筆記台</a></li>
+<li><a href="./sluices.html">堰</a></li>
+<li><a href="./steel.html">鋼</a></li>
+<li><a href="./support_beams.html">梁</a></li>
+<li><a href="./weaving.html">機織り</a></li>
+<li><a href="./wooden_buckets.html">木のバケツ</a></li></ul></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">高度な加工</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">保存</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\item88.png" alt="保存" title="腐った肉" /><span>保存</span>
+        </h1>
+                <p>TerraFirmaCraft では、永遠に機能する食べ物はありません。 食べ物は時間が経つと腐ってしまいます。 腐った食べ物では満腹度は回復せず、<span style="color:#3E8A00;">空腹</span> や <span style="color:#3E8A00;">毒</span>などのデバフを与える可能性があります。<br/>
+<br/>
+安心してください！幸いなことに、 <span style="color:#3E8A00;">保存</span> することで食べ物を長持ちさせることができます。</p>
+<p>食べ物の上にマウスを置くと、食べ物が腐るまでの時間を示すツールチップが表示されます。 <br/>
+<br/>
+<strong><span style="color:#00AA00;">1000 年 7 月 5 日 5:30に腐る(あと5 日)</span></strong><br/>
+<br/>
+さまざまな保存メカニズムを使用することで、 猶予を延長して食べ物が腐るまでの時間を長くすることができます。</p>
+<a class="anchor" id="small_vessels"></a><h5>壺</h5>
+<p>食品を保存する最も簡単な方法の 1 つは、<span style="color:#3E8A00;">壺</span> を使用することです。 <span style="color:#3E8A00;">大きな壺</span> は最大 9 個のアイテムを保管できるブロックで、<span style="color:#3E8A00;">密封</span> すると、中のアイテムは <span style="color:#AA00AA;"><strong>保存済み</strong></span> ステータスを獲得します。 <br/>
+<br/>
+<span style="color:#3E8A00;">小さな壺</span> は、アイテムを最大 4 つ保管できるアイテムで、<span style="color:#AA00AA;"><strong>保存済み</strong></span> も適用されます。</p>
+<a class="anchor" id="large_vessels"></a><h5></h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>密封された大きな壺。</p>
+<h5>調理</h5>
+<p>特定の種類の食品を簡単に保存するもう 1 つの方法は、調理することです。 <span style="color:#3E8A00;">肉</span> はすべて、生のときよりも調理したほうが腐るのが遅くなります。<br/>
+<br/>
+調理には正しい器具を使用することも重要です。 <a href="../mechanics/charcoal_forge.html">溶鉱炉</a> や <a href="../mechanics/rucible.html">るつぼ</a> など、非常に高温になる特定の装置は食品の調理には <strong>適していません</strong>。 もしそれらを使用すると腐敗が早くなります。</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="生の羊肉" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item89.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="焼き羊肉" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item90.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>熱い****</p>
+        </div>
+        <p>代わりに、 <a href="../getting_started/firepit.html">焚き火</a> または <a href="../mechanics/grill.html">グリル</a> を使用すると、腐敗時間を延長するバフを得ることもできます。 たとえば、<span style="color:#3E8A00;">焚き火</span> で羊肉を調理すると期限が 1.33 倍に伸び、<span style="color:#3E8A00;">グリル</span> で調理すると期限が 1.66 倍に伸びます。</p>
+<a class="anchor" id="salting"></a><h5>塩漬け</h5>
+<p><span style="color:#3E8A00;">塩漬け</span> は肉を長持ちさせる方法です。 肉に塩を加えるには、クラフト グリッドで <span style="color:#3E8A00;">塩</span> を使用してクラフトする必要があります。 塩漬けできるのは生肉のみです。 その後、肉を調理したり保存したりしても、塩漬けバフが失われることはありません。</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="岩塩" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item91.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="塩" class="crafting-recipe-item-tooltip"></span>
+                <p class="crafting-recipe-item-count">4</p>
+                <img class="recipe-item" src="..\..\_images\item92.png" />
+            </div>
+        </div>
+    </div>
+    <p>塩を入手する方法の 1 つは、鉱物である<a href="../the_world/ores_and_minerals.html#halite">岩塩</a> を<a href="../mechanics/quern.html">粉砕</a>することです。</p>
+<h5>岩塩堆積物</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>塩は森の中で自然に見つかることもあります。 置くことも拾い上げることも可能です。</p>
+<a class="anchor" id="vinegar"></a><p><span style="color:#3E8A00;">酢漬け</span> は、果物、野菜、肉を長持ちさせる方法です。<br/>
+<br/>
+<span style="color:#3E8A00;">酢</span> は <a href="../mechanics/barrels.html">樽塩水</a> に <span style="color:#3E8A00;">酢</span> を入れる必要があります。 塩酢は <span style="color:#3E8A00;">酢</span> と <span style="color:#3E8A00;">塩水</span> 1:9の割合で樽の中で作られます。</p>
+<p>食品を漬けたら、酢の入った樽に密封します。 漬け物1つにつき125mBの酢があれば、食品が長持ちします。</p>
+<a class="anchor" id="pests"></a><p>食品は密閉された大きな壺か <a href="../getting_started/pottery.html#vessel">小さな壺</a> に保管する必要があります。 チェストやその他のデバイスの中に食べ物が放置されていると、<span style="color:#3E8A00;">ネズミ</span> が引き寄せられる可能性があります。 ネズミは容器を開けてそこから餌を食べることができますが、数分間何かが見つからないとデスポーンします。 ネズミの存在は、<span style="color:#3E8A00;">「この壺には悪臭があります」</span> というメッセージによって警告されます。 GUI を離れる前に大きな容器の封を開けて再度封をしても、ネズミを引き寄せることはないことに注意することが重要です。</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'ja_jp';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+  </body>
+</html>
