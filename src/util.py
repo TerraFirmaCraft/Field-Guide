@@ -1,6 +1,8 @@
+from json import dump
 from logging import getLogger, StreamHandler, Formatter
 
 import os
+import re
 
 LOG = getLogger('main')
 LOG.addHandler((
@@ -38,10 +40,17 @@ def write_html(*path_parts: str, html: str):
     with open(path, 'w', encoding='utf-8') as f:
         f.write(html)
 
-
+def write_json(*path_parts: str, data):
+    path = path_join(*path_parts)
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, 'w', encoding='utf-8') as f:
+        dump(data, f)
+        
 def path_join(*parts):
     return os.path.normpath(os.path.join(*parts))
 
+def search_strip(input: str) -> str:
+    return re.sub(r'\$\([^)]*\)', '', input)
 
 class InternalError(Exception):
 

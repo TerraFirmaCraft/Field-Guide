@@ -1,5 +1,6 @@
 import os
 import json
+import re
 import util
 import shutil
 import logging
@@ -207,27 +208,27 @@ def parse_entry(context: Context, entry_dir: str, entry_file: str, owner_id: str
         entry.icon_name = item_name
     except InternalError as e:
         e.prefix('Entry: %s' % entry).warning(False)
-
+    search = {'content': '', 'entry': entry.name, 'url': './%s.html' % entry_id}
     for page in data['pages']:
         try:
-            parse_page(context, entry_id, entry.buffer, page)
+            parse_page(context, entry_id, entry.buffer, page, search)
         except InternalError as e:
             e.warning()
 
-    context.add_entry(category_id, entry_id, entry)
+    context.add_entry(category_id, entry_id, entry, search)
 
 
-def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
+def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any, search: dict):
     page_type = data['type']
 
     if 'anchor' in data:
         buffer.append('<a class="anchor" id="%s"></a>' % data['anchor'])
 
     if page_type == 'patchouli:text':
-        context.format_title(buffer, data)
-        context.format_text(buffer, data)
+        context.format_title(buffer, data, search=search)
+        context.format_text(buffer, data, search=search)
     elif page_type == 'patchouli:image':
-        context.format_title(buffer, data)
+        context.format_title(buffer, data, search=search)
 
         images = data['images']
 
@@ -266,7 +267,7 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
         context.format_centered_text(buffer, data)
 
     elif page_type == 'patchouli:crafting':
-        context.format_title(buffer, data)
+        context.format_title(buffer, data, search=search)
         try:
             if 'recipe' in data:
                 crafting_recipe.format_crafting_recipe(context, buffer, data['recipe'])
@@ -289,7 +290,7 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
             context.format_recipe(buffer, data, 'recipe2')
             context.recipes_failed += 1
 
-        context.format_text(buffer, data)
+        context.format_text(buffer, data, search=search)
     elif page_type == 'patchouli:spotlight':
         # Item Images
         try:
@@ -316,15 +317,15 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
             context.format_with_tooltip(buffer, items, context.translate(I18n.ITEM_ONLY_IN_GAME))
             context.items_failed += 1
 
-        context.format_text(buffer, data)
+        context.format_text(buffer, data, search=search)
 
     elif page_type == 'patchouli:entity':
-        context.format_title(buffer, data, 'name')
-        context.format_text(buffer, data)
+        context.format_title(buffer, data, 'name', search)
+        context.format_text(buffer, data, search=search)
     elif page_type == 'patchouli:empty':
         buffer.append('<hr>')
     elif page_type == 'patchouli:multiblock' or page_type == 'tfc:multimultiblock':
-        context.format_title(buffer, data, 'name')
+        context.format_title(buffer, data, 'name', search)
 
         try:
             src = block_loader.get_multi_block_image(context, data)
@@ -364,7 +365,7 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
             context.format_recipe(buffer, data)
             context.recipes_failed += 1
 
-        context.format_text(buffer, data)
+        context.format_text(buffer, data, search=search)
     elif page_type in (
         'tfc:instant_barrel_recipe',
         'tfc:sealed_barrel_recipe'
@@ -380,7 +381,7 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
         'tfc:welding_recipe',
     ):
         context.format_recipe(buffer, data)
-        context.format_text(buffer, data)
+        context.format_text(buffer, data, search=search)
         context.recipes_skipped += 1
     elif page_type in (
         # In 1.18
@@ -402,7 +403,7 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
             e.warning(True)
             context.format_recipe(buffer, data)
             context.recipes_failed += 1
-        context.format_text(buffer, data)
+        context.format_text(buffer, data, search=search)
     elif page_type == 'tfc:table':
         try:
             table_formatter.format_table(context, buffer, data)
@@ -418,7 +419,7 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any):
 def build_book_html(context: Context):
 
     # Main Page
-    util.write_html(context.output_dir, 'index.html', html=TEMPLATE.format(
+    main_page = TEMPLATE.format(
         title=context.translate(I18n.TITLE),
         long_title=context.translate(I18n.TITLE) + " | " + versions.MC_VERSION,
         short_description=context.translate(I18n.HOME),
@@ -443,6 +444,7 @@ def build_book_html(context: Context):
             for cat_id, cat in context.sorted_categories
         ]),
         page_content="""
+            <!-- START -->
             <img class="d-block w-200 mx-auto mb-3 img-fluid" src="../_images/{splash_image}.png" alt="TerraFirmaCraft Field Guide Splash Image">
             <p>{text_home}</p>
             <p><strong>{text_entries}</strong></p>
@@ -467,8 +469,24 @@ def build_book_html(context: Context):
                 cat.description
             )
             for cat_id, cat in context.sorted_categories
-        ) + '</div>'
-    ))
+        ) + '</div><!-- END -->'
+    )
+    util.write_html(context.output_dir, 'index.html', html=main_page)
+    search_content = """
+        <ul id="results"></ul>
+    """
+    main_page = re.sub(
+        r'<!--\s*START\s*-->.*?<!--\s*END\s*-->',
+        f'<!-- START -->\n{search_content}\n<!-- END -->',
+        main_page,
+        flags=re.DOTALL
+    )
+    main_page = main_page.replace("</head>", """<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script></head>""").replace("""href="#">""", """href="../">""")
+
+    util.write_html(context.output_dir, 'search.html', html=main_page)
+    for result in context.search_tree:
+        result['content'] = util.search_strip(result['content'])
+    util.write_json(context.output_dir, 'search_index.json', data=context.search_tree)
 
     # Category Pages
     for category_id, cat in context.sorted_categories:

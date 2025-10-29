@@ -32,6 +32,13 @@
 
         <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
           <ul class="navbar-nav">
+            <!-- Search bar-->
+             <li class="nav-item">
+              <form class="d-flex" role="search" onsubmit="handleSearch(event)">
+                <input id="search-box" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+             </li>
             <!-- Version submenu -->
             <li class="nav-item px-2 dropdown" id="version-dropdown">
               <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -152,5 +159,6 @@
     <script src="{root}/static/metadata.js"></script>
     <script src="{root}/static/tooltips.js"></script>
     <script src="{root}/static/versions.js"></script>
+    <script src="{root}/static/search.js"></script>
   </body>
 </html>

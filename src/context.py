@@ -56,6 +56,7 @@ class Context:
         self.items_failed = 0
         self.blocks_passed = 0
         self.blocks_failed = 0
+        self.search_tree = []
 
     def resource_dir(self, path: str) -> str:
         return util.path_join(self.tfc_dir, BOOK_DIR % ('assets' if IS_RESOURCE_PACK else 'data'), self.lang, path)
@@ -98,9 +99,10 @@ class Context:
         self.last_uid[prefix] += 1
         return '%s%d' % (prefix, self.last_uid[prefix])
 
-    def add_entry(self, category_id: str, entry_id: str, entry: Entry):
+    def add_entry(self, category_id: str, entry_id: str, entry: Entry, search: dict):
         self.entries[entry_id] = entry
         self.categories[category_id].entries.append(entry_id)
+        self.search_tree.append(search)
 
     def sort(self):
         """ Initializes sorted lists for all categories and entries. """
@@ -112,20 +114,33 @@ class Context:
             sorted_entry_names = sorted(cat.entries, key=lambda e: (self.entries[e].sort, e))
             cat.sorted_entries = [(e, self.entries[e]) for e in sorted_entry_names]
 
-    def format_text(self, buffer: List[str], data: Any, key: str = 'text'):
+    def format_text(self, buffer: List[str], data: Any, key: str = 'text', search: dict | None = None):
         if key in data:
             text_formatter.format_text(buffer, data[key], self.keybindings)
+            if search is not None:
+                sData = search.copy()
+                sData['content'] = data[key]
+                self.search_tree.append(sData)
 
-    def format_title(self, buffer: List[str], data: Any, key: str = 'title'):
+    def format_title(self, buffer: List[str], data: Any, key: str = 'title', search: dict | None = None):
         if key in data:
-            buffer.append('<h5>%s</h5>\n' % text_formatter.strip_vanilla_formatting(data[key]))
+            stripped = text_formatter.strip_vanilla_formatting(data[key])
+            buffer.append('<h5>%s</h5>\n' % stripped)
+            if search is not None:
+                sData = search.copy()
+                sData['content'] = stripped
+                self.search_tree.append(sData)
 
-    def format_title_with_icon(self, buffer: List[str], icon_src: str, icon_name: str | None, data: Any, key: str = 'title', tag: str = 'h5', tooltip: str | None = None):
+    def format_title_with_icon(self, buffer: List[str], icon_src: str, icon_name: str | None, data: Any, key: str = 'title', tag: str = 'h5', tooltip: str | None = None, search: dict | None = None):
         title = icon_name
         if key in data:
             title = text_formatter.strip_vanilla_formatting(data[key])
             if not icon_name:  # For multi-items, no name, but title is present
                 icon_name = title
+            if search is not None:
+                sData = search.copy()
+                sData['content'] = icon_name
+                self.search_tree.append(sData)
         if tooltip is None:
             tooltip = title
         buffer.append("""
