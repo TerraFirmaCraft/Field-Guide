@@ -62,7 +62,7 @@ class OldVersion(NamedTuple):
 # )
 
 
-VERSION = 'v4.0.9-beta'
+VERSION = 'v4.0.14-beta'
 MC_VERSION = '1.21.1'
 FORGE_VERSION = '21.1.197'
 LANGUAGES = ('en_us', 'ja_jp', 'pt_br', 'ko_kr', 'uk_ua', 'zh_cn', 'zh_hk', 'zh_tw', 'ru_ru')
