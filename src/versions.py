@@ -62,12 +62,13 @@ class OldVersion(NamedTuple):
 # )
 
 
-VERSION = 'v4.0.14-beta'
+VERSION = 'v4.0.16-beta'
 MC_VERSION = '1.21.1'
 FORGE_VERSION = '21.1.197'
 LANGUAGES = ('en_us', 'ja_jp', 'pt_br', 'ko_kr', 'uk_ua', 'zh_cn', 'zh_hk', 'zh_tw', 'ru_ru')
 
 ADDONS = (
+    Addon('eerussianguy', 'firmalife', 'v3.0.0', 'firmalife', ['src/generated/resources', 'src/main/resources']),
     Addon('Notenoughmail', 'precision-prospecting', 'v2.0', 'precisionprospecting', ['src/generated/resources', 'src/main/resources']),
 )
 
