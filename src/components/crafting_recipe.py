@@ -104,7 +104,7 @@ def format_ingredient(context: Context, data: Any) -> Tuple[str, str | None]:
     elif 'type' in data and data['type'] == 'tfc:fluid_content':
         util.require(data['fluid']['fluid'] == 'minecraft:water', 'Unknown `tfc:fluid_content` ingredient: \'%s\'' % data)
         return item_loader.get_item_image(context, 'minecraft:water_bucket')
-    elif 'type' in data and data['type'] == 'tfc:and':
+    elif 'type' in data and (data['type'] == 'tfc:and' or data['type'] == 'neoforge:compound'):
         csvstring = ''
         for i in data['children']:
             if 'item' in i:

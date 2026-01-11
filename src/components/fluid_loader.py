@@ -17,7 +17,9 @@ def decode_fluid(item: Mapping[str, str] | str) -> Tuple[str, int]:
     ingredient = None
     
     if isinstance(item, dict):
-        if 'ingredient' in item:
+        if 'id' in item:
+            ingredient = decode_fluid_ingredient(item['id'])
+        elif 'ingredient' in item:
             ingredient = decode_fluid_ingredient(item['ingredient'])
         elif 'fluid' in item or 'tag' in item:
             ingredient = decode_fluid_ingredient(item)

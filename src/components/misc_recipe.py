@@ -51,8 +51,9 @@ def format_misc_recipe(context: Context, buffer: List[str], identifier: str):
 
         for key in data['operations']:
             # Item Images
-            op_name = context.translate('tfc.enum.glassoperation.' + key)
-            util.require(key in GLASS_ITEMS, 'Missing item for glass op: %s' % key)
+            op_name = context.translate('tfc.enum.glassoperation.' + key, 'glass_operation.' + key.replace(':', '.'))
+            key = key.replace('tfc:', '')
+            util.require(key in GLASS_ITEMS, 'Missing item for glass op: %s' % key.replace)
             op_item = GLASS_ITEMS[key]
             try:
                 item_src, item_name = item_loader.get_item_image(context, op_item, False)
