@@ -39,7 +39,7 @@ def format_misc_recipe(context: Context, buffer: List[str], identifier: str):
             format_misc_recipe_from_data(context, buffer, identifier, data, ingredient=data['ingredient'])
         else:
             util.error('Unrecognized anvil recipe format: %s' % repr(data))
-        tooltip = get_tier(context, data['tier'])
+        tooltip = get_tier(context, data['tier'] if 'tier' in data else 0)
         buffer.append("""
         <div style="text-align: center;" class="minecraft-text minecraft-gray">
             <p>%s</p>
@@ -117,7 +117,10 @@ def get_temperature(context: Context, temperature: int) -> tuple[str, str]:
     return 'brilliant-white', context.translate('tfc.enum.heat.brilliant_white')
 
 def get_tier(context: Context, tier: int) -> str:
-    return context.translate('tfc.enum.tier.tier_%s' % ['0', 'i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii'][tier])
+    return context.translate(
+        'tfc.enum.tier.tier_%s' % ['0', 'i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii'][tier],
+        'tfc.tooltip.tier_%s' % [0, 1, 2, 3, 4, 5, 6, 7][tier]
+        )
 
 
 HEAT = (
