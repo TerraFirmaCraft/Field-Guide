@@ -404,7 +404,7 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any, se
             context.format_recipe(buffer, data)
             context.recipes_failed += 1
         context.format_text(buffer, data, search=search)
-    elif page_type == 'tfc:table':
+    elif page_type == 'tfc:table' or page_type == 'tfc:table_small':
         try:
             table_formatter.format_table(context, buffer, data)
         except InternalError as e:

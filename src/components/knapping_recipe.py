@@ -13,9 +13,7 @@ KNAPPING_TYPES = (
     KnappingType('tfc:rock_knapping', 'tfc:rock', 'tfc:textures/gui/knapping/rock/loose/granite.png', None),
     KnappingType('tfc:clay_knapping', 'tfc:clay', 'tfc:textures/gui/knapping/clay_ball.png', 'tfc:textures/gui/knapping/clay_ball_disabled.png'),
     KnappingType('tfc:fire_clay_knapping', 'tfc:fire_clay', 'tfc:textures/gui/knapping/fire_clay.png', 'tfc:textures/gui/knapping/fire_clay_disabled.png'),
-    KnappingType('tfc:leather_knapping', 'tfc:leather', 'tfc:textures/gui/knapping/leather.png', None),
-    KnappingType(None, 'bsa:bone', 'tfc:textures/gui/knapping/bone.png', None),
-    KnappingType(None, 'bsa:sherd', 'tfc:textures/gui/knapping/ceramic/sherd/unfired/blank.png', "tfc:textures/gui/knapping/ceramic/sherd/unfired/blank_disabled.png")
+    KnappingType('tfc:leather_knapping', 'tfc:leather', 'tfc:textures/gui/knapping/leather.png', None)
 )
 
 KNAPPING_RECIPE_OUTLINE = 'tfc:textures/gui/book/icons.png'

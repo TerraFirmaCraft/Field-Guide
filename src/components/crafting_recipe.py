@@ -1,7 +1,7 @@
 from typing import List, Tuple, Any
 
 from context import Context
-from components import item_loader
+from components import item_loader, fluid_loader
 
 import util
 
@@ -102,8 +102,8 @@ def format_ingredient(context: Context, data: Any) -> Tuple[str, str | None]:
         util.require(data['fluid_ingredient']['ingredient'] == 'minecraft:water', 'Unknown `tfc:fluid_item` ingredient: \'%s\'' % data)
         return item_loader.get_item_image(context, 'minecraft:water_bucket')
     elif 'type' in data and data['type'] == 'tfc:fluid_content':
-        util.require(data['fluid']['fluid'] == 'minecraft:water', 'Unknown `tfc:fluid_content` ingredient: \'%s\'' % data)
-        return item_loader.get_item_image(context, 'minecraft:water_bucket')
+        # Handle any fluid using the fluid bucket image with colorization
+        return fluid_loader.get_fluid_bucket_image(context, data['fluid'])
     elif 'type' in data and (data['type'] == 'tfc:and' or data['type'] == 'neoforge:compound'):
         csvstring = ''
         for i in data['children']:
@@ -133,7 +133,7 @@ def format_item_stack(context: Context, data: Any) -> Tuple[str, str, int]:
     else:
         path =  '../../_images/placeholder_64.png'
         name = None
-    count = 1 if 'count' not in data else data['count']
+    count = 1 if 'count' not in data or isinstance(data, str) else data['count']
     return path, name, count
 
 def format_count(count: int) -> str:
@@ -142,6 +142,6 @@ def format_count(count: int) -> str:
 class CraftingRecipe:
 
     def __init__(self):
-        self.grid = [None] * 9  # grid[x + 3 * y]
-        self.output = None
-        self.shapeless = False
+        self.grid: List[Tuple[str, str | None] | None] = [None] * 9  # grid[x + 3 * y]
+        self.output: Tuple[str, str, int] | None = None
+        self.shapeless: bool = False

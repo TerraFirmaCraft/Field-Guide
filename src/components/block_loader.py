@@ -107,6 +107,9 @@ def create_block_model_image(context: Context, block: str, model: Any) -> Image.
     if parent == 'minecraft:block/cube_all':
         texture = context.loader.load_texture(model['textures']['all'])
         return create_block_model_projection(texture, texture, texture)
+    if parent == 'minecraft:block/powder_snow':
+        texture = context.loader.load_texture(model['textures']['texture'])
+        return create_block_model_projection(texture, texture, texture)
     elif parent == 'minecraft:block/cube_column':
         side = context.loader.load_texture(model['textures']['side'])
         end = context.loader.load_texture(model['textures']['end'])

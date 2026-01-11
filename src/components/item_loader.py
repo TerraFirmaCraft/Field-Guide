@@ -130,8 +130,8 @@ def create_item_image(context: Context, item: str) -> Image.Image:
         layer0 = model['textures']['layer0']
         img = context.loader.load_texture(layer0)
         return img
-    elif parent.startswith('tfc:block/') or parent.startswith('minecraft:block/'):
-        # Block model
+    elif ':block/' in parent:
+        # Block model (any namespace)
         block_model = context.loader.load_model(parent)
         img = block_loader.create_block_model_image(context, item, block_model)
         img = img.resize((64, 64), resample=Image.NEAREST)

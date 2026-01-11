@@ -2,12 +2,11 @@ from typing import Tuple, Mapping
 from PIL import Image, ImageColor
 
 from context import Context
-from components import tag_loader
+from components import tag_loader, colorization
 from util import InternalError
 from i18n import I18n
 
 import util
-import colorsys
 
 CACHE = {}
 
@@ -100,6 +99,87 @@ def get_fluid_image(context: Context, fluid_in: str, placeholder: bool = True) -
         name = '%s mB %s' % (str(amount), name)
     return path, name
 
+def get_fluid_bucket_image(context: Context, fluid_in: str | dict, placeholder: bool = True) -> Tuple[str, str]:
+    """
+    Creates a fluid bucket image with the fluid colorized.
+    Returns:
+        src : str = The path to the bucket image
+        name : str = The translated name with amount
+    """
+    fluid, amount = decode_fluid(fluid_in)
+
+    cache_key = f'bucket_{fluid}'
+    if cache_key in CACHE:
+        path, name, key = CACHE[cache_key]
+        if key is not None:
+            try:
+                name = context.translate('fluid.' + key, 'block.' + key)
+            except InternalError as e:
+                e.warning()
+        if amount > 0:
+            name = '%s mB %s' % (str(amount), name)
+        return path, name
+
+    # Get fluid info
+    name = None
+    key = None
+    if fluid.startswith('#'):
+        name = context.translate(I18n.TAG) % fluid
+        fluids = tag_loader.load_fluid_tag(context, fluid[1:])
+        if fluids:
+            fluid = fluids[0]  # Use first fluid in tag
+
+    if not fluid.startswith('#'):
+        key = fluid.replace('/', '.').replace(':', '.')
+        try:
+            name = context.translate('fluid.' + key, 'block.' + key)
+        except InternalError as e:
+            e.warning()
+            name = fluid
+
+    try:
+        img = create_fluid_bucket_image(context, fluid)
+        path = context.loader.save_image(context.next_id('fluid'), img)
+    except InternalError as e:
+        e.prefix('Fluid Bucket Image').warning()
+        if placeholder:
+            path = '../../_images/placeholder_64.png'
+        else:
+            raise e
+
+    CACHE[cache_key] = path, name, key
+    if amount > 0:
+        name = '%s mB %s' % (str(amount), name)
+    return path, name
+
+def create_fluid_bucket_image(context: Context, fluid: str) -> Image.Image:
+    """Creates a wooden bucket image with colorized fluid overlay"""
+    try:
+        # Load base bucket texture
+        base = context.loader.load_texture('tfc:item/bucket/wooden_bucket_empty')
+
+        # Load fluid overlay (grayscale)
+        overlay = context.loader.load_texture('tfc:item/bucket/wooden_bucket_overlay')
+
+        # Get fluid color
+        fluid_path = fluid
+        if ':' in fluid_path:
+            _, fluid_path = fluid.split(':', 1)
+
+        if fluid_path in FLUID_COLORS:
+            color = ImageColor.getrgb(FLUID_COLORS[fluid_path])
+            # Colorize the overlay
+            overlay = colorization.colorize_grayscale_texture(overlay, color)
+
+        # Composite base and overlay
+        base = base.convert('RGBA')
+        overlay = overlay.convert('RGBA')
+        base.paste(overlay, (0, 0), overlay)
+
+        return base
+    except Exception as e:
+        util.error('Failed to create fluid bucket image for \'%s\': %s' % (fluid, e), True)
+
 def create_fluid_image(fluid: str) -> Image.Image:
     path = fluid
     if ':' in path:
@@ -111,20 +191,8 @@ def create_fluid_image(fluid: str) -> Image.Image:
         return base
     else:
         clr = ImageColor.getrgb(FLUID_COLORS[path])
-        base = put_on_all_pixels(base, clr)
+        base = colorization.put_on_all_pixels(base, clr)
         return base
-    
-
-def put_on_all_pixels(img: Image, color: Tuple[int, int, int], dark_threshold: int = 50) -> Image:
-    img = img.convert('HSV')
-    hue, sat, val = colorsys.rgb_to_hsv(color[0], color[1], color[2])
-    for x in range(0, img.width):
-        for y in range(0, img.height):
-            dat = img.getpixel((x, y))
-            tup = (int(hue * 255), int(sat * 255), int(dat[2] if val > dark_threshold else dat[2] * 0.5))
-            img.putpixel((x, y), tup)
-    img = img.convert('RGBA')
-    return img
 
 FLUID_COLORS = {
     # tfc fluids
@@ -138,7 +206,7 @@ FLUID_COLORS = {
     'tannin': '#63594E',
     'tallow': '#EDE9CF',
     'vinegar': '#C7C2AA',
-    
+
     # alc
     'beer': '#C39E37',
     'cider': '#B0AE32',
@@ -154,8 +222,27 @@ FLUID_COLORS = {
     'salt_water': '##4E63B9',
     'spring_water': '#8AA3FF',
 
-    # addons
+    # dyes (Minecraft standard colors)
+    'white_dye': '#F0F0F0',
+    'light_gray_dye': '#9D9D97',
+    'gray_dye': '#474F52',
+    'black_dye': '#1D1D21',
+    'brown_dye': '#835432',
+    'red_dye': '#B02E26',
+    'orange_dye': '#F9801D',
+    'yellow_dye': '#FED83D',
+    'lime_dye': '#80C71F',
+    'green_dye': '#5E7C16',
+    'cyan_dye': '#169C9C',
+    'light_blue_dye': '#3AB3DA',
+    'blue_dye': '#3C44AA',
+    'purple_dye': '#8932B8',
+    'magenta_dye': '#C74EBD',
+    'pink_dye': '#F38BAA',
+
+    # addons - firmalife
     'yak_milk': '#E8E8E8',
     'goat_milk': '#E8E8E8',
     'chocolate': '#756745',
+    'yeast_starter': '#F5E6D3',
 }

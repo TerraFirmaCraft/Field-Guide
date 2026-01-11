@@ -22,7 +22,19 @@ def load_tag_elements(context: Context, identifier: str, load_func):
     json = load_func(context.loader, identifier)
     for e in json['values']:
         if isinstance(e, dict):
-            yield e['id']
+            element_id = e['id']
+            required = e.get('required', True)
+            if element_id.startswith('#'):
+                # This is a tag reference
+                try:
+                    yield from load_tag_elements(context, element_id[1:], load_func)
+                except Exception:
+                    if required:
+                        raise
+                    # If not required, silently skip this tag reference
+            else:
+                # This is a regular item
+                yield element_id
         elif e.startswith('#'):
             yield from load_tag_elements(context, e[1:], load_func)
         else:
