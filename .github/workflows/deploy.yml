@@ -26,7 +26,7 @@ jobs:
       id: version
       run: |
         output=$(python src/versions.py)
-        echo "::set-output name=version::$output"
+        echo "version=$output" >> $GITHUB_OUTPUT
     - name: Checkout TFC
       uses: actions/checkout@v3
       with:
