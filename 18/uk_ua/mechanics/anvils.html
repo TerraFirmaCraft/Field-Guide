@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Польовий посібник TerraFirmaCraft</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">Польовий посібник TerraFirmaCraft</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Версія 1.18.2 - v2.2.30
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> Українська мова
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/mechanics\anvils.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\anvils.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\anvils.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\anvils.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\anvils.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\anvils.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\anvils.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\anvils.html" class="dropdown-item">繁體中文(台灣)</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Зміст</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Зміст</a></li>
+            <li><a href="../the_world/">Світ</a></li>
+<li><a href="../getting_started/">Починаємо</a></li>
+<li><a href="../mechanics/">Розширена механіка</a><ul><li><a href="./advanced_building_materials.html">Передові матеріали</a></li>
+<li><a href="./animal_husbandry.html">Тваринництво</a></li>
+<li><a href="./anvils.html">Ковадло</a></li>
+<li><a href="./aqueducts.html">Акведук</a></li>
+<li><a href="./armor.html">Броня (обладунки)</a></li>
+<li><a href="./barrels.html">Діжки</a></li>
+<li><a href="./bellows.html">Міхи</a></li>
+<li><a href="./blast_furnace.html">Доменна піч</a></li>
+<li><a href="./bloomery.html">Сиродутне горно</a></li>
+<li><a href="./bread.html">Хліб</a></li>
+<li><a href="./charcoal_forge.html">Ковальське горно</a></li>
+<li><a href="./charcoal_pit.html">Вуглярка</a></li>
+<li><a href="./chisel.html">Долото</a></li>
+<li><a href="./composter.html">Компостер</a></li>
+<li><a href="./crops.html">Городина</a></li>
+<li><a href="./crucible.html">Тигель</a></li>
+<li><a href="./dairy.html">Молочні продукти</a></li>
+<li><a href="./damage_types.html">Види пошкоджень</a></li>
+<li><a href="./decay.html">Консервація</a></li>
+<li><a href="./fertilizers.html">Добрива</a></li>
+<li><a href="./fire_clay.html">Вогнетривка глина</a></li>
+<li><a href="./fishing.html">Рибальство</a></li>
+<li><a href="./flux.html">Флюс</a></li>
+<li><a href="./gems.html">Дорогоцінне каміння</a></li>
+<li><a href="./grill.html">Багаття та гриль</a></li>
+<li><a href="./heating.html">Нагрівання</a></li>
+<li><a href="./hydration.html">Зрошування</a></li>
+<li><a href="./lamps.html">Ліхтарі</a></li>
+<li><a href="./leather_making.html">Обробка шкіри</a></li>
+<li><a href="./lighting.html">Освітлення</a></li>
+<li><a href="./minecarts.html">Вагонетка</a></li>
+<li><a href="./panning.html">Промивання</a></li>
+<li><a href="./papermaking.html">Виготовлення паперу</a></li>
+<li><a href="./pets.html">Улюбленці</a></li>
+<li><a href="./pot.html">Багаття та казан</a></li>
+<li><a href="./powderkegs.html">Порохова бочка</a></li>
+<li><a href="./prospecting.html">Геологорозвідка</a></li>
+<li><a href="./quern.html">Млин</a></li>
+<li><a href="./salad.html">Салати</a></li>
+<li><a href="./sandwiches.html">Бутерброди</a></li>
+<li><a href="./scribing_table.html">Стіл писаря</a></li>
+<li><a href="./sluices.html">Мийний жолоб</a></li>
+<li><a href="./steel.html">Сталь</a></li>
+<li><a href="./support_beams.html">Опорні балки</a></li>
+<li><a href="./weaving.html">Ткацтво</a></li>
+<li><a href="./wooden_buckets.html">Дерев'яні відра</a></li></ul></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">Розширена механіка</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Ковадло</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="../../_images/placeholder_64.png" alt="Ковадло" title="Ковадло з міді" /><span>Ковадло</span>
+        </h1>
+                <p>Ковадло є важливим інструментом, необхідним для металообробки, оскільки воно дозволяє обробляти та зварювати металеві злитки в різні форми.<br/>
+<br/>
+Ковадло може бути корисними як для <a href="../mechanics/anvils.html#working">кування</a>, що перетворює метал з однієї форми у іншу, так і для <a href="../mechanics/anvils.html#welding">зварювання</a> двох металевих предметів у один виріб.</p>
+<h5></h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Перегляньте польовий посібник у Minecraft, щоб побачити цей мультиблок.">Mультиблок</span></p>
+        </div>
+        <p>Всі види металевих ковадл</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Подвійний злиток міді" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item49.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Подвійний злиток міді" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item49.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Подвійний злиток міді" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item49.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Подвійний злиток міді" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item49.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Подвійний злиток міді" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item49.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Подвійний злиток міді" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item49.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Подвійний злиток міді" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item49.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Ковадло з міді" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>Ковадло створюється з <span style="color:#3E8A00;">подвійних злитків</span> відповідного металу чи сплаву. Для свого першого ковадла ти мусиш <a href="../mechanics/anvils.html#welding">зварити</a> подвійні злитки на <a href="../getting_started/primitive_anvils.html">кам'яному ковадлі</a>.</p>
+<a class="anchor" id="tiers"></a><p>Кожне ковадло має <span style="color:#3E8A00;">рівень</span>, який визначає тип матеріалу, з яким воно може працювати та зварювати. Ковадло може обробляти метали поточного рівня та зварювати метали рівня вищого.<br/>
+</p>
+<ul>
+	<li><strong>Рівень 0</strong>: кам'яне ковадло</li>
+	<li><strong>Рівень I</strong>: мідне ковадло</li>
+	<li><strong>Рівень II</strong>: бронзове ковадло</li>
+	<li><strong>Рівень III</strong>: ковке залізо</li>
+	<li><strong>Рівень IV</strong>: сталеве ковадло</li>
+	<li><strong>Рівень V</strong>: з чорної сталі</li>
+	<li><strong>Рівень VI</strong>: з червоної або блакитної сталі</li>
+</ul>
+<a class="anchor" id="working"></a><h5>Ковальство</h5>
+<p>Клік правою кнопкою миші по ковадлу відкриє його інтерфейс. Ліворуч є два вхідних слоти для предметів. Для ковальської роботи з предметом, цей предмет повинен міститися у правий слот. Для кування тобі ще знадобиться молот. Молот можна розмістити у відповідний слот ковадла <strong>або</strong> ж тримати його у руці. Молот буде поступово отримувати пошкодження з кожним ударом.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image42.png" alt="tfc:textures/gui/book/gui/anvil_empty.png">
+<div style="text-align: center;"><p>Інтерфейс ковадла</p>
+</div><p>Для виготовлення кованого предмету, необхідно обрати його <span style="color:#3E8A00;">креслення</span>. <span style="color:#b0b;">ЛКМ</span> на перелік та обери необхідне креслення. Тепер кнопка креслень покаже обране креслення замість сувою, а <span style="color:#3E8A00;">правила</span> та <span style="color:#3E8A00;">ціль</span> будуть заповнені відповідно кресленню.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image43.png" alt="tfc:textures/gui/book/gui/anvil_in_use.png">
+<div style="text-align: center;"><p>Інтерфейс демонструє креслення кайла</p>
+</div><h5>Цілі</h5>
+<p>По центру інтерфейсу ковадла є смужка з двома кольоровими індикаторами. <span style="color:#00AA00;">Зелений</span> покажчик - це твій поточний прогрес у роботі. <span style="color:#AA0000;">Червоний</span> - це ціль, що треба досягти. Мета полягає у тому, щоб узгодити поточний прогрес із ціллю.<br/>
+<br/>
+Над покажчиками є кнопки ковальських операцій, <span style="color:#00AA00;">зелені</span> та <span style="color:#AA0000;">червоні</span>. Вони регулюють зелений покажчик, тобто поточний прогрес на певну величину.</p>
+<p><span style="color:#00AA00;">Зелені</span> кнопки операцій завжди рухають покажчик <strong>праворуч</strong>, а <span style="color:#AA0000;">червоні</span> - <strong>ліворуч</strong>. Зауваж, якщо покажчик вийде за межі своєї шкали, то твій злиток буде знищено. Необхідно звести червоний та зелений покажчик, але відповідно до <span style="color:#3E8A00;">правил</span>...</p>
+<h5>Правила</h5>
+<p><span style="color:#3E8A00;">Правила</span> - це дві-три піктограми, зазначені у верхній частині інтерфейсу ковадла. Вони вказують на конкретні дії, що необхідно виконати в певний час. Наприклад, правило може бути <span style="color:#00AA00;">згинати передостаннім</span>, тобто передостанньою дією <strong>повино</strong> бути <span style="color:#00AA00;">згинання</span>.</p>
+<p>Останні три виконані операції вказані прямо під правилами. Коли правило виконано, його контур стане зеленим. Успіх досягається тоді, коли виконуються всі правила.<br/>
+<br/>
+Також необхідно контролювати <a href="../mechanics/heating.html">температуру</a> свого предмета або злитка. Метали можна обробляти лише тоді, коли вони перевищують певну температуру, яку показує підказка "можна кувати". У процесі роботи є можливість вийняти предмет та розігріти його.</p>
+<h5>Бонуси кування</h5>
+<p>Робота може бути виснажливою, і потрібно зробити багато кроків, щоб вправитися. Однак за ефективність є винагорода. Деякі предмети, як от головки інструментів, коли вони обробляються з мінімальною кількістю кроків, отримують бонус за кування залежно від того, наскільки ефективно їх було викувано. Тоді цей бонус буде застосовано до інструменту, в якому ця головка використовується, наприклад, до головки кайла.</p>
+<h5>Ідеально ковані</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Перегляньте польовий посібник у Minecraft, щоб побачити цей предмет.">Предмет: <code>tfc:metal/pickaxe/wrought_iron{"tfc:forging_bonus":4}</code></span></p>
+        </div>
+        <p>Є чотири бонуси кування:</p>
+<ul>
+	<li>Погано кований</li>
+	<li>Добре кований</li>
+	<li>Майстерно кований</li>
+	<li>Ідеально кований</li>
+</ul><p><br/>
+Ці бонуси збільшують міцність інструменту, завдяки чому він довше працює, швидше видобуває, та/або завдає більше шкоди в бою.</p>
+<a class="anchor" id="welding"></a><h5>Зварювання</h5>
+<p>Зварювання — це процес, за допомогою якого два предмети з’єднуються разом, щоб створити новий предмет. Зварювання працює однаково як на <a href="../getting_started/primitive_anvils.html">кам'яному</a> так і на металевому ковадлі.<br/>
+<br/>
+Спочатку потрібно помістити два предмети, що зварюються, на ковадло. Це можна зробити прямо на ковадлі, або за допомогою інтерфейса ковадла, вставивши їх у два крайні ліві слоти.</p>
+<p>Також необхідно мати у ковадлі хоч одну одиницю <a href="../mechanics/flux.html">флюсу</a> для процесу зварення. Коли обидва зварювані предмета будуть <a href="../mechanics/heating.html">достатньо гарячими</a>, про що буде вказано "можна зварювати", то потрібно застосувати <span style="color:#3E8A00;">молот</span> по ковадлу. Буде чутно відповідний звук та предмети будуть зварені. Потім зварений предмет можна забрати пустою рукою з ковадла, застосувавши <span style="color:#b0b;">ПКМ</span>.</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Документація
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'uk_ua';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+  </body>
+</html>
