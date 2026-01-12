@@ -19,13 +19,13 @@ class Loader:
         self.domains = ['tfc']
         if use_mcmeta:
             self.loaders += [
-                ('forge', ('forge', 'minecraft', 'c'), mcmeta.load_from_forge),
+                ('forge', ('forge', 'neoforge', 'minecraft', 'c'), mcmeta.load_from_forge),
                 ('minecraft', ('minecraft',), mcmeta.load_from_mc)
             ]
             self.domains += ['forge', 'minecraft']
         if use_addons:
             for addon in versions.ADDONS:
-                self.loaders.append((addon.mod_id, (addon.mod_id, 'c', 'tfc', 'minecraft'), make_load_from_addon(addon)))
+                self.loaders.append((addon.mod_id, (addon.mod_id, 'c', 'tfc', 'neoforge', 'minecraft'), make_load_from_addon(addon)))
                 self.domains.append(addon.mod_id)
 
         # Load paletted permutation textures from atlas

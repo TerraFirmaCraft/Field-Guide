@@ -354,6 +354,7 @@ def parse_page(context: Context, entry_id: str, buffer: List[str], data: Any, se
         'tfc:loom_recipe',
         'tfc:anvil_recipe',
         'tfc:glassworking_recipe',
+        'tfc:drying_recipe'
     ):
         try:
             misc_recipe.format_misc_recipe(context, buffer, data['recipe'])

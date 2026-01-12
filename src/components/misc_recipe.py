@@ -10,7 +10,7 @@ import util
 def format_misc_recipe(context: Context, buffer: List[str], identifier: str):
     data = context.loader.load_recipe(identifier)
     recipe_type = data['type']
-    if recipe_type == 'tfc:quern':
+    if recipe_type == 'tfc:quern' or recipe_type == 'firmalife:drying':
         format_misc_recipe_from_data(context, buffer, identifier, data)
     elif recipe_type == 'tfc:heating':
         format_misc_recipe_from_data(context, buffer, identifier, data, result='result_item')

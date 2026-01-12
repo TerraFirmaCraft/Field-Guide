@@ -89,6 +89,38 @@ def format_crafting_recipe_from_data(context: Context, buffer: List[str], identi
         ))
 
 
+def extract_items_from_ingredient(data: Any) -> List[str]:
+    """
+    Recursively extract item/tag names from an ingredient.
+    Returns a list of item names (e.g., ['minecraft:stone'] or ['#minecraft:planks'])
+    """
+    if 'item' in data:
+        return [data['item']]
+    elif 'tag' in data:
+        return ['#' + data['tag']]
+    elif 'type' in data and data['type'] in ('tfc:not_rotten', 'tfc:has_trait', 'tfc:lacks_trait'):
+        # These types wrap another ingredient
+        if 'ingredient' in data:
+            return extract_items_from_ingredient(data['ingredient'])
+        else:
+            # If no nested ingredient, return empty (just a filter)
+            return []
+    elif 'type' in data and (data['type'] == 'tfc:and' or data['type'] == 'neoforge:compound'):
+        # Recursively extract from all children
+        items = []
+        for child in data['children']:
+            items.extend(extract_items_from_ingredient(child))
+        return items
+    elif isinstance(data, list):
+        items = []
+        for item in data:
+            items.extend(extract_items_from_ingredient(item))
+        return items
+    else:
+        # Unknown format, return empty
+        return []
+
+
 def format_ingredient(context: Context, data: Any) -> Tuple[str, str | None]:
     if 'item' in data:
         return item_loader.get_item_image(context, data['item'])
@@ -105,17 +137,23 @@ def format_ingredient(context: Context, data: Any) -> Tuple[str, str | None]:
         # Handle any fluid using the fluid bucket image with colorization
         return fluid_loader.get_fluid_bucket_image(context, data['fluid'])
     elif 'type' in data and (data['type'] == 'tfc:and' or data['type'] == 'neoforge:compound'):
-        csvstring = ''
-        for i in data['children']:
-            if 'item' in i:
-                csvstring += ',' + str(i['item'])
-        return item_loader.get_item_image(context, csvstring)
-    elif isinstance(data, List):
-        csvstring = ''
-        for i in data:
-            if 'item' in i:
-                csvstring += ',' + str(i['item'])
-        return item_loader.get_item_image(context, csvstring)
+        # Extract all item/tag names from children recursively
+        items = extract_items_from_ingredient(data)
+        if items:
+            csvstring = ','.join(items)
+            return item_loader.get_item_image(context, csvstring)
+        else:
+            # Fallback to placeholder
+            return ('../../_images/placeholder_64.png', None)
+    elif isinstance(data, list):
+        # Extract all item/tag names from list recursively
+        items = extract_items_from_ingredient(data)
+        if items:
+            csvstring = ','.join(items)
+            return item_loader.get_item_image(context, csvstring)
+        else:
+            # Fallback to placeholder
+            return ('../../_images/placeholder_64.png', None)
     else:
         util.error('Unsupported ingredient: %s' % str(data))
 
