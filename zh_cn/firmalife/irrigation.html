@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="灌溉 | TFC Field Guide" />
+    <meta name="description" content="灌溉" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="灌溉 | TFC Field Guide" />
+    <meta property="og:description" content="灌溉" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/placeholder_64.png" />
+
+    <title>灌溉 | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">群峦传说 手册</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Search bar-->
+             <li class="nav-item">
+              <form class="d-flex" role="search" onsubmit="handleSearch(event)">
+                <input id="search-box" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+             </li>
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> 版本 1.21.1 - v4.0.18-beta
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 简体中文(中国大陆)
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/firmalife/irrigation.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/firmalife/irrigation.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/firmalife/irrigation.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/firmalife/irrigation.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/firmalife/irrigation.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/firmalife/irrigation.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/firmalife/irrigation.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/firmalife/irrigation.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/firmalife/irrigation.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>目录</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">主页</a></li>
+            <li><a href="../the_world/">这个世界</a></li>
+<li><a href="../getting_started/">新手入门</a></li>
+<li><a href="../mechanics/">进阶内容</a></li>
+<li><a href="../firmalife/">(Addon) Firmalife扩展模组</a><ul><li><a href="./differences_from_tfc.html">与群峦传说本体的区别</a></li>
+<li><a href="./cheese.html">奶酪</a></li>
+<li><a href="./climate_station.html">气象站</a></li>
+<li><a href="./cellar.html">地窖</a></li>
+<li><a href="./food_shelves.html">食物架</a></li>
+<li><a href="./hangers.html">悬挂架</a></li>
+<li><a href="./jarbnet.html">罐头柜</a></li>
+<li><a href="./greenhouse.html">温室</a></li>
+<li><a href="./irrigation.html">灌溉</a></li>
+<li><a href="./planters.html">种植盆</a></li>
+<li><a href="./beekeeping.html">养蜂</a></li>
+<li><a href="./beekeeping_reference.html">养蜂参考</a></li>
+<li><a href="./stainless_steel.html">不锈钢</a></li>
+<li><a href="./drying.html">晾干中</a></li>
+<li><a href="./smoking.html">熏制</a></li>
+<li><a href="./ovens.html">烤炉</a></li>
+<li><a href="./oven_appliances.html">烤炉配件</a></li>
+<li><a href="./bread.html">面包</a></li>
+<li><a href="./more_fertilizer.html">更多的肥料获取途径</a></li>
+<li><a href="./mixing_bowl.html">搅拌碗</a></li>
+<li><a href="./herbs_and_spices.html">草药和香料</a></li>
+<li><a href="./fruit_trees.html">Firmalife中的水果</a></li>
+<li><a href="./berry_bushes.html">浆果丛</a></li>
+<li><a href="./chocolate.html">巧克力</a></li>
+<li><a href="./wine.html">酿酒</a></li>
+<li><a href="./wine_consumption.html">葡萄酒品鉴</a></li>
+<li><a href="./pie.html">馅饼</a></li>
+<li><a href="./pizza.html">披萨</a></li>
+<li><a href="./pasta.html">意大利面</a></li>
+<li><a href="./burritos_and_tacos.html">墨西哥卷饼与墨西哥煎饼</a></li></ul></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">(Addon) Firmalife扩展模组</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">灌溉</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="../../_images/placeholder_64.png" alt="灌溉" title="洒水器" /><span>灌溉</span>
+        </h1>
+                <p><span style="color:#3E8A00;">洒水器</span>是一种以洒水器方块正下方为中心，对5x6x5区域进行灌溉的装置。当它周围有水的粒子效果时，表明它正在工作。面朝上放置的洒水器会对上方相同的5x6x5区域进行灌溉。</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="铜薄板" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="../../_images/item381.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="洒水器" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="../../_images/placeholder_64.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>Tier I</p>
+        </div>
+        <p>洒水器由一块<span style="color:#3E8A00;">铜板</span>锻造而成。</p>
+<p>洒水器必须连接一个供水管道系统才能工作。这需要通过连接一系列<span style="color:#3E8A00;">铜制管道</span>来实现。铜制管道最多能将水输送到32格外的洒水器。它们被连接到<span style="color:#3E8A00;">灌溉水箱</span>或<span style="color:#3E8A00;">水泵站</span>上。</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="铜薄板" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="../../_images/item381.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="铜制管道" class="crafting-recipe-item-tooltip"></span>
+                <p class="crafting-recipe-item-count">8</p>
+                <img class="recipe-item" src="../../_images/placeholder_64.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>Tier I</p>
+        </div>
+        <p>铜制管道是由铜板制成的。</p>
+<h5></h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p></p>
+<p>水泵站必须放置在水源方块上方才能工作，并且需要连接上动力。灌溉水箱也可以通过其侧面的端口供水，前提是它们只能比水泵站或其他水箱高出最多3个方块的高度。</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:sheets/any_bronze" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item382.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="红石粉" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item10.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:sheets/any_bronze" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item382.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="黄铜机件" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item9.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="黄铜机件" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item9.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="黄铜机件" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item9.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:axles" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:axles" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:axles" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="水泵站" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item3.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:sheets/any_bronze" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item382.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item3.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item3.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="铜制管道" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item3.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item3.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item3.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item3.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="灌溉水箱" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="铜制管道" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="铜制管道" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="铜制管道" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="铜制管道" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="草木灰" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item35.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="氧化的铜制管道" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">4</p>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>氧化管道与普通铜制管道功能相同，只是不能与另一种类型的管道连接。</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="铁温室墙" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="铜制管道" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="铁温室接口" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">8</p>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>温室端口内部设有一根管道，可用于使水流贯通温室墙壁！</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'zh_cn';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+    <script src="/Field-Guide/static/search.js"></script>
+  </body>
+</html>

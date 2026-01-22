@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="機械的な動力 | TFC Field Guide" />
+    <meta name="description" content="機械的な動力" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="機械的な動力 | TFC Field Guide" />
+    <meta property="og:description" content="機械的な動力" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/placeholder_64.png" />
+
+    <title>機械的な動力 | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft Field Guide</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Version 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 日本語
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/mechanics\mechanical_power.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\mechanical_power.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\mechanical_power.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\mechanical_power.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\mechanical_power.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\mechanical_power.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\mechanical_power.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\mechanical_power.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/mechanics\mechanical_power.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Contents</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Index</a></li>
+            <li><a href="../the_world/">世界</a></li>
+<li><a href="../getting_started/">はじめに</a></li>
+<li><a href="../mechanics/">高度な加工</a><ul><li><a href="./advanced_building_materials.html">高度な建材</a></li>
+<li><a href="./animal_husbandry.html">牧畜</a></li>
+<li><a href="./anvils.html">金床</a></li>
+<li><a href="./aqueducts.html">用水路</a></li>
+<li><a href="./armor.html">防具</a></li>
+<li><a href="./armor_trims.html">防具の装飾</a></li>
+<li><a href="./barrels.html">樽</a></li>
+<li><a href="./bellows.html">ふいご</a></li>
+<li><a href="./blast_furnace.html">高炉</a></li>
+<li><a href="./bloomery.html">塊鉄炉</a></li>
+<li><a href="./bowls.html">ボウル</a></li>
+<li><a href="./bread.html">パン</a></li>
+<li><a href="./charcoal_forge.html">炉</a></li>
+<li><a href="./charcoal_pit.html">伏せ焼き</a></li>
+<li><a href="./chisel.html">ノミ</a></li>
+<li><a href="./composter.html">コンポスター</a></li>
+<li><a href="./crankshaft.html">クランクシャフト</a></li>
+<li><a href="./crops.html">作物</a></li>
+<li><a href="./crucible.html">るつぼ</a></li>
+<li><a href="./dairy.html">乳製品</a></li>
+<li><a href="./damage_types.html">ダメージタイプ</a></li>
+<li><a href="./decay.html">保存</a></li>
+<li><a href="./dye.html">染料</a></li>
+<li><a href="./fertilizers.html">肥料</a></li>
+<li><a href="./fire_clay.html">耐火粘土</a></li>
+<li><a href="./fishing.html">釣り</a></li>
+<li><a href="./flux.html">融剤</a></li>
+<li><a href="./gems.html">宝石</a></li>
+<li><a href="./glassworking.html">ガラスの精製</a></li>
+<li><a href="./glassworking_applications.html">ガラス製品</a></li>
+<li><a href="./grill.html">焚き火とグリル</a></li>
+<li><a href="./heating.html">加熱</a></li>
+<li><a href="./hydration.html">潤いを保つ</a></li>
+<li><a href="./jarring.html">瓶詰め</a></li>
+<li><a href="./lamps.html">ランタン</a></li>
+<li><a href="./leather_making.html">革の作成</a></li>
+<li><a href="./lighting.html">光源</a></li>
+<li><a href="./mechanical_power.html">機械的な動力</a></li>
+<li><a href="./minecarts.html">トロッコ</a></li>
+<li><a href="./panning.html">ふるい</a></li>
+<li><a href="./papermaking.html">紙の作成</a></li>
+<li><a href="./pets.html">ペット</a></li>
+<li><a href="./pot.html">焚き火と鍋</a></li>
+<li><a href="./powderkegs.html">火薬樽</a></li>
+<li><a href="./prospecting.html">探鉱</a></li>
+<li><a href="./pumps.html">ポンプ</a></li>
+<li><a href="./quern.html">石臼</a></li>
+<li><a href="./salad.html">サラダ</a></li>
+<li><a href="./sandwiches.html">サンドイッチ</a></li>
+<li><a href="./scribing_table.html">筆記台</a></li>
+<li><a href="./sewing_table.html">裁縫テーブル</a></li>
+<li><a href="./sluices.html">流し樋</a></li>
+<li><a href="./steel.html">鋼</a></li>
+<li><a href="./support_beams.html">梁と崩落</a></li>
+<li><a href="./weaving.html">機織り</a></li>
+<li><a href="./wooden_buckets.html">木のバケツ</a></li></ul></li>
+<li><a href="../firmalife/">(Addon) Firmalife</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">高度な加工</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">機械的な動力</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="../../_images/placeholder_64.png" alt="機械的な動力" title="オークの水車" /><span>機械的な動力</span>
+        </h1>
+                <p>機械的な動力は、風や水を動力として利用し、物を回転させたり動かしたりする技術です。<br/>
+<br/>
+実際、多くの装置は動力に接続され、動きを自動化したり、他の機能のために動力を供給することもできます。</p>
+<p>機械的な動力を利用し始めるためには、まず最初に<span style="color:#3E8A00;">動力源</span>が必要です。<br/>
+<br/>
+<a href="../mechanics/mechanical_power.html#windmill">風車</a>は風を利用する方法の一つです。それらは十分なスペースがあればほぼどこにでも建設できます。<br/>
+<br/>
+<a href="../mechanics/mechanical_power.html#water_wheel">水車</a>はわずかに強い動力源です。水車は<span style="color:#3E8A00;">川</span>の流れを利用します。</p>
+<a class="anchor" id="windmill"></a><h5>風車</h5>
+<p><span style="color:#3E8A00;">風車</span>は風の力を利用して<a href="../mechanics/mechanical_power.html#axle">軸</a>を回転させる方法です。風車は大きく、13x13x1の開けた場所が必要です。風車を作るためには、まず<span style="color:#3E8A00;">軸</span>が必要で、その後に1つ以上の<span style="color:#3E8A00;">風車の羽根</span>も用意する必要があります。</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="羊毛の布" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item143.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="羊毛の布" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item143.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="白色の風車の羽" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item169.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">風車の羽根</span>は布から作られます。1つの風車には最大で5枚の羽根を取り付けることができ、羽根の数が多いほど回転速度が速くなります。</p>
+<p>風車を作るためには、まず<a href="../mechanics/mechanical_power.html#axle">軸</a>を任意の水平方向に配置します。次に、<span style="color:#b0b;">Right Click</span>を使用して最大5枚の<span style="color:#3E8A00;">風車の羽根</span>を軸に取り付けて風車を作ります。風車はゆっくりと回り始めます。<br/>
+<br/>
+軸がすでに他のエネルギー源に接続されている場合や、十分な空きスペースがない場合、風車が壊れることがあります。</p>
+<h5></h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock: <code>tfc:windmill</code></span></p>
+        </div>
+        <p></p>
+<a class="anchor" id="water_wheel"></a><h5>水車</h5>
+<p><span style="color:#3E8A00;">水車</span>は、<span style="color:#00AAAA;">川</span>の流れる水の力を利用してエネルギーを生成する方法です。最適に配置された場合、最も高速で回転することができます。<br/>
+<br/>
+水車を設置するには、5x5x1のスペースが必要です。周囲に障害物がある場合や、</p>
+<h5> </h5>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="オークの板" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="オークの板材" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item153.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="オークの板" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="オークの板材" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item153.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="オークの軸" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="オークの板材" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item153.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="オークの板" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="オークの板材" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item153.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="オークの板" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="オークの水車" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>軸がすでに他のエネルギー源に接続されている場合に水車が壊れることがあります。<br/>
+<br/>
+水車は単純に木材から作れます。</p>
+<p><span style="color:#3E8A00;">水車</span>を設置するためには、単純に任意の<span style="color:#3E8A00;">軸</span>の端に取り付けるだけです。軸は流れる水源、例えば川の1ブロック上または2ブロック上の高さに配置する必要があります。<br/>
+<br/>
+流れる水が軸の高さの下にある場合、車輪が加速します。その他の場所にある水や、軸の下にある静止した水は車輪の動きを妨げ、速度が落ちたり停止したりします。</p>
+<h5></h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock: <code>tfc:water_wheel</code></span></p>
+        </div>
+        <p><span style="color:#3E8A00;">水車</span>。</p>
+<a class="anchor" id="axle"></a><h5>軸</h5>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="樹皮を剥いだオークの原木" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item170.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="接着剤" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item67.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="樹皮を剥いだオークの原木" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item170.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="オークの軸" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">4</p>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>軸は機械的な動力の主力であり、一方の場所から他方の場所へ回転力を伝達するブロックです。最大で5ブロック長に接続できますが、それ以上長くすると壊れてしまいます。</p>
+<h5>ケース入りの軸</h5>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="樹皮を剥いだオークの原木" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item170.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="オークの板" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="オークの軸" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="オークの板" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="樹皮を剥いだオークの原木" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item170.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="オークのケース入りの軸" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">4</p>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>軸は<span style="color:#3E8A00;">ケース入り</span>も作成できます。これらは単独設置することも、既存の軸の上に設置することもできます。<br/>
+<br/>
+ただし、さらにパワーを伝達するには、<a href="../mechanics/mechanical_power.html#gearbox">ギアボックス</a>が必要です。</p>
+<a class="anchor" id="gearbox"></a><h5>ギアボックス</h5>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="オークの板" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="オークの板" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="真鍮のベアリング" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item91.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="オークの板" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="オークの板" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="オークのギアボックス" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">2</p>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">ギアボックス</span>は、<a href="https://ja.wikipedia.org/wiki/歯車">歯車</a>を使用して<span style="color:#3E8A00;">回転方向</span>を変更する方法です。これらは、長い<a href="../mechanics/mechanical_power.html#axle">軸</a>の連結を壊すことなくつなげるためにも役立ちます。</p>
+<p>ギアボックスを使用するためには、その側面を設定する必要があります。<span style="color:#3E8A00;">ハンマー</span>を持ちながら<span style="color:#b0b;">Right Click</span>を使用して、ギアボックスの任意の面に対して入力/出力を有効にします。<br/>
+<br/>
+内部構造のため、ギアボックスは同時に2つの異なる回転軸の面のみを有効にできます。</p>
+<h5>クラッチ</h5>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="オークの板" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="樹皮を剥いだオークの原木" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item170.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="オークの板" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="真鍮のベアリング" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item91.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="オークの軸" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="レッドストーンダスト" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item171.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="オークの板" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="樹皮を剥いだオークの原木" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item170.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="オークの板" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="オークのクラッチ" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">2</p>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">クラッチ</span>は、<span style="color:#FF5555;">レッドストーン</span>を使用して回転を制御する方法です。それは<a href="../mechanics/mechanical_power.html#axle">ケース入りの軸</a>で、レッドストーン動力が供給されると切断され、レッドストーン動力が供給されていない場合にのみ回転が通過します。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p><span style="color:#3E8A00;">クラッチ</span>を使用した例。</p>
+<a class="anchor" id="quern"></a><h5>石臼の自動化</h5>
+<p>機械的な動力に接続できる装置の1つは<a href="../mechanics/quern.html">石臼</a>で、石臼の上に垂直に向いた軸を配置するだけで接続できます。接続されると、石臼は手動で回すことができなくなり、代わりに上の軸が回転するのに合わせて自動的にアイテムを粉砕します。<br/>
+<br/>
+軸が速く回転するほど、石臼も速く粉砕します。</p>
+<h5></h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock: <code>tfc:rotating_quern</code></span></p>
+        </div>
+        <p><span style="color:#3E8A00;">軸</span>に接続された<a href="../mechanics/mechanical_power.html#axle">石臼</a>。</p>
+<a class="anchor" id="trip_hammer"></a><h5>トリップハンマー</h5>
+<p>もう一つの機械装置は<span style="color:#3E8A00;">トリップハンマー</span>です。トリップハンマーは自動的に<a href="../mechanics/anvils.html">金床</a>で鍛冶を行います。トリップハンマーは動作するために<span style="color:#3E8A00;">羽付き軸</span>が必要です。羽付き軸は通常の軸と同様に機能しますが、ハンマーを作動させるために羽が取り付けられています。</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="オークの軸" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="鋼のインゴット" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item172.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="オークの羽付き軸" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="鋼のプレート" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item173.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="真鍮のベアリング" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item91.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="鋼の棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item174.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="鋼のプレート" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item173.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="真鍮のベアリング" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item91.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="鋼の棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item174.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="トリップハンマー" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <h5></h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>トリップハンマーのセットアップ。</p>
+<p>軸の下にトリップハンマーを配置し、<span style="color:#b0b;">Right Click</span>で金属製ハンマーを追加します。羽付き軸がハンマーの持ち手を下に押すように向いていることを確認してください。その後、ハンマーは前方に配置された金床を叩きます。トリップハンマーは常に<span style="color:#3E8A00;">'軽い叩き'</span>アクションを記録し、プレイヤーの入力を必要とせずにカーソルを目標に近づけ続けます。インゴットが十分に熱くないか、金床が不適切な等級である場合、深い金属の叩き音が警告します。</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'ja_jp';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+  </body>
+</html>

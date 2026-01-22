@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Животноводство | TFC Field Guide" />
+    <meta name="description" content="Животноводство" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="Животноводство | TFC Field Guide" />
+    <meta property="og:description" content="Животноводство" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/item220.png" />
+
+    <title>Животноводство | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">Справочник TerraFirmaCraft</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Search bar-->
+             <li class="nav-item">
+              <form class="d-flex" role="search" onsubmit="handleSearch(event)">
+                <input id="search-box" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+             </li>
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Версия 1.21.1 - v4.0.18-beta
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> Русский
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/mechanics/animal_husbandry.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics/animal_husbandry.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics/animal_husbandry.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics/animal_husbandry.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics/animal_husbandry.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics/animal_husbandry.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics/animal_husbandry.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics/animal_husbandry.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/mechanics/animal_husbandry.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Содержание</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Главная</a></li>
+            <li><a href="../the_world/">Окружающий мир</a></li>
+<li><a href="../getting_started/">Начало выживания</a></li>
+<li><a href="../mechanics/">Продвинутые механики</a><ul><li><a href="./advanced_building_materials.html">Продвинутые материалы</a></li>
+<li><a href="./animal_husbandry.html">Животноводство</a></li>
+<li><a href="./anvils.html">Наковальни</a></li>
+<li><a href="./aqueducts.html">Акведуки</a></li>
+<li><a href="./armor.html">Броня</a></li>
+<li><a href="./armor_trims.html">Отделка брони</a></li>
+<li><a href="./barrels.html">Бочки</a></li>
+<li><a href="./bellows.html">Кузнечные меха</a></li>
+<li><a href="./blast_furnace.html">Доменная печь</a></li>
+<li><a href="./bloomery.html">Сыродутная печь</a></li>
+<li><a href="./bowls.html">Миски</a></li>
+<li><a href="./bread.html">Хлеб</a></li>
+<li><a href="./channels.html">Литьё с каналами</a></li>
+<li><a href="./charcoal_forge.html">Угольная кузница</a></li>
+<li><a href="./charcoal_pit.html">Угольная яма</a></li>
+<li><a href="./chisel.html">Долото</a></li>
+<li><a href="./composter.html">Компостер</a></li>
+<li><a href="./crankshaft.html">Коленчатые валы</a></li>
+<li><a href="./crops.html">Культуры</a></li>
+<li><a href="./crucible.html">Тигель</a></li>
+<li><a href="./dairy.html">Молочные продукты</a></li>
+<li><a href="./damage_types.html">Типы урона</a></li>
+<li><a href="./decay.html">Консервация</a></li>
+<li><a href="./dye.html">Красители</a></li>
+<li><a href="./farmland.html">Плодородие почвы</a></li>
+<li><a href="./fertilizers.html">Удобрения</a></li>
+<li><a href="./fire_clay.html">Огнеупорная глина</a></li>
+<li><a href="./fishing.html">Рыбалка</a></li>
+<li><a href="./flux.html">Флюс</a></li>
+<li><a href="./gems.html">Драгоценные камни</a></li>
+<li><a href="./glassworking.html">Изготовление стекла</a></li>
+<li><a href="./glassworking_applications.html">Изделия из стекла</a></li>
+<li><a href="./grill.html">Костёр и гриль</a></li>
+<li><a href="./heating.html">Нагревание</a></li>
+<li><a href="./hydration.html">Поддержание влажности</a></li>
+<li><a href="./jarring.html">Заготовка в банках</a></li>
+<li><a href="./kilns.html">Кирпичные печи</a></li>
+<li><a href="./lamps.html">Лампы</a></li>
+<li><a href="./leather_making.html">Выделка кожи</a></li>
+<li><a href="./lighting.html">Источники света</a></li>
+<li><a href="./mechanical_power.html">Механическая энергия</a></li>
+<li><a href="./minecarts.html">Вагонетки</a></li>
+<li><a href="./panning.html">Промывка в лотке</a></li>
+<li><a href="./papermaking.html">Изготовление бумаги</a></li>
+<li><a href="./pets.html">Питомцы</a></li>
+<li><a href="./pot.html">Горшок на костре</a></li>
+<li><a href="./powderkegs.html">Пороховые бочки</a></li>
+<li><a href="./prospecting.html">Поиск месторождений</a></li>
+<li><a href="./pumps.html">Насосы</a></li>
+<li><a href="./quern.html">Жёрнов</a></li>
+<li><a href="./redstone_devices.html">Редстоун-устройства</a></li>
+<li><a href="./salad.html">Салаты</a></li>
+<li><a href="./sandwiches.html">Бутерброды</a></li>
+<li><a href="./scribing_table.html">Стол для письма</a></li>
+<li><a href="./sewing_table.html">Швейный стол</a></li>
+<li><a href="./sluices.html">Рудопромывочный жёлоб</a></li>
+<li><a href="./steel.html">Сталь</a></li>
+<li><a href="./stove.html">Печь</a></li>
+<li><a href="./support_beams.html">Опоры и обвалы</a></li>
+<li><a href="./weaving.html">Ткачество</a></li>
+<li><a href="./wooden_buckets.html">Деревянные ведра</a></li></ul></li>
+<li><a href="../firmalife/">(Дополнение) Firmalife</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">Продвинутые механики</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Животноводство</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="../../_images/item220.png" alt="Животноводство" title="Яйцо" /><span>Животноводство</span>
+        </h1>
+                <p><span style="color:#3E8A00;">Домашний скот</span> — это животные, которых можно приручивать и разводить. Домашняя скотина может быть <span style="color:#3E8A00;">самцом</span> или <span style="color:#3E8A00;">самкой</span>. У некоторых животных можно визуально определить пол. Например, у самцов свиней есть клыки.</p>
+<p>Домашний скот <span style="color:#3E8A00;">стареет</span>. Они рождаются маленькими и по началу не могут давать полезные ресурсы. После определенного количества дней они вырастают во <span style="color:#3E8A00;">взрослых</span> животных, которые могут размножаться или производить молоко. После того как они размножились или были использованы для получения продуктов животноводства достаточное количество раз, животные становятся <span style="color:#3E8A00;">старыми</span>, и полезны только своим мясом.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/image59.png" alt="tfc:textures/gui/book/tutorial/old_cow.png">
+<div style="text-align: center;"><p>Этот бык стар и не может размножаться, поэтому у него блеклая шерсть и серые глаза.</p>
+</div><p>Домашний скот можно кормить, чтобы повысить <span style="color:#3E8A00;">привязанность</span>. У каждого животного есть предпочтительная еда. Чтобы покормить животное, нажмите <span style="color:#b0b;">Shift</span> и <span style="color:#b0b;">ПКМ</span> с едой в руке по животному.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/image60.png" alt="tfc:textures/gui/book/tutorial/unfamiliarized_pig.png">
+<div style="text-align: center;"><p>У домашнего скота есть индикатор-сердечко, показывающий уровень <span style="color:#3E8A00;">привязанности</span> к вам. Зажмите <span style="color:#b0b;">Shift</span>, чтобы увидеть его.</p>
+</div>
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/image61.png" alt="tfc:textures/gui/book/tutorial/no_familiarity_decay_pig.png">
+<div style="text-align: center;"><p>Привязанность уменьшается ежедневно, если животное не кормить. Небольшое повышение привязанности (белый контур сердечка) предотвращает её снижение.</p>
+</div>
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/image62.png" alt="tfc:textures/gui/book/tutorial/familiarity_limit_pig.png">
+<div style="text-align: center;"><p>Взрослый домашний скот не может быть полностью приручен (красный контур сердечка). А вот родившееся у них потомство может быть приручено.</p>
+</div><a class="anchor" id="mammals"></a><p><span style="color:#3E8A00;">Млекопитающие</span> — это домашний скот, который может <span style="color:#3E8A00;">беременнеть</span>. Взрослые млекопитающие, привязанность которых выше 30 % и которые были накормлены в этот день, будут спариваться, если они противоположного пола и находятся рядом друг с другом. Самка становится <span style="color:#3E8A00;">беременной</span>, что приводит к рождению потомства через определенное количество дней после оплодотворения.<br/>
+Пример — <a href="../mechanics/animal_husbandry.html#pig">свиньи</a>.</p>
+<a class="anchor" id="wooly_animals"></a><p><span style="color:#3E8A00;">Шёрстные животные</span> — это <a href="../mechanics/animal_husbandry.html#mammals">млекопитающие</a>, которых можно <span style="color:#3E8A00;">стричь</span>, если они взрослые и достаточно привыкли к вам. Некоторые примеры — <a href="../mechanics/animal_husbandry.html#sheep">овцы</a>, <a href="../mechanics/animal_husbandry.html#alpaca">альпаки</a> и <a href="../mechanics/animal_husbandry.html#musk_ox">мускусные быки</a>.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть этот рецепт.">Рецепт: <code>tfc:welding/metal/shears/bronze</code></span></p>
+        </div>
+        <p>Ножницы можно сделать путём <a href="../mechanics/anvils.html#welding">сварки</a> двух <span style="color:#3E8A00;">лезвий ножа</span> вместе. Лезвие ножа с наименьшим бонусом ковки (если он имеется) передаст этот бонус ножницам.</p>
+<a class="anchor" id="dairy_animals"></a><p><span style="color:#3E8A00;">Молочные животные</span> — это млекопитающие, которые производят <span style="color:#3E8A00;">молоко</span>. Самок молочных животных можно доить, нажав <span style="color:#b0b;">ПКМ</span> по ним ведром. Некоторые примеры — <a href="../mechanics/animal_husbandry.html#goat">козы</a>, <a href="../mechanics/animal_husbandry.html#cow">коровы</a> и <a href="../mechanics/animal_husbandry.html#yak">яки</a>.</p>
+<a class="anchor" id="oviparous_animals"></a><h5>Насест</h5>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Солома" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item221.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Солома" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item221.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item3.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Солома" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item221.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item3.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item3.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item3.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item3.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Насест" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">Яйцекладущие животные</span> — это животные, откладывающие <span style="color:#3E8A00;">яйца</span> для продолжения рода. Чтобы откладывать яйца, им нужен <span style="color:#3E8A00;">насест</span>, который они могут найти самостоятельно.<br/>
+Некоторые примеры — <a href="../mechanics/animal_husbandry.html#duck">утки</a>, <a href="../mechanics/animal_husbandry.html#quail">перепела</a> и <a href="../mechanics/animal_husbandry.html#chicken">куры</a>.</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="Яйцо" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="../../_images/item220.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="Жареное яйцо" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="../../_images/item222.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>Горячее****</p>
+        </div>
+        <p><span style="color:#3E8A00;">Яйца</span> можно сварить или пожарить для употребления в пищу. Самцы яйцекладущих животных могут оплодотворять самок, которые в свою очередь отложат оплодотворённые яйца. Такие яйца будут иметь подсказку с указанием времени до вылупления птенца.</p>
+<p><span style="color:#3E8A00;">Однокопытные</span> — это <a href="../mechanics/animal_husbandry.html#mammals">млекопитающие</a>, которых можно оседлать после приручения. Они пригодны для верховой езды при достижении 15% привязанности. Лошади передают свои <span style="color:#3E8A00;">генетические характеристики</span>, включая скорость, высоту прыжка, здоровье, размер и отметины. Потомок скрещивания лошади и осла — это <span style="color:#3E8A00;">мул</span>.</p>
+<a class="anchor" id="horses"></a>
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="../../_images/image63.png" alt="Recipe: tfc:knapping/saddle">
+        </div>
+    </div>
+</div>
+<p>Седла можно вырезать из кожи.</p>
+<p>Для верховой езды на <a href="../mechanics/animal_husbandry.html#mule">мулах</a>, <a href="../mechanics/animal_husbandry.html#donkey">ослах</a> и <a href="../mechanics/animal_husbandry.html#horses">лошадях</a> нужно <span style="color:#3E8A00;">седло</span>, которое <span style="color:#3E8A00;">вырезается</span> из кожи. Мулы и ослы могут нести на себе сундук или бочку. Бочку с них можно снять нажав <span style="color:#b0b;">ПКМ</span>, удерживая <span style="color:#b0b;">Shift</span>. Те же клавиши с ведром в руке можно использовать для слива жидкости из бочки. <br/>
+<br/>
+На следующих страницах рассмотрены все представители домашнего скота.</p>
+<a class="anchor" id="pig"></a><h5>Свиньи</h5>
+<p><span style="color:#3E8A00;">Свиньи</span> обитают в умеренных лесах при <a href="../the_world/climate.html#temperature">температуре</a> от -10 до 35°C и <a href="../the_world/climate.html#rainfall">осадках</a> более 200 мм. Они — <a href="../mechanics/animal_husbandry.html#mammals">млекопитающиие</a> без особых способностей. Свиньи едят любую пищу, даже если она испорчена. Свинья может родить от 1 до 10 поросят за беременность, она длится всего 19 дней, и поросята достигает зрелости за 80 дней. Свиньи могут иметь потомство до 6 раз.</p>
+<h5> </h5>
+<p>Свинья.</p>
+<a class="anchor" id="rabbit"></a><h5>Кролики</h5>
+<p><span style="color:#3E8A00;">Кролики</span> обитают во всём мире при <a href="../the_world/climate.html#temperature">температурах</a> выше -16°C и при <a href="../the_world/climate.html#rainfall">осадках</a> более 15 мм. Они 0— <a href="../mechanics/animal_husbandry.html#mammals">млекопитающие</a> без особых способностей. Кролики едят любую пищу, даже если она испорчена. Крольчихи могут родить от 1 до 6 крольчат за беременность, она длится всего 19 дней, и крольчата становятся взрослыми уже через 20 дней. Крольчихи могут рожать до 6 раз.</p>
+<h5> </h5>
+<p>Кролик.</p>
+<a class="anchor" id="cow"></a><h5>Коровы</h5>
+<p><span style="color:#3E8A00;">Коровы</span> обитают почти во всём мире при <a href="../the_world/climate.html#temperature">температуре</a> от -10 до 35°C и <a href="../the_world/climate.html#rainfall">осадках</a> выше 250 мм. Коровы — <a href="../mechanics/animal_husbandry.html#dairy_animals">молочные животные</a>. Они едят только <span style="color:#3E8A00;">крупы</span>, в том числе испорченные. Корова может родить от 1 до 2 телят за беременность, она длится 58 дней, и телята достигают зрелости за 192 дня. Коровы могут иметь потомство 13 раз, если их никогда не доили, или быть подоены 128 раз, если их никогда не оплодотворяли. Коровы дают молоко каждый день.</p>
+<h5> </h5>
+<p>Корова.</p>
+<a class="anchor" id="goat"></a><h5>Козы</h5>
+<p><span style="color:#3E8A00;">Козы</span> обитают в умеренном климате при <a href="../the_world/climate.html#temperature">температуре</a> от -12 до 25°C и при <a href="../the_world/climate.html#rainfall">осадках</a> более 300 мм. Коза — <a href="../mechanics/animal_husbandry.html#dairy_animals">молочные животные</a>. Они едят <span style="color:#3E8A00;">крупы</span>, <span style="color:#3E8A00;">фрукты</span> и <span style="color:#3E8A00;">овощи</span>, в том числе испорченные. Коза может родить от 1 до 2 козлят за беременность, она длится 32 дня, и козлята достигают зрелости за 96 дней. Козы могут иметь потомство 6 раз, если их никогда не доили, или быть подоены 60 раз, если их никогда не оплодотворяли. Козы дают молоко каждые 3 дня.</p>
+<h5> </h5>
+<p>Коза.</p>
+<a class="anchor" id="yak"></a><h5>Як</h5>
+<p><span style="color:#3E8A00;">Яки</span> обитают в холодном климате при <a href="../the_world/climate.html#temperature">температуре</a> ниже -11°C и <a href="../the_world/climate.html#rainfall">осадках</a> более 100 мм. Яки — <a href="../mechanics/animal_husbandry.html#dairy_animals">молочные животные</a>. Они едят только свежие <span style="color:#3E8A00;">крупы</span>. Самка яка может родить только 1 телёнка за беременность, она длится 64 дня, и телёнок достигает зрелости за 180 дней. Самки яка могут иметь потомство 23 раза, если их никогда не доили, или быть подоены 230 раз, если их никогда не оплодотворяли. Самки яка дают молоко каждый день.</p>
+<h5> </h5>
+<p>Як.</p>
+<a class="anchor" id="alpaca"></a><h5>Альпака</h5>
+<p><span style="color:#3E8A00;">Альпаки</span> обитают в умеренном климате при <a href="../the_world/climate.html#temperature">температуре</a> от -8 до 20°C и <a href="../the_world/climate.html#rainfall">осадках</a> более 250 мм. Альпаки — <a href="../mechanics/animal_husbandry.html#wooly_animals">шёрстные животные</a>. Они питаются <span style="color:#3E8A00;">крупами</span> и <span style="color:#3E8A00;">фруктами</span>. Альпаки могут родить от 1 до 2 детенышей за беременность, она длится 36 дней, и детёныши достигают зрелости за 98 дней. Альпаки могут иметь потомство 13 раз, если их никогда не стригли, или быть подстрижены 128 раз, если их никогда не оплодотворяли. Шерсть у них отрастает каждые 6 дней.</p>
+<h5> </h5>
+<p>Альпака.</p>
+<a class="anchor" id="sheep"></a><h5>Овцы</h5>
+<p><span style="color:#3E8A00;">Овцы</span> обитают в сухих климатах при <a href="../the_world/climate.html#temperature">температуре</a> от 0 до 35°C и <a href="../the_world/climate.html#rainfall">осадках</a> от 70 до 300 мм. Овцы — <a href="../mechanics/animal_husbandry.html#wooly_animals">шёрстные животные</a>. Они питаются <span style="color:#3E8A00;">крупами</span>. Овцы могут родить от 1 до 2 ягнят за беременность, она длится 32 дня, и ягнята достигают зрелости за 56 дней. Овцы могут иметь потомство 6 раз, если их никогда не стригли, или быть подстрижены 60 раз, если их никогда не оплодотворяли. Шерсть у них отрастает каждые 9 дней.</p>
+<h5> </h5>
+<p>Овца.</p>
+<a class="anchor" id="musk_ox"></a><h5>Овцебыки</h5>
+<p><span style="color:#3E8A00;">Овцебыки</span> обитают в холодном климате при <a href="../the_world/climate.html#temperature">температуре</a> от -25 до 0°C и <a href="../the_world/climate.html#rainfall">осадках</a> более 100 мм. Овцебыки — <a href="../mechanics/animal_husbandry.html#wooly_animals">шёрстные животные</a>. Они питаются <span style="color:#3E8A00;">крупами</span>. Самка овцебыка может родить только 1 теленка за беременность, которая длится 64 дня, и телята достигают зрелости за 168 дней. Овцебыки могут иметь потомство 16 раз, если их никогда не стригли, или быть подстрижены 160 раз, если их никогда не оплодотворяли. Шерсть у них отрастает каждые 4 дня.</p>
+<h5> </h5>
+<p>Овцебык.</p>
+<a class="anchor" id="chicken"></a><h5>Куры</h5>
+<p><span style="color:#3E8A00;">Куры</span> обитают в теплых лесах при <a href="../the_world/climate.html#temperature">температуре</a> выше 14°C и <a href="../the_world/climate.html#rainfall">осадках</a> более 225 мм. Куры — <a href="../mechanics/animal_husbandry.html#oviparous_animals">яйцекладущими животными</a>. Они питаются <span style="color:#3E8A00;">крупами</span>, <span style="color:#3E8A00;">фруктами</span>, <span style="color:#3E8A00;">овощами</span> и <span style="color:#3E8A00;">семенами</span>, в том числе испорченными. Куриные яйца вылупляются за 8 дней, и цыплята становятся взрослыми за 24 дня. Куры могут нести яйца 100 раз и несутся каждые 30 часов.</p>
+<h5> </h5>
+<p>Курица.</p>
+<a class="anchor" id="duck"></a><h5>Утки</h5>
+<p><span style="color:#3E8A00;">Утки</span> обитают на равнинах при <a href="../the_world/climate.html#temperature">температуре</a> от -25 до 30°C и <a href="../the_world/climate.html#rainfall">осадках</a> более 100 мм. Утки — <a href="../mechanics/animal_husbandry.html#oviparous_animals">яйцекладущие животные</a>. Они питаются <span style="color:#3E8A00;">крупами</span>, <span style="color:#3E8A00;">фруктами</span>, <span style="color:#3E8A00;">овощами</span>, <span style="color:#3E8A00;">хлебом</span> и <span style="color:#3E8A00;">семенами</span>. Их яйца вылупляются за 8 дней, и утята становятся взрослыми за 32 дня. Утки могут нести яйца 72 раза и несутся каждые 32 часа.</p>
+<h5> </h5>
+<p>Утка.</p>
+<a class="anchor" id="quail"></a><h5>Перепел</h5>
+<p><span style="color:#3E8A00;">Перепела</span> обитают в холодном климате при <a href="../the_world/climate.html#temperature">температуре</a> от -15 до 15°C и <a href="../the_world/climate.html#rainfall">осадках</a> более 200 мм. Перепела — <a href="../mechanics/animal_husbandry.html#oviparous_animals">яйцекладущие животные</a>. Они питаются <span style="color:#3E8A00;">крупами</span>, <span style="color:#3E8A00;">фруктами</span>, <span style="color:#3E8A00;">овощами</span> и <span style="color:#3E8A00;">семенами</span>, в том числе испорченными. Их яйца вылупляются за 8 дней, и перепелята становятся взрослыми за 22 дня. Перепёлки могут нести яйца 48 раз и несутся каждые 28 часов.</p>
+<h5> </h5>
+<p>Перепел.</p>
+<a class="anchor" id="donkey"></a><h5>Ослы</h5>
+<p><span style="color:#3E8A00;">Ослы</span> обитают на влажных равнинах при <a href="../the_world/climate.html#temperature">температуре</a> выше -15°C и <a href="../the_world/climate.html#rainfall">осадках</a> от 130 до 400 мм. Ослы — <a href="../mechanics/animal_husbandry.html#horses">однокопытные</a>, которые могут нести <span style="color:#3E8A00;">сундук</span>. Они питаются <span style="color:#3E8A00;">крупами</span> и <span style="color:#3E8A00;">фруктами</span>. Ослихи могут родить 1 ослёнка за беременность, которая длится 19 дней, и ослята достигают зрелости за 80 дней. Ослихи могут иметь потомство 6 раз.</p>
+<h5> </h5>
+<p>Осел.</p>
+<a class="anchor" id="mule"></a><h5>Мулы</h5>
+<p><span style="color:#3E8A00;">Мулы</span> обитают на равнинах при <a href="../the_world/climate.html#temperature">температуре</a> выше -15°C и <a href="../the_world/climate.html#rainfall">осадках</a> от 130 до 400 мм. Мулы — <a href="../mechanics/animal_husbandry.html#horses">однокопытные</a>, которые могут нести <span style="color:#3E8A00;">сундук</span> и представлены только самцами, полученными от скрещивания <span style="color:#3E8A00;">лошади</span> и <span style="color:#3E8A00;">осла</span>. Они питаются <span style="color:#3E8A00;">крупами</span> и <span style="color:#3E8A00;">фруктами</span>. Детёныши достигают зрелости за 80 дней.</p>
+<h5> </h5>
+<p>Мул.</p>
+<a class="anchor" id="horse"></a><h5>Лошади</h5>
+<p><span style="color:#3E8A00;">Лошади</span> обитают на равнинах при <a href="../the_world/climate.html#temperature">температуре</a> выше -15°C и <a href="../the_world/climate.html#rainfall">осадках</a> от 130 до 400 мм. Лошади — <a href="../mechanics/animal_husbandry.html#horses">однокопытные</a>. Они питаются <span style="color:#3E8A00;">крупами</span> и <span style="color:#3E8A00;">фруктами</span>. Лошадь может родить 1 жеребёнка за беременность, которая длится 19 дней, и жеребята достигают зрелости за 80 дней. Лошади могут иметь потомство 6 раз.</p>
+<h5> </h5>
+<p>Лошадь.</p>
+<a class="anchor" id="frog"></a><h5>Лягушки</h5>
+<p><span style="color:#3E8A00;">Лягушки</span> обитают при <a href="../the_world/climate.html#temperature">температуре</a> выше -13°C и <a href="../the_world/climate.html#rainfall">осадках</a> более 150 мм. Их можно приручить, и при разведении они откладывают в пресную воду яйца, из которых появляются головастики. Они питаются рыбой и паучьими глазами.</p>
+<h5> </h5>
+<p>Лягушка.</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> Документация API
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'ru_ru';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+    <script src="/Field-Guide/static/search.js"></script>
+  </body>
+</html>

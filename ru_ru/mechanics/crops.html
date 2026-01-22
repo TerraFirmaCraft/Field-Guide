@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Культуры | TFC Field Guide" />
+    <meta name="description" content="Культуры" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="Культуры | TFC Field Guide" />
+    <meta property="og:description" content="Культуры" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/image6.png" />
+
+    <title>Культуры | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">Справочник TerraFirmaCraft</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Search bar-->
+             <li class="nav-item">
+              <form class="d-flex" role="search" onsubmit="handleSearch(event)">
+                <input id="search-box" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+             </li>
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Версия 1.21.1 - v4.0.18-beta
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> Русский
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/mechanics/crops.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics/crops.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics/crops.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics/crops.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics/crops.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics/crops.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics/crops.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics/crops.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/mechanics/crops.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Содержание</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Главная</a></li>
+            <li><a href="../the_world/">Окружающий мир</a></li>
+<li><a href="../getting_started/">Начало выживания</a></li>
+<li><a href="../mechanics/">Продвинутые механики</a><ul><li><a href="./advanced_building_materials.html">Продвинутые материалы</a></li>
+<li><a href="./animal_husbandry.html">Животноводство</a></li>
+<li><a href="./anvils.html">Наковальни</a></li>
+<li><a href="./aqueducts.html">Акведуки</a></li>
+<li><a href="./armor.html">Броня</a></li>
+<li><a href="./armor_trims.html">Отделка брони</a></li>
+<li><a href="./barrels.html">Бочки</a></li>
+<li><a href="./bellows.html">Кузнечные меха</a></li>
+<li><a href="./blast_furnace.html">Доменная печь</a></li>
+<li><a href="./bloomery.html">Сыродутная печь</a></li>
+<li><a href="./bowls.html">Миски</a></li>
+<li><a href="./bread.html">Хлеб</a></li>
+<li><a href="./channels.html">Литьё с каналами</a></li>
+<li><a href="./charcoal_forge.html">Угольная кузница</a></li>
+<li><a href="./charcoal_pit.html">Угольная яма</a></li>
+<li><a href="./chisel.html">Долото</a></li>
+<li><a href="./composter.html">Компостер</a></li>
+<li><a href="./crankshaft.html">Коленчатые валы</a></li>
+<li><a href="./crops.html">Культуры</a></li>
+<li><a href="./crucible.html">Тигель</a></li>
+<li><a href="./dairy.html">Молочные продукты</a></li>
+<li><a href="./damage_types.html">Типы урона</a></li>
+<li><a href="./decay.html">Консервация</a></li>
+<li><a href="./dye.html">Красители</a></li>
+<li><a href="./farmland.html">Плодородие почвы</a></li>
+<li><a href="./fertilizers.html">Удобрения</a></li>
+<li><a href="./fire_clay.html">Огнеупорная глина</a></li>
+<li><a href="./fishing.html">Рыбалка</a></li>
+<li><a href="./flux.html">Флюс</a></li>
+<li><a href="./gems.html">Драгоценные камни</a></li>
+<li><a href="./glassworking.html">Изготовление стекла</a></li>
+<li><a href="./glassworking_applications.html">Изделия из стекла</a></li>
+<li><a href="./grill.html">Костёр и гриль</a></li>
+<li><a href="./heating.html">Нагревание</a></li>
+<li><a href="./hydration.html">Поддержание влажности</a></li>
+<li><a href="./jarring.html">Заготовка в банках</a></li>
+<li><a href="./kilns.html">Кирпичные печи</a></li>
+<li><a href="./lamps.html">Лампы</a></li>
+<li><a href="./leather_making.html">Выделка кожи</a></li>
+<li><a href="./lighting.html">Источники света</a></li>
+<li><a href="./mechanical_power.html">Механическая энергия</a></li>
+<li><a href="./minecarts.html">Вагонетки</a></li>
+<li><a href="./panning.html">Промывка в лотке</a></li>
+<li><a href="./papermaking.html">Изготовление бумаги</a></li>
+<li><a href="./pets.html">Питомцы</a></li>
+<li><a href="./pot.html">Горшок на костре</a></li>
+<li><a href="./powderkegs.html">Пороховые бочки</a></li>
+<li><a href="./prospecting.html">Поиск месторождений</a></li>
+<li><a href="./pumps.html">Насосы</a></li>
+<li><a href="./quern.html">Жёрнов</a></li>
+<li><a href="./redstone_devices.html">Редстоун-устройства</a></li>
+<li><a href="./salad.html">Салаты</a></li>
+<li><a href="./sandwiches.html">Бутерброды</a></li>
+<li><a href="./scribing_table.html">Стол для письма</a></li>
+<li><a href="./sewing_table.html">Швейный стол</a></li>
+<li><a href="./sluices.html">Рудопромывочный жёлоб</a></li>
+<li><a href="./steel.html">Сталь</a></li>
+<li><a href="./stove.html">Печь</a></li>
+<li><a href="./support_beams.html">Опоры и обвалы</a></li>
+<li><a href="./weaving.html">Ткачество</a></li>
+<li><a href="./wooden_buckets.html">Деревянные ведра</a></li></ul></li>
+<li><a href="../firmalife/">(Дополнение) Firmalife</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">Продвинутые механики</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Культуры</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="../../_images/image6.png" alt="Культуры" title="None" /><span>Культуры</span>
+        </h1>
+                <p>Культуры являются источником пищи и некоторых других материалов. Хотя каждая культура немного отличается, все они имеют некоторые общие принципы. Чтобы начать их выращивать, вам понадобятся <span style="color:#3E8A00;">семена</span>, которые можно получить, собирая <a href="../the_world/wild_crops.html">дикие культуры</a>.<br/>
+<br/>
+Кроме семян, вам также понадобится <span style="color:#3E8A00;">мотыга</span>. Семена также полезны как <a href="../mechanics/fishing.html">приманка</a>.</p>
+<p>Помимо поиска диких культур, семена также могут быть получены из выращиваемых вами культур. Когда полностью созревшая культура умирает — из-за погоды, либо если её специально оставить гнить — она сбрасывает больше семян, которые можно использовать для выращивания еще большего количества этой культуры в следующем сезоне.</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="../../_images/image7.png" alt="Recipe: tfc:knapping/stone/hoe_head/sedimentary">
+        </div>
+    </div>
+</div>
+<p><span style="color:#3E8A00;">Каменную мотыгу</span> можно получить <span style="color:#3E8A00;">оббиванием</span>, как показано выше.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Лезвие каменной мотыги" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item28.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #c:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item17.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Каменная мотыга" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/item27.png" />
+                </div>
+            </div>
+        </div>
+        <p><br/>
+<br/>
+Мотыги работают как в стандартной игре, позволяя нажатием <span style="color:#b0b;">ПКМ</span> превращать блоки земли в <span style="color:#3E8A00;">пашни</span>. Они также могут использоваться для превращения <span style="color:#3E8A00;">корнистой земли</span> в обычную <span style="color:#3E8A00;">землю</span>.</p>
+<h5>Выращивание культур</h5>
+<p>Культуры выращиваются на <a href="../mechanics/farmland.html">пашне</a>. Некоторые культуры имеют дополнительные требования, такие как необходимость затопления водой или опоры на палку для роста. Культурам для роста не нужны <span style="color:#3E8A00;">питательные вещества</span>, но они помогают. Существует три питательных вещества: <span style="color:#55FFFF;">Азот</span>, <span style="color:#FFAA00;">Фосфор</span> и <span style="color:#FF55FF;">Калий</span>. Каждая культура может потреблять или восполнять определённую комбинацию этих трёх питательных веществ.</p>
+<p>Получение питательных веществ ускоряет рост культуры и повышает её урожайность при сборе. Это означает, что культуры, получившие больше питательных веществ, при сборе дают больше еды! Получение питательных веществ также увеличивает скорость восстановления других питательных веществ.</p>
+<h5>Категории культур</h5>
+<p>Хотя каждая отдельная культура может иметь свой баланс потребностей в удобрениях, большинство культур относятся к четырём общим категориям: зерновые, бобовые, овощные и покровные культуры.<br/>
+<br/>
+<strong>Зерновые</strong> поглощают большое количество <span style="color:#55FFFF;">Азота</span>, и восстанавливают <span style="color:#FFAA00;">Фосфор</span> и <span style="color:#FF55FF;">Калий</span>. Они дают пищу, богатую зерном</p>
+<p><strong>Бобовые</strong> производят большое количество <span style="color:#55FFFF;">Азота</span>, и потребляют <span style="color:#FFAA00;">Фосфор</span> и <span style="color:#FF55FF;">Калий</span>. Они дают урожай, богатый овощами и белком.<br/>
+<br/>
+<strong>Овощи</strong> потребляют все три питательных вещества, чтобы производить урожай, богатый овощами.<br/>
+<br/>
+<strong>Покровные</strong> культуры производят все три питательных вещества, но их урожай имеет лишь ограниченное применение.</p>
+<a class="anchor" id="barley"></a><h5>Ячмень</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -9...29 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 10–70 %<br/>
+<strong>Категория</strong>: Зерновые<br/>
+<br/>
+<strong><span style="color:#55FFFF;">N: 75 <strong><span style="color:#FFAA00;">P: +20 <strong><span style="color:#FF55FF;">K: +20</span></strong></span></strong></span></strong><br/>
+Ячмень — одноблочная культура. Семена ячменя можно посадить на пашне, и они дадут урожай <span style="color:#3E8A00;">ячменя</span> и <span style="color:#3E8A00;">семена ячменя</span>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block1.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="oat"></a><h5>Овёс</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -9...27 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 25–85 %<br/>
+<strong>Категория</strong>: Зерновые<br/>
+<br/>
+<strong><span style="color:#55FFFF;">N: 100 <strong><span style="color:#FFAA00;">P: +35 <strong><span style="color:#FF55FF;">K: +25</span></strong></span></strong></span></strong><br/>
+Овёс — одноблочная культура. Семена овса можно посадить на пашне, и они дадут урожай <span style="color:#3E8A00;">овса</span> и <span style="color:#3E8A00;">семяна овса</span>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block2.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="rye"></a><h5>Рожь</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -9...23 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 15–80 %<br/>
+<strong>Категория</strong>: Зерновые<br/>
+<br/>
+<strong><span style="color:#55FFFF;">N: 100 <strong><span style="color:#FFAA00;">P: +20 <strong><span style="color:#FF55FF;">K: +40</span></strong></span></strong></span></strong><br/>
+Рожь — одноблочная культура. Семена ржи можно посадить на пашне, и они дадут урожай <span style="color:#3E8A00;">ржи</span> и <span style="color:#3E8A00;">семяна ржи</span>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block3.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="maize"></a><h5>Кукуруза</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -9...32 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 50–100 %<br/>
+<strong>Категория</strong>: Зерновые<br/>
+<br/>
+<strong><span style="color:#55FFFF;">N: 90 <strong><span style="color:#FFAA00;">P: +25 <strong><span style="color:#FF55FF;">K: +25</span></strong></span></strong></span></strong><br/>
+Кукуруза — двухблочная культура. Семена кукурузы можно посадить на пашне. Они вырастут в два блока высотой и дадут урожай <span style="color:#3E8A00;">кукурузных зёрен</span> и <span style="color:#3E8A00;">семяна кукурузы</span>.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p></p>
+<a class="anchor" id="wheat"></a><h5>Пшеница</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -9...27 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 15–85 %<br/>
+<strong>Категория</strong>: Зерновые<br/>
+<br/>
+<strong><span style="color:#55FFFF;">N: 100 <strong><span style="color:#FFAA00;">P: +30 <strong><span style="color:#FF55FF;">K: +30</span></strong></span></strong></span></strong><br/>
+Пшеница — одноблочная культура. Семена пшеницы можно посадить на пашне, и они дадут урожай <span style="color:#3E8A00;">пшеницы</span> и <span style="color:#3E8A00;">семяна пшеницы</span>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block4.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="rice"></a><h5>Рис</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 8...47 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 35–100 %<br/>
+<strong>Категория</strong>: Зерновые<br/>
+<br/>
+<strong><span style="color:#55FFFF;">N: 40 <strong><span style="color:#FFAA00;">P: 30 <strong><span style="color:#FF55FF;">K: 30</span></strong></span></strong></span></strong><br/>
+Рис — одноблочная культура. Рис необходимо выращивать под водой — его нужно посадить на пашне в пресной воде глубиной в один блок. Семена риса дадут урожай <span style="color:#3E8A00;">риса</span> и <span style="color:#3E8A00;">семяна риса</span>. В отличие от большинства зерновых культур рис требует равномерного баланса питательных веществ.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block5.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>Примечание: для роста блок риса должен быть <span style="color:#3E8A00;">Затоплен</span>.</p>
+</div><a class="anchor" id="cassava"></a><h5>Маниок</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 10...47 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 45–100 %<br/>
+<strong>Категория</strong>: Бобовые<br/>
+<br/>
+<strong><span style="color:#55FFFF;">N: +50 <strong><span style="color:#FFAA00;">P: 40 <strong><span style="color:#FF55FF;">K: 20</span></strong></span></strong></span></strong><br/>
+Маниок — одноблочная культура. Семена маниока можно посадить на пашне, и они дадут урожай <span style="color:#3E8A00;">маниока</span> и <span style="color:#3E8A00;">семяна маниока</span>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block6.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="green_bean"></a><h5>Зелёная фасоль</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -4...30 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 25–90 %<br/>
+<strong>Категория</strong>: Вьющиеся бобовые<br/>
+<br/>
+<strong><span style="color:#55FFFF;">N: +80 <strong><span style="color:#FFAA00;">P: 50 <strong><span style="color:#FF55FF;">K: 40</span></strong></span></strong></span></strong><br/>
+Зелёная фасоль — вьющаяся культура высотой в два блока. Семена зелёной фасоли можно посадить на пашне; растение вырастет до двух блоков высотой, если у него есть палка, и даст урожай <span style="color:#3E8A00;">зелёной фасоли</span> и <span style="color:#3E8A00;">семяна зелёной фасоли</span>.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Для завершения роста культуры требуется палка.</p>
+<a class="anchor" id="lentil"></a><h5>Чечевица</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -7...30 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 15–50 %<br/>
+<strong>Категория</strong>: Бобовые<br/>
+<br/>
+<strong><span style="color:#55FFFF;">N: +80 <strong><span style="color:#FFAA00;">P: 20 <strong><span style="color:#FF55FF;">K: 20</span></strong></span></strong></span></strong><br/>
+Чечевица — одноблочная культура. Семена чечевицы можно посадить на пашне, и они дадут урожай <span style="color:#3E8A00;">чечевицы</span> и <span style="color:#3E8A00;">семяна чечевицы</span>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block7.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="peanut"></a><h5>Арахис</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 12...47 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 20–80 %<br/>
+<strong>Категория</strong>: Бобовые<br/>
+<br/>
+<strong><span style="color:#55FFFF;">N: +90 <strong><span style="color:#FFAA00;">P: 50 <strong><span style="color:#FF55FF;">K: 50</span></strong></span></strong></span></strong><br/>
+Арахис — одноблочная культура. Семена арахиса можно посадить на пашне, и они дадут урожай <span style="color:#3E8A00;">арахиса</span> и <span style="color:#3E8A00;">Семяна арахиса</span>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block8.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="soybean"></a><h5>Соя</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -9...27 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 25–90 %<br/>
+<strong>Категория</strong>: Бобовые<br/>
+<br/>
+<strong><span style="color:#55FFFF;">N: +80 <strong><span style="color:#FFAA00;">P: 60 <strong><span style="color:#FF55FF;">K: 30</span></strong></span></strong></span></strong><br/>
+Соя — одноблочная культура. Семена сои можно посадить на пашне, и они дадут урожай <span style="color:#3E8A00;">сои</span> и <span style="color:#3E8A00;">семяна сои</span>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block9.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="beet"></a><h5>Свёкла</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -13...32 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 10–70 %<br/>
+<strong>Категория</strong>: Овощные<br/>
+<br/>
+<strong><span style="color:#55FFFF;">N: 40 <strong><span style="color:#FFAA00;">P: 30 <strong><span style="color:#FF55FF;">K: 50</span></strong></span></strong></span></strong><br/>
+Свёкла — одноблочная культура. Семена свёклы можно посадить на пашне, и они дадут урожай <span style="color:#3E8A00;">свёклы</span> и <span style="color:#3E8A00;">семена свёклы</span>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block10.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="cabbage"></a><h5>Капуста</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -13...32 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 10–65 %<br/>
+<strong>Категория</strong>: Овощные<br/>
+<br/>
+<strong><span style="color:#55FFFF;">N: 50 <strong><span style="color:#FFAA00;">P: 20 <strong><span style="color:#FF55FF;">K: 40</span></strong></span></strong></span></strong><br/>
+Капуста — это одноблочная культура. Семена капусты можно посадить на пашне, и они дадут урожай <span style="color:#3E8A00;">капусты</span> и <span style="color:#3E8A00;">семена капусты</span>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block11.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="carrot"></a><h5>Морковь</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -13...32 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 15–85 %<br/>
+<strong>Категория</strong>: Овощные<br/>
+<br/>
+<strong><span style="color:#55FFFF;">N: 50 <strong><span style="color:#FFAA00;">P: 30 <strong><span style="color:#FF55FF;">K: 40</span></strong></span></strong></span></strong><br/>
+Морковь — это одноблочная культура. Семена моркови можно посадить на пашне, и они дадут урожай <span style="color:#3E8A00;">моркови</span> и <span style="color:#3E8A00;">семена моркови</span>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block12.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="garlic"></a><h5>Чеснок</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -5...27 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 10–70 %<br/>
+<strong>Категория</strong>: Овощные<br/>
+<br/>
+<strong><span style="color:#55FFFF;">N: 40 <strong><span style="color:#FFAA00;">P: 20 <strong><span style="color:#FF55FF;">K: 50</span></strong></span></strong></span></strong><br/>
+Чеснок — это одноблочная культура. Семена чеснока можно посадить на пашне, и они дадут урожай <span style="color:#3E8A00;">чеснока</span> и <span style="color:#3E8A00;">семена чеснока</span>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block13.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="potato"></a><h5>Картофель</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -9...27 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 35–90 %<br/>
+<strong>Категория</strong>: Овощные<br/>
+<br/>
+<strong><span style="color:#55FFFF;">N: 40 <strong><span style="color:#FFAA00;">P: 20 <strong><span style="color:#FF55FF;">K: 60</span></strong></span></strong></span></strong><br/>
+Картофель — это одноблочная культура. Семена картофеля можно посадить на пашне, и они дадут урожай <span style="color:#3E8A00;">картофеля</span> и <span style="color:#3E8A00;">семена картофеля</span>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block14.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="pumpkin"></a><h5>Тыквы</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -9...32 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 20–85 %<br/>
+<strong>Категория</strong>: Стелющийся овощь<br/>
+<br/>
+<strong><span style="color:#55FFFF;">N: 40 <strong><span style="color:#FFAA00;">P: 30 <strong><span style="color:#FF55FF;">K: 60</span></strong></span></strong></span></strong><br/>
+Тыквы — стелющаяся культура. Семена тыквы можно посадить на пашне; при созревании растение разместит возле себя до двух <span style="color:#3E8A00;">тыкв</span>. Если собрать блоки тыквы и дать растению снова созреть, оно сможет вырастить больше тыкв. Тыквы можно превратить в <a href="../mechanics/lighting.html#jack_o_lanterns">тыквы-фонари</a>.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p></p>
+<a class="anchor" id="melon"></a><h5>Арбузы</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 5...47 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 35–100 %<br/>
+<strong>Категория</strong>: Стелющийся овощь<br/>
+<br/>
+<strong><span style="color:#55FFFF;">N: 30 <strong><span style="color:#FFAA00;">P: 40 <strong><span style="color:#FF55FF;">K: 65</span></strong></span></strong></span></strong><br/>
+Арбузы — стелющаяся культура. Семена арбуза можно посадить на пашне; при созревании растение разместит возле себя до двух <span style="color:#3E8A00;">арбузов</span>. Если собрать блоки арбуза и дать растению снова созреть, оно сможет вырастить больше арбузов.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p></p>
+<a class="anchor" id="tomatoes"></a><h5>Помидоры</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 1...47 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 20–85 %<br/>
+<strong>Категория</strong>: Вьющийся овощь<br/>
+<br/>
+<strong><span style="color:#55FFFF;">N: 30 <strong><span style="color:#FFAA00;">P: 40 <strong><span style="color:#FF55FF;">K: 50</span></strong></span></strong></span></strong><br/>
+Помидоры — вьющаяся культура высотой два блока. Семена помидоров можно посадить на пашне; растение вырастет до двух блоков высотой, если у него есть палка, и даст урожай <span style="color:#3E8A00;">помидоров</span> и <span style="color:#3E8A00;">семена помидоров</span>.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Для завершения роста культуры требуется палка.</p>
+<a class="anchor" id="red_bell_pepper"></a><h5>Красные болгарские перцы</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 12...47 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 30–95 %<br/>
+<strong>Категория</strong>: Многоурожайный овощь<br/>
+<br/>
+<strong><span style="color:#55FFFF;">N: 30 <strong><span style="color:#FFAA00;">P: 40 <strong><span style="color:#FF55FF;">K: 50</span></strong></span></strong></span></strong><br/>
+Красный болгарский перец — многоурожайная культура. Когда плоды почти созрели, их можно собрать нажатием <span style="color:#b0b;">ПКМ</span> для получения <span style="color:#3E8A00;">зелёных болгарских перцев</span>. Сбор урожая таким способом не уничтожает растение, и оно будет приносить новые плоды.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block15.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="yellow_bell_pepper"></a><h5>Жёлтые болгарские перцы</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 12...47 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 30–95 %<br/>
+<strong>Категория</strong>: Многоурожайный овощь<br/>
+<br/>
+<strong><span style="color:#55FFFF;">N: 30 <strong><span style="color:#FFAA00;">P: 40 <strong><span style="color:#FF55FF;">K: 50</span></strong></span></strong></span></strong><br/>
+Жёлтый болгарский перец — многоурожайная культура. Когда плоды почти созрели, их можно собрать нажатием <span style="color:#b0b;">ПКМ</span> для получения <span style="color:#3E8A00;">зелёных болгарских перцев</span>. Сбор урожая таким способом не уничтожает растение, и оно будет приносить новые плоды.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block16.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="onion"></a><h5>Лук</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -7...31 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 15–85 %<br/>
+<strong>Категория</strong>: Овощные<br/>
+<br/>
+<strong><span style="color:#55FFFF;">N: 40 <strong><span style="color:#FFAA00;">P: 40 <strong><span style="color:#FF55FF;">K: 40</span></strong></span></strong></span></strong><br/>
+Лук — одноблочная культура. Семена лука можно посадить на пашне, и они дадут урожай <span style="color:#3E8A00;">лука</span> и <span style="color:#3E8A00;">семена лука</span>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block17.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="squash"></a><h5>Кабачок</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -9...30 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 15–85 %<br/>
+<strong>Категория</strong>: Овощные<br/>
+<br/>
+<strong><span style="color:#55FFFF;">N: 25 <strong><span style="color:#FFAA00;">P: 45 <strong><span style="color:#FF55FF;">K: 50</span></strong></span></strong></span></strong><br/>
+Кабачок — одноблочная культура. Семена кабачка можно посадить на пашне, и они дадут урожай <span style="color:#3E8A00;">кабачка</span> и <span style="color:#3E8A00;">семена кабачка</span>.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block18.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="alfalfa"></a><h5>Люцерна</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -30...14 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 40–100 %<br/>
+<strong>Категория</strong>: Покровная культура<br/>
+<br/>
+<strong><span style="color:#55FFFF;">N: +80 <strong><span style="color:#FFAA00;">P: +50 <strong><span style="color:#FF55FF;">K: +60</span></strong></span></strong></span></strong><br/>
+Люцерна — одноблочная холодостойкая культура. Семена люцерны можно посадить на пашне, и они дадут урожай <span style="color:#3E8A00;">люцерны</span> и <span style="color:#3E8A00;">семена люцерны</span>, обогащая почву. Люцерну можно использовать как источник соломы или компостировать.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block19.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="canola"></a><h5>Канола</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -35...17 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 20–75 %<br/>
+<strong>Категория</strong>: Покровная культура<br/>
+<br/>
+<strong><span style="color:#55FFFF;">N: +30 <strong><span style="color:#FFAA00;">P: +60 <strong><span style="color:#FF55FF;">K: +100</span></strong></span></strong></span></strong><br/>
+Канола — одноблочная холодостойкая культура. Семена канолы можно посадить на пашне, и они дадут урожай <span style="color:#3E8A00;">канолы</span> и <span style="color:#3E8A00;">семена канолы</span>, обогащая почву. Канолу можно использовать как источник соломы или компостировать, а из семян сделать масло.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block20.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="radish"></a><h5>Редис</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -33...21 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 30–90 %<br/>
+<strong>Категория</strong>: Покровная культура<br/>
+<br/>
+<strong><span style="color:#55FFFF;">N: +50 <strong><span style="color:#FFAA00;">P: +100 <strong><span style="color:#FF55FF;">K: +60</span></strong></span></strong></span></strong><br/>
+Редис — одноблочная холодостойкая культура. Семена редиса можно посадить на пашне, и они дадут урожай <span style="color:#3E8A00;">редиса</span> и <span style="color:#3E8A00;">семена редиса</span>, обогащая почву. Редис не очень питателен, но его можно скармливать многим животным.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block21.gif" alt="Block Visualization">
+<div style="text-align: center;"><p></p>
+</div><a class="anchor" id="sugarcane"></a><h5>Сахарный тростник</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 17...47 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 25–100 %<br/>
+<strong>Категория</strong>: Прочее<br/>
+<br/>
+<strong><span style="color:#55FFFF;">N: 50 <strong><span style="color:#FFAA00;">P: 50 <strong><span style="color:#FF55FF;">K: 50</span></strong></span></strong></span></strong><br/>
+Сахарный тростник — двухблочная культура. Семена сахарного тростника можно посадить на пашне; растение вырастет до двух блоков в высоту и даст урожай <span style="color:#3E8A00;">сахарного тростника</span> и <span style="color:#3E8A00;">семена сахарного тростника</span>. Сахарный тростник можно использовать для производства <span style="color:#3E8A00;">сахара</span>.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p></p>
+<a class="anchor" id="jute"></a><h5>Джут</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 1...30 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 15–90 %<br/>
+<strong>Категория</strong>: Разное<br/>
+<br/>
+<strong><span style="color:#55FFFF;">N: 60 <strong><span style="color:#FFAA00;">P: 40 <strong><span style="color:#FF55FF;">K: +40</span></strong></span></strong></span></strong><br/>
+Джут — двухблочная культура. Семена джута можно посадить на пашне, растение вырастает до двух блоков в высоту и даст урожай <span style="color:#3E8A00;">джута</span> и <span style="color:#3E8A00;">семена джута</span>.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p></p>
+<a class="anchor" id="papyrus"></a><h5>Папирус</h5>
+<p><strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 12...47 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 50–100 %<br/>
+<strong>Категория</strong>: Разное<br/>
+<br/>
+<strong><span style="color:#55FFFF;">N: 60 <strong><span style="color:#FFAA00;">P: +40 <strong><span style="color:#FF55FF;">K: 40</span></strong></span></strong></span></strong><br/>
+Папирус — двухблочная культура. Семена папируса можно посадить на пашне, растение вырастает до двух блоков в высоту и даст урожай <a href="../mechanics/papermaking.html">папируса</a> и <span style="color:#3E8A00;">семена папируса</span>.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p></p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> Документация API
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'ru_ru';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+    <script src="/Field-Guide/static/search.js"></script>
+  </body>
+</html>

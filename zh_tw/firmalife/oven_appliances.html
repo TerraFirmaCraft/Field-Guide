@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="烤爐配件 | TFC Field Guide" />
+    <meta name="description" content="烤爐配件" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="烤爐配件 | TFC Field Guide" />
+    <meta property="og:description" content="烤爐配件" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/placeholder_64.png" />
+
+    <title>烤爐配件 | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">群巒傳說 手冊</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Search bar-->
+             <li class="nav-item">
+              <form class="d-flex" role="search" onsubmit="handleSearch(event)">
+                <input id="search-box" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+             </li>
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> 版本 1.21.1 - v4.0.18-beta
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 繁體中文(台灣)
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/firmalife/oven_appliances.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/firmalife/oven_appliances.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/firmalife/oven_appliances.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/firmalife/oven_appliances.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/firmalife/oven_appliances.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/firmalife/oven_appliances.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/firmalife/oven_appliances.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/firmalife/oven_appliances.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/firmalife/oven_appliances.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>目錄</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">主頁</a></li>
+            <li><a href="../the_world/">這個世界</a></li>
+<li><a href="../getting_started/">新手入門</a></li>
+<li><a href="../mechanics/">進階內容</a></li>
+<li><a href="../firmalife/">(Addon) Firmalife擴展模組</a><ul><li><a href="./differences_from_tfc.html">與群巒傳說本體的區別</a></li>
+<li><a href="./cheese.html">奶酪</a></li>
+<li><a href="./climate_station.html">氣象站</a></li>
+<li><a href="./cellar.html">地窖</a></li>
+<li><a href="./food_shelves.html">食物架</a></li>
+<li><a href="./hangers.html">懸掛架</a></li>
+<li><a href="./jarbnet.html">罐頭櫃</a></li>
+<li><a href="./greenhouse.html">溫室</a></li>
+<li><a href="./irrigation.html">灌溉</a></li>
+<li><a href="./planters.html">種植盆</a></li>
+<li><a href="./beekeeping.html">養蜂</a></li>
+<li><a href="./beekeeping_reference.html">養蜂參考</a></li>
+<li><a href="./stainless_steel.html">不鏽鋼</a></li>
+<li><a href="./drying.html">晾乾中</a></li>
+<li><a href="./smoking.html">熏製</a></li>
+<li><a href="./ovens.html">烤爐</a></li>
+<li><a href="./oven_appliances.html">烤爐配件</a></li>
+<li><a href="./bread.html">麵包</a></li>
+<li><a href="./more_fertilizer.html">更多的肥料獲取途徑</a></li>
+<li><a href="./mixing_bowl.html">攪拌碗</a></li>
+<li><a href="./herbs_and_spices.html">草藥和香料</a></li>
+<li><a href="./fruit_trees.html">Firmalife中的水果</a></li>
+<li><a href="./berry_bushes.html">漿果叢</a></li>
+<li><a href="./chocolate.html">巧克力</a></li>
+<li><a href="./wine.html">釀酒</a></li>
+<li><a href="./wine_consumption.html">葡萄酒品鑑</a></li>
+<li><a href="./pie.html">餡餅</a></li>
+<li><a href="./pizza.html">披薩</a></li>
+<li><a href="./pasta.html">意大利麵</a></li>
+<li><a href="./burritos_and_tacos.html">墨西哥捲餅與墨西哥煎餅</a></li></ul></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">(Addon) Firmalife擴展模組</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">烤爐配件</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="../../_images/placeholder_64.png" alt="烤爐配件" title="不鏽鋼鍋" /><span>烤爐配件</span>
+        </h1>
+                <p><a href="../firmalife/ovens.html">烤爐</a>有多種設備可以與其交互，從而擴展其功能。這是因為烤爐在現實中本就是模塊化的。</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="黏土烤爐底" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="漏斗" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item391.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="黏土烤爐漏斗" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">烤爐漏斗</span>會向其朝向的任何<span style="color:#3E8A00;">烤爐底</span>輸入原木。它最多可容納16根原木（4組，每組4根，類似一個原木堆），通過從頂部丟入物品來填充其物品欄，也可以通過其他模組的自動化設備輸入。</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="鹽" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item219.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="鹽" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item219.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="鹽" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item219.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="密封磚" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item309.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="鍛鐵薄板" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item70.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="密封磚" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item309.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="爐灰收集器" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/item392.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">爐灰收集器</span>放置在<span style="color:#3E8A00;">烤爐底</span>下方時，會收集<span style="color:#3E8A00;">草木灰</span>。當燃料消耗時，有50%的幾率獲得草木灰。通過<span style="color:#b0b;">右鍵</span>可以取出草木灰，通過攻擊（左鍵點擊）可以放入草木灰。</p>
+<a class="anchor" id="vat"></a>
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="不鏽鋼棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item319.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="不鏽鋼棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item319.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="蜂蠟" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item295.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="不鏽鋼棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item319.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="蜂蠟" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item295.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="不鏽鋼鍋" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">不鏽鋼鍋</span>能夠批量製作某些特定的煮沸配方。它有一個物品槽位和10,000mB的流體存儲空間，類似於一個大木桶。</p>
+<p>例如，不鏽鋼鍋可以用1份橄欖醬與200mB水的比例製作<span style="color:#3E8A00;">橄欖油/水</span>。要使用不鏽鋼鍋，手持流體與物品對其<span style="color:#b0b;">右鍵</span>，將其添加到鍋中。空手並按住<span style="color:#b0b;">Shift</span>點擊，可以密封或解封不鏽鋼鍋。不鏽鋼鍋在被密封之前不會沸騰。</p>
+<p>不鏽鋼鍋應放置在<span style="color:#3E8A00;">烤爐底</span>上方。如果配方完成時鍋中的流體會溢出，則會停止沸騰，因此請確保不要裝得太滿——尤其是那些產出流體多於消耗的配方！不鏽鋼鍋可以用<span style="color:#3E8A00;">紅石</span>控制打開或關閉。</p>
+<h5></h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="請在遊戲中查閱以預覽該多方塊結構。">多方塊結構</span></p>
+        </div>
+        <p></p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="不鏽鋼棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item319.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="不鏽鋼棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item319.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="防腐木材" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item292.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="防腐木材" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item292.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="防腐木材" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item292.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="裝罐臺" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">裝罐臺</span>用於將不鏽鋼鍋中的流體裝入罐子中。裝罐臺側面的注嘴必須對準裝罐臺方向放置。</p>
+<p>使用不鏽鋼鍋，可以通過向水中添加甜味劑來製作<span style="color:#3E8A00;">糖水</span>。當鍋內反應完成時，流體的顏色會改變。手持<span style="color:#3E8A00;">帶蓋空罐</span>點擊它，即可將其裝滿。</p>
+<p>使用<span style="color:#b0b;">右鍵</span>將帶蓋的空罐添加到裝罐臺。當檢測到果醬時，它會自動將空罐子填充為<span style="color:#3E8A00;">果醬</span>並密封，每罐需要消耗500mB果醬。</p>
+<p>群巒傳說的陶鍋和烤架可以放置在<span style="color:#3E8A00;">烤爐底</span>上方。這些設備會自動從下方的烤爐獲取熱量。除了接收熱量的方式不同外，它們的工作方式與普通的陶鍋和烤架完全一樣。</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'zh_tw';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+    <script src="/Field-Guide/static/search.js"></script>
+  </body>
+</html>

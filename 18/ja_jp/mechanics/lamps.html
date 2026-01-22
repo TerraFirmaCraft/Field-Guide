@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft Field Guide</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Version 1.18.2 - v2.2.30
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 日本語
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/mechanics\lamps.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\lamps.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\lamps.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\lamps.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\lamps.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\lamps.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\lamps.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\lamps.html" class="dropdown-item">繁體中文(台灣)</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Contents</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Index</a></li>
+            <li><a href="../the_world/">世界</a></li>
+<li><a href="../getting_started/">はじめに</a></li>
+<li><a href="../mechanics/">高度な加工</a><ul><li><a href="./advanced_building_materials.html">高度な素材</a></li>
+<li><a href="./animal_husbandry.html">牧畜</a></li>
+<li><a href="./anvils.html">金床</a></li>
+<li><a href="./aqueducts.html">用水路</a></li>
+<li><a href="./armor.html">防具</a></li>
+<li><a href="./barrels.html">樽</a></li>
+<li><a href="./bellows.html">ふいご</a></li>
+<li><a href="./blast_furnace.html">高炉</a></li>
+<li><a href="./bloomery.html">塊鉄炉</a></li>
+<li><a href="./bread.html">パン</a></li>
+<li><a href="./charcoal_forge.html">溶鉱炉</a></li>
+<li><a href="./charcoal_pit.html">伏せ焼き</a></li>
+<li><a href="./chisel.html">ノミ</a></li>
+<li><a href="./composter.html">コンポスター</a></li>
+<li><a href="./crops.html">作物</a></li>
+<li><a href="./crucible.html">るつぼ</a></li>
+<li><a href="./dairy.html">乳製品</a></li>
+<li><a href="./damage_types.html">ダメージタイプ</a></li>
+<li><a href="./decay.html">保存</a></li>
+<li><a href="./fertilizers.html">肥料</a></li>
+<li><a href="./fire_clay.html">耐火粘土</a></li>
+<li><a href="./fishing.html">釣り</a></li>
+<li><a href="./flux.html">融剤</a></li>
+<li><a href="./gems.html">宝石</a></li>
+<li><a href="./grill.html">焚き火とグリル</a></li>
+<li><a href="./heating.html">加熱</a></li>
+<li><a href="./hydration.html">潤いを保つ</a></li>
+<li><a href="./lamps.html">ランプ</a></li>
+<li><a href="./leather_making.html">革の作成</a></li>
+<li><a href="./lighting.html">光源</a></li>
+<li><a href="./minecarts.html">トロッコ</a></li>
+<li><a href="./panning.html">パンニング</a></li>
+<li><a href="./papermaking.html">紙の作成</a></li>
+<li><a href="./pets.html">ペット</a></li>
+<li><a href="./pot.html">焚き火とポット</a></li>
+<li><a href="./powderkegs.html">火薬樽</a></li>
+<li><a href="./prospecting.html">探鉱</a></li>
+<li><a href="./quern.html">石臼</a></li>
+<li><a href="./salad.html">サラダ</a></li>
+<li><a href="./sandwiches.html">サンドイッチ</a></li>
+<li><a href="./scribing_table.html">筆記台</a></li>
+<li><a href="./sluices.html">堰</a></li>
+<li><a href="./steel.html">鋼</a></li>
+<li><a href="./support_beams.html">梁</a></li>
+<li><a href="./weaving.html">機織り</a></li>
+<li><a href="./wooden_buckets.html">木のバケツ</a></li></ul></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">高度な加工</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">ランプ</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\item116.png" alt="ランプ" title="蒼鉛青銅のランタン" /><span>ランプ</span>
+        </h1>
+                <h5>ランプ</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>ランプは長期間使用できる光源です。 液体燃料を燃やします。</p>
+<p>バケツを持ってランプに <span style="color:#b0b;">Right Click</span> を押して燃料を追加します。 その後、<span style="color:#3E8A00;">火起こし器</span> または火をつけることができるものなら何でも使って点火することができます。 ランプは壊れても燃料を保持します。</p>
+<a class="anchor" id="olives"></a>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="オリーブ" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item117.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="オリーブのペースト" class="crafting-recipe-item-tooltip"></span>
+                <p class="crafting-recipe-item-count">2</p>
+                <img class="recipe-item" src="..\..\_images\item118.png" />
+            </div>
+        </div>
+    </div>
+    <p>ランプの燃料の 1 つは <span style="color:#3E8A00;">オリーブオイル</span> です。 製造の最初のステップは、オリーブペーストを作ることです。</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="ジュートの繊維" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item120.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="ジュートの繊維" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item120.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="ジュートの繊維" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item120.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="ジュートの繊維" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item120.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="ジュートの繊維" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item120.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="ジュートの網" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item119.png" />
+                </div>
+            </div>
+        </div>
+        <p>ジュートの網も必要になります。</p>
+<p><span style="color:#3E8A00;">オリーブペースト</span> と <span style="color:#3E8A00;">水</span> を <a href="../mechanics/pot.html">ポット</a> で煮て、<span style="color:#3E8A00;">オリーブオイル水</span> を作ります。 それを <span style="color:#3E8A00;">ジュートの網</span> と共に <a href="../mechanics/barrels.html">樽</a> に密閉し、<span style="color:#3E8A00;">オリーブオイル</span> を生成します。 オリーブオイルは、液体単位ごとにゲーム内で 8 時間燃焼します。</p>
+<a class="anchor" id="tallow"></a><p>もう 1 つのランプ燃料は <span style="color:#3E8A00;">獣脂</span> です。 作り方は、<a href="../mechanics/pot.html">ポット</a> で水と 5 個の <span style="color:#3E8A00;">脂肪</span> を調理することです。 獣脂の燃焼時間は、ユニットごとにゲーム内で 2 時間です。 <a href="../mechanics/lighting.html#candles">ろうそく</a> を作成するために使用できます。</p>
+<h5>溶岩ランプ</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>溶岩は永遠に燃え続けますが、<a href="../mechanics/steel.html#blue_steel">青鋼</a> ランプの中にのみ保持できます。</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="黒鋼のインゴット" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item121.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="黒鋼の鎖" class="crafting-recipe-item-tooltip"></span>
+                <p class="crafting-recipe-item-count">16</p>
+                <img class="recipe-item" src="..\..\_images\item122.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>Tier V</p>
+        </div>
+        <p><span style="color:#3E8A00;">鎖</span> はランプを吊るすのに最適な方法で、<a href="../mechanics/anvils.html">金床</a> で鍛造できます。</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'ja_jp';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+  </body>
+</html>

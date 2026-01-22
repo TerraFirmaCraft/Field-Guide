@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="酿酒 | TFC Field Guide" />
+    <meta name="description" content="酿酒" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="酿酒 | TFC Field Guide" />
+    <meta property="og:description" content="酿酒" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/image112.png" />
+
+    <title>酿酒 | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">群峦传说 手册</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Search bar-->
+             <li class="nav-item">
+              <form class="d-flex" role="search" onsubmit="handleSearch(event)">
+                <input id="search-box" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+             </li>
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> 版本 1.21.1 - v4.0.18-beta
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 简体中文(中国大陆)
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/firmalife/wine.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/firmalife/wine.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/firmalife/wine.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/firmalife/wine.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/firmalife/wine.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/firmalife/wine.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/firmalife/wine.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/firmalife/wine.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/firmalife/wine.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>目录</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">主页</a></li>
+            <li><a href="../the_world/">这个世界</a></li>
+<li><a href="../getting_started/">新手入门</a></li>
+<li><a href="../mechanics/">进阶内容</a></li>
+<li><a href="../firmalife/">(Addon) Firmalife扩展模组</a><ul><li><a href="./differences_from_tfc.html">与群峦传说本体的区别</a></li>
+<li><a href="./cheese.html">奶酪</a></li>
+<li><a href="./climate_station.html">气象站</a></li>
+<li><a href="./cellar.html">地窖</a></li>
+<li><a href="./food_shelves.html">食物架</a></li>
+<li><a href="./hangers.html">悬挂架</a></li>
+<li><a href="./jarbnet.html">罐头柜</a></li>
+<li><a href="./greenhouse.html">温室</a></li>
+<li><a href="./irrigation.html">灌溉</a></li>
+<li><a href="./planters.html">种植盆</a></li>
+<li><a href="./beekeeping.html">养蜂</a></li>
+<li><a href="./beekeeping_reference.html">养蜂参考</a></li>
+<li><a href="./stainless_steel.html">不锈钢</a></li>
+<li><a href="./drying.html">晾干中</a></li>
+<li><a href="./smoking.html">熏制</a></li>
+<li><a href="./ovens.html">烤炉</a></li>
+<li><a href="./oven_appliances.html">烤炉配件</a></li>
+<li><a href="./bread.html">面包</a></li>
+<li><a href="./more_fertilizer.html">更多的肥料获取途径</a></li>
+<li><a href="./mixing_bowl.html">搅拌碗</a></li>
+<li><a href="./herbs_and_spices.html">草药和香料</a></li>
+<li><a href="./fruit_trees.html">Firmalife中的水果</a></li>
+<li><a href="./berry_bushes.html">浆果丛</a></li>
+<li><a href="./chocolate.html">巧克力</a></li>
+<li><a href="./wine.html">酿酒</a></li>
+<li><a href="./wine_consumption.html">葡萄酒品鉴</a></li>
+<li><a href="./pie.html">馅饼</a></li>
+<li><a href="./pizza.html">披萨</a></li>
+<li><a href="./pasta.html">意大利面</a></li>
+<li><a href="./burritos_and_tacos.html">墨西哥卷饼与墨西哥煎饼</a></li></ul></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">(Addon) Firmalife扩展模组</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">酿酒</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="../../_images/image112.png" alt="酿酒" title="None" /><span>酿酒</span>
+        </h1>
+                <p><span style="color:#3E8A00;">酿酒</span>是一门将葡萄转化为酒精的科学。这其中包含花费时间收集资源、将资源合成为原料，以及<span style="color:#3E8A00;">享用</span>最终产品的时间。请注意，Firmalife 中的葡萄酒（就其本身而言）除了群峦传说常规的酒精用途外，并无特殊作用。你应该只在想要获得<span style="color:#3E8A00;">乐趣</span>时才去酿造它。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="请在游戏中查阅此项目。">物品: <code>firmalife:plant/wild_red_grapes</code></span></p>
+        </div>
+        <p>红葡萄生成于0-30°C、125-500降雨量的区域，几乎覆盖了整个宜居区。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="请在游戏中查阅此项目。">物品: <code>firmalife:plant/wild_white_grapes</code></span></p>
+        </div>
+        <p>白葡萄生成于0-30°C、125-500降雨量的区域，几乎覆盖了整个宜居区。</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="防腐木材" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item292.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="防腐木材" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item292.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="防腐木材" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item292.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="葡萄架立柱" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>葡萄必须生长在由这些特殊柱子和黄麻纤维搭建的葡萄架上。</p>
+<p>要搭建一个葡萄架，先将两根柱子上下叠放。向左或向右移动两格，重复此操作。然后，手持<span style="color:#3E8A00;">黄麻纤维</span>对着其中一根顶部或底部柱子的侧面<span style="color:#b0b;">右键</span>，以便在柱子之间拉线。葡萄架可以水平连接，形成成排的葡萄。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>一个葡萄架。</p>
+<p>只要气候条件满足，葡萄藤将在几个月的时间内沿着葡萄架向上并蔓延生长。它会在七月结果，并在前一个月开花。此后便可收获葡萄。葡萄也可以在温室内的葡萄架上种植。</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="金合欢木木材" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item16.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="胶水" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item8.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="金合欢木木材" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item16.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="金合欢木木材" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item16.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="金合欢木木材" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item16.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="金合欢木木材" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item16.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="胶水" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item8.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="胶水" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item8.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="胶水" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item8.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="金合欢木踩踏桶" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>踩踏桶用于捣碎葡萄。手推磨也可用于此目的。</p>
+<p>使用踩踏桶时，手持新鲜葡萄对其<span style="color:#b0b;">右键</span>。然后，在桶上跳上跳下16次。空手<span style="color:#b0b;">右键</span>桶以取出物品。<br/>
+<br/>
+接着，将葡萄在桶中密封5天以使其<span style="color:#3E8A00;">发酵</span>。</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="金合欢木踩踏桶" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="锻铁棒" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item74.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="锻铁薄板" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item70.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="黄铜机件" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item9.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="金合欢木压机" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>压榨是葡萄加工的最后一步。</p>
+<p>最左侧的槽最多可放入16个葡萄。酿造一瓶葡萄酒需要4个葡萄。中间的四个槽用于将葡萄与其他原料混合，但这是可选的。仅使用红葡萄或白葡萄会产出红葡萄酒或白葡萄酒。在白葡萄酒中加入至少一个红葡萄会制成桃红葡萄酒。在白葡萄酒中加入糖会制成甜酒。加入二次发酵混合剂（在桶中混合酵母和甜味剂）会制成起泡酒。</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="橄榄石玻璃配料" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="../../_images/item293.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="空的橄榄石质酒瓶" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="../../_images/item294.png" />
+            </div>
+        </div>
+    </div>
+    <h4>Steps</h4><ol><li><p>吹</p></li><li><p>吹</p></li><li>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="挤压">
+                <img src="../../_images/item84.png" alt="千斤顶" />
+            </span>
+            <p>挤压</p>
+        </div>
+        </li><li>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="锯割">
+                <img src="../../_images/item55.png" alt="宝石锯" />
+            </span>
+            <p>锯割</p>
+        </div>
+        </li></ol><p>葡萄酒必须装入由非硅酸盐玻璃制成的专用酒瓶中。</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #c:tools/knife" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item118.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="纸" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item66.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="蜂蜡" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item295.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="None" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">瓶子标签</span>可在抄写台中重命名，其名称将添加到葡萄酒的物品提示信息中。</p>
+<p>葡萄酒需配备一个<span style="color:#3E8A00;">软木塞</span>，其制作方法是将<span style="color:#3E8A00;">防腐木材</span>在<span style="color:#3E8A00;">石灰水</span>中浸泡一天。一切就绪后，使用酒瓶槽位灌装葡萄酒，或手持酒瓶<span style="color:#b0b;">右键</span>进行灌装。</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'zh_cn';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+    <script src="/Field-Guide/static/search.js"></script>
+  </body>
+</html>

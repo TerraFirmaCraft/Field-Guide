@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="養蜂 | TFC Field Guide" />
+    <meta name="description" content="養蜂" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="養蜂 | TFC Field Guide" />
+    <meta property="og:description" content="養蜂" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/placeholder_64.png" />
+
+    <title>養蜂 | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft Field Guide</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Search bar-->
+             <li class="nav-item">
+              <form class="d-flex" role="search" onsubmit="handleSearch(event)">
+                <input id="search-box" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+             </li>
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Version 1.21.1 - v4.0.18-beta
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 日本語
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/firmalife/beekeeping.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/firmalife/beekeeping.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/firmalife/beekeeping.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/firmalife/beekeeping.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/firmalife/beekeeping.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/firmalife/beekeeping.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/firmalife/beekeeping.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/firmalife/beekeeping.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/firmalife/beekeeping.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Contents</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Index</a></li>
+            <li><a href="../the_world/">世界</a></li>
+<li><a href="../getting_started/">はじめに</a></li>
+<li><a href="../mechanics/">高度な加工</a></li>
+<li><a href="../firmalife/">(Addon) Firmalife</a><ul><li><a href="./differences_from_tfc.html">TFCとの違い</a></li>
+<li><a href="./cheese.html">チーズ</a></li>
+<li><a href="./climate_station.html">空調機</a></li>
+<li><a href="./cellar.html">貯蔵庫</a></li>
+<li><a href="./food_shelves.html">食品棚</a></li>
+<li><a href="./hangers.html">吊るし棚</a></li>
+<li><a href="./jarbnet.html">収納棚</a></li>
+<li><a href="./greenhouse.html">温室</a></li>
+<li><a href="./irrigation.html">温室を潤す</a></li>
+<li><a href="./planters.html">プランター</a></li>
+<li><a href="./beekeeping.html">養蜂</a></li>
+<li><a href="./beekeeping_reference.html">Beekeeping Reference</a></li>
+<li><a href="./stainless_steel.html">ステンレス鋼</a></li>
+<li><a href="./drying.html">乾燥</a></li>
+<li><a href="./smoking.html">燻製</a></li>
+<li><a href="./ovens.html">オーブン</a></li>
+<li><a href="./oven_appliances.html">オーブン機器</a></li>
+<li><a href="./bread.html">パン</a></li>
+<li><a href="./more_fertilizer.html">肥料オプション</a></li>
+<li><a href="./mixing_bowl.html">ミキシングボウル</a></li>
+<li><a href="./herbs_and_spices.html">ハーブとスパイス</a></li>
+<li><a href="./fruit_trees.html">Firmalife フルーツ</a></li>
+<li><a href="./berry_bushes.html">ベリーの茂み</a></li>
+<li><a href="./chocolate.html">チョコレート</a></li>
+<li><a href="./wine.html">ワイン作り</a></li>
+<li><a href="./wine_consumption.html">ワインの消費</a></li>
+<li><a href="./pie.html">Pie</a></li>
+<li><a href="./pizza.html">Pizza</a></li>
+<li><a href="./pasta.html">Pasta</a></li>
+<li><a href="./burritos_and_tacos.html">Burritos and Tacos</a></li></ul></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">(Addon) Firmalife</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">養蜂</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="../../_images/placeholder_64.png" alt="養蜂" title="蜂の巣箱" /><span>養蜂</span>
+        </h1>
+                <p><span style="color:#3E8A00;">Bees</span> are a wild insect that can be farmed as livestock. They are prized for their ability to produce honey, beeswax, and other products. All bees need to live in some form of nest. This section will teach you all you need to know for the care and keeping of bees.</p>
+<h5>Wild Beehive</h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block50.png" alt="Block Visualization">
+<div style="text-align: center;"><p>Wild beehives spawn in forests between 5-30°C and 150-450mm of groundwater.</p>
+</div><p>Bees, in general, are active above 14°C. A <span style="color:#3E8A00;">Wild Beehive</span> will always contain bees upon world generation, and will not lose the bees unless disturbed. If time has passed and the bees are active, the wild beehive will show that it is dripping with honey.</p>
+<p>Breaking a wild beehive or the tree it is attached to will always cause bees to attack nearby players. This takes the form of a <span style="color:#3E8A00;">Swarm</span> effect. The bee swarm effect can be mitigated by wearing a full suit of <span style="color:#3E8A00;">Bee Armor</span> or by moving underwater. Wild beehives drop <span style="color:#3E8A00;">Honey</span>, <span style="color:#3E8A00;">Beeswax</span>, and the useful <span style="color:#3E8A00;">Wild Honeycomb</span> item.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="藁" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item221.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="ガマ" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item367.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="藁" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item221.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="藁" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item221.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #c:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item17.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="藁" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item221.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="藁" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item221.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="ガマ" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item367.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="藁" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item221.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Skep" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>The <span style="color:#3E8A00;">Skep</span> is the smallest man-made beehive.</p>
+<p>The most useful feature of the skep is that it can be picked up and moved by the player. However, the player can only carry one skep at a time without becoming <span style="color:#3E8A00;">Overburdened</span>. If a wild beehive within 15 blocks is <span style="color:#3E8A00;">active</span>, within a day it should start a <span style="color:#3E8A00;">Swarm</span>. A swarm is signified by a line of particles between two beehives.</p>
+<p>When a swarm is complete, the skep will now contain a <span style="color:#3E8A00;">Queen</span>. Holding a hoe and looking at the hive will show you this information. The Queen represents the existence of a bee colony, and she has a number of data points: her age, species, traits, as well as any diseases or infections the colony has.</p>
+<p>On their own, skeps are only moderately useful for maintaining bees. This is because skeps can only contain 1 piece of honey at a time. <span style="color:#3E8A00;">Raw Honey</span> can be added or removed from a skep with <span style="color:#b0b;">Right Click</span>. Note that to avoid angering bees, you should harvest only when it is dark outside.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item3.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item3.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item3.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item3.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item3.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="蜂の巣枠" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/item368.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item3.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="蜂の巣枠" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item368.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item3.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item3.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="藁ブロック" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item265.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item3.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item3.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="蜂の巣枠" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item368.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item3.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="蜂の巣箱" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">Wooden Beehives</span> are the main device used for beekeeping. They contain up to four <span style="color:#3E8A00;">Frames</span>. A frame can contain 1 piece of <span style="color:#3E8A00;">Raw Honey</span> in it. To get your bees into a Wooden Beehive, place your <span style="color:#3E8A00;">Skep</span> with a queen inside within 5 blocks of it, and make sure the beehive has at least one frame, and that it is warm enough. The swarm will follow soon after, and last for a day.</p>
+<p>Beehives know about a 5 block square radius surrounding the hive. In order to produce honey, this radius must contain at least 10 flowers. The chance of producing honey scales up based on the amount of flowers, with a max of 60. Bee traits also play a role in the chance to make honey. Honey can only be deposited in an <span style="color:#3E8A00;">Empty Beehive Frame</span>.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #c:tools/knife" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item118.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Filled Beehive Frame" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item369.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="None" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">Scraping</span> a beehive frame (right clicking the item with a knife also works) makes <span style="color:#3E8A00;">Beeswax</span>.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item3.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="真鍮のベアリング" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item9.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item3.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item3.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="藁ブロック" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item265.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item3.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item3.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="真鍮のベアリング" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item9.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item3.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Centrifuge" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>The <span style="color:#3E8A00;">Centrifuge</span> is used to process <span style="color:#3E8A00;">Scraped Beehive Frames</span> into <span style="color:#3E8A00;">Raw Honey</span>.</p>
+<p>The <span style="color:#3E8A00;">Centrifuge</span> can be operated via <span style="color:#b0b;">Right Click</span> or via mechanical power from an axle above the block. <span style="color:#b0b;">Right Click</span> to put Scraped Beehive Frames in. <span style="color:#3E8A00;">Raw Honey</span> will be spawned outside the Centrifuge upon completion. The leftover frames can be reused in a Beehive.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="蜂の巣枠" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item368.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="砂糖" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item371.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Sugared Beehive Frame" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/item370.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="蜂の巣枠" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item368.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Raw Honey" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item373.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Honeyed Beehive Frame" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/item372.png" />
+                </div>
+            </div>
+        </div>
+        <p>Bees don't just produce honey for you, they produce it to survive! When bees have no frames available, or if it is too cold (read the hoe tooltip to see) they will consume honey every 12 days by default. When they are out of honey, they have a chance every day to <span style="color:#3E8A00;">die</span>.</p>
+<p><span style="color:#3E8A00;">Sugared Beehive Frames</span> as well as manually-filled <span style="color:#3E8A00;">Filled Beehive Frames</span> can be manually added into hives to help sustain bees over winter. This is why skeps have trouble surviving over winter--they can only contain one piece of honey, and have no frames.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="蜂の巣枠" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item368.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="羊毛" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item15.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Insulating Beehive Frame" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/item374.png" />
+                </div>
+            </div>
+        </div>
+        <p>Adding a <span style="color:#3E8A00;">Insulating Beehive Frame</span> adds 2°C of extra temperature resistance to a hive. Adding multiple has no further effect.</p>
+<p>Colonies can still <span style="color:#3E8A00;">Swarm</span> from Wooden Beehives. The beneficial type of swarming involves <span style="color:#3E8A00;">Splitting</span> a hive. A hive that is at least 24 days old (by default), warm, full of honey, and free of <span style="color:#3E8A00;">Genetic Diseases</span> can split into two new colonies if a nearby hive is available. This also results in <span style="color:#3E8A00;">Genetic Mutation</span>.</p>
+<p>Swarming can also be caused by a lack of food in the hive. If a hive sees another hive with honey, and lacks its own, it will in some cases try to swarm to that hive. Bees infected with the <span style="color:#3E8A00;">Varroa</span> parasite will also attempt to invade other hives, taking them over.</p>
+<p>If no wild bees are available, bees can also be attracted to Skeps via <span style="color:#3E8A00;">Bee Bait</span>. This takes the form of <span style="color:#3E8A00;">Wild Honeycomb</span> and <span style="color:#3E8A00;">Aromatic Honeycomb</span>. Add these to a <span style="color:#3E8A00;">Skep</span> with <span style="color:#b0b;">Right Click</span> and surround the Skep with at least 30 flowers. There is a 1 / 8 chance daily to attract a bee in this case.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="砂糖" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item371.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="砂糖" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item371.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="砂糖" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item371.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="黄色の染料" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item376.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="黄色の染料" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item376.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="黄色の染料" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item376.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #firmalife:herbs" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item377.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #firmalife:herbs" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item377.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #firmalife:herbs" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item377.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Aromatic Honeycomb" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/item375.png" />
+                </div>
+            </div>
+        </div>
+        <p>The <span style="color:#3E8A00;">Aromatic Honeycomb</span> is an alternative to the Wild Honeycomb made from herbs.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Raw Honey" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item373.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Raw Honey" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item373.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Raw Honey" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item373.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Raw Honey" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item373.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Empty Jar" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item86.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Raw Honey" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item373.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Raw Honey" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item373.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Raw Honey" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item373.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Raw Honey" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item373.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="はちみつ入りの瓶" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/item378.png" />
+                </div>
+            </div>
+        </div>
+        <p>Honey lasts forever if stored in a <span style="color:#3E8A00;">Jar</span>.</p>
+<p>This chapter covered the main aspects of beekeeping. For information on species, traits, genetic diseases, and parasitic infections, see the next chapter, <a href="../firmalife/beekeeping_reference.html">Beekeeping Reference</a>.</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'ja_jp';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+    <script src="/Field-Guide/static/search.js"></script>
+  </body>
+</html>

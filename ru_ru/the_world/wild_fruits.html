@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Дикие фрукты | TFC Field Guide" />
+    <meta name="description" content="Дикие фрукты" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="Дикие фрукты | TFC Field Guide" />
+    <meta property="og:description" content="Дикие фрукты" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/image109.png" />
+
+    <title>Дикие фрукты | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">Справочник TerraFirmaCraft</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Search bar-->
+             <li class="nav-item">
+              <form class="d-flex" role="search" onsubmit="handleSearch(event)">
+                <input id="search-box" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+             </li>
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Версия 1.21.1 - v4.0.18-beta
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> Русский
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/the_world/wild_fruits.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world/wild_fruits.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world/wild_fruits.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world/wild_fruits.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world/wild_fruits.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world/wild_fruits.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world/wild_fruits.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world/wild_fruits.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/the_world/wild_fruits.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Содержание</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Главная</a></li>
+            <li><a href="../the_world/">Окружающий мир</a><ul><li><a href="./geology.html">Геология</a></li>
+<li><a href="./ores_and_minerals.html">Руды и минералы</a></li>
+<li><a href="./climate.html">Календарь и климат</a></li>
+<li><a href="./flora.html">Растения</a></li>
+<li><a href="./wild_crops.html">Дикие культуры</a></li>
+<li><a href="./wild_fruits.html">Дикие фрукты</a></li>
+<li><a href="./wild_animals.html">Дикие животные</a></li></ul></li>
+<li><a href="../getting_started/">Начало выживания</a></li>
+<li><a href="../mechanics/">Продвинутые механики</a></li>
+<li><a href="../firmalife/">(Дополнение) Firmalife</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">Окружающий мир</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Дикие фрукты</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="../../_images/image109.png" alt="Дикие фрукты" title="None" /><span>Дикие фрукты</span>
+        </h1>
+                <p>В мире можно найти множество растущих диких фруктов. Их можно собирать для еды или выращивания. Дикие фрукты можно найти на трех видах растений: <a href="../the_world/wild_fruits.html#fruit_trees">фруктовые деревья</a>, <a href="../the_world/wild_fruits.html#tall_bushes">высокие кусты</a> и <a href="../the_world/wild_fruits.html#small_bushes">низкие кусты</a>.<br/>
+<br/>
+Все плодоносящие растения имеют схожий жизненный цикл. Со сменой сезонов они будут расти, формировать цветы, давать плоды, а затем впадать в состояние покоя.</p>
+<p>Плодовые растения сезонны. Во время покоя эти растения будут выглядеть коричневыми и безжизненными. Весной они становятся зелеными и здоровыми, готовясь производить плоды и расти. Точные сроки этой стадии варьируются в зависимости от фрукта. Плодовые растения также могут умирать: от старости или из-за неподходящих климатических условий.</p>
+<a class="anchor" id="fruit_trees"></a><h5>Фруктовые деревья</h5>
+<p><span style="color:#3E8A00;">Фруктовые деревья</span> растут из маленьких саженцев в большие цветущие деревья. Ветви фруктовых деревьев — это их сердце, и они будут расти, пока климатические условия оптимальны. По мере созревания фруктовых деревьев, они будут покрываться <span style="color:#3E8A00;">листьями</span> вокруг своих ветвей. Листья могут цвести и плодоносить в зависимости от сезона.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/image110.png" alt="tfc:textures/gui/book/tutorial/fruit_tree.png">
+<div style="text-align: center;"><p>Типичное фруктовое дерево.</p>
+</div><p>Плодовые деревья начинаются с <span style="color:#3E8A00;">саженцев</span>. Саженцы начинают расти, формируя первый элемент дерева, если сейчас не период покоя для данного фрукта, и удовлетворены климатические условия этого вида. Размер готового дерева приблизительно определяется количеством саженцев в исходном блоке саженцев: чем их больше, тем крупнее дерево.<br/>
+В один блок через <span style="color:#3E8A00;">прививку</span> можно добавить дополнительные саженцы. Для прививки нажмите <span style="color:#b0b;">ПКМ</span> по саженцу, с новым саженцем и <span style="color:#3E8A00;">ножом</span> в руках.</p>
+<p>Чтобы получить саженцы фруктового дерева, сломайте 'локтевые' блоки дерева (блоки ветвей, прикрепленные к стволу со сторон и сверху) <span style="color:#3E8A00;">топором</span>. Саженцы могут быть привиты к 'локтевым' секциям, если они не слишком высоко на дереве. Это позволяет одному дереву выращивать несколько фруктов. Созревшие фрукты собираются нажатием <span style="color:#b0b;">ПКМ</span>. Вы получите один фрукт, а растение вернется к стадии роста. Этот цикл будет продолжаться пока дерево не впадет в состояние покоя.</p>
+<p>Плодовым деревьям необходимы подходящие <a href="../the_world/climate.html#temperature">температура</a> и <a href="../mechanics/hydration.html">влажность</a>. Плодовые деревья будут расти и плодоносить только в том случае, если среднегодовая температура у основания дерева, где посажен саженец, находится в пределах допустимого диапазона для этого вида. Аналогично, влажность определяется среднегодовым количеством осадков и водными источниками, расположенными поблизости от основания дерева.</p>
+<hr><a class="anchor" id="cherry"></a><h5>Вишнёвое дерево</h5>
+<p>Встречается в регионах с климатом: <br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -5.2...14 °C<br/>
+<strong><a href="../the_world/climate.html#rainfall">Осадки</a></strong>: 100–350 мм<br/>
+<br/>
+Условия роста:<br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -6.4...15.2 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 7–80 %<br/>
+<br/>
+Вишнёвые деревья растут с января по март, начинают цвести в апреле и мае, приносят плоды в июне.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Пример вишнёвого дерева.</p>
+<a class="anchor" id="green_apple"></a><h5>Зелёная яблоня</h5>
+<p>Встречается в регионах с климатом: <br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -10.6...10.4 °C<br/>
+<strong><a href="../the_world/climate.html#rainfall">Осадки</a></strong>: 130–280 мм<br/>
+<br/>
+Условия роста:<br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -11.8...11.6 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 10–75 %<br/>
+<br/>
+Зелёные яблони растут с марта по июль, начинают цвести в августе и сентябре, приносят плоды в октябре.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Пример зелёного яблоневого дерева.</p>
+<a class="anchor" id="lemon"></a><h5>Лимонное дерево</h5>
+<p>Встречается в регионах с климатом: <br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 7.4...24.8 °C<br/>
+<strong><a href="../the_world/climate.html#rainfall">Осадки</a></strong>: 220–440 мм<br/>
+<br/>
+Условия роста:<br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 6.2...26 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 19–95 %<br/>
+<br/>
+Лимонные деревья растут с февраля по май, начинают цвести в июне и июле, приносят плоды в августе.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Пример лимонного дерева.</p>
+<a class="anchor" id="olive"></a><h5>Оливковое дерево</h5>
+<p>Встречается в регионах с климатом: <br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 2...23 °C<br/>
+<strong><a href="../the_world/climate.html#rainfall">Осадки</a></strong>: 250–450 мм<br/>
+<br/>
+Условия роста:<br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 0.8...24.2 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 22–95 %<br/>
+<br/>
+Оливковые деревья растут с марта по июль, начинают цвести в августе и сентябре, приносят плоды в октябре.<br/>
+Оливки можно использовать для производства <a href="../mechanics/lamps.html#olives">оливкового масла</a>, которое используется в качестве топлива для ламп.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Пример оливкового дерева.</p>
+<a class="anchor" id="orange"></a><h5>Апельсиновое дерево</h5>
+<p>Встречается в регионах с климатом: <br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 9.2...40 °C<br/>
+<strong><a href="../the_world/climate.html#rainfall">Осадки</a></strong>: 300–500 мм<br/>
+<br/>
+Условия роста:<br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 8...41.2 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 27–100 %<br/>
+<br/>
+Апельсиновые деревья растут с марта по июнь, начинают цвести в июле и августе, приносят плоды в сентябре.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Пример апельсинового дерева.</p>
+<a class="anchor" id="peach"></a><h5>Персиковое дерево</h5>
+<p>Встречается в регионах с климатом: <br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -3.4...15.8 °C<br/>
+<strong><a href="../the_world/climate.html#rainfall">Осадки</a></strong>: 180–470 мм<br/>
+<br/>
+Условия роста:<br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -4.6...17 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 15–95 %<br/>
+<br/>
+Персиковые деревья растут с декабря по март, начинают цвести в апреле и мае, приносят плоды в июне.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Пример персикового дерева.</p>
+<a class="anchor" id="plum"></a><h5>Сливовое дерево</h5>
+<p>Встречается в регионах с климатом: <br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -7...12.2 °C<br/>
+<strong><a href="../the_world/climate.html#rainfall">Осадки</a></strong>: 120–300 мм<br/>
+<br/>
+Условия роста:<br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -8.2...13.4 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 9–75 %<br/>
+<br/>
+Сливовые деревья растут с января по апрель, начинают цветение в мае и июне, приносят плоды в июле.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Пример сливового дерева.</p>
+<a class="anchor" id="red_apple"></a><h5>Красная яблоня</h5>
+<p>Встречается в регионах с климатом: <br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -10.6...10.4 °C<br/>
+<strong><a href="../the_world/climate.html#rainfall">Осадки</a></strong>: 190–310 мм<br/>
+<br/>
+Условия роста:<br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -11.8...11.6 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 16–75 %<br/>
+<br/>
+Красные яблони растут с марта по июль, начинают цветение в августе и сентябре, приносят плоды в октябре.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Пример красного яблоневого дерева.</p>
+<a class="anchor" id="banana"></a><h5>Банановое дерево</h5>
+<p>Встречается в регионах с климатом:<br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 11...40 °C<br/>
+<strong><a href="../the_world/climate.html#rainfall">Осадки</a></strong>: 280–500 мм<br/>
+<br/>
+Условия роста:<br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: 9.8...41.2 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 25–100 %<br/>
+<br/>
+Бананы — особый вид фруктовых деревьев. Их ствол растёт только вертикально, они не имеют листьев и плодоносят только на самом верхнем блоке. Саженцы падают с цветущей части растения. После сбора урожая с бананового растения оно погибает и больше не приносит плодов. Его необходимо пересаживать весной.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Пример бананового дерева.</p>
+<h5>Фруктовые деревья</h5>
+<p>Календарь созревания фруктовых деревьев.</p>
+<div class="row"><div class="col-md-9"><figure class="table-figure"><table><thead><tr><th></th><th><p>Jan</p></th><th><p>Feb</p></th><th><p>Mar</p></th><th><p>Apr</p></th><th><p>May</p></th><th><p>Jun</p></th><th><p>Jul</p></th><th><p>Aug</p></th><th><p>Sep</p></th><th><p>Oct</p></th><th><p>Nov</p></th><th><p>Dec</p></th></tr></thead><tbody><tr><td><p>Cherry</p></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Apple</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Lemon</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Olive</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Orange</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Peach</p></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td></tr><tr><td><p>Plum</p></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Banana</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr></tbody></table></figure></div><div class="col-md-3"><h4>Legend</h4>
+            <div class="item-header">
+                <span style="background-color:#a8986a"></span>
+                <p>Dormant</p>
+            </div>
+            
+            <div class="item-header">
+                <span style="background-color:#6ab553"></span>
+                <p>Healthy</p>
+            </div>
+            
+            <div class="item-header">
+                <span style="background-color:#cca0db"></span>
+                <p>Flowering</p>
+            </div>
+            
+            <div class="item-header">
+                <span style="background-color:#a217ff"></span>
+                <p>Fruiting</p>
+            </div>
+            </div></div><hr><a class="anchor" id="tall_bushes"></a><h5>Высокие кусты</h5>
+<p><span style="color:#3E8A00;">Высокие кусты</span> — это фруктовые блоки, которые могут разрастаться во всех направлениях. Они растут вверх до трех блоков в высоту, или дают <span style="color:#3E8A00;">побеги</span> сбоку, которые могут превратиться в полноценные кусты. Со временем кусты перестают разрастаться и достигают зрелости. Сбор урожая с кустов острым инструментом может привести к выпадению нового побега. Полностью созревшие кусты всегда дают свой побег при сборе острым инструментом.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/image111.png" alt="tfc:textures/gui/book/tutorial/berry_bush.png">
+<div style="text-align: center;"><p>Дикий высокий куст.</p>
+</div><p>Высокие кусты могут распространяться, когда их побегам есть где укорениться. На практике это означает, что им нужен твердый блок под ними для размещения нового куста. Создание плоской открытой территории без травы или другого мусора даёт им больше возможностей для роста.</p>
+<p>Кусты, как и фруктовые деревья, учитывают блок в основе растения при определении <a href="../mechanics/hydration.html">влажности() и <a href="../the_world/climate.html#temperature">температуры</a></a>, и растут, пока среднегодовые осадки и температура соответствуют требованиям. <br/>
+Любой полноценный блок куста может дать ягоды, которые собираются с помощью <span style="color:#b0b;">ПКМ</span>.</p>
+<a class="anchor" id="blackberry"></a><h5>Куст ежевики</h5>
+<p>Встречается в регионах с климатом: <br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -5.2...19.4 °C<br/>
+<strong><a href="../the_world/climate.html#rainfall">Осадки</a></strong>: 200–500 мм<br/>
+<br/>
+Условия роста:<br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -6.4...20.6 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 17–100 %<br/>
+<br/>
+Кусты ежевики растут с февраля по май, цветут в июне и июле, плодоносят в августе.<br/>
+Их можно найти в местах с небольшим количеством деревьев.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Пример куста ежевики.</p>
+<a class="anchor" id="raspberry"></a><h5>Куст малины</h5>
+<p>Встречается в регионах с климатом: <br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -10.6...14 °C<br/>
+<strong><a href="../the_world/climate.html#rainfall">Осадки</a></strong>: 180–450 мм<br/>
+<br/>
+Условия роста:<br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -11.8...15.2 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 15–95 %<br/>
+<br/>
+Кусты малины растут с апреля по июль, цветут в августе и сентябре, плодоносят в октябре.<br/>
+Их можно найти в местах с небольшим количеством деревьев.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Пример куста малины.</p>
+<a class="anchor" id="blueberry"></a><h5>Куст черники</h5>
+<p>Встречается в регионах с климатом: <br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -8.8...8.6 °C<br/>
+<strong><a href="../the_world/climate.html#rainfall">Осадки</a></strong>: 150–400 мм<br/>
+<br/>
+Условия роста:<br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -10...9.8 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 12–90 %<br/>
+<br/>
+Кусты черники растут с февраля по май, цветут в июне и июле, плодоносят в августе.<br/>
+Их можно найти в местах с небольшим количеством деревьев.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Пример куста черники.</p>
+<a class="anchor" id="elderberry"></a><h5>Куст бузины</h5>
+<p>Встречается в регионах с климатом: <br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -5.2...15.8 °C<br/>
+<strong><a href="../the_world/climate.html#rainfall">Осадки</a></strong>: 120–380 мм<br/>
+<br/>
+Условия роста:<br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -6.4...17 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 9–85 %<br/>
+<br/>
+Кусты бузины растут с февраля по май, цветут в июне и июле, и плодоносят в августе.<br/>
+Их можно найти в местах с небольшим количеством деревьев.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Пример куста бузины.</p>
+<h5>Высокие ягодные кусты</h5>
+<p>Календарь созревания высоких кустов.</p>
+<div class="row"><div class="col-md-9"><figure class="table-figure"><table><thead><tr><th></th><th><p>Jan</p></th><th><p>Feb</p></th><th><p>Mar</p></th><th><p>Apr</p></th><th><p>May</p></th><th><p>Jun</p></th><th><p>Jul</p></th><th><p>Aug</p></th><th><p>Sep</p></th><th><p>Oct</p></th><th><p>Nov</p></th><th><p>Dec</p></th></tr></thead><tbody><tr><td><p>Blackberry</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Raspberry</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Blueberry</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Elderberry</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr></tbody></table></figure></div><div class="col-md-3"><h4>Legend</h4>
+            <div class="item-header">
+                <span style="background-color:#a8986a"></span>
+                <p>Dormant</p>
+            </div>
+            
+            <div class="item-header">
+                <span style="background-color:#6ab553"></span>
+                <p>Healthy</p>
+            </div>
+            
+            <div class="item-header">
+                <span style="background-color:#cca0db"></span>
+                <p>Flowering</p>
+            </div>
+            
+            <div class="item-header">
+                <span style="background-color:#a217ff"></span>
+                <p>Fruiting</p>
+            </div>
+            </div></div><hr><a class="anchor" id="small_bushes"></a><h5>Низкие кусты</h5>
+<p><span style="color:#3E8A00;">Низкие кусты</span> — это стелящиеся фруктовые блоки, которые встречаются в лесах. Низкие кусты иногда разрастаются на соседние блоки, если поблизости не слишком много других кустов.<br/>
+<br/>
+Низкие кусты проходят через три стадии роста, и полностью созревший куст может дать ягоды, которые собираются с помощью <span style="color:#b0b;">ПКМ</span>.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Три разных размера низкого куста</p>
+<a class="anchor" id="bunchberry"></a><h5>Куст брусники</h5>
+<p>Встречается в регионах с климатом: <br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -14.2...1.4 °C<br/>
+<strong><a href="../the_world/climate.html#rainfall">Осадки</a></strong>: 280–500 мм<br/>
+<br/>
+Условия роста:<br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -15.4...2.6 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 25–100 %<br/>
+<br/>
+Кусты брусники растут с мая по июль, цветут в августе и сентябре, плодоносят в октябре.<br/>
+Их можно найти в лесах.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Стадии роста куста брусники по месяцам.</p>
+<a class="anchor" id="gooseberry"></a><h5>Куст крыжовника</h5>
+<p>Встречается в регионах с климатом: <br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -7...12.2 °C<br/>
+<strong><a href="../the_world/climate.html#rainfall">Осадки</a></strong>: 200–500 мм<br/>
+<br/>
+Условия роста:<br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -8.2...13.4 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 17–100 %<br/>
+<br/>
+Кусты крыжовника растут с апреля по июль, цветут в августе и сентябре, плодоносят в октябре.<br/>
+Их можно найти в лесах.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Стадии роста куста крыжовника по месяцам.</p>
+<a class="anchor" id="snowberry"></a><h5>Куст волчьей ягоды</h5>
+<p>Встречается в регионах с климатом: <br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -10.6...5 °C<br/>
+<strong><a href="../the_world/climate.html#rainfall">Осадки</a></strong>: 200–500 мм<br/>
+<br/>
+Условия роста:<br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -11.8...6.2 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 17–100 %<br/>
+<br/>
+Кусты волчьей ягоды растут с марта по июнь, цветут в июле и августе, плодоносят в сентябре.<br/>
+Их можно найти в лесах.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Стадии роста куста волчьей ягоды по месяцам.</p>
+<a class="anchor" id="cloudberry"></a><h5>Куст морошки</h5>
+<p>Встречается в регионах с климатом: <br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -14.2...6.8 °C<br/>
+<strong><a href="../the_world/climate.html#rainfall">Осадки</a></strong>: 80–320 мм<br/>
+<br/>
+Условия роста:<br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -15.4...8 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 5–80 %<br/>
+<br/>
+Кусты морошки растут с февраля по май, цветут в июне и августе, плодоносят в сентябре.<br/>
+Их можно найти в лесах.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Стадии роста куста морошки по месяцам.</p>
+<a class="anchor" id="strawberry"></a><h5>Куст клубники</h5>
+<p>Встречается в регионах с климатом: <br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -1.6...17.6 °C<br/>
+<strong><a href="../the_world/climate.html#rainfall">Осадки</a></strong>: 140–400 мм<br/>
+<br/>
+Условия роста:<br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -2.8...18.8 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 11–90 %<br/>
+Кусты клубники растут с октября по декабрь, цветут в январе и феврале, плодоносят в марте.<br/>
+<br/>
+Их можно найти в лесах.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Стадии роста куста клубники по месяцам.</p>
+<a class="anchor" id="wintergreen_berry"></a><h5>Куст брусники</h5>
+<p>Встречается в регионах с климатом: <br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -8.8...6.8 °C<br/>
+<strong><a href="../the_world/climate.html#rainfall">Осадки</a></strong>: 100–370 мм<br/>
+<br/>
+Условия роста:<br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -10...8 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 7–85 %<br/>
+<br/>
+Кусты брусники растут с мая по сентябрь, цветут в октябре и ноябре, плодоносят в декабре.<br/>
+Их можно найти в лесах.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Стадии роста куста брусники по месяцам.</p>
+<a class="anchor" id="cranberry"></a><h5>Куст клюквы</h5>
+<p>Встречается в регионах с климатом: <br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -14.2...8.6 °C<br/>
+<strong><a href="../the_world/climate.html#rainfall">Осадки</a></strong>: 250–500 мм<br/>
+<br/>
+Условия роста:<br/>
+<strong><a href="../the_world/climate.html#temperature">Температура</a></strong>: -15.4...9.8 °C<br/>
+<strong><a href="../mechanics/hydration.html">Влажность</a></strong>: 25–100 %<br/>
+<br/>
+Кусты клюквы растут с марта по июнь, цветут в июле и августе, плодоносят в сентябре.<br/>
+Их можно найти в лесах. В отличие от большинства низких кустов, кусты клюквы выращиваются под водой.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="Вам нужно открыть справочник в Minecraft, чтобы увидеть эту структуру.">Структура</span></p>
+        </div>
+        <p>Стадии роста куста клюквы по месяцам.</p>
+<h5>Низкие ягодные кусты</h5>
+<p>Календарь созревания низких кустов.</p>
+<div class="row"><div class="col-md-9"><figure class="table-figure"><table><thead><tr><th></th><th><p>Jan</p></th><th><p>Feb</p></th><th><p>Mar</p></th><th><p>Apr</p></th><th><p>May</p></th><th><p>Jun</p></th><th><p>Jul</p></th><th><p>Aug</p></th><th><p>Sep</p></th><th><p>Oct</p></th><th><p>Nov</p></th><th><p>Dec</p></th></tr></thead><tbody><tr><td><p>Bunchberry</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Gooseberry</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Snowberry</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Cloudberry</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Strawberry</p></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td></tr><tr><td><p>Wintergreen</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td></tr><tr><td><p>Cranberry</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr></tbody></table></figure></div><div class="col-md-3"><h4>Legend</h4>
+            <div class="item-header">
+                <span style="background-color:#a8986a"></span>
+                <p>Dormant</p>
+            </div>
+            
+            <div class="item-header">
+                <span style="background-color:#6ab553"></span>
+                <p>Healthy</p>
+            </div>
+            
+            <div class="item-header">
+                <span style="background-color:#cca0db"></span>
+                <p>Flowering</p>
+            </div>
+            
+            <div class="item-header">
+                <span style="background-color:#a217ff"></span>
+                <p>Fruiting</p>
+            </div>
+            </div></div><hr>
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> Документация API
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'ru_ru';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+    <script src="/Field-Guide/static/search.js"></script>
+  </body>
+</html>
