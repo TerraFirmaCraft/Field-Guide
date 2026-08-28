@@ -1,7 +1,7 @@
 from typing import List, Tuple, Any
 
 from context import Context
-from components import item_loader, fluid_loader
+from components import item_loader, fluid_loader, tag_loader
 
 import util
 
@@ -94,7 +94,14 @@ def extract_items_from_ingredient(data: Any) -> List[str]:
     Recursively extract item/tag names from an ingredient.
     Returns a list of item names (e.g., ['minecraft:stone'] or ['#minecraft:planks'])
     """
-    if 'item' in data:
+    if isinstance(data, str):
+        return [data]
+    elif isinstance(data, list):
+        items = []
+        for item in data:
+            items.extend(extract_items_from_ingredient(item))
+        return items
+    elif 'item' in data:
         return [data['item']]
     elif 'tag' in data:
         return ['#' + data['tag']]
@@ -111,18 +118,38 @@ def extract_items_from_ingredient(data: Any) -> List[str]:
         for child in data['children']:
             items.extend(extract_items_from_ingredient(child))
         return items
-    elif isinstance(data, list):
-        items = []
-        for item in data:
-            items.extend(extract_items_from_ingredient(item))
-        return items
     else:
         # Unknown format, return empty
         return []
 
 
+def join_ingredient_items(context: Context, items: List[str]) -> str:
+    """
+    Joins a list of item names (as returned by `extract_items_from_ingredient`) into a single csv key
+    suitable for `item_loader.get_item_image()`. Since a csv key cannot contain tags, any tags are
+    expanded into their concrete items first. A single element is returned as-is, so that a lone tag
+    keeps its tag-based name.
+    """
+    if len(items) == 1:
+        return items[0]
+
+    expanded = []
+    for item in items:
+        for e in tag_loader.load_item_tag(context, item[1:]) if item.startswith('#') else [item]:
+            if e not in expanded:
+                expanded.append(e)
+    return ','.join(expanded)
+
+
 def format_ingredient(context: Context, data: Any) -> Tuple[str, str | None]:
-    if 'item' in data:
+    if isinstance(data, str):
+        return item_loader.get_item_image(context, data)
+    elif isinstance(data, list):
+        # A list of ingredients, any of which may match - e.g. [{'tag': ...}, {'item': ...}]
+        items = extract_items_from_ingredient(data)
+        util.require(len(items) > 0, 'Unsupported ingredient list: %s' % str(data))
+        return item_loader.get_item_image(context, join_ingredient_items(context, items))
+    elif 'item' in data:
         return item_loader.get_item_image(context, data['item'])
     elif 'tag' in data:
         return item_loader.get_item_image(context, '#' + data['tag'])
@@ -140,17 +167,7 @@ def format_ingredient(context: Context, data: Any) -> Tuple[str, str | None]:
         # Extract all item/tag names from children recursively
         items = extract_items_from_ingredient(data)
         if items:
-            csvstring = ','.join(items)
-            return item_loader.get_item_image(context, csvstring)
-        else:
-            # Fallback to placeholder
-            return ('../../_images/placeholder_64.png', None)
-    elif isinstance(data, list):
-        # Extract all item/tag names from list recursively
-        items = extract_items_from_ingredient(data)
-        if items:
-            csvstring = ','.join(items)
-            return item_loader.get_item_image(context, csvstring)
+            return item_loader.get_item_image(context, join_ingredient_items(context, items))
         else:
             # Fallback to placeholder
             return ('../../_images/placeholder_64.png', None)
