@@ -10,10 +10,13 @@ from versions import IS_RESOURCE_PACK
 
 import util
 import json
+import re
 
 IMAGE_CACHE: Dict[str, str] = {}
 
 BOOK_DIR = 'src/main/resources/%s/tfc/patchouli_books/field_guide/'
+
+CONFIG_VALUE = re.compile(r'\$\(cfg:([^)]*)\)')
 
 
 class Context:
@@ -38,6 +41,9 @@ class Context:
         self.addon_categories: dict[str, str] = {}
 
         self.keybindings: Dict[str, str] = {}
+
+        self.config_defaults = self.loader.load_config_defaults()
+        self.config_values: Dict[str, str] = {}
 
         self.lang = None
         self.lang_keys = {}
@@ -71,17 +77,24 @@ class Context:
         self.sorted_categories = []
 
         self.lang_keys = {}
-        for domain in self.loader.domains:
-            try:
-                self.lang_keys.update(self.loader.load_lang(lang, domain))
-            except InternalError as e:
-                LOG.warning('Translation : %s' % e)
+        # Load en_us first, so untranslated keys fall back to English, as the game does
+        for source_lang in ('en_us', lang) if lang != 'en_us' else ('en_us',):
+            for domain in self.loader.domains:
+                try:
+                    self.lang_keys.update(self.loader.load_lang(source_lang, domain))
+                except InternalError as e:
+                    LOG.warning('Translation : %s' % e)
 
         self.with_local_lang('en_us')  # First load en_us
         self.with_local_lang(lang)  # Then load the current language
 
         # Load keybindings
         self.keybindings = {k[len('field_guide.'):]: self.translate(k) for k in I18n.KEYS}
+
+        self.config_values = {
+            name: self.resolve_component(component)
+            for name, component in self.config_defaults.items()
+        }
 
         return self
 
@@ -116,11 +129,46 @@ class Context:
 
     def format_text(self, buffer: List[str], data: Any, key: str = 'text', search: dict | None = None):
         if key in data:
-            text_formatter.format_text(buffer, data[key], self.keybindings)
+            text = self.substitute_config_values(data[key])
+            text_formatter.format_text(buffer, text, self.keybindings)
             if search is not None:
                 sData = search.copy()
-                sData['content'] = data[key]
+                sData['content'] = text
                 self.search_tree.append(sData)
+
+    def substitute_config_values(self, text: str) -> str:
+        """
+        Replaces $(cfg:<name>) macros with the default value of the config option they name. In game these resolve
+        against the connected server's config, which we have no access to.
+        """
+        def replace(match: re.Match) -> str:
+            name = match.group(1)
+            if name.startswith('temperature:'):
+                # A temperature the book supplied itself. In game it is shown in the reader's chosen unit, but the
+                # site has no reader preference to consult, so it always renders Celsius.
+                return '%s°C' % name[len('temperature:'):]
+            if name not in self.config_values:
+                LOG.warning('Unknown config value $(cfg:%s)' % name)
+                return ''
+            return self.config_values[name]
+
+        return CONFIG_VALUE.sub(replace, text)
+
+    def resolve_component(self, component: Any) -> str:
+        """ Resolves a serialized Component, as written by TFC's data generators, into display text. """
+        if isinstance(component, dict):
+            if 'translate' in component:
+                text = self.lang_keys.get(component['translate'], component.get('fallback', component['translate']))
+                args = tuple(self.resolve_component(arg) for arg in component.get('with', []))
+                if not args:
+                    return text
+                try:
+                    return text % args
+                except TypeError:
+                    LOG.warning('Untranslatable component %s' % component['translate'])
+                    return ' '.join(args)
+            return self.resolve_component(component.get('text', ''))
+        return str(component)
 
     def format_title(self, buffer: List[str], data: Any, key: str = 'title', search: dict | None = None):
         if key in data:
