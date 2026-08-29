@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="野生水果 | TFC Field Guide" />
+    <meta name="description" content="野生水果" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="野生水果 | TFC Field Guide" />
+    <meta property="og:description" content="野生水果" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/image11.png" />
+
+    <title>野生水果 | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">群峦传说 手册</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Search bar-->
+             <li class="nav-item">
+              <form class="d-flex" role="search" onsubmit="handleSearch(event)">
+                <input id="search-box" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+             </li>
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> 版本 1.21.1 - v4.2.9
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 简体中文(中国大陆)
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/the_world/wild_fruits.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world/wild_fruits.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world/wild_fruits.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world/wild_fruits.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world/wild_fruits.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world/wild_fruits.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world/wild_fruits.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world/wild_fruits.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/the_world/wild_fruits.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>目录</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">主页</a></li>
+            <li><a href="../getting_started/">新手入门</a></li>
+<li><a href="../core_mechanics/">Core Mechanics</a></li>
+<li><a href="../the_world/">这个世界</a><ul><li><a href="./geology.html">地质学</a></li>
+<li><a href="./ores_and_minerals.html">矿石和矿物</a></li>
+<li><a href="./flora.html">自然植物</a></li>
+<li><a href="./wild_crops.html">野生作物</a></li>
+<li><a href="./wild_fruits.html">野生水果</a></li>
+<li><a href="./wild_animals.html">野生动物</a></li></ul></li>
+<li><a href="../metalworking/">Metalworking</a></li>
+<li><a href="../food/">Food and Agriculture</a></li>
+<li><a href="../crafting/">Crafting Systems</a></li>
+<li><a href="../mechanics/">杂项</a></li>
+<li><a href="../firmalife/">(Addon) 群峦生活扩展模组</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">这个世界</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">野生水果</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="../../_images/image11.png" alt="野生水果" title="None" /><span>野生水果</span>
+        </h1>
+                <p>许多不同种类的野生水果生长在世界各地。可以直接吃掉它们，或用合适的工具来种植。通常来说，它们会以三种不同的形式出现：<a href="../the_world/wild_fruits.html#fruit_trees">果树</a>、<a href="../the_world/wild_fruits.html#tall_bushes">高大灌木</a>、或<a href="../the_world/wild_fruits.html#small_bushes">小型灌木</a>。<br/>
+<br/>
+所有会结果的植物都有属于自己的生命周期。它们每年都会生长、开花、结果、然后休眠。</p>
+<p>果木的生长是有季节性的。在冬眠的季节中，它们会看上去像枯死了一般。而到了春天，它们则会长出翠绿的新枝，准备开花结果。每种水果的具体结果时间因树而异。另外，果木也会因衰老、或处于不当的气候环境中而死亡。</p>
+<a class="anchor" id="fruit_trees"></a><h5>果树</h5>
+<p><span style="color:#3E8A00;">果树</span>会从一棵小树苗长成高大的果树。果树的树枝是它们最重要的部分，而且只要气候环境合适就会持续生长。随着果树不断成长，它们会在树枝周围长出<span style="color:#3E8A00;">树叶</span>。树叶会在合适的季节中开花结果。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/image12.png" alt="tfc:textures/gui/book/tutorial/fruit_tree.png">
+<div style="text-align: center;"><p>一棵典型的果树。</p>
+</div><p>果树始于<span style="color:#3E8A00;">树苗</span>。只有当该果树的非休眠季节且满足其气候要求时，树苗才会开始生长，种下第一段树干。最终树的大小大致由原始树苗方块中包含的树苗数量决定。树苗越多，树就越大。<br/>
+可以通过<span style="color:#3E8A00;">嫁接</span>在同一方块中添加更多树苗。要嫁接树苗，只需手持树苗，副手拿着<span style="color:#3E8A00;">小刀</span>，然后对着已有的树苗<span style="color:#b0b;">右键</span>。</p>
+<p>要从果树获取树苗，用<span style="color:#3E8A00;">斧</span>破坏“肘部”方块（即一侧和上方都有连接的树枝方块）。树苗也可以放置在树的这些“肘部”位置，只要它们不是太高。这样一棵果树就可以结出多种水果。当树叶方块结果时，用<span style="color:#b0b;">右键</span>即可收获果实。这会获得一个水果，并将植株恢复到生长阶段，直到冬季休眠。</p>
+<p>种植果树时，正确的<a href="../core_mechanics/climate.html#temperature">温度</a>和<a href="../food/hydration.html">湿度</a>至关重要。只有当树木基部（种植树苗处）的年平均温度在该树种范围内时，果树才会生长和结果。同样，湿度由年平均降雨量和树木基部附近的水源决定。</p>
+<hr><a class="anchor" id="cherry"></a><h5>樱桃树</h5>
+<p>可在以下区域找到：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: -5.2°C - 14°C<br/>
+<strong><a href="../core_mechanics/climate.html#rainfall">降雨量</a></strong>: 100 - 350mm<br/>
+<br/>
+生长所需条件：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: -6°C - 15°C<br/>
+<strong><a href="../food/hydration.html">湿度</a></strong>: 7 - 80%<br/>
+<br/>
+樱桃树在一月至三月生长，四月至五月开花，六月结果。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>一棵典型的樱桃树。</p>
+<a class="anchor" id="green_apple"></a><h5>青苹果树</h5>
+<p>可在以下区域找到：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: -10.6°C - 10.4°C<br/>
+<strong><a href="../core_mechanics/climate.html#rainfall">降雨量</a></strong>: 130 - 280mm<br/>
+<br/>
+生长所需条件：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: -12°C - 12°C<br/>
+<strong><a href="../food/hydration.html">湿度</a></strong>: 10 - 75%<br/>
+<br/>
+青苹果树三月至七月生长，八月至九月开花，十月结果。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>一棵典型的青苹果树。</p>
+<a class="anchor" id="lemon"></a><h5>柠檬树</h5>
+<p>可在以下区域找到：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: 7.4°C - 24.8°C<br/>
+<strong><a href="../core_mechanics/climate.html#rainfall">降雨量</a></strong>: 220 - 440mm<br/>
+<br/>
+生长所需条件：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: 6°C - 26°C<br/>
+<strong><a href="../food/hydration.html">湿度</a></strong>: 19 - 95%<br/>
+<br/>
+柠檬树二月至五月生长，六月至七月开花，八月结果。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>一棵典型的柠檬树。</p>
+<a class="anchor" id="olive"></a><h5>橄榄树</h5>
+<p>可在以下区域找到：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: 2°C - 23°C<br/>
+<strong><a href="../core_mechanics/climate.html#rainfall">降雨量</a></strong>: 250 - 450mm<br/>
+<br/>
+生长所需条件：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: 1°C - 24°C<br/>
+<strong><a href="../food/hydration.html">湿度</a></strong>: 22 - 95%<br/>
+<br/>
+橄榄树三月至七月生长，八月至九月开花，十月结果。<br/>
+<br/>
+橄榄可用于生产<a href="../mechanics/lamps.html#olives">橄榄油</a>，可用作灯的燃料。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>一棵典型的橄榄树。</p>
+<a class="anchor" id="orange"></a><h5>橙树</h5>
+<p>可在以下区域找到：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: 9.2°C - 40°C<br/>
+<strong><a href="../core_mechanics/climate.html#rainfall">降雨量</a></strong>: 300 - 500mm<br/>
+<br/>
+生长所需条件：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: 8°C - 41°C<br/>
+<strong><a href="../food/hydration.html">湿度</a></strong>: 27 - 100%<br/>
+<br/>
+橙树三月至六月生长，七月至八月开花，九月结果。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>一棵典型的橙树。</p>
+<a class="anchor" id="peach"></a><h5>桃树</h5>
+<p>可在以下区域找到：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: -3.4°C - 15.8°C<br/>
+<strong><a href="../core_mechanics/climate.html#rainfall">降雨量</a></strong>: 180 - 470mm<br/>
+<br/>
+生长所需条件：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: -5°C - 17°C<br/>
+<strong><a href="../food/hydration.html">湿度</a></strong>: 15 - 95%<br/>
+<br/>
+桃树十二月至三月生长，四月至五月开花，六月结果。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>一棵典型的桃树。</p>
+<a class="anchor" id="plum"></a><h5>李树</h5>
+<p>可在以下区域找到：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: -7°C - 12.2°C<br/>
+<strong><a href="../core_mechanics/climate.html#rainfall">降雨量</a></strong>: 120 - 300mm<br/>
+<br/>
+生长所需条件：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: -8°C - 13°C<br/>
+<strong><a href="../food/hydration.html">湿度</a></strong>: 9 - 75%<br/>
+<br/>
+李树一月至四月生长，五月至六月开花，七月结果。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>一棵典型的李树。</p>
+<a class="anchor" id="red_apple"></a><h5>红苹果树</h5>
+<p>可在以下区域找到：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: -10.6°C - 10.4°C<br/>
+<strong><a href="../core_mechanics/climate.html#rainfall">降雨量</a></strong>: 190 - 310mm<br/>
+<br/>
+生长所需条件：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: -12°C - 12°C<br/>
+<strong><a href="../food/hydration.html">湿度</a></strong>: 16 - 75%<br/>
+<br/>
+红苹果树三月至七月生长，八月至九月开花，十月结果。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>一棵典型的红苹果树。</p>
+<a class="anchor" id="banana"></a><h5>香蕉树</h5>
+<p>Can be found in regions with: <br/>
+<strong><a href="../core_mechanics/climate.html#temperature">Temperature</a></strong>: 11°C - 40°C<br/>
+<strong><a href="../core_mechanics/climate.html#rainfall">Rainfall</a></strong>: 280 - 500mm<br/>
+<br/>
+Conditions required for growth:<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">Temperature</a></strong>: 10°C - 41°C<br/>
+<strong><a href="../food/hydration.html">Hydration</a></strong>: 25 - 100%<br/>
+<br/>
+Bananas grow only vertically, lack leaves, and only fruit at the topmost block. Saplings are dropped from the flowering part of the plant. Once a banana plant is harvested, it dies, and must be replanted in the spring.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>一棵典型的香蕉树。</p>
+<h5>果树</h5>
+<p>果树的结果日历。</p>
+<div class="row"><div class="col-md-9"><figure class="table-figure"><table><thead><tr><th></th><th><p>Jan</p></th><th><p>Feb</p></th><th><p>Mar</p></th><th><p>Apr</p></th><th><p>May</p></th><th><p>Jun</p></th><th><p>Jul</p></th><th><p>Aug</p></th><th><p>Sep</p></th><th><p>Oct</p></th><th><p>Nov</p></th><th><p>Dec</p></th></tr></thead><tbody><tr><td><p>樱桃</p></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>苹果</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>柠檬</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>橄榄</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>橙子</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>桃子</p></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td></tr><tr><td><p>李子</p></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>香蕉</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr></tbody></table></figure></div><div class="col-md-3"><h4>Legend</h4>
+            <div class="item-header">
+                <span style="background-color:#a8986a"></span>
+                <p>休眠</p>
+            </div>
+            
+            <div class="item-header">
+                <span style="background-color:#6ab553"></span>
+                <p>健康</p>
+            </div>
+            
+            <div class="item-header">
+                <span style="background-color:#cca0db"></span>
+                <p>开花</p>
+            </div>
+            
+            <div class="item-header">
+                <span style="background-color:#a217ff"></span>
+                <p>结果</p>
+            </div>
+            </div></div><hr><a class="anchor" id="tall_bushes"></a><h5>大型灌木</h5>
+<p>某些水果会长在<span style="color:#3E8A00;">大型灌木</span>中。这种灌木可以向各个方向生长并扩散。它们既可以向上生长，也可以向四周生长出新的<span style="color:#3E8A00;">藤条</span>。藤条在一段时间之后也会变成新的灌木。灌木直到完全成熟之前都会试图扩张。使用锋利工具来破坏这些灌木有概率掉落一株灌木（破坏完全成熟的灌木则必定掉落）。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/image13.png" alt="tfc:textures/gui/book/tutorial/berry_bush.png">
+<div style="text-align: center;"><p>一丛野生的大型灌木。</p>
+</div><p>大型灌木必须在有方块供其藤条扎根时才会扩张。换句话说，想让它扩散，则必须在它周围正下方放一块实心方块。最好还要把地整平，并清掉附近的杂草杂物。</p>
+<p>与果树类似，灌木在确定<a href="../food/hydration.html">湿度</a>和<a href="../core_mechanics/climate.html#temperature">温度</a>时以植株的基部方块为准，只要年平均降雨量和温度合适就会生长。<br/>
+任何完全长成的灌木块都可以结出浆果，用<span style="color:#b0b;">右键</span>即可收获。</p>
+<a class="anchor" id="blackberry"></a><h5>黑莓灌木</h5>
+<p>可在以下区域找到：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: -5.2°C - 19.4°C<br/>
+<strong><a href="../core_mechanics/climate.html#rainfall">降雨量</a></strong>: 200 - 500mm<br/>
+<br/>
+生长所需条件：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: -6°C - 21°C<br/>
+<strong><a href="../food/hydration.html">湿度</a></strong>: 17 - 100%<br/>
+<br/>
+黑莓灌木二月至五月生长，六月至七月开花，八月结果。<br/>
+<br/>
+它们可以在树木稀少的地区找到。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>一丛典型的黑莓灌木。</p>
+<a class="anchor" id="raspberry"></a><h5>树莓灌木</h5>
+<p>可在以下区域找到：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: -10.6°C - 14°C<br/>
+<strong><a href="../core_mechanics/climate.html#rainfall">降雨量</a></strong>: 180 - 450mm<br/>
+<br/>
+生长所需条件：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: -12°C - 15°C<br/>
+<strong><a href="../food/hydration.html">湿度</a></strong>: 15 - 95%<br/>
+<br/>
+树莓灌木四月至七月生长，八月至九月开花，十月结果。<br/>
+<br/>
+它们可以在树木稀少的地区找到。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>一丛典型的树莓灌木。</p>
+<a class="anchor" id="blueberry"></a><h5>蓝莓灌木</h5>
+<p>可在以下区域找到：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: -8.8°C - 8.6°C<br/>
+<strong><a href="../core_mechanics/climate.html#rainfall">降雨量</a></strong>: 150 - 400mm<br/>
+<br/>
+生长所需条件：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: -10°C - 10°C<br/>
+<strong><a href="../food/hydration.html">湿度</a></strong>: 12 - 90%<br/>
+<br/>
+蓝莓灌木二月至五月生长，六月至七月开花，八月结果。<br/>
+<br/>
+它们可以在树木稀少的地区找到。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>一丛典型的蓝莓灌木。</p>
+<a class="anchor" id="elderberry"></a><h5>接骨木灌木</h5>
+<p>可在以下区域找到：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: -5.2°C - 15.8°C<br/>
+<strong><a href="../core_mechanics/climate.html#rainfall">降雨量</a></strong>: 120 - 380mm<br/>
+<br/>
+生长所需条件：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: -6°C - 17°C<br/>
+<strong><a href="../food/hydration.html">湿度</a></strong>: 9 - 85%<br/>
+<br/>
+接骨木灌木二月至五月生长，六月至七月开花，八月结果。<br/>
+<br/>
+它们可以在树木稀少的地区找到。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>一丛典型的接骨木灌木。</p>
+<h5>大型浆果灌木</h5>
+<p>大型浆果灌木的结果日历。</p>
+<div class="row"><div class="col-md-9"><figure class="table-figure"><table><thead><tr><th></th><th><p>Jan</p></th><th><p>Feb</p></th><th><p>Mar</p></th><th><p>Apr</p></th><th><p>May</p></th><th><p>Jun</p></th><th><p>Jul</p></th><th><p>Aug</p></th><th><p>Sep</p></th><th><p>Oct</p></th><th><p>Nov</p></th><th><p>Dec</p></th></tr></thead><tbody><tr><td><p>黑莓</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>树莓</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>蓝莓</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>接骨木莓</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr></tbody></table></figure></div><div class="col-md-3"><h4>Legend</h4>
+            <div class="item-header">
+                <span style="background-color:#a8986a"></span>
+                <p>休眠</p>
+            </div>
+            
+            <div class="item-header">
+                <span style="background-color:#6ab553"></span>
+                <p>健康</p>
+            </div>
+            
+            <div class="item-header">
+                <span style="background-color:#cca0db"></span>
+                <p>开花</p>
+            </div>
+            
+            <div class="item-header">
+                <span style="background-color:#a217ff"></span>
+                <p>结果</p>
+            </div>
+            </div></div><hr><a class="anchor" id="small_bushes"></a><h5>小型灌木</h5>
+<p><span style="color:#3E8A00;">小型灌木</span>是一种低矮的果木，生成在森林中。如果附近没有太多其他灌木，小型灌木偶尔会扩散到周围的方块。<br/>
+<br/>
+小型灌木会经历三个生长阶段，成熟后只需用<span style="color:#b0b;">右键</span>即可收获。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>三种不同大小的健康小型灌木</p>
+<a class="anchor" id="bunchberry"></a><h5>御膳橘灌木</h5>
+<p>可在以下区域找到：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: -14.2°C - 1.4°C<br/>
+<strong><a href="../core_mechanics/climate.html#rainfall">降雨量</a></strong>: 280 - 500mm<br/>
+<br/>
+生长所需条件：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: -15°C - 3°C<br/>
+<strong><a href="../food/hydration.html">湿度</a></strong>: 25 - 100%<br/>
+<br/>
+御膳橘灌木五月至七月生长，八月至九月开花，十月结果。<br/>
+<br/>
+它们可以在森林中找到。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>御膳橘灌木的月度生长阶段。</p>
+<a class="anchor" id="gooseberry"></a><h5>鹅莓灌木</h5>
+<p>可在以下区域找到：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: -7°C - 12.2°C<br/>
+<strong><a href="../core_mechanics/climate.html#rainfall">降雨量</a></strong>: 200 - 500mm<br/>
+<br/>
+生长所需条件：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: -8°C - 13°C<br/>
+<strong><a href="../food/hydration.html">湿度</a></strong>: 17 - 100%<br/>
+<br/>
+鹅莓灌木四月至七月生长，八月至九月开花，十月结果。<br/>
+<br/>
+它们可以在森林中找到。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>鹅莓灌木的月度生长阶段。</p>
+<a class="anchor" id="snowberry"></a><h5>雪莓灌木</h5>
+<p>可在以下区域找到：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: -10.6°C - 5°C<br/>
+<strong><a href="../core_mechanics/climate.html#rainfall">降雨量</a></strong>: 200 - 500mm<br/>
+<br/>
+生长所需条件：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: -12°C - 6°C<br/>
+<strong><a href="../food/hydration.html">湿度</a></strong>: 17 - 100%<br/>
+<br/>
+雪莓灌木三月至六月生长，七月至八月开花，九月结果。<br/>
+<br/>
+它们可以在森林中找到。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>雪莓灌木的月度生长阶段。</p>
+<a class="anchor" id="cloudberry"></a><h5>云莓灌木</h5>
+<p>可在以下区域找到：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: -14.2°C - 6.8°C<br/>
+<strong><a href="../core_mechanics/climate.html#rainfall">降雨量</a></strong>: 80 - 320mm<br/>
+<br/>
+生长所需条件：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: -15°C - 8°C<br/>
+<strong><a href="../food/hydration.html">湿度</a></strong>: 5 - 80%<br/>
+<br/>
+云莓灌木二月至五月生长，六月至八月开花，九月结果。<br/>
+<br/>
+它们可以在森林中找到。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>云莓灌木的月度生长阶段。</p>
+<a class="anchor" id="strawberry"></a><h5>草莓灌木</h5>
+<p>可在以下区域找到：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: -1.6°C - 17.6°C<br/>
+<strong><a href="../core_mechanics/climate.html#rainfall">降雨量</a></strong>: 140 - 400mm<br/>
+<br/>
+生长所需条件：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: -3°C - 19°C<br/>
+<strong><a href="../food/hydration.html">湿度</a></strong>: 11 - 90%<br/>
+<br/>
+草莓灌木十月至十二月生长，一月至二月开花，三月结果。<br/>
+<br/>
+它们可以在森林中找到。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>草莓灌木的月度生长阶段。</p>
+<a class="anchor" id="wintergreen_berry"></a><h5>冬青莓灌木</h5>
+<p>可在以下区域找到：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: -8.8°C - 6.8°C<br/>
+<strong><a href="../core_mechanics/climate.html#rainfall">降雨量</a></strong>: 100 - 370mm<br/>
+<br/>
+生长所需条件：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: -10°C - 8°C<br/>
+<strong><a href="../food/hydration.html">湿度</a></strong>: 7 - 85%<br/>
+<br/>
+冬青莓灌木五月至九月生长，十月至十一月开花，十二月结果。<br/>
+<br/>
+它们可以在森林中找到。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>冬青莓灌木的月度生长阶段。</p>
+<a class="anchor" id="cranberry"></a><h5>蔓越莓灌木</h5>
+<p>可在以下区域找到：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: -14.2°C - 8.6°C<br/>
+<strong><a href="../core_mechanics/climate.html#rainfall">降雨量</a></strong>: 250 - 500mm<br/>
+<br/>
+生长所需条件：<br/>
+<strong><a href="../core_mechanics/climate.html#temperature">温度</a></strong>: -15°C - 10°C<br/>
+<strong><a href="../food/hydration.html">湿度</a></strong>: 25 - 100%<br/>
+<br/>
+蔓越莓灌木三月至六月生长，七月至八月开花，九月结果。<br/>
+<br/>
+它们可以在森林中找到。与大多数小型灌木不同，蔓越莓灌木在水下生长。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>蔓越莓灌木的月度生长阶段。</p>
+<h5>小型浆果灌木</h5>
+<p>小型浆果灌木的结果日历。</p>
+<div class="row"><div class="col-md-9"><figure class="table-figure"><table><thead><tr><th></th><th><p>Jan</p></th><th><p>Feb</p></th><th><p>Mar</p></th><th><p>Apr</p></th><th><p>May</p></th><th><p>Jun</p></th><th><p>Jul</p></th><th><p>Aug</p></th><th><p>Sep</p></th><th><p>Oct</p></th><th><p>Nov</p></th><th><p>Dec</p></th></tr></thead><tbody><tr><td><p>御膳橘</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>鹅莓</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>雪莓</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>云莓</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>草莓</p></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td></tr><tr><td><p>冬青莓</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td></tr><tr><td><p>蔓越莓</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr></tbody></table></figure></div><div class="col-md-3"><h4>Legend</h4>
+            <div class="item-header">
+                <span style="background-color:#a8986a"></span>
+                <p>休眠</p>
+            </div>
+            
+            <div class="item-header">
+                <span style="background-color:#6ab553"></span>
+                <p>健康</p>
+            </div>
+            
+            <div class="item-header">
+                <span style="background-color:#cca0db"></span>
+                <p>开花</p>
+            </div>
+            
+            <div class="item-header">
+                <span style="background-color:#a217ff"></span>
+                <p>结果</p>
+            </div>
+            </div></div><hr>
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'zh_cn';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+    <script src="/Field-Guide/static/search.js"></script>
+  </body>
+</html>

@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Пчеловодство | TFC Field Guide" />
+    <meta name="description" content="Пчеловодство" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="Пчеловодство | TFC Field Guide" />
+    <meta property="og:description" content="Пчеловодство" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/placeholder_64.png" />
+
+    <title>Пчеловодство | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">Справочник TerraFirmaCraft</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Search bar-->
+             <li class="nav-item">
+              <form class="d-flex" role="search" onsubmit="handleSearch(event)">
+                <input id="search-box" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+             </li>
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Версия 1.21.1 - v4.2.9
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> Русский
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/firmalife/beekeeping.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/firmalife/beekeeping.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/firmalife/beekeeping.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/firmalife/beekeeping.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/firmalife/beekeeping.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/firmalife/beekeeping.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/firmalife/beekeeping.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/firmalife/beekeeping.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/firmalife/beekeeping.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Содержание</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Главная</a></li>
+            <li><a href="../getting_started/">Начало выживания</a></li>
+<li><a href="../core_mechanics/">Core Mechanics</a></li>
+<li><a href="../the_world/">Окружающий мир</a></li>
+<li><a href="../metalworking/">Metalworking</a></li>
+<li><a href="../food/">Food and Agriculture</a></li>
+<li><a href="../crafting/">Crafting Systems</a></li>
+<li><a href="../mechanics/">Разное</a></li>
+<li><a href="../firmalife/">(Дополнение) Firmalife</a><ul><li><a href="./differences_from_tfc.html">Отличия от TFC</a></li>
+<li><a href="./cheese.html">Сыр</a></li>
+<li><a href="./climate_station.html">Климатическая станция</a></li>
+<li><a href="./cellar.html">Погреба</a></li>
+<li><a href="./food_shelves.html">Полки для продуктов</a></li>
+<li><a href="./hangers.html">Вешалки</a></li>
+<li><a href="./jarbnet.html">Стеллажи для банок</a></li>
+<li><a href="./greenhouse.html">Теплица</a></li>
+<li><a href="./irrigation.html">Орошение</a></li>
+<li><a href="./planters.html">Лотки для рассады</a></li>
+<li><a href="./beekeeping.html">Пчеловодство</a></li>
+<li><a href="./beekeeping_reference.html">Справочник по пчеловодству</a></li>
+<li><a href="./stainless_steel.html">Нержавеющая сталь</a></li>
+<li><a href="./drying.html">Сушка</a></li>
+<li><a href="./smoking.html">Копчение</a></li>
+<li><a href="./ovens.html">Печи</a></li>
+<li><a href="./oven_appliances.html">Устройства для печей</a></li>
+<li><a href="./bread.html">Хлеб</a></li>
+<li><a href="./more_fertilizer.html">Дополнительные варианты удобрений</a></li>
+<li><a href="./mixing_bowl.html">Смесительная чаша</a></li>
+<li><a href="./herbs_and_spices.html">Травы и специи</a></li>
+<li><a href="./fruit_trees.html">Фрукты Firmalife</a></li>
+<li><a href="./berry_bushes.html">Ягодные кусты</a></li>
+<li><a href="./chocolate.html">Шоколад</a></li>
+<li><a href="./wine.html">Виноделие</a></li>
+<li><a href="./wine_consumption.html">Потребление вина</a></li>
+<li><a href="./pie.html">Пирог</a></li>
+<li><a href="./pizza.html">Пицца</a></li>
+<li><a href="./pasta.html">Паста</a></li>
+<li><a href="./burritos_and_tacos.html">Буррито и Тако</a></li></ul></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">(Дополнение) Firmalife</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Пчеловодство</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="../../_images/placeholder_64.png" alt="Пчеловодство" title="Деревянный улей" /><span>Пчеловодство</span>
+        </h1>
+                <p><span style="color:#3E8A00;">Пчёлы</span> — это дикие насекомые, которых можно разводить как скот. Они ценятся за способность производить мёд, пчелиный воск и другие продукты. Всем пчёлам нужно жить в каком-либо гнезде. Этот раздел научит вас всему, что нужно знать для ухода и содержания пчёл.</p>
+<h5>Дикий улей</h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block53.png" alt="Block Visualization">
+<div style="text-align: center;"><p>Дикие ульи появляются в лесах при температуре 5–30 °C и уровне грунтовых вод 150–450 мм.</p>
+</div><p>Bees, in general, are active above 7°C, though hardier species tolerate colder temperatures. A <span style="color:#3E8A00;">Wild Beehive</span> will always contain bees upon world generation, and will not lose the bees unless disturbed. If time has passed and the bees are active, the wild beehive will show that it is dripping with honey.</p>
+<p>Разрушение дикого улья или дерева, к которому он прикреплён, всегда заставит пчёл атаковать близлежащих игроков. Это проявляется в виде эффекта <span style="color:#3E8A00;">Роя</span>. Эффект пчелиного роя можно смягчить, надев полный комплект <span style="color:#3E8A00;">пчелиной брони</span> или уйдя под воду. Дикие ульи дропают <span style="color:#3E8A00;">Мёд</span>, <span style="color:#3E8A00;">Пчелиный воск</span> и полезный предмет <span style="color:#3E8A00;">Дикие соты</span>.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Солома" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item12.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #c:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item9.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Солома" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item12.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Солома" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item12.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Солома" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item12.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Солома" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item12.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #c:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item9.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Солома" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item12.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Плетёный улей" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">Плетёный улей</span> — это самый маленький искусственный улей.</p>
+<p>Самая полезная особенность плетёного улья — его можно поднять и переместить. Однако игрок может нести только один улей за раз, не становясь <span style="color:#3E8A00;">перегруженным</span>. Если дикий улей в радиусе 15 блоков <span style="color:#3E8A00;">активен</span>, в течение дня он должен начать <span style="color:#3E8A00;">рой</span>. Рой обозначается линией частиц между двумя ульями.</p>
+<p>Когда роение завершится, плетёный улей будет содержать <span style="color:#3E8A00;">Матку</span>. Держа мотыгу и глядя на улей, вы увидите эту информацию. Матка представляет существование пчелиной колонии, и у неё есть ряд параметров: возраст, вид, черты, а также любые заболевания или инфекции колонии.</p>
+<p>Сами по себе плетёные ульи лишь умеренно полезны для содержания пчёл. Это потому, что они могут содержать только 1 единицу мёда за раз. <span style="color:#3E8A00;">Сырой мёд</span> можно добавить или удалить из улья с помощью <span style="color:#b0b;">ПКМ</span>. Обратите внимание: чтобы не злить пчёл, собирайте урожай только когда на улице темно.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item52.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item52.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item52.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item52.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item52.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Рамка для улья" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/item375.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item52.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Рамка для улья" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item375.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item52.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item52.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Сноп соломы" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item290.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item52.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item52.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Рамка для улья" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item375.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item52.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Деревянный улей" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">Деревянные ульи</span> — это основное устройство для пчеловодства. Они содержат до четырёх <span style="color:#3E8A00;">рамок</span>. В рамке может находиться 1 единица <span style="color:#3E8A00;">сырого мёда</span>. Чтобы переместить пчёл в деревянный улей, поместите ваш <span style="color:#3E8A00;">плетёный улей</span> с маткой внутри в радиусе 5 блоков от него и убедитесь, что в улье есть хотя бы одна рамка и достаточно тепло. Рой последует вскоре после этого и продлится день.</p>
+<p>Ульи «знают» о квадратном радиусе в 5 блоков вокруг себя. Для производства мёда в этом радиусе должно быть не менее 10 цветов. Шанс производства мёда растёт с количеством цветов, максимум — 60. Черты пчёл также влияют на шанс производства мёда. Мёд можно откладывать только в <span style="color:#3E8A00;">пустую рамку улья</span>.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #c:tools/knife" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item144.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Заполненная рамка для улья" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item376.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="None" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">Соскабливание</span> рамки улья (также работает правый клик по предмету ножом) даёт <span style="color:#3E8A00;">Пчелиный воск</span>.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item52.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Латунная шестерня" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item78.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item52.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item52.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Сноп соломы" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item290.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item52.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item52.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Латунная шестерня" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item78.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item52.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Центрифуга" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">Центрифуга</span> используется для переработки <span style="color:#3E8A00;">соскобленных рамок улья</span> в <span style="color:#3E8A00;">сырой мёд</span>.</p>
+<p><span style="color:#3E8A00;">Центрифуга</span> может управляться через <span style="color:#b0b;">ПКМ</span> или через механическую энергию от оси над блоком. <span style="color:#b0b;">ПКМ</span>, чтобы поместить соскобленные рамки улья внутрь. <span style="color:#3E8A00;">Сырой мёд</span> появится снаружи центрифуги по завершении. Оставшиеся рамки можно повторно использовать в улье.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Рамка для улья" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item375.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Сахар" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item378.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Рамка для улья с сахаром" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/item377.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Рамка для улья" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item375.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Сырой мёд" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item380.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Рамка для улья с мёдом" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/item379.png" />
+                </div>
+            </div>
+        </div>
+        <p>Пчёлы производят мёд не только для вас, но и для выживания! Когда у пчёл нет доступных рамок или слишком холодно (смотрите подсказку мотыги), они будут потреблять мёд каждые 12 дней по умолчанию. Когда мёд заканчивается, у них каждый день есть шанс <span style="color:#3E8A00;">погибнуть</span>.</p>
+<p><span style="color:#3E8A00;">Рамки улья с сахаром</span>, а также вручную заполненные <span style="color:#3E8A00;">заполненные рамки улья</span> можно вручную добавлять в ульи, чтобы помочь пчёлам пережить зиму. Поэтому плетёным ульям трудно выживать зимой — они могут содержать только одну единицу мёда и не имеют рамок.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Рамка для улья" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item375.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Шерсть" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item222.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Утеплённая рамка для улья" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/item381.png" />
+                </div>
+            </div>
+        </div>
+        <p>Добавление <span style="color:#3E8A00;">изолирующей рамки улья</span> добавляет 2 °С дополнительной устойчивости к температуре. Добавление нескольких не даёт дополнительного эффекта.</p>
+<p>Колонии всё ещё могут <span style="color:#3E8A00;">роиться</span> из деревянных ульев. Полезный тип роения включает <span style="color:#3E8A00;">разделение</span> улья. Улей, которому не менее 24 дней (по умолчанию), тёплый, полный мёда и свободный от <span style="color:#3E8A00;">генетических заболеваний</span>, может разделиться на две новые колонии, если рядом доступен другой улей. Это также приводит к <span style="color:#3E8A00;">генетической мутации</span>.</p>
+<p>Роение также может быть вызвано нехваткой пищи в улье. Если улей видит другой улей с мёдом, а у самого его нет, он в некоторых случаях попытается роиться к тому улью. Пчёлы, заражённые паразитом <span style="color:#3E8A00;">Варроа</span>, также будут пытаться вторгаться в другие ульи, захватывая их.</p>
+<p>Если диких пчёл нет, пчёл также можно привлечь к плетёным ульям с помощью <span style="color:#3E8A00;">приманки для пчёл</span>. Это <span style="color:#3E8A00;">дикие соты</span> и <span style="color:#3E8A00;">ароматические соты</span>. Добавьте их в <span style="color:#3E8A00;">плетёный улей</span> с помощью <span style="color:#b0b;">ПКМ</span> и окружите его не менее чем 30 цветами. В этом случае есть шанс 1/8 в день привлечь пчелу.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Сахар" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item378.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Сахар" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item378.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Сахар" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item378.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Жёлтый краситель" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item383.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Жёлтый краситель" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item383.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Жёлтый краситель" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item383.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #firmalife:herbs" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item384.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #firmalife:herbs" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item384.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #firmalife:herbs" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item384.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Ароматные соты" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/item382.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">Ароматические соты</span> — это альтернатива диким сотам, изготавливаемая из трав.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Сырой мёд" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item380.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Сырой мёд" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item380.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Сырой мёд" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item380.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Сырой мёд" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item380.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Банка с крышкой" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item386.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Сырой мёд" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item380.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Сырой мёд" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item380.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Сырой мёд" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item380.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Сырой мёд" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item380.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Банка меда" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/item385.png" />
+                </div>
+            </div>
+        </div>
+        <p>Мёд хранится вечно, если хранить его в <span style="color:#3E8A00;">банке</span>.</p>
+<p>Эта глава охватила основные аспекты пчеловодства. Информацию о видах, чертах, генетических заболеваниях и паразитарных инфекциях см. в следующей главе: <a href="../firmalife/beekeeping_reference.html">Справочник по пчеловодству</a>.</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> Документация API
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'ru_ru';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+    <script src="/Field-Guide/static/search.js"></script>
+  </body>
+</html>

@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TerraFirmaCraft 도감</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft 도감</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> 버전 1.18.2 - v2.2.30
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 한국어
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/getting_started\pottery.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\pottery.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\pottery.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\pottery.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\pottery.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\pottery.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\pottery.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\pottery.html" class="dropdown-item">繁體中文(台灣)</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>목차</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">색인</a></li>
+            <li><a href="../the_world/">세계</a></li>
+<li><a href="../getting_started/">시작하기</a><ul><li><a href="./introduction.html">소개</a></li>
+<li><a href="./firepit.html">최초의 불</a></li>
+<li><a href="./pottery.html">도자기</a></li>
+<li><a href="./pit_kiln.html">구덩이 가마</a></li>
+<li><a href="./finding_ores.html">광석, 금속 그리고 주조</a></li>
+<li><a href="./primitive_alloys.html">기초 합금</a></li>
+<li><a href="./primitive_anvils.html">기초적인 모루</a></li>
+<li><a href="./building_materials.html">건축 블록</a></li>
+<li><a href="./a_place_to_sleep.html">잠자리</a></li>
+<li><a href="./size_and_weight.html">크기와 무게</a></li>
+<li><a href="./food_and_water.html">음식과 물</a></li></ul></li>
+<li><a href="../mechanics/">심화 기술</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">시작하기</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">도자기</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\item25.png" alt="도자기" title="작은 항아리" /><span>도자기</span>
+        </h1>
+                <p><span style="color:#3E8A00;">점토</span>는 굉장히 유용한 균형 잡힌 재료로, 도자기를 만드는 데 쓰일 수 있습니다. 점토를 처음으로 찾는 것은 쉬운 일이 아닐 수 있습니다. 점토는 일반적으로 잔디에 가려져 있지만, 다음의 장소에서 주로 발견됩니다. <a href="../the_world/climate.html#rainfall">연 강수량</a>이 175mm 이상인 곳에서는 점토를 어디서나 찾을 수 있지만, 보통 특정 <span style="color:#3E8A00;">식물이</span> 점토의 위치를 나타냅니다.</p>
+<h5>점토 표지 식물</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p>점토 표지 식물의 아래에 있는 점토.</p>
+<p><span style="color:#3E8A00;">개고사리</span>, <span style="color:#3E8A00;">칸나</span>, <span style="color:#3E8A00;">미역취</span>, <span style="color:#3E8A00;">팜파스풀</span>, <span style="color:#3E8A00;">러시안세이지</span>, 그리고 <span style="color:#3E8A00;">물칸나</span>는 모두 근처에 점토가 있다는 것을 의미할 수도 있습니다. 점토는 보통 강이나 호수, 연못 등 물 근처에서 발견됩니다.<br/>
+<br/>
+돌멩이와 같이, 점토는 쳐서 새로운 아이템을 만들 수 있습니다. 점토를 치기 위해서는 5개의 점토가 필요합니다. 돌멩이와는 달리, 만약 실수한다면 창을 닫았다 열어서 다시 처음으로 돌아갈 수 있습니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image23.png" alt="tfc:textures/gui/book/gui/clay_knapping.png">
+<div style="text-align: center;"><p>떼기 인터페이스.</p>
+</div><a class="anchor" id="vessel"></a><h5>작은 항아리</h5>
+<p>작은 항아리는 다른 도자기 아이템들과 같이 <a href="https://ko.wikipedia.org/wiki/%EB%8F%84%EC%9E%90%EA%B8%B0">구워져야</a> 합니다. 점토를 굽는 것은 점토가 단단한 <span style="color:#3E8A00;">도자기</span>으로 변할 때까지 <a href="../mechanics/heating.html">가열하는</a> 것입니다. 이를 위해서는 <span style="color:#3E8A00;">1200°C</span>까지 온도를 올려야 합니다.<br/>
+<br/>
+초반의 게임에서 이 온도를 달성하기 위해, 당신에게는 <a href="../getting_started/pit_kiln.html">구덩이 가마</a>가 필요할 것입니다.</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image24.png" alt="Recipe: tfc:clay_knapping/vessel">
+        </div>
+    </div>
+</div>
+<p>점토로 작은 항아리를 만드는 방법.</p>
+<a class="anchor" id="jug"></a><h5>주전자</h5>
+<p>또 다른 유용한 도자기 아이템은 <span style="color:#3E8A00;">주전자</span>입니다. 주전자로는 민물과 같은 액체를 담아서 <span style="color:#3E8A00;">마실</span>수 있습니다.<br/>
+<br/>
+주전자를 사용하려면 단순히 액체 블록에 대고 <span style="color:#b0b;">오른쪽 버튼</span>을 누르면 됩니다. 그 후에 주전자를 사용하면 마실 수 있습니다. 주전자에는 액체를 <span style="color:#3E8A00;">100 mB</span>까지 담을 수 있습니다.</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image9.png" alt="Recipe: tfc:clay_knapping/jug">
+        </div>
+    </div>
+</div>
+<p>점토로 주전자를 만드는 방법.</p>
+<a class="anchor" id="mold"></a><h5>금형</h5>
+<p>점토는 또한 <span style="color:#3E8A00;">금형</span>을 만들기 위해서도 필요합니다. 금형에는 녹은 금속을 부어 금형의 모양대로 굳힐 수 있습니다. 아이템은 (그리고 운이 좋다면 금형도) <span style="color:#b0b;">오른쪽 버튼</span>을 눌러 돌려받을 수 있습니다.<br/>
+<br/>
+가장 간단한 금형은 오른쪽에 있는 주괴 금형입니다.</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image25.png" alt="Recipe: tfc:clay_knapping/ingot_mold">
+        </div>
+    </div>
+</div>
+<p>점토로 주괴 금형을 만드는 방법.</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="굽지 않은 주괴 금형" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item26.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="주괴 금형" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item27.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-yellow">
+            <p>연노랑****</p>
+        </div>
+        <p>금형을 사용하기 위해서는 다른 도자기 아이템들과 같이 <a href="../getting_started/pit_kiln.html">구덩이 가마</a> 등지에서 구워야 합니다.<br/>
+<br/>
+금형을 구우면 녹은 금속을 안에 부을 수 있습니다. 금속이 충분히 식은 후에는 금형에서 다시 꺼낼 수 있습니다.</p>
+<h5>주조</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="이 아이템을 확인하려면 Minecraft에서 도감을 확인하세요.">아이템: <code>tfc:ceramic/ingot_mold{tank:{"Amount":100</code>, <code>"FluidName":"tfc:metal/copper"}}</code></span></p>
+        </div>
+        <p>다음 페이지에서는 다양한 도구를 만들기 위한 점토 제작법을 보여줍니다.</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image26.png" alt="Recipe: tfc:clay_knapping/propick_head_mold">
+        </div>
+    </div>
+</div>
+<p><a href="../mechanics/prospecting.html#propick">탐색기</a>는 많은 양의 광석을 찾기 위해서 필수적인 도구입니다.</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image27.png" alt="Recipe: tfc:clay_knapping/pickaxe_head_mold">
+        </div>
+    </div>
+</div>
+<p><span style="color:#3E8A00;">곡괭이</span> 입니다! 채굴과 떼려야 뗄 수 없는 도구이죠.</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image28.png" alt="Recipe: tfc:clay_knapping/saw_blade_mold">
+        </div>
+    </div>
+</div>
+<p><span style="color:#3E8A00;">톱</span>은 <span style="color:#3E8A00;">작업대</span>나 <a href="../mechanics/support_beams.html">지지대</a>와 같은 많은 목제 장치를 만드는 데 필요한 도구입니다.</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image29.png" alt="Recipe: tfc:clay_knapping/scythe_blade_mold">
+        </div>
+    </div>
+</div>
+<p><span style="color:#3E8A00;">낫</span>은 3x3x3 공간 주변의 식물과 나뭇잎을 제거하는 도구입니다!</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image30.png" alt="Recipe: tfc:clay_knapping/chisel_head_mold">
+        </div>
+    </div>
+</div>
+<p><a href="../mechanics/chisel.html">끌</a>은 블록들을 다듬고 많은 장식 블록을 만들 수 있는 도구입니다.</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image31.png" alt="Recipe: tfc:clay_knapping/axe_head_mold">
+        </div>
+    </div>
+</div>
+<p><span style="color:#3E8A00;">도끼</span>는 나무를 베어버리는 도구입니다. 참고: 돌 도끼는 금속 도끼보다 효율이 더 낮습니다!</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image32.png" alt="Recipe: tfc:clay_knapping/hammer_head_mold">
+        </div>
+    </div>
+</div>
+<p><span style="color:#3E8A00;">망치</span>는 <a href="../mechanics/anvils.html">모루</a>를 만들고 사용하기 위한 도구입니다.</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image33.png" alt="Recipe: tfc:clay_knapping/knife_blade_mold">
+        </div>
+    </div>
+</div>
+<p><span style="color:#3E8A00;">칼</span>은 무기로 사용되거나, 식물을 자르는 데 사용되는 도구입니다.</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image34.png" alt="Recipe: tfc:clay_knapping/hoe_head_mold">
+        </div>
+    </div>
+</div>
+<p><span style="color:#3E8A00;">괭이</span>는 <a href="../mechanics/crops.html">작물</a>을 심고 관리하는 데 사용되는 도구입니다.</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image35.png" alt="Recipe: tfc:clay_knapping/shovel_head_mold">
+        </div>
+    </div>
+</div>
+<p><span style="color:#3E8A00;">삽</span>은 오로지 땅을 파기 위해 존재하는 도구입니다.</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API 뮨서
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'ko_kr';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+  </body>
+</html>

@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="地质学 | TFC Field Guide" />
+    <meta name="description" content="地质学" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="地质学 | TFC Field Guide" />
+    <meta property="og:description" content="地质学" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/item17.png" />
+
+    <title>地质学 | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">群峦传说 手册</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Search bar-->
+             <li class="nav-item">
+              <form class="d-flex" role="search" onsubmit="handleSearch(event)">
+                <input id="search-box" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+             </li>
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> 版本 1.21.1 - v4.2.9
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 简体中文(中国大陆)
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/the_world/geology.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world/geology.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world/geology.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world/geology.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world/geology.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world/geology.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world/geology.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world/geology.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/the_world/geology.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>目录</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">主页</a></li>
+            <li><a href="../getting_started/">新手入门</a></li>
+<li><a href="../core_mechanics/">Core Mechanics</a></li>
+<li><a href="../the_world/">这个世界</a><ul><li><a href="./geology.html">地质学</a></li>
+<li><a href="./ores_and_minerals.html">矿石和矿物</a></li>
+<li><a href="./flora.html">自然植物</a></li>
+<li><a href="./wild_crops.html">野生作物</a></li>
+<li><a href="./wild_fruits.html">野生水果</a></li>
+<li><a href="./wild_animals.html">野生动物</a></li></ul></li>
+<li><a href="../metalworking/">Metalworking</a></li>
+<li><a href="../food/">Food and Agriculture</a></li>
+<li><a href="../crafting/">Crafting Systems</a></li>
+<li><a href="../mechanics/">杂项</a></li>
+<li><a href="../firmalife/">(Addon) 群峦生活扩展模组</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">这个世界</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">地质学</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="../../_images/item17.png" alt="地质学" title="天然页岩" /><span>地质学</span>
+        </h1>
+                <p>群峦传说的世界被划分为几个巨大的大陆——这些陆地宽达数千米，并被海洋分隔开来。在这些大陆上，你可以找到山脉、河流以及许多其他地貌环境。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/image9.png" alt="tfc:textures/gui/book/biomes/regions.png">
+<div style="text-align: center;"><p>从宏观尺度观察的典型群峦传说世界。</p>
+</div><a class="anchor" id="rocks"></a><h5>岩层</h5>
+<p>这个世界也是由不同类型的<span style="color:#3E8A00;">岩石</span>构成的。一块同质的岩石区域有时会广达一公里，且根据深度的不同，会有其他两到三种不同的岩石构成分明的岩石层。不同的岩石类型中包含了不同的<a href="../the_world/ores_and_minerals.html">矿石</a>，且大部分矿石只会出现在特定的岩石类型中。若想找到它们，就必须先找到正确的岩石类型。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/image10.png" alt="tfc:textures/gui/book/biomes/rock_layers.png">
+<div style="text-align: center;"><p>群峦传说世界的剖面图。</p>
+</div><h5>海底</h5>
+<p>海底由<a href="../the_world/geology.html#igneous_extrusive">喷出岩</a>构成——这类岩石由岩浆迅速冷却形成。喷出岩之下通常会出现相同<span style="color:#b0b;">等级</span>的<a href="../the_world/geology.html">侵入岩</a>。<br/>
+<br/>
+例如，<span style="color:#3E8A00;">玄武岩</span>（一种镁铁质喷出岩）下方很可能就是<span style="color:#3E8A00;">辉长岩</span>（一种镁铁质侵入岩）。</p>
+<h5>火成岩等级</h5>
+<p></p>
+<ul>
+	<li><a href="https://en.wikipedia.org/wiki/Felsic">长英质</a>岩石包括<span style="color:#3E8A00;">花岗岩</span>和<span style="color:#3E8A00;">流纹岩</span>。</li>
+	<li><a href="https://en.wikipedia.org/wiki/Intermediate_composition">中性</a>岩石包括<span style="color:#3E8A00;">安山岩</span>、<span style="color:#3E8A00;">英安岩</span>和<span style="color:#3E8A00;">闪长岩</span>。</li>
+	<li><a href="https://en.wikipedia.org/wiki/Mafic">镁铁质</a>岩石包括<span style="color:#3E8A00;">玄武岩</span>和<span style="color:#3E8A00;">辉长岩</span>。</li>
+</ul>
+<p>大陆顶部的岩石层要么是喷出岩，要么是<a href="../the_world/geology.html#sedimentary">沉积岩</a>。沉积岩之下通常会出现其上层岩石的<a href="../the_world/geology.html#metamorphic">变质</a>形态。<br/>
+<br/>
+例如，<span style="color:#3E8A00;">大理岩</span>（一种变质岩）通常出现在<span style="color:#3E8A00;">石灰岩</span>或<span style="color:#3E8A00;">白垩岩</span>之下。高级变质岩则位于其他变质岩或火成岩的深处。</p>
+<h5>变质岩</h5>
+<p></p>
+<ul>
+	<li><span style="color:#3E8A00;">板岩</span>和<span style="color:#3E8A00;">千枚岩</span>形成于<span style="color:#3E8A00;">页岩</span>、<span style="color:#3E8A00;">黏土岩</span>和<span style="color:#3E8A00;">砾岩</span>之下。</li>
+	<li><span style="color:#3E8A00;">大理岩</span>形成于<span style="color:#3E8A00;">石灰岩</span>、<span style="color:#3E8A00;">白云岩</span>和<span style="color:#3E8A00;">白垩岩</span>之下。</li>
+	<li><span style="color:#3E8A00;">石英岩</span>形成于<span style="color:#3E8A00;">燧石岩</span>之下。</li>
+	<li><span style="color:#3E8A00;">片岩</span>和<span style="color:#3E8A00;">片麻岩</span>形成于<span style="color:#3E8A00;">板岩</span>和<span style="color:#3E8A00;">千枚岩</span>之下，或火成侵入岩之中。</li>
+</ul>
+<h5>隆升区域</h5>
+<p>最后，在山脉地区，你可能还会看到<span style="color:#3E8A00;">隆升</span>现象，即变质岩或火成侵入岩出现在地表。隆升岩层可以位于其他变质岩之上。<br/>
+<br/>
+此外，<a href="https://en.wikipedia.org/wiki/Dike_%28geology%29">岩墙</a>——火成侵入岩的小型垂直切片——也可能零星分布在世界各地。</p>
+<p>它们穿透上层岩石而出。<br/>
+<br/>
+综上所述，接下来的几页将列出所有四类岩石：<span style="color:#3E8A00;">沉积岩</span>、<span style="color:#3E8A00;">变质岩</span>、<span style="color:#3E8A00;">喷出岩</span>和<span style="color:#3E8A00;">侵入岩</span>。这些类别决定了岩石的生成位置（参见前几页），也决定了其中可能生成的矿石。</p>
+<a class="anchor" id="sedimentary"></a><h5>沉积岩</h5>
+<p><a href="https://en.wikipedia.org/wiki/Sedimentary_rock">沉积岩</a>是由矿物或有机颗粒的堆积或沉积形成的。它们通常出现在大陆地区的顶部岩层中。包括：<br/>
+</p>
+<ul>
+	<li>页岩</li>
+	<li>黏土岩</li>
+	<li>石灰岩</li>
+	<li>砾岩</li>
+	<li>白云岩</li>
+	<li>燧石岩</li>
+	<li>白垩岩</li>
+</ul>
+<a class="anchor" id="metamorphic"></a><h5>变质岩</h5>
+<p><a href="https://en.wikipedia.org/wiki/Metamorphic_rock">变质岩</a>是由变质作用形成的岩石。它们可以在对应的沉积岩或火成岩之下找到，也可见于隆升区域。包括：<br/>
+</p>
+<ul>
+	<li>石英岩</li>
+	<li>板岩</li>
+	<li>千枚岩</li>
+	<li>片岩</li>
+	<li>片麻岩</li>
+	<li>大理岩</li>
+</ul>
+<a class="anchor" id="igneous_extrusive"></a><h5>喷出岩</h5>
+<p><a href="https://en.wikipedia.org/wiki/Igneous_rock#Extrusive">喷出岩</a>是由岩浆在地球表面冷却形成的。它们可以在大陆地区的顶部岩层或海底找到。包括：<br/>
+</p>
+<ul>
+	<li>流纹岩</li>
+	<li>玄武岩</li>
+	<li>安山岩</li>
+	<li>英安岩</li>
+</ul>
+<a class="anchor" id="igneous_intrusive"></a><h5>侵入岩</h5>
+<p><a href="https://en.wikipedia.org/wiki/Igneous_rock#Intrusive">侵入岩</a>是由岩浆在地壳下冷却形成的。它们可以在深层地下找到，偶尔也出现在岩墙或隆升区域。包括：<br/>
+</p>
+<ul>
+	<li>花岗岩</li>
+	<li>闪长岩</li>
+	<li>辉长岩</li>
+</ul>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'zh_cn';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+    <script src="/Field-Guide/static/search.js"></script>
+  </body>
+</html>

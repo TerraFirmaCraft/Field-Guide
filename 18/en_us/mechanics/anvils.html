@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft Field Guide</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Version 1.18.2 - v2.2.30
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> English
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/mechanics\anvils.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\anvils.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\anvils.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\anvils.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\anvils.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\anvils.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\anvils.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\anvils.html" class="dropdown-item">繁體中文(台灣)</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Contents</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Index</a></li>
+            <li><a href="../the_world/">The World</a></li>
+<li><a href="../getting_started/">Getting Started</a></li>
+<li><a href="../mechanics/">Advanced Mechanics</a><ul><li><a href="./advanced_building_materials.html">Advanced Materials</a></li>
+<li><a href="./animal_husbandry.html">Animal Husbandry</a></li>
+<li><a href="./anvils.html">Anvils</a></li>
+<li><a href="./aqueducts.html">Aqueducts</a></li>
+<li><a href="./armor.html">Armor</a></li>
+<li><a href="./barrels.html">Barrels</a></li>
+<li><a href="./bellows.html">Bellows</a></li>
+<li><a href="./blast_furnace.html">Blast Furnace</a></li>
+<li><a href="./bloomery.html">Bloomery</a></li>
+<li><a href="./bread.html">Bread</a></li>
+<li><a href="./charcoal_forge.html">Charcoal Forge</a></li>
+<li><a href="./charcoal_pit.html">Charcoal Pit</a></li>
+<li><a href="./chisel.html">Chisel</a></li>
+<li><a href="./composter.html">Composter</a></li>
+<li><a href="./crops.html">Crops</a></li>
+<li><a href="./crucible.html">Crucible</a></li>
+<li><a href="./dairy.html">Dairy Products</a></li>
+<li><a href="./dairy.html">Dairy Products</a></li>
+<li><a href="./damage_types.html">Damage Types</a></li>
+<li><a href="./decay.html">Preservation</a></li>
+<li><a href="./fertilizers.html">Fertilizers</a></li>
+<li><a href="./fire_clay.html">Fire Clay</a></li>
+<li><a href="./fishing.html">Fishing</a></li>
+<li><a href="./flux.html">Flux</a></li>
+<li><a href="./gems.html">Gems</a></li>
+<li><a href="./grill.html">Firepit And Grill</a></li>
+<li><a href="./heating.html">Heating</a></li>
+<li><a href="./hydration.html">Keeping Hydrated</a></li>
+<li><a href="./lamps.html">Lamps</a></li>
+<li><a href="./leather_making.html">Leather Making</a></li>
+<li><a href="./lighting.html">Light Sources</a></li>
+<li><a href="./minecarts.html">Minecarts</a></li>
+<li><a href="./panning.html">Panning</a></li>
+<li><a href="./papermaking.html">Papermaking</a></li>
+<li><a href="./pets.html">Pets</a></li>
+<li><a href="./pot.html">Firepit And Pot</a></li>
+<li><a href="./powderkegs.html">Powderkegs</a></li>
+<li><a href="./prospecting.html">Prospecting</a></li>
+<li><a href="./quern.html">Quern</a></li>
+<li><a href="./salad.html">Salads</a></li>
+<li><a href="./sandwiches.html">Sandwiches</a></li>
+<li><a href="./scribing_table.html">Scribing Table</a></li>
+<li><a href="./sluices.html">Sluices</a></li>
+<li><a href="./steel.html">Steel</a></li>
+<li><a href="./support_beams.html">Support Beams</a></li>
+<li><a href="./weaving.html">Weaving</a></li>
+<li><a href="./wooden_buckets.html">Wooden Buckets</a></li></ul></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">Advanced Mechanics</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Anvils</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">Anvils</h1>
+                <p>Anvils are an important tool required for metalworking, as they allow you to work and weld metal ingots into various different forms.<br/>
+<br/>
+Anvils can be useful for both <a href="../mechanics/anvils.html#working">Working</a>, which is used to form one piece of metal into another, or <a href="../mechanics/anvils.html#welding">Welding</a>, which is used to fuse two metal items into one solid piece.</p>
+<h5></h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>All types of metal anvils.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Copper Double Ingot" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item49.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Copper Double Ingot" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item49.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Copper Double Ingot" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item49.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Copper Double Ingot" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item49.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Copper Double Ingot" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item49.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Copper Double Ingot" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item49.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Copper Double Ingot" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item49.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Copper Anvil" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>Anvils can be crafted with <span style="color:#3E8A00;">Double Ingots</span> of their respective metal. For your first anvil, you must <a href="../mechanics/anvils.html#welding">weld</a> double ingots first on a <a href="../getting_started/primitive_anvils.html">Stone Anvil</a>.</p>
+<a class="anchor" id="tiers"></a><p>Anvils each have a <span style="color:#3E8A00;">Tier</span>, which defines what types of material they can work and weld. An anvil can work metals of its current tier, and it can weld metals that are one tier higher.<br/>
+</p>
+<ul>
+	<li><strong>Tier 0</strong>: Stone Anvils</li>
+	<li><strong>Tier I</strong>: Copper</li>
+	<li><strong>Tier II</strong>: Bismuth Bronze, Black Bronze, Bronze</li>
+	<li><strong>Tier III</strong>: Wrought Iron</li>
+	<li><strong>Tier IV</strong>: Steel</li>
+	<li><strong>Tier V</strong>: Black Steel</li>
+	<li><strong>Tier VI</strong>: Red Steel, Blue Steel</li>
+</ul>
+<a class="anchor" id="working"></a><h5>Working</h5>
+<p>In order to work an item on the anvil, you will need to use the anvil, to open up the anvil interface, seen to the right. On the left, there are two input slots for items - for working, the target item must be in the right hand slot. You will also need a hammer while working, either in the hammer slot on the right of the anvil <strong>or</strong> in your main hand. The hammer will gradually take damage as you work the item.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image42.png" alt="tfc:textures/gui/book/gui/anvil_empty.png">
+<div style="text-align: center;"><p>The anvil interface.</p>
+</div><p>You will then need to select the <span style="color:#3E8A00;">Plan</span>, which chooses which item you want to create. <span style="color:#b0b;">Left Click</span> on the the scroll button, and then pick one of the items to create. The anvil interface will return, but now you will have selected a plan - the scroll will show the item you are working to create, and the <span style="color:#3E8A00;">Rules</span> and <span style="color:#3E8A00;">Target</span> will now be populated.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image43.png" alt="tfc:textures/gui/book/gui/anvil_in_use.png">
+<div style="text-align: center;"><p>After selecting to create a pickaxe.</p>
+</div><h5>Targets</h5>
+<p>In the middle of the anvil screen, there is a bar with two colored indicators. The <span style="color:#00AA00;">green</span> pointer, is your current working progress. The <span style="color:#AA0000;">red</span> pointer, is the target. Your goal is to line up the current progress, with the target.<br/>
+<br/>
+In order to do this, you can use the <span style="color:#00AA00;">green</span> and <span style="color:#AA0000;">red</span> action buttons, which move your current progress a certain amount, depending on the action taken.</p>
+<p><span style="color:#00AA00;">Green</span> actions will always move your target <strong>right</strong>, and <span style="color:#AA0000;">Red</span> actions will always move your progress <strong>left</strong>. Note that if you move your target off of the progress bar, you will have overworked your item - you will lose the ingot. However, while working, you must also match the <span style="color:#3E8A00;">rules</span>...</p>
+<h5>Working Rules</h5>
+<p>The <span style="color:#3E8A00;">rules</span>, are the two or three icons shown on the top of the anvil interface. They represent specific actions that must be taken, at specific times, in order for your working to be a success. For example, a rule could be <span style="color:#00AA00;">Bend Second Last</span>, meaning the second to last action you take <strong>must</strong> be a <span style="color:#00AA00;">Bend</span> action.</p>
+<p>Your last three actions are shown right underneath the rules. When a rule is satisfied, its outline will change to green. Success occurs when all rules are satisfied.<br/>
+<br/>
+Finally, you have to be mindful of your item's <a href="../mechanics/heating.html">temperature</a>. Metals can only be worked when they are above a certain temperature where the tooltip shows "Can Work". You may take an item out and re-heat it during the working process.</p>
+<h5>Forging Bonuses</h5>
+<p>Working can be tedious, and take many steps to get correct. However, there is a reward for being efficient. Some items, such as tool heads, when they are worked in a low or minimal amount of steps, receive a Forging Bonus based on how efficiently they were forged. This bonus will then apply to tools that the item is used in, for example, a pickaxe head used to make a pickaxe.</p>
+<h5>Perfectly Forged</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this item.">Item: <code>tfc:metal/pickaxe/wrought_iron{"tfc:forging_bonus":4}</code></span></p>
+        </div>
+        <p>There are four tiers of forging bonus:</p>
+<ul>
+	<li>Poorly Forged</li>
+	<li>Well Forged</li>
+	<li>Expertly Forged</li>
+	<li>Perfectly Forged</li>
+</ul><p><br/>
+These bonuses increase the power of your tool - making it break less often, mine faster, and/or do more damage in combat, depending on the tool.</p>
+<a class="anchor" id="welding"></a><h5>Welding</h5>
+<p>Welding is a process through which two items are fused together to create a new item. Welding works the same whether on a <a href="../getting_started/primitive_anvils.html">Stone Anvil</a> or a metal anvil.<br/>
+<br/>
+First, you must place the two items you want to weld on the anvil. You can do this either by using the items on the anvil, or by opening the anvil interface and inserting them in the two leftmost slots.</p>
+<p>You also need to have at least one <a href="../mechanics/flux.html">Flux</a> in the anvil to aid the welding process. Then, while both items are <a href="../mechanics/heating.html">hot enough</a> to weld - the tooltip will say "Can Weld" - you must use any <span style="color:#3E8A00;">Hammer</span> on the anvil. You will hear a hammering sound and the items will be welded together. They can then be extracted by using <span style="color:#b0b;">Right Click</span> on the anvil with an empty hand.</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'en_us';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+  </body>
+</html>

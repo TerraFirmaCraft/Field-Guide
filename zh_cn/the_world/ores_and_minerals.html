@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="矿石和矿物 | TFC Field Guide" />
+    <meta name="description" content="矿石和矿物" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="矿石和矿物 | TFC Field Guide" />
+    <meta property="og:description" content="矿石和矿物" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/item19.png" />
+
+    <title>矿石和矿物 | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">群峦传说 手册</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Search bar-->
+             <li class="nav-item">
+              <form class="d-flex" role="search" onsubmit="handleSearch(event)">
+                <input id="search-box" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+             </li>
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> 版本 1.21.1 - v4.2.9
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 简体中文(中国大陆)
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/the_world/ores_and_minerals.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world/ores_and_minerals.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world/ores_and_minerals.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world/ores_and_minerals.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world/ores_and_minerals.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world/ores_and_minerals.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world/ores_and_minerals.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world/ores_and_minerals.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/the_world/ores_and_minerals.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>目录</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">主页</a></li>
+            <li><a href="../getting_started/">新手入门</a></li>
+<li><a href="../core_mechanics/">Core Mechanics</a></li>
+<li><a href="../the_world/">这个世界</a><ul><li><a href="./geology.html">地质学</a></li>
+<li><a href="./ores_and_minerals.html">矿石和矿物</a></li>
+<li><a href="./flora.html">自然植物</a></li>
+<li><a href="./wild_crops.html">野生作物</a></li>
+<li><a href="./wild_fruits.html">野生水果</a></li>
+<li><a href="./wild_animals.html">野生动物</a></li></ul></li>
+<li><a href="../metalworking/">Metalworking</a></li>
+<li><a href="../food/">Food and Agriculture</a></li>
+<li><a href="../crafting/">Crafting Systems</a></li>
+<li><a href="../mechanics/">杂项</a></li>
+<li><a href="../firmalife/">(Addon) 群峦生活扩展模组</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">这个世界</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">矿石和矿物</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="../../_images/item19.png" alt="矿石和矿物" title="赤铁矿" /><span>矿石和矿物</span>
+        </h1>
+                <p>群峦传说中的矿物和矿石可称得上是稀有资源。与原版不同，矿石只会生成在庞大，但稀少的<span style="color:#3E8A00;">矿脉</span>结构中。要想找到矿脉，就必须熟练掌握<a href="../metalworking/prospecting.html">勘矿</a>技巧。有些矿石只会出现在特定的岩石类型中或高度上。因此，勘矿的一大关键步骤便是找到正确的岩石类型和高度。</p>
+<p>另外，某些矿石是<span style="color:#3E8A00;">分级的</span>。矿石块可能是贫瘠、普通或富集的，不同的矿脉中各类矿石块的比例也不同。<span style="color:#3E8A00;">更富集</span>的矿脉价值更高。<br/>
+<br/>
+接下来的几页将展示不同类型的矿石、它们的模样以及在哪里可以找到它们。</p>
+<a class="anchor" id="native_copper"></a><h5>原生铜</h5>
+<p>原生铜是<span style="color:#3E8A00;">铜</span>的矿石。它可以在<a href="../the_world/geology.html#igneous_extrusive">喷出岩</a>中找到，海拔高于 y=40。<br/>
+<br/>
+它也可以出现在<span style="color:#3E8A00;">河流</span>的沉积物中，这些沉积物可以用<a href="../mechanics/panning.html">淘金盘</a>淘洗。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block1.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>英安岩中的原生铜矿。</p>
+</div><a class="anchor" id="native_gold"></a><h5>原生金</h5>
+<p>原生金是<span style="color:#3E8A00;">金</span>的矿石。它可以在 y=70 以下的海拔找到，但更深的矿脉更大更富集。它可以在<a href="../the_world/geology.html#igneous_extrusive">喷出岩</a>和<a href="../the_world/geology.html#igneous_intrusive">侵入岩</a>中找到。<br/>
+<br/>
+它也可以出现在<span style="color:#3E8A00;">河流</span>的沉积物中，这些沉积物可以用<a href="../mechanics/panning.html">淘金盘</a>淘洗。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block2.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>闪长岩中的原生金矿。</p>
+</div><a class="anchor" id="native_silver"></a><h5>原生银</h5>
+<p>原生银是<span style="color:#3E8A00;">银</span>的矿石。在隆升区域 y=90 以上的<span style="color:#3E8A00;">花岗岩</span>或<span style="color:#3E8A00;">闪长岩</span>中可以找到小型贫瘠矿脉。在 y=20 以下的深层地下，在<span style="color:#3E8A00;">花岗岩</span>、<span style="color:#3E8A00;">闪长岩</span>、<span style="color:#3E8A00;">片岩</span>和<span style="color:#3E8A00;">片麻岩</span>中可以找到更大更富集的矿脉。<br/>
+<br/>
+它也可以出现在<span style="color:#3E8A00;">河流</span>的沉积物中，这些沉积物可以用<a href="../mechanics/panning.html">淘金盘</a>淘洗。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block3.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>花岗岩中的原生银矿。</p>
+</div><a class="anchor" id="tetrahedrite"></a><h5>黝铜矿</h5>
+<p>黝铜矿是<span style="color:#3E8A00;">铜</span>矿石的一种。它可以生成在任何深度的<a href="../the_world/geology.html#metamorphic">变质岩</a>中，但更深的矿脉通常更丰盛。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block4.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>片岩中的黝铜矿。</p>
+</div><a class="anchor" id="malachite"></a><h5>孔雀石</h5>
+<p>孔雀石是<span style="color:#3E8A00;">铜</span>的矿石。它主要出现在<span style="color:#3E8A00;">大理岩</span>或<span style="color:#3E8A00;">石灰岩</span>、<span style="color:#3E8A00;">白垩岩</span>和<span style="color:#3E8A00;">白云岩</span>中。它可以在大多数海拔找到，但更深的矿脉通常更大更富集。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block5.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>大理岩中的孔雀石矿。</p>
+</div><a class="anchor" id="cassiterite"></a><h5>锡石</h5>
+<p>锡石是<span style="color:#3E8A00;">锡</span>的矿石。它可以在高海拔的<a href="../the_world/geology.html#igneous_intrusive">侵入岩</a>中找到，在隆升区域或岩墙中 y=80 以上。<br/>
+<br/>
+它也可以出现在<span style="color:#3E8A00;">河流</span>的沉积物中，这些沉积物可以用<a href="../mechanics/panning.html">淘金盘</a>淘洗。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block6.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>闪长岩中的锡石矿。</p>
+</div><a class="anchor" id="bismuthinite"></a><h5>辉铋矿</h5>
+<p>辉铋矿是<span style="color:#3E8A00;">铋</span>的矿石。它可以在近地表的<a href="../the_world/geology.html#sedimentary">沉积岩</a>中找到，或者在深层地下的<a href="../the_world/geology.html#igneous_intrusive">侵入岩</a>中找到更大更富集的矿脉。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>页岩中的辉铋矿。</p>
+<a class="anchor" id="garnierite"></a><h5>绿镍矿</h5>
+<p>绿镍矿是<span style="color:#3E8A00;">镍</span>的矿石。它可以在 y=0 以下的海拔找到。主要存在于深层地下的<span style="color:#3E8A00;">辉长岩</span>中。在<a href="../the_world/geology.html#igneous_intrusive">侵入岩</a>中也可以找到较小、更稀少的矿脉。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block7.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>辉长岩中的绿镍矿。</p>
+</div><a class="anchor" id="hematite"></a><h5>赤铁矿</h5>
+<p>赤铁矿是<span style="color:#3E8A00;">铁</span>的矿石。它可以在近地表的任何<a href="../the_world/geology.html#igneous_extrusive">喷出岩</a>中以大型矿脉的形式找到。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block8.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>安山岩中的赤铁矿。</p>
+</div><a class="anchor" id="magnetite"></a><h5>磁铁矿</h5>
+<p>磁铁矿是<span style="color:#3E8A00;">铁</span>的矿石。它可以在近地表的任何<a href="../the_world/geology.html#sedimentary">沉积岩</a>中以大型矿脉的形式找到。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block9.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>石灰岩中的磁铁矿。</p>
+</div><a class="anchor" id="limonite"></a><h5>褐铁矿</h5>
+<p>褐铁矿是<span style="color:#3E8A00;">铁</span>的矿石。它可以在近地表的任何<a href="../the_world/geology.html#sedimentary">沉积岩</a>中以大型矿脉的形式找到。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block10.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>白垩岩中的褐铁矿。</p>
+</div><a class="anchor" id="sphalerite"></a><h5>闪锌矿</h5>
+<p>闪锌矿是<span style="color:#3E8A00;">锌</span>的矿石。小型贫瘠矿脉可以在近地表的<a href="../the_world/geology.html#igneous_extrusive">喷出岩</a>中找到，而大型富集矿脉可以在深层地下的<a href="../the_world/geology.html#igneous_intrusive">侵入岩</a>中找到。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block11.gif" alt="Block Visualization">
+<div style="text-align: center;"><p>石英岩中的闪锌矿。</p>
+</div><a class="anchor" id="lignite"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="褐煤">
+                <img src="../../_images/item20.png" alt="褐煤" />
+            </span>
+            <h5>褐煤</h5>
+        </div>
+        <p>褐煤是一种低品位的<span style="color:#3E8A00;">煤</span>矿石。它可以在近地表的<a href="../the_world/geology.html#sedimentary">沉积岩</a>中以非常巨大的扁平矿层形式找到。</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block12.png" alt="Block Visualization">
+<div style="text-align: center;"><p>褐煤。</p>
+</div><a class="anchor" id="bituminous_coal"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="烟煤">
+                <img src="../../_images/item21.png" alt="烟煤" />
+            </span>
+            <h5>烟煤</h5>
+        </div>
+        <p>烟煤是一种中等品位的<span style="color:#3E8A00;">煤</span>矿石。它可以在近地表的<a href="../the_world/geology.html#sedimentary">沉积岩</a>中以非常巨大的扁平矿层形式找到。</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block13.png" alt="Block Visualization">
+<div style="text-align: center;"><p>烟煤</p>
+</div><a class="anchor" id="kaolinite"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="高岭土">
+                <img src="../../_images/item22.png" alt="高岭石" />
+            </span>
+            <h5>高岭石</h5>
+        </div>
+        <p>高岭石是一种柔软的<span style="color:#3E8A00;">矿物</span>，用于制作<a href="../metalworking/fire_clay.html">耐火黏土</a>。它可以在高原、古老山脉、丘陵和高地的海拔较高处生成，需要<a href="../core_mechanics/climate.html#temperature">温度</a>至少 18°C，<a href="../core_mechanics/climate.html#rainfall">降雨量</a>至少 300mm。<span style="color:#3E8A00;">火球花</span>生长在高岭土上。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>高岭土的变种。</p>
+<a class="anchor" id="graphite"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="石墨">
+                <img src="../../_images/item23.png" alt="石墨" />
+            </span>
+            <h5>石墨</h5>
+        </div>
+        <p>石墨是一种<span style="color:#3E8A00;">矿物</span>，用于制作<a href="../metalworking/fire_clay.html">耐火黏土</a>。它可以在 y=60 以下的<span style="color:#3E8A00;">片麻岩</span>、<span style="color:#3E8A00;">大理岩</span>、<span style="color:#3E8A00;">石英岩</span>和<span style="color:#3E8A00;">片岩</span>中找到。</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block14.png" alt="Block Visualization">
+<div style="text-align: center;"><p>片麻岩中的石墨。</p>
+</div><a class="anchor" id="cinnabar"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="朱砂">
+                <img src="../../_images/item24.png" alt="朱砂" />
+            </span>
+            <h5>朱砂</h5>
+        </div>
+        <p>Cinnabar is a <span style="color:#3E8A00;">Mineral</span> which can be ground in the <a href="../crafting/quern.html">Quern</a> to obtain <span style="color:#3E8A00;">Redstone Dust</span>. It can be found in veins deep underground or high in mountains, in <span style="color:#3E8A00;">Quartzite</span>, <span style="color:#3E8A00;">Granite</span>, <span style="color:#3E8A00;">Phyllite</span>, <span style="color:#3E8A00;">Schist</span>, and <span style="color:#3E8A00;">Gneiss</span>.</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block15.png" alt="Block Visualization">
+<div style="text-align: center;"><p>石英岩中的朱砂。</p>
+</div><a class="anchor" id="cryolite"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="冰晶石">
+                <img src="../../_images/item25.png" alt="冰晶石" />
+            </span>
+            <h5>冰晶石</h5>
+        </div>
+        <p>冰晶石是一种<span style="color:#3E8A00;">矿物</span>，可以在<a href="../crafting/quern.html">手推磨</a>中研磨得到<span style="color:#3E8A00;">红石粉</span>。它可以在深层地下的矿脉中找到，存在于<span style="color:#3E8A00;">花岗岩</span>和<span style="color:#3E8A00;">闪长岩</span>中。</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block16.png" alt="Block Visualization">
+<div style="text-align: center;"><p>花岗岩中的冰晶石。</p>
+</div><a class="anchor" id="saltpeter"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="硝石">
+                <img src="../../_images/item26.png" alt="硝石" />
+            </span>
+            <h5>硝石</h5>
+        </div>
+        <p>硝石是一种<span style="color:#3E8A00;">矿物</span>，可以在<a href="../crafting/quern.html">手推磨</a>中研磨，然后用于制作<span style="color:#3E8A00;">火药</span>。它可以在近地表的<a href="../the_world/geology.html#sedimentary">沉积岩</a>中以非常巨大的扁平矿层形式找到。</p>
+<h5></h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>页岩中的硝石。</p>
+<a class="anchor" id="sulfur"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="硫磺">
+                <img src="../../_images/item27.png" alt="硫磺" />
+            </span>
+            <h5>硫磺</h5>
+        </div>
+        <p>硫磺是一种<span style="color:#3E8A00;">矿物</span>，可以在<a href="../crafting/quern.html">手推磨</a>中研磨，然后用于制作<span style="color:#3E8A00;">火药</span>。它出现在深层地下靠近岩浆层的位置，以稀疏但大型且丰富的矿脉形式存在，可在任何<a href="../the_world/geology.html#metamorphic">变质岩</a>或<a href="../the_world/geology.html#igneous_intrusive">侵入岩</a>中找到。</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block17.png" alt="Block Visualization">
+<div style="text-align: center;"><p>辉长岩中的硫磺。</p>
+</div><a class="anchor" id="sylvite"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="钾石盐">
+                <img src="../../_images/item28.png" alt="钾石盐" />
+            </span>
+            <h5>钾石盐</h5>
+        </div>
+        <p>钾石盐是一种<span style="color:#3E8A00;">矿物</span>，可以在<a href="../crafting/quern.html">手推磨</a>中研磨，然后用作<a href="../mechanics/fertilizers.html">肥料</a>。它可以在近地表的<span style="color:#3E8A00;">页岩</span>、<span style="color:#3E8A00;">黏土岩</span>和<span style="color:#3E8A00;">燧石岩</span>中以非常巨大的扁平矿层形式找到。</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block18.png" alt="Block Visualization">
+<div style="text-align: center;"><p>硅质岩中的钾盐</p>
+</div><a class="anchor" id="borax"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="硼砂">
+                <img src="../../_images/item29.png" alt="硼砂" />
+            </span>
+            <h5>硼砂</h5>
+        </div>
+        <p>硼砂是一种<span style="color:#3E8A00;">矿物</span>，可以在<a href="../crafting/quern.html">手推磨</a>中研磨制成<a href="../metalworking/flux.html">助焊剂</a>。它可以在近地表的<span style="color:#3E8A00;">黏土岩</span>、<span style="color:#3E8A00;">石灰岩</span>和<span style="color:#3E8A00;">页岩</span>中以非常巨大的扁平矿层形式找到。</p>
+<h5></h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>页岩中的硼砂。</p>
+<a class="anchor" id="gypsum"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="石膏">
+                <img src="../../_images/item30.png" alt="石膏" />
+            </span>
+            <h5>石膏</h5>
+        </div>
+        <p>石膏是一种装饰性<span style="color:#3E8A00;">矿物</span>，可用于制作<a href="../mechanics/advanced_building_materials.html#plaster">灰泥</a>。它可以在近地表的<a href="../the_world/geology.html#sedimentary">沉积岩</a>中以非常巨大的扁平矿层形式找到。</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block19.png" alt="Block Visualization">
+<div style="text-align: center;"><p>白垩岩中的石膏。</p>
+</div><a class="anchor" id="halite"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="岩盐">
+                <img src="../../_images/item31.png" alt="岩盐" />
+            </span>
+            <h5>岩盐</h5>
+        </div>
+        <p>岩盐是一种<span style="color:#3E8A00;">矿物</span>，可以在<a href="../crafting/quern.html">手推磨</a>中研磨制成<span style="color:#3E8A00;">盐</span>，这是一种重要的<a href="../food/decay.html#salting">防腐剂</a>。它可以在近地表的<a href="../the_world/geology.html#sedimentary">沉积岩</a>中以非常巨大的扁平矿层形式找到。</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block20.png" alt="Block Visualization">
+<div style="text-align: center;"><p>岩盐。</p>
+</div><a class="anchor" id="emerald"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="祖母绿">
+                <img src="../../_images/item32.png" alt="祖母绿" />
+            </span>
+            <h5>祖母绿</h5>
+        </div>
+        <p>祖母绿是一种<a href="../mechanics/gems.html">宝石</a>。它看起来相当漂亮，也许在这个无比孤独的世界里，如果你能找到另一个人，还能用它和他们做交易……<br/>
+<br/>
+它出现在薄而垂直的矿脉中，最高可达一百格。它可以在<a href="../the_world/geology.html#igneous_intrusive">侵入岩</a>中找到，或与温泉相伴而生。</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block21.png" alt="Block Visualization">
+<div style="text-align: center;"><p>闪长岩中的祖母绿。</p>
+</div><a class="anchor" id="diamond"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="金伯利岩">
+                <img src="../../_images/item33.png" alt="金伯利岩" />
+            </span>
+            <h5>金伯利岩</h5>
+        </div>
+        <p>金伯利岩是一种装饰性且价值连城的<a href="../mechanics/gems.html">宝石</a>。它出现在被称为<a href="https://en.wikipedia.org/wiki/Volcanic_pipe">金伯利岩管</a>的薄而垂直的矿脉中，最高可达一百格。它们只能在<span style="color:#3E8A00;">辉长岩</span>中找到。金伯利岩也偶尔出现在火山裂缝中。</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block22.png" alt="Block Visualization">
+<div style="text-align: center;"><p>辉长岩中的金伯利岩。</p>
+</div><a class="anchor" id="lapis_lazuli"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="青金石">
+                <img src="../../_images/item34.png" alt="青金石" />
+            </span>
+            <h5>青金石</h5>
+        </div>
+        <p>青金石是一种装饰性<a href="../mechanics/gems.html">宝石</a>，可以用来制作<a href="../mechanics/dye.html">蓝色染料</a>。它可以在<span style="color:#3E8A00;">石灰岩</span>和<span style="color:#3E8A00;">大理岩</span>中以巨大但稀疏的矿脉形式找到，位于 y=-20 到 y=80 之间。</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block23.png" alt="Block Visualization">
+<div style="text-align: center;"><p>大理岩中的青金石。</p>
+</div><a class="anchor" id="amethyst"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="紫水晶">
+                <img src="../../_images/item35.png" alt="紫水晶" />
+            </span>
+            <h5>紫水晶</h5>
+        </div>
+        <p>紫水晶是一种装饰性<a href="../mechanics/gems.html">宝石</a>，可以用来制作<a href="../crafting/glassworking.html">玻璃</a>。它可以在河流下方 y=40 以上的<span style="color:#3E8A00;">沉积岩</span>和<span style="color:#3E8A00;">变质岩</span>中找到，或在 y=30 以下的晶洞中找到。</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block24.png" alt="Block Visualization">
+<div style="text-align: center;"><p>大理岩中的紫水晶。</p>
+</div><a class="anchor" id="opal"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="蛋白石">
+                <img src="../../_images/item36.png" alt="蛋白石" />
+            </span>
+            <h5>蛋白石</h5>
+        </div>
+        <p>蛋白石是一种装饰性<a href="../mechanics/gems.html">宝石</a>。它可以在河流下方 y=40 以上的<span style="color:#3E8A00;">沉积岩</span>和<span style="color:#3E8A00;">喷出岩</span>中找到。</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block25.png" alt="Block Visualization">
+<div style="text-align: center;"><p>玄武岩中的蛋白石。</p>
+</div><a class="anchor" id="pyrite"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="黄铁矿">
+                <img src="../../_images/item37.png" alt="黄铁矿" />
+            </span>
+            <h5>黄铁矿</h5>
+        </div>
+        <p>黄铁矿，又名愚人金，是一种装饰性<a href="../mechanics/gems.html">宝石</a>。它可以在 y=70 以下的<span style="color:#3E8A00;">侵入岩</span>和<span style="color:#3E8A00;">喷出岩</span>中找到。</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block26.png" alt="Block Visualization">
+<div style="text-align: center;"><p>花岗岩中的黄铁矿。</p>
+</div><a class="anchor" id="ruby"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="红宝石">
+                <img src="../../_images/item38.png" alt="红宝石" />
+            </span>
+            <h5>红宝石</h5>
+        </div>
+        <p>红宝石是一种装饰性<a href="../mechanics/gems.html">宝石</a>。它很少在 y=-10 以下的<span style="color:#3E8A00;">大理岩</span>中找到，更常见于碰撞山脉的<span style="color:#3E8A00;">大理岩</span>矿脉中。</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block27.png" alt="Block Visualization">
+<div style="text-align: center;"><p>大理岩中的红宝石。</p>
+</div><a class="anchor" id="sapphire"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="蓝宝石">
+                <img src="../../_images/item39.png" alt="蓝宝石" />
+            </span>
+            <h5>蓝宝石</h5>
+        </div>
+        <p>蓝宝石是一种装饰性<a href="../mechanics/gems.html">宝石</a>。它可以在<span style="color:#3E8A00;">温泉</span>的裂缝中找到。</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block28.png" alt="Block Visualization">
+<div style="text-align: center;"><p>辉长岩中的蓝宝石。</p>
+</div><a class="anchor" id="topaz"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="黄玉">
+                <img src="../../_images/item40.png" alt="黄玉" />
+            </span>
+            <h5>黄玉</h5>
+        </div>
+        <p>黄玉是一种装饰性<a href="../mechanics/gems.html">宝石</a>。它可以在火山的裂缝中找到。</p>
+<h5></h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="../../_images/block29.png" alt="Block Visualization">
+<div style="text-align: center;"><p>片岩中的黄玉。</p>
+</div>
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'zh_cn';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+    <script src="/Field-Guide/static/search.js"></script>
+  </body>
+</html>

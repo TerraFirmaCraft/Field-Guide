@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="野生作物 | TFC Field Guide" />
+    <meta name="description" content="野生作物" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="野生作物 | TFC Field Guide" />
+    <meta property="og:description" content="野生作物" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/image14.png" />
+
+    <title>野生作物 | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">群峦传说 手册</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Search bar-->
+             <li class="nav-item">
+              <form class="d-flex" role="search" onsubmit="handleSearch(event)">
+                <input id="search-box" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+             </li>
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> 版本 1.21.1 - v4.2.9
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 简体中文(中国大陆)
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/the_world/wild_crops.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world/wild_crops.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world/wild_crops.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world/wild_crops.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world/wild_crops.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world/wild_crops.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world/wild_crops.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world/wild_crops.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/the_world/wild_crops.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>目录</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">主页</a></li>
+            <li><a href="../getting_started/">新手入门</a></li>
+<li><a href="../core_mechanics/">Core Mechanics</a></li>
+<li><a href="../the_world/">这个世界</a><ul><li><a href="./geology.html">地质学</a></li>
+<li><a href="./ores_and_minerals.html">矿石和矿物</a></li>
+<li><a href="./flora.html">自然植物</a></li>
+<li><a href="./wild_crops.html">野生作物</a></li>
+<li><a href="./wild_fruits.html">野生水果</a></li>
+<li><a href="./wild_animals.html">野生动物</a></li></ul></li>
+<li><a href="../metalworking/">Metalworking</a></li>
+<li><a href="../food/">Food and Agriculture</a></li>
+<li><a href="../crafting/">Crafting Systems</a></li>
+<li><a href="../mechanics/">杂项</a></li>
+<li><a href="../firmalife/">(Addon) 群峦生活扩展模组</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">这个世界</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">野生作物</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="../../_images/image14.png" alt="野生作物" title="None" /><span>野生作物</span>
+        </h1>
+                <p>世界各地都能找到小团的<span style="color:#3E8A00;">野生作物</span>。<br/>
+<br/>
+用手就可以收获野生作物，当然<span style="color:#3E8A00;">小刀</span>或其他锋利的工具也行。它们会掉落<span style="color:#3E8A00;">种子</span>和一些<span style="color:#3E8A00;">农产品</span>。再次种植这些种子就可以种出人工栽培版本的作物。</p>
+<h5>野生小麦</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>作为示例，这是<a href="../food/crops.html#wheat">小麦</a>的野生版本。</p>
+<p>每一种可以种植的<a href="../food/crops.html">农作物</a>也都可以在野外找到。野生作物看起来与栽培的同类相似，但更隐蔽地隐藏在草丛中。野生作物只在六月到十月期间成熟。否则，它们会看起来像枯死一样，直到下一个夏天。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>所有野生作物的变种</p>
+<h5>寻找野生作物</h5>
+<p>野生作物会生成在接近该作物可种植的气候区域，因此如果要寻找特定作物，就到该作物可种植的气候中去寻找。然而，与玩家种植的<a href="../food/crops.html">农作物</a>不同，野生作物不需要<a href="../food/hydration.html">湿度</a>。相反，它们出现的位置取决于年平均<a href="../the_world/climate.html#temperature">温度</a>和<a href="../the_world/climate.html#rainfall">降雨量</a>。</p>
+<p>接下来的几页展示了一个表格，列出了可以找到野生作物的环境。</p>
+<h5>野生作物所需条件</h5>
+<p></p>
+<figure class="table-figure"><table><thead><tr><th><p>作物</p></th><th><p>温度</p></th><th><p>降雨量（mm）</p></th></tr></thead><tbody><tr><td><p>木薯</p></td><td><p>$(cfg:temperature:10.4) - $(cfg:temperature:40)</p></td><td><p>260 - 500</p></td></tr><tr><td><p>绿豆</p></td><td><p>$(cfg:temperature:-4) - $(cfg:temperature:19.4)</p></td><td><p>150 - 410</p></td></tr><tr><td><p>小扁豆</p></td><td><p>$(cfg:temperature:-7.6) - $(cfg:temperature:19.4)</p></td><td><p> 75 - 190</p></td></tr><tr><td><p>花生</p></td><td><p>$(cfg:temperature:12.2) - $(cfg:temperature:40)</p></td><td><p>130 - 360</p></td></tr><tr><td><p>大豆</p></td><td><p>$(cfg:temperature:-9.4) - $(cfg:temperature:15.8)</p></td><td><p>160 - 410</p></td></tr><tr><td><p>大麦</p></td><td><p>$(cfg:temperature:-9.4) - $(cfg:temperature:17.6)</p></td><td><p> 70 - 310</p></td></tr><tr><td><p>燕麦</p></td><td><p>$(cfg:temperature:-9.4) - $(cfg:temperature:15.8)</p></td><td><p>140 - 400</p></td></tr><tr><td><p>黑麦</p></td><td><p>$(cfg:temperature:-9.4) - $(cfg:temperature:8.6)</p></td><td><p>100 - 350</p></td></tr><tr><td><p>玉米</p></td><td><p>$(cfg:temperature:-9.4) - $(cfg:temperature:23.0)</p></td><td><p>300 - 500</p></td></tr><tr><td><p>小麦</p></td><td><p>$(cfg:temperature:-9.4) - $(cfg:temperature:15.8)</p></td><td><p>100 - 400</p></td></tr><tr><td><p>水稻</p></td><td><p>$(cfg:temperature:8.6) - $(cfg:temperature:40)</p></td><td><p>200 - 500</p></td></tr><tr><td><p>甜菜</p></td><td><p>$(cfg:temperature:-13) - $(cfg:temperature:23.0)</p></td><td><p> 70 - 300</p></td></tr></tbody></table></figure><hr><h5>野生作物所需条件</h5>
+<p></p>
+<figure class="table-figure"><table><thead><tr><th><p>作物</p></th><th><p>温度</p></th><th><p>降雨量（mm）</p></th></tr></thead><tbody><tr><td><p>卷心菜</p></td><td><p>$(cfg:temperature:-13) - $(cfg:temperature:23.0)</p></td><td><p> 60 - 280</p></td></tr><tr><td><p>胡萝卜</p></td><td><p>$(cfg:temperature:-13) - $(cfg:temperature:23.0)</p></td><td><p>100 - 400</p></td></tr><tr><td><p>大蒜</p></td><td><p>$(cfg:temperature:-5.8) - $(cfg:temperature:15.8)</p></td><td><p> 60 - 310</p></td></tr><tr><td><p>洋葱</p></td><td><p>$(cfg:temperature:-7.6) - $(cfg:temperature:21.2)</p></td><td><p>100 - 390</p></td></tr><tr><td><p>马铃薯</p></td><td><p>$(cfg:temperature:-9.4) - $(cfg:temperature:15.8)</p></td><td><p>200 - 420</p></td></tr><tr><td><p>西葫芦</p></td><td><p>$(cfg:temperature:-9.4) - $(cfg:temperature:19.4)</p></td><td><p> 90 - 390</p></td></tr><tr><td><p>番茄</p></td><td><p>$(cfg:temperature:1.4) - $(cfg:temperature:40)</p></td><td><p>120 - 390</p></td></tr><tr><td><p>红甜椒</p></td><td><p>$(cfg:temperature:12.2) - $(cfg:temperature:40)</p></td><td><p>190 - 450</p></td></tr><tr><td><p>黄甜椒</p></td><td><p>$(cfg:temperature:12.2) - $(cfg:temperature:40)</p></td><td><p>190 - 450</p></td></tr><tr><td><p>南瓜</p></td><td><p>$(cfg:temperature:-9.4) - $(cfg:temperature:23.0)</p></td><td><p>120 - 390</p></td></tr><tr><td><p>西瓜</p></td><td><p>$(cfg:temperature:5) - $(cfg:temperature:40)</p></td><td><p>200 - 500</p></td></tr><tr><td><p>油菜</p></td><td><p>$(cfg:temperature:-13) - $(cfg:temperature:3.2)</p></td><td><p>120 - 320</p></td></tr></tbody></table></figure><hr><h5>野生作物所需条件</h5>
+<p></p>
+<figure class="table-figure"><table><thead><tr><th><p>作物</p></th><th><p>温度</p></th><th><p>降雨量（mm）</p></th></tr></thead><tbody><tr><td><p>萝卜</p></td><td><p>$(cfg:temperature:-11.2) - $(cfg:temperature:6.8)</p></td><td><p>190 - 410</p></td></tr><tr><td><p>苜蓿</p></td><td><p>$(cfg:temperature:-14.8) - $(cfg:temperature:5)</p></td><td><p>240 - 480</p></td></tr><tr><td><p>黄麻</p></td><td><p>$(cfg:temperature:1.4) - $(cfg:temperature:19.4)</p></td><td><p>100 - 410</p></td></tr><tr><td><p>纸莎草</p></td><td><p>$(cfg:temperature:12.2) - $(cfg:temperature:40)</p></td><td><p>310 - 500</p></td></tr><tr><td><p>甘蔗</p></td><td><p>$(cfg:temperature:17.6) - $(cfg:temperature:40)</p></td><td><p>160 - 500</p></td></tr></tbody></table></figure><hr>
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'zh_cn';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+    <script src="/Field-Guide/static/search.js"></script>
+  </body>
+</html>

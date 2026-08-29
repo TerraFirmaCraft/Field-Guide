@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="耐火黏土 | TFC Field Guide" />
+    <meta name="description" content="耐火黏土" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="耐火黏土 | TFC Field Guide" />
+    <meta property="og:description" content="耐火黏土" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/item68.png" />
+
+    <title>耐火黏土 | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">群峦传说 手册</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Search bar-->
+             <li class="nav-item">
+              <form class="d-flex" role="search" onsubmit="handleSearch(event)">
+                <input id="search-box" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+             </li>
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> 版本 1.21.1 - v4.2.9
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 简体中文(中国大陆)
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/metalworking/fire_clay.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/metalworking/fire_clay.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/metalworking/fire_clay.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/metalworking/fire_clay.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/metalworking/fire_clay.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/metalworking/fire_clay.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/metalworking/fire_clay.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/metalworking/fire_clay.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/metalworking/fire_clay.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>目录</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">主页</a></li>
+            <li><a href="../getting_started/">新手入门</a></li>
+<li><a href="../core_mechanics/">Core Mechanics</a></li>
+<li><a href="../the_world/">这个世界</a></li>
+<li><a href="../metalworking/">Metalworking</a><ul><li><a href="./anvils.html">砧</a></li>
+<li><a href="./flux.html">助焊剂</a></li>
+<li><a href="./charcoal_pit.html">木炭坑</a></li>
+<li><a href="./charcoal_forge.html">木炭炉</a></li>
+<li><a href="./prospecting.html">勘探</a></li>
+<li><a href="./chisel.html">凿子</a></li>
+<li><a href="./sluices.html">洗矿槽</a></li>
+<li><a href="./bloomery.html">锻铁炉</a></li>
+<li><a href="./steel.html">炼钢</a></li>
+<li><a href="./crucible.html">坩埚</a></li>
+<li><a href="./bellows.html">风箱</a></li>
+<li><a href="./blast_furnace.html">建造高炉</a></li>
+<li><a href="./fire_clay.html">耐火黏土</a></li></ul></li>
+<li><a href="../food/">Food and Agriculture</a></li>
+<li><a href="../crafting/">Crafting Systems</a></li>
+<li><a href="../mechanics/">杂项</a></li>
+<li><a href="../firmalife/">(Addon) 群峦生活扩展模组</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">Metalworking</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">耐火黏土</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="../../_images/item68.png" alt="耐火黏土" title="耐火黏土" /><span>耐火黏土</span>
+        </h1>
+                <p>耐火黏土能做成的东西不多，但每个都是科技进步上不可或缺的要素！耐火黏土比普通黏土能承受更高的高温，因此某些高级设备只能用耐火黏土建造。</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shapeless.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="高岭石粉" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item69.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="高岭石粉" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item69.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="高岭石粉" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item69.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="高岭石粉" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item69.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="石墨粉" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item70.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="石墨粉" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item70.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="石墨粉" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item70.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="石墨粉" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item70.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="黏土球" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/item71.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="耐火黏土" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/item68.png" />
+                </div>
+            </div>
+        </div>
+        <p>耐火黏土由在<a href="../crafting/quern.html">手推磨</a>中磨碎的<a href="../the_world/ores_and_minerals.html#graphite">石墨</a>粉以及<a href="../the_world/ores_and_minerals.html#kaolinite">高岭石</a>粉制成。</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="高岭土" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="../../_images/item22.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="高岭石粉" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="../../_images/item69.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-dark-red">
+            <p>淡红****</p>
+        </div>
+        <p>高岭石粉是通过加热<a href="../the_world/ores_and_minerals.html#kaolinite">高岭土</a>制成的。然而，这个过程并不完美，只有 20%% 的黏土能变成粉末！</p>
+<a class="anchor" id="crucible"></a>
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="../../_images/image26.png" alt="Recipe: tfc:knapping/ceramic/unfired_crucible">
+        </div>
+    </div>
+</div>
+<p>用耐火黏土塑形成未烧制的<a href="../metalworking/crucible.html">坩埚</a>。</p>
+<a class="anchor" id="fire_bricks"></a>
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="../../_images/image30.png" alt="Recipe: tfc:knapping/ceramic/unfired_fire_brick">
+        </div>
+    </div>
+</div>
+<p>作为理想的隔热材料，耐火砖是建造<a href="../metalworking/blast_furnace.html">高炉</a>的必需品。</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="../../_images/image31.png" alt="Recipe: tfc:knapping/ceramic/unfired_fire_ingot_mold">
+        </div>
+    </div>
+</div>
+<p><span style="color:#3E8A00;">耐火铸锭模具</span>是一种更坚固的<a href="../getting_started/pottery.html#mold">铸锭模具</a>，破裂几率仅为 1/100，而普通铸锭模具为 1/10。</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'zh_cn';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+    <script src="/Field-Guide/static/search.js"></script>
+  </body>
+</html>

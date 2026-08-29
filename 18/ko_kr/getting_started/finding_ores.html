@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TerraFirmaCraft 도감</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft 도감</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> 버전 1.18.2 - v2.2.30
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 한국어
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/getting_started\finding_ores.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\finding_ores.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\finding_ores.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\finding_ores.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\finding_ores.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\finding_ores.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\finding_ores.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\finding_ores.html" class="dropdown-item">繁體中文(台灣)</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>목차</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">색인</a></li>
+            <li><a href="../the_world/">세계</a></li>
+<li><a href="../getting_started/">시작하기</a><ul><li><a href="./introduction.html">소개</a></li>
+<li><a href="./firepit.html">최초의 불</a></li>
+<li><a href="./pottery.html">도자기</a></li>
+<li><a href="./pit_kiln.html">구덩이 가마</a></li>
+<li><a href="./finding_ores.html">광석, 금속 그리고 주조</a></li>
+<li><a href="./primitive_alloys.html">기초 합금</a></li>
+<li><a href="./primitive_anvils.html">기초적인 모루</a></li>
+<li><a href="./building_materials.html">건축 블록</a></li>
+<li><a href="./a_place_to_sleep.html">잠자리</a></li>
+<li><a href="./size_and_weight.html">크기와 무게</a></li>
+<li><a href="./food_and_water.html">음식과 물</a></li></ul></li>
+<li><a href="../mechanics/">심화 기술</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">시작하기</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">광석, 금속 그리고 주조</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\item13.png" alt="광석, 금속 그리고 주조" title="평범한 자연동" /><span>광석, 금속 그리고 주조</span>
+        </h1>
+                <p>당신은 막대기, 잔가지나 돌멩이 말고도 땅에 굴러다니는 작은 광석 조각들을 마주칠 지도 모릅니다. 이 광석들은 당신이 곡괭이를 만들기 전까지는 유일하게 얻을 수 있는 금속과 광석이기 때문에 중요합니다.</p>
+<h5></h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="이 멀티블록을 확인하려면 Minecraft에서 도감을 확인하세요.">멀티블록</span></p>
+        </div>
+        <p>모든 작은 광석 조각</p>
+<p>이 작은 광석 조각들은 두 가지 역할을 합니다: 금속을 만들 수 있고, 더 중요하게는 땅 아래 어딘가에 큰 광맥이 어딘가 있다는 것을 나타냅니다. 광석을 찾은 곳을 메모해두면 나중에 광맥을 <a href="../mechanics/prospecting.html">탐사</a>할 때 분명 도움이 될 것입니다.<br/>
+<br/>
+다음 페이지에는 12가지 종류의 작은 광석과 광석을 녹여서 만들 수 있는 금속이 있습니다.</p>
+<h5>작은 광석들</h5>
+<p></p>
+<ul>
+	<li>자연동 (<span style="color:#3E8A00;">구리</span>)</li>
+	<li>자연금 (<span style="color:#3E8A00;">금</span>)</li>
+	<li>적철석 (<span style="color:#3E8A00;">주철</span>)</li>
+	<li>자연은 (<span style="color:#3E8A00;">은</span>)</li>
+	<li>주석석 (<span style="color:#3E8A00;">주석</span>)</li>
+	<li>휘창연석 (<span style="color:#3E8A00;">비스무트</span>)</li>
+	<li>규니켈석 (<span style="color:#3E8A00;">니켈</span>)</li>
+	<li>공작석 (<span style="color:#3E8A00;">구리</span>)</li>
+	<li>자철석 (<span style="color:#3E8A00;">주철</span>)</li>
+	<li>갈철석 (<span style="color:#3E8A00;">주철</span>)</li>
+	<li>섬아연석 (<span style="color:#3E8A00;">아연</span>)</li>
+	<li>사면동석 (<span style="color:#3E8A00;">구리</span>)</li>
+</ul>
+<a class="anchor" id="casting"></a><h5>주조</h5>
+<p>TerraFirmaCraft에서, 광석들은 각각 실제로 금속을 추출할 수 있는 <span style="color:#3E8A00;">유닛</span> (<span style="color:#3E8A00;">mB: 밀리버킷</span>)을 가지고 있습니다. 이와 같은 작은 광석들은 지표면에서 찾을 수 있고 품질이 가장 나빠 <span style="color:#3E8A00;">10 mB</span>의 금속밖에 얻을 수 없습니다. 이 금속을 추출하기 위해서는 광석을 <span style="color:#3E8A00;">녹여</span>야 하며, <span style="color:#3E8A00;">주조</span>를 통해 도구로 만들 수 있습니다.</p>
+<p>주조에 필요한 것:<br/>
+</p>
+<ul>
+	<li><a href="../getting_started/pottery.html#vessel">작은 항아리</a></li>
+	<li><a href="../getting_started/pit_kiln.html">구덩이 가마</a>를 만들 충분한 재료.</li>
+	<li>녹은 금속을 부을 <a href="../getting_started/pottery.html#mold">금형</a>.</li>
+	<li><span style="color:#3E8A00;">구리</span> 등 주조에 적합한 금속의 아무 광석 100 mb.</li>
+</ul><p><br/>
+<br/>
+<em>참고: <a href="../getting_started/primitive_alloys.html">합금</a></em>을 사용해서 주조를 할 수 있습니다</p>
+<p>일단, <span style="color:#3E8A00;">작은 항아리</span>를 열어 광석을 안에 넣으세요. 광석 속의 금속의 총량을 신중하게 세세요! 그리고, 당신은 <a href="../getting_started/pit_kiln.html">구덩이 가마</a>를 만들고 안에 작은 항아리를 넣어야 합니다. 작은 항아리가 가열되면, 그 안의 광석들은 녹고 녹은 금속으로 채워진 작은 항아리가 나옵니다.<br/>
+<br/>
+작은 항아리를 꺼내고 <span style="color:#b0b;">오른쪽 버튼</span>를 눌러 <span style="color:#3E8A00;">주조</span> 인터페이스를 열 수 있습니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image5.png" alt="tfc:textures/gui/book/gui/casting.png">
+<div style="text-align: center;"><p>주조 인터페이스.</p>
+</div><p>주조 인터페이스를 열고, 빈 금형을 중앙의 슬롯에 놓으세요. 작은 항아리가 비어 있지 않다면 금형이 차오릅니다. (만약 작은 항아리가 굳어 버린다면, 다시 구덩이 가마로 가열할 수 있습니다.) 금형이 가득 차면, 슬롯에서 제거하고 식혀야 합니다. 금형이 식은 후에는 금형을 웅크리고 클릭하거나 조합창에 올려놓아 내용물을 빼낼 수 있습니다.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="구리 곡괭이 머리" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item15.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item16.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="구리 곡괭이" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item14.png" />
+                </div>
+            </div>
+        </div>
+        <p>도구 머리가 있으면 첫 곡괭이를 만들 수 있습니다! 구리를 충분히 모아서 구덩이 가마에 녹이고, 금형에 담아 주조한 다음 막대기와 조합하면 완성!</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API 뮨서
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'ko_kr';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+  </body>
+</html>
