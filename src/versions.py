@@ -68,7 +68,7 @@ FORGE_VERSION = '21.1.197'
 LANGUAGES = ('en_us', 'ja_jp', 'pt_br', 'ko_kr', 'uk_ua', 'zh_cn', 'zh_hk', 'zh_tw', 'ru_ru')
 
 ADDONS = (
-    Addon('eerussianguy', 'firmalife', 'v3.0.11', 'firmalife', ['src/main/resources', 'src/generated/resources']),
+    Addon('eerussianguy', 'firmalife', 'v3.0.15', 'firmalife', ['src/main/resources', 'src/generated/resources']),
     Addon('eerussianguy', 'beneath', 'v2.0.3', 'beneath', ['src/main/resources', 'src/generated/resources']),
     Addon('Notenoughmail', 'precision-prospecting', 'v2.0', 'precisionprospecting', ['src/generated/resources', 'src/main/resources']),
     Addon('therighthon', 'ArborFirmaCraft', 'v2.1.2', 'afc', ['src/main/resources', 'src/generated/resources']),
