@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft Field Guide</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Version 1.18.2 - v2.2.30
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 日本語
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/getting_started\food_and_water.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\food_and_water.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\food_and_water.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\food_and_water.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\food_and_water.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\food_and_water.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\food_and_water.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\food_and_water.html" class="dropdown-item">繁體中文(台灣)</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Contents</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Index</a></li>
+            <li><a href="../the_world/">世界</a></li>
+<li><a href="../getting_started/">はじめに</a><ul><li><a href="./introduction.html">導入</a></li>
+<li><a href="./firepit.html">火を起こす</a></li>
+<li><a href="./pottery.html">粘土細工</a></li>
+<li><a href="./pit_kiln.html">穴窯</a></li>
+<li><a href="./finding_ores.html">鉱石、金属、鋳造</a></li>
+<li><a href="./primitive_alloys.html">最初の合金</a></li>
+<li><a href="./primitive_anvils.html">最初の金床</a></li>
+<li><a href="./building_materials.html">建材</a></li>
+<li><a href="./a_place_to_sleep.html">眠る場所</a></li>
+<li><a href="./size_and_weight.html">大きさと重さ</a></li>
+<li><a href="./food_and_water.html">食料と水</a></li></ul></li>
+<li><a href="../mechanics/">高度な加工</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">はじめに</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">食料と水</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\image7.png" alt="食料と水" title="None" /><span>食料と水</span>
+        </h1>
+                <p>TerraFirmaCraft では、満腹度を管理するだけでなく、喉の渇きも管理する必要があります。 空腹はバニラと同様に機能します。 ほとんどの食べ物は空腹バーの約 5 分の 1 を回復します。 <span style="color:#3E8A00;">ガマの根</span> など、一部の食料の回復量は少し少なくなる場合があります。 食べ物を食べると <span style="color:#3E8A00;">腹持ち</span> も回復します。これは満腹感(隠し満腹度)を表すものと考えることができます。</p>
+<p>一部の食べ物は満腹感があり、長時間満腹感を失わずに済みますが、一部の食べ物は効果が短命です。<br/>
+<br/>
+通常のゲームプレイだけで満腹度を失います。 走ったり、泳いだり、<a href="../getting_started/size_and_weight.html#overburdening">重量超過</a> になったりすると、満腹度がより早く減ります。 食品から得られる <span style="color:#3E8A00;">満腹度</span>、<span style="color:#3E8A00;">水分</span>、および <span style="color:#3E8A00;">栄養価</span> に関する情報は、インベントリ内で食品にカーソルを置くと表示されます。 <span style="color:#b0b;">Shift</span> を使用すると、完全なツールチップが表示されます。</p>
+<p>すべての食品には、情報が記載されたツールチップが表示されます。 ツールチップには食品の <a href="../mechanics/decay.html">腐るまでの時間</a> が含まれており、保存により延長される可能性があります。 この情報を見るときは、すべての食品に多くの栄養があるわけではないことを認識することが重要です。 たとえば、<a href="../mechanics/bread.html">パン生地</a> は食品ですが、栄養価、腹持ち、水分の値はありません。 それを食べてもあまりメリットはありません。</p>
+<p>ツールチップの表示の例:<br/>
+<br/>
+<strong>オレンジ</strong><br/>
+  <span style="color:#00AA00;"><strong>11:59 7月 6, 1004に腐る(あと 1 ヵ 月 1 日)</strong></span><br/>
+  <span style="color:#555555;">栄養素:<br/>
+  - 腹持ち: 2%<br/>
+  - 水分: 10%<br/>
+<span style="color:#55FF55;">  - 果物: 0.5</span></span></p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image8.png" alt="tfc:textures/gui/book/gui/nutrition.png">
+<div style="text-align: center;"><p>栄養価GUI。各栄養価のバランスを示すバーが表示されます。</p>
+</div><a class="anchor" id="nutrients"></a><h5>栄養素</h5>
+<p>5つの栄養素があり、様々な食べ物から摂取できます: <strong><span style="color:#55FF55;">果物</span></strong>、<strong><span style="color:#00AA00;">野菜</span></strong>、<strong><span style="color:#FF5555;"> タンパク質</span></strong>、<strong><span style="color:#FFAA00;">穀物</span></strong>、および<strong><span style="color:#AA00AA;">乳製品</span></strong>。 栄養素をバランスよく大量に保持しておくと最大HPが向上しますが、栄養が不足すると最大HPが低下します。 食べ物を食べると、その栄養素が摂れます。 <a href="../mechanics/pot.html#soup">スープ</a> などの食事は、1 回の食事により多くの栄養素を組み合わせて摂取できます。 少し前に食べた食事をもう一度食べても栄養価にカウントされないため、覚えておく必要があります。</p>
+<p><strong><span style="color:#55FF55;">果物</span></strong>: 果物の栄養素は主にベリーの茂みや果樹などの<a href="../the_world/wild_fruits.html">結実植物</a>から得られます。 これに対する注目すべき例外は <a href="../mechanics/crops.html#pumpkin">カボチャ</a> と <a href="../mechanics/crops.html#pumpkin">メロン</a> で、これらが含む栄養素は果物です。<br/>
+<br/>
+<strong>$ (2)野菜</strong>: ほぼすべての <a href="../mechanics/crops.html">作物</a>から得られます。<br/>
+<br/>
+<strong><span style="color:#FF5555;">タンパク質</span></strong>: タンパク質は <a href="../the_world/wild_animals.html">動物</a> の肉から得られます。タンパク質と野菜の栄養素を含む <a href="../mechanics/crops.html#soybean">大豆</a> からも入手できます。</p>
+<p><strong><span style="color:#FFAA00;">穀物</span></strong>: 穀物は、<a href="../mechanics/crops.html#barley">大麦・小麦・米・ライ麦</a>などの穀物に含まれます。 穀物の加工については <a href="../mechanics/bread.html">パン</a> ページにあります。 <span style="color:#3E8A00;">ガマの根</span> と <span style="color:#3E8A00;">タロイモ</span> も穀物です。<br/>
+<br/>
+<strong><span style="color:#AA00AA;">乳製品</span></strong>: すべての乳製品は <span style="color:#3E8A00;"> ミルク</span>が由来です。 これは <a href="../mechanics/animal_husbandry.html#dairy_animals">乳製品動物</a> から来ています。 牛乳の加工と飲用については、<a href="../mechanics/dairy.html">乳製品</a> ページで説明されています。<br/>
+<br/>
+あらゆる食べ物はすべて腐ったら役に立ちません。 これを防ぐ方法については、<a href="../mechanics/decay.html">食料の保存</a> ページを参照してください。</p>
+<a class="anchor" id="thirst"></a><h5>渇き</h5>
+<p>喉の渇きとは、体内の水分量のことです。 満腹度と同じ速度で減少します。 気温が高い場合、または空腹感が高いレベルだと喉の渇きが早くなります。 幸いなことに、<span style="color:#3E8A00;">淡水</span> を飲むと喉の渇きが回復します。これは、水ブロック上で <span style="color:#b0b;">Right Click</span> をクリックすることで実行できます。 海などにある塩水を飲むと喉が即座に渇き、<span style="color:#3E8A00;">渇き</span> 効果が発生してさらに水分を消耗する可能性もあります。</p>
+<h5>安全な水</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>塩水を避けるには、川、湖、<span style="color:#3E8A00;">Cattails</span> などの淡水植物を探してください。</p>
+
+<div class="d-flex align-items-center justify-content-center">
+    <div class="knapping-recipe">
+        <img class="knapping-recipe-img" src="../../_images/knapping.png">
+        <div class="knapping-recipe-overlay">
+            <img class="knapping-recipe-img" src="..\..\_images\image9.png" alt="Recipe: tfc:clay_knapping/jug">
+        </div>
+    </div>
+</div>
+<p><a href="../getting_started/pottery.html">ナッピング</a> して <a href="../getting_started/pottery.html#jug">水入れ</a> を作成・使用することは、適切な飲み水を運ぶ方法です。 バケツのように <span style="color:#b0b;">Right Click</span> で液体を入れます。 <span style="color:#b0b;">Right Click</span> を押し続けると中身を飲みます。</p>
+<p>満腹度や水分が完全に枯渇すると、動きや採掘速度が鈍くなり、ダメージを受け始めます。 これが原因で死亡すると栄養素はリセットされます。</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'ja_jp';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+  </body>
+</html>

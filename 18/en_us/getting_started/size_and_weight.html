@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft Field Guide</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Version 1.18.2 - v2.2.30
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> English
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/getting_started\size_and_weight.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\size_and_weight.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\size_and_weight.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\size_and_weight.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\size_and_weight.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\size_and_weight.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\size_and_weight.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\size_and_weight.html" class="dropdown-item">繁體中文(台灣)</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Contents</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Index</a></li>
+            <li><a href="../the_world/">The World</a></li>
+<li><a href="../getting_started/">Getting Started</a><ul><li><a href="./introduction.html">Introduction</a></li>
+<li><a href="./firepit.html">Pits of Fire</a></li>
+<li><a href="./pottery.html">Pottery</a></li>
+<li><a href="./pit_kiln.html">Pit Kilns</a></li>
+<li><a href="./finding_ores.html">Ores, Metal, and Casting</a></li>
+<li><a href="./primitive_alloys.html">Primitive Alloys</a></li>
+<li><a href="./primitive_anvils.html">Primitive Anvils</a></li>
+<li><a href="./building_materials.html">Building Materials</a></li>
+<li><a href="./a_place_to_sleep.html">A Place to Sleep</a></li>
+<li><a href="./size_and_weight.html">Size and Weight</a></li>
+<li><a href="./food_and_water.html">Food and Water</a></li></ul></li>
+<li><a href="../mechanics/">Advanced Mechanics</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">Getting Started</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Size and Weight</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\image36.png" alt="Size and Weight" title="None" /><span>Size and Weight</span>
+        </h1>
+                <p>Every item has a <span style="color:#3E8A00;">Size ⇲</span> and <span style="color:#3E8A00;">Weight ⚖</span>. An item's size and weight is shown on the <span style="color:#3E8A00;">tooltip</span>, which appears when you hover over it with your mouse.</p>
+<h5>Size ⇲</h5>
+<p>Size determines what storage blocks an item can fit inside of.<br/>
+</p>
+<ul>
+	<li><span style="color:#3E8A00;">Tiny</span> items fit in anything.</li>
+	<li><span style="color:#3E8A00;">Very Small</span> items fit in anything.</li>
+	<li><span style="color:#3E8A00;">Small</span> items are the largest item that will fit in <a href="../mechanics/decay.html#small_vessels">Small Vessels</a>.</li>
+	<li><span style="color:#3E8A00;">Normal</span> items are the largest that will fit in <a href="../mechanics/decay.html#small_vessels">Large Vessels</a>.</li>
+</ul>
+<p></p>
+<ul>
+	<li><span style="color:#3E8A00;">Large</span> items are the largest that will fit in Chests. <a href="../getting_started/pit_kiln.html">Pit Kilns</a> can hold four.</li>
+	<li><span style="color:#3E8A00;">Very Large</span> items are placed alone in Pit Kilns.</li>
+	<li><span style="color:#3E8A00;">Huge</span> items do not fit in any normal storage device. They also count towards overburdening.</li>
+</ul>
+<h5>Weight ⚖</h5>
+<p>Weight determines the max stack size of items.<br/>
+</p>
+<ul>
+	<li><span style="color:#3E8A00;">Very Light</span>: 64</li>
+	<li><span style="color:#3E8A00;">Light</span>: 32</li>
+	<li><span style="color:#3E8A00;">Medium</span>: 16</li>
+	<li><span style="color:#3E8A00;">Heavy</span>: 4</li>
+	<li><span style="color:#3E8A00;">Very Heavy</span>: 1</li>
+</ul><p><br/>
+Most items are <span style="color:#3E8A00;">Very Light</span> by default. Blocks are usually <span style="color:#3E8A00;">Medium</span>.</p>
+<p><span style="color:#3E8A00;">Overburdening</span> happens when you carry items that are both <span style="color:#3E8A00;">Huge</span> and <span style="color:#3E8A00;">Very Heavy</span>. Carrying just one <span style="color:#3E8A00;">Huge, Very Heavy</span> item causes you to become exhausted, making your food burn quicker. Carrying two or more gives you the <span style="color:#3E8A00;">Overburdened</span> status effect, which makes movement very slow.</p>
+<a class="anchor" id="overburdening"></a><h5>Overburdening</h5>
+<p>Items that count towards overburdening include <span style="color:#3E8A00;">Anvils</span>, <span style="color:#3E8A00;">Sealed Barrels</span>, <span style="color:#3E8A00;">Crucibles</span> (with contents)<br/>
+<br/>
+Note: <a href="../mechanics/animal_husbandry.html#horses">Horses</a> can also be overburdened.</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'en_us';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+  </body>
+</html>
