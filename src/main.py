@@ -457,11 +457,11 @@ def build_book_html(context: Context):
         ) + '\n'.join(
             """
             <div class="col">
-                <div class="card">
-                    <div class="card-header">
-                        <a href="%s/index.html">%s</a>
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title mb-1"><a class="stretched-link" href="%s/index.html">%s</a></h5>
+                        <div class="card-text text-body-secondary small">%s</div>
                     </div>
-                    <div class="card-body">%s</div>
                 </div>
             </div>
             """ % (
