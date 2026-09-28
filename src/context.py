@@ -11,6 +11,7 @@ from versions import IS_RESOURCE_PACK
 import util
 import json
 import re
+from decimal import Decimal, InvalidOperation, ROUND_HALF_UP
 
 IMAGE_CACHE: Dict[str, str] = {}
 
@@ -143,10 +144,19 @@ class Context:
         """
         def replace(match: re.Match) -> str:
             name = match.group(1)
-            if name.startswith('temperature:'):
-                # A temperature the book supplied itself. In game it is shown in the reader's chosen unit, but the
-                # site has no reader preference to consult, so it always renders Celsius.
-                return '%s°C' % name[len('temperature:'):]
+            if name.startswith('temperature:') or name.startswith('heat:'):
+                prefix, value = name.split(':', 1)
+                try:
+                    degrees = Decimal(value)
+                except InvalidOperation:
+                    LOG.warning('Invalid temperature $(cfg:%s)' % name)
+                    return ''
+                if prefix == 'heat':
+                    degrees = Decimal(int(degrees))  # Heat values are truncated to an int, and non-positive ones are shown as a plain number
+                    if degrees <= 0:
+                        return str(degrees)
+                # Match Java's String.format("%.0f"), which rounds half away from zero
+                return self.lang_keys.get('tfc.tooltip.temperature_celsius', '%s°C') % degrees.quantize(Decimal(1), ROUND_HALF_UP)
             if name not in self.config_values:
                 LOG.warning('Unknown config value $(cfg:%s)' % name)
                 return ''

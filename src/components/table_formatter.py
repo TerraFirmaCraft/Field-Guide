@@ -30,12 +30,12 @@ def format_table(context: Context, buffer: list[str], data: Any):
     # Build the HTML table
     buffer.append('<figure class="table-figure"><table><thead><tr>')
     for header in headers:
-        buffer.append(get_component(header, key='th'))
+        buffer.append(get_component(context, header, key='th'))
     buffer.append('</tr></thead><tbody>')
     for row in body:
         buffer.append('<tr>')
         for td in row:
-            buffer.append(get_component(td, key='td'))
+            buffer.append(get_component(context, td, key='td'))
         buffer.append('</tr>')
     buffer.append('</tbody></table></figure>')
 
@@ -52,11 +52,11 @@ def format_table(context: Context, buffer: list[str], data: Any):
         buffer.append('</div></div>')
 
 
-def get_component(th: Any, key: str):
+def get_component(context: Context, th: Any, key: str):
     if 'fill' in th:  # Solid fill
         return '<%s style="background-color:#%s;"></%s>' % (key, th['fill'][2:], key)
 
-    text = th['text']
+    text = context.substitute_config_values(th['text'])
     if text == '':  # Empty
         return '<%s></%s>' % (key, key)
 
