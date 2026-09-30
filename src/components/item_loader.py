@@ -43,6 +43,12 @@ def get_item_image(context: Context, item: str, placeholder: bool = True) -> Tup
 
     item = decode_item(item)
 
+    # Patchouli icons can include data components. The static guide cannot
+    # reproduce their dynamic overlays, but the underlying item model remains
+    # a useful and accurate fallback icon.
+    if '[' in item and item.endswith(']') and not item.startswith('#'):
+        item = item.split('[', 1)[0]
+
     if item in CACHE:
         path, name, key = CACHE[item]
         if key is not None:
@@ -78,7 +84,18 @@ def get_item_image(context: Context, item: str, placeholder: bool = True) -> Tup
     
     try:
         # Create images for each item.
-        images = [create_item_image(context, i) for i in items]
+        images = []
+        for choice in items:
+            try:
+                images.append(create_item_image(context, choice))
+            except InternalError as e:
+                # Tags and comma-separated alternatives can contain an item whose
+                # model is not renderable (for example a built-in entity model).
+                # Keep the usable alternatives instead of losing the entire icon.
+                if len(items) == 1:
+                    raise
+                e.prefix('Item Image Alternative').warning()
+        util.require(images, 'Item Image(s) : No renderable alternatives : \'%s\'' % item, True)
 
         if len(images) == 1:
             path = context.loader.save_image(context.next_id('item'), images[0])
@@ -130,8 +147,7 @@ def create_item_model_image(context: Context, item: str, model: dict) -> Image.I
         else:
             util.error('Item Model : Unknown Loader : \'%s\' at \'%s\'' % (loader, item), True)
 
-    util.require('parent' in model, 'Item Model : No Parent : \'%s\'' % item, True)
-    parent = util.resource_location(model['parent'])
+    model, parent = resolve_item_model(context, item, model)
     if parent in (
         'minecraft:item/generated',
         'minecraft:item/handheld',
@@ -142,12 +158,45 @@ def create_item_model_image(context: Context, item: str, model: dict) -> Image.I
         layer0 = model['textures']['layer0']
         img = context.loader.load_texture(layer0)
         return img
-    elif ':block/' in parent:
-        # Block model (any namespace)
-        block_model = context.loader.load_model(parent)
-        img = block_loader.create_block_model_image(context, item, block_model)
+    elif 'elements' in model:
+        # A custom item can inherit elements from an item or block model.
+        img = block_loader.create_block_model_image(context, item, model)
         img = img.resize((64, 64), resample=Image.NEAREST)
         return img
     else:
         util.error('Item Model : Unknown Parent \'%s\' : at \'%s\'' % (parent, item), True)
+
+
+def resolve_item_model(context: Context, item: str, model: dict) -> tuple[dict, str]:
+    """Follow ordinary model parents, retaining child texture overrides and elements."""
+    textures = {}
+    elements = None
+    seen = set()
+    current = model
+    terminal_parents = {
+        'minecraft:item/generated',
+        'minecraft:item/handheld',
+        'minecraft:item/handheld_rod',
+        'tfc:item/handheld_flipped',
+    }
+    while True:
+        textures = {**current.get('textures', {}), **textures}
+        if elements is None and 'elements' in current:
+            elements = current['elements']
+        if 'parent' not in current:
+            util.require(seen, 'Item Model : No Parent : \'%s\'' % item, True)
+            break
+        parent = util.resource_location(current['parent'])
+        if parent in terminal_parents or parent.startswith('minecraft:builtin/'):
+            break
+        util.require(parent not in seen, 'Item Model : Cyclic Parent : \'%s\'' % item, True)
+        seen.add(parent)
+        try:
+            current = context.loader.load_model(parent)
+        except InternalError:
+            break
+    resolved = {**model, 'parent': parent, 'textures': textures}
+    if elements is not None:
+        resolved['elements'] = elements
+    return resolved, parent
 
