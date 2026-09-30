@@ -105,20 +105,32 @@ def get_item_image(context: Context, item: str, placeholder: bool = True) -> Tup
 
 
 def create_item_image(context: Context, item: str) -> Image.Image:
-
     model = context.loader.load_item_model(item)
-    util.require('parent' in model, 'Item Model : No Parent : \'%s\'' % item, True)
-    
+    return create_item_model_image(context, item, model)
+
+
+def create_item_model_image(context: Context, item: str, model: dict) -> Image.Image:
     if 'loader' in model:
         loader = model['loader']
-        if loader == 'tfc:contained_fluid':
+        if loader in ('tfc:contained_fluid', 'tfc:fluid_container'):
             # Assume it's empty, and use a single layer item
             layer = model['textures']['base']
             img = context.loader.load_texture(layer)
             return img
+        elif loader == 'tfc:trim':
+            # Show the untrimmed armor item.
+            return context.loader.load_texture(model['textures']['armor'])
+        elif loader == 'neoforge:separate_transforms':
+            # The in-game inventory uses the GUI perspective, not the held model.
+            gui_model = model.get('perspectives', {}).get('gui', model.get('base'))
+            util.require(gui_model is not None, 'Item Model : No GUI Perspective : \'%s\'' % item, True)
+            if 'parent' in gui_model:
+                gui_model = context.loader.load_model(gui_model['parent'])
+            return create_item_model_image(context, item, gui_model)
         else:
             util.error('Item Model : Unknown Loader : \'%s\' at \'%s\'' % (loader, item), True)
 
+    util.require('parent' in model, 'Item Model : No Parent : \'%s\'' % item, True)
     parent = util.resource_location(model['parent'])
     if parent in (
         'minecraft:item/generated',
