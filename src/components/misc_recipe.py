@@ -78,7 +78,7 @@ def format_misc_recipe_from_data(context: Context, buffer: List[str], identifier
         in_count = 1
 
     in_path, in_name = crafting_recipe.format_ingredient(context, ingredient)
-    out_path, out_name, out_count = crafting_recipe.format_item_stack(context, data[result])
+    out_path, out_name, out_count = crafting_recipe.format_item_stack(context, data[result], ingredient)
 
     buffer.append("""
     <div class="d-flex align-items-center justify-content-center">

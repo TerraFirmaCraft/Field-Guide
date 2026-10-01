@@ -603,7 +603,7 @@ def title_with_optional_icon(text: str, icon_src: str, icon_title: str) -> str:
         return """
         <img class="icon-title me-3" src="{icon_src}" alt="{text}" title="{icon_title}" /><span>{text}</span>
         """.format(
-            icon_title=icon_title,
+            icon_title=icon_title or text,
             icon_src=icon_src,
             text=text
         )

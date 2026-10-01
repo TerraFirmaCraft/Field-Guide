@@ -12,6 +12,7 @@
 !/requirements.txt
 
 !/src/**/*.py
+!/tests/**/*.py
 
 !/assets/lang/*.json
 !/assets/templates/*.html
