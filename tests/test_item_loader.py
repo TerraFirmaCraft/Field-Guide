@@ -105,6 +105,18 @@ class ItemLoaderTests(unittest.TestCase):
         self.assertEqual((path, name), ('../../_images/mold.png', 'Ingot Mold'))
         render.assert_called_once_with(context, 'tfc:ceramic/ingot_mold')
 
+    def test_alternative_items_have_localized_tooltip_across_languages(self):
+        CACHE.clear()
+        loader = Mock()
+        loader.save_gif.return_value = '../../_images/alternatives.gif'
+        zh = SimpleNamespace(loader=loader, translate=lambda *args: '物品', next_id=lambda prefix: 'item3')
+        en = SimpleNamespace(loader=loader, translate=lambda *args: 'Items', next_id=lambda prefix: 'item4')
+        items = 'tfc:rock/loose/granite,tfc:rock/loose/gneiss'
+        with patch('components.item_loader.create_item_image', return_value=Image.new('RGBA', (16, 16), 'red')):
+            self.assertEqual(get_item_image(zh, items), ('../../_images/alternatives.gif', '物品'))
+            self.assertEqual(get_item_image(en, items), ('../../_images/alternatives.gif', 'Items'))
+        loader.save_gif.assert_called_once()
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -35,7 +35,7 @@ def get_item_image(context: Context, item: str, placeholder: bool = True) -> Tup
     For items that aren't render-able (for various reasons), this will use a placeholder image.
     Returns:
         src : str = The path to the item image (for use in href="", or src="")
-        name : str = The translated name of the item (if a single item), or a best guess (if a tag), or None (if csv)
+        name : str = The translated name of the item (if a single item), or a localized generic name (if multiple items)
     """
     if item.endswith('.png'):
         # This is not an item image, it must be a image directly
@@ -60,6 +60,8 @@ def get_item_image(context: Context, item: str, placeholder: bool = True) -> Tup
                 )
             except InternalError as e:
                 e.warning()
+        elif ',' in item:
+            name = context.translate(I18n.ITEMS)
         return path, name
     
     util.require('{' not in item, 'Item : Item with NBT : \'%s\'' % item, True)
@@ -71,6 +73,7 @@ def get_item_image(context: Context, item: str, placeholder: bool = True) -> Tup
         name = context.translate(I18n.TAG) % item
         items = tag_loader.load_item_tag(context, item[1:])
     elif ',' in item:
+        name = context.translate(I18n.ITEMS)
         items = item.split(',')
     else:
         items = [item]
