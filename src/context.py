@@ -211,7 +211,7 @@ class Context:
         """ % (icon_name, icon_src, tooltip, tag, title, tag))
 
     def format_centered_text(self, buffer: List[str], data: Any, key: str = 'text'):
-        buffer.append('<div style="text-align: center;">')
+        buffer.append('<div class="text-center small text-body-secondary mb-4">')
         self.format_text(buffer, data, key)
         buffer.append('</div>')
 

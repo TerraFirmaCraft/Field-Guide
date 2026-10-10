@@ -43,8 +43,7 @@ class TextFormatter:
             elif key == 'br':
                 self.update_root('p')
             elif key == 'br2' or key == '2br':
-                self.update_root('p')
-                self.update_root('p')
+                self.paragraph_break()
             elif key == 'ol':  # Fake formatting code
                 self.update_root('ol')
             elif key == 'li':
@@ -83,14 +82,24 @@ class TextFormatter:
     
     def matching_tags(self, start: str, end: str):
         self.buffer.append(start)
-        self.stack.append(end)
+        self.stack.append((start, end))
+
+    def paragraph_break(self):
+        if self.root == 'p':
+            for _, end in self.stack[::-1]:
+                self.buffer.append(end)
+            self.buffer.append('</p>\n<p>')
+            for start, _ in self.stack:
+                self.buffer.append(start)
+        else:
+            self.update_root('p')
 
     def color_tags(self, color: str):
         self.matching_tags('<span style="color:%s;">' % color, '</span>')
 
     def flush_stack(self):
-        for _end in self.stack[::-1]:
-            self.buffer.append(_end)
+        for _, end in self.stack[::-1]:
+            self.buffer.append(end)
         self.stack = []
 
     def update_root(self, new_root: str = None):

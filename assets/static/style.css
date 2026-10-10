@@ -45,7 +45,7 @@ img.entry-card-icon {
 .item-header a, .item-header h4, .item-header h5, .item-header p {
     position: relative;
     top: 2px;
-    left: 42px;
+    margin-left: 42px;
 }
 
 .item-header span {

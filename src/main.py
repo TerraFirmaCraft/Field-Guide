@@ -521,7 +521,7 @@ def build_book_html(context: Context):
                 '<li><a href="../%s/">%s</a>' % (cat_id, cat.name) + (
                     ''
                     if cat_id != category_id else
-                    '<ul>%s</ul>' % '\n'.join([
+                    '<ul class="list-unstyled ms-1 ps-3 border-start">%s</ul>' % '\n'.join([
                         '<li><a href="./%s.html">%s</a></li>' % (os.path.relpath(ent_id, cat_id), ent.name)
                         for ent_id, ent in cat.sorted_entries
                     ])
@@ -582,8 +582,12 @@ def build_book_html(context: Context):
                     '<li><a href="../%s/">%s</a>' % (cat_id, cat.name) + (
                         '</li>'
                         if cat_id != category_id else
-                        '<ul>%s</ul>' % '\n'.join([
-                            '<li><a href="./%s.html">%s</a></li>' % (os.path.relpath(ent_id, cat_id), ent.name)
+                        '<ul class="list-unstyled ms-1 ps-3 border-start">%s</ul>' % '\n'.join([
+                            '<li><a href="./%s.html"%s>%s</a></li>' % (
+                                os.path.relpath(ent_id, cat_id),
+                                ' class="fw-semibold link-body-emphasis" aria-current="page"' if ent_id == entry_id else '',
+                                ent.name
+                            )
                             for ent_id, ent in cat.sorted_entries
                         ]) + '</li>'
                     )
@@ -591,12 +595,16 @@ def build_book_html(context: Context):
                 ]),
                 page_content="""
                 <h1 class="d-flex align-items-center mb-4">{entry_name}</h1>
-                {inner_content}
+                <div class="row">
+                    <div class="col-xl-9">{inner_content}</div>
+                </div>
                 """.format(
                     entry_name=title_with_optional_icon(entry.name, entry.icon, entry.icon_name),
-                    inner_content=''.join(entry.buffer)
+                    inner_content=EMPTY_PARAGRAPH.sub('', ''.join(entry.buffer))
                 )
             ))
+
+EMPTY_PARAGRAPH = re.compile(r'<p>\s*</p>')
 
 def title_with_optional_icon(text: str, icon_src: str, icon_title: str) -> str:
     if icon_src:
@@ -648,7 +656,7 @@ def index_breadcrumb(relative_path: str|None) -> str:
         """
 
 IMAGE_SINGLE = """
-<img class="d-block w-200 mx-auto img-fluid" src="{src}" alt="{text}">
+<img class="d-block w-200 mx-auto img-fluid mt-4 mb-2" src="{src}" alt="{text}">
 """
 
 IMAGE_KNAPPING = """

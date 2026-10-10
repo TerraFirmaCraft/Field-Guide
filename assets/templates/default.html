@@ -30,7 +30,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+        <div class="collapse navbar-collapse justify-content-end" id="navbar-content">
           <ul class="navbar-nav">
             <!-- Search bar-->
              <li class="nav-item">
@@ -98,23 +98,38 @@
 
     <div class="container">
       <div class="row">
-        <!-- Table of contents -->
-        <nav class="col-md-3">
-          <p class="mb-3"><strong>{text_contents}</strong></p>
+        <!-- Table of contents: a sticky sidebar on md+, a slide-out drawer below that -->
+        <div class="col-md-3">
+          <nav id="site-toc" class="offcanvas-md offcanvas-start sticky-md-top vh-100 overflow-y-auto" tabindex="-1" aria-labelledby="site-toc-label">
+            <div class="offcanvas-header">
+              <p class="offcanvas-title h5 mb-0" id="site-toc-label">{text_contents}</p>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#site-toc" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <div class="w-100">
+                <p class="mb-3 d-none d-md-block"><strong>{text_contents}</strong></p>
 
-          <ul class="list-unstyled lh-lg">
-            <li><a href="{index}">{text_index}</a></li>
-            {contents}
-          </ul>
-        </nav>
+                <ul class="list-unstyled lh-lg mb-0">
+                  <li><a href="{index}">{text_index}</a></li>
+                  {contents}
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
 
         <!-- Page content -->
         <div class="col-md-9">
-          <nav class="mb-4" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              {location}
-            </ol>
-          </nav>
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-4">
+            <button class="btn btn-sm btn-outline-secondary d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#site-toc" aria-controls="site-toc">
+              <i class="bi bi-list"></i> {text_contents}
+            </button>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-0">
+                {location}
+              </ol>
+            </nav>
+          </div>
 
           {page_content}
         </div>
@@ -160,5 +175,6 @@
     <script src="{root}/static/tooltips.js"></script>
     <script src="{root}/static/versions.js"></script>
     <script src="{root}/static/search.js"></script>
+    <script src="{root}/static/toc.js"></script>
   </body>
 </html>
