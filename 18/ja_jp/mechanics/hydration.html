@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft Field Guide</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Version 1.18.2 - v2.2.30
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 日本語
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/mechanics\hydration.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\hydration.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\hydration.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\hydration.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\hydration.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\hydration.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\hydration.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\hydration.html" class="dropdown-item">繁體中文(台灣)</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Contents</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Index</a></li>
+            <li><a href="../the_world/">世界</a></li>
+<li><a href="../getting_started/">はじめに</a></li>
+<li><a href="../mechanics/">高度な加工</a><ul><li><a href="./advanced_building_materials.html">高度な素材</a></li>
+<li><a href="./animal_husbandry.html">牧畜</a></li>
+<li><a href="./anvils.html">金床</a></li>
+<li><a href="./aqueducts.html">用水路</a></li>
+<li><a href="./armor.html">防具</a></li>
+<li><a href="./barrels.html">樽</a></li>
+<li><a href="./bellows.html">ふいご</a></li>
+<li><a href="./blast_furnace.html">高炉</a></li>
+<li><a href="./bloomery.html">塊鉄炉</a></li>
+<li><a href="./bread.html">パン</a></li>
+<li><a href="./charcoal_forge.html">溶鉱炉</a></li>
+<li><a href="./charcoal_pit.html">伏せ焼き</a></li>
+<li><a href="./chisel.html">ノミ</a></li>
+<li><a href="./composter.html">コンポスター</a></li>
+<li><a href="./crops.html">作物</a></li>
+<li><a href="./crucible.html">るつぼ</a></li>
+<li><a href="./dairy.html">乳製品</a></li>
+<li><a href="./damage_types.html">ダメージタイプ</a></li>
+<li><a href="./decay.html">保存</a></li>
+<li><a href="./fertilizers.html">肥料</a></li>
+<li><a href="./fire_clay.html">耐火粘土</a></li>
+<li><a href="./fishing.html">釣り</a></li>
+<li><a href="./flux.html">融剤</a></li>
+<li><a href="./gems.html">宝石</a></li>
+<li><a href="./grill.html">焚き火とグリル</a></li>
+<li><a href="./heating.html">加熱</a></li>
+<li><a href="./hydration.html">潤いを保つ</a></li>
+<li><a href="./lamps.html">ランプ</a></li>
+<li><a href="./leather_making.html">革の作成</a></li>
+<li><a href="./lighting.html">光源</a></li>
+<li><a href="./minecarts.html">トロッコ</a></li>
+<li><a href="./panning.html">パンニング</a></li>
+<li><a href="./papermaking.html">紙の作成</a></li>
+<li><a href="./pets.html">ペット</a></li>
+<li><a href="./pot.html">焚き火とポット</a></li>
+<li><a href="./powderkegs.html">火薬樽</a></li>
+<li><a href="./prospecting.html">探鉱</a></li>
+<li><a href="./quern.html">石臼</a></li>
+<li><a href="./salad.html">サラダ</a></li>
+<li><a href="./sandwiches.html">サンドイッチ</a></li>
+<li><a href="./scribing_table.html">筆記台</a></li>
+<li><a href="./sluices.html">堰</a></li>
+<li><a href="./steel.html">鋼</a></li>
+<li><a href="./support_beams.html">梁</a></li>
+<li><a href="./weaving.html">機織り</a></li>
+<li><a href="./wooden_buckets.html">木のバケツ</a></li></ul></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">高度な加工</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">潤いを保つ</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\image65.png" alt="潤いを保つ" title="None" /><span>潤いを保つ</span>
+        </h1>
+                <p>農業における課題の 1 つは、作物の水分を保つことです。 その地域の <a href="../the_world/climate.html#rainfall">降水量</a> に基づき地面には潜在的な湿気が存在します。 ただし、水を大量に消費する作物には、これでは十分ではない可能性があります。<br/>
+<br/>
+特定のブロックの水分量を確認するには、<span style="color:#3E8A00;">クワ</span> を手元に用意する必要があります。</p>
+<p>次に、<span style="color:#3E8A00;">農地</span> ブロック、または水分量が必要な作物を調べます。 現在の水分量を 0% から 100% までの割合で示すツールチップが表示されます。<br/>
+<br/>
+水分量は、降水量の少ない地域に移動する以外に減らすことはできません。ただし、<span style="color:#3E8A00;">水源</span>に近づくと水分量を増やすことができます。 これはバニラの農地とよく似ています。</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'ja_jp';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+  </body>
+</html>

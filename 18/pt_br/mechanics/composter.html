@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft Field Guide</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Version 1.18.2 - v2.2.30
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> Portuguese (Brazil)
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/mechanics\composter.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\composter.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\composter.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\composter.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\composter.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\composter.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\composter.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\composter.html" class="dropdown-item">繁體中文(台灣)</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Contents</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Index</a></li>
+            <li><a href="../the_world/">O mundo</a></li>
+<li><a href="../getting_started/">Começando</a></li>
+<li><a href="../mechanics/">Mecânica avançada</a><ul><li><a href="./advanced_building_materials.html">Materiais avançados</a></li>
+<li><a href="./animal_husbandry.html">Animal Husbandry</a></li>
+<li><a href="./anvils.html">Anvils</a></li>
+<li><a href="./aqueducts.html">Aqueducts</a></li>
+<li><a href="./armor.html">Armor</a></li>
+<li><a href="./barrels.html">Barrels</a></li>
+<li><a href="./bellows.html">Bellows</a></li>
+<li><a href="./blast_furnace.html">Blast Furnace</a></li>
+<li><a href="./bloomery.html">Bloomery</a></li>
+<li><a href="./bread.html">Bread</a></li>
+<li><a href="./charcoal_forge.html">Charcoal Forge</a></li>
+<li><a href="./charcoal_pit.html">Charcoal Pit</a></li>
+<li><a href="./chisel.html">Chisel</a></li>
+<li><a href="./composter.html">Composter</a></li>
+<li><a href="./crops.html">Crops</a></li>
+<li><a href="./crucible.html">Crucible</a></li>
+<li><a href="./dairy.html">Dairy Products</a></li>
+<li><a href="./damage_types.html">Damage Types</a></li>
+<li><a href="./decay.html">Preservation</a></li>
+<li><a href="./fertilizers.html">Fertilizers</a></li>
+<li><a href="./fire_clay.html">Fire Clay</a></li>
+<li><a href="./fishing.html">Fishing</a></li>
+<li><a href="./flux.html">Flux</a></li>
+<li><a href="./gems.html">Gems</a></li>
+<li><a href="./grill.html">Firepit And Grill</a></li>
+<li><a href="./heating.html">Heating</a></li>
+<li><a href="./hydration.html">Keeping Hydrated</a></li>
+<li><a href="./lamps.html">Lamps</a></li>
+<li><a href="./leather_making.html">Leather Making</a></li>
+<li><a href="./lighting.html">Light Sources</a></li>
+<li><a href="./minecarts.html">Minecarts</a></li>
+<li><a href="./panning.html">Panning</a></li>
+<li><a href="./papermaking.html">Papermaking</a></li>
+<li><a href="./pets.html">Pets</a></li>
+<li><a href="./pot.html">Firepit And Pot</a></li>
+<li><a href="./powderkegs.html">Powderkegs</a></li>
+<li><a href="./prospecting.html">Prospecting</a></li>
+<li><a href="./quern.html">Quern</a></li>
+<li><a href="./salad.html">Salads</a></li>
+<li><a href="./sandwiches.html">Sandwiches</a></li>
+<li><a href="./scribing_table.html">Scribing Table</a></li>
+<li><a href="./sluices.html">Sluices</a></li>
+<li><a href="./steel.html">Steel</a></li>
+<li><a href="./support_beams.html">Support Beams</a></li>
+<li><a href="./weaving.html">Weaving</a></li>
+<li><a href="./wooden_buckets.html">Wooden Buckets</a></li></ul></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">Mecânica avançada</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Composter</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\image55.png" alt="Composter" title="None" /><span>Composter</span>
+        </h1>
+                <p>The composter is an essential tool for making fertilizer. It needs both <span style="color:#00AA00;">Green</span> and <span style="color:#AA0000;">Brown</span> items to work. Different items contribute more to the amount of compost produced than others. To add an item to it, <span style="color:#b0b;">Right Click</span>. The items that can be added are described on later pages.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #minecraft:dirt" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item10.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #minecraft:dirt" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item10.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="Composter" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        <p>The composter just requires some <span style="color:#3E8A00;">Lumber</span> and <span style="color:#3E8A00;">Dirt</span> to make!</p>
+<p>Composters operate better in certain conditions. Composters that have a block of snow on top work slightly faster. Composters in regions of less than 150mm or greater than 350mm of rainfall operate much slower, with that effect getting stronger closer to the maximum and minimum rainfall. Also, composters that are touching other composters work slower.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>The composter at its empty, working, and complete stage.</p>
+<p>The composter takes 12 days to complete in average conditions. When it is ready, it will have a dirt-like color and gray particles will be emitted from the top of it. The compost can then be retrieved with  <span style="color:#b0b;">Right Click</span> and  <span style="color:#b0b;">Shift</span> with an empty hand. Adding things like <span style="color:#FF5555;">meat</span> and <span style="color:#FF5555;">bones</span> to compost spoils it, turning it reddish and causing it to emit gross particles. The rotten compost can be removed in the same way as good compost. When used on a crop, it instantly kills it.</p>
+<h5>Rotten Compost</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>A rotten composter.</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this item.">Item: <code>#tfc:compost_greens_low</code></span></p>
+        </div>
+        <p>Some <span style="color:#00AA00;">green</span> items contribute little to the composter, such as plants. To fill a composter's appetite of green items, you need 16 of them.</p>
+
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:compost_greens">
+                <img src="..\..\_images\item77.gif" alt="Tag: #tfc:compost_greens" />
+            </span>
+            <h5>Tag: #tfc:compost_greens</h5>
+        </div>
+        <p>Some <span style="color:#00AA00;">green</span> items contribute moderately to the composter, such as grains. To fill a composter's appetite of green items, you need 8 of them.</p>
+
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:compost_greens_high">
+                <img src="..\..\_images\item78.gif" alt="Tag: #tfc:compost_greens_high" />
+            </span>
+            <h5>Tag: #tfc:compost_greens_high</h5>
+        </div>
+        <p>Some <span style="color:#00AA00;">green</span> items contribute a great amount to the composter, such as fruits and vegetables. To fill a composter's appetite of green items, you need 4 of them.</p>
+
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:compost_browns_low">
+                <img src="..\..\_images\item79.gif" alt="Tag: #tfc:compost_browns_low" />
+            </span>
+            <h5>Tag: #tfc:compost_browns_low</h5>
+        </div>
+        <p>Some <span style="color:#AA0000;">brown</span> items contribute little to the composter, such as tall plants like dry phragmite, tree ferns, and vines, as well as fallen leaves. To fill a composter's appetite of brown items, you need 16 of them.</p>
+
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:compost_browns">
+                <img src="..\..\_images\item80.gif" alt="Tag: #tfc:compost_browns" />
+            </span>
+            <h5>Tag: #tfc:compost_browns</h5>
+        </div>
+        <p>Some <span style="color:#AA0000;">brown</span> items contribute moderately to the composter, such as wood ash and jute. To fill a composter's appetite of brown items, you need 8 of them.</p>
+
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:compost_browns_high">
+                <img src="..\..\_images\item81.gif" alt="Tag: #tfc:compost_browns_high" />
+            </span>
+            <h5>Tag: #tfc:compost_browns_high</h5>
+        </div>
+        <p>Some <span style="color:#AA0000;">brown</span> items contribute a great amount to the composter, such as melons, pumpkins, dead grass, pinecones, humus, and driftwood. To fill a composter's appetite of brown items, you need 4 of them.</p>
+
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="Tag: #tfc:compost_poisons">
+                <img src="..\..\_images\item82.gif" alt="Tag: #tfc:compost_poisons" />
+            </span>
+            <h5>Tag: #tfc:compost_poisons</h5>
+        </div>
+        <p>Some items will <span style="color:#FF5555;">poison</span> your compost. These include <span style="color:#FF5555;">meat</span> and <span style="color:#FF5555;">bones</span>. Poison compost, when used on a crop, instantly kills it.</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'pt_br';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+  </body>
+</html>

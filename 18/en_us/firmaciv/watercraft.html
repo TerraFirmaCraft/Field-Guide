@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'en_us';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/firmaciv\watercraft.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/firmaciv\watercraft.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/firmaciv\watercraft.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/firmaciv\watercraft.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/firmaciv\watercraft.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/firmaciv\watercraft.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/firmaciv\watercraft.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/firmaciv\watercraft.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">The World</a></li>
+<li><a class="text-muted" href="../getting_started/">Getting Started</a></li>
+<li><a class="text-muted" href="../mechanics/">Advanced Mechanics</a></li>
+<li><a class="text-muted" href="../tfcgyres_orehints/">(Addon) Ore Hints and Spawning</a></li>
+<li><a class="text-muted" href="../waterflasks/">(Addon) Water Flasks</a></li>
+<li><a class="text-muted" href="../firmalife/">(Addon) Firmalife</a></li>
+<li><a class="text-muted" href="../firmaciv/">(Addon) Firma: Civilization</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./navigation.html">Navigation</a></li>
+<li><a class="text-muted" href="./watercraft.html">Watercraft</a></li></ul></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">(Addon) Firma: Civilization</a> / <a class="text-muted" href="#">Watercraft</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="Kayak">
+                <img src="..\..\_images\item291.png" alt="Watercraft" />
+            </span>
+            <h4>Watercraft</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>Travelling the world, or just traversing your locality, is often best done by navigable waterways.</p>
+<p>Creating and using a boat may be slightly more involved than you're used to, but there's nothing quite like building the perfect craft and setting off on the high seas. Peruse this manual and learn the ins and outs of carving, crafting, constructing, piloting, and customizing to your delight.</p>
+<h5>Dugout Canoe</h5>
+<p>To build a Dugout Canoe, place 3 stripped logs in a row, horizontally, and cut off the tops with a saw. Then, carve out the canoe shape with an axe. Finally, light the inside of the canoe on fire to hollow out the hull. It will take the same amount of time as a pit kiln to complete the hollowing process. Don't forget to craft a paddle!</p>
+<p>Wood types:<br/>
+<br/>
+Carving out a Dugout Canoe requires a softer wood, and as a result, only some logs are workable:<br/>
+<br/>
+Douglas Fir<br/>
+Pine<br/>
+Chestnut<br/>
+Spruce<br/>
+Aspen<br/>
+Kapok<br/>
+Rosewood<br/>
+White Cedar<br/>
+Willow</p>
+<h5>Just a Log</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>The first step in making a Dugout Canoe.</p>
+<h5>Weird Slabs</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>The top of the log has been removed using a saw.</p>
+<h5>A Strange Sculpture</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>A fully carved Dugout Canoe, ready for hollowing out the hull.</p>
+<h5>Dugout Canoe</h5>
+<p>A completed dugout canoe.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-toggle="tooltip" title="Stick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item200.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Canoe Paddle" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item292.png" />
+                </div>
+            </div>
+        </div>
+        <p>How else are you supposed to control your canoe? With your blocky hands?</p>
+<p>A few more canoe tips to take with you:<br/>
+<br/>
+Two players riding and holding paddles will increase your speed!<br/>
+Is there a mob riding your canoe and you want it out of there? Crouch and press <span style="color:#b0b;">Right Click</span> to eject it. Finally, shotgun is all yours.<br/>
+More than one mob cannot ride in the canoe at a time, but up to two players can ride together.</p>
+<h5>Kayak</h5>
+<p>Your best overland solo-adventure friend. Of course, being the only boat that can be carried as an item helps. It's also fast, maneuverable, and super fun to paddle.</p>
+<p>Kayaks are the smallest and most portable boats.</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="Wool Yarn" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item197.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="Wool Yarn" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item197.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-toggle="tooltip" title="Wool Yarn" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item197.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Large Waterproof Hide" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item293.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-toggle="tooltip" title="Wool Yarn" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item197.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-toggle="tooltip" title="Large Waterproof Hide" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item293.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Kayak" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item291.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-toggle="tooltip" title="Stick" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item200.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-toggle="tooltip" title="Tag: #tfc:lumber" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item47.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Kayak Paddle" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item294.png" />
+                </div>
+            </div>
+        </div>
+        <a class="anchor" id="soaking"></a>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/2to2.png" />
+            
+        <div class="crafting-recipe-item two-recipe-pos-1">
+            <span href="#" data-toggle="tooltip" title="Large Prepared Hide" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\item295.png" />
+            
+        </div>
+        
+            
+        <div class="crafting-recipe-item two-recipe-pos-2">
+            <span href="#" data-toggle="tooltip" title="200 mB Olive Oil" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\fluid7.png" />
+            
+        </div>
+        
+            
+        <div class="crafting-recipe-item two-recipe-pos-3">
+            <span href="#" data-toggle="tooltip" title="Large Waterproof Hide" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\item293.png" />
+            
+        </div>
+        
+            
+            
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>8000 Ticks</p>
+        </div>
+        
+        </div>
+    </div>
+    
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>群峦传说 手册</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'zh_cn';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">群峦传说 手册</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">简体中文(中国大陆)</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/firmalife\smoking.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/firmalife\smoking.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/firmalife\smoking.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/firmalife\smoking.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/firmalife\smoking.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/firmalife\smoking.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/firmalife\smoking.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/firmalife\smoking.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">主页</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">版本 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>目录</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">这个世界</a></li>
+<li><a class="text-muted" href="../getting_started/">新手入门</a></li>
+<li><a class="text-muted" href="../mechanics/">进阶内容</a></li>
+<li><a class="text-muted" href="../firmalife/">(Addon) Firmalife扩展模组</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./cheese.html">奶酪</a></li>
+<li><a class="text-muted" href="./climate_station.html">气象站</a></li>
+<li><a class="text-muted" href="./cellar.html">地窖</a></li>
+<li><a class="text-muted" href="./greenhouse.html">温室</a></li>
+<li><a class="text-muted" href="./planters.html">种植盆</a></li>
+<li><a class="text-muted" href="./beekeeping.html">养蜂</a></li>
+<li><a class="text-muted" href="./jar.html">罐子</a></li>
+<li><a class="text-muted" href="./stainless_steel.html">不锈钢</a></li>
+<li><a class="text-muted" href="./drying.html">烘干</a></li>
+<li><a class="text-muted" href="./smoking.html">熏制</a></li>
+<li><a class="text-muted" href="./ovens.html">烤炉</a></li>
+<li><a class="text-muted" href="./bread.html">面包</a></li>
+<li><a class="text-muted" href="./more_fertilizer.html">更多的肥料获取途径</a></li>
+<li><a class="text-muted" href="./mixing_bowl.html">搅拌碗</a></li>
+<li><a class="text-muted" href="./herbs_and_spices.html">草药和香料</a></li></ul></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">(Addon) Firmalife扩展模组</a> / <a class="text-muted" href="#">熏制</a></em></p>
+            
+                <h4>
+        <div class="item-header">
+            <span href="#" data-toggle="tooltip" title="生鹿肉">
+                <img src="..\..\_images\item275.png" alt="熏制" />
+            </span>
+            <h4>熏制</h4>
+        </div>
+        </h4>
+                <hr>
+                <p>羊毛纱用来悬挂物品以便<span style="color:#3E8A00;">熏制</span>. 按<span style="color:#b0b;">右键</span>来放置羊毛纱.</p>
+<h5>熏制</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="请在游戏中查阅以预览该多方块结构。">多方块结构</span></p>
+        </div>
+        <p>在篝火上方的羊毛纱.</p>
+<p>熏制被用来保存<span style="color:#3E8A00;">肉类</span>和<a href="../mechanics/dairy.html">奶酪</a>. 肉类在熏制之前需要先<span style="color:#3E8A00;">卤制</span>, 只要把肉类密封在含有<span style="color:#3E8A00;">卤水</span>的<span style="color:#3E8A00;">大桶</span>中即可. 你也可以先用盐腌制. 奶酪在熏制之前没有这些要求.</p>
+<p>要开始熏制, 首先将物品放在篝火上方的线上, 篝火必须在线的下方的4个方块以内. 在熏制过程中, 线会产生一些烟雾. 重要的一点是, 篝火必须要使用<span style="color:#3E8A00;">原木</span>作为燃料, 如果用<span style="color:#3E8A00;">泥炭</span>会导致食物具有<span style="color:#3E8A00;">恶心</span>效果!</p>
+<p>熏制的过程需要游戏内的8小时. 烤肉快乐!</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

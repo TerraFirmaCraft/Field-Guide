@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="野生の果物 | TFC Field Guide" />
+    <meta name="description" content="野生の果物" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terrafirmacraft.github.io/Field-Guide" />
+    <meta property="og:title" content="野生の果物 | TFC Field Guide" />
+    <meta property="og:description" content="野生の果物" />
+    <meta property="og:image" content="https://terrafirmacraft.github.io/Field-Guide/_images/image105.png" />
+
+    <title>野生の果物 | TFC Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft Field Guide</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Version 1.20.1 - v3.2.19
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 日本語
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/the_world\wild_fruits.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world\wild_fruits.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world\wild_fruits.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world\wild_fruits.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world\wild_fruits.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world\wild_fruits.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world\wild_fruits.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world\wild_fruits.html" class="dropdown-item">繁體中文(台灣)</a>
+<a href="../../ru_ru/the_world\wild_fruits.html" class="dropdown-item">Русский</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Contents</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Index</a></li>
+            <li><a href="../the_world/">世界</a><ul><li><a href="./geology.html">地質</a></li>
+<li><a href="./ores_and_minerals.html">鉱石と鉱物</a></li>
+<li><a href="./climate.html">暦と気候</a></li>
+<li><a href="./flora.html">植物</a></li>
+<li><a href="./wild_crops.html">野生の作物</a></li>
+<li><a href="./wild_fruits.html">野生の果物</a></li>
+<li><a href="./wild_animals.html">野生の動物</a></li></ul></li>
+<li><a href="../getting_started/">はじめに</a></li>
+<li><a href="../mechanics/">高度な加工</a></li>
+<li><a href="../firmalife/">(Addon) Firmalife</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">世界</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">野生の果物</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\image105.png" alt="野生の果物" title="None" /><span>野生の果物</span>
+        </h1>
+                <p>世界には様々な種類の野生の果物が生育しています。適切な道具を使って採集、栽培もできます。これらの果物は、様々な種類の茂みや樹木で見つけられます。一般的に、果物は3つのタイプの植物に実ります: <a href="../the_world/wild_fruits.html#fruit_trees">果樹</a>、<a href="../the_world/wild_fruits.html#tall_bushes">背の高い茂み</a>、<a href="../the_world/wild_fruits.html#small_bushes">小さな茂み</a>。<br/>
+<br/>
+全ての果実植物には共通のライフサイクルがあります。</p>
+<p>それらは1年周期で成長し、花を形成し、実を結び、その後休眠します。<br/>
+<br/>
+果実植物には季節があります。寒い季節には、これらの植物は茶色で生気のないように見えます。春になると、緑色で健康になり、実を結んで大きく成長する準備を始めます。これが起こる正確な時間は果物によって異なります。果樹も同様に、老化や不適切な気候条件によって枯れる可能性があります。</p>
+<a class="anchor" id="fruit_trees"></a><h5>果樹</h5>
+<p><span style="color:#3E8A00;">果樹</span>は、小さな苗木から大きく、花を咲かせる樹木へと成長します。果樹の枝はその「心臓部」とも言えるもので、気候条件が適している限り成長を続けます。果樹が成熟すると、枝の周りに<span style="color:#3E8A00;">葉</span>をたくさん茂らせます。その葉っぱは、季節によって花を咲かせたり実を結んだりすることがあります。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image106.png" alt="tfc:textures/gui/book/tutorial/fruit_tree.png">
+<div style="text-align: center;"><p>代表的な果樹です。</p>
+</div><p>果樹は<span style="color:#3E8A00;">苗木</span>から始まります。苗木は、その果実の休眠期ではない場合にのみ成長を開始し、木の最初の部分を配置します。完成した木のサイズは、元の苗木ブロックに何本の苗木があるかによって大まかに決まります。苗木が多いほど、木が大きくなります。<br/>
+<span style="color:#3E8A00;">より継ぎ</span>を通じて、1つのブロックにさらに多くの苗木を追加できます。苗木を別の苗木に接続するには、苗木と<span style="color:#3E8A00;">ナイフ</span>を左手に持ちながら、その苗木に<span style="color:#b0b;">Right Click</span>するだけです。</p>
+<p>果樹から苗木を入手するには、<span style="color:#3E8A00;">斧</span>を使って枝分かれしている部分を壊します。また、その部分が高すぎる位置でなければ、そこに苗木を配置することもできます。これにより、1つの果樹から複数の果物を育てることができます。果物の収穫は、葉ブロックに実がなっているときに<span style="color:#b0b;">Right Click</span>で行われます。これで実が1つ得られ、植物は成長段階に戻り、冬の間休眠します。</p>
+<a class="anchor" id="cherry"></a><h5>サクランボの木</h5>
+<p><strong><a href="../the_world/climate.html#temperature">気温</a></strong>: 5 - 25°C<br/>
+<strong><a href="../mechanics/hydration.html">降水量</a></strong>: 100 - 350mm<br/>
+<br/>
+サクランボの木は1月から3月にかけて成長し、4月から5月に開花、6月に果実をつけます。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>サクランボの木の例。</p>
+<a class="anchor" id="green_apple"></a><h5>青リンゴの木</h5>
+<p><strong><a href="../the_world/climate.html#temperature">気温</a></strong>: 1 - 25°C<br/>
+<strong><a href="../mechanics/hydration.html">降水量</a></strong>: 110 - 280mm<br/>
+<br/>
+青リンゴの木は3月から7月にかけて成長し、8月から9月に開花、10月に実をつけます。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>青リンゴの木の例。</p>
+<a class="anchor" id="lemon"></a><h5>レモンの木</h5>
+<p><strong><a href="../the_world/climate.html#temperature">気温</a></strong>: 10 - 30°C<br/>
+<strong><a href="../mechanics/hydration.html">降水量</a></strong>: 180 - 470mm<br/>
+<br/>
+レモンの木は2月から5月にかけて成長し、6月から7月に開花、8月に実をつけます。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>レモンの木の例。</p>
+<a class="anchor" id="olive"></a><h5>オリーブの木</h5>
+<p><strong><a href="../the_world/climate.html#temperature">気温</a></strong>: 5 - 30°C<br/>
+<strong><a href="../mechanics/hydration.html">降水量</a></strong>: 150 - 500mm<br/>
+<br/>
+オリーブの木は3月から7月にかけて成長し、8月から9月に開花、10月に実をつけます。<br/>
+<br/>
+オリーブは<a href="../mechanics/lamps.html#olives">オリーブオイル</a>の生産に使用され、ランタンの燃料として使用できます。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>オリーブの木の例</p>
+<a class="anchor" id="orange"></a><h5>オレンジの木</h5>
+<p><strong><a href="../the_world/climate.html#temperature">気温</a></strong>: 15 - 36°C<br/>
+<strong><a href="../mechanics/hydration.html">降水量</a></strong>: 250 - 500mm<br/>
+<br/>
+オレンジの木は3月から6月にかけて成長し、7月から8月に開花、9月に実をつけます。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>オレンジの木の例。</p>
+<a class="anchor" id="peach"></a><h5>モモの木</h5>
+<p><strong><a href="../the_world/climate.html#temperature">気温</a></strong>: 4 - 27°C<br/>
+<strong><a href="../mechanics/hydration.html">降水量</a></strong>: 60 - 230mm<br/>
+<br/>
+モモの木は12月から3月にかけて成長し、4月から5月に開花、6月に実をつけます。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>モモの木の例。</p>
+<a class="anchor" id="plum"></a><h5>プラムの木</h5>
+<p><strong><a href="../the_world/climate.html#temperature">気温</a></strong>: 15 - 31°C<br/>
+<strong><a href="../mechanics/hydration.html">降水量</a></strong>: 250 - 400mm<br/>
+<br/>
+プラムの木は1月から4月にかけて成長し、5月から6月に開花、7月に実をつけます。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>プラムの木の例。</p>
+<a class="anchor" id="red_apple"></a><h5>赤リンゴの木</h5>
+<p><strong><a href="../the_world/climate.html#temperature">気温</a></strong>: 1 - 25°C<br/>
+<strong><a href="../mechanics/hydration.html">降水量</a></strong>: 100 - 280mm<br/>
+<br/>
+赤リンゴの木は3月から7月にかけて成長し、8月から9月に開花、10月に実をつけます。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>赤リンゴの木の例</p>
+<a class="anchor" id="banana"></a><h5>バナナの木</h5>
+<p><strong><a href="../the_world/climate.html#temperature">気温</a></strong>: 17 - 35°C<br/>
+<strong><a href="../mechanics/hydration.html">降水量</a></strong>: 280 - 500mm<br/>
+<br/>
+バナナは特別な種類の果樹です。垂直にのみ成長し、葉がなく、最上部のブロックにのみ実をつけます。苗木は植物の花の部分から落ちます。バナナの木は収穫されると枯れてしまい、それ以上実をつけなくなります。春に植え直す必要があります。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>バナナの木の例。</p>
+<h5>果樹</h5>
+<p>果樹が実をつける時期や<br/>
+成長サイクルのカレンダー</p>
+<div class="row"><div class="col-md-9"><figure class="table-figure"><table><thead><tr><th></th><th><p>Jan</p></th><th><p>Feb</p></th><th><p>Mar</p></th><th><p>Apr</p></th><th><p>May</p></th><th><p>Jun</p></th><th><p>Jul</p></th><th><p>Aug</p></th><th><p>Sep</p></th><th><p>Oct</p></th><th><p>Nov</p></th><th><p>Dec</p></th></tr></thead><tbody><tr><td><p>Cherry</p></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Apple</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Lemon</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Olive</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Orange</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Peach</p></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td></tr><tr><td><p>Plum</p></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Banana</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr></tbody></table></figure></div><div class="col-md-3"><h4>Legend</h4>
+            <div class="item-header">
+                <span style="background-color:#a8986a"></span>
+                <p>Dormant</p>
+            </div>
+            
+            <div class="item-header">
+                <span style="background-color:#6ab553"></span>
+                <p>Healthy</p>
+            </div>
+            
+            <div class="item-header">
+                <span style="background-color:#cca0db"></span>
+                <p>Flowering</p>
+            </div>
+            
+            <div class="item-header">
+                <span style="background-color:#a217ff"></span>
+                <p>Fruiting</p>
+            </div>
+            </div></div><hr><a class="anchor" id="tall_bushes"></a><h5>背の高いベリーの茂み</h5>
+<p><span style="color:#3E8A00;">背の高いベリーの茂み</span>は、あらゆる方向に成長し、広がることができる果物のブロックです。上方向に成長し、最大での高さ3になるか、側面に<span style="color:#3E8A00;">茎</span>が生え、完全な茂みブロックに成長していきます。しばらくすると、茂みは広がるのをやめ、成熟に達します。鋭い道具でこれらの茂みを収穫すると、新しい茂みを落とす可能性があります。完全に成熟した茂みは常に自然に落ちます。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image107.png" alt="tfc:textures/gui/book/tutorial/berry_bush.png">
+<div style="text-align: center;"><p>野生の背の高いベリーの茂み</p>
+</div><p>背の高いベリーの茂みは、その茎が根を張る場所があるときに広がることができます。実際には、新しい茂みを育てるためにはその下に固いブロックが必要です。草や他のゴミがない平らで開けた場所に植えることで、成長のチャンスが最も高まります。</p>
+<p>茂みは果樹とは異なり、周囲の水ブロックから<a href="../mechanics/hydration.html">水分</a>を摂ります。果樹は降水量によって育ちます。<br/>
+茂みブロックはベリーを栽培でき、これは<span style="color:#b0b;">Right Click</span>で収穫できます。</p>
+<a class="anchor" id="blackberry"></a><h5>ブラックベリー</h5>
+<p><strong><a href="../the_world/climate.html#temperature">気温</a></strong>: 7 - 24°C<br/>
+<strong><a href="../mechanics/hydration.html">降水量</a></strong>: 24 - 100mm<br/>
+<br/>
+ブラックベリーの茂みは2月から5月に成長し、6月と7月に花を咲かせ、8月に実をつけます。<br/>
+<br/>
+木の少ない地域で見つかります。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>ブラックベリーの茂みの例。</p>
+<a class="anchor" id="raspberry"></a><h5>ラズベリー</h5>
+<p><strong><a href="../the_world/climate.html#temperature">気温</a></strong>: 5 - 25°C<br/>
+<strong><a href="../mechanics/hydration.html">降水量</a></strong>: 24 - 100mm<br/>
+<br/>
+ラズベリーの茂みは4月から7月に成長し、8月と9月に花を咲かせ、10月に実をつけます。<br/>
+<br/>
+木の少ない地域で見つかります。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>ラズベリーの茂みの例。</p>
+<a class="anchor" id="blueberry"></a><h5>ブルーベリー</h5>
+<p><strong><a href="../the_world/climate.html#temperature">気温</a></strong>: 7 - 29°C<br/>
+<strong><a href="../mechanics/hydration.html">降水量</a></strong>: 12 - 100mm<br/>
+<br/>
+ブルーベリーの茂みは2月から5月に成長し、6月と7月に花を咲かせ、8月に実をつけます。<br/>
+<br/>
+木の少ない地域で見つかります。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>ブルーベリーの茂みの例。</p>
+<a class="anchor" id="elderberry"></a><h5>ニワトコ</h5>
+<p><strong><a href="../the_world/climate.html#temperature">気温</a></strong>: 10 - 33°C<br/>
+<strong><a href="../mechanics/hydration.html">降水量</a></strong>: 12 - 100mm<br/>
+<br/>
+ニワトコの茂みは2月から5月に成長し、6月と7月に花を咲かせ、8月に実をつけます。<br/>
+<br/>
+木の少ない地域で見つかります。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>ニワトコの茂みの例。</p>
+<a class="anchor" id="small_bushes"></a><h5>小さい茂み</h5>
+<p><span style="color:#3E8A00;">小さい茂み</span>は森林に生育する低い果実植物一種です。近くに他の茂みがあまりない場合、小さい茂みは時折周囲のブロックに広がります。<br/>
+<br/>
+小さい茂みは3段階のサイズを経て成長し、成長したら<span style="color:#b0b;">Right Click</span>で収穫できます。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>小さい茂みの3段階のサイズ</p>
+<a class="anchor" id="bunchberry"></a><h5>ゴゼンタチバナ</h5>
+<p><strong><a href="../the_world/climate.html#temperature">気温</a></strong>: 15 - 35°C<br/>
+<strong><a href="../mechanics/hydration.html">水分量</a></strong>: 24 - 100%<br/>
+<br/>
+ゴゼンタチバナの茂みは5月から7月に成長し、8月と9月に花を咲かせ、10月に実をつけます。<br/>
+<br/>
+森林で見つかります。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>ゴゼンタチバナの各時期の成長段階。</p>
+<a class="anchor" id="gooseberry"></a><h5>セイヨウスグリ</h5>
+<p><strong><a href="../the_world/climate.html#temperature">気温</a></strong>: 5 - 27°C<br/>
+<strong><a href="../mechanics/hydration.html">水分量</a></strong>: 24 - 100%<br/>
+<br/>
+セイヨウスグリの茂みは4月から7月に成長し、8月と9月に花を咲かせ、10月に実をつけます。<br/>
+<br/>
+森林で見つかります。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>セイヨウスグリの各時期の成長段階。</p>
+<a class="anchor" id="snowberry"></a><h5>セッコウボク</h5>
+<p><strong><a href="../the_world/climate.html#temperature">気温</a></strong>: -7 - 18°C<br/>
+<strong><a href="../mechanics/hydration.html">水分量</a></strong>: 24 - 100%<br/>
+<br/>
+セッコウボクの茂みは3月から6月に成長し、7月と8月に花を咲かせ、9月に実をつけます。<br/>
+<br/>
+森林で見つかります。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>セッコウボクの各時期の成長段階。</p>
+<a class="anchor" id="cloudberry"></a><h5>ホロムイイチゴ</h5>
+<p><strong><a href="../the_world/climate.html#temperature">気温</a></strong>: -2 - 17°C<br/>
+<strong><a href="../mechanics/hydration.html">水分量</a></strong>: 9 - 100%<br/>
+<br/>
+ホロムイイチゴの茂みは2月から5月に成長し、6月から8月に花を咲かせ、9月に実をつけます。<br/>
+<br/>
+森林で見つかります。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>ホロムイイチゴの各時期の成長段階。</p>
+<a class="anchor" id="strawberry"></a><h5>イチゴ</h5>
+<p><strong><a href="../the_world/climate.html#temperature">気温</a></strong>: 5 - 28°C<br/>
+<strong><a href="../mechanics/hydration.html">水分量</a></strong>: 12 - 100%<br/>
+<br/>
+イチゴの茂みは10月から12月に成長し、1月と2月に花を咲かせ、3月に実をつけます。<br/>
+<br/>
+森林で見つかります。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>イチゴ各時期の成長段階。</p>
+<a class="anchor" id="wintergreen_berry"></a><h5>ヒメコウジ</h5>
+<p><strong><a href="../the_world/climate.html#temperature">気温</a></strong>: -6 - 17°C<br/>
+<strong><a href="../mechanics/hydration.html">水分量</a></strong>: 12 - 100%<br/>
+<br/>
+ヒメコウジの茂みは5月から9月に成長し、10月と11月に花を咲かせ、12月に実をつけます。<br/>
+<br/>
+森林で見つかります。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>ヒメコウジの各時期の成長段階。</p>
+<a class="anchor" id="cranberry"></a><h5>クランベリー</h5>
+<p><strong><a href="../the_world/climate.html#temperature">気温</a></strong>: -5 - 17°C<br/>
+<strong><a href="../mechanics/hydration.html">水分量</a></strong>: 30 - 100%<br/>
+<br/>
+クランベリーの茂みは3月から6月に成長し、7月と8月に花を咲かせ、9月に実をつけます。<br/>
+<br/>
+森林で見つかります。他の小さな茂みとは異なり、クランベリーの茂みは水中で栽培されます。</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>クランベリーの各時期の成長段階。</p>
+<h5>ベリーの茂み</h5>
+<p>ベリーが実をつける時期や成長サイクルのカレンダー</p>
+<div class="row"><div class="col-md-9"><figure class="table-figure"><table><thead><tr><th></th><th><p>Jan</p></th><th><p>Feb</p></th><th><p>Mar</p></th><th><p>Apr</p></th><th><p>May</p></th><th><p>Jun</p></th><th><p>Jul</p></th><th><p>Aug</p></th><th><p>Sep</p></th><th><p>Oct</p></th><th><p>Nov</p></th><th><p>Dec</p></th></tr></thead><tbody><tr><td><p>Snowberry</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Bunchberry</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Gooseberry</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Cloudberry</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Strawberry</p></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td></tr><tr><td><p>Wintergreen</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td></tr><tr><td><p>Cranberry</p></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#6ab553;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#cca0db;"></td><td style="background-color:#a217ff;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td><td style="background-color:#a8986a;"></td></tr></tbody></table></figure></div><div class="col-md-3"><h4>Legend</h4>
+            <div class="item-header">
+                <span style="background-color:#a8986a"></span>
+                <p>Dormant</p>
+            </div>
+            
+            <div class="item-header">
+                <span style="background-color:#6ab553"></span>
+                <p>Healthy</p>
+            </div>
+            
+            <div class="item-header">
+                <span style="background-color:#cca0db"></span>
+                <p>Flowering</p>
+            </div>
+            
+            <div class="item-header">
+                <span style="background-color:#a217ff"></span>
+                <p>Fruiting</p>
+            </div>
+            </div></div><hr>
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'ja_jp';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+  </body>
+</html>

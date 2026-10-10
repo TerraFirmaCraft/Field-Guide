@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TerraFirmaCraft 도감</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft 도감</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> 버전 1.18.2 - v2.2.30
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 한국어
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/the_world\waterways.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/the_world\waterways.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/the_world\waterways.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/the_world\waterways.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/the_world\waterways.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/the_world\waterways.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/the_world\waterways.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/the_world\waterways.html" class="dropdown-item">繁體中文(台灣)</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>목차</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">색인</a></li>
+            <li><a href="../the_world/">세계</a><ul><li><a href="./biomes.html">생물군계</a></li>
+<li><a href="./waterways.html">강이 흐르는 곳에서</a></li>
+<li><a href="./geology.html">지질학</a></li>
+<li><a href="./ores_and_minerals.html">광석과 광물</a></li>
+<li><a href="./climate.html">달력과 기후</a></li>
+<li><a href="./flora.html">식물</a></li>
+<li><a href="./wild_crops.html">야생 작물</a></li>
+<li><a href="./wild_fruits.html">야생 과일</a></li>
+<li><a href="./wild_animals.html">야생동물</a></li></ul></li>
+<li><a href="../getting_started/">시작하기</a></li>
+<li><a href="../mechanics/">심화 기술</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">세계</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">강이 흐르는 곳에서</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\image105.png" alt="강이 흐르는 곳에서" title="None" /><span>강이 흐르는 곳에서</span>
+        </h1>
+                <p>여러분이 탐험하는 동안 강, 호수, 또는 바다와 같은 넓은 물을 만나게 될 수도 있습니다. 강과 호수는 <span style="color:#3E8A00;">민물</span>로 이루어져 있지만, 바다는 <span style="color:#3E8A00;">바닷물</span>로 이루어져 있습니다. 민물을 마시면 갈증이 해소되지만, 바닷물을 마시면 시간이 지날수록 갈증이 더 심해집니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image106.png" alt="tfc:textures/gui/book/biomes/river.png">
+<div style="text-align: center;"><p>강.</p>
+</div><p>TerraFirmaCraft의 강은 <span style="color:#3E8A00;">흐름</span>이 있습니다. 강의 흐름은 흐르는 물과 같이 아이템이나 플레이어, 엔티티들을 밀어냅니다. 강의 흐름은 궁극적으로는 <a href="../the_world/biomes.html#ocean">바다</a>로 향하며, 그 과정에서 다른 물줄기와 합쳐질 수도 있습니다. 때때로 강이 지하로 사라질 때가 있고, 심지어 드물게는 지하의 넓은 동굴 호수를 볼 수도 있지만, 강은 결국 언젠가는 바다로 이어집니다.</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image107.png" alt="tfc:textures/gui/book/biomes/underground_river.png">
+<div style="text-align: center;"><p>지하 강의 일부분.</p>
+</div><a class="anchor" id="ore_deposits"></a><h5>광석 침전물</h5>
+<p>강이나 호수에서는 또한 몇몇 자원들을 발견할 수도 있습니다. 첫 번째는 작은 광석 침전물입니다. 작은 광석 점이 박힌 자갈을 강이나 호수의 바닥에서 찾을 수 있습니다. 이 자갈들은 <a href="../mechanics/panning.html">사금질</a>을 하여 적은 양의 광석을 얻을 수 있습니다. 자연동, 자연은, 자연은, 그리고 주석석을 이 방법으로 찾을 수 있습니다.</p>
+<h5>예시</h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block17.png" alt="Block Visualization">
+<div style="text-align: center;"><p>점판암 속의 자연금 침전물.</p>
+</div><a class="anchor" id="gemstones"></a><h5>보석 원석</h5>
+<p>호수는 자갈 속 광석 침전물 뿐 아니라, 몇몇 보석들 또한 숨길 수 있습니다. 자수정이나 오팔은 이러한 방식으로 호수 및 강 아래의 땅 또는 광맥에서 발견될 수 있습니다.</p>
+<h5>예시</h5>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\block45.png" alt="Block Visualization">
+<div style="text-align: center;"><p>석회암 속의 자수정 광석.</p>
+</div>
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API 뮨서
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'ko_kr';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+  </body>
+</html>

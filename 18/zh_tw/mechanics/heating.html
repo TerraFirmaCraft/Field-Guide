@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>群巒傳說 手冊</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">群巒傳說 手冊</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> 版本 1.18.2 - v2.2.30
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 繁體中文(台灣)
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/mechanics\heating.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\heating.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\heating.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\heating.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\heating.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\heating.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\heating.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\heating.html" class="dropdown-item">繁體中文(台灣)</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>目錄</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">主頁</a></li>
+            <li><a href="../the_world/">這個世界</a></li>
+<li><a href="../getting_started/">新手入門</a></li>
+<li><a href="../mechanics/">進階內容</a><ul><li><a href="./advanced_building_materials.html">高階建築材料</a></li>
+<li><a href="./animal_husbandry.html">畜牧業</a></li>
+<li><a href="./anvils.html">砧</a></li>
+<li><a href="./aqueducts.html">水渠</a></li>
+<li><a href="./armor.html">盔甲</a></li>
+<li><a href="./barrels.html">大桶</a></li>
+<li><a href="./bellows.html">風箱</a></li>
+<li><a href="./blast_furnace.html">建造高爐</a></li>
+<li><a href="./bloomery.html">鍛鐵爐</a></li>
+<li><a href="./bread.html">烤麵包</a></li>
+<li><a href="./charcoal_forge.html">木炭爐</a></li>
+<li><a href="./charcoal_pit.html">木炭坑</a></li>
+<li><a href="./chisel.html">鑿子</a></li>
+<li><a href="./composter.html">Composter</a></li>
+<li><a href="./crops.html">農作物</a></li>
+<li><a href="./crucible.html">坩堝</a></li>
+<li><a href="./dairy.html">Dairy Products</a></li>
+<li><a href="./dairy.html">Dairy Products</a></li>
+<li><a href="./damage_types.html">傷害型別</a></li>
+<li><a href="./decay.html">食物保鮮</a></li>
+<li><a href="./fertilizers.html">堆肥</a></li>
+<li><a href="./fire_clay.html">耐火粘土</a></li>
+<li><a href="./fishing.html">釣魚</a></li>
+<li><a href="./flux.html">助焊劑</a></li>
+<li><a href="./gems.html">寶石</a></li>
+<li><a href="./grill.html">篝火燒烤</a></li>
+<li><a href="./heating.html">加熱</a></li>
+<li><a href="./hydration.html">保持土壤溼潤</a></li>
+<li><a href="./lamps.html">燈</a></li>
+<li><a href="./leather_making.html">制皮術</a></li>
+<li><a href="./lighting.html">光源</a></li>
+<li><a href="./minecarts.html">Minecarts</a></li>
+<li><a href="./panning.html">淘金</a></li>
+<li><a href="./papermaking.html">Papermaking</a></li>
+<li><a href="./pets.html">寵物</a></li>
+<li><a href="./pot.html">篝火大鍋</a></li>
+<li><a href="./powderkegs.html">火藥桶</a></li>
+<li><a href="./prospecting.html">勘探</a></li>
+<li><a href="./quern.html">手推磨</a></li>
+<li><a href="./salad.html">沙拉</a></li>
+<li><a href="./sandwiches.html">三明治</a></li>
+<li><a href="./scribing_table.html">命名臺</a></li>
+<li><a href="./sluices.html">洗礦槽</a></li>
+<li><a href="./steel.html">鍊鋼</a></li>
+<li><a href="./support_beams.html">支撐梁</a></li>
+<li><a href="./weaving.html">札札弄機杼</a></li>
+<li><a href="./wooden_buckets.html">木桶</a></li></ul></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">進階內容</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">加熱</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\image64.png" alt="加熱" title="None" /><span>加熱</span>
+        </h1>
+                <p>將物品加熱可以將其轉化為另一種物品或熔化為液體。<a href="../getting_started/firepit.html">篝火</a>、<a href="../getting_started/pit_kiln.html">坑窯</a>或<a href="../mechanics/charcoal_forge.html">木炭爐</a>等裝置都可以加熱物品，它們的工作原理都大同小異。當將物品放入這些裝置時，物品就會逐漸升溫。物品的工具提示中會說明它當前的溫度。</p>
+<p>物品的溫度是用顏色來表示的。每個顏色表示了物品所處溫度的區間：<br/>
+<br/>
+<span style="color:#AAAAAA;"><strong>暖</strong></span>：1 - 80 °C<br/>
+<span style="color:#AAAAAA;"><strong>熱</strong></span>：80 - 210 °C<br/>
+<span style="color:#AAAAAA;"><strong>灼熱</strong></span>：210 - 480 °C<br/>
+<span style="color:#AA0000;"><strong>淡紅</strong></span>：480 - 580 °C<br/>
+<strong><span style="color:#AA0000;">暗紅</span></strong>：580 - 730 °C<br/>
+<span style="color:#FF5555;"><strong>亮紅</strong></span>：730 - 930 °C<br/>
+<span style="color:#FFAA00;"><strong>橙</strong></span>：930 - 1100 °C<br/>
+<span style="color:#FFFF55;"><strong>黃</strong></span>：1100 - 1300 °C<br/>
+<span style="color:#FFFF55;"><strong>黃白</strong></span>：1300 - 1400 °C<br/>
+<span class="minecraft-white"><strong>白</strong></span>：1400 - 1500 °C<br/>
+<span class="minecraft-white"><strong>熾白</strong></span>： >1500 °C</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'zh_tw';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+  </body>
+</html>
