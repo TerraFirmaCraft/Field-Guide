@@ -178,7 +178,14 @@ def format_sized_ingredient(context: Context, data: Any) -> Tuple[Tuple[str, str
     ing = format_ingredient(context, data)
     return ing, 1 if 'count' not in data else data['count']
 
-def format_item_stack(context: Context, data: Any) -> Tuple[str, str, int]:
+def format_item_stack(context: Context, data: Any, copy_input: Any = None) -> Tuple[str, str, int]:
+    if isinstance(data, str):
+        path, name = item_loader.get_item_image(context, data)
+        return path, name, 1
+    if copy_input is not None and not any(key in data for key in ('stack', 'item', 'id')):
+        if any(modifier.get('type') == 'tfc:copy_input' for modifier in data.get('modifiers', [])):
+            path, name = format_ingredient(context, copy_input)
+            return path, name, data.get('count', 1)
     if 'modifiers' in data and 'stack' in data:
         return format_item_stack(context, data['stack'])  # Discard modifiers
     if 'item' in data and isinstance(data, dict):

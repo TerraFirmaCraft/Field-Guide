@@ -27,7 +27,8 @@ def format_barrel_recipe_from_data(context: Context, buffer: List[str], data: An
         in_count = in_item['count'] if 'count' in in_item else 1
         input_item_div = make_icon(in_name, in_path, 1, crafting_recipe.format_count(in_count))
     if 'output_item' in data:
-        out_path, out_name, out_count = crafting_recipe.format_item_stack(context, data['output_item'])
+        out_path, out_name, out_count = crafting_recipe.format_item_stack(
+            context, data['output_item'], data.get('input_item'))
         output_item_div = make_icon(out_name, out_path, 3, crafting_recipe.format_count(out_count))
     if 'input_fluid' in data:
         f_in_path, f_in_name = fluid_loader.get_fluid_image(context, data['input_fluid'])
