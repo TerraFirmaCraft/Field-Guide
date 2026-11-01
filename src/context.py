@@ -17,7 +17,7 @@ IMAGE_CACHE: Dict[str, str] = {}
 
 BOOK_DIR = 'src/main/resources/%s/tfc/patchouli_books/field_guide/'
 
-CONFIG_VALUE = re.compile(r'\$\(cfg:([^)]*)\)')
+CONFIG_VALUE = re.compile(r'\$\((fl)?cfg:([^)]*)\)')
 
 
 class Context:
@@ -45,6 +45,8 @@ class Context:
 
         self.config_defaults = self.loader.load_config_defaults()
         self.config_values: Dict[str, str] = {}
+        self.fl_config_defaults = self.loader.load_firmalife_config_defaults() if use_addons else {}
+        self.fl_config_values: Dict[str, str] = {}
 
         self.lang = None
         self.lang_keys = {}
@@ -96,6 +98,10 @@ class Context:
             name: self.resolve_component(component)
             for name, component in self.config_defaults.items()
         }
+        self.fl_config_values = {
+            name: self.resolve_component(component)
+            for name, component in self.fl_config_defaults.items()
+        }
 
         return self
 
@@ -139,11 +145,13 @@ class Context:
 
     def substitute_config_values(self, text: str) -> str:
         """
-        Replaces $(cfg:<name>) macros with the default value of the config option they name. In game these resolve
-        against the connected server's config, which we have no access to.
+        Replaces $(cfg:<name>) macros, and Firmalife's $(flcfg:<name>), with the default value of the config option
+        they name. In game these resolve against the connected server's config, which we have no access to.
         """
         def replace(match: re.Match) -> str:
-            name = match.group(1)
+            name = match.group(2)
+            if match.group(1):
+                return self.firmalife_config_value(name)
             if name.startswith('temperature:') or name.startswith('heat:'):
                 prefix, value = name.split(':', 1)
                 try:
@@ -163,6 +171,20 @@ class Context:
             return self.config_values[name]
 
         return CONFIG_VALUE.sub(replace, text)
+
+    def firmalife_config_value(self, name: str) -> str:
+        if name.startswith('plantable.'):
+            plant, nutrient = name[len('plantable.'):].rsplit('.', 1)
+            try:
+                nutrients = self.loader.load_resource('firmalife:%s' % plant, 'firmalife/plantable', 'data', '.json', json.load)['nutrient']
+                return format_nutrient(nutrients, {'n': 'nitrogen', 'p': 'phosphorous', 'k': 'potassium'}[nutrient])
+            except (InternalError, KeyError):
+                LOG.warning('Unknown config value $(flcfg:%s)' % name)
+                return ''
+        if name not in self.fl_config_values:
+            LOG.warning('Unknown config value $(flcfg:%s)' % name)
+            return ''
+        return self.fl_config_values[name]
 
     def resolve_component(self, component: Any) -> str:
         """ Resolves a serialized Component, as written by TFC's data generators, into display text. """
@@ -273,3 +295,13 @@ class Context:
         ref = self.loader.save_image(self.next_id('image'), img)
         IMAGE_CACHE[image] = ref
         return ref
+
+
+def format_nutrient(nutrients: Dict[str, float], key: str) -> str:
+    """ Matches Firmalife's Plantable.formatNutrientAmount """
+    value = Decimal(str(nutrients[key]))
+    if value < 0:
+        if not any(v > 0 for v in nutrients.values()):
+            value *= Decimal('0.3')  # Crops that only restore nutrients restore 30% of the value
+        return '+%s' % (-value * 100).quantize(Decimal(1), ROUND_HALF_UP)
+    return '%s' % (value * 100).quantize(Decimal(1), ROUND_HALF_UP)
