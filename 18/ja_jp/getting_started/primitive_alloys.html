@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft Field Guide</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Version 1.18.2 - v2.2.30
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 日本語
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/getting_started\primitive_alloys.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\primitive_alloys.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\primitive_alloys.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\primitive_alloys.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\primitive_alloys.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\primitive_alloys.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\primitive_alloys.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\primitive_alloys.html" class="dropdown-item">繁體中文(台灣)</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Contents</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Index</a></li>
+            <li><a href="../the_world/">世界</a></li>
+<li><a href="../getting_started/">はじめに</a><ul><li><a href="./introduction.html">導入</a></li>
+<li><a href="./firepit.html">火を起こす</a></li>
+<li><a href="./pottery.html">粘土細工</a></li>
+<li><a href="./pit_kiln.html">穴窯</a></li>
+<li><a href="./finding_ores.html">鉱石、金属、鋳造</a></li>
+<li><a href="./primitive_alloys.html">最初の合金</a></li>
+<li><a href="./primitive_anvils.html">最初の金床</a></li>
+<li><a href="./building_materials.html">建材</a></li>
+<li><a href="./a_place_to_sleep.html">眠る場所</a></li>
+<li><a href="./size_and_weight.html">大きさと重さ</a></li>
+<li><a href="./food_and_water.html">食料と水</a></li></ul></li>
+<li><a href="../mechanics/">高度な加工</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">はじめに</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">最初の合金</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">最初の合金</h1>
+                <p><span style="color:#3E8A00;">合金</span> は、2 つ以上の金属を混合して作成できる、より強力な新しい金属です。 ゲームの初期段階では、通常の銅はツールを作成するのに便利な金属ですが、次に作る金属は <span style="color:#3E8A00;">青銅</span> の3種類のうちの 1つです。 合金はコンポーネント <span style="color:#3E8A00;">金属含有量</span> で構成されており、それぞれが全体の特定の割合を満たさなければなりません。</p>
+<p>TFCの初期段階で合金を作成できる方法の1つは、<span style="color:#3E8A00;">小さな壺</span> を使用することです。 このプロセスは <a href="../getting_started/finding_ores.html#casting">鋳造</a> と非常によく似ています。 ただし、単一の金属を使用する代わりに、既知の合金を形成するために、容器内に十分な量の鉱石片を正しい比率で配置します。</p>
+<p>たとえば、1000 mB の <span style="color:#3E8A00;">青銅</span> (右の図) を作成するには、880 ～ 920 mB の <span style="color:#3E8A00;">銅</span> と、80 ～ 120 mB の 錫を混合します。<br/>
+<br/>
+次の 3 ページには、3種類の青銅のレシピが表示されます。 それぞれのタイプの青銅は、ツール、<a href="../mechanics/armor.html">防具</a>、およびその他の金属アイテムの作成に使用できます。 それらはわずかに性能が異なるため、結果として得られるツールの耐久性、効率、攻撃ダメージは異なります。</p>
+
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="青銅のインゴット">
+                <img src="..\..\_images\item28.png" alt="青銅" />
+            </span>
+            <h5>青銅</h5>
+        </div>
+        <p><br/>
+<strong>必要:</strong><br/>
+</p>
+<ul>
+	<li>88 - 92 % : <span style="color:#3E8A00;">銅</span></li>
+	<li>8 - 12 % : <span style="color:#3E8A00;">錫</li>
+</ul><p><br/>
+</span></p>
+
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="蒼鉛青銅のインゴット">
+                <img src="..\..\_images\item29.png" alt="蒼鉛青銅" />
+            </span>
+            <h5>蒼鉛青銅</h5>
+        </div>
+        <p><br/>
+<strong>必要:</strong><br/>
+</p>
+<ul>
+	<li>20 - 30 % : <span style="color:#3E8A00;">亜鉛</span></li>
+	<li>50 - 65 % : <span style="color:#3E8A00;">銅</span></li>
+	<li>10 - 20 % : <span style="color:#3E8A00;">蒼鉛</span></li>
+</ul><p><br/>
+</p>
+
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="黒青銅のインゴット">
+                <img src="..\..\_images\item30.png" alt="黒色青銅" />
+            </span>
+            <h5>黒色青銅</h5>
+        </div>
+        <p><br/>
+<strong>必要:</strong><br/>
+</p>
+<ul>
+	<li>50 - 70 % : <span style="color:#3E8A00;">銅</span></li>
+	<li>10 - 25 % : <span style="color:#3E8A00;">銀</span></li>
+	<li>10 - 25 % : <span style="color:#3E8A00;">金</span></li>
+</ul><p><br/>
+</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'ja_jp';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+  </body>
+</html>

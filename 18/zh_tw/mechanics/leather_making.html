@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>群巒傳說 手冊</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">群巒傳說 手冊</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> 版本 1.18.2 - v2.2.30
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 繁體中文(台灣)
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/mechanics\leather_making.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/mechanics\leather_making.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/mechanics\leather_making.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/mechanics\leather_making.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/mechanics\leather_making.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/mechanics\leather_making.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/mechanics\leather_making.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/mechanics\leather_making.html" class="dropdown-item">繁體中文(台灣)</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>目錄</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">主頁</a></li>
+            <li><a href="../the_world/">這個世界</a></li>
+<li><a href="../getting_started/">新手入門</a></li>
+<li><a href="../mechanics/">進階內容</a><ul><li><a href="./advanced_building_materials.html">高階建築材料</a></li>
+<li><a href="./animal_husbandry.html">畜牧業</a></li>
+<li><a href="./anvils.html">砧</a></li>
+<li><a href="./aqueducts.html">水渠</a></li>
+<li><a href="./armor.html">盔甲</a></li>
+<li><a href="./barrels.html">大桶</a></li>
+<li><a href="./bellows.html">風箱</a></li>
+<li><a href="./blast_furnace.html">建造高爐</a></li>
+<li><a href="./bloomery.html">鍛鐵爐</a></li>
+<li><a href="./bread.html">烤麵包</a></li>
+<li><a href="./charcoal_forge.html">木炭爐</a></li>
+<li><a href="./charcoal_pit.html">木炭坑</a></li>
+<li><a href="./chisel.html">鑿子</a></li>
+<li><a href="./composter.html">Composter</a></li>
+<li><a href="./crops.html">農作物</a></li>
+<li><a href="./crucible.html">坩堝</a></li>
+<li><a href="./dairy.html">Dairy Products</a></li>
+<li><a href="./dairy.html">Dairy Products</a></li>
+<li><a href="./damage_types.html">傷害型別</a></li>
+<li><a href="./decay.html">食物保鮮</a></li>
+<li><a href="./fertilizers.html">堆肥</a></li>
+<li><a href="./fire_clay.html">耐火粘土</a></li>
+<li><a href="./fishing.html">釣魚</a></li>
+<li><a href="./flux.html">助焊劑</a></li>
+<li><a href="./gems.html">寶石</a></li>
+<li><a href="./grill.html">篝火燒烤</a></li>
+<li><a href="./heating.html">加熱</a></li>
+<li><a href="./hydration.html">保持土壤溼潤</a></li>
+<li><a href="./lamps.html">燈</a></li>
+<li><a href="./leather_making.html">制皮術</a></li>
+<li><a href="./lighting.html">光源</a></li>
+<li><a href="./minecarts.html">Minecarts</a></li>
+<li><a href="./panning.html">淘金</a></li>
+<li><a href="./papermaking.html">Papermaking</a></li>
+<li><a href="./pets.html">寵物</a></li>
+<li><a href="./pot.html">篝火大鍋</a></li>
+<li><a href="./powderkegs.html">火藥桶</a></li>
+<li><a href="./prospecting.html">勘探</a></li>
+<li><a href="./quern.html">手推磨</a></li>
+<li><a href="./salad.html">沙拉</a></li>
+<li><a href="./sandwiches.html">三明治</a></li>
+<li><a href="./scribing_table.html">命名臺</a></li>
+<li><a href="./sluices.html">洗礦槽</a></li>
+<li><a href="./steel.html">鍊鋼</a></li>
+<li><a href="./support_beams.html">支撐梁</a></li>
+<li><a href="./weaving.html">札札弄機杼</a></li>
+<li><a href="./wooden_buckets.html">木桶</a></li></ul></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">進階內容</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">制皮術</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\item123.png" alt="制皮術" title="皮革" /><span>制皮術</span>
+        </h1>
+                <p><span style="color:#3E8A00;">皮革</span>是一種由獸皮製成的結實耐用的材料。它可以用來製作<span style="color:#3E8A00;">皮革盔甲</span>、<span style="color:#3E8A00;">鞍</span>、以及<a href="../mechanics/bellows.html">風箱</a>。獸皮必須經過一系列複雜的工序之後才能變成<span style="color:#3E8A00;">皮革</span>。首先是<a href="../mechanics/leather_making.html#soaking">浸灰</a>，然後是<a href="../mechanics/leather_making.html#scraping">剖層</a>，接著要<a href="../mechanics/leather_making.html#preparing">脫灰</a>，最後還要<a href="../mechanics/leather_making.html#tanning">浸酸</a>。</p>
+
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="獸皮">
+                <img src="..\..\_images\item124.gif" alt="獸皮" />
+            </span>
+            <h5>獸皮</h5>
+        </div>
+        <p>制皮的第一步自然是得先找到<span style="color:#3E8A00;">獸皮</span>。世界各地的<a href="../the_world/wild_animals.html">野生動物</a>都會掉落獸皮。不同的動物掉落的獸皮大小會有所不同。</p>
+<p>制皮還需要幾件其他工具：<br/>
+</p>
+<ul>
+	<li>一大桶<a href="../mechanics/barrels.html#limewater">石灰水</a> - 將<a href="../mechanics/flux.html">助焊劑</a>在大桶中溶於<span style="color:#3E8A00;">淡水</span>就能得到了。</li>
+	<li>一大桶淡水。</li>
+	<li>一大桶<a href="../mechanics/barrels.html#tannin">鞣酸</a> - 這是一種用某些樹的樹皮製成的酸液。</li>
+	<li>一把<span style="color:#3E8A00;">小刀</span>。</li>
+</ul><p><br/>
+有了這些工具，你就可以準備開始制皮了！</p>
+<a class="anchor" id="soaking"></a>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/2to2.png" />
+            
+        <div class="crafting-recipe-item two-recipe-pos-1">
+            <span href="#" data-bs-toggle="tooltip" title="中塊獸皮" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\item1.png" />
+            
+        </div>
+        
+            
+        <div class="crafting-recipe-item two-recipe-pos-2">
+            <span href="#" data-bs-toggle="tooltip" title="石灰水" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\fluid2.png" />
+            
+        </div>
+        
+            
+        <div class="crafting-recipe-item two-recipe-pos-3">
+            <span href="#" data-bs-toggle="tooltip" title="中塊浸泡皮革" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\item125.png" />
+            
+        </div>
+        
+            
+            
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>8000 Ticks</p>
+        </div>
+        
+        </div>
+    </div>
+    <a class="anchor" id="scraping"></a>
+        <div class="item-header">
+            <span href="#" data-bs-toggle="tooltip" title="剖層">
+                <img src="..\..\_images\item126.gif" alt="剖層" />
+            </span>
+            <h5>剖層</h5>
+        </div>
+        <p><span style="color:#3E8A00;">浸泡</span>好了的皮革還需要剖層，以此來移除皮革上殘留的雜質。將一根原木橫放在地上，然後再將皮革放置在原木上方。接著手持<span style="color:#3E8A00;">小刀</span>對準皮革的每一個部分按<span style="color:#b0b;">右鍵</span>。已經刮好了的部分會改變其外觀。</p>
+
+<div id="content31" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#content31" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        
+<button type="button" data-bs-target="#content31" data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+<button type="button" data-bs-target="#content31" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+<button type="button" data-bs-target="#content31" data-bs-slide-to="3" aria-label="Slide 4"></button>
+
+    </div>
+    <div class="carousel-inner">
+        
+<div class="carousel-item active">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image66.png" alt="tfc:textures/gui/book/tutorial/soaked_hide_1.png">
+</div>
+
+<div class="carousel-item ">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image67.png" alt="tfc:textures/gui/book/tutorial/soaked_hide_2.png">
+</div>
+
+<div class="carousel-item ">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image68.png" alt="tfc:textures/gui/book/tutorial/soaked_hide_3.png">
+</div>
+
+<div class="carousel-item ">
+    <img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image69.png" alt="tfc:textures/gui/book/tutorial/soaked_hide_4.png">
+</div>
+
+    </div>
+    <button type="button" class="carousel-control-prev" data-bs-target="#content31" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button type="button" class="carousel-control-next" data-bs-target="#content31" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<div style="text-align: center;"><p>皮革完全刮乾淨之後就可以將其從原木上取下了。你應該會得到一塊<span style="color:#3E8A00;">刮制皮革</span>。</p>
+</div><a class="anchor" id="preparing"></a>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/2to2.png" />
+            
+        <div class="crafting-recipe-item two-recipe-pos-1">
+            <span href="#" data-bs-toggle="tooltip" title="中塊刮制皮革" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\item127.png" />
+            
+        </div>
+        
+            
+        <div class="crafting-recipe-item two-recipe-pos-2">
+            <span href="#" data-bs-toggle="tooltip" title="水" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\fluid1.png" />
+            
+        </div>
+        
+            
+        <div class="crafting-recipe-item two-recipe-pos-3">
+            <span href="#" data-bs-toggle="tooltip" title="中塊預製皮革" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\item128.png" />
+            
+        </div>
+        
+            
+            
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>8000 Ticks</p>
+        </div>
+        
+        </div>
+    </div>
+    <a class="anchor" id="tanning"></a>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/2to2.png" />
+            
+        <div class="crafting-recipe-item two-recipe-pos-1">
+            <span href="#" data-bs-toggle="tooltip" title="中塊預製皮革" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\item128.png" />
+            
+        </div>
+        
+            
+        <div class="crafting-recipe-item two-recipe-pos-2">
+            <span href="#" data-bs-toggle="tooltip" title="鞣酸" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\fluid3.png" />
+            
+        </div>
+        
+            
+        <div class="crafting-recipe-item two-recipe-pos-3">
+            <span href="#" data-bs-toggle="tooltip" title="皮革" class="crafting-recipe-item-tooltip"></span>
+            <img class="recipe-item" src="..\..\_images\item123.png" />
+            <p class="crafting-recipe-item-count">2</p>
+        </div>
+        
+            
+            
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>8000 Ticks</p>
+        </div>
+        
+        </div>
+    </div>
+    
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'zh_tw';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+  </body>
+</html>

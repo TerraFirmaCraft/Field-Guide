@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+  </head>
+  <body>
+    <!-- Load theme switcher JavaScript early to avoid flashes of incorrectly-themed content -->
+    <script src="/Field-Guide/static/theme-switcher.js"></script>
+
+    <nav id="nav-primary" class="navbar navbar-expand-lg mb-5" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../">TerraFirmaCraft Field Guide</a>
+
+        <!-- Navbar toggle control for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-content">
+          <ul class="navbar-nav">
+            <!-- Version submenu -->
+            <li class="nav-item px-2 dropdown" id="version-dropdown">
+              <a class="nav-link dropdown-toggle" id="version-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-collection-fill"></i> Version 1.18.2 - v2.2.30
+              </a>
+              <div class="dropdown-menu" aria-labelledby="version-dropdown-button" id="version-dropdown-menu">
+              </div>
+            </li>
+
+            <!-- Language submenu -->
+            <li class="nav-item px-2 dropdown">
+              <a class="nav-link dropdown-toggle" id="lang-dropdown-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate"></i> 日本語
+              </a>
+              <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                <a href="../../en_us/getting_started\firepit.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/getting_started\firepit.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/getting_started\firepit.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/getting_started\firepit.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/getting_started\firepit.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/getting_started\firepit.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/getting_started\firepit.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/getting_started\firepit.html" class="dropdown-item">繁體中文(台灣)</a>
+              </div>
+            </li>
+
+            <!-- Theme switcher -->
+            <li class="nav-item ps-2 dropdown">
+              <button id="bd-theme" class="btn btn-link nav-link dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <i id="bd-theme-icon-active"></i>
+                <span id="bd-theme-text" class="d-lg-none ms-2">Toggle theme</span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Light theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i>
+                    Light
+                  </button>
+                </li>
+
+                <!-- Dark theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    Dark
+                  </button>
+                </li>
+
+                <!-- System theme -->
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Table of contents -->
+        <nav class="col-md-3">
+          <p class="mb-3"><strong>Contents</strong></p>
+
+          <ul class="list-unstyled lh-lg">
+            <li><a href="../">Index</a></li>
+            <li><a href="../the_world/">世界</a></li>
+<li><a href="../getting_started/">はじめに</a><ul><li><a href="./introduction.html">導入</a></li>
+<li><a href="./firepit.html">火を起こす</a></li>
+<li><a href="./pottery.html">粘土細工</a></li>
+<li><a href="./pit_kiln.html">穴窯</a></li>
+<li><a href="./finding_ores.html">鉱石、金属、鋳造</a></li>
+<li><a href="./primitive_alloys.html">最初の合金</a></li>
+<li><a href="./primitive_anvils.html">最初の金床</a></li>
+<li><a href="./building_materials.html">建材</a></li>
+<li><a href="./a_place_to_sleep.html">眠る場所</a></li>
+<li><a href="./size_and_weight.html">大きさと重さ</a></li>
+<li><a href="./food_and_water.html">食料と水</a></li></ul></li>
+<li><a href="../mechanics/">高度な加工</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page content -->
+        <div class="col-md-9">
+          <nav class="mb-4" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              
+                    
+            <li class="breadcrumb-item">
+                <a href="../"><i class="bi bi-house-fill"></i></a>
+            </li>
+        
+                    <li class="breadcrumb-item"><a href="./">はじめに</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">火を起こす</li>
+                
+            </ol>
+          </nav>
+
+          
+                <h1 class="d-flex align-items-center mb-4">
+        <img class="icon-title me-3" src="..\..\_images\item17.png" alt="火を起こす" title="焚き火" /><span>火を起こす</span>
+        </h1>
+                <a class="anchor" id="firestarter"></a><p><span style="color:#3E8A00;">火</span> の利用は重要な進歩です。火を起こすには <span style="color:#3E8A00;">火起こし器</span>が必要です。 火起こし器を使用するには <span style="color:#b0b;">Right Click</span> を火を起こしたい地点の地面に向かって長押しすると、煙と共に火が起きます。正常に点火するには数回試すことが必要な場合もあります。</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item16.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-bs-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item16.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-bs-toggle="tooltip" title="火起こし器" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item18.png" />
+                </div>
+            </div>
+        </div>
+        <p>火起こし器は2本の棒を使って作ることができます。</p>
+<h5>焚き火</h5>
+<p>火起こし器を使うことで <span style="color:#3E8A00;">焚き火</span>を作成できます。<span style="color:#3E8A00;">丸太</span>1本、<span style="color:#3E8A00;">棒</span>3本が必要です。火起こし器の耐久値を節約したい場合、<span style="color:#3E8A00;">補助燃料</span>を使用できます。 補助燃料には紙、藁、松ぼっくりなどのアイテムを使用でき、使用するアイテムの数ごとに焚き火の作成に成功する確率が 10% 増加します。 すべてのアイテムを (<span style="color:#b0b;">Q</span>) で地面の一か所に落とします。次に、アイテムが浮かんでいるブロックで火起こし器を使用します。</p>
+<h5></h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>成功すると、完成した焚き火がその場に設置されます。</p>
+<p>焚き火を使用すると焚き火GUIが表示されます。 左側には4つの <span style="color:#3E8A00;">燃料</span> スロットがあります。 丸太、泥炭、棒の束は燃料スロットの一番上に置くことで焚き火の燃料として使用できます。 燃料は一番下のスロットから順に消費されます。焚き火の現在の<span style="color:#3E8A00;">温度</span>を表示するゲージがあり、右側には <a href="../mechanics/heating.html">加熱</a>したいアイテムを入れるスロットがあります。</p>
+
+<img class="d-block w-200 mx-auto img-fluid" src="..\..\_images\image6.png" alt="tfc:textures/gui/book/gui/firepit.png">
+<div style="text-align: center;"><p>焚き火GUI</p>
+</div>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="Tag: #forge:rods/wooden" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item16.gif" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="松明" class="crafting-recipe-item-tooltip"></span>
+                <p class="crafting-recipe-item-count">2</p>
+                <img class="recipe-item" src="..\..\_images\item19.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>あたたかい****</p>
+        </div>
+        <p>多くの便利なアイテムを、焚き火で加熱することで作成できます。棒を加熱すると2つの<span style="color:#3E8A00;">松明</span>を作成できます。 松明は時間経過などで燃え尽きるため、<span style="color:#3E8A00;">火起こし器</span>または別の<span style="color:#3E8A00;">松明</span>を使用して再点火する必要があります。</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="crafting-recipe">
+            <img src="../../_images/1to1.png" />
+            <div class="crafting-recipe-item misc-recipe-pos-in">
+                <span href="#" data-bs-toggle="tooltip" title="生鱈" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item20.png" />
+            </div>
+            <div class="crafting-recipe-item misc-recipe-pos-out">
+                <span href="#" data-bs-toggle="tooltip" title="焼き鱈" class="crafting-recipe-item-tooltip"></span>
+                
+                <img class="recipe-item" src="..\..\_images\item21.png" />
+            </div>
+        </div>
+    </div>
+    
+        <div style="text-align: center;" class="minecraft-text minecraft-gray">
+            <p>熱い****</p>
+        </div>
+        <p>焚き火は<span style="color:#3E8A00;">料理</span>にも最適です。 生の肉や生地などは焚き火で調理でき、保存性や腹持ちがよくなります。 (詳しくは <a href="../mechanics/decay.html">こちら</a>)</p>
+<p>焚き火は<span style="color:#3E8A00;">シャベル</span>で破壊できます。<br/>
+<br/>
+焚き火は拡張を加えて機能を追加することもできます。<span style="color:#3E8A00;">錬鉄グリル</span>を使用すると焚き火は<a href="../mechanics/grill.html">グリル</a>に、<span style="color:#3E8A00;">セラミックポット</span>を使用すると <a href="../mechanics/pot.html">ポット</a>に変換されます。 これらは<span style="color:#b0b;">Right Click</span>と<span style="color:#b0b;">Shift</span>を長押しすると取り外せます。高温のままグリルやポットを取り外さないようにしてください！</p>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-bs-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock</span></p>
+        </div>
+        <p>焚き火はグリルまたはポットを追加できます。</p>
+<p>焚き火の燃料にはさまざまな純度があります。 純度の低い燃料を使用すると、煙が多くなります。 一定以上煙が増えると、煙が空中に高く飛び始めます。 最も純度の高い燃料は丸太であり、最も純度の低い燃料は松ぼっくりです。 松ぼっくりや落ち葉などの燃料は純度が低く、あまり温度が上がらないため燃料としての使用には適しません。</p>
+
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-3 my-5 border-top">
+        <ul class="nav justify-content-center">
+          <!-- API docs -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://terrafirmacraft.github.io/Documentation/">
+              <i class="bi bi-journal-code"></i> API Docs
+            </a>
+          </li>
+
+          <!-- GitHub repo -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://github.com/TerraFirmaCraft/Field-Guide">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+
+          <!-- Discord server -->
+          <li class="nav-item">
+            <a class="nav-link px-3 text-body-secondary" href="https://discord.gg/PRuAKvY">
+              <i class="bi bi-discord"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/Field-Guide/static/icons.min.js"></script>
+
+    <script>
+      window._CURRENT_ROOT = '/Field-Guide';
+      window._CURRENT_LANG = 'ja_jp';
+    </script>
+
+    <script src="/Field-Guide/static/metadata.js"></script>
+    <script src="/Field-Guide/static/tooltips.js"></script>
+    <script src="/Field-Guide/static/versions.js"></script>
+  </body>
+</html>

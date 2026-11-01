@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%; padding:0px; margin:0px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+
+    <title>TerraFirmaCraft Field Guide</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="/Field-Guide/static/icons.min.js" type="text/javascript"></script>
+
+    <!-- JQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Field-Guide/static/style.css">
+
+    <script type="text/javascript">
+        window._CURRENT_ROOT = '/Field-Guide';
+        window._CURRENT_LANG = 'en_us';
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+
+    <!-- Automatically populate the version dropdown for newer versions -->
+    <script src="/Field-Guide/static/metadata.js" type="text/javascript"></script>
+    <script src="/Field-Guide/static/versions.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <div class="navbar-header">
+        <a class="navbar-brand text-light" href="../">TerraFirmaCraft Field Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="lang-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button">
+                    <a href="../../en_us/firmalife\cellar.html" class="dropdown-item">English</a>
+<a href="../../ja_jp/firmalife\cellar.html" class="dropdown-item">日本語</a>
+<a href="../../pt_br/firmalife\cellar.html" class="dropdown-item">Portuguese (Brazil)</a>
+<a href="../../ko_kr/firmalife\cellar.html" class="dropdown-item">한국어</a>
+<a href="../../uk_ua/firmalife\cellar.html" class="dropdown-item">Українська мова</a>
+<a href="../../zh_cn/firmalife\cellar.html" class="dropdown-item">简体中文(中国大陆)</a>
+<a href="../../zh_hk/firmalife\cellar.html" class="dropdown-item">繁體中文（香港特別行政區)</a>
+<a href="../../zh_tw/firmalife\cellar.html" class="dropdown-item">繁體中文(台灣)</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link text-light" href="../">Index</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://terrafirmacraft.github.io/Documentation/"><i class="fa fa-cogs"></i> API Docs</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://github.com/TerraFirmaCraft/Field-Guide"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="https://discord.gg/PRuAKvY"><i class="fab fa-discord"></i> Discord</a></li>
+            <li class="nav-item dropdown" id="version-dropdown">
+                <a class="nav-link dropdown-toggle text-light" id="version-dropdown-button" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Version 1.18.2 - v2.2.30</a>
+                <div class="dropdown-menu" aria-labelledby="lang-dropdown-button" id="version-dropdown-menu">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2 py-1">
+            <div class="sticky-top" style="top: 70px">
+                <h4>Contents</h4>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="../the_world/">The World</a></li>
+<li><a class="text-muted" href="../getting_started/">Getting Started</a></li>
+<li><a class="text-muted" href="../mechanics/">Advanced Mechanics</a></li>
+<li><a class="text-muted" href="../tfcgyres_orehints/">(Addon) Ore Hints and Spawning</a></li>
+<li><a class="text-muted" href="../waterflasks/">(Addon) Water Flasks</a></li>
+<li><a class="text-muted" href="../firmalife/">(Addon) Firmalife</a><ul class="list-unstyled push-right"><li><a class="text-muted" href="./differences_from_tfc.html">Differences from TFC</a></li>
+<li><a class="text-muted" href="./cheese.html">Cheese</a></li>
+<li><a class="text-muted" href="./climate_station.html">Climate Station</a></li>
+<li><a class="text-muted" href="./cellar.html">Cellars</a></li>
+<li><a class="text-muted" href="./food_shelves.html">Food Shelves</a></li>
+<li><a class="text-muted" href="./hangers.html">Hangers</a></li>
+<li><a class="text-muted" href="./jarbnet.html">Jarbnets</a></li>
+<li><a class="text-muted" href="./greenhouse.html">Greenhouse</a></li>
+<li><a class="text-muted" href="./sprinklers.html">Sprinklers</a></li>
+<li><a class="text-muted" href="./planters.html">Planters</a></li>
+<li><a class="text-muted" href="./beekeeping.html">Beekeeping</a></li>
+<li><a class="text-muted" href="./jar.html">Jars</a></li>
+<li><a class="text-muted" href="./stainless_steel.html">Stainless Steel</a></li>
+<li><a class="text-muted" href="./drying.html">Drying</a></li>
+<li><a class="text-muted" href="./smoking.html">Smoking</a></li>
+<li><a class="text-muted" href="./ovens.html">Ovens</a></li>
+<li><a class="text-muted" href="./oven_appliances.html">Oven Appliances</a></li>
+<li><a class="text-muted" href="./bread.html">Bread</a></li>
+<li><a class="text-muted" href="./more_fertilizer.html">More Fertilizer Options</a></li>
+<li><a class="text-muted" href="./mixing_bowl.html">Mixing Bowl</a></li>
+<li><a class="text-muted" href="./herbs_and_spices.html">Herbs and Spices</a></li>
+<li><a class="text-muted" href="./fruit_trees.html">Firmalife Fruits</a></li>
+<li><a class="text-muted" href="./berry_bushes.html">Berry Bushes</a></li>
+<li><a class="text-muted" href="./chocolate.html">Chocolate</a></li></ul></li>
+<li><a class="text-muted" href="../firmaciv/">(Addon) Firma: Civilization</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 py-3">
+            <p><em><a class="text-muted" href="../">1.18.2</a> / <a class="text-muted" href="./">(Addon) Firmalife</a> / <a class="text-muted" href="#">Cellars</a></em></p>
+            
+                <h4><h4>Cellars</h4></h4>
+                <hr>
+                <p>The <span style="color:#3E8A00;">Cellar</span> is a multiblock device controlled by a <a href="../firmalife/climate_station.html">Climate Station</a>. The Cellar multiblock's only requirement is that it be in an enclosed area surrounded by <span style="color:#3E8A00;">Sealed Bricks</span> or <span style="color:#3E8A00;">Sealed Brick Doors</span> on all sides. The Climate Station must be placed on the first level of the cellar, touching a wall.</p>
+<h5>An Example Cellar</h5>
+
+        <div style="text-align: center;">
+            <p class="text-muted"><span href="#" data-toggle="tooltip" title="View the field guide in Minecraft to see this multiblock.">Multiblock: <code>firmalife:cellar</code></span></p>
+        </div>
+        <p>This is just one of many cellars that you could make!</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:stone_bricks" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item240.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:stone_bricks" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item240.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-0">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:stone_bricks" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item240.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:stone_bricks" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item240.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-toggle="tooltip" title="Beeswax" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item228.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-1">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:stone_bricks" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item240.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:stone_bricks" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item240.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:stone_bricks" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item240.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-2-2">
+                    <span href="#" data-toggle="tooltip" title="Tag: #forge:stone_bricks" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item240.gif" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Sealed Bricks" class="crafting-recipe-item-tooltip"></span>
+                    <p class="crafting-recipe-item-count">8</p>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="crafting-recipe">
+                <img src="../../_images/crafting_shaped.png" />
+        
+                <div class="crafting-recipe-item crafting-recipe-pos-0-0">
+                    <span href="#" data-toggle="tooltip" title="Brass Rod" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item242.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-0">
+                    <span href="#" data-toggle="tooltip" title="Sealed Bricks" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-1">
+                    <span href="#" data-toggle="tooltip" title="Brass Rod" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item242.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-1">
+                    <span href="#" data-toggle="tooltip" title="Sealed Bricks" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-0-2">
+                    <span href="#" data-toggle="tooltip" title="Brass Rod" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="..\..\_images\item242.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-1-2">
+                    <span href="#" data-toggle="tooltip" title="Sealed Bricks" class="crafting-recipe-item-tooltip"></span>
+                    <img class="recipe-item" src="../../_images/placeholder_64.png" />
+                </div>
+                
+                <div class="crafting-recipe-item crafting-recipe-pos-out">
+                    <span href="#" data-toggle="tooltip" title="Sealed Door" class="crafting-recipe-item-tooltip"></span>
+                    
+                    <img class="recipe-item" src="..\..\_images\item241.png" />
+                </div>
+            </div>
+        </div>
+        <p><span style="color:#3E8A00;">Beeswax</span> is obtained from <a href="../firmalife/beekeeping.html">Beekeeping</a>.<br/>
+Cellars are used for <a href="../firmalife/cheese.html#aging">Aging Cheese</a>.</p>
+<p>The cellar is used for food preservation, for example by using <a href="../firmalife/food_shelves.html">Food Shelves</a> and <a href="../firmalife/hangers.html">Hangers</a>. The cellar performs better in environments with cooler average temperatures for food preservation. Below 0 degrees, decay modifiers work slightly better. Below -12 degrees, they perform much better.</p>
+
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>
