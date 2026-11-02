@@ -1,4 +1,4 @@
-from PIL import Image, ImageEnhance
+from PIL import Image, ImageEnhance, ImageDraw, ImageChops
 from typing import Tuple, List, Any, Dict
 
 from context import Context
@@ -101,9 +101,7 @@ def parse_block_properties(properties: str) -> Dict[str, str]:
 
 
 def create_block_model_image(context: Context, block: str, model: Any) -> Image.Image:
-    util.require('parent' in model, 'Block Model : No Parent : \'%s\'' % block, True)
-    
-    parent = util.resource_location(model['parent'])
+    parent = util.resource_location(model['parent']) if 'parent' in model else None
     if parent == 'minecraft:block/cube_all':
         texture = context.loader.load_texture(model['textures']['all'])
         return create_block_model_projection(texture, texture, texture)
@@ -135,7 +133,94 @@ def create_block_model_image(context: Context, block: str, model: Any) -> Image.
         crop = context.loader.load_texture(model['textures']['crop'])
         return create_crop_model_projection(crop)
     else:
-        util.error('Block Model : Unknown Parent \'%s\' : at \'%s\'' % (parent, block), True)
+        return create_element_model_image(context, block, model)
+
+
+def create_element_model_image(context: Context, block: str, model: Any) -> Image.Image:
+    """Render visible faces of ordinary JSON model elements, including inherited elements."""
+    textures = {}
+    elements = None
+    seen = set()
+    current = model
+    while True:
+        textures = {**current.get('textures', {}), **textures}
+        if elements is None and 'elements' in current:
+            elements = current['elements']
+        if 'parent' not in current:
+            break
+        parent = util.resource_location(current['parent'])
+        util.require(parent not in seen, 'Block Model : Cyclic Parent : \'%s\'' % block, True)
+        seen.add(parent)
+        try:
+            current = context.loader.load_model(parent)
+        except util.InternalError:
+            # Built-in parents have no JSON file; child elements can still be rendered.
+            break
+
+    util.require(elements, 'Block Model : No Elements : \'%s\'' % block, True)
+    output = Image.new('RGBA', (256, 256), (0, 0, 0, 0))
+    faces = []
+    for element in elements:
+        start, end = element['from'], element['to']
+        for direction, face in element.get('faces', {}).items():
+            if direction not in ('west', 'south', 'up'):
+                continue
+            quad = element_face_quad(start, end, direction)
+            center = tuple((a + b) / 2 for a, b in zip(start, end))
+            depth = -center[0] + center[2] + center[1]
+            faces.append((depth, direction, face, start, end, quad))
+
+    rendered = 0
+    for _, direction, face, start, end, quad in sorted(faces, key=lambda entry: entry[0]):
+        texture_id = face.get('texture', '')
+        while texture_id.startswith('#'):
+            texture_id = textures.get(texture_id[1:], '')
+        if not texture_id:
+            continue
+        try:
+            texture = context.loader.load_texture(texture_id).convert('RGBA')
+        except util.InternalError:
+            continue
+        uv = face.get('uv', default_face_uv(start, end, direction))
+        scale = texture.width / 16
+        box = tuple(round(value * scale) for value in uv)
+        if box[2] <= box[0] or box[3] <= box[1]:
+            continue
+        tile = texture.crop(box).resize((16, 16), Image.NEAREST)
+        if face.get('rotation'):
+            tile = tile.rotate(-face['rotation'], Image.NEAREST)
+        if direction != 'up':
+            tile = ImageEnhance.Brightness(tile).enhance(0.85 if direction == 'west' else 0.6)
+        warped = tile.transform((256, 256), Image.PERSPECTIVE, perspective_transformation(*quad), Image.NEAREST)
+        mask = Image.new('L', (256, 256))
+        ImageDraw.Draw(mask).polygon(quad, fill=255)
+        warped.putalpha(ImageChops.multiply(warped.getchannel('A'), mask))
+        output.alpha_composite(warped)
+        rendered += 1
+    util.require(rendered > 0, 'Block Model : No Renderable Faces : \'%s\'' % block, True)
+    return output
+
+
+def element_face_quad(start, end, direction):
+    x0, y0, z0 = start
+    x1, y1, z1 = end
+    if direction == 'west':
+        points = ((x0, y1, z0), (x0, y1, z1), (x0, y0, z1), (x0, y0, z0))
+    elif direction == 'south':
+        points = ((x0, y1, z1), (x1, y1, z1), (x1, y0, z1), (x0, y0, z1))
+    else:
+        points = ((x0, y1, z0), (x1, y1, z0), (x1, y1, z1), (x0, y1, z1))
+    return tuple((13 + (x * 114 + z * 115) / 16, 57 + (-x * 57 + z * 57 + (16 - y) * 141) / 16) for x, y, z in points)
+
+
+def default_face_uv(start, end, direction):
+    x0, y0, z0 = start
+    x1, y1, z1 = end
+    if direction == 'up':
+        return x0, z0, x1, z1
+    if direction == 'south':
+        return x0, 16 - y1, x1, 16 - y0
+    return z0, 16 - y1, z1, 16 - y0
 
 
 def create_block_model_projection(left: Image.Image, right: Image.Image, top: Image.Image, rotate: bool = False) -> Image.Image:
